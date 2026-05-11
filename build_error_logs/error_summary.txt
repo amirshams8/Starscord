@@ -547,12 +547,16 @@ ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22
 FAILURE: Build failed with an exception.
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BUILD FAILED in 1m 31s
 =======
 BUILD FAILED in 2m 48s
 >>>>>>> Stashed changes
 =======
 BUILD FAILED in 1m 43s
+>>>>>>> Stashed changes
+=======
+BUILD FAILED in 2m 29s
 >>>>>>> Stashed changes
 
 -- EXCEPTION STACK TRACES --
