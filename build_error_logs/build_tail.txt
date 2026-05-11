@@ -1,3 +1,480 @@
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/871aa245e8fe2ae8638831b4a8de0949/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/871aa245e8fe2ae8638831b4a8de0949/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.14/1194890e6f56ec29177673f2f12d0b8e627dec98/httpclient-4.5.14.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming httpclient-4.5.14.jar (org.apache.httpcomponents:httpclient:4.5.14) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/eeedb1a9566f0ff02946bb877d25f0de/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.14/1194890e6f56ec29177673f2f12d0b8e627dec98/httpclient-4.5.14.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8569ccaeea0d4943dd00903f62686908/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8569ccaeea0d4943dd00903f62686908/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming httpcore-4.4.16.jar (org.apache.httpcomponents:httpcore:4.4.16) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/71b9e84c3bae48b081ebb04a86e02b96/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/3805cfdfda5a8017a360ec428505a4b6/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/3805cfdfda5a8017a360ec428505a4b6/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming javax.activation-1.2.0.jar (com.sun.activation:javax.activation:1.2.0) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2ecc0d4c3b0f62fada70919a15b67c8a/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/20dd08704fe5eda6177550b503251240/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/20dd08704fe5eda6177550b503251240/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/signflinger/8.4.2/13f035dd8e7e470ff8f3216a0b46333187f26df5/signflinger-8.4.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming signflinger-8.4.2.jar (com.android:signflinger:8.4.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8f67c2340762307ee7899acda7d4cede/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/signflinger/8.4.2/13f035dd8e7e470ff8f3216a0b46333187f26df5/signflinger-8.4.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b25364e39c596408dcf2dea2e1ff6ab7/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b25364e39c596408dcf2dea2e1ff6ab7/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/zipflinger/8.4.2/de8e3267995699af356740cf562cbedb485f5763/zipflinger-8.4.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming zipflinger-8.4.2.jar (com.android:zipflinger:8.4.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/59b8468c49ab03ed3cdaeeb37e9be476/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/zipflinger/8.4.2/de8e3267995699af356740cf562cbedb485f5763/zipflinger-8.4.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/1c4d11ff9c98a4b228fb3436e35ce928/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/31.4.2/7f3cdb30f22d5cf7878c1c4b0e40dbcc71112331/annotations-31.4.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming annotations-31.4.2.jar (com.android.tools:annotations:31.4.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/055d0a1542c01e1033575df5e71c0585/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/31.4.2/7f3cdb30f22d5cf7878c1c4b0e40dbcc71112331/annotations-31.4.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b5d92bc435e179342123e81c8ec5691e/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b5d92bc435e179342123e81c8ec5691e/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.6.0/d18424ffb8bbfd036d71bcaab9b546858f2ef986/jna-platform-5.6.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming jna-platform-5.6.0.jar (net.java.dev.jna:jna-platform:5.6.0) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/d0344ff9a90fe5a8cb7f4572b278ae62/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.6.0/d18424ffb8bbfd036d71bcaab9b546858f2ef986/jna-platform-5.6.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8f1136d6413d7772d37652c7c5b6b680/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8f1136d6413d7772d37652c7c5b6b680/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming juniversalchardet-1.0.3.jar (com.googlecode.juniversalchardet:juniversalchardet:1.0.3) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/07ce140507de7888f1fb1b481fc191cc/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/3a59a2fe69204c0cff8ecb38b50db3af/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming javax.annotation-api-1.3.2.jar (javax.annotation:javax.annotation-api:1.3.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/be11195144c0fd2a061794f73c7f2dd1/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f02594b541550f32b73aa1cfb504459c/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f02594b541550f32b73aa1cfb504459c/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8.1/78011e483a21102fb4858f3e8f269a677e50aa23/stax-ex-1.8.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming stax-ex-1.8.1.jar (org.jvnet.staxex:stax-ex:1.8.1) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/6870ce7ac2a89a5c624037645581ebbd/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8.1/78011e483a21102fb4858f3e8f269a677e50aa23/stax-ex-1.8.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/13f7d7fbb105d339071a3ea1c8adb431/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/13f7d7fbb105d339071a3ea1c8adb431/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming jakarta.xml.bind-api-2.3.2.jar (jakarta.xml.bind:jakarta.xml.bind-api:2.3.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/d4660f66dfdebeb71ffe299a7b212478/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.2/ce5be7da2e442c25ec14c766cb60cb802741727b/txw2-2.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming txw2-2.3.2.jar (org.glassfish.jaxb:txw2:2.3.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/41d7aba1b822afaeebd199966dc155b6/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.2/ce5be7da2e442c25ec14c766cb60cb802741727b/txw2-2.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming istack-commons-runtime-3.0.8.jar (com.sun.istack:istack-commons-runtime:3.0.8) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/e336e8ac7a1cfbd7df4401e66b356535/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming FastInfoset-1.2.16.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.16) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/90aca7698ca61529cd07ba0c768a8458/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/721d72d7e7870160e01035f12bcc540f/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/721d72d7e7870160e01035f12bcc540f/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.1/562a587face36ec7eff2db7f2fc95425c6602bc1/jakarta.activation-api-1.2.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming jakarta.activation-api-1.2.1.jar (jakarta.activation:jakarta.activation-api:1.2.1) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/87f9f77b5c95bc05d826a9f716e9c796/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.1/562a587face36ec7eff2db7f2fc95425c6602bc1/jakarta.activation-api-1.2.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b924270aee55a93dfbde6f49f03622ad/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.2/ed193d86e0af90cc2342aedbe73c5d86b03fa09b/auto-value-annotations-1.6.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming auto-value-annotations-1.6.2.jar (com.google.auto.value:auto-value-annotations:1.6.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/27a49f1ca7a29419cbcb2ecb68719759/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.2/ed193d86e0af90cc2342aedbe73c5d86b03fa09b/auto-value-annotations-1.6.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/d57882f0dd2f3e743ff6b205b8637f59/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming error_prone_annotations-2.18.0.jar (com.google.errorprone:error_prone_annotations:2.18.0) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8e70d4244b6b61d31a02a59536728ac6/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/831229076f5e9d006ee5c15b85bf74b7/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/831229076f5e9d006ee5c15b85bf74b7/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming jose4j-0.7.0.jar (org.bitbucket.b_c:jose4j:0.7.0) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c21045d339d8f10bd3cdd9cf15772a69/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/ae3da73e90491a1ac1c0bab30459b025/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/ae3da73e90491a1ac1c0bab30459b025/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming slf4j-api-1.7.30.jar (org.slf4j:slf4j-api:1.7.30) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2094bcd6a603606078345210e8fd0a78/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0458582e8ea3416b8981f11f271a29ae/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0458582e8ea3416b8981f11f271a29ae/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming jdom2-2.0.6.jar (org.jdom:jdom2:2.0.6) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2387595d807818791fef6982c133e6f6/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/6433edcd6fbe497bff7a1e943eddc33f/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/6433edcd6fbe497bff7a1e943eddc33f/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/a47b0eaba34ed4de2af6417c9d075f4f/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c65577fc6e04e094a7e9cddfaabc9062/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/c85270e307e7b822f1086b93689124b89768e273/j2objc-annotations-2.8.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming j2objc-annotations-2.8.jar (com.google.j2objc:j2objc-annotations:2.8) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/9ebf0708f7aa0389da51f16a200d9981/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/c85270e307e7b822f1086b93689124b89768e273/j2objc-annotations-2.8.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf41f01db07e2237699ff4423e2194e6/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/2b4910480f6f4939d36ac67af712af9c/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming annotations-4.1.1.4.jar (com.google.android:annotations:4.1.1.4) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/77fb61a21ad759994a2673c3a675e5e4/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming animal-sniffer-annotations-1.23.jar (org.codehaus.mojo:animal-sniffer-annotations:1.23) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/179c87685867be1174d1a979f42d5529/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/08652da9c5fc6033938779d4e4db5f11/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/08652da9c5fc6033938779d4e4db5f11/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming perfmark-api-0.26.0.jar (io.perfmark:perfmark-api:0.26.0) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/7ce67b937f68a7afda9156c1435bf0de/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-codec-http2-4.1.93.Final.jar (io.netty:netty-codec-http2:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c849aae3bf45c20f151deb34fffc21de/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/84b3785d3ace9128a149b3327d08e2a2/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/84b3785d3ace9128a149b3327d08e2a2/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.93.Final/c165c1efe1b9c0cc22546a057b530611a088768b/netty-handler-proxy-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-handler-proxy-4.1.93.Final.jar (io.netty:netty-handler-proxy:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8fdae478f102a220536faf34501509cd/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.93.Final/c165c1efe1b9c0cc22546a057b530611a088768b/netty-handler-proxy-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/054c58bab0538f933da059baf3078d06/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/054c58bab0538f933da059baf3078d06/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-codec-http-4.1.93.Final.jar (io.netty:netty-codec-http:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/cfec4f65e706f4c14b86c4ec09514806/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.93.Final/f4fb8b4c8da539091f43abcbb9f0389e48807eea/netty-transport-native-unix-common-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-transport-native-unix-common-4.1.93.Final.jar (io.netty:netty-transport-native-unix-common:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c757c5d68c9a917be77b49e0feafb9a7/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-handler-4.1.93.Final.jar (io.netty:netty-handler:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/78433fc497ff71520e09798c92e80fb6/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.93.Final/f4fb8b4c8da539091f43abcbb9f0389e48807eea/netty-transport-native-unix-common-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/9d1de03bc6dca374838b63c4f33c9cef/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming checker-qual-3.33.0.jar (org.checkerframework:checker-qual:3.33.0) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/579f2fe096e45a2b477cfc7f275a72d6/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/037665d51127e62640bfce75da89db7e/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/037665d51127e62640bfce75da89db7e/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
@@ -6,9 +483,6 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
   Caching not enabled.
 Transforming commons-codec-1.11.jar (commons-codec:commons-codec:1.11) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/9994e034ad6cfb0f6c049fd182d083a6/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.11/3acb4705652e16236558f0f4f2192cc33c3bd189/commons-codec-1.11.jar because:
@@ -293,10 +767,13 @@ Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/run
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.93.Final/1cfc49b91b0d3ddb30c9f7d8467e5d02ae8babdf/netty-common-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar because:
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
 
@@ -321,549 +798,14 @@ Caching disabled for Kotlin DSL accessors for project ':app' because:
   Build cache is disabled
 Caching disabled for Kotlin DSL script compilation (Project/TopLevel/stage2) because:
   Build cache is disabled
-Parsed shrinker version: 8.4.26
-Detected Android Gradle Plugin compose compiler configuration
-Detected Android Gradle Plugin compose compiler configuration
-Detected Android Gradle Plugin compose compiler configuration
-Detected Android Gradle Plugin compose compiler configuration
-Detected Android Gradle Plugin compose compiler configuration
-All projects evaluated.
-Task name matched 'assembleDebug'
-Selected primary task 'assembleDebug' from project :
-WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 35
-
-This Android Gradle plugin (8.4.2) was tested up to compileSdk = 34.
-
-You are strongly encouraged to update your project to use a newer
-Android Gradle plugin that has been tested with compileSdk = 35.
-
-If you are already using the latest version of the Android Gradle plugin,
-you may need to wait until a newer version with support for compileSdk = 35 is available.
-
-To suppress this warning, add/update
-    android.suppressUnsupportedCompileSdk=35
-to this project's gradle.properties.
-Tasks to be executed: [task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:generateDebugBuildConfig', task ':app:checkDebugAarMetadata', task ':app:generateDebugResValues', task ':app:processDebugGoogleServices', task ':app:mapDebugSourceSetPaths', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:parseDebugLocalResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:kaptGenerateStubsDebugKotlin', task ':app:kaptDebugKotlin', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:desugarDebugFileDependencies', task ':app:hiltAggregateDepsDebug', task ':app:hiltJavaCompileDebug', task ':app:transformDebugClassesWithAsm', task ':app:dexBuilderDebug', task ':app:mergeDebugGlobalSynthetics', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:mergeDebugStartupProfile', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
-Tasks that were excluded: []
-Resolve mutations for :app:preBuild (Thread[Execution worker,5,main]) started.
-:app:preBuild (Thread[Execution worker,5,main]) started.
-
-> Task :app:preBuild UP-TO-DATE
-Skipping task ':app:preBuild' as it has no actions.
-Resolve mutations for :app:preDebugBuild (Thread[Execution worker,5,main]) started.
-:app:preDebugBuild (Thread[Execution worker,5,main]) started.
-
-> Task :app:preDebugBuild UP-TO-DATE
-Skipping task ':app:preDebugBuild' as it has no actions.
-Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
-:app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
-
-> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
-Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
-Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
-:app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
-
-> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
-Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
-Resolve mutations for :app:generateDebugBuildConfig (Thread[Execution worker,5,main]) started.
-:app:generateDebugBuildConfig (Thread[included builds,5,main]) started.
-
-> Task :app:generateDebugBuildConfig
-Caching disabled for task ':app:generateDebugBuildConfig' because:
-  Build cache is disabled
-Task ':app:generateDebugBuildConfig' is not up-to-date because:
-  No history is available.
-Resolve mutations for :app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
-:app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
-
-> Task :app:checkDebugAarMetadata
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/compose-bom/2024.06.00/compose-bom-2024.06.00.pom to /home/runner/.gradle/.tmp/gradle_download17811383196593709766bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-bom/33.1.1/firebase-bom-33.1.1.pom to /home/runner/.gradle/.tmp/gradle_download2844386075322950639bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-compose/1.9.0/activity-compose-1.9.0.pom to /home/runner/.gradle/.tmp/gradle_download4152929285790985829bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.pom to /home/runner/.gradle/.tmp/gradle_download3571564941654394848bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-compose/1.9.0/activity-compose-1.9.0.module to /home/runner/.gradle/.tmp/gradle_download12161796124849625780bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-compose/2.7.7/navigation-compose-2.7.7.pom to /home/runner/.gradle/.tmp/gradle_download2333298405754745477bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.module to /home/runner/.gradle/.tmp/gradle_download9179768643401299187bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-compose/2.7.7/navigation-compose-2.7.7.module to /home/runner/.gradle/.tmp/gradle_download11998290025612978190bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/dagger/hilt-android/2.51/hilt-android-2.51.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-compose/2.8.3/lifecycle-viewmodel-compose-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download18310578302108620010bin
-Downloading https://repo.maven.apache.org/maven2/com/google/dagger/hilt-android/2.51/hilt-android-2.51.pom to /home/runner/.gradle/.tmp/gradle_download11284162435014937022bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-compose/2.8.3/lifecycle-viewmodel-compose-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download14643962259590609669bin
-Resource missing. [HTTP HEAD: https://dl.google.com/dl/android/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx/2.8.3/lifecycle-runtime-ktx-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download2564499183327868790bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/retrofit2/retrofit/2.11.0/retrofit-2.11.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx/2.8.3/lifecycle-runtime-ktx-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download6900160662995761005bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/retrofit/2.11.0/retrofit-2.11.0.pom to /home/runner/.gradle/.tmp/gradle_download1658948747013422977bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/retrofit/2.11.0/retrofit-2.11.0.module to /home/runner/.gradle/.tmp/gradle_download8840115922762979494bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/hilt/hilt-navigation-compose/1.2.0/hilt-navigation-compose-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download4197438099662814499bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/retrofit2/converter-gson/2.11.0/converter-gson-2.11.0.pom]
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/converter-gson/2.11.0/converter-gson-2.11.0.pom to /home/runner/.gradle/.tmp/gradle_download6597875229125981412bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/converter-gson/2.11.0/converter-gson-2.11.0.module to /home/runner/.gradle/.tmp/gradle_download15749918468804378150bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.pom to /home/runner/.gradle/.tmp/gradle_download17035442970702110316bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.module to /home/runner/.gradle/.tmp/gradle_download14418986239517033465bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/hilt/hilt-navigation-compose/1.2.0/hilt-navigation-compose-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download4137171819841193241bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.pom to /home/runner/.gradle/.tmp/gradle_download10389908954259398221bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/coil-kt/coil-gif/2.6.0/coil-gif-2.6.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.module to /home/runner/.gradle/.tmp/gradle_download11116506003694542087bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/room/room-runtime/2.6.1/room-runtime-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download4096884955182679593bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-gif/2.6.0/coil-gif-2.6.0.pom to /home/runner/.gradle/.tmp/gradle_download14245017860487095613bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/coil-kt/coil-compose/2.6.0/coil-compose-2.6.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/room/room-ktx/2.6.1/room-ktx-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download9288983593313986523bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-gif/2.6.0/coil-gif-2.6.0.module to /home/runner/.gradle/.tmp/gradle_download17517405853837309717bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-compose/2.6.0/coil-compose-2.6.0.pom to /home/runner/.gradle/.tmp/gradle_download4961023369360124933bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/room/room-ktx/2.6.1/room-ktx-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download11157275623897448851bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-compose/2.6.0/coil-compose-2.6.0.module to /home/runner/.gradle/.tmp/gradle_download12941872563748342861bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/room/room-runtime/2.6.1/room-runtime-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download13578485790553488518bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/livekit/livekit-android/2.5.0/livekit-android-2.5.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-ui/1.3.1/media3-ui-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download10629161457308059504bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-exoplayer/1.3.1/media3-exoplayer-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download11934783672104858088bin
-Downloading https://repo.maven.apache.org/maven2/io/livekit/livekit-android/2.5.0/livekit-android-2.5.0.pom to /home/runner/.gradle/.tmp/gradle_download11649565389498007612bin
-Downloading https://repo.maven.apache.org/maven2/io/livekit/livekit-android/2.5.0/livekit-android-2.5.0.module to /home/runner/.gradle/.tmp/gradle_download15924293698716141562bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/airbnb/android/lottie-compose/6.4.0/lottie-compose-6.4.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences/1.1.1/datastore-preferences-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download5182493924273937524bin
-Downloading https://repo.maven.apache.org/maven2/com/airbnb/android/lottie-compose/6.4.0/lottie-compose-6.4.0.pom to /home/runner/.gradle/.tmp/gradle_download13024266236770024972bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/compose-bom/2024.02.01/compose-bom-2024.02.01.pom to /home/runner/.gradle/.tmp/gradle_download9563988751675159625bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-ui/1.3.1/media3-ui-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download6242197745129867073bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-exoplayer/1.3.1/media3-exoplayer-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download16181438932802250625bin
-Downloading https://repo.maven.apache.org/maven2/com/airbnb/android/lottie-compose/6.4.0/lottie-compose-6.4.0.module to /home/runner/.gradle/.tmp/gradle_download17435263518000279507bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/biometric/biometric/1.1.0/biometric-1.1.0.pom to /home/runner/.gradle/.tmp/gradle_download6621299359220854665bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.8.1/kotlinx-coroutines-android-1.8.1.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/biometric/biometric/1.1.0/biometric-1.1.0.module to /home/runner/.gradle/.tmp/gradle_download2287549654926024573bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.8.1/kotlinx-coroutines-android-1.8.1.pom to /home/runner/.gradle/.tmp/gradle_download2883162367600789359bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/security/security-crypto/1.1.0-alpha06/security-crypto-1.1.0-alpha06.pom to /home/runner/.gradle/.tmp/gradle_download13004515714520536588bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/code/gson/gson/2.11.0/gson-2.11.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.11.0/gson-2.11.0.pom to /home/runner/.gradle/.tmp/gradle_download3014839033343889292bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/security/security-crypto/1.1.0-alpha06/security-crypto-1.1.0-alpha06.module to /home/runner/.gradle/.tmp/gradle_download15658143241945716492bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.8.1/kotlinx-coroutines-bom-1.8.1.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences/1.1.1/datastore-preferences-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download16447968160218609083bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/code/gson/gson-parent/2.11.0/gson-parent-2.11.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.8.1/kotlinx-coroutines-bom-1.8.1.pom to /home/runner/.gradle/.tmp/gradle_download16762545202941928878bin
-Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.11.0/gson-parent-2.11.0.pom to /home/runner/.gradle/.tmp/gradle_download8869223945057391557bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.8.1/kotlinx-coroutines-android-1.8.1.module to /home/runner/.gradle/.tmp/gradle_download10131816246679072640bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation/1.6.8/animation-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download15443660556361873296bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation/1.6.8/animation-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download2049231361604882575bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation/1.6.8/foundation-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download8737453584484862692bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation/1.6.8/foundation-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download9425232537017793042bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material3/material3/1.2.1/material3-1.2.1.pom to /home/runner/.gradle/.tmp/gradle_download5940992746202763486bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material3/material3/1.2.1/material3-1.2.1.module to /home/runner/.gradle/.tmp/gradle_download15560751148491044656bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui/1.6.8/ui-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download17838853633798273551bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui/1.6.8/ui-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download7434203859733833823bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-test-manifest/1.6.8/ui-test-manifest-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download6569225737053184521bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-test-manifest/1.6.8/ui-test-manifest-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download15490686796174764082bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling/1.6.8/ui-tooling-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download8394664159635857967bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling/1.6.8/ui-tooling-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download8701534362126362117bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-preview/1.6.8/ui-tooling-preview-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download10562634123923674425bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-preview/1.6.8/ui-tooling-preview-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download17819112790875612071bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-messaging-ktx/24.0.0/firebase-messaging-ktx-24.0.0.pom to /home/runner/.gradle/.tmp/gradle_download3735848545649175752bin
-Resource missing. [HTTP HEAD: https://dl.google.com/dl/android/maven2/org/jetbrains/annotations/13.0/annotations-13.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.6.1/lifecycle-viewmodel-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download4836041275618366937bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-ktx/1.9.0/activity-ktx-1.9.0.pom to /home/runner/.gradle/.tmp/gradle_download9721877761042134272bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.6.1/lifecycle-viewmodel-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download9333449760930986982bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-ktx/1.9.0/activity-ktx-1.9.0.module to /home/runner/.gradle/.tmp/gradle_download851393483774807667bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime/1.6.8/runtime-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download8267395855355587937bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime/1.6.8/runtime-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download7124605249900299803bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-saveable/1.6.8/runtime-saveable-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download14600149264538066859bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-saveable/1.6.8/runtime-saveable-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download4729004909357833127bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-runtime-ktx/2.7.7/navigation-runtime-ktx-2.7.7.pom to /home/runner/.gradle/.tmp/gradle_download12181277344349105533bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-runtime-ktx/2.7.7/navigation-runtime-ktx-2.7.7.module to /home/runner/.gradle/.tmp/gradle_download5348543751749152074bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation-layout/1.6.8/foundation-layout-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download145723778765735788bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation-layout/1.6.8/foundation-layout-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download15431382298376463085bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/dagger/dagger/2.51/dagger-2.51.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.2.0/annotation-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download6592045268087685963bin
-Downloading https://repo.maven.apache.org/maven2/com/google/dagger/dagger/2.51/dagger-2.51.pom to /home/runner/.gradle/.tmp/gradle_download6549356858306667090bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.2.0/annotation-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download14151235996993307142bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/dagger/dagger-lint-aar/2.51/dagger-lint-aar-2.51.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/dagger/dagger-lint-aar/2.51/dagger-lint-aar-2.51.pom to /home/runner/.gradle/.tmp/gradle_download9375292423051008348bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.3.1/annotation-experimental-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download3216757087588811876bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.5.1/lifecycle-common-2.5.1.pom to /home/runner/.gradle/.tmp/gradle_download12444459010217088194bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/fragment/fragment/1.5.1/fragment-1.5.1.pom to /home/runner/.gradle/.tmp/gradle_download8672738214184447855bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.3.1/annotation-experimental-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download8981865352641849170bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/fragment/fragment/1.5.1/fragment-1.5.1.module to /home/runner/.gradle/.tmp/gradle_download265100625398165599bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/dagger/hilt-core/2.51/hilt-core-2.51.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.5.1/lifecycle-viewmodel-savedstate-2.5.1.pom to /home/runner/.gradle/.tmp/gradle_download14656082238126872396bin
-Downloading https://repo.maven.apache.org/maven2/com/google/dagger/hilt-core/2.51/hilt-core-2.51.pom to /home/runner/.gradle/.tmp/gradle_download804851107784372568bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.5.1/lifecycle-common-2.5.1.module to /home/runner/.gradle/.tmp/gradle_download15600039136984551828bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.5.1/lifecycle-viewmodel-savedstate-2.5.1.module to /home/runner/.gradle/.tmp/gradle_download3489336744927873954bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate/1.2.0/savedstate-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download8660460763780688009bin
-Resource missing. [HTTP HEAD: https://dl.google.com/dl/android/maven2/javax/inject/javax.inject/1/javax.inject-1.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate/1.2.0/savedstate-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download426790554152783373bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/hilt/hilt-navigation/1.2.0/hilt-navigation-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download12778535579033497069bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/hilt/hilt-navigation/1.2.0/hilt-navigation-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download12124565443668718857bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx-android/2.8.3/lifecycle-runtime-ktx-android-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download15136733884228508447bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx-android/2.8.3/lifecycle-runtime-ktx-android-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download2740331267310335526bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-compose-android/2.8.3/lifecycle-viewmodel-compose-android-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download16909386394763488905bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-compose-android/2.8.3/lifecycle-viewmodel-compose-android-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download11131635514477007348bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.pom to /home/runner/.gradle/.tmp/gradle_download8577639843755949390bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.6.0/okio-3.6.0.module to /home/runner/.gradle/.tmp/gradle_download7155881253303026814bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.21/kotlin-stdlib-jdk8-1.8.21.pom to /home/runner/.gradle/.tmp/gradle_download17285955996037898539bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/coil-kt/coil/2.6.0/coil-2.6.0.pom]
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil/2.6.0/coil-2.6.0.pom to /home/runner/.gradle/.tmp/gradle_download10948334051285204360bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil/2.6.0/coil-2.6.0.module to /home/runner/.gradle/.tmp/gradle_download9502630558788422161bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/coil-kt/coil-compose-base/2.6.0/coil-compose-base-2.6.0.pom]
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-compose-base/2.6.0/coil-compose-base-2.6.0.pom to /home/runner/.gradle/.tmp/gradle_download3795773850752783804bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-compose-base/2.6.0/coil-compose-base-2.6.0.module to /home/runner/.gradle/.tmp/gradle_download17856583074180306775bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.12.0/core-ktx-1.12.0.pom to /home/runner/.gradle/.tmp/gradle_download15904749086519498610bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/vectordrawable/vectordrawable-animated/1.1.0/vectordrawable-animated-1.1.0.pom to /home/runner/.gradle/.tmp/gradle_download2492723178917208926bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/coil-kt/coil-base/2.6.0/coil-base-2.6.0.pom]
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-base/2.6.0/coil-base-2.6.0.pom to /home/runner/.gradle/.tmp/gradle_download5840093420812977993bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.12.0/core-ktx-1.12.0.module to /home/runner/.gradle/.tmp/gradle_download12369555422447143396bin
-Downloading https://repo.maven.apache.org/maven2/io/coil-kt/coil-base/2.6.0/coil-base-2.6.0.module to /home/runner/.gradle/.tmp/gradle_download10401293403398105175bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/room/room-common/2.6.1/room-common-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download9468893649557936100bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite-framework/2.4.0/sqlite-framework-2.4.0.pom to /home/runner/.gradle/.tmp/gradle_download18147402517760514734bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite/2.4.0/sqlite-2.4.0.pom to /home/runner/.gradle/.tmp/gradle_download8583022191599778100bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-runtime/2.2.0/core-runtime-2.2.0.pom to /home/runner/.gradle/.tmp/gradle_download9712607537573383199bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/room/room-common/2.6.1/room-common-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download15088727660039944775bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-runtime/2.2.0/core-runtime-2.2.0.module to /home/runner/.gradle/.tmp/gradle_download4461085621236616325bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite/2.4.0/sqlite-2.4.0.module to /home/runner/.gradle/.tmp/gradle_download10202126470850814591bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite-framework/2.4.0/sqlite-framework-2.4.0.module to /home/runner/.gradle/.tmp/gradle_download473456411706851428bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.7.1/annotation-1.7.1.pom to /home/runner/.gradle/.tmp/gradle_download9142455168010116501bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.7.1/annotation-1.7.1.module to /home/runner/.gradle/.tmp/gradle_download3005300951023129975bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core/1.13.1/core-1.13.1.pom to /home/runner/.gradle/.tmp/gradle_download2101965018591035780bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/protobuf/protobuf-javalite/3.22.0/protobuf-javalite-3.22.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-javalite/3.22.0/protobuf-javalite-3.22.0.pom to /home/runner/.gradle/.tmp/gradle_download1931472173506330196bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json/1.5.0/kotlinx-serialization-json-1.5.0.pom]
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/javax/sip/android-jain-sip-ri/1.3.0-91/android-jain-sip-ri-1.3.0-91.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json/1.5.0/kotlinx-serialization-json-1.5.0.pom to /home/runner/.gradle/.tmp/gradle_download10466697692757111395bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core/1.13.1/core-1.13.1.module to /home/runner/.gradle/.tmp/gradle_download12043356840130781795bin
-Downloading https://repo.maven.apache.org/maven2/javax/sip/android-jain-sip-ri/1.3.0-91/android-jain-sip-ri-1.3.0-91.pom to /home/runner/.gradle/.tmp/gradle_download3416157090236136950bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.5.0/kotlinx-serialization-bom-1.5.0.pom]
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/javax/sip/jain-sip/1.2.0/jain-sip-1.2.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.5.0/kotlinx-serialization-bom-1.5.0.pom to /home/runner/.gradle/.tmp/gradle_download15120139990947294060bin
-Downloading https://repo.maven.apache.org/maven2/javax/sip/jain-sip/1.2.0/jain-sip-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download457949229074516518bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json/1.5.0/kotlinx-serialization-json-1.5.0.module to /home/runner/.gradle/.tmp/gradle_download17089890039258272349bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/protobuf/protobuf-parent/3.22.0/protobuf-parent-3.22.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-parent/3.22.0/protobuf-parent-3.22.0.pom to /home/runner/.gradle/.tmp/gradle_download14740343115592902078bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/github/ajalt/timberkt/1.5.1/timberkt-1.5.1.pom]
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/protobuf/protobuf-bom/3.22.0/protobuf-bom-3.22.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/github/ajalt/timberkt/1.5.1/timberkt-1.5.1.pom to /home/runner/.gradle/.tmp/gradle_download5568583629263010225bin
-Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-bom/3.22.0/protobuf-bom-3.22.0.pom to /home/runner/.gradle/.tmp/gradle_download5694577209011104984bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/io/github/webrtc-sdk/android-prefixed/125.6422.02/android-prefixed-125.6422.02.pom]
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/vdurmont/semver4j/3.1.0/semver4j-3.1.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/vdurmont/semver4j/3.1.0/semver4j-3.1.0.pom to /home/runner/.gradle/.tmp/gradle_download15715088068089829953bin
-Downloading https://repo.maven.apache.org/maven2/io/github/webrtc-sdk/android-prefixed/125.6422.02/android-prefixed-125.6422.02.pom to /home/runner/.gradle/.tmp/gradle_download4108672080205539102bin
-Downloading https://repo.maven.apache.org/maven2/io/github/webrtc-sdk/android-prefixed/125.6422.02/android-prefixed-125.6422.02.module to /home/runner/.gradle/.tmp/gradle_download3899723893679533163bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.pom]
-Resource missing. [HTTP GET: https://repo.maven.apache.org/maven2/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-container/1.3.1/media3-container-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download12788513154449831966bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/exifinterface/exifinterface/1.3.6/exifinterface-1.3.6.pom to /home/runner/.gradle/.tmp/gradle_download14251938279781640675bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.2.0/collection-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download9556238566777118840bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/exifinterface/exifinterface/1.3.6/exifinterface-1.3.6.module to /home/runner/.gradle/.tmp/gradle_download14687693954713926940bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-common/1.3.1/media3-common-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download14494146306963661015bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-datasource/1.3.1/media3-datasource-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download553535911907368667bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.2.0/collection-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download7298364517701326799bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-container/1.3.1/media3-container-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download4341460501601679387bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-common/1.3.1/media3-common-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download16881800635606310620bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-datasource/1.3.1/media3-datasource-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download5594052294050869867bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-decoder/1.3.1/media3-decoder-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download2723020592786865844bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-database/1.3.1/media3-database-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download18087251714009865061bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-extractor/1.3.1/media3-extractor-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download7345466486633138449bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-decoder/1.3.1/media3-decoder-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download6311326174497530155bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-database/1.3.1/media3-database-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download13300421279794831432bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media3/media3-extractor/1.3.1/media3-extractor-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download3240412214784452412bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media/media/1.7.0/media-1.7.0.pom to /home/runner/.gradle/.tmp/gradle_download12004097970203978505bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/recyclerview/recyclerview/1.3.0/recyclerview-1.3.0.pom to /home/runner/.gradle/.tmp/gradle_download15634983322352163467bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/recyclerview/recyclerview/1.3.0/recyclerview-1.3.0.module to /home/runner/.gradle/.tmp/gradle_download7905872773691180570bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/media/media/1.7.0/media-1.7.0.module to /home/runner/.gradle/.tmp/gradle_download1184445477404459732bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/airbnb/android/lottie/6.4.0/lottie-6.4.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/airbnb/android/lottie/6.4.0/lottie-6.4.0.pom to /home/runner/.gradle/.tmp/gradle_download15931019657092164742bin
-Downloading https://repo.maven.apache.org/maven2/com/airbnb/android/lottie/6.4.0/lottie-6.4.0.module to /home/runner/.gradle/.tmp/gradle_download11373616457314538751bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-android/1.1.1/datastore-preferences-android-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download1481264360908173065bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-android/1.1.1/datastore-preferences-android-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download6748295136543335034bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.5.1/activity-1.5.1.pom to /home/runner/.gradle/.tmp/gradle_download10579997360571202688bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.2.0/lifecycle-livedata-core-2.2.0.pom to /home/runner/.gradle/.tmp/gradle_download4950744301752443156bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat/1.2.0/appcompat-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download10024346426638100444bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.5.1/activity-1.5.1.module to /home/runner/.gradle/.tmp/gradle_download15815962179798774089bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat/1.2.0/appcompat-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download12855321126534156784bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.pom to /home/runner/.gradle/.tmp/gradle_download2381387354779299501bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.1/kotlinx-coroutines-core-1.8.1.module to /home/runner/.gradle/.tmp/gradle_download16602455146657001115bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.pom to /home/runner/.gradle/.tmp/gradle_download13710089497881656356bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/errorprone/error_prone_parent/2.27.0/error_prone_parent-2.27.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.27.0/error_prone_parent-2.27.0.pom to /home/runner/.gradle/.tmp/gradle_download12085755962350224119bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/crypto/tink/tink-android/1.8.0/tink-android-1.8.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/crypto/tink/tink-android/1.8.0/tink-android-1.8.0.pom to /home/runner/.gradle/.tmp/gradle_download963572787854390571bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.22/kotlin-stdlib-jdk8-1.8.22.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.22/kotlin-stdlib-jdk8-1.8.22.pom to /home/runner/.gradle/.tmp/gradle_download15110258233881128473bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-components/18.0.0/firebase-components-18.0.0.pom to /home/runner/.gradle/.tmp/gradle_download5790059226913386166bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-common-ktx/21.0.0/firebase-common-ktx-21.0.0.pom to /home/runner/.gradle/.tmp/gradle_download5898572894525465017bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-common/21.0.0/firebase-common-21.0.0.pom to /home/runner/.gradle/.tmp/gradle_download3715665722231703696bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-messaging/24.0.0/firebase-messaging-24.0.0.pom to /home/runner/.gradle/.tmp/gradle_download6261552950326723481bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.9.0/activity-1.9.0.pom to /home/runner/.gradle/.tmp/gradle_download17824198343440559486bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.9.0/activity-1.9.0.module to /home/runner/.gradle/.tmp/gradle_download9870877071779764255bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.13.0/core-ktx-1.13.0.pom to /home/runner/.gradle/.tmp/gradle_download1939455040697857309bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.13.0/core-ktx-1.13.0.module to /home/runner/.gradle/.tmp/gradle_download8053899392672853396bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate-ktx/1.2.1/savedstate-ktx-1.2.1.pom to /home/runner/.gradle/.tmp/gradle_download12927367270755891748bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.6.1/lifecycle-viewmodel-ktx-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download6521169538462296462bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.6.1/lifecycle-viewmodel-ktx-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download3774674319128637858bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate-ktx/1.2.1/savedstate-ktx-1.2.1.module to /home/runner/.gradle/.tmp/gradle_download4003394022287971303bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.6.1/lifecycle-common-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download18210344243751195896bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.6.1/lifecycle-common-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download15372325697981353643bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.6.1/lifecycle-livedata-core-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download16896889683412806347bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.6.1/lifecycle-livedata-core-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download15537968593245225142bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.6.1/lifecycle-viewmodel-savedstate-2.6.1.pom to /home/runner/.gradle/.tmp/gradle_download9492456208634643846bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.6.1/lifecycle-viewmodel-savedstate-2.6.1.module to /home/runner/.gradle/.tmp/gradle_download1879734540694961675bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.20/kotlin-stdlib-jdk7-1.8.20.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.20/kotlin-stdlib-jdk7-1.8.20.pom to /home/runner/.gradle/.tmp/gradle_download13860481372238281308bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-runtime/2.7.7/navigation-runtime-2.7.7.pom to /home/runner/.gradle/.tmp/gradle_download11212995677913070055bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-common-ktx/2.7.7/navigation-common-ktx-2.7.7.pom to /home/runner/.gradle/.tmp/gradle_download6693996377669282990bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-runtime/2.7.7/navigation-runtime-2.7.7.module to /home/runner/.gradle/.tmp/gradle_download2628853272633310124bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-common-ktx/2.7.7/navigation-common-ktx-2.7.7.module to /home/runner/.gradle/.tmp/gradle_download8419379428337501817bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/viewpager/viewpager/1.0.0/viewpager-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download6788056183411666396bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/loader/loader/1.0.0/loader-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download15598763096259709006bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-common/2.1.0/core-common-2.1.0.pom to /home/runner/.gradle/.tmp/gradle_download2147861103135612063bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.8.0/annotation-1.8.0.pom to /home/runner/.gradle/.tmp/gradle_download13324396873491050142bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.8.0/annotation-1.8.0.module to /home/runner/.gradle/.tmp/gradle_download935399536810299062bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.8.3/lifecycle-common-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download16994644221614155186bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common/2.8.3/lifecycle-common-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download4529343568393938249bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.8.3/lifecycle-livedata-core-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download2230709935297594191bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.8.3/lifecycle-livedata-core-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download6484823041714341771bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.8.3/lifecycle-viewmodel-savedstate-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download81560343030740809bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.8.3/lifecycle-viewmodel-savedstate-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download4089236981213803791bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.8.3/lifecycle-viewmodel-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download13025141746633527371bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.8.3/lifecycle-viewmodel-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download17467112765112723711bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.8.3/lifecycle-viewmodel-ktx-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download15065435108855589660bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.8.3/lifecycle-viewmodel-ktx-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download2940223980696183615bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime/2.8.3/lifecycle-runtime-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download10137556989972549181bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime/2.8.3/lifecycle-runtime-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download14806092293299866179bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.pom to /home/runner/.gradle/.tmp/gradle_download10075424520403260180bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.6.0/okio-jvm-3.6.0.module to /home/runner/.gradle/.tmp/gradle_download9515537550467214087bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/accompanist/accompanist-drawablepainter/0.32.0/accompanist-drawablepainter-0.32.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/accompanist/accompanist-drawablepainter/0.32.0/accompanist-drawablepainter-0.32.0.pom to /home/runner/.gradle/.tmp/gradle_download8269748238704361293bin
-Downloading https://repo.maven.apache.org/maven2/com/google/accompanist/accompanist-drawablepainter/0.32.0/accompanist-drawablepainter-0.32.0.module to /home/runner/.gradle/.tmp/gradle_download7716260950840380543bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/vectordrawable/vectordrawable/1.1.0/vectordrawable-1.1.0.pom to /home/runner/.gradle/.tmp/gradle_download9121261574798285953bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/interpolator/interpolator/1.0.0/interpolator-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download1141890073626347512bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.4.0/collection-1.4.0.pom to /home/runner/.gradle/.tmp/gradle_download3829935842139137920bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.4.0/collection-1.4.0.module to /home/runner/.gradle/.tmp/gradle_download9660413992508531064bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/exifinterface/exifinterface/1.3.7/exifinterface-1.3.7.pom to /home/runner/.gradle/.tmp/gradle_download8654287991379451399bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/exifinterface/exifinterface/1.3.7/exifinterface-1.3.7.module to /home/runner/.gradle/.tmp/gradle_download5294538556803380085bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/okio/okio/3.8.0/okio-3.8.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.8.0/okio-3.8.0.pom to /home/runner/.gradle/.tmp/gradle_download2092971730786551543bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio/3.8.0/okio-3.8.0.module to /home/runner/.gradle/.tmp/gradle_download4988618782219259822bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/profileinstaller/profileinstaller/1.3.1/profileinstaller-1.3.1.pom to /home/runner/.gradle/.tmp/gradle_download748490849447996412bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat-resources/1.6.1/appcompat-resources-1.6.1.pom to /home/runner/.gradle/.tmp/gradle_download15545113267022187542bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/profileinstaller/profileinstaller/1.3.1/profileinstaller-1.3.1.module to /home/runner/.gradle/.tmp/gradle_download14075109385687798865bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat-resources/1.6.1/appcompat-resources-1.6.1.module to /home/runner/.gradle/.tmp/gradle_download4173199958129703290bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-common/2.2.0/core-common-2.2.0.pom to /home/runner/.gradle/.tmp/gradle_download3252493378740957955bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-common/2.2.0/core-common-2.2.0.module to /home/runner/.gradle/.tmp/gradle_download15160027447721254619bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.5.0/kotlinx-serialization-json-jvm-1.5.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.5.0/kotlinx-serialization-json-jvm-1.5.0.pom to /home/runner/.gradle/.tmp/gradle_download6328547263865890098bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.5.0/kotlinx-serialization-json-jvm-1.5.0.module to /home/runner/.gradle/.tmp/gradle_download15390253765243256372bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.4.0/annotation-experimental-1.4.0.pom to /home/runner/.gradle/.tmp/gradle_download14962197940129672183bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.4.0/annotation-experimental-1.4.0.module to /home/runner/.gradle/.tmp/gradle_download18428931058765882403bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.13.1/core-ktx-1.13.1.pom to /home/runner/.gradle/.tmp/gradle_download151345183111310319bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.13.1/core-ktx-1.13.1.module to /home/runner/.gradle/.tmp/gradle_download809602122910728433bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/concurrent/concurrent-futures/1.0.0/concurrent-futures-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download18159871459370725943bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/versionedparcelable/versionedparcelable/1.1.1/versionedparcelable-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download8628022216454742301bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/jakewharton/timber/timber/4.7.0/timber-4.7.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/jakewharton/timber/timber/4.7.0/timber-4.7.0.pom to /home/runner/.gradle/.tmp/gradle_download18170859970645431181bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.pom to /home/runner/.gradle/.tmp/gradle_download14597727226778819799bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/guava/guava-parent/32.1.3-android/guava-parent-32.1.3-android.pom]
-Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/32.1.3-android/guava-parent-32.1.3-android.pom to /home/runner/.gradle/.tmp/gradle_download18154055379480089227bin
-Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.module to /home/runner/.gradle/.tmp/gradle_download10616490945277790144bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/customview/customview-poolingcontainer/1.0.0/customview-poolingcontainer-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download12690486503496766568bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/customview/customview/1.0.0/customview-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download8564658518251261280bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/customview/customview-poolingcontainer/1.0.0/customview-poolingcontainer-1.0.0.module to /home/runner/.gradle/.tmp/gradle_download3409626773492285075bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation-android/1.6.8/foundation-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download3025114088673199224bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation-android/1.6.8/animation-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download12198760094102821120bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material3/material3-android/1.2.1/material3-android-1.2.1.pom to /home/runner/.gradle/.tmp/gradle_download14444373758800909995bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation-android/1.6.8/animation-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download13090634470125858702bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-android/1.6.8/ui-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download7909331979050188581bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation-android/1.6.8/foundation-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download3045578333082214075bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material3/material3-android/1.2.1/material3-android-1.2.1.module to /home/runner/.gradle/.tmp/gradle_download14607965151234229705bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-android/1.6.8/ui-tooling-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download1119343711173164595bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-android/1.6.8/runtime-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download6806860909277441318bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-android/1.6.8/ui-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download4581042567527302651bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-preview-android/1.6.8/ui-tooling-preview-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download12572586596665013976bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-android/1.6.8/runtime-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download3630448295117865950bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-saveable-android/1.6.8/runtime-saveable-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download5653201307208127028bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-android/1.6.8/ui-tooling-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download9433681050168900812bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation-layout-android/1.6.8/foundation-layout-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download11260366785237293256bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-preview-android/1.6.8/ui-tooling-preview-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download14758906873655848353bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/foundation/foundation-layout-android/1.6.8/foundation-layout-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download5919210018921273335bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-saveable-android/1.6.8/runtime-saveable-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download10775299130754540706bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat/1.6.1/appcompat-1.6.1.pom to /home/runner/.gradle/.tmp/gradle_download1415515245092705012bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/appcompat/appcompat/1.6.1/appcompat-1.6.1.module to /home/runner/.gradle/.tmp/gradle_download5288119017707437181bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-core/1.1.1/datastore-preferences-core-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download821432131096321326bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore/1.1.1/datastore-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download2602331998671144240bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-core/1.1.1/datastore-preferences-core-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download15219273034944271867bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore/1.1.1/datastore-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download18174756665681014349bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.1/kotlinx-coroutines-core-jvm-1.8.1.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.1/kotlinx-coroutines-core-jvm-1.8.1.pom to /home/runner/.gradle/.tmp/gradle_download9527077607762490711bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.1/kotlinx-coroutines-core-jvm-1.8.1.module to /home/runner/.gradle/.tmp/gradle_download4661891543663228413bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.22/kotlin-stdlib-jdk7-1.8.22.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.22/kotlin-stdlib-jdk7-1.8.22.pom to /home/runner/.gradle/.tmp/gradle_download11261457320352476950bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-annotations/16.2.0/firebase-annotations-16.2.0.pom to /home/runner/.gradle/.tmp/gradle_download17047386117717226485bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-json/18.0.0/firebase-encoders-json-18.0.0.pom to /home/runner/.gradle/.tmp/gradle_download5590565106187424767bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-proto/16.0.0/firebase-encoders-proto-16.0.0.pom to /home/runner/.gradle/.tmp/gradle_download7516730456170424052bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-iid-interop/17.1.0/firebase-iid-interop-17.1.0.pom to /home/runner/.gradle/.tmp/gradle_download3891999763009812804bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-datatransport/18.2.0/firebase-datatransport-18.2.0.pom to /home/runner/.gradle/.tmp/gradle_download3260152032261374322bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-api/3.1.0/transport-api-3.1.0.pom to /home/runner/.gradle/.tmp/gradle_download14700422240192086046bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-measurement-connector/19.0.0/firebase-measurement-connector-19.0.0.pom to /home/runner/.gradle/.tmp/gradle_download11343651859019359593bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-backend-cct/3.1.8/transport-backend-cct-3.1.8.pom to /home/runner/.gradle/.tmp/gradle_download11173091804650246848bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-runtime/3.1.8/transport-runtime-3.1.8.pom to /home/runner/.gradle/.tmp/gradle_download5360515652119652259bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-base/18.0.1/play-services-base-18.0.1.pom to /home/runner/.gradle/.tmp/gradle_download16763051387754676162bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-basement/18.1.0/play-services-basement-18.1.0.pom to /home/runner/.gradle/.tmp/gradle_download5575705350036148318bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-cloud-messaging/17.2.0/play-services-cloud-messaging-17.2.0.pom to /home/runner/.gradle/.tmp/gradle_download8549010382550627829bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-stats/17.0.2/play-services-stats-17.0.2.pom to /home/runner/.gradle/.tmp/gradle_download9182904718915460297bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-tasks/18.0.1/play-services-tasks-18.0.1.pom to /home/runner/.gradle/.tmp/gradle_download10917192116951530738bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-installations-interop/17.1.0/firebase-installations-interop-17.1.0.pom to /home/runner/.gradle/.tmp/gradle_download18164517612473560159bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders/17.0.0/firebase-encoders-17.0.0.pom to /home/runner/.gradle/.tmp/gradle_download15915559500075652676bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-installations/18.0.0/firebase-installations-18.0.0.pom to /home/runner/.gradle/.tmp/gradle_download7209534443216738260bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/concurrent/concurrent-futures/1.1.0/concurrent-futures-1.1.0.pom to /home/runner/.gradle/.tmp/gradle_download5886760849719507375bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/concurrent/concurrent-futures/1.1.0/concurrent-futures-1.1.0.module to /home/runner/.gradle/.tmp/gradle_download2815895025729798523bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-basement/18.3.0/play-services-basement-18.3.0.pom to /home/runner/.gradle/.tmp/gradle_download2154416238533998674bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-tasks/18.1.0/play-services-tasks-18.1.0.pom to /home/runner/.gradle/.tmp/gradle_download10814713392093198246bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-play-services/1.8.1/kotlinx-coroutines-play-services-1.8.1.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-play-services/1.8.1/kotlinx-coroutines-play-services-1.8.1.pom to /home/runner/.gradle/.tmp/gradle_download10145349473329319bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-play-services/1.8.1/kotlinx-coroutines-play-services-1.8.1.module to /home/runner/.gradle/.tmp/gradle_download10940434355991846920bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate/1.2.1/savedstate-1.2.1.pom to /home/runner/.gradle/.tmp/gradle_download5982506233256209548bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/savedstate/savedstate/1.2.1/savedstate-1.2.1.module to /home/runner/.gradle/.tmp/gradle_download16146213823221856463bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/tracing/tracing/1.0.0/tracing-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download420401569882629284bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/tracing/tracing/1.0.0/tracing-1.0.0.module to /home/runner/.gradle/.tmp/gradle_download8104085679025262232bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-common/2.7.7/navigation-common-2.7.7.pom to /home/runner/.gradle/.tmp/gradle_download11901526625266278707bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/navigation/navigation-common/2.7.7/navigation-common-2.7.7.module to /home/runner/.gradle/.tmp/gradle_download4597814646762482516bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata/2.8.3/lifecycle-livedata-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download399611081918774110bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata/2.8.3/lifecycle-livedata-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download3035967968356378981bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-jvm/1.8.0/annotation-jvm-1.8.0.pom to /home/runner/.gradle/.tmp/gradle_download11778399711994528621bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-jvm/1.8.0/annotation-jvm-1.8.0.module to /home/runner/.gradle/.tmp/gradle_download9821279245542810847bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-jvm/2.8.3/lifecycle-common-jvm-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download12921315819262283598bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-jvm/2.8.3/lifecycle-common-jvm-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download15868173223881597548bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-android/2.8.3/lifecycle-viewmodel-android-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download17462901963908016305bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-android/2.8.3/lifecycle-viewmodel-android-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download170093656019370269bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-android/2.8.3/lifecycle-runtime-android-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download13017065798464645123bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-android/2.8.3/lifecycle-runtime-android-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download14749104342777985871bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.0/kotlin-stdlib-jdk8-1.9.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.0/kotlin-stdlib-jdk8-1.9.0.pom to /home/runner/.gradle/.tmp/gradle_download11343197346936587144bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-jvm/1.4.0/collection-jvm-1.4.0.pom to /home/runner/.gradle/.tmp/gradle_download13470889579837731786bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-jvm/1.4.0/collection-jvm-1.4.0.module to /home/runner/.gradle/.tmp/gradle_download1756662191381209650bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.pom]
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.pom to /home/runner/.gradle/.tmp/gradle_download3889180714516615471bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.module to /home/runner/.gradle/.tmp/gradle_download13630760788779162507bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/google/guava/listenablefuture/1.0/listenablefuture-1.0.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/startup/startup-runtime/1.1.1/startup-runtime-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download4127568518720298328bin
-Downloading https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/1.0/listenablefuture-1.0.pom to /home/runner/.gradle/.tmp/gradle_download3853940096557389247bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/startup/startup-runtime/1.1.1/startup-runtime-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download1389937943344068210bin
-Resource missing. [HTTP HEAD: https://dl.google.com/dl/android/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom]
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core/1.5.0/kotlinx-serialization-core-1.5.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core/1.5.0/kotlinx-serialization-core-1.5.0.pom to /home/runner/.gradle/.tmp/gradle_download7917295625625159881bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core/1.5.0/kotlinx-serialization-core-1.5.0.module to /home/runner/.gradle/.tmp/gradle_download10409348119354929078bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation-core/1.6.8/animation-core-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download15495404700809316497bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.22/kotlin-stdlib-common-1.8.22.pom]
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation-core/1.6.8/animation-core-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download8625836558661903419bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.22/kotlin-stdlib-common-1.8.22.pom to /home/runner/.gradle/.tmp/gradle_download1043791616507422115bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-geometry/1.6.8/ui-geometry-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download3297886410951377491bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-util/1.6.8/ui-util-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download3856212531986149545bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-geometry/1.6.8/ui-geometry-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download7958594930495878184bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-util/1.6.8/ui-util-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download17485415099405914306bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2/1.3.0/emoji2-1.3.0.pom to /home/runner/.gradle/.tmp/gradle_download3377944505238388867bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2/1.3.0/emoji2-1.3.0.module to /home/runner/.gradle/.tmp/gradle_download12573474810511867343bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-text/1.6.8/ui-text-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download11277672480715712970bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-text/1.6.8/ui-text-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download14264523656480519176bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-java8/2.8.3/lifecycle-common-java8-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download10531255456956730781bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-java8/2.8.3/lifecycle-common-java8-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download16108258267136195357bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-graphics/1.6.8/ui-graphics-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download4994499234841290414bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-graphics/1.6.8/ui-graphics-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download9136981032062051466bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-ripple/1.6.8/material-ripple-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download1207636499949658399bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-icons-core/1.6.8/material-icons-core-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download16132777080711163482bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-ripple/1.6.8/material-ripple-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download6656268605280778619bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-icons-core/1.6.8/material-icons-core-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download4136483306461744883bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/autofill/autofill/1.0.0/autofill-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download14046454037035247090bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-unit/1.6.8/ui-unit-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download6202430056198562497bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-unit/1.6.8/ui-unit-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download14263548267250553323bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-data/1.6.8/ui-tooling-data-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download18433311236198374654bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-data/1.6.8/ui-tooling-data-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download14605917347274479550bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material/1.6.8/material-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download6131530388158925082bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material/1.6.8/material-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download4345820915100581089bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.2.0/emoji2-views-helper-1.2.0.pom to /home/runner/.gradle/.tmp/gradle_download2819464125917615068bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/drawerlayout/drawerlayout/1.0.0/drawerlayout-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download14978553518421521403bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.pom to /home/runner/.gradle/.tmp/gradle_download585612000060691556bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/cursoradapter/cursoradapter/1.0.0/cursoradapter-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download9167804641789801884bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.module to /home/runner/.gradle/.tmp/gradle_download18299275678469785742bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.2.0/emoji2-views-helper-1.2.0.module to /home/runner/.gradle/.tmp/gradle_download14881953217437361807bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-android/1.1.1/datastore-android-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download16859648657286190007bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-android/1.1.1/datastore-android-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download13698841872169280710bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-core-jvm/1.1.1/datastore-preferences-core-jvm-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download2311970476166856283bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-core-jvm/1.1.1/datastore-preferences-core-jvm-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download4488884114319816060bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/annotations/23.0.0/annotations-23.0.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/annotations/23.0.0/annotations-23.0.0.pom to /home/runner/.gradle/.tmp/gradle_download979021000936233094bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-runtime/3.1.9/transport-runtime-3.1.9.pom to /home/runner/.gradle/.tmp/gradle_download10904139869762614359bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-backend-cct/3.1.9/transport-backend-cct-3.1.9.pom to /home/runner/.gradle/.tmp/gradle_download9322911993218142342bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/legacy/legacy-support-core-utils/1.0.0/legacy-support-core-utils-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download2535446424603179125bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-installations-interop/17.1.1/firebase-installations-interop-17.1.1.pom to /home/runner/.gradle/.tmp/gradle_download12590383792679090431bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-ktx/1.1.0/collection-ktx-1.1.0.pom to /home/runner/.gradle/.tmp/gradle_download11581193179879707865bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core-ktx/2.8.3/lifecycle-livedata-core-ktx-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download1282985795966189768bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core-ktx/2.8.3/lifecycle-livedata-core-ktx-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download3527873266773373640bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/2.0.0/kotlin-stdlib-common-2.0.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/2.0.0/kotlin-stdlib-common-2.0.0.pom to /home/runner/.gradle/.tmp/gradle_download5090155945223429115bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/2.0.0/kotlin-stdlib-common-2.0.0.module to /home/runner/.gradle/.tmp/gradle_download696752832420598613bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.0/kotlin-stdlib-jdk7-1.9.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.0/kotlin-stdlib-jdk7-1.9.0.pom to /home/runner/.gradle/.tmp/gradle_download16469905930769328069bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-ktx/1.4.0/collection-ktx-1.4.0.pom to /home/runner/.gradle/.tmp/gradle_download1121080920995944371bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-ktx/1.4.0/collection-ktx-1.4.0.module to /home/runner/.gradle/.tmp/gradle_download16440929520972682531bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.5.0/kotlinx-serialization-core-jvm-1.5.0.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.5.0/kotlinx-serialization-core-jvm-1.5.0.pom to /home/runner/.gradle/.tmp/gradle_download13493300070562751163bin
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.5.0/kotlinx-serialization-core-jvm-1.5.0.module to /home/runner/.gradle/.tmp/gradle_download1420089292730661962bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation-core-android/1.6.8/animation-core-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download11198555131982498986bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/animation/animation-core-android/1.6.8/animation-core-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download14740028381119178429bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-geometry-android/1.6.8/ui-geometry-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download15543334577244245235bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-geometry-android/1.6.8/ui-geometry-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download5551530322608361174bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-util-android/1.6.8/ui-util-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download10858892113302167810bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-util-android/1.6.8/ui-util-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download4313374825745602478bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.3.0/emoji2-views-helper-1.3.0.pom to /home/runner/.gradle/.tmp/gradle_download12703318097452395437bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.3.0/emoji2-views-helper-1.3.0.module to /home/runner/.gradle/.tmp/gradle_download2317115750536784976bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-process/2.8.3/lifecycle-process-2.8.3.pom to /home/runner/.gradle/.tmp/gradle_download14252282629031071448bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-process/2.8.3/lifecycle-process-2.8.3.module to /home/runner/.gradle/.tmp/gradle_download4594829252630272078bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-text-android/1.6.8/ui-text-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download16446410206117245520bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-text-android/1.6.8/ui-text-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download2611253177604121693bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-graphics-android/1.6.8/ui-graphics-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download4508265296386971408bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-graphics-android/1.6.8/ui-graphics-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download7405377964589231749bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-icons-core-android/1.6.8/material-icons-core-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download18191669530915993977bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-icons-core-android/1.6.8/material-icons-core-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download11334567376984555857bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-ripple-android/1.6.8/material-ripple-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download16455510939905408989bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-ripple-android/1.6.8/material-ripple-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download12201333224672083298bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-unit-android/1.6.8/ui-unit-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download4396769408096404940bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-unit-android/1.6.8/ui-unit-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download13785605109003836881bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-data-android/1.6.8/ui-tooling-data-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download6039818097667367750bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-tooling-data-android/1.6.8/ui-tooling-data-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download4125175770718720713bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-android/1.6.8/material-android-1.6.8.pom to /home/runner/.gradle/.tmp/gradle_download1279910730485710680bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/material/material-android/1.6.8/material-android-1.6.8.module to /home/runner/.gradle/.tmp/gradle_download17187361976194104401bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core/1.1.1/datastore-core-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download5738523104162655154bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core/1.1.1/datastore-core-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download15740665681037845014bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-okio/1.1.1/datastore-core-okio-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download6488910255252694371bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-okio/1.1.1/datastore-core-okio-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download12881639035923414455bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/localbroadcastmanager/localbroadcastmanager/1.0.0/localbroadcastmanager-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download355981879051487881bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/print/print/1.0.0/print-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download3809996089105894169bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/documentfile/documentfile/1.0.0/documentfile-1.0.0.pom to /home/runner/.gradle/.tmp/gradle_download14084242771789592830bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-android/1.1.1/datastore-core-android-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download7379107514148867878bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-android/1.1.1/datastore-core-android-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download10102872620175260046bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-okio-jvm/1.1.1/datastore-core-okio-jvm-1.1.1.pom to /home/runner/.gradle/.tmp/gradle_download8857365776273698606bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-okio-jvm/1.1.1/datastore-core-okio-jvm-1.1.1.module to /home/runner/.gradle/.tmp/gradle_download8898660956057193812bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-parcelize-runtime/1.9.22/kotlin-parcelize-runtime-1.9.22.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-parcelize-runtime/1.9.22/kotlin-parcelize-runtime-1.9.22.pom to /home/runner/.gradle/.tmp/gradle_download10440417483189035329bin
-Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/org/jetbrains/kotlin/kotlin-android-extensions-runtime/1.9.22/kotlin-android-extensions-runtime-1.9.22.pom]
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-android-extensions-runtime/1.9.22/kotlin-android-extensions-runtime-1.9.22.pom to /home/runner/.gradle/.tmp/gradle_download12942904709568324355bin
-
-> Task :app:checkDebugAarMetadata FAILED
 
 FAILURE: Build failed with an exception.
 
+* Where:
+Build file '/home/runner/work/Starscord/Starscord/app/build.gradle.kts' line: 60
+
 * What went wrong:
-Execution failed for task ':app:checkDebugAarMetadata'.
-> Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
-   > Could not find com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a.
-     Searched in the following locations:
-       - https://dl.google.com/dl/android/maven2/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.pom
-       - https://repo.maven.apache.org/maven2/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.pom
-     Required by:
-         project :app > io.livekit:livekit-android:2.5.0
+Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'app/build.gradle.kts'
 
 * Try:
 > Run with --debug option to get more log output.
@@ -871,11 +813,137 @@ Execution failed for task ':app:checkDebugAarMetadata'.
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:checkDebugAarMetadata'.
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+org.gradle.api.InvalidUserCodeException: Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'app/build.gradle.kts'
+	at org.gradle.internal.management.DefaultDependencyResolutionManagement.repoMutationDisallowedOnProject(DefaultDependencyResolutionManagement.java:199)
+	at org.gradle.internal.ImmutableActionSet$SetWithFewActions.execute(ImmutableActionSet.java:285)
+	at org.gradle.api.internal.DefaultDomainObjectCollection.doAdd(DefaultDomainObjectCollection.java:262)
+	at org.gradle.api.internal.DefaultNamedDomainObjectCollection.doAdd(DefaultNamedDomainObjectCollection.java:125)
+	at org.gradle.api.internal.DefaultDomainObjectCollection.add(DefaultDomainObjectCollection.java:251)
+	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.access$101(DefaultArtifactRepositoryContainer.java:35)
+	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.lambda$new$0(DefaultArtifactRepositoryContainer.java:38)
+	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.addWithUniqueName(DefaultArtifactRepositoryContainer.java:101)
+	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.addRepository(DefaultArtifactRepositoryContainer.java:89)
+	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.addRepository(DefaultArtifactRepositoryContainer.java:84)
+	at org.gradle.api.internal.artifacts.dsl.DefaultRepositoryHandler.google(DefaultRepositoryHandler.java:152)
+	at Build_gradle$2.invoke(build.gradle.kts:60)
+	at Build_gradle$2.invoke(build.gradle.kts:59)
+	at org.gradle.kotlin.dsl.ProjectExtensionsKt.repositories(ProjectExtensions.kt:218)
+	at Build_gradle.<init>(build.gradle.kts:59)
+	at Program.execute(Unknown Source)
+	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.eval(Interpreter.kt:514)
+	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.evaluateSecondStageOf(Interpreter.kt:443)
+	at Program.execute(Unknown Source)
+	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.eval(Interpreter.kt:514)
+	at org.gradle.kotlin.dsl.execution.Interpreter.eval(Interpreter.kt:213)
+	at org.gradle.kotlin.dsl.provider.StandardKotlinScriptEvaluator.evaluate(KotlinScriptEvaluator.kt:124)
+	at org.gradle.kotlin.dsl.provider.KotlinScriptPluginFactory$create$1.invoke(KotlinScriptPluginFactory.kt:51)
+	at org.gradle.kotlin.dsl.provider.KotlinScriptPluginFactory$create$1.invoke(KotlinScriptPluginFactory.kt:48)
+	at org.gradle.kotlin.dsl.provider.KotlinScriptPlugin.apply(KotlinScriptPlugin.kt:35)
+	at org.gradle.configuration.BuildOperationScriptPlugin$1.run(BuildOperationScriptPlugin.java:68)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.configuration.BuildOperationScriptPlugin.lambda$apply$0(BuildOperationScriptPlugin.java:65)
+	at org.gradle.internal.code.DefaultUserCodeApplicationContext.apply(DefaultUserCodeApplicationContext.java:44)
+	at org.gradle.configuration.BuildOperationScriptPlugin.apply(BuildOperationScriptPlugin.java:65)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$1(DefaultProjectStateRegistry.java:407)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:425)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:406)
+	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:46)
+	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:27)
+	at org.gradle.configuration.project.ConfigureActionsProjectEvaluator.evaluate(ConfigureActionsProjectEvaluator.java:35)
+	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.lambda$run$0(LifecycleProjectEvaluator.java:109)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$1(DefaultProjectStateRegistry.java:407)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$fromMutableState$2(DefaultProjectStateRegistry.java:430)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:363)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:430)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:406)
+	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.run(LifecycleProjectEvaluator.java:100)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.configuration.project.LifecycleProjectEvaluator.evaluate(LifecycleProjectEvaluator.java:72)
+	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:756)
+	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:157)
+	at org.gradle.api.internal.project.ProjectLifecycleController.lambda$ensureSelfConfigured$2(ProjectLifecycleController.java:84)
+	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
+	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransitionIfNotCurrentlyTransitioning$10(StateTransitionController.java:199)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+	at org.gradle.internal.model.StateTransitionController.maybeTransitionIfNotCurrentlyTransitioning(StateTransitionController.java:195)
+	at org.gradle.api.internal.project.ProjectLifecycleController.ensureSelfConfigured(ProjectLifecycleController.java:84)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.ensureConfigured(DefaultProjectStateRegistry.java:381)
+	at org.gradle.execution.TaskPathProjectEvaluator.configure(TaskPathProjectEvaluator.java:34)
+	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:50)
+	at org.gradle.configuration.DefaultProjectsPreparer.prepareProjects(DefaultProjectsPreparer.java:42)
+	at org.gradle.configuration.BuildTreePreparingProjectsPreparer.prepareProjects(BuildTreePreparingProjectsPreparer.java:65)
+	at org.gradle.configuration.BuildOperationFiringProjectsPreparer$ConfigureBuild.run(BuildOperationFiringProjectsPreparer.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.configuration.BuildOperationFiringProjectsPreparer.prepareProjects(BuildOperationFiringProjectsPreparer.java:40)
+	at org.gradle.initialization.VintageBuildModelController.lambda$prepareProjects$2(VintageBuildModelController.java:84)
+	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
+	at org.gradle.internal.model.StateTransitionController.lambda$transitionIfNotPreviously$11(StateTransitionController.java:213)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+	at org.gradle.internal.model.StateTransitionController.transitionIfNotPreviously(StateTransitionController.java:209)
+	at org.gradle.initialization.VintageBuildModelController.prepareProjects(VintageBuildModelController.java:84)
+	at org.gradle.initialization.VintageBuildModelController.prepareToScheduleTasks(VintageBuildModelController.java:71)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$prepareToScheduleTasks$6(DefaultBuildLifecycleController.java:175)
+	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
+	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransition$9(StateTransitionController.java:190)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+	at org.gradle.internal.model.StateTransitionController.maybeTransition(StateTransitionController.java:186)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.prepareToScheduleTasks(DefaultBuildLifecycleController.java:173)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:36)
+	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:36)
+	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:112)
+	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController.scheduleAndRunRequestedTasks(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:77)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:120)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:117)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:77)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:72)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:130)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:62)
+	at org.gradle.internal.buildtree.InitProblems.execute(InitProblems.java:36)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:71)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:60)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:71)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
@@ -883,118 +951,50 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:che
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor$ActionImpl.apply(BuildSessionLifecycleBuildActionExecutor.java:92)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor$ActionImpl.apply(BuildSessionLifecycleBuildActionExecutor.java:80)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:71)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor.execute(BuildSessionLifecycleBuildActionExecutor.java:62)
+	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor.execute(BuildSessionLifecycleBuildActionExecutor.java:41)
+	at org.gradle.internal.buildprocess.execution.StartParamsValidatingActionExecutor.execute(StartParamsValidatingActionExecutor.java:64)
+	at org.gradle.internal.buildprocess.execution.StartParamsValidatingActionExecutor.execute(StartParamsValidatingActionExecutor.java:32)
+	at org.gradle.internal.buildprocess.execution.SessionFailureReportingActionExecutor.execute(SessionFailureReportingActionExecutor.java:51)
+	at org.gradle.internal.buildprocess.execution.SessionFailureReportingActionExecutor.execute(SessionFailureReportingActionExecutor.java:39)
+	at org.gradle.internal.buildprocess.execution.SetupLoggingActionExecutor.execute(SetupLoggingActionExecutor.java:47)
+	at org.gradle.internal.buildprocess.execution.SetupLoggingActionExecutor.execute(SetupLoggingActionExecutor.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:70)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.lambda$execute$0(ForwardClientInput.java:40)
+	at org.gradle.internal.daemon.clientinput.ClientInputForwarder.forwardInput(ClientInputForwarder.java:80)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:53)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.lambda$runCommand$0(DaemonStateCoordinator.java:320)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
-	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailure(ResolveExceptionMapper.java:68)
-	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailures(ResolveExceptionMapper.java:60)
-	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.mapFailure(DefaultConfiguration.java:1988)
-	at org.gradle.api.internal.artifacts.configurations.ResolutionHost.rethrowFailure(ResolutionHost.java:48)
-	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.maybeThrowResolutionFailures(ResolutionBackedFileCollection.java:84)
-	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:74)
-	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
-	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
-	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
-	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
-	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:306)
-	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
-	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
-	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
-	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
-	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
-	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
-	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
-	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:324)
-	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(AbstractCaptureStateBeforeExecutionStep.java:109)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.lambda$captureExecutionState$0(AbstractCaptureStateBeforeExecutionStep.java:74)
-	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionState(AbstractCaptureStateBeforeExecutionStep.java:69)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:62)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a.
-Searched in the following locations:
-  - https://dl.google.com/dl/android/maven2/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.pom
-  - https://repo.maven.apache.org/maven2/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.pom
-Required by:
-    project :app > io.livekit:livekit-android:2.5.0
 
 
-Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-
-You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-
-For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-
-BUILD FAILED in 1m 19s
-2 actionable tasks: 2 executed
+BUILD FAILED in 1m 1s
