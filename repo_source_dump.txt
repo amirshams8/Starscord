@@ -63,6 +63,8 @@ FILE TREE (SELECTED FOLDERS)
 │   │   │   │   ├── values
 │   │   │   │   │   ├── strings.xml
 │   │   │   │   │   ├── themes.xml
+│   │   │   │   ├── xml
+│   │   │   │   │   ├── network_security_config.xml
 ├── gradle/wrapper
 │   ├── gradle-wrapper.properties
 ├── .github
@@ -301,7 +303,8 @@ dependencies {
         android:supportsRtl="true"
         android:theme="@style/Theme.Nexus"
         android:hardwareAccelerated="true"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config">
 
         <activity
             android:name=".MainActivity"
@@ -1502,6 +1505,19 @@ val NexusTypography = Typography(
         <item name="android:navigationBarColor">#FF1E1F22</item>
     </style>
 </resources>
+
+
+//===== FILE: app/src/main/res/xml/network_security_config.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">10.0.3.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">192.168.29.48</domain>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="false"/>
+</network-security-config>
 
 
 //===== FILE: gradle/wrapper/gradle-wrapper.properties =====
