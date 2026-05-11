@@ -20,11 +20,7 @@ No XML errors
 -- BUILD TASK FAILURES --
 > Task :app:processDebugGoogleServices FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 1m 29s
-=======
-BUILD FAILED in 1m 30s
->>>>>>> Stashed changes
+BUILD FAILED in 1m 20s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
@@ -49,10 +45,8 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:pro
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
 --
-Caused by: org.gradle.api.GradleException: File google-services.json is missing. 
-The Google Services Plugin cannot function without it. 
-Searched locations: /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/google-services.json, /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/Debug/google-services.json, /home/runner/work/Starscord/Starscord/app/google-services.json
-	at com.google.gms.googleservices.GoogleServicesTask.action(GoogleServicesTask.kt:77)
+Caused by: org.gradle.api.GradleException: No matching client found for package name 'com.nexus.android' in /home/runner/work/Starscord/Starscord/app/google-services.json
+	at com.google.gms.googleservices.GoogleServicesTask.action(GoogleServicesTask.kt:113)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,6 +54,8 @@ Searched locations: /home/runner/work/Starscord/Starscord/app/src/debug/google-s
 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
 	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
 --
 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
