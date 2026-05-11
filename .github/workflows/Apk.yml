@@ -35,6 +35,10 @@ jobs:
           key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: gradle-${{ runner.os }}-
 
+      # ---------------- FIREBASE ----------------
+      - name: Write google-services.json
+        run: echo '${{ secrets.GOOGLE_SERVICES_JSON }}' > app/google-services.json
+
       # ---------------- BUILD (never hard-fails) ----------------
       - name: Build Debug APK and capture log
         id: gradle_build
@@ -114,35 +118,22 @@ jobs:
 
           print(f"Repository root: {REPO_ROOT}")
 
-          # Read error log
           with open(ERROR_LOG, 'r', encoding='utf-8', errors='ignore') as f:
               error_log = f.read()
 
-          # Dictionary to store file -> [(line_num, error_msg)]
           error_map = defaultdict(list)
 
           def normalize_path(filepath):
-              """Normalize file path to be relative to repo root"""
-              # Remove file:// prefix
               filepath = re.sub(r'^file:/+', '', filepath)
-              
-              # Remove leading slashes
               filepath = filepath.lstrip('/')
-              
-              # Extract relative path from GitHub Actions workspace path
-              # Pattern: /home/runner/work/REPO_NAME/REPO_NAME/actual/path
               match = re.search(r'/home/runner/work/[^/]+/[^/]+/(.+)', filepath)
               if match:
                   filepath = match.group(1)
-              
-              # Also handle pattern: home/runner/work/REPO_NAME/REPO_NAME/actual/path (no leading /)
               match = re.search(r'home/runner/work/[^/]+/[^/]+/(.+)', filepath)
               if match:
                   filepath = match.group(1)
-              
               return filepath
 
-          # Pattern for Kotlin errors: e: file:///path/to/file.kt:line:col error message
           kt_pattern = r'e:\s+(?:file://)?([^\s:]+\.kt):(\d+):(\d+)\s+(.+)'
           for match in re.finditer(kt_pattern, error_log):
               filepath = normalize_path(match.group(1))
@@ -150,7 +141,6 @@ jobs:
               error_msg = match.group(4).strip()
               error_map[filepath].append((line_num, error_msg))
 
-          # Pattern for Java errors
           java_pattern = r'([a-zA-Z0-9_./\-]+\.java):(\d+):\s+error:\s+(.+)'
           for match in re.finditer(java_pattern, error_log):
               filepath = normalize_path(match.group(1))
@@ -158,7 +148,6 @@ jobs:
               error_msg = match.group(3).strip()
               error_map[filepath].append((line_num, error_msg))
 
-          # Pattern for XML errors
           xml_pattern = r'([a-zA-Z0-9_./\-]+\.xml):(\d+):(\d+):\s+(.+)'
           for match in re.finditer(xml_pattern, error_log):
               filepath = normalize_path(match.group(1))
@@ -166,7 +155,6 @@ jobs:
               error_msg = match.group(4).strip()
               error_map[filepath].append((line_num, error_msg))
 
-          # Pattern for C++ errors
           cpp_pattern = r'([a-zA-Z0-9_./\-]+\.(cpp|c|h|hpp)):(\d+):(\d+):\s+error:\s+(.+)'
           for match in re.finditer(cpp_pattern, error_log):
               filepath = normalize_path(match.group(1))
@@ -176,43 +164,30 @@ jobs:
 
           print(f"\nDetected {len(error_map)} error file(s)")
 
-          # Write output
           with open(OUTPUT, 'w', encoding='utf-8') as out:
               out.write("==== SOURCE CODE (ERROR FILES WITH HIGHLIGHTED LINES) ====\n\n")
-              
               if not error_map:
                   out.write("No error files detected\n")
               else:
                   for filepath in sorted(error_map.keys()):
                       print(f"Processing: {filepath}")
-                      
-                      # Construct actual file path
                       actual_path = os.path.join(REPO_ROOT, filepath)
-                      
                       if not os.path.isfile(actual_path):
                           print(f"  ⚠️  File not found at: {actual_path}")
                           out.write(f"//===== FILE: {filepath} (NOT FOUND) =====\n")
                           out.write(f"// Expected at: {actual_path}\n\n")
                           continue
-                      
                       print(f"  ✅ Found at: {actual_path}")
                       out.write(f"//===== FILE: {filepath} =====\n\n")
-                      
-                      # Write error summary
                       errors = sorted(set(error_map[filepath]))
                       out.write(f"// ❌ ERRORS IN THIS FILE ({len(errors)} error(s)):\n")
                       for line_num, msg in errors:
                           out.write(f"// Line {line_num}: {msg}\n")
                       out.write("\n")
-                      
-                      # Create set of error lines for quick lookup
                       error_lines = {line_num for line_num, _ in errors}
-                      
-                      # Write file content with line numbers and markers
                       try:
                           with open(actual_path, 'r', encoding='utf-8', errors='ignore') as f:
                               for line_num, line in enumerate(f, 1):
-                                  # Remove trailing newline for consistent formatting
                                   line = line.rstrip('\n\r')
                                   if line_num in error_lines:
                                       out.write(f"{line_num:4d} ❌ {line}\n")
@@ -222,10 +197,8 @@ jobs:
                       except Exception as e:
                           print(f"  ❌ Error reading file: {e}")
                           out.write(f"// Error reading file: {e}\n")
-                      
                       out.write("\n\n")
 
-          # Save list of error files
           with open("build_error_logs/error_file_list.txt", 'w') as f:
               for filepath in sorted(error_map.keys()):
                   f.write(f"{filepath}\n")
@@ -242,14 +215,11 @@ jobs:
           git config user.name "build-error-bot"
           git config user.email "bot@users.noreply.github.com"
           
-          # Add changes
           git add build_error_logs/
           
-          # Try to commit
           if git commit -m "Build failed - error report (exit code: ${{ steps.gradle_build.outputs.exit_code }})"; then
             echo "Changes committed successfully"
             
-            # Try to push with retry logic
             MAX_RETRIES=3
             RETRY_COUNT=0
             PUSH_SUCCESS=false
@@ -265,24 +235,16 @@ jobs:
                 
                 if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
                   echo "Pulling latest changes and retrying..."
-                  
-                  # Stash our commit temporarily
                   git reset --soft HEAD^
                   git stash
-                  
-                  # Pull with rebase
                   git pull --rebase origin main || {
                     echo "Pull failed, trying merge strategy"
                     git rebase --abort 2>/dev/null || true
                     git pull origin main
                   }
-                  
-                  # Restore our changes
                   git stash pop || true
                   git add build_error_logs/
                   git commit -m "Build failed - error report (exit code: ${{ steps.gradle_build.outputs.exit_code }})" || true
-                  
-                  # Wait a bit before retry
                   sleep 2
                 fi
               fi
@@ -313,3 +275,4 @@ jobs:
           echo "Check build_error_logs/error_summary.txt for details"
           echo "Error logs also available as workflow artifact: build-error-logs"
           exit 1
+          
