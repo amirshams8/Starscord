@@ -7,9 +7,9 @@ No CMake errors
 No ninja errors
 
 -- C++ COMPILATION ERRORS --
-     ERROR: AAPT: error: resource android:style/Theme.Material.NoTitleBar not found.
+     ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
      error: failed linking references.
-ERROR: AAPT: error: resource android:style/Theme.Material.NoTitleBar not found.
+ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
 error: failed linking references.
 
 -- MISSING HEADERS/LIBRARIES --
@@ -541,11 +541,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:processDebugResources FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 2m 42s
-=======
-BUILD FAILED in 2m 54s
->>>>>>> Stashed changes
+BUILD FAILED in 1m 31s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
@@ -595,7 +591,7 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
 --
 Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
-ERROR: AAPT: error: resource android:style/Theme.Material.NoTitleBar not found.
+ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
 error: failed linking references.
 
     
