@@ -5,6 +5,7 @@ FILE TREE (SELECTED FOLDERS)
 .
 ├── app
 │   ├── build.gradle.kts
+│   ├── google-services.json
 │   ├── proguard-rules.pro
 │   ├── src
 │   │   ├── main
@@ -183,6 +184,37 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }
 
+
+//===== FILE: app/google-services.json =====
+{
+  "project_info": {
+    "project_number": "561751761536",
+    "project_id": "starscord",
+    "storage_bucket": "starscord.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561751761536:android:734ddeb9c4b7745506fc65",
+        "android_client_info": {
+          "package_name": "com.nexxus.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP6OAUaKvxpI8zWnwBQZMwPyqSuimNG9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
 
 //===== FILE: app/proguard-rules.pro =====
 -keep class com.nexus.android.data.api.models.** { *; }
