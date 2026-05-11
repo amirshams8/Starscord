@@ -1,3 +1,15 @@
+//===== FILE: app/src/main/res/xml/network_security_config.xml =====
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">10.0.3.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">192.168.29.48</domain>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="false"/>
+</network-security-config>
+
 //===== FILE: app/src/main/AndroidManifest.xml =====
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
@@ -29,7 +41,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nexus"
         android:hardwareAccelerated="true"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config">
 
         <activity
             android:name=".MainActivity"
@@ -59,17 +72,3 @@
         <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="nexus_messages"/>
     </application>
 </manifest>
-
-//===== FILE: app/src/main/res/drawable/ic_launcher.xml =====
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="#5865F2"/>
-</shape>
-
-//===== FILE: app/src/main/res/drawable/ic_launcher_round.xml =====
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <solid android:color="#5865F2"/>
-</shape>
