@@ -195,6 +195,25 @@ dependencies {
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:561751761536:android:ca0a5e246e4f09a106fc65",
+        "android_client_info": {
+          "package_name": "com.nexus.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP6OAUaKvxpI8zWnwBQZMwPyqSuimNG9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:561751761536:android:734ddeb9c4b7745506fc65",
         "android_client_info": {
           "package_name": "com.nexxus.android"
@@ -215,6 +234,7 @@ dependencies {
   ],
   "configuration_version": "1"
 }
+
 
 //===== FILE: app/proguard-rules.pro =====
 -keep class com.nexus.android.data.api.models.** { *; }
@@ -1457,7 +1477,7 @@ val NexusTypography = Typography(
 
 //===== FILE: app/src/main/res/values/themes.xml =====
 <resources>
-    <style name="Theme.Nexus" parent="android:Theme.Material.NoTitleBar">
+    <style name="Theme.Nexus" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@android:color/black</item>
         <item name="android:statusBarColor">#FF1E1F22</item>
         <item name="android:navigationBarColor">#FF1E1F22</item>
