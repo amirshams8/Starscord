@@ -59,6 +59,8 @@ FILE TREE (SELECTED FOLDERS)
 │   │   │   │   ├── values
 │   │   │   │   │   ├── strings.xml
 │   │   │   │   │   ├── themes.xml
+├── gradle/wrapper
+│   ├── gradle-wrapper.properties
 ├── .github
 │   ├── workflows
 │   │   ├── Ai-codegen.yml
@@ -1429,6 +1431,16 @@ val NexusTypography = Typography(
         <item name="android:navigationBarColor">#FF1E1F22</item>
     </style>
 </resources>
+
+
+//===== FILE: gradle/wrapper/gradle-wrapper.properties =====
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.9-bin.zip
+networkTimeout=10000
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
 
 
 //===== FILE: .github/workflows/Ai-codegen.yml =====
