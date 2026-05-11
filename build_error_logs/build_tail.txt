@@ -1,960 +1,772 @@
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/871aa245e8fe2ae8638831b4a8de0949/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/58b7215f6404241d824d272d046101eb/transformed/customview-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/871aa245e8fe2ae8638831b4a8de0949/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/5e89a96a6138c1de48ce6d57964da014/transformed/jetified-media3-exoplayer-1.3.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.14/1194890e6f56ec29177673f2f12d0b8e627dec98/httpclient-4.5.14.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.3.0/emoji2-views-helper-1.3.0.aar to /home/runner/.gradle/.tmp/gradle_download4862539604186494613bin
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.emoji2/emoji2-views-helper/1.3.0/7bef7c1117bb40ef41ee0641cd1d2d605e2d607c/emoji2-views-helper-1.3.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming httpclient-4.5.14.jar (org.apache.httpcomponents:httpclient:4.5.14) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/eeedb1a9566f0ff02946bb877d25f0de/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.14/1194890e6f56ec29177673f2f12d0b8e627dec98/httpclient-4.5.14.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8569ccaeea0d4943dd00903f62686908/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8569ccaeea0d4943dd00903f62686908/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming httpcore-4.4.16.jar (org.apache.httpcomponents:httpcore:4.4.16) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/71b9e84c3bae48b081ebb04a86e02b96/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/3805cfdfda5a8017a360ec428505a4b6/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/3805cfdfda5a8017a360ec428505a4b6/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming javax.activation-1.2.0.jar (com.sun.activation:javax.activation:1.2.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2ecc0d4c3b0f62fada70919a15b67c8a/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.activation/javax.activation/1.2.0/bf744c1e2776ed1de3c55c8dac1057ec331ef744/javax.activation-1.2.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/20dd08704fe5eda6177550b503251240/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/20dd08704fe5eda6177550b503251240/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/signflinger/8.4.2/13f035dd8e7e470ff8f3216a0b46333187f26df5/signflinger-8.4.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming signflinger-8.4.2.jar (com.android:signflinger:8.4.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8f67c2340762307ee7899acda7d4cede/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/signflinger/8.4.2/13f035dd8e7e470ff8f3216a0b46333187f26df5/signflinger-8.4.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b25364e39c596408dcf2dea2e1ff6ab7/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b25364e39c596408dcf2dea2e1ff6ab7/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/zipflinger/8.4.2/de8e3267995699af356740cf562cbedb485f5763/zipflinger-8.4.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming zipflinger-8.4.2.jar (com.android:zipflinger:8.4.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/59b8468c49ab03ed3cdaeeb37e9be476/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android/zipflinger/8.4.2/de8e3267995699af356740cf562cbedb485f5763/zipflinger-8.4.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/1c4d11ff9c98a4b228fb3436e35ce928/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/31.4.2/7f3cdb30f22d5cf7878c1c4b0e40dbcc71112331/annotations-31.4.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming annotations-31.4.2.jar (com.android.tools:annotations:31.4.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/055d0a1542c01e1033575df5e71c0585/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools/annotations/31.4.2/7f3cdb30f22d5cf7878c1c4b0e40dbcc71112331/annotations-31.4.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b5d92bc435e179342123e81c8ec5691e/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b5d92bc435e179342123e81c8ec5691e/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.6.0/d18424ffb8bbfd036d71bcaab9b546858f2ef986/jna-platform-5.6.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming jna-platform-5.6.0.jar (net.java.dev.jna:jna-platform:5.6.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/d0344ff9a90fe5a8cb7f4572b278ae62/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.6.0/d18424ffb8bbfd036d71bcaab9b546858f2ef986/jna-platform-5.6.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8f1136d6413d7772d37652c7c5b6b680/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8f1136d6413d7772d37652c7c5b6b680/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming juniversalchardet-1.0.3.jar (com.googlecode.juniversalchardet:juniversalchardet:1.0.3) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/07ce140507de7888f1fb1b481fc191cc/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.googlecode.juniversalchardet/juniversalchardet/1.0.3/cd49678784c46aa8789c060538e0154013bb421b/juniversalchardet-1.0.3.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/3a59a2fe69204c0cff8ecb38b50db3af/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming javax.annotation-api-1.3.2.jar (javax.annotation:javax.annotation-api:1.3.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/be11195144c0fd2a061794f73c7f2dd1/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f02594b541550f32b73aa1cfb504459c/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f02594b541550f32b73aa1cfb504459c/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8.1/78011e483a21102fb4858f3e8f269a677e50aa23/stax-ex-1.8.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming stax-ex-1.8.1.jar (org.jvnet.staxex:stax-ex:1.8.1) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/6870ce7ac2a89a5c624037645581ebbd/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8.1/78011e483a21102fb4858f3e8f269a677e50aa23/stax-ex-1.8.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/13f7d7fbb105d339071a3ea1c8adb431/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/13f7d7fbb105d339071a3ea1c8adb431/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-=======
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
->>>>>>> Stashed changes
-Transforming jakarta.xml.bind-api-2.3.2.jar (jakarta.xml.bind:jakarta.xml.bind-api:2.3.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/d4660f66dfdebeb71ffe299a7b212478/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
->>>>>>> Stashed changes
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.2/ce5be7da2e442c25ec14c766cb60cb802741727b/txw2-2.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming txw2-2.3.2.jar (org.glassfish.jaxb:txw2:2.3.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/41d7aba1b822afaeebd199966dc155b6/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-=======
->>>>>>> Stashed changes
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.2/ce5be7da2e442c25ec14c766cb60cb802741727b/txw2-2.3.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2/1.3.0/emoji2-1.3.0.aar to /home/runner/.gradle/.tmp/gradle_download297907880347415348bin
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with JetifyTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with ExtractAarTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.emoji2/emoji2/1.3.0/37ed42991ddf77924510472dba632314aab1c9d9/emoji2-1.3.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
-  Build cache is disabled
-  Caching not enabled.
-=======
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
-  Build cache is disabled
-  Caching not enabled.
->>>>>>> Stashed changes
-Transforming istack-commons-runtime-3.0.8.jar (com.sun.istack:istack-commons-runtime:3.0.8) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/e336e8ac7a1cfbd7df4401e66b356535/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
-  Build cache is disabled
-  Caching not enabled.
->>>>>>> Stashed changes
-Transforming FastInfoset-1.2.16.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.16) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/90aca7698ca61529cd07ba0c768a8458/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
->>>>>>> Stashed changes
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/721d72d7e7870160e01035f12bcc540f/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/721d72d7e7870160e01035f12bcc540f/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.1/562a587face36ec7eff2db7f2fc95425c6602bc1/jakarta.activation-api-1.2.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming jakarta.activation-api-1.2.1.jar (jakarta.activation:jakarta.activation-api:1.2.1) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/87f9f77b5c95bc05d826a9f716e9c796/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.1/562a587face36ec7eff2db7f2fc95425c6602bc1/jakarta.activation-api-1.2.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b924270aee55a93dfbde6f49f03622ad/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.2/ed193d86e0af90cc2342aedbe73c5d86b03fa09b/auto-value-annotations-1.6.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming auto-value-annotations-1.6.2.jar (com.google.auto.value:auto-value-annotations:1.6.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/27a49f1ca7a29419cbcb2ecb68719759/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.2/ed193d86e0af90cc2342aedbe73c5d86b03fa09b/auto-value-annotations-1.6.2.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/d57882f0dd2f3e743ff6b205b8637f59/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
-  Build cache is disabled
-  Caching not enabled.
-=======
->>>>>>> Stashed changes
-Transforming error_prone_annotations-2.18.0.jar (com.google.errorprone:error_prone_annotations:2.18.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8e70d4244b6b61d31a02a59536728ac6/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
->>>>>>> Stashed changes
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/831229076f5e9d006ee5c15b85bf74b7/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/831229076f5e9d006ee5c15b85bf74b7/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming jose4j-0.7.0.jar (org.bitbucket.b_c:jose4j:0.7.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c21045d339d8f10bd3cdd9cf15772a69/transformed/merge/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
->>>>>>> Stashed changes
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/ae3da73e90491a1ac1c0bab30459b025/transformed/analysis/instrumentation-hierarchy.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/ae3da73e90491a1ac1c0bab30459b025/transformed/analysis/instrumentation-dependencies.bin because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming slf4j-api-1.7.30.jar (org.slf4j:slf4j-api:1.7.30) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2094bcd6a603606078345210e8fd0a78/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6b0f371916414e310bfbe11554b17e27/transformed/jetified-emoji2-views-helper-1.3.0.aar because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
->>>>>>> Stashed changes
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/10d890693bf902ce9037df99588a7366/transformed/jetified-emoji2-views-helper-1.3.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0458582e8ea3416b8981f11f271a29ae/transformed/analysis/instrumentation-hierarchy.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/core/core/1.13.1/core-1.13.1.aar to /home/runner/.gradle/.tmp/gradle_download7339022428337403815bin
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with ExtractAarTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/autofill/autofill/1.0.0/autofill-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download15348900038762769381bin
+Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.autofill/autofill/1.0.0/d95a6e3b895ad8f037dd01d88c87138b6d5eb507/autofill-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0458582e8ea3416b8981f11f271a29ae/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/76309e05b3cf8b0584e78a13d4e40ccd/transformed/jetified-emoji2-1.3.0.aar because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/601343ff86f095e362baf08383ed405c/transformed/jetified-autofill-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar because:
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarTransform
+Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/5b4d1f3ce70e657689d1ee4cb71e224a/transformed/jetified-autofill-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
->>>>>>> Stashed changes
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0 because:
   Build cache is disabled
   Caching not enabled.
-Transforming jdom2-2.0.6.jar (org.jdom:jdom2:2.0.6) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2387595d807818791fef6982c133e6f6/transformed/merge/instrumentation-dependencies.bin because:
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.13.1/4606d420282fe1e5c8d5c4e647ec188e1045b7be/core-1.13.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/6433edcd6fbe497bff7a1e943eddc33f/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.13.1/4606d420282fe1e5c8d5c4e647ec188e1045b7be/core-1.13.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/6433edcd6fbe497bff7a1e943eddc33f/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/0f5d2b9c2fd6674d64ac9b7acb727e55/transformed/core-1.13.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core-ktx/2.8.3/lifecycle-livedata-core-ktx-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download11470349707319891697bin
+Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with JetifyTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-process/2.8.3/lifecycle-process-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download17301928420550530089bin
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.8.3/3aaf46d5bd206889d5bf452d816439b0adbbca41/lifecycle-livedata-core-ktx-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/a47b0eaba34ed4de2af6417c9d075f4f/transformed/merge/instrumentation-dependencies.bin because:
+Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-process/2.8.3/765b59a3140714aaf2fcd3dd4974af733fda44f1/lifecycle-process-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-android/2.8.3/lifecycle-runtime-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download18200811790187955927bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.8.3/lifecycle-viewmodel-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download5204653194925504137bin
+Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with ExtractAarTransform
+Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with JetifyTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with JetifyTransform
+Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/342e001349582c80b15ec11b0589fd8f/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c65577fc6e04e094a7e9cddfaabc9062/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.8.3/b24817e8c78b402c8d44acf07aeacd71f000ead2/lifecycle-viewmodel-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/c85270e307e7b822f1086b93689124b89768e273/j2objc-annotations-2.8.jar because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-android/2.8.3/17fc8582c650ec8ac523ac325a548ef3d4d55643/lifecycle-runtime-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming j2objc-annotations-2.8.jar (com.google.j2objc:j2objc-annotations:2.8) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/9ebf0708f7aa0389da51f16a200d9981/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/3e09463ecf6bcbde0b8b66bc17e363f2/transformed/jetified-lifecycle-process-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/c85270e307e7b822f1086b93689124b89768e273/j2objc-annotations-2.8.jar because:
+Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.8.3/b24817e8c78b402c8d44acf07aeacd71f000ead2/lifecycle-viewmodel-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf41f01db07e2237699ff4423e2194e6/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/12d9604ace0f7ad71a786aec92e2c655/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/fd9aa1412f182e1b48fe83ac67aaf801/transformed/lifecycle-viewmodel-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/2b4910480f6f4939d36ac67af712af9c/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/e42cb99897d8f93fd079b52321ddbec1/transformed/jetified-lifecycle-runtime-release.aar because:
   Build cache is disabled
   Caching not enabled.
-=======
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with AarTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata/2.8.3/lifecycle-livedata-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download377419480352296135bin
+Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with JetifyTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-android/2.8.3/lifecycle-viewmodel-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download3491047978596979434bin
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with JetifyTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/2ebb84e8cee8d01c0a8601bb2bc40a8f/transformed/jetified-lifecycle-runtime-release because:
   Build cache is disabled
   Caching not enabled.
->>>>>>> Stashed changes
-Transforming annotations-4.1.1.4.jar (com.google.android:annotations:4.1.1.4) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/77fb61a21ad759994a2673c3a675e5e4/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.8.3/1aadbe28f1939b2105b2b6c491153e1756915dc3/lifecycle-livedata-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-android/2.8.3/d5a0169696d54d9651dc7f173585ed9b0f35f255/lifecycle-viewmodel-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.8.3/lifecycle-viewmodel-ktx-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download17501888730217187265bin
+Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with ExtractAarTransform
+Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-ktx/2.8.3/c761311999a99df8820f8d4bdeb49fe9712eec1c/lifecycle-viewmodel-ktx-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/2b4910480f6f4939d36ac67af712af9c/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.8.3/1aadbe28f1939b2105b2b6c491153e1756915dc3/lifecycle-livedata-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
->>>>>>> Stashed changes
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with ExtractAarTransform
+Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/c614dc77a272011e88907024763a2bfa/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming animal-sniffer-annotations-1.23.jar (org.codehaus.mojo:animal-sniffer-annotations:1.23) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/179c87685867be1174d1a979f42d5529/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/ff62c37c2ff55fcc6f2d91193b96bdef/transformed/jetified-lifecycle-viewmodel-release.aar because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with AarTransform
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ecd038e6402fb5e0b15af27b3f621518/transformed/lifecycle-livedata-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
->>>>>>> Stashed changes
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/08652da9c5fc6033938779d4e4db5f11/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/73589f71330a345f96aabc76dd7c8458/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/08652da9c5fc6033938779d4e4db5f11/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/b00201f831d80d9f7d38cca5022c38dd/transformed/jetified-lifecycle-viewmodel-release because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-saveable-android/1.6.8/runtime-saveable-android-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download2300004509332615161bin
+Downloading https://repo.maven.apache.org/maven2/com/google/accompanist/accompanist-drawablepainter/0.32.0/accompanist-drawablepainter-0.32.0.aar to /home/runner/.gradle/.tmp/gradle_download7221220124122080036bin
+Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.accompanist/accompanist-drawablepainter/0.32.0/95ccec9539314044fdff3aefac17a2983b53c340/accompanist-drawablepainter-0.32.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/baf93aeef51dca8324f2939aeeb19692/transformed/jetified-accompanist-drawablepainter-0.32.0.aar because:
   Build cache is disabled
   Caching not enabled.
-=======
->>>>>>> Stashed changes
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
+Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with AarTransform
+Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with JetifyTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/82d9eeb8c5809420a664f312c4ebdd4d/transformed/jetified-accompanist-drawablepainter-0.32.0 because:
   Build cache is disabled
   Caching not enabled.
-Transforming perfmark-api-0.26.0.jar (io.perfmark:perfmark-api:0.26.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/7ce67b937f68a7afda9156c1435bf0de/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-saveable-android/1.6.8/179a9d4c93f63b76814a0c29030dc42d8812b19/runtime-saveable-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.8.3/lifecycle-viewmodel-savedstate-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download14066814048380787748bin
+Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-savedstate/2.8.3/52b7eb48a776d050e5c97c255ef82027ac839878/lifecycle-viewmodel-savedstate-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/83b88b9593f4de6776d30612fbe8f581/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
->>>>>>> Stashed changes
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-android/1.1.1/datastore-core-android-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download533780401823367290bin
+Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/8dd3ba8ec78cfbd6e5dd4048a5f2d4d5/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-core-android/1.1.1/cc90a97dbaf20ab27eb0299832d8db0d82591cec/datastore-core-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Transforming netty-codec-http2-4.1.93.Final.jar (io.netty:netty-codec-http2:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c849aae3bf45c20f151deb34fffc21de/transformed/merge/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-android/1.1.1/datastore-android-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download15304501813994537582bin
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-android/1.1.1/7a8d9ff6fd8cf0694179320055cb1d04b5ea8584/datastore-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with ExtractAarTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-android/1.6.8/runtime-android-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download18099518208807148768bin
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6b89131695bf9539d14a3f9bccfc7178/transformed/jetified-datastore-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-codec-http2-4.1.93.Final.jar (io.netty:netty-codec-http2:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c849aae3bf45c20f151deb34fffc21de/transformed/merge/instrumentation-dependencies.bin because:
->>>>>>> Stashed changes
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/d3e4689a34dac70210fccfd20a20e653/transformed/jetified-datastore-core-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/84b3785d3ace9128a149b3327d08e2a2/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/63cfcc36a49b2f9b493a70b0a166c716/transformed/jetified-datastore-release because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/84b3785d3ace9128a149b3327d08e2a2/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with JetifyTransform
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with AarTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-android/1.6.8/affd49c7395c4aa06adf14918737b3fcdd5f7fc6/runtime-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.93.Final/c165c1efe1b9c0cc22546a057b530611a088768b/netty-handler-proxy-4.1.93.Final.jar because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c159abe2c60d87943d530656552df74f/transformed/jetified-datastore-core-release because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-handler-proxy-4.1.93.Final.jar (io.netty:netty-handler-proxy:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8fdae478f102a220536faf34501509cd/transformed/merge/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-android/1.1.1/datastore-preferences-android-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download13177016548973081330bin
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-preferences-android/1.1.1/927dbd4a74ba99501b1d879a22fa6fda1111d01e/datastore-preferences-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler-proxy/4.1.93.Final/c165c1efe1b9c0cc22546a057b530611a088768b/netty-handler-proxy-4.1.93.Final.jar because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-installations-interop/17.1.1/firebase-installations-interop-17.1.1.aar to /home/runner/.gradle/.tmp/gradle_download15566042954024192056bin
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations-interop/17.1.1/c7b5bf3ade22e81023cb90de2fa857016dfa441/firebase-installations-interop-17.1.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/054c58bab0538f933da059baf3078d06/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/e76a4c2fe7f640ea83009654807fc316/transformed/jetified-datastore-preferences-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/054c58bab0538f933da059baf3078d06/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with ExtractAarTransform
+Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6d733ce58258eb785f27e4b8a898b927/transformed/jetified-firebase-installations-interop-17.1.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/d4ad6c33563aa78816c2c4c2336d188b/transformed/jetified-datastore-preferences-release because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Transforming netty-codec-http-4.1.93.Final.jar (io.netty:netty-codec-http:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/cfec4f65e706f4c14b86c4ec09514806/transformed/merge/instrumentation-dependencies.bin because:
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with ExtractAarTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with AarTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/dff38fa25b6012c5179cc5c0a23c522a/transformed/jetified-firebase-installations-interop-17.1.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-tasks/18.1.0/play-services-tasks-18.1.0.aar to /home/runner/.gradle/.tmp/gradle_download5165830556198689892bin
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-tasks/18.1.0/9841a7984efd142b88e8563a5f99131f24e22e1/play-services-tasks-18.1.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/5ab884eb85eecb6072ddabd1606baeed/transformed/jetified-runtime-saveable-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-codec-http-4.1.93.Final.jar (io.netty:netty-codec-http:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/cfec4f65e706f4c14b86c4ec09514806/transformed/merge/instrumentation-dependencies.bin because:
->>>>>>> Stashed changes
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with AarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/8e83d67d72fa6baa34e10f8edb307d0f/transformed/jetified-play-services-tasks-18.1.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/1993d8535c4acca4d49e49b4e7b41515/transformed/jetified-play-services-tasks-18.1.0 because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/e5979eb2e3cedf5ada2eb88bd6867b5b/transformed/jetified-runtime-saveable-release because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-dependencies.bin because:
-=======
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-basement/18.3.0/play-services-basement-18.3.0.aar to /home/runner/.gradle/.tmp/gradle_download3600630932885116488bin
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/18.3.0/ac6d9f53fb09f9f0b6b2d3175a38d886e06bfccb/play-services-basement-18.3.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/be37d22910ffe1000826a5f525af2631/transformed/jetified-play-services-basement-18.3.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-handler-4.1.93.Final.jar (io.netty:netty-handler:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/78433fc497ff71520e09798c92e80fb6/transformed/merge/instrumentation-dependencies.bin because:
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/fragment/fragment/1.5.1/fragment-1.5.1.aar to /home/runner/.gradle/.tmp/gradle_download1424156066141930221bin
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.5.1/39660bdcb1ed2c71e181ec3ac7dbfa65fc0f701f/fragment-1.5.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-hierarchy.bin because:
->>>>>>> Stashed changes
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.5.1/39660bdcb1ed2c71e181ec3ac7dbfa65fc0f701f/fragment-1.5.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarTransform
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with ExtractAarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ca1f86e7a9fb42d7bc5c7289ae4faf6b/transformed/fragment-1.5.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.93.Final/f4fb8b4c8da539091f43abcbb9f0389e48807eea/netty-transport-native-unix-common-4.1.93.Final.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.8.3/lifecycle-livedata-core-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download18359746105636199369bin
+Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.8.3/443d23dfd034076100e89ea244798d00ab4bba5/lifecycle-livedata-core-2.8.3.aar because:
   Build cache is disabled
-  Caching not enabled.
-<<<<<<< Updated upstream
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-compose-android/2.8.3/lifecycle-viewmodel-compose-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download17309113638496226971bin
+Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-compose-android/2.8.3/c693df73ab4881f03bf9223b2d92a0c3981d46c6/lifecycle-viewmodel-compose-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-=======
->>>>>>> Stashed changes
-Transforming netty-transport-native-unix-common-4.1.93.Final.jar (io.netty:netty-transport-native-unix-common:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c757c5d68c9a917be77b49e0feafb9a7/transformed/merge/instrumentation-dependencies.bin because:
+Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.8.3/443d23dfd034076100e89ea244798d00ab4bba5/lifecycle-livedata-core-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-Transforming netty-handler-4.1.93.Final.jar (io.netty:netty-handler:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/78433fc497ff71520e09798c92e80fb6/transformed/merge/instrumentation-dependencies.bin because:
+Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/9ccc4f5bcaf2125426cb2fa847bed5b1/transformed/jetified-lifecycle-viewmodel-compose-release.aar because:
   Build cache is disabled
   Caching not enabled.
-=======
->>>>>>> Stashed changes
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.93.Final/f4fb8b4c8da539091f43abcbb9f0389e48807eea/netty-transport-native-unix-common-4.1.93.Final.jar because:
+Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/7d3baf87b4f0a34f6081558d071b2486/transformed/lifecycle-livedata-core-2.8.3 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/9d1de03bc6dca374838b63c4f33c9cef/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/4216ac46f4dd78ea5452387d6318109e/transformed/jetified-lifecycle-viewmodel-compose-release because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx-android/2.8.3/lifecycle-runtime-ktx-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download15802829676916266603bin
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/87af3ab3ef778e99df349773a3ce7516/transformed/jetified-runtime-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming checker-qual-3.33.0.jar (org.checkerframework:checker-qual:3.33.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/579f2fe096e45a2b477cfc7f275a72d6/transformed/merge/instrumentation-dependencies.bin because:
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-ktx-android/2.8.3/5203b4e041ff9ebd854207a3fe0cacbf43e6b378/lifecycle-runtime-ktx-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar because:
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/f88da9b229f9a71fca36d3edeecac967/transformed/jetified-lifecycle-runtime-ktx-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/037665d51127e62640bfce75da89db7e/transformed/analysis/instrumentation-hierarchy.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-android/1.6.8/ui-android-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download11991409525526020383bin
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/11c2ee4c86e22cf7a849112c35fcd99e/transformed/jetified-lifecycle-runtime-ktx-release because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/037665d51127e62640bfce75da89db7e/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.9.0/activity-1.9.0.aar to /home/runner/.gradle/.tmp/gradle_download8437073994824672432bin
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with AarTransform
+Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.9.0/f555772773dbe054d7e5306bc490068ef1ba409e/activity-1.9.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.11/3acb4705652e16236558f0f4f2192cc33c3bd189/commons-codec-1.11.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-test-manifest/1.6.8/ui-test-manifest-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download9532911193445107201bin
+Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-test-manifest/1.6.8/5daaea866e961c161e09af891b121d9e169d068a/ui-test-manifest-1.6.8.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming commons-codec-1.11.jar (commons-codec:commons-codec:1.11) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/9994e034ad6cfb0f6c049fd182d083a6/transformed/merge/instrumentation-dependencies.bin because:
+Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/2b533fddfbba0124af9f6dc8686e6b3f/transformed/jetified-ui-test-manifest-1.6.8.aar because:
   Build cache is disabled
   Caching not enabled.
-<<<<<<< Updated upstream
-=======
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
+Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8 because:
   Build cache is disabled
   Caching not enabled.
->>>>>>> Stashed changes
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.11/3acb4705652e16236558f0f4f2192cc33c3bd189/commons-codec-1.11.jar because:
+Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with ExtractAarTransform
+Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with JetifyTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-ktx/1.9.0/activity-ktx-1.9.0.aar to /home/runner/.gradle/.tmp/gradle_download9749731872921427653bin
+Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.activity/activity-ktx/1.9.0/5474c5da094e1b9b90d3e9d68b81a0d286b48fdd/activity-ktx-1.9.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c508b08aae508bf35f65f3ab0d6767ab/transformed/analysis/instrumentation-hierarchy.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/2dd83889db4b04b67891e2cc497b21fc/transformed/jetified-activity-1.9.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c508b08aae508bf35f65f3ab0d6767ab/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/bed9e0730d5173853cf19b00c1698065/transformed/jetified-activity-ktx-1.9.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/8.4.2/d51ecbc4a5b7a2c7832586a4dde18f61d92810a4/apksig-8.4.2.jar because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/7195c5abd1e7c528b9e0dbf2c627bd4b/transformed/jetified-runtime-release because:
   Build cache is disabled
   Caching not enabled.
-Transforming apksig-8.4.2.jar (com.android.tools.build:apksig:8.4.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/771b9686f3f1a8805156156268658995/transformed/merge/instrumentation-dependencies.bin because:
+Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with AarTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-android/1.6.8/328694c84a63d2d3d06cec633928f5ab64d0ed1e/ui-release.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools.build/apksig/8.4.2/d51ecbc4a5b7a2c7832586a4dde18f61d92810a4/apksig-8.4.2.jar because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/94a0edf39863a39660674abb0b77eb5b/transformed/jetified-activity-ktx-1.9.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf37be03e5d8fcdd04310d21fabb2080/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/bdfd3774e10c84afe96895fc65e77fd1/transformed/jetified-activity-1.9.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf37be03e5d8fcdd04310d21fabb2080/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-compose/1.9.0/activity-compose-1.9.0.aar to /home/runner/.gradle/.tmp/gradle_download13063888653475486298bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite-framework/2.4.0/sqlite-framework-2.4.0.aar to /home/runner/.gradle/.tmp/gradle_download6211660310697211146bin
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with JetifyTransform
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with JetifyTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite/2.4.0/sqlite-2.4.0.aar to /home/runner/.gradle/.tmp/gradle_download4233417187091001822bin
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.activity/activity-compose/1.9.0/7b9fa701aa5adfbc3d47e41be400d6d57b70fb3a/activity-compose-1.9.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar because:
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite/2.4.0/cc553e5621c8ad4e233059a724100afa9e2fd1f4/sqlite-2.4.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming javawriter-2.5.0.jar (com.squareup:javawriter:2.5.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/376dc0ea2edd1ea5233985d740c84e14/transformed/merge/instrumentation-dependencies.bin because:
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite/2.4.0/cc553e5621c8ad4e233059a724100afa9e2fd1f4/sqlite-2.4.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar because:
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/57bf7539704fa6450ecdba5e538c3c41/transformed/sqlite-2.4.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/1d56933279745a7506fd31ceb76d6c04/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://repo.maven.apache.org/maven2/com/github/ajalt/timberkt/1.5.1/timberkt-1.5.1.aar to /home/runner/.gradle/.tmp/gradle_download8596196666731656030bin
+Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.github.ajalt/timberkt/1.5.1/6ea8be487824679a8f79fd5325677c64dd0df9b7/timberkt-1.5.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-annotations/2.0.0/4d00ed44eb30a888234724ba8ff46e1ed5c1546d/kotlin-gradle-plugin-annotations-2.0.0.jar because:
+Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/ffb3f1a0aa71a9a9e71024cd9ee2cbaf/transformed/jetified-timberkt-1.5.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlin-gradle-plugin-annotations-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/a48ecc82e390594e56d95bcc1032f567/transformed/merge/instrumentation-dependencies.bin because:
+Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/35519f1ac8a744daa184f1c76de87dd9/transformed/jetified-timberkt-1.5.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-annotations/2.0.0/4d00ed44eb30a888234724ba8ff46e1ed5c1546d/kotlin-gradle-plugin-annotations-2.0.0.jar because:
+Downloading https://jitpack.io/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar to /home/runner/.gradle/.tmp/gradle_download1104912594852727843bin
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.github.davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/368c11136b7fe69e61c1b8c1197ee63a6c77e715/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/1b0f7f84ed9a9adeb5f4a31084599e72/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with ExtractAarTransform
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/24992891fd048ce7f9e7fae612d5c4dc/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/1b0f7f84ed9a9adeb5f4a31084599e72/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/9406b54808c4f0a78a1b73a49c149ac6/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-tooling-core/2.0.0/1ac0c3686d77f70bc5981872121d812dc8182935/kotlin-tooling-core-2.0.0.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.4.0/annotation-experimental-1.4.0.aar to /home/runner/.gradle/.tmp/gradle_download8769141761085992739bin
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation-experimental/1.4.0/c7a2038d831d0cfbfb9a440890b287c2e839ecf/annotation-experimental-1.4.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming kotlin-tooling-core-2.0.0.jar (org.jetbrains.kotlin:kotlin-tooling-core:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/7ca05531dc49aeaddcd637a534b45f2a/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6de94b5c714da325c77a9c801d525d29/transformed/jetified-activity-compose-1.9.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-tooling-core/2.0.0/1ac0c3686d77f70bc5981872121d812dc8182935/kotlin-tooling-core-2.0.0.jar because:
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/074bed3149501c028cd2b36356396c01/transformed/jetified-annotation-experimental-1.4.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bfbc80720163e0e0a2311ecfcf692ac6/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with AarTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/dcfd8a31e263a83f0427e4a52108a055/transformed/jetified-annotation-experimental-1.4.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bfbc80720163e0e0a2311ecfcf692ac6/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ce48623519b6c4fe8b7813ff146044ad/transformed/jetified-activity-compose-1.9.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/2.0.0/42b189ff60bee1f674bf4bd806014cd8a519b73f/kotlin-daemon-client-2.0.0.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/security/security-crypto/1.1.0-alpha06/security-crypto-1.1.0-alpha06.aar to /home/runner/.gradle/.tmp/gradle_download17494123546526750407bin
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.security/security-crypto/1.1.0-alpha06/d23f6c36fbbeea99668bf077e14184bb2d4fc7d1/security-crypto-1.1.0-alpha06.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming kotlin-daemon-client-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-client:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/18554c32476373b0bcc90ee7f68c253a/transformed/merge/instrumentation-dependencies.bin because:
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/35c0be9b6ec5287ea51e02aed9c623a5/transformed/jetified-security-crypto-1.1.0-alpha06.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/2.0.0/42b189ff60bee1f674bf4bd806014cd8a519b73f/kotlin-daemon-client-2.0.0.jar because:
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with AarTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-runtime/2.2.0/core-runtime-2.2.0.aar to /home/runner/.gradle/.tmp/gradle_download3241936339353851451bin
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/a39c99389acba73b850247d011e864de/transformed/jetified-security-crypto-1.1.0-alpha06 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0d1e0feec36682d281a002b4b39f0e40/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.2.0/39705982680d78556b679ef9d5400d4f17509b0b/core-runtime-2.2.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0d1e0feec36682d281a002b4b39f0e40/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.2.0/39705982680d78556b679ef9d5400d4f17509b0b/core-runtime-2.2.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.5.0/d8cebccdcddd029022aa8646a5a953ff88b13ac8/kotlinx-coroutines-core-jvm-1.5.0.jar because:
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c5aad215ddc97658f14e1e753d40c07a/transformed/core-runtime-2.2.0 because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlinx-coroutines-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/aa434a6f4a41f8f86a76e82d0edc9aa5/transformed/merge/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-components/18.0.0/firebase-components-18.0.0.aar to /home/runner/.gradle/.tmp/gradle_download10925498011066434557bin
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/18.0.0/bb3038eb5d7807378715a14e92745c387bdad239/firebase-components-18.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.5.0/d8cebccdcddd029022aa8646a5a953ff88b13ac8/kotlinx-coroutines-core-jvm-1.5.0.jar because:
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/711f8147406917ac021753396008f153/transformed/jetified-firebase-components-18.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/916f9a38b59284db13fd6e1f219195ff/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/9944ae0d47a351da577731b216c7a2db/transformed/jetified-firebase-components-18.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/916f9a38b59284db13fd6e1f219195ff/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/interpolator/interpolator/1.0.0/interpolator-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download5495777876216437946bin
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with JetifyTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/8a01fa254a23b9388571eb6334b03707c7d122d7/interpolator-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-util-io/2.0.0/b99cf9311bece174111296392b11c662b5fc1949/kotlin-util-io-2.0.0.jar because:
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/8a01fa254a23b9388571eb6334b03707c7d122d7/interpolator-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlin-util-io-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-io:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/ad0e87978ec883a5c78d92feec851551/transformed/merge/instrumentation-dependencies.bin because:
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/cd6ab26c9cc7ec407318b6f66c333edf/transformed/interpolator-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-util-io/2.0.0/b99cf9311bece174111296392b11c662b5fc1949/kotlin-util-io-2.0.0.jar because:
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/profileinstaller/profileinstaller/1.3.1/profileinstaller-1.3.1.aar to /home/runner/.gradle/.tmp/gradle_download16179564526926512379bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/exifinterface/exifinterface/1.3.7/exifinterface-1.3.7.aar to /home/runner/.gradle/.tmp/gradle_download2625387191292235043bin
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.profileinstaller/profileinstaller/1.3.1/c0bac819b4f88a648011542273373d1e5093e3a7/profileinstaller-1.3.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f6978e85c4cb1b3eb2b3d78cc2fc6fd9/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.exifinterface/exifinterface/1.3.7/294ecda0567595907e142b6c364375521ba2b876/exifinterface-1.3.7.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f6978e85c4cb1b3eb2b3d78cc2fc6fd9/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.exifinterface/exifinterface/1.3.7/294ecda0567595907e142b6c364375521ba2b876/exifinterface-1.3.7.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar because:
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/228443c9519681f5bbed334ba2be4259/transformed/jetified-profileinstaller-1.3.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlin-daemon-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-embeddable:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/ab4059d479ba017606cc103cee024dcc/transformed/merge/instrumentation-dependencies.bin because:
+Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with ExtractAarTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite-framework/2.4.0/532d56a4f312d78767534ff1cc2f8084baec6c26/sqlite-framework-2.4.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar because:
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with ExtractAarTransform
+Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with AarTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite-framework/2.4.0/532d56a4f312d78767534ff1cc2f8084baec6c26/sqlite-framework-2.4.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/85dc3583c466bf12d4ee93865246a757/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/6a7a06eb87123513e855eda952e5cd3a/transformed/exifinterface-1.3.7 because:
   Build cache is disabled
   Caching not enabled.
-Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/19eeb5097ec5d7329fb30db264babbfa/transformed/merge/instrumentation-dependencies.bin because:
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/06bdf0ec3db5c439a45be3256f1ec7b8/transformed/sqlite-framework-2.4.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-datatransport/18.2.0/firebase-datatransport-18.2.0.aar to /home/runner/.gradle/.tmp/gradle_download8793093052640101930bin
+Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/18.2.0/e1300ce0aa8bfca59bd1ebf007167a279ec3e239/firebase-datatransport-18.2.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/f784c2c7b3cd803c9af13b4cde40d779/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-backend-cct/3.1.9/transport-backend-cct-3.1.9.aar to /home/runner/.gradle/.tmp/gradle_download17904690897517224691bin
+Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/1f68de554fbf00e1a755a6432ced93df/transformed/jetified-firebase-datatransport-18.2.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-backend-cct/3.1.9/fcabe9fa92663233c35b6d39ca6e6c8687cc9232/transport-backend-cct-3.1.9.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/90571aec6bf58d60937e6e10d3e3430e/transformed/merge/instrumentation-dependencies.bin because:
+Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/versionedparcelable/versionedparcelable/1.1.1/versionedparcelable-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download3602429762111189394bin
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with ExtractAarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with JetifyTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6895585c727871b417ffa4cda9897091/transformed/jetified-transport-backend-cct-3.1.9.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/fbcd0c19f0d14e5919f17e84224dc983/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with ExtractAarTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.1.1/18e18071e7715679e0593c570217edeb5ca48b9e/versionedparcelable-1.1.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/fbcd0c19f0d14e5919f17e84224dc983/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar because:
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with AarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.1.1/18e18071e7715679e0593c570217edeb5ca48b9e/versionedparcelable-1.1.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming commons-logging-1.2.jar (commons-logging:commons-logging:1.2) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/600a75c4c89dfedccb62a597935843d7/transformed/merge/instrumentation-dependencies.bin because:
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/96e42c3d0b6d0f63453eb8d99e443f3f/transformed/versionedparcelable-1.1.1 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-json/18.0.0/firebase-encoders-json-18.0.0.aar to /home/runner/.gradle/.tmp/gradle_download14594714253274266325bin
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders-json/18.0.0/96bb325983a231881f1e195ed9d713189f421dea/firebase-encoders-json-18.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0626408f18e50194cf0e8ae4646f0fc5/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with ExtractAarTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with ExtractAarTransform
+Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-runtime/3.1.9/transport-runtime-3.1.9.aar to /home/runner/.gradle/.tmp/gradle_download17567108764929198924bin
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/314418ed8f7f5887323a7824b2ff1333/transformed/jetified-firebase-encoders-json-18.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0626408f18e50194cf0e8ae4646f0fc5/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-runtime/3.1.9/3aca9b6851513285cd500c03c94a0876cf222ac2/transport-runtime-3.1.9.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.6.0/330f2244e9030119ab3030fc3fededc86713d9cc/jna-5.6.0.jar because:
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ae4f4c8ac2028a2dd67793b98564d220/transformed/jetified-firebase-encoders-json-18.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Transforming jna-5.6.0.jar (net.java.dev.jna:jna:5.6.0) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/7d529807fe27f30cff54973b07b3c1dc/transformed/merge/instrumentation-dependencies.bin because:
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/90f0138d76edeb517322c34e2570a77d/transformed/jetified-transport-runtime-3.1.9.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.6.0/330f2244e9030119ab3030fc3fededc86713d9cc/jna-5.6.0.jar because:
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c24ee4fcbc9283d739d6a2de544c54b4/transformed/analysis/instrumentation-hierarchy.bin because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/18883bda8d679c0a5f10e7917f96ef6d/transformed/jetified-ui-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c24ee4fcbc9283d739d6a2de544c54b4/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-api/3.1.0/transport-api-3.1.0.aar to /home/runner/.gradle/.tmp/gradle_download10529139858337448388bin
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-api/3.1.0/baaedf05b7d61114c4e46cdba296dee2f031895c/transport-api-3.1.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-socks/4.1.93.Final/81ca78969afc60073e47c3b7b361cc3839392c73/netty-codec-socks-4.1.93.Final.jar because:
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/313eaafd61d97811a72774f123ecdeec/transformed/jetified-transport-api-3.1.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-codec-socks-4.1.93.Final.jar (io.netty:netty-codec-socks:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/0995de761f5c0e3e5ddcfa7c2957a01f/transformed/merge/instrumentation-dependencies.bin because:
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/0644a0d29214cf92001fc7ec59323c36/transformed/jetified-transport-api-3.1.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-socks/4.1.93.Final/81ca78969afc60073e47c3b7b361cc3839392c73/netty-codec-socks-4.1.93.Final.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/startup/startup-runtime/1.1.1/startup-runtime-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download14601079977630941199bin
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.startup/startup-runtime/1.1.1/9d4ba67056aff98b69eadc1477c19a1e67cb9470/startup-runtime-1.1.1.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/7c844efdd3dd5b9ffc791a9ffee5c7ef/transformed/analysis/instrumentation-hierarchy.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/tracing/tracing/1.0.0/tracing-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download3433777420260433504bin
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.tracing/tracing/1.0.0/69cef34711dffbc517e7a0a419ec4a98f84f496a/tracing-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/7c844efdd3dd5b9ffc791a9ffee5c7ef/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6cd41a11ff4848aaf8359c5732846e90/transformed/jetified-tracing-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.93.Final/503badb458b6586632be8d1f81aa4e5ab99a80fc/netty-codec-4.1.93.Final.jar because:
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/29b72f652bb07b1702701e770fbf3d27/transformed/jetified-startup-runtime-1.1.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-codec-4.1.93.Final.jar (io.netty:netty-codec:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/4466ab0e0b52379f5f7303173d601087/transformed/merge/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/cursoradapter/cursoradapter/1.0.0/cursoradapter-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download3245087580529045098bin
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0/74014983a86b83cbce534dec4e7aa9312f5f5d82/cursoradapter-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.93.Final/503badb458b6586632be8d1f81aa4e5ab99a80fc/netty-codec-4.1.93.Final.jar because:
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/b005355a8b167d389b180020ab5b2ed7/transformed/jetified-tracing-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/87e5f04c366afa61720de404ef708daf/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0/74014983a86b83cbce534dec4e7aa9312f5f5d82/cursoradapter-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/87e5f04c366afa61720de404ef708daf/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/b8c7b24d23b19366e365020da2ad2910/transformed/cursoradapter-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.93.Final/1a0894915c8027ce83b4d6a811c4e765955efd15/netty-transport-4.1.93.Final.jar because:
+Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with AarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarTransform
+Downloading https://dl.google.com/dl/android/maven2/androidx/documentfile/documentfile/1.0.0/documentfile-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download12057675736922196759bin
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with JetifyTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/32aecc08839e5349eb63d3f908a80ec9/transformed/jetified-startup-runtime-1.1.1 because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-transport-4.1.93.Final.jar (io.netty:netty-transport:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/9c87989a90463b56b2917b630024a5c7/transformed/merge/instrumentation-dependencies.bin because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/66104345c90cd8c2fd5ad2d3aad692b280e10c32/documentfile-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.93.Final/1a0894915c8027ce83b4d6a811c4e765955efd15/netty-transport-4.1.93.Final.jar because:
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/66104345c90cd8c2fd5ad2d3aad692b280e10c32/documentfile-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c8545e7f6fc7d5757573a08236fb6bab/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/563f1ae14cb50c40d4f00cb37a007c7d/transformed/documentfile-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/c8545e7f6fc7d5757573a08236fb6bab/transformed/analysis/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/localbroadcastmanager/localbroadcastmanager/1.0.0/localbroadcastmanager-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download16776234040919794599bin
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.localbroadcastmanager/localbroadcastmanager/1.0.0/2734f31c8321e83ce6b60570d14777fc33cc2ece/localbroadcastmanager-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.93.Final/87fac21f4ef95157866b07b48e3c707a2f13c581/netty-buffer-4.1.93.Final.jar because:
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.localbroadcastmanager/localbroadcastmanager/1.0.0/2734f31c8321e83ce6b60570d14777fc33cc2ece/localbroadcastmanager-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-buffer-4.1.93.Final.jar (io.netty:netty-buffer:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/e9f46d69e33585be30a4e2fed8b2ef0d/transformed/merge/instrumentation-dependencies.bin because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/print/print/1.0.0/print-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download9362993698290554353bin
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.print/print/1.0.0/7722094652c48ebe27acc94d74a55e759e4635ff/print-1.0.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.93.Final/87fac21f4ef95157866b07b48e3c707a2f13c581/netty-buffer-4.1.93.Final.jar because:
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.print/print/1.0.0/7722094652c48ebe27acc94d74a55e759e4635ff/print-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/5e1fa85f39b2f6911e356f33359acbd4/transformed/analysis/instrumentation-hierarchy.bin because:
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/6f2d9f78cd522ae7f05e2a21b05d008a/transformed/localbroadcastmanager-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/5e1fa85f39b2f6911e356f33359acbd4/transformed/analysis/instrumentation-dependencies.bin because:
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/7aa9fa32fd6c519e174a009ea96fd762/transformed/print-1.0.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.93.Final/3860e99075f9e078364ed38f6d6fc8825b7a168a/netty-resolver-4.1.93.Final.jar because:
+Downloading https://repo.maven.apache.org/maven2/io/github/webrtc-sdk/android-prefixed/125.6422.04/android-prefixed-125.6422.04.aar to /home/runner/.gradle/.tmp/gradle_download4914390877532557305bin
+Downloading https://repo.maven.apache.org/maven2/com/google/dagger/dagger-lint-aar/2.51/dagger-lint-aar-2.51.aar to /home/runner/.gradle/.tmp/gradle_download9359515879590248137bin
+Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-lint-aar/2.51/4aea8d02b2a66c05908c912034b5c12d4359df08/dagger-lint-aar-2.51.aar because:
   Build cache is disabled
-  Caching not enabled.
-Transforming netty-resolver-4.1.93.Final.jar (io.netty:netty-resolver:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/3adb0b7314bbca7b4a728e54d9831512/transformed/merge/instrumentation-dependencies.bin because:
+Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/c0b6d308766037db1250af24864f6722/transformed/jetified-dagger-lint-aar-2.51.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.93.Final/3860e99075f9e078364ed38f6d6fc8825b7a168a/netty-resolver-4.1.93.Final.jar because:
+Downloading https://repo.maven.apache.org/maven2/com/jakewharton/timber/timber/4.7.0/timber-4.7.0.aar to /home/runner/.gradle/.tmp/gradle_download756104593352586878bin
+Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with AarTransform
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with JetifyTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/859bc6cdf9a9896f02c7847571662106/transformed/jetified-dagger-lint-aar-2.51 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/cb508a5eb40a63d42d0fbec5fab367c0/transformed/analysis/instrumentation-hierarchy.bin because:
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.0/c583de96be19009e44308478e805518ab4c3ce40/timber-4.7.0.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/cb508a5eb40a63d42d0fbec5fab367c0/transformed/analysis/instrumentation-dependencies.bin because:
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/6bf8e463ab21c13a64f1ffafcabfd344/transformed/jetified-ui-release because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.93.Final/1cfc49b91b0d3ddb30c9f7d8467e5d02ae8babdf/netty-common-4.1.93.Final.jar because:
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/c5bae2d359ba97de4ec8df760285fb7c/transformed/jetified-timber-4.7.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming netty-common-4.1.93.Final.jar (io.netty:netty-common:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8e4526889ed93206ec65c0d400af8573/transformed/merge/instrumentation-dependencies.bin because:
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c643e2e2468372b710cf72fecaaf724f/transformed/jetified-timber-4.7.0 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.93.Final/1cfc49b91b0d3ddb30c9f7d8467e5d02ae8babdf/netty-common-4.1.93.Final.jar because:
+Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.github.webrtc-sdk/android-prefixed/125.6422.04/f84370a63b6bfc07935bcb5f4fa99ef48a30950c/android-prefixed-125.6422.04.aar because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar because:
+Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with ExtractAarTransform
+Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6a1b4f95d1687bfac2e6f005656bed9b/transformed/jetified-android-prefixed-125.6422.04.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar because:
+Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with AarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/fe793b26f2c179503b60ddb0b86904ca/transformed/jetified-android-prefixed-125.6422.04 because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+Caching disabled for task ':app:checkDebugAarMetadata' because:
   Build cache is disabled
-  Caching not enabled.
+  Caching has been disabled for the task
+Task ':app:checkDebugAarMetadata' is not up-to-date because:
+  No history is available.
 
-> Configure project :app
-Evaluating project ':app' using build file '/home/runner/work/Starscord/Starscord/app/build.gradle.kts'.
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/8.4.2/2052cc734f76e7b1cedf6cf7d39e5d87a42a75b2/gradle-8.4.2.jar: class com/android/build/gradle/internal/utils/GuavaKtxKt: inline fun immutableListBuilder(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/31.4.2/97562d4d24cf4d5dfa9b8a8dbb6d398cb58ba12e/sdk-common-31.4.2.jar: class com/android/ide/common/util/EnumUtilsKt: inline fun enumValueOfOrDefault(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools/common/31.4.2/754a260908654def1d49b746f01d50eec47dd94a/common-31.4.2.jar: class com/android/utils/NodeCollectionHelperKt: inline fun forEach(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/2.0.0/5c20cbfbc72e5fbecec18e540de7e5fa59205d63/kotlin-gradle-plugin-2.0.0-gradle85.jar: class org/jetbrains/kotlin/gradle/internal/KaptWithAndroid: inline fun androidVariantData(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/com.android.tools.build/bundletool/1.15.6/d804e9cf5387426500061a8e0eb5602d50a49e56/bundletool-1.15.6.jar: class shadow/bundletool/com/android/utils/NodeCollectionHelperKt: inline fun forEach(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-idea-proto/2.0.0/f46941fcffe42b93dd9ec103253789290c029d25/kotlin-gradle-plugin-idea-proto-2.0.0.jar: class org/jetbrains/kotlin/gradle/idea/proto/generated/IdeaExtrasProtoKt$Dsl: inline fun setValues(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-idea/2.0.0/dc54973fe68b0bb9b816bd04ef39648ca29526a6/kotlin-gradle-plugin-idea-2.0.0.jar: class org/jetbrains/kotlin/gradle/idea/serialize/IdeaKotlinExtrasSerializer$Companion: inline fun javaIoSerializable(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar: class org/jetbrains/kotlin/konan/file/FileKt: inline fun use(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-tooling-core/2.0.0/1ac0c3686d77f70bc5981872121d812dc8182935/kotlin-tooling-core-2.0.0.jar: class org/jetbrains/kotlin/tooling/core/ClosureKt: inline fun closure(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.5.0/d8cebccdcddd029022aa8646a5a953ff88b13ac8/kotlinx-coroutines-core-jvm-1.5.0.jar: class kotlinx/coroutines/CoroutineScopeKt: inline fun currentCoroutineContext(): compile avoidance is not supported with public inline functions
-Cannot use Kotlin build script compile avoidance with /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-util-io/2.0.0/b99cf9311bece174111296392b11c662b5fc1949/kotlin-util-io-2.0.0.jar: class org/jetbrains/kotlin/konan/file/FileKt: inline fun use(): compile avoidance is not supported with public inline functions
-Caching disabled for Kotlin DSL script compilation (Project/TopLevel/stage1) because:
+Resolve mutations for :app:generateDebugResValues (Thread[included builds,5,main]) started.
+:app:generateDebugResValues (Thread[included builds,5,main]) started.
+
+> Task :app:generateDebugResValues
+Caching disabled for task ':app:generateDebugResValues' because:
   Build cache is disabled
-Using default execution profile
-Using Kotlin Gradle Plugin gradle85 variant
-Caching disabled for Kotlin DSL accessors for project ':app' because:
+Task ':app:generateDebugResValues' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:processDebugGoogleServices (Thread[included builds,5,main]) started.
+:app:processDebugGoogleServices (Thread[included builds,5,main]) started.
+
+> Task :app:processDebugGoogleServices FAILED
+Caching disabled for task ':app:processDebugGoogleServices' because:
   Build cache is disabled
-Caching disabled for Kotlin DSL script compilation (Project/TopLevel/stage2) because:
-  Build cache is disabled
+Task ':app:processDebugGoogleServices' is not up-to-date because:
+  No history is available.
 
 FAILURE: Build failed with an exception.
 
-* Where:
-Build file '/home/runner/work/Starscord/Starscord/app/build.gradle.kts' line: 60
-
 * What went wrong:
-Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'app/build.gradle.kts'
+Execution failed for task ':app:processDebugGoogleServices'.
+> File google-services.json is missing. 
+  The Google Services Plugin cannot function without it. 
+  Searched locations: /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/google-services.json, /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/Debug/google-services.json, /home/runner/work/Starscord/Starscord/app/google-services.json
 
 * Try:
 > Run with --debug option to get more log output.
@@ -962,137 +774,19 @@ Build was configured to prefer settings repositories over project repositories b
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.InvalidUserCodeException: Build was configured to prefer settings repositories over project repositories but repository 'Google' was added by build file 'app/build.gradle.kts'
-	at org.gradle.internal.management.DefaultDependencyResolutionManagement.repoMutationDisallowedOnProject(DefaultDependencyResolutionManagement.java:199)
-	at org.gradle.internal.ImmutableActionSet$SetWithFewActions.execute(ImmutableActionSet.java:285)
-	at org.gradle.api.internal.DefaultDomainObjectCollection.doAdd(DefaultDomainObjectCollection.java:262)
-	at org.gradle.api.internal.DefaultNamedDomainObjectCollection.doAdd(DefaultNamedDomainObjectCollection.java:125)
-	at org.gradle.api.internal.DefaultDomainObjectCollection.add(DefaultDomainObjectCollection.java:251)
-	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.access$101(DefaultArtifactRepositoryContainer.java:35)
-	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.lambda$new$0(DefaultArtifactRepositoryContainer.java:38)
-	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.addWithUniqueName(DefaultArtifactRepositoryContainer.java:101)
-	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.addRepository(DefaultArtifactRepositoryContainer.java:89)
-	at org.gradle.api.internal.artifacts.DefaultArtifactRepositoryContainer.addRepository(DefaultArtifactRepositoryContainer.java:84)
-	at org.gradle.api.internal.artifacts.dsl.DefaultRepositoryHandler.google(DefaultRepositoryHandler.java:152)
-	at Build_gradle$2.invoke(build.gradle.kts:60)
-	at Build_gradle$2.invoke(build.gradle.kts:59)
-	at org.gradle.kotlin.dsl.ProjectExtensionsKt.repositories(ProjectExtensions.kt:218)
-	at Build_gradle.<init>(build.gradle.kts:59)
-	at Program.execute(Unknown Source)
-	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.eval(Interpreter.kt:514)
-	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.evaluateSecondStageOf(Interpreter.kt:443)
-	at Program.execute(Unknown Source)
-	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.eval(Interpreter.kt:514)
-	at org.gradle.kotlin.dsl.execution.Interpreter.eval(Interpreter.kt:213)
-	at org.gradle.kotlin.dsl.provider.StandardKotlinScriptEvaluator.evaluate(KotlinScriptEvaluator.kt:124)
-	at org.gradle.kotlin.dsl.provider.KotlinScriptPluginFactory$create$1.invoke(KotlinScriptPluginFactory.kt:51)
-	at org.gradle.kotlin.dsl.provider.KotlinScriptPluginFactory$create$1.invoke(KotlinScriptPluginFactory.kt:48)
-	at org.gradle.kotlin.dsl.provider.KotlinScriptPlugin.apply(KotlinScriptPlugin.kt:35)
-	at org.gradle.configuration.BuildOperationScriptPlugin$1.run(BuildOperationScriptPlugin.java:68)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.configuration.BuildOperationScriptPlugin.lambda$apply$0(BuildOperationScriptPlugin.java:65)
-	at org.gradle.internal.code.DefaultUserCodeApplicationContext.apply(DefaultUserCodeApplicationContext.java:44)
-	at org.gradle.configuration.BuildOperationScriptPlugin.apply(BuildOperationScriptPlugin.java:65)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$1(DefaultProjectStateRegistry.java:407)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:425)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:406)
-	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:46)
-	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:27)
-	at org.gradle.configuration.project.ConfigureActionsProjectEvaluator.evaluate(ConfigureActionsProjectEvaluator.java:35)
-	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.lambda$run$0(LifecycleProjectEvaluator.java:109)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$1(DefaultProjectStateRegistry.java:407)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$fromMutableState$2(DefaultProjectStateRegistry.java:430)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:363)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:430)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:406)
-	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.run(LifecycleProjectEvaluator.java:100)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.configuration.project.LifecycleProjectEvaluator.evaluate(LifecycleProjectEvaluator.java:72)
-	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:756)
-	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:157)
-	at org.gradle.api.internal.project.ProjectLifecycleController.lambda$ensureSelfConfigured$2(ProjectLifecycleController.java:84)
-	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
-	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransitionIfNotCurrentlyTransitioning$10(StateTransitionController.java:199)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
-	at org.gradle.internal.model.StateTransitionController.maybeTransitionIfNotCurrentlyTransitioning(StateTransitionController.java:195)
-	at org.gradle.api.internal.project.ProjectLifecycleController.ensureSelfConfigured(ProjectLifecycleController.java:84)
-	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.ensureConfigured(DefaultProjectStateRegistry.java:381)
-	at org.gradle.execution.TaskPathProjectEvaluator.configure(TaskPathProjectEvaluator.java:34)
-	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:50)
-	at org.gradle.configuration.DefaultProjectsPreparer.prepareProjects(DefaultProjectsPreparer.java:42)
-	at org.gradle.configuration.BuildTreePreparingProjectsPreparer.prepareProjects(BuildTreePreparingProjectsPreparer.java:65)
-	at org.gradle.configuration.BuildOperationFiringProjectsPreparer$ConfigureBuild.run(BuildOperationFiringProjectsPreparer.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.configuration.BuildOperationFiringProjectsPreparer.prepareProjects(BuildOperationFiringProjectsPreparer.java:40)
-	at org.gradle.initialization.VintageBuildModelController.lambda$prepareProjects$2(VintageBuildModelController.java:84)
-	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
-	at org.gradle.internal.model.StateTransitionController.lambda$transitionIfNotPreviously$11(StateTransitionController.java:213)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
-	at org.gradle.internal.model.StateTransitionController.transitionIfNotPreviously(StateTransitionController.java:209)
-	at org.gradle.initialization.VintageBuildModelController.prepareProjects(VintageBuildModelController.java:84)
-	at org.gradle.initialization.VintageBuildModelController.prepareToScheduleTasks(VintageBuildModelController.java:71)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$prepareToScheduleTasks$6(DefaultBuildLifecycleController.java:175)
-	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
-	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransition$9(StateTransitionController.java:190)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
-	at org.gradle.internal.model.StateTransitionController.maybeTransition(StateTransitionController.java:186)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.prepareToScheduleTasks(DefaultBuildLifecycleController.java:173)
-	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:36)
-	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:36)
-	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:35)
-	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:112)
-	at org.gradle.internal.cc.impl.VintageBuildTreeWorkController.scheduleAndRunRequestedTasks(VintageBuildTreeWorkController.kt:35)
-	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:77)
-	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:120)
-	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
-	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:117)
-	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:77)
-	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:72)
-	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
-	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
-	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
-	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
-	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
-	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
-	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
-	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:130)
-	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
-	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:62)
-	at org.gradle.internal.buildtree.InitProblems.execute(InitProblems.java:36)
-	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
-	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:71)
-	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:60)
-	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:71)
-	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
-	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:processDebugGoogleServices'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
@@ -1100,54 +794,207 @@ org.gradle.api.InvalidUserCodeException: Build was configured to prefer settings
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
-	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
-	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
-	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
-	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
-	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor$ActionImpl.apply(BuildSessionLifecycleBuildActionExecutor.java:92)
-	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor$ActionImpl.apply(BuildSessionLifecycleBuildActionExecutor.java:80)
-	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:71)
-	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor.execute(BuildSessionLifecycleBuildActionExecutor.java:62)
-	at org.gradle.internal.buildprocess.execution.BuildSessionLifecycleBuildActionExecutor.execute(BuildSessionLifecycleBuildActionExecutor.java:41)
-	at org.gradle.internal.buildprocess.execution.StartParamsValidatingActionExecutor.execute(StartParamsValidatingActionExecutor.java:64)
-	at org.gradle.internal.buildprocess.execution.StartParamsValidatingActionExecutor.execute(StartParamsValidatingActionExecutor.java:32)
-	at org.gradle.internal.buildprocess.execution.SessionFailureReportingActionExecutor.execute(SessionFailureReportingActionExecutor.java:51)
-	at org.gradle.internal.buildprocess.execution.SessionFailureReportingActionExecutor.execute(SessionFailureReportingActionExecutor.java:39)
-	at org.gradle.internal.buildprocess.execution.SetupLoggingActionExecutor.execute(SetupLoggingActionExecutor.java:47)
-	at org.gradle.internal.buildprocess.execution.SetupLoggingActionExecutor.execute(SetupLoggingActionExecutor.java:31)
-	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:70)
-	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.lambda$execute$0(ForwardClientInput.java:40)
-	at org.gradle.internal.daemon.clientinput.ClientInputForwarder.forwardInput(ClientInputForwarder.java:80)
-	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:37)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:53)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
-	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
-	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
-	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
-	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
-	at org.gradle.launcher.daemon.server.DaemonStateCoordinator.lambda$runCommand$0(DaemonStateCoordinator.java:320)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.api.GradleException: File google-services.json is missing. 
+The Google Services Plugin cannot function without it. 
+Searched locations: /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/google-services.json, /home/runner/work/Starscord/Starscord/app/src/debug/google-services.json, /home/runner/work/Starscord/Starscord/app/src/Debug/google-services.json, /home/runner/work/Starscord/Starscord/app/google-services.json
+	at com.google.gms.googleservices.GoogleServicesTask.action(GoogleServicesTask.kt:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+	at org.gradle.internal.Either$Right.fold(Either.java:175)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:54)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 
 
-<<<<<<< Updated upstream
-BUILD FAILED in 1m 1s
-=======
-BUILD FAILED in 59s
->>>>>>> Stashed changes
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 29s
+4 actionable tasks: 4 executed
