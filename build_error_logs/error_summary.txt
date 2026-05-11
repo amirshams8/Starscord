@@ -7,10 +7,10 @@ No CMake errors
 No ninja errors
 
 -- C++ COMPILATION ERRORS --
-     ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
-     error: failed linking references.
-ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
-error: failed linking references.
+     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
 
 -- MISSING HEADERS/LIBRARIES --
 No missing deps
@@ -537,14 +537,22 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 235-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
 236-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
 237-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
 
 -- BUILD TASK FAILURES --
 > Task :app:processDebugResources FAILED
 FAILURE: Build failed with an exception.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BUILD FAILED in 1m 31s
 =======
 BUILD FAILED in 2m 48s
+>>>>>>> Stashed changes
+=======
+BUILD FAILED in 1m 43s
 >>>>>>> Stashed changes
 
 -- EXCEPTION STACK TRACES --
@@ -595,9 +603,9 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
 --
 Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
-ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
-error: failed linking references.
-
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+    
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
     
 	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create(Aapt2Exception.kt:45)
 	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create$default(Aapt2Exception.kt:33)

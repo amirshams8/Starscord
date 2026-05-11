@@ -1,14 +1,15 @@
 <<<<<<< Updated upstream
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with EnumerateClassesTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/07e17e9ba49f8ac5034a89b5961c749f/transformed/core-1.13.1-runtime.jar because:
   Build cache is disabled
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/3e09463ecf6bcbde0b8b66bc17e363f2/transformed/jetified-lifecycle-process-2.8.3.aar because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/342e001349582c80b15ec11b0589fd8f/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/e42cb99897d8f93fd079b52321ddbec1/transformed/jetified-lifecycle-runtime-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/3e09463ecf6bcbde0b8b66bc17e363f2/transformed/jetified-lifecycle-process-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with EnumerateClassesTransform
@@ -17,93 +18,104 @@ Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/
 Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/1e5107ee0022469ebad77b6f12dabe8d/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3-runtime.jar because:
   Build cache is disabled
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with EnumerateClassesTransform
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.8.3/b24817e8c78b402c8d44acf07aeacd71f000ead2/lifecycle-viewmodel-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/ff62c37c2ff55fcc6f2d91193b96bdef/transformed/jetified-lifecycle-viewmodel-release.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6e8ebc94e97600867197154bbf34d324/transformed/jetified-lifecycle-runtime-release-runtime.jar because:
   Build cache is disabled
 Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4cccf899b6884351eaaa8806e37d7294/transformed/lifecycle-viewmodel-2.8.3-runtime.jar because:
   Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/ff62c37c2ff55fcc6f2d91193b96bdef/transformed/jetified-lifecycle-viewmodel-release.aar because:
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.8.3/1aadbe28f1939b2105b2b6c491153e1756915dc3/lifecycle-livedata-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.8.3/1aadbe28f1939b2105b2b6c491153e1756915dc3/lifecycle-livedata-2.8.3.aar because:
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/d9c41ebcd3329bf77c5958d115fe10eb/transformed/jetified-lifecycle-viewmodel-release-runtime.jar because:
+  Build cache is disabled
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/c614dc77a272011e88907024763a2bfa/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/8da3482d1abfe459da22e53f51a96c62/transformed/lifecycle-livedata-2.8.3-runtime.jar because:
   Build cache is disabled
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/d9c41ebcd3329bf77c5958d115fe10eb/transformed/jetified-lifecycle-viewmodel-release-runtime.jar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-java8/2.8.3/lifecycle-common-java8-2.8.3.jar to /home/runner/.gradle/.tmp/gradle_download6623612069450162122bin
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/c614dc77a272011e88907024763a2bfa/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.3/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.3.jar because:
-  Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/83b88b9593f4de6776d30612fbe8f581/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3fe69f6bf58f782c6b533fb99023844a/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3-runtime.jar because:
   Build cache is disabled
-Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.3/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.3.jar because:
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/83b88b9593f4de6776d30612fbe8f581/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/baf93aeef51dca8324f2939aeeb19692/transformed/jetified-accompanist-drawablepainter-0.32.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with EnumerateClassesTransform
 Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.3/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.3.jar because:
-  Build cache is disabled
 Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/979ce2760d053db6f8f313d0b9701ada/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3-runtime.jar because:
+  Build cache is disabled
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/aff0780cce7f4fd7b8f99a258815c302/transformed/jetified-accompanist-drawablepainter-0.32.0-runtime.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/5ab884eb85eecb6072ddabd1606baeed/transformed/jetified-runtime-saveable-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/aff0780cce7f4fd7b8f99a258815c302/transformed/jetified-accompanist-drawablepainter-0.32.0-runtime.jar because:
-  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/87af3ab3ef778e99df349773a3ce7516/transformed/jetified-runtime-release.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/2591e644ab7276e092c11410c3e32f53/transformed/jetified-runtime-saveable-release-runtime.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.8.1/kotlinx-coroutines-android-1.8.1.jar to /home/runner/.gradle/.tmp/gradle_download6831484708884616313bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-java8/2.8.3/lifecycle-common-java8-2.8.3.jar to /home/runner/.gradle/.tmp/gradle_download4247146806883790308bin
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-android/1.8.1/kotlinx-coroutines-android-1.8.1.jar to /home/runner/.gradle/.tmp/gradle_download12134323134646073765bin
+Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with JetifyTransform
 Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with JetifyTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-okio-jvm/1.1.1/datastore-core-okio-jvm-1.1.1.jar to /home/runner/.gradle/.tmp/gradle_download12709936986113236975bin
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.3/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.3.jar because:
+  Build cache is disabled
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.8.1/73e2acdd18df99dd4849d99f188dff529fc0afe0/kotlinx-coroutines-android-1.8.1.jar because:
   Build cache is disabled
-Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-core-okio-jvm/1.1.1/cba5887aaa9316d650b3ebc667243ed3a05f4407/datastore-core-okio-jvm-1.1.1.jar because:
+Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.3/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.3.jar because:
   Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-jvm/2.8.3/lifecycle-common-jvm-2.8.3.jar to /home/runner/.gradle/.tmp/gradle_download9540639037818804672bin
+  Caching not enabled.
+Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.8.3/2ad14aed781c4a73ed4dbb421966d408a0a06686/lifecycle-common-java8-2.8.3.jar because:
+  Build cache is disabled
 Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/3f23c47971f901473be43f5d47283b63/transformed/jetified-kotlinx-coroutines-android-1.8.1.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-jvm/2.8.3/7174a594afb73a9ad9ac9074ce78b94af3cc52a7/lifecycle-common-jvm-2.8.3.jar because:
-  Build cache is disabled
 Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3f23c47971f901473be43f5d47283b63/transformed/jetified-kotlinx-coroutines-android-1.8.1.jar because:
   Build cache is disabled
-Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/956b6a85fb50e3881bd1280a90510bf3/transformed/jetified-datastore-core-okio-jvm-1.1.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/d3e4689a34dac70210fccfd20a20e653/transformed/jetified-datastore-core-release.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/956b6a85fb50e3881bd1280a90510bf3/transformed/jetified-datastore-core-okio-jvm-1.1.1.jar because:
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with EnumerateClassesTransform
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/411d2ea16f82b47b9c6d6067a6b8f478/transformed/jetified-datastore-core-release-runtime.jar because:
+  Build cache is disabled
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/26915dbc905c324ad18765b44557e55f/transformed/jetified-runtime-release-runtime.jar because:
+  Build cache is disabled
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6b89131695bf9539d14a3f9bccfc7178/transformed/jetified-datastore-release.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6100462d35bc51fa85d187a4b4692548/transformed/jetified-datastore-release-runtime.jar because:
+  Build cache is disabled
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/e76a4c2fe7f640ea83009654807fc316/transformed/jetified-datastore-preferences-release.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/761f18564632114bfd029d2f05f97dbc/transformed/jetified-datastore-preferences-release-runtime.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.1/kotlinx-coroutines-core-jvm-1.8.1.jar to /home/runner/.gradle/.tmp/gradle_download14219000553439076128bin
+Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.8.1/bb0e192bd7c2b6b8217440d36e9758e377e450/kotlinx-coroutines-core-jvm-1.8.1.jar because:
+  Build cache is disabled
+Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-common-jvm/2.8.3/lifecycle-common-jvm-2.8.3.jar to /home/runner/.gradle/.tmp/gradle_download4239199029100441541bin
+Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-jvm/2.8.3/7174a594afb73a9ad9ac9074ce78b94af3cc52a7/lifecycle-common-jvm-2.8.3.jar because:
   Build cache is disabled
 Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/49cd04c573eb8897a30e5807e03e5d3d/transformed/jetified-lifecycle-common-jvm-2.8.3.jar because:
@@ -112,58 +124,44 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/49cd04c573eb8897a30e5807e03e5d3d/transformed/jetified-lifecycle-common-jvm-2.8.3.jar because:
   Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6b89131695bf9539d14a3f9bccfc7178/transformed/jetified-datastore-release.aar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-okio-jvm/1.1.1/datastore-core-okio-jvm-1.1.1.jar to /home/runner/.gradle/.tmp/gradle_download14701453700490525258bin
+Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-core-okio-jvm/1.1.1/cba5887aaa9316d650b3ebc667243ed3a05f4407/datastore-core-okio-jvm-1.1.1.jar because:
+  Build cache is disabled
+Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/956b6a85fb50e3881bd1280a90510bf3/transformed/jetified-datastore-core-okio-jvm-1.1.1.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with EnumerateClassesTransform
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with EnumerateClassesTransform
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6100462d35bc51fa85d187a4b4692548/transformed/jetified-datastore-release-runtime.jar because:
+Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/956b6a85fb50e3881bd1280a90510bf3/transformed/jetified-datastore-core-okio-jvm-1.1.1.jar because:
   Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/411d2ea16f82b47b9c6d6067a6b8f478/transformed/jetified-datastore-core-release-runtime.jar because:
-  Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/e76a4c2fe7f640ea83009654807fc316/transformed/jetified-datastore-preferences-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/26915dbc905c324ad18765b44557e55f/transformed/jetified-runtime-release-runtime.jar because:
-  Build cache is disabled
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/761f18564632114bfd029d2f05f97dbc/transformed/jetified-datastore-preferences-release-runtime.jar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-core-jvm/1.1.1/datastore-preferences-core-jvm-1.1.1.jar to /home/runner/.gradle/.tmp/gradle_download2538800286917054794bin
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6d733ce58258eb785f27e4b8a898b927/transformed/jetified-firebase-installations-interop-17.1.1.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with EnumerateClassesTransform
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-play-services/1.8.1/kotlinx-coroutines-play-services-1.8.1.jar to /home/runner/.gradle/.tmp/gradle_download10962519111598637990bin
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/109aefe791f6448adb174cb9a44a4d18/transformed/jetified-firebase-installations-interop-17.1.1-runtime.jar because:
+  Build cache is disabled
+Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-play-services/1.8.1/71eb0cace3aaa93591a613a32c92853c464d2a53/kotlinx-coroutines-play-services-1.8.1.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/8e83d67d72fa6baa34e10f8edb307d0f/transformed/jetified-play-services-tasks-18.1.0.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with EnumerateClassesTransform
-Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with JetifyTransform
+Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with IdentityTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/514de2aeffad59972e02e12198439770/transformed/jetified-play-services-tasks-18.1.0-runtime.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-play-services/1.8.1/kotlinx-coroutines-play-services-1.8.1.jar to /home/runner/.gradle/.tmp/gradle_download3267672409016831618bin
-Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-preferences-core-jvm/1.1.1/e562d4a944240c0e67317f0b862da24aca3aabc/datastore-preferences-core-jvm-1.1.1.jar because:
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/aba9f2f3989e73559c6a74694793761a/transformed/jetified-kotlinx-coroutines-play-services-1.8.1.jar because:
   Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-play-services/1.8.1/71eb0cace3aaa93591a613a32c92853c464d2a53/kotlinx-coroutines-play-services-1.8.1.jar because:
-  Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.1/kotlinx-coroutines-core-jvm-1.8.1.jar to /home/runner/.gradle/.tmp/gradle_download5541153884174979189bin
+  Caching not enabled.
+Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-core-jvm/1.1.1/datastore-preferences-core-jvm-1.1.1.jar to /home/runner/.gradle/.tmp/gradle_download7683712920296683128bin
+Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with EnumerateClassesTransform
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with EnumerateClassesTransform
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/be37d22910ffe1000826a5f525af2631/transformed/jetified-play-services-basement-18.3.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/aba9f2f3989e73559c6a74694793761a/transformed/jetified-kotlinx-coroutines-play-services-1.8.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/aba9f2f3989e73559c6a74694793761a/transformed/jetified-kotlinx-coroutines-play-services-1.8.1.jar because:
-  Build cache is disabled
-Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.8.1/bb0e192bd7c2b6b8217440d36e9758e377e450/kotlinx-coroutines-core-jvm-1.8.1.jar because:
   Build cache is disabled
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/1f46e1a122b6a87d77baacee99f43bbc/transformed/jetified-play-services-basement-18.3.0-runtime.jar because:
@@ -171,25 +169,23 @@ Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.5.1/39660bdcb1ed2c71e181ec3ac7dbfa65fc0f701f/fragment-1.5.1.aar because:
   Build cache is disabled
   Caching not enabled.
+Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-preferences-core-jvm/1.1.1/e562d4a944240c0e67317f0b862da24aca3aabc/datastore-preferences-core-jvm-1.1.1.jar because:
+  Build cache is disabled
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with EnumerateClassesTransform
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3707a5f506f43b2f8de77f698f810299/transformed/fragment-1.5.1-runtime.jar because:
   Build cache is disabled
-Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/7db088f73707a787ad7f5e05307143bd/transformed/jetified-datastore-preferences-core-jvm-1.1.1.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with EnumerateClassesTransform
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.8.3/443d23dfd034076100e89ea244798d00ab4bba5/lifecycle-livedata-core-2.8.3.aar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/f88da9b229f9a71fca36d3edeecac967/transformed/jetified-lifecycle-runtime-ktx-release.aar because:
   Build cache is disabled
   Caching not enabled.
+Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with EnumerateClassesTransform
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/f95e7cf4130929078c6e2f25e94ef788/transformed/jetified-lifecycle-runtime-ktx-release-runtime.jar because:
   Build cache is disabled
-Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6e38466e4158f007647240b5cbdaf4e8/transformed/lifecycle-livedata-core-2.8.3-runtime.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/9ccc4f5bcaf2125426cb2fa847bed5b1/transformed/jetified-lifecycle-viewmodel-compose-release.aar because:
@@ -210,40 +206,38 @@ Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/2dd83889db4b04b67891e2cc497b21fc/transformed/jetified-activity-1.9.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/7db088f73707a787ad7f5e05307143bd/transformed/jetified-datastore-preferences-core-jvm-1.1.1.jar because:
-  Build cache is disabled
 Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6e124813a4c347f76dab05fe8ce671ad/transformed/jetified-activity-1.9.0-runtime.jar because:
+  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/bed9e0730d5173853cf19b00c1698065/transformed/jetified-activity-ktx-1.9.0.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/5f52a99f569b043288b7026c443b3d0f/transformed/jetified-activity-ktx-1.9.0-runtime.jar because:
   Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6e124813a4c347f76dab05fe8ce671ad/transformed/jetified-activity-1.9.0-runtime.jar because:
-  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6de94b5c714da325c77a9c801d525d29/transformed/jetified-activity-compose-1.9.0.aar because:
   Build cache is disabled
   Caching not enabled.
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3ccb248086d3d72ea1cbeec792dad390/transformed/jetified-activity-compose-1.9.0-runtime.jar because:
+  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite-framework/2.4.0/532d56a4f312d78767534ff1cc2f8084baec6c26/sqlite-framework-2.4.0.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with EnumerateClassesTransform
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/7757fff499bc6688760138a7528ba410/transformed/sqlite-framework-2.4.0-runtime.jar because:
-  Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3ccb248086d3d72ea1cbeec792dad390/transformed/jetified-activity-compose-1.9.0-runtime.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite/2.4.0/cc553e5621c8ad4e233059a724100afa9e2fd1f4/sqlite-2.4.0.aar because:
   Build cache is disabled
   Caching not enabled.
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/194e11fe364d43178dcd05bb4227da35/transformed/sqlite-2.4.0-runtime.jar because:
+  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/ffb3f1a0aa71a9a9e71024cd9ee2cbaf/transformed/jetified-timberkt-1.5.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with EnumerateClassesTransform
 Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/207890eb559ace7c9a64145cfc70d72b/transformed/jetified-timberkt-1.5.1-runtime.jar because:
-  Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/194e11fe364d43178dcd05bb4227da35/transformed/sqlite-2.4.0-runtime.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/24992891fd048ce7f9e7fae612d5c4dc/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar because:
   Build cache is disabled
@@ -251,16 +245,33 @@ Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transf
 Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/aebdae8b63de12398d8843da8c101713/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-runtime.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.5.0/kotlinx-serialization-core-jvm-1.5.0.jar to /home/runner/.gradle/.tmp/gradle_download9224942824505835223bin
+Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/7db088f73707a787ad7f5e05307143bd/transformed/jetified-datastore-preferences-core-jvm-1.1.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with EnumerateClassesTransform
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-core-jvm/1.5.0/kotlinx-serialization-core-jvm-1.5.0.jar to /home/runner/.gradle/.tmp/gradle_download11027844283221938958bin
 Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-jvm/1.5.0/d701e8cccd443a7cc1a0bcac53432f2745dcdbda/kotlinx-serialization-core-jvm-1.5.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.5.0/kotlinx-serialization-json-jvm-1.5.0.jar to /home/runner/.gradle/.tmp/gradle_download834613419113669409bin
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/7db088f73707a787ad7f5e05307143bd/transformed/jetified-datastore-preferences-core-jvm-1.1.1.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-json-jvm/1.5.0/kotlinx-serialization-json-jvm-1.5.0.jar to /home/runner/.gradle/.tmp/gradle_download2977597542727169749bin
 Transforming kotlinx-serialization-json-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0) with JetifyTransform
+Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/a6fd314ff75fd51f3ebe49625d493006/transformed/jetified-kotlinx-coroutines-core-jvm-1.8.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-jvm/1.5.0/f2355f60f5c027da0326c8af2d9c724d39aa0ce9/kotlinx-serialization-json-jvm-1.5.0.jar because:
   Build cache is disabled
+Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with EnumerateClassesTransform
 Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/903c02a357e5ef207e9ed57bd51eb917/transformed/jetified-ui-release-runtime.jar because:
+Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/31b6752a2db71187bf60387ef8074287/transformed/jetified-kotlinx-serialization-core-jvm-1.5.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/31b6752a2db71187bf60387ef8074287/transformed/jetified-kotlinx-serialization-core-jvm-1.5.0.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/074bed3149501c028cd2b36356396c01/transformed/jetified-annotation-experimental-1.4.0.aar because:
   Build cache is disabled
@@ -274,6 +285,8 @@ Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transf
 Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/232e52110073bd7e8df0b2ec832dc4b6/transformed/jetified-security-crypto-1.1.0-alpha06-runtime.jar because:
   Build cache is disabled
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/903c02a357e5ef207e9ed57bd51eb917/transformed/jetified-ui-release-runtime.jar because:
+  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.2.0/39705982680d78556b679ef9d5400d4f17509b0b/core-runtime-2.2.0.aar because:
   Build cache is disabled
   Caching not enabled.
@@ -283,69 +296,60 @@ Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/711f8147406917ac021753396008f153/transformed/jetified-firebase-components-18.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/a6fd314ff75fd51f3ebe49625d493006/transformed/jetified-kotlinx-coroutines-core-jvm-1.8.1.jar because:
+  Build cache is disabled
 Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/45547dbd09e0d13f6f70a7c3469f86c7/transformed/jetified-firebase-components-18.0.0-runtime.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/8a01fa254a23b9388571eb6334b03707c7d122d7/interpolator-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/f59445e730a60c0a90881afd05a90842/transformed/interpolator-1.0.0-runtime.jar because:
-  Build cache is disabled
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.exifinterface/exifinterface/1.3.7/294ecda0567595907e142b6c364375521ba2b876/exifinterface-1.3.7.aar because:
   Build cache is disabled
   Caching not enabled.
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
 Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/f59445e730a60c0a90881afd05a90842/transformed/interpolator-1.0.0-runtime.jar because:
+  Build cache is disabled
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/7d095f5750013b0d771a22a8f4bdeb33/transformed/exifinterface-1.3.7-runtime.jar because:
-  Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/228443c9519681f5bbed334ba2be4259/transformed/jetified-profileinstaller-1.3.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/50e881012d163a62d29041edde5384cd/transformed/jetified-profileinstaller-1.3.1-runtime.jar because:
   Build cache is disabled
 Transforming kotlinx-serialization-json-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/2dbd33efb4ee3af1b7bbf94f56ede13f/transformed/jetified-kotlinx-serialization-json-jvm-1.5.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlinx-serialization-json-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/2dbd33efb4ee3af1b7bbf94f56ede13f/transformed/jetified-kotlinx-serialization-json-jvm-1.5.0.jar because:
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/228443c9519681f5bbed334ba2be4259/transformed/jetified-profileinstaller-1.3.1.aar because:
   Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-common/2.2.0/core-common-2.2.0.jar to /home/runner/.gradle/.tmp/gradle_download9704605139935876240bin
+  Caching not enabled.
+Transforming kotlinx-serialization-json-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0) with EnumerateClassesTransform
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.1.1/18e18071e7715679e0593c570217edeb5ca48b9e/versionedparcelable-1.1.1.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
-  Build cache is disabled
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with EnumerateClassesTransform
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/2dbd33efb4ee3af1b7bbf94f56ede13f/transformed/jetified-kotlinx-serialization-json-jvm-1.5.0.jar because:
   Build cache is disabled
-  Caching not enabled.
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/55ec01bea78d46569de319533baf8290/transformed/versionedparcelable-1.1.1-runtime.jar because:
   Build cache is disabled
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/50e881012d163a62d29041edde5384cd/transformed/jetified-profileinstaller-1.3.1-runtime.jar because:
+  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/1f68de554fbf00e1a755a6432ced93df/transformed/jetified-firebase-datatransport-18.2.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
-  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6895585c727871b417ffa4cda9897091/transformed/jetified-transport-backend-cct-3.1.9.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4ef47a55ad2299d05a1cb0ca92487a0e/transformed/jetified-firebase-datatransport-18.2.0-runtime.jar because:
   Build cache is disabled
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/8d8b37b2e33de1354ee7ef42a28f8168/transformed/jetified-transport-backend-cct-3.1.9-runtime.jar because:
-  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/314418ed8f7f5887323a7824b2ff1333/transformed/jetified-firebase-encoders-json-18.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
 Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/1e2a8dd3b65e1a2ec6d9a32d843400bd/transformed/jetified-firebase-encoders-json-18.0.0-runtime.jar because:
+  Build cache is disabled
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/8d8b37b2e33de1354ee7ef42a28f8168/transformed/jetified-transport-backend-cct-3.1.9-runtime.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/90f0138d76edeb517322c34e2570a77d/transformed/jetified-transport-runtime-3.1.9.aar because:
   Build cache is disabled
@@ -359,79 +363,67 @@ Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transf
 Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/716e13680e8863a8b14b3a7b377dda61/transformed/jetified-transport-api-3.1.0-runtime.jar because:
   Build cache is disabled
-Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/31b6752a2db71187bf60387ef8074287/transformed/jetified-kotlinx-serialization-core-jvm-1.5.0.jar because:
+Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-common/2.2.0/core-common-2.2.0.jar to /home/runner/.gradle/.tmp/gradle_download9287248330881067326bin
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
+  Build cache is disabled
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/31b6752a2db71187bf60387ef8074287/transformed/jetified-kotlinx-serialization-core-jvm-1.5.0.jar because:
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
   Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-proto/16.0.0/firebase-encoders-proto-16.0.0.jar to /home/runner/.gradle/.tmp/gradle_download5745183098342738618bin
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/29b72f652bb07b1702701e770fbf3d27/transformed/jetified-startup-runtime-1.1.1.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4a4cfe42db6cf297418a3201f8f417c4/transformed/jetified-startup-runtime-1.1.1-runtime.jar because:
+  Build cache is disabled
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6cd41a11ff4848aaf8359c5732846e90/transformed/jetified-tracing-1.0.0.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/aaa37cee6a228eba0086f94b902d3aa9/transformed/jetified-tracing-1.0.0-runtime.jar because:
+  Build cache is disabled
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-proto/16.0.0/firebase-encoders-proto-16.0.0.jar to /home/runner/.gradle/.tmp/gradle_download8433793022481145336bin
 Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders-proto/16.0.0/a42d5fd83b96ae7b73a8617d29c94703e18c9992/firebase-encoders-proto-16.0.0.jar because:
   Build cache is disabled
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders/17.0.0/firebase-encoders-17.0.0.jar to /home/runner/.gradle/.tmp/gradle_download194153903213160149bin
+Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders/17.0.0/26f52dc549c42575b155f8c720e84059ee600a85/firebase-encoders-17.0.0.jar because:
+  Build cache is disabled
+Downloading https://dl.google.com/dl/android/maven2/androidx/concurrent/concurrent-futures/1.1.0/concurrent-futures-1.1.0.jar to /home/runner/.gradle/.tmp/gradle_download14149529367525470969bin
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with JetifyTransform
+Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with IdentityTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.concurrent/concurrent-futures/1.1.0/50b7fb98350d5f42a4e49704b03278542293ba48/concurrent-futures-1.1.0.jar because:
+  Build cache is disabled
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/107cc8939640d4a4f65a9dacb17f4a4f/transformed/jetified-firebase-encoders-17.0.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/ba0061839fff7731f596fc9fa0dbce38/transformed/jetified-firebase-encoders-proto-16.0.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/ba0061839fff7731f596fc9fa0dbce38/transformed/jetified-firebase-encoders-proto-16.0.0.jar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders/17.0.0/firebase-encoders-17.0.0.jar to /home/runner/.gradle/.tmp/gradle_download1969275168828558784bin
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/29b72f652bb07b1702701e770fbf3d27/transformed/jetified-startup-runtime-1.1.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders/17.0.0/26f52dc549c42575b155f8c720e84059ee600a85/firebase-encoders-17.0.0.jar because:
-  Build cache is disabled
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4a4cfe42db6cf297418a3201f8f417c4/transformed/jetified-startup-runtime-1.1.1-runtime.jar because:
-  Build cache is disabled
-Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/107cc8939640d4a4f65a9dacb17f4a4f/transformed/jetified-firebase-encoders-17.0.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6cd41a11ff4848aaf8359c5732846e90/transformed/jetified-tracing-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/concurrent/concurrent-futures/1.1.0/concurrent-futures-1.1.0.jar to /home/runner/.gradle/.tmp/gradle_download7381419062261300545bin
-Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with JetifyTransform
 Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/107cc8939640d4a4f65a9dacb17f4a4f/transformed/jetified-firebase-encoders-17.0.0.jar because:
   Build cache is disabled
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/aaa37cee6a228eba0086f94b902d3aa9/transformed/jetified-tracing-1.0.0-runtime.jar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.concurrent/concurrent-futures/1.1.0/50b7fb98350d5f42a4e49704b03278542293ba48/concurrent-futures-1.1.0.jar because:
-  Build cache is disabled
+Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with EnumerateClassesTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/15239b0c35978242e9db5e119e32871f/transformed/jetified-concurrent-futures-1.1.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/15239b0c35978242e9db5e119e32871f/transformed/jetified-concurrent-futures-1.1.0.jar because:
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/ba0061839fff7731f596fc9fa0dbce38/transformed/jetified-firebase-encoders-proto-16.0.0.jar because:
   Build cache is disabled
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with EnumerateClassesTransform
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0/74014983a86b83cbce534dec4e7aa9312f5f5d82/cursoradapter-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/a6fd314ff75fd51f3ebe49625d493006/transformed/jetified-kotlinx-coroutines-core-jvm-1.8.1.jar because:
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/15239b0c35978242e9db5e119e32871f/transformed/jetified-concurrent-futures-1.1.0.jar because:
   Build cache is disabled
-  Caching not enabled.
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with EnumerateClassesTransform
-Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/63748dbd9a3c8382b91ab0ea0502f85d/transformed/cursoradapter-1.0.0-runtime.jar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-ktx/1.4.0/collection-ktx-1.4.0.jar to /home/runner/.gradle/.tmp/gradle_download166787339950096477bin
-Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.4.0/2ad14aed781c4a73ed4dbb421966d408a0a06686/collection-ktx-1.4.0.jar because:
-  Build cache is disabled
-Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/ea03c69ba36db2c1bbbe2ac132680258/transformed/jetified-collection-ktx-1.4.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/ea03c69ba36db2c1bbbe2ac132680258/transformed/jetified-collection-ktx-1.4.0.jar because:
   Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/66104345c90cd8c2fd5ad2d3aad692b280e10c32/documentfile-1.0.0.aar because:
   Build cache is disabled
@@ -442,110 +434,112 @@ Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.localbroadcastmanager/localbroadcastmanager/1.0.0/2734f31c8321e83ce6b60570d14777fc33cc2ece/localbroadcastmanager-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
+Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-ktx/1.4.0/collection-ktx-1.4.0.jar to /home/runner/.gradle/.tmp/gradle_download14761881798502890477bin
 Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with EnumerateClassesTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.jar to /home/runner/.gradle/.tmp/gradle_download11756858983673669828bin
+Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with JetifyTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/ff7aeba7e730a5cfb17027f8e2505ac0/transformed/localbroadcastmanager-1.0.0-runtime.jar because:
   Build cache is disabled
-Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.4.0/2ad14aed781c4a73ed4dbb421966d408a0a06686/collection-ktx-1.4.0.jar because:
+  Build cache is disabled
 Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.print/print/1.0.0/7722094652c48ebe27acc94d74a55e759e4635ff/print-1.0.0.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with EnumerateClassesTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.resourceinspection/resourceinspection-annotation/1.0.1/8c21f8ff5d96d5d52c948707f7e4d6ca6773feef/resourceinspection-annotation-1.0.1.jar because:
-  Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/bf7e4b87181d88e0f7c3ba4c21566c34/transformed/print-1.0.0-runtime.jar because:
-  Build cache is disabled
-Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6751680f8033dd7077a773d681a45fe8/transformed/jetified-resourceinspection-annotation-1.0.1.jar because:
+Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/ea03c69ba36db2c1bbbe2ac132680258/transformed/jetified-collection-ktx-1.4.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/a6fd314ff75fd51f3ebe49625d493006/transformed/jetified-kotlinx-coroutines-core-jvm-1.8.1.jar because:
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with EnumerateClassesTransform
+Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/bf7e4b87181d88e0f7c3ba4c21566c34/transformed/print-1.0.0-runtime.jar because:
   Build cache is disabled
-Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6751680f8033dd7077a773d681a45fe8/transformed/jetified-resourceinspection-annotation-1.0.1.jar because:
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/ea03c69ba36db2c1bbbe2ac132680258/transformed/jetified-collection-ktx-1.4.0.jar because:
   Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-jvm/1.4.0/collection-jvm-1.4.0.jar to /home/runner/.gradle/.tmp/gradle_download14774556589313956934bin
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with JetifyTransform
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.jar to /home/runner/.gradle/.tmp/gradle_download15270124804788178899bin
+Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/4.12.0/logging-interceptor-4.12.0.jar to /home/runner/.gradle/.tmp/gradle_download11732174134560072333bin
 Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-jvm/1.4.0/e209fb7bd1183032f55a0408121c6251a81acb49/collection-jvm-1.4.0.jar because:
-  Build cache is disabled
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/4.12.0/e922c1f14d365c0f2bed140cc0825e18462c2778/logging-interceptor-4.12.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/converter-gson/2.11.0/converter-gson-2.11.0.jar to /home/runner/.gradle/.tmp/gradle_download13501823878004987040bin
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with JetifyTransform
 Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with IdentityTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.11.0/9d1fe9d1662de0548e08e293041140a8e4026f81/converter-gson-2.11.0.jar because:
-  Build cache is disabled
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/7492a086101edfc69675f134ff186068/transformed/jetified-logging-interceptor-4.12.0.jar because:
   Build cache is disabled
   Caching not enabled.
 Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with EnumerateClassesTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with IdentityTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/7492a086101edfc69675f134ff186068/transformed/jetified-logging-interceptor-4.12.0.jar because:
   Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/converter-gson/2.11.0/converter-gson-2.11.0.jar to /home/runner/.gradle/.tmp/gradle_download15888026635472882039bin
+Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.11.0/9d1fe9d1662de0548e08e293041140a8e4026f81/converter-gson-2.11.0.jar because:
+  Build cache is disabled
+Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/b3cac0e54e5553b212cc16a68c037546/transformed/jetified-converter-gson-2.11.0.jar because:
   Build cache is disabled
   Caching not enabled.
 Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/b3cac0e54e5553b212cc16a68c037546/transformed/jetified-converter-gson-2.11.0.jar because:
   Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-jvm/1.8.0/annotation-jvm-1.8.0.jar to /home/runner/.gradle/.tmp/gradle_download1056608567472097848bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.jar to /home/runner/.gradle/.tmp/gradle_download10841175230075282886bin
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.resourceinspection/resourceinspection-annotation/1.0.1/8c21f8ff5d96d5d52c948707f7e4d6ca6773feef/resourceinspection-annotation-1.0.1.jar because:
+  Build cache is disabled
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6751680f8033dd7077a773d681a45fe8/transformed/jetified-resourceinspection-annotation-1.0.1.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6751680f8033dd7077a773d681a45fe8/transformed/jetified-resourceinspection-annotation-1.0.1.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/retrofit/2.11.0/retrofit-2.11.0.jar to /home/runner/.gradle/.tmp/gradle_download15215807615272321436bin
+Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.11.0/6ca8c6caf842271f3232e075519fe04081ef7069/retrofit-2.11.0.jar because:
+  Build cache is disabled
+Downloading https://dl.google.com/dl/android/maven2/androidx/collection/collection-jvm/1.4.0/collection-jvm-1.4.0.jar to /home/runner/.gradle/.tmp/gradle_download5942781583071100537bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-jvm/1.8.0/annotation-jvm-1.8.0.jar to /home/runner/.gradle/.tmp/gradle_download1751692423364764918bin
 Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation-jvm/1.8.0/b8a16fe526014b7941c1debaccaf9c5153692dbb/annotation-jvm-1.8.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar to /home/runner/.gradle/.tmp/gradle_download14761232840278617424bin
-Downloading https://repo.maven.apache.org/maven2/com/squareup/retrofit2/retrofit/2.11.0/retrofit-2.11.0.jar to /home/runner/.gradle/.tmp/gradle_download11691209162347717796bin
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with JetifyTransform
+Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar to /home/runner/.gradle/.tmp/gradle_download4915058638639596357bin
+Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with JetifyTransform
 Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with IdentityTransform
+Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/4.12.0/2f4525d4a200e97e1b87449c2cd9bd2e25b7e8cd/okhttp-4.12.0.jar because:
+  Build cache is disabled
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/beef855618f932402a461268ead3f047/transformed/jetified-annotation-jvm-1.8.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.11.0/6ca8c6caf842271f3232e075519fe04081ef7069/retrofit-2.11.0.jar because:
-  Build cache is disabled
 Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with EnumerateClassesTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-jvm/1.4.0/e209fb7bd1183032f55a0408121c6251a81acb49/collection-jvm-1.4.0.jar because:
+  Build cache is disabled
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/beef855618f932402a461268ead3f047/transformed/jetified-annotation-jvm-1.8.0.jar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.9.0/e000bd084353d84c9e888f6fb341dc1f5b79d948/kotlin-stdlib-jdk8-1.9.0.jar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/4.12.0/2f4525d4a200e97e1b87449c2cd9bd2e25b7e8cd/okhttp-4.12.0.jar because:
-  Build cache is disabled
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/c7671df5c96006090179a54905329ef2/transformed/jetified-kotlin-stdlib-jdk8-1.9.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with EnumerateClassesTransform
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6d83441bb92a01c5c8e4591e32d3349b/transformed/jetified-collection-jvm-1.4.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/c7671df5c96006090179a54905329ef2/transformed/jetified-kotlin-stdlib-jdk8-1.9.0.jar because:
-  Build cache is disabled
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6d83441bb92a01c5c8e4591e32d3349b/transformed/jetified-collection-jvm-1.4.0.jar because:
-  Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.jar to /home/runner/.gradle/.tmp/gradle_download5840346821535969876bin
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.0/f320478990d05e0cfaadd74f9619fd6027adbf37/kotlin-stdlib-jdk7-1.9.0.jar because:
-  Build cache is disabled
-Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with JetifyTransform
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/1dee25a52d8980c1955cbbe2e487c947/transformed/jetified-kotlin-stdlib-jdk7-1.9.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio-jvm/3.8.0/856593a7eb4dc94f9fe27b4a4d14624a8db9ffa7/okio-jvm-3.8.0.jar because:
-  Build cache is disabled
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/1dee25a52d8980c1955cbbe2e487c947/transformed/jetified-kotlin-stdlib-jdk7-1.9.0.jar because:
   Build cache is disabled
 Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6b9f587eee2041bc246f9b7a70dd027f/transformed/jetified-retrofit-2.11.0.jar because:
   Build cache is disabled
   Caching not enabled.
 Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with EnumerateClassesTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.9.0/e000bd084353d84c9e888f6fb341dc1f5b79d948/kotlin-stdlib-jdk8-1.9.0.jar because:
+  Build cache is disabled
+Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/c7671df5c96006090179a54905329ef2/transformed/jetified-kotlin-stdlib-jdk8-1.9.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6b9f587eee2041bc246f9b7a70dd027f/transformed/jetified-retrofit-2.11.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-parcelize-runtime/1.9.22/kotlin-parcelize-runtime-1.9.22.jar to /home/runner/.gradle/.tmp/gradle_download18292783140624179517bin
+Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/c7671df5c96006090179a54905329ef2/transformed/jetified-kotlin-stdlib-jdk8-1.9.0.jar because:
+  Build cache is disabled
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.9.0/f320478990d05e0cfaadd74f9619fd6027adbf37/kotlin-stdlib-jdk7-1.9.0.jar because:
+  Build cache is disabled
+Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/1dee25a52d8980c1955cbbe2e487c947/transformed/jetified-kotlin-stdlib-jdk7-1.9.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/1dee25a52d8980c1955cbbe2e487c947/transformed/jetified-kotlin-stdlib-jdk7-1.9.0.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.jar to /home/runner/.gradle/.tmp/gradle_download6652227564423330067bin
+Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio-jvm/3.8.0/856593a7eb4dc94f9fe27b4a4d14624a8db9ffa7/okio-jvm-3.8.0.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-parcelize-runtime/1.9.22/kotlin-parcelize-runtime-1.9.22.jar to /home/runner/.gradle/.tmp/gradle_download9005896749243344343bin
 Transforming kotlin-parcelize-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-parcelize-runtime/1.9.22/de4a21d6560cadd035c69ba3af3ad1afecc95299/kotlin-parcelize-runtime-1.9.22.jar because:
   Build cache is disabled
@@ -554,9 +548,9 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
   Build cache is disabled
   Caching not enabled.
 Transforming kotlin-parcelize-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22) with EnumerateClassesTransform
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-android-extensions-runtime/1.9.22/kotlin-android-extensions-runtime-1.9.22.jar to /home/runner/.gradle/.tmp/gradle_download14805520756604559708bin
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/dba9c07a60827f864ad06d6a4c04347b/transformed/jetified-kotlin-parcelize-runtime-1.9.22.jar because:
   Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-android-extensions-runtime/1.9.22/kotlin-android-extensions-runtime-1.9.22.jar to /home/runner/.gradle/.tmp/gradle_download13971092677674556458bin
 Transforming kotlin-android-extensions-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions-runtime/1.9.22/ee3bc0c3b55cb516ac92d6a093e1b939166b86a2/kotlin-android-extensions-runtime-1.9.22.jar because:
   Build cache is disabled
@@ -567,33 +561,40 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming kotlin-android-extensions-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/d10212c0b56a8204e5a2263c95e2cf9d/transformed/jetified-kotlin-android-extensions-runtime-1.9.22.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.jar to /home/runner/.gradle/.tmp/gradle_download15146895589425348204bin
-Downloading https://repo.maven.apache.org/maven2/com/google/crypto/tink/tink-android/1.8.0/tink-android-1.8.0.jar to /home/runner/.gradle/.tmp/gradle_download8622762313892767895bin
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/2.0.0/kotlin-stdlib-2.0.0.jar to /home/runner/.gradle/.tmp/gradle_download16315632525146694231bin
+Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6d83441bb92a01c5c8e4591e32d3349b/transformed/jetified-collection-jvm-1.4.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with JetifyTransform
-Transforming tink-android-1.8.0.jar (com.google.crypto.tink:tink-android:1.8.0) with JetifyTransform
+Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with EnumerateClassesTransform
+Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/4a18b86f6e9197c662e7cfcbe944051c/transformed/jetified-okhttp-4.12.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar because:
   Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.crypto.tink/tink-android/1.8.0/bda82b49568d444a3b54773ca5aa487816473295/tink-android-1.8.0.jar because:
+Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6d83441bb92a01c5c8e4591e32d3349b/transformed/jetified-collection-jvm-1.4.0.jar because:
+  Build cache is disabled
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4a18b86f6e9197c662e7cfcbe944051c/transformed/jetified-okhttp-4.12.0.jar because:
   Build cache is disabled
 Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/45497e699b92df2c5fbda9ab179cfe41/transformed/jetified-okio-jvm-3.8.0.jar because:
   Build cache is disabled
   Caching not enabled.
 Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with EnumerateClassesTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/4a18b86f6e9197c662e7cfcbe944051c/transformed/jetified-okhttp-4.12.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/45497e699b92df2c5fbda9ab179cfe41/transformed/jetified-okio-jvm-3.8.0.jar because:
   Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4a18b86f6e9197c662e7cfcbe944051c/transformed/jetified-okhttp-4.12.0.jar because:
-  Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar to /home/runner/.gradle/.tmp/gradle_download15251847750280968799bin
+Downloading https://repo.maven.apache.org/maven2/com/google/crypto/tink/tink-android/1.8.0/tink-android-1.8.0.jar to /home/runner/.gradle/.tmp/gradle_download2382476724992487576bin
+Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.11.0/gson-2.11.0.jar to /home/runner/.gradle/.tmp/gradle_download4789292836925154071bin
 Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.11.0/527175ca6d81050b53bdd4c457a6d6e017626b0e/gson-2.11.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar to /home/runner/.gradle/.tmp/gradle_download6910490841862821651bin
+Transforming tink-android-1.8.0.jar (com.google.crypto.tink:tink-android:1.8.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.crypto.tink/tink-android/1.8.0/bda82b49568d444a3b54773ca5aa487816473295/tink-android-1.8.0.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/org/jetbrains/annotations/23.0.0/annotations-23.0.0.jar to /home/runner/.gradle/.tmp/gradle_download10001793480615844346bin
 Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/23.0.0/8cc20c07506ec18e0834947b84a864bfc094484e/annotations-23.0.0.jar because:
   Build cache is disabled
@@ -604,7 +605,7 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/b078a9b465fdfc1e8a3297277a2488b4/transformed/jetified-annotations-23.0.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/google/dagger/hilt-core/2.51/hilt-core-2.51.jar to /home/runner/.gradle/.tmp/gradle_download15360178488635802020bin
+Downloading https://repo.maven.apache.org/maven2/com/google/dagger/hilt-core/2.51/hilt-core-2.51.jar to /home/runner/.gradle/.tmp/gradle_download4953008916951067831bin
 Transforming hilt-core-2.51.jar (com.google.dagger:hilt-core:2.51) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.dagger/hilt-core/2.51/5288817b2e075f2e1dd30f3bf906eb57e7d43854/hilt-core-2.51.jar because:
   Build cache is disabled
@@ -639,7 +640,7 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3b7f70850404e4b278d16b698aa36d3f/transformed/jetified-jsr305-3.0.2.jar because:
   Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-annotations/16.2.0/firebase-annotations-16.2.0.jar to /home/runner/.gradle/.tmp/gradle_download7966938520567046109bin
+Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-annotations/16.2.0/firebase-annotations-16.2.0.jar to /home/runner/.gradle/.tmp/gradle_download8317296598294316323bin
 Transforming firebase-annotations-16.2.0.jar (com.google.firebase:firebase-annotations:16.2.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-annotations/16.2.0/ba0806703ca285d03fa9c888b5868f101134a501/firebase-annotations-16.2.0.jar because:
   Build cache is disabled
@@ -650,28 +651,28 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming firebase-annotations-16.2.0.jar (com.google.firebase:firebase-annotations:16.2.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/a36471bf394d061656f2d2f3c74bb289/transformed/jetified-firebase-annotations-16.2.0.jar because:
   Build cache is disabled
-Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with IdentityTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar because:
   Build cache is disabled
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/16991580d2461051e3fd7e88a13eefd9/transformed/jetified-gson-2.11.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with EnumerateClassesTransform
 Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/77d1abc8f35d5a231cc989d8e036426c/transformed/jetified-javax.inject-1.jar because:
   Build cache is disabled
   Caching not enabled.
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/16991580d2461051e3fd7e88a13eefd9/transformed/jetified-gson-2.11.0.jar because:
-  Build cache is disabled
 Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/77d1abc8f35d5a231cc989d8e036426c/transformed/jetified-javax.inject-1.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/javax/sip/android-jain-sip-ri/1.3.0-91/android-jain-sip-ri-1.3.0-91.jar to /home/runner/.gradle/.tmp/gradle_download9113248938798843022bin
-Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-javalite/3.22.0/protobuf-javalite-3.22.0.jar to /home/runner/.gradle/.tmp/gradle_download6712536540316376357bin
-Transforming android-jain-sip-ri-1.3.0-91.jar (javax.sip:android-jain-sip-ri:1.3.0-91) with JetifyTransform
+Downloading https://repo.maven.apache.org/maven2/com/google/protobuf/protobuf-javalite/3.22.0/protobuf-javalite-3.22.0.jar to /home/runner/.gradle/.tmp/gradle_download8025893424332254718bin
+Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/16991580d2461051e3fd7e88a13eefd9/transformed/jetified-gson-2.11.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with EnumerateClassesTransform
 Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with JetifyTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/16991580d2461051e3fd7e88a13eefd9/transformed/jetified-gson-2.11.0.jar because:
+  Build cache is disabled
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-javalite/3.22.0/b54765740e50483d1ecd41c0020167ba887ab1ea/protobuf-javalite-3.22.0.jar because:
   Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/javax/sip/android-jain-sip-ri/1.3.0-91/android-jain-sip-ri-1.3.0-91.jar to /home/runner/.gradle/.tmp/gradle_download3181785168261572643bin
+Transforming android-jain-sip-ri-1.3.0-91.jar (javax.sip:android-jain-sip-ri:1.3.0-91) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/javax.sip/android-jain-sip-ri/1.3.0-91/4b8afec3157e27eb7d2c44f7de28e47e52cbcd29/android-jain-sip-ri-1.3.0-91.jar because:
   Build cache is disabled
 Transforming tink-android-1.8.0.jar (com.google.crypto.tink:tink-android:1.8.0) with IdentityTransform
@@ -681,20 +682,10 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming tink-android-1.8.0.jar (com.google.crypto.tink:tink-android:1.8.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/30d6123b032543a2ec1e3f7e79ddc792/transformed/jetified-tink-android-1.8.0.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/vdurmont/semver4j/3.1.0/semver4j-3.1.0.jar to /home/runner/.gradle/.tmp/gradle_download1952282828762704468bin
+Downloading https://repo.maven.apache.org/maven2/com/vdurmont/semver4j/3.1.0/semver4j-3.1.0.jar to /home/runner/.gradle/.tmp/gradle_download2272093778968253643bin
 Transforming semver4j-3.1.0.jar (com.vdurmont:semver4j:3.1.0) with JetifyTransform
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.vdurmont/semver4j/3.1.0/de1248f09dfe8df3b021c84e0642ee222cceb13/semver4j-3.1.0.jar because:
   Build cache is disabled
-Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6629a5964776e2c3cb87b18f2addf3d5/transformed/jetified-protobuf-javalite-3.22.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6629a5964776e2c3cb87b18f2addf3d5/transformed/jetified-protobuf-javalite-3.22.0.jar because:
-  Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6a1b4f95d1687bfac2e6f005656bed9b/transformed/jetified-android-prefixed-125.6422.04.aar because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming semver4j-3.1.0.jar (com.vdurmont:semver4j:3.1.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/80f0332fe9ea1d6a124812fbcd9dcac4/transformed/jetified-semver4j-3.1.0.jar because:
   Build cache is disabled
@@ -702,34 +693,39 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming semver4j-3.1.0.jar (com.vdurmont:semver4j:3.1.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/80f0332fe9ea1d6a124812fbcd9dcac4/transformed/jetified-semver4j-3.1.0.jar because:
   Build cache is disabled
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with EnumerateClassesTransform
-Downloading https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar to /home/runner/.gradle/.tmp/gradle_download15817103451053146243bin
-Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.27.0/91b2c29d8a6148b5e2e4930f070d4840e2e48e34/error_prone_annotations-2.27.0.jar because:
-  Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/e100a85a617a8afbe1f0f231576d9943/transformed/jetified-android-prefixed-125.6422.04-runtime.jar because:
-  Build cache is disabled
-Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/c5bae2d359ba97de4ec8df760285fb7c/transformed/jetified-timber-4.7.0.aar because:
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/6a1b4f95d1687bfac2e6f005656bed9b/transformed/jetified-android-prefixed-125.6422.04.aar because:
   Build cache is disabled
   Caching not enabled.
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with EnumerateClassesTransform
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6ab4e65c32fbf305b6d26d1fed2b8871/transformed/jetified-timber-4.7.0-runtime.jar because:
+Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/e100a85a617a8afbe1f0f231576d9943/transformed/jetified-android-prefixed-125.6422.04-runtime.jar because:
+  Build cache is disabled
+Downloading https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.27.0/error_prone_annotations-2.27.0.jar to /home/runner/.gradle/.tmp/gradle_download4566147443960607836bin
+Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with JetifyTransform
+Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.27.0/91b2c29d8a6148b5e2e4930f070d4840e2e48e34/error_prone_annotations-2.27.0.jar because:
   Build cache is disabled
 Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/1a04ab776ab3a627abb24e96704bd276/transformed/jetified-error_prone_annotations-2.27.0.jar because:
   Build cache is disabled
   Caching not enabled.
-Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with IdentityTransform
-Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/3a80348486069c51108003dff60b1e94/transformed/jetified-kotlin-stdlib-2.0.0.jar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with EnumerateClassesTransform
 Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/1a04ab776ab3a627abb24e96704bd276/transformed/jetified-error_prone_annotations-2.27.0.jar because:
   Build cache is disabled
+Caching disabled for AarToClassTransform: /home/runner/.gradle/caches/8.9/transforms/c5bae2d359ba97de4ec8df760285fb7c/transformed/jetified-timber-4.7.0.aar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with IdentityTransform
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with EnumerateClassesTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/6629a5964776e2c3cb87b18f2addf3d5/transformed/jetified-protobuf-javalite-3.22.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6ab4e65c32fbf305b6d26d1fed2b8871/transformed/jetified-timber-4.7.0-runtime.jar because:
+  Build cache is disabled
+Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with EnumerateClassesTransform
+Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.jar to /home/runner/.gradle/.tmp/gradle_download1894974133818844226bin
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/6629a5964776e2c3cb87b18f2addf3d5/transformed/jetified-protobuf-javalite-3.22.0.jar because:
+  Build cache is disabled
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
   Build cache is disabled
-Downloading https://repo.maven.apache.org/maven2/com/google/guava/guava/32.1.3-android/guava-32.1.3-android.jar to /home/runner/.gradle/.tmp/gradle_download6914686877470012020bin
 Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/ee42341e821528ba8816dd647f502cf2/transformed/jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
   Build cache is disabled
@@ -739,6 +735,7 @@ Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/
   Build cache is disabled
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar because:
   Build cache is disabled
+Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with JetifyTransform
 Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/4b6d9bbc1ff64e7e0a378e3846c74988/transformed/jetified-failureaccess-1.0.1.jar because:
   Build cache is disabled
@@ -746,16 +743,20 @@ Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transfor
 Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with EnumerateClassesTransform
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/4b6d9bbc1ff64e7e0a378e3846c74988/transformed/jetified-failureaccess-1.0.1.jar because:
   Build cache is disabled
-Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with JetifyTransform
+Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with IdentityTransform
+Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/3a80348486069c51108003dff60b1e94/transformed/jetified-kotlin-stdlib-2.0.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
 Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.1.3-android/ea090dd85ca2fa12d42d054369df888665230dd7/guava-32.1.3-android.jar because:
   Build cache is disabled
-Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3a80348486069c51108003dff60b1e94/transformed/jetified-kotlin-stdlib-2.0.0.jar because:
-  Build cache is disabled
+Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with EnumerateClassesTransform
 Transforming android-jain-sip-ri-1.3.0-91.jar (javax.sip:android-jain-sip-ri:1.3.0-91) with IdentityTransform
 Caching disabled for IdentityTransform: /home/runner/.gradle/caches/8.9/transforms/131dbfb770b74bd5ad95cdedb9605e31/transformed/jetified-android-jain-sip-ri-1.3.0-91.jar because:
   Build cache is disabled
   Caching not enabled.
 Transforming android-jain-sip-ri-1.3.0-91.jar (javax.sip:android-jain-sip-ri:1.3.0-91) with EnumerateClassesTransform
+Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/3a80348486069c51108003dff60b1e94/transformed/jetified-kotlin-stdlib-2.0.0.jar because:
+  Build cache is disabled
 Caching disabled for EnumerateClassesTransform: /home/runner/.gradle/caches/8.9/transforms/131dbfb770b74bd5ad95cdedb9605e31/transformed/jetified-android-jain-sip-ri-1.3.0-91.jar because:
   Build cache is disabled
 Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with IdentityTransform
@@ -1547,7 +1548,6 @@ Merging to '/home/runner/work/Starscord/Starscord/app/build/intermediates/dex/de
 AAPT2 aapt2-8.4.2-11315950-linux Daemon #0: shutdown
 AAPT2 aapt2-8.4.2-11315950-linux Daemon #1: shutdown
 AAPT2 aapt2-8.4.2-11315950-linux Daemon #2: shutdown
-AAPT2 aapt2-8.4.2-11315950-linux Daemon #3: shutdown
 
 FAILURE: Build failed with an exception.
 
@@ -1555,9 +1555,9 @@ FAILURE: Build failed with an exception.
 Execution failed for task ':app:processDebugResources'.
 > A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
    > Android resource linking failed
-     ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
-     error: failed linking references.
-     
+     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+         
+     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
          
 
 * Try:
@@ -1723,9 +1723,9 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
-ERROR: AAPT: error: resource style/Theme.MaterialComponents.DayNight.NoActionBar (aka com.nexus.android:style/Theme.MaterialComponents.DayNight.NoActionBar) not found.
-error: failed linking references.
-
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
+    
+ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
     
 	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create(Aapt2Exception.kt:45)
 	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create$default(Aapt2Exception.kt:33)
@@ -1772,7 +1772,11 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BUILD FAILED in 1m 31s
+=======
+BUILD FAILED in 1m 43s
+>>>>>>> Stashed changes
 21 actionable tasks: 21 executed
 =======
 BUILD FAILED in 2m 48s
