@@ -160,6 +160,7 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/13f7d7fbb105d339071a3ea1c8adb431/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar because:
   Build cache is disabled
   Caching not enabled.
@@ -169,10 +170,24 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
+=======
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Transforming jakarta.xml.bind-api-2.3.2.jar (jakarta.xml.bind:jakarta.xml.bind-api:2.3.2) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/d4660f66dfdebeb71ffe299a7b212478/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf647071714cb32142982f8192fa7bbc/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
@@ -183,15 +198,19 @@ Transforming txw2-2.3.2.jar (org.glassfish.jaxb:txw2:2.3.2) with ExternalDepende
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/41d7aba1b822afaeebd199966dc155b6/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar because:
   Build cache is disabled
   Caching not enabled.
+=======
+>>>>>>> Stashed changes
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/2.3.2/ce5be7da2e442c25ec14c766cb60cb802741727b/txw2-2.3.2.jar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
@@ -207,15 +226,42 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
   Build cache is disabled
   Caching not enabled.
+=======
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/048d5e7f2400e6b56116b09f38bfda53/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Transforming istack-commons-runtime-3.0.8.jar (com.sun.istack:istack-commons-runtime:3.0.8) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/e336e8ac7a1cfbd7df4401e66b356535/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/b58b8d7fbd4ca443143afb3001c281aa/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Transforming FastInfoset-1.2.16.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.16) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/90aca7698ca61529cd07ba0c768a8458/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/3.0.8/d6a97364045aa6b99bf2d3c566a3f98599c2d296/istack-commons-runtime-3.0.8.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/721d72d7e7870160e01035f12bcc540f/transformed/analysis/instrumentation-hierarchy.bin because:
@@ -253,13 +299,22 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar because:
   Build cache is disabled
   Caching not enabled.
+=======
+>>>>>>> Stashed changes
 Transforming error_prone_annotations-2.18.0.jar (com.google.errorprone:error_prone_annotations:2.18.0) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/8e70d4244b6b61d31a02a59536728ac6/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/831229076f5e9d006ee5c15b85bf74b7/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
@@ -273,7 +328,11 @@ Transforming jose4j-0.7.0.jar (org.bitbucket.b_c:jose4j:0.7.0) with ExternalDepe
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c21045d339d8f10bd3cdd9cf15772a69/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.18.0/89b684257096f548fa39a7df9fdaa409d4d4df91/error_prone_annotations-2.18.0.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/ae3da73e90491a1ac1c0bab30459b025/transformed/analysis/instrumentation-hierarchy.bin because:
@@ -289,7 +348,11 @@ Transforming slf4j-api-1.7.30.jar (org.slf4j:slf4j-api:1.7.30) with ExternalDepe
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/2094bcd6a603606078345210e8fd0a78/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.0/478ee8518687f9b01f20912fc7edd9d7b46d06da/jose4j-0.7.0.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0458582e8ea3416b8981f11f271a29ae/transformed/analysis/instrumentation-hierarchy.bin because:
@@ -298,10 +361,17 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/0458582e8ea3416b8981f11f271a29ae/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.30/b5a4b6d16ab13e34a88fae84c35cd5d68cac922c/slf4j-api-1.7.30.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Transforming jdom2-2.0.6.jar (org.jdom:jdom2:2.0.6) with ExternalDependencyInstrumentingArtifactTransform
@@ -340,6 +410,7 @@ Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/run
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/bf41f01db07e2237699ff4423e2194e6/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
   Build cache is disabled
   Caching not enabled.
@@ -349,32 +420,56 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/2b4910480f6f4939d36ac67af712af9c/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+=======
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Transforming annotations-4.1.1.4.jar (com.google.android:annotations:4.1.1.4) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/77fb61a21ad759994a2673c3a675e5e4/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/2b4910480f6f4939d36ac67af712af9c/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Transforming animal-sniffer-annotations-1.23.jar (org.codehaus.mojo:animal-sniffer-annotations:1.23) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/179c87685867be1174d1a979f42d5529/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/08652da9c5fc6033938779d4e4db5f11/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/08652da9c5fc6033938779d4e4db5f11/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
+=======
+>>>>>>> Stashed changes
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
   Build cache is disabled
   Caching not enabled.
@@ -382,17 +477,34 @@ Transforming perfmark-api-0.26.0.jar (io.perfmark:perfmark-api:0.26.0) with Exte
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/7ce67b937f68a7afda9156c1435bf0de/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-hierarchy.bin because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8af4df9feab5d585aceb3083a57c63e5/transformed/analysis/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Transforming netty-codec-http2-4.1.93.Final.jar (io.netty:netty-codec-http2:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c849aae3bf45c20f151deb34fffc21de/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-codec-http2-4.1.93.Final.jar (io.netty:netty-codec-http2:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c849aae3bf45c20f151deb34fffc21de/transformed/merge/instrumentation-dependencies.bin because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/84b3785d3ace9128a149b3327d08e2a2/transformed/analysis/instrumentation-hierarchy.bin because:
@@ -420,6 +532,7 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Transforming netty-codec-http-4.1.93.Final.jar (io.netty:netty-codec-http:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/cfec4f65e706f4c14b86c4ec09514806/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
@@ -428,15 +541,39 @@ Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/run
   Build cache is disabled
   Caching not enabled.
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-codec-http-4.1.93.Final.jar (io.netty:netty-codec-http:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/cfec4f65e706f4c14b86c4ec09514806/transformed/merge/instrumentation-dependencies.bin because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-hierarchy.bin because:
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-dependencies.bin because:
+=======
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/8236f9146983391a7a242938ae6f1444/transformed/analysis/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming netty-handler-4.1.93.Final.jar (io.netty:netty-handler:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/78433fc497ff71520e09798c92e80fb6/transformed/merge/instrumentation-dependencies.bin because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-hierarchy.bin because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/8.9/transforms/942477cb07eb61e0a0dfb6199bbb3557/transformed/analysis/instrumentation-dependencies.bin because:
@@ -445,17 +582,23 @@ Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.93.Final/f4fb8b4c8da539091f43abcbb9f0389e48807eea/netty-transport-native-unix-common-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for MergeInstrumentationAnalysisTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
+=======
+>>>>>>> Stashed changes
 Transforming netty-transport-native-unix-common-4.1.93.Final.jar (io.netty:netty-transport-native-unix-common:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/c757c5d68c9a917be77b49e0feafb9a7/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Transforming netty-handler-4.1.93.Final.jar (io.netty:netty-handler:4.1.93.Final) with ExternalDependencyInstrumentingArtifactTransform
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/78433fc497ff71520e09798c92e80fb6/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+=======
+>>>>>>> Stashed changes
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.93.Final/f4fb8b4c8da539091f43abcbb9f0389e48807eea/netty-transport-native-unix-common-4.1.93.Final.jar because:
   Build cache is disabled
   Caching not enabled.
@@ -485,6 +628,12 @@ Transforming commons-codec-1.11.jar (commons-codec:commons-codec:1.11) with Exte
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/8.9/transforms/9994e034ad6cfb0f6c049fd182d083a6/transformed/merge/instrumentation-dependencies.bin because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar because:
+  Build cache is disabled
+  Caching not enabled.
+>>>>>>> Stashed changes
 Caching disabled for ExternalDependencyInstrumentingArtifactTransform: /home/runner/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.11/3acb4705652e16236558f0f4f2192cc33c3bd189/commons-codec-1.11.jar because:
   Build cache is disabled
   Caching not enabled.
@@ -997,4 +1146,8 @@ org.gradle.api.InvalidUserCodeException: Build was configured to prefer settings
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 
 
+<<<<<<< Updated upstream
 BUILD FAILED in 1m 1s
+=======
+BUILD FAILED in 59s
+>>>>>>> Stashed changes
