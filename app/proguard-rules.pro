@@ -1,0 +1,28 @@
+-keep class com.nexus.android.data.api.models.** { *; }
+-keep class com.nexus.android.data.local.entities.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn sun.misc.**
+-keep class com.google.gson.** { *; }
+-keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
+-keepclassmembers,allowshrinking,allowobfuscation interface * { @retrofit2.http.* <methods>; }
+-dontwarn org.codehaus.mojo.animal_sniffer.**
+-dontwarn javax.annotation.**
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+-keep class * extends androidx.room.RoomDatabase
+-dontwarn androidx.room.**
+-keep class dagger.** { *; }
+-keep class javax.inject.** { *; }
+-keep @dagger.hilt.android.HiltAndroidApp class * { *; }
+-keep @dagger.hilt.android.AndroidEntryPoint class * { *; }
+-keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
+-keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
+-dontwarn coil.**
+-keep class io.livekit.** { *; }
+-dontwarn io.livekit.**
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.firebase.**
+-dontwarn com.airbnb.lottie.**
+-keepclassmembers enum * { *; }
