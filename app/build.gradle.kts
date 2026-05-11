@@ -55,13 +55,6 @@ android {
     }
 }
 
-// JitPack is required by livekit-android (audioswitch transitive dep)
-repositories {
-    google()
-    mavenCentral()
-    maven { url = uri("https://jitpack.io") }
-}
-
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2024.06.00"))
     implementation("androidx.compose.ui:ui")
@@ -94,8 +87,6 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
 
-    // Bumped 2.5.0 -> 2.7.1: 2.5.0 pulls audioswitch via a raw JitPack commit hash
-    // which 404s without JitPack in repositories. 2.7.1 resolves cleanly.
     implementation("io.livekit:livekit-android:2.7.1")
 
     implementation("androidx.media3:media3-exoplayer:1.3.1")
