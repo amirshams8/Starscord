@@ -1782,7 +1782,7 @@ jobs:
 
 
 //===== FILE: .github/workflows/Setup.yml =====
-name: Setup Android (Kotlin DSL) + Gradle 8.4
+name: Setup Android (Kotlin DSL) + Gradle 8.9
 
 on:
   workflow_dispatch:
@@ -1828,13 +1828,13 @@ jobs:
           test -f settings.gradle.kts || (echo "❌ settings.gradle.kts not found" && exit 1)
 
       # -------------------------
-      # Force Gradle 8.4
+      # Force Gradle 8.9
       # -------------------------
-      - name: Generate Gradle Wrapper 8.4
+      - name: Generate Gradle Wrapper 8.9
         run: |
-          curl -sLo gradle.zip https://services.gradle.org/distributions/gradle-8.4-bin.zip
+          curl -sLo gradle.zip https://services.gradle.org/distributions/gradle-8.9-bin.zip
           unzip -q gradle.zip
-          ./gradle-8.4/bin/gradle wrapper --gradle-version 8.4
+          ./gradle-8.9/bin/gradle wrapper --gradle-version 8.9
 
       - name: Make gradlew executable
         run: chmod +x gradlew
@@ -1853,7 +1853,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add gradlew gradlew.bat gradle/wrapper
-          git diff --cached --quiet || git commit -m "Add Gradle wrapper 8.4 (Kotlin DSL, Java 17)"
+          git diff --cached --quiet || git commit -m "Add Gradle wrapper 8.9 (Kotlin DSL, Java 17)"
           git push
 
 
