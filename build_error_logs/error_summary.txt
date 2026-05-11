@@ -20,7 +20,11 @@ No XML errors
 -- BUILD TASK FAILURES --
 > Task :app:processDebugGoogleServices FAILED
 FAILURE: Build failed with an exception.
+<<<<<<< Updated upstream
 BUILD FAILED in 1m 29s
+=======
+BUILD FAILED in 1m 30s
+>>>>>>> Stashed changes
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
