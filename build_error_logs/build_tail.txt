@@ -1,832 +1,731 @@
-Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable-animated/1.1.0/fcda1161354501471c30a4e077af6b5c4d4eddc6/vectordrawable-animated-1.1.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/18a011d1a57d6ecda0e2b0905cc7fec6/transformed/jetified-media3-exoplayer-1.3.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/19a093e3b300203a41df7016213a1735/transformed/vectordrawable-animated-1.1.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/customview/customview-poolingcontainer/1.0.0/customview-poolingcontainer-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download15790497066163046258bin
-Transforming customview-poolingcontainer-1.0.0.aar (androidx.customview:customview-poolingcontainer:1.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.customview/customview-poolingcontainer/1.0.0/579fc832cf0e5be08d8d9571850b50d22d9de3c/customview-poolingcontainer-1.0.0.aar because:
-  Build cache is disabled
+Transforming ui-tooling-preview-release.aar (androidx.compose.ui:ui-tooling-preview-android:1.6.8) with JetifyTransform
+Transforming ui-tooling-preview-release.aar (androidx.compose.ui:ui-tooling-preview-android:1.6.8) with ExtractAarTransform
+Transforming ui-tooling-preview-release.aar (androidx.compose.ui:ui-tooling-preview-android:1.6.8) with LibrarySymbolTableTransform
+Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with JetifyTransform
+Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with ExtractAarTransform
+Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with LibrarySymbolTableTransform
+Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with JetifyTransform
+Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with ExtractAarTransform
+Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with LibrarySymbolTableTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with JetifyTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with ExtractAarTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with LibrarySymbolTableTransform
+Transforming media3-ui-1.3.1.aar (androidx.media3:media3-ui:1.3.1) with JetifyTransform
 Transforming media3-ui-1.3.1.aar (androidx.media3:media3-ui:1.3.1) with ExtractAarTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core-ktx/1.13.1/core-ktx-1.13.1.aar to /home/runner/.gradle/.tmp/gradle_download5692022318078235133bin
+Transforming media3-ui-1.3.1.aar (androidx.media3:media3-ui:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-extractor-1.3.1.aar (androidx.media3:media3-extractor:1.3.1) with JetifyTransform
+Transforming media3-extractor-1.3.1.aar (androidx.media3:media3-extractor:1.3.1) with ExtractAarTransform
+Transforming media3-extractor-1.3.1.aar (androidx.media3:media3-extractor:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-container-1.3.1.aar (androidx.media3:media3-container:1.3.1) with JetifyTransform
+Transforming media3-container-1.3.1.aar (androidx.media3:media3-container:1.3.1) with ExtractAarTransform
+Transforming media3-container-1.3.1.aar (androidx.media3:media3-container:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-datasource-1.3.1.aar (androidx.media3:media3-datasource:1.3.1) with JetifyTransform
+Transforming media3-datasource-1.3.1.aar (androidx.media3:media3-datasource:1.3.1) with ExtractAarTransform
+Transforming media3-datasource-1.3.1.aar (androidx.media3:media3-datasource:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-decoder-1.3.1.aar (androidx.media3:media3-decoder:1.3.1) with JetifyTransform
+Transforming media3-decoder-1.3.1.aar (androidx.media3:media3-decoder:1.3.1) with ExtractAarTransform
+Transforming media3-decoder-1.3.1.aar (androidx.media3:media3-decoder:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-database-1.3.1.aar (androidx.media3:media3-database:1.3.1) with JetifyTransform
+Transforming media3-database-1.3.1.aar (androidx.media3:media3-database:1.3.1) with ExtractAarTransform
+Transforming media3-database-1.3.1.aar (androidx.media3:media3-database:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with JetifyTransform
+Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with ExtractAarTransform
+Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with LibrarySymbolTableTransform
+Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with JetifyTransform
+Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with ExtractAarTransform
+Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with LibrarySymbolTableTransform
+Transforming media-1.7.0.aar (androidx.media:media:1.7.0) with JetifyTransform
+Transforming media-1.7.0.aar (androidx.media:media:1.7.0) with ExtractAarTransform
+Transforming media-1.7.0.aar (androidx.media:media:1.7.0) with LibrarySymbolTableTransform
+Transforming recyclerview-1.3.0.aar (androidx.recyclerview:recyclerview:1.3.0) with JetifyTransform
+Transforming recyclerview-1.3.0.aar (androidx.recyclerview:recyclerview:1.3.0) with ExtractAarTransform
+Transforming recyclerview-1.3.0.aar (androidx.recyclerview:recyclerview:1.3.0) with LibrarySymbolTableTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with JetifyTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with ExtractAarTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with LibrarySymbolTableTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with JetifyTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with LibrarySymbolTableTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with JetifyTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with LibrarySymbolTableTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with JetifyTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with LibrarySymbolTableTransform
+Transforming customview-poolingcontainer-1.0.0.aar (androidx.customview:customview-poolingcontainer:1.0.0) with JetifyTransform
 Transforming customview-poolingcontainer-1.0.0.aar (androidx.customview:customview-poolingcontainer:1.0.0) with ExtractAarTransform
+Transforming customview-poolingcontainer-1.0.0.aar (androidx.customview:customview-poolingcontainer:1.0.0) with LibrarySymbolTableTransform
 Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with JetifyTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/383b490f48b4a45b4eb1be22f4f1fe08/transformed/jetified-customview-poolingcontainer-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.core/core-ktx/1.13.1/f595b8c10fad9099f71a3c1fc6ded1c9b5010190/core-ktx-1.13.1.aar because:
-  Build cache is disabled
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/092d5af8c38dfdcf421479b66cd1d751/transformed/jetified-media3-ui-1.3.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming customview-poolingcontainer-1.0.0.aar (androidx.customview:customview-poolingcontainer:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/4cd8ea85e0a483b8645705bb2f54c9a3/transformed/jetified-customview-poolingcontainer-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with AarTransform
 Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/776188ba695b4b413db6561c6c5b6fbb/transformed/jetified-core-ktx-1.13.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/drawerlayout/drawerlayout/1.0.0/drawerlayout-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download15105164382298448962bin
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with LibrarySymbolTableTransform
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with JetifyTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/5e89a96a6138c1de48ce6d57964da014/transformed/jetified-media3-exoplayer-1.3.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.drawerlayout/drawerlayout/1.0.0/dd02c7e207136e1272b33815cc61e57676ed13a2/drawerlayout-1.0.0.aar because:
-  Build cache is disabled
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.drawerlayout/drawerlayout/1.0.0/dd02c7e207136e1272b33815cc61e57676ed13a2/drawerlayout-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with AarTransform
-Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/70c28f5abd2f69915cd4d2234c5266e1/transformed/drawerlayout-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/1744f4b6b7d443fb8a7d9bbb761e938a/transformed/jetified-core-ktx-1.13.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming media3-ui-1.3.1.aar (androidx.media3:media3-ui:1.3.1) with AarTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/customview/customview/1.0.0/customview-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download9486811652333388463bin
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.customview/customview/1.0.0/30f5ff6075d112f8076e733b24410e68159735b6/customview-1.0.0.aar because:
-  Build cache is disabled
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with LibrarySymbolTableTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with LibrarySymbolTableTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.customview/customview/1.0.0/30f5ff6075d112f8076e733b24410e68159735b6/customview-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with LibrarySymbolTableTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/15dc1e94066f2f5b43eb62e21ca775e5/transformed/jetified-media3-ui-1.3.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/58b7215f6404241d824d272d046101eb/transformed/customview-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2-views-helper/1.3.0/emoji2-views-helper-1.3.0.aar to /home/runner/.gradle/.tmp/gradle_download1837206845576270934bin
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with LibrarySymbolTableTransform
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.emoji2/emoji2-views-helper/1.3.0/7bef7c1117bb40ef41ee0641cd1d2d605e2d607c/emoji2-views-helper-1.3.0.aar because:
-  Build cache is disabled
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6b0f371916414e310bfbe11554b17e27/transformed/jetified-emoji2-views-helper-1.3.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/core/core/1.13.1/core-1.13.1.aar to /home/runner/.gradle/.tmp/gradle_download5777955324264296259bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/emoji2/emoji2/1.3.0/emoji2-1.3.0.aar to /home/runner/.gradle/.tmp/gradle_download12438286355226282828bin
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with LibrarySymbolTableTransform
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.emoji2/emoji2/1.3.0/37ed42991ddf77924510472dba632314aab1c9d9/emoji2-1.3.0.aar because:
-  Build cache is disabled
-Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/10d890693bf902ce9037df99588a7366/transformed/jetified-emoji2-views-helper-1.3.0 because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with ExtractAarTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.13.1/4606d420282fe1e5c8d5c4e647ec188e1045b7be/core-1.13.1.aar because:
-  Build cache is disabled
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/76309e05b3cf8b0584e78a13d4e40ccd/transformed/jetified-emoji2-1.3.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
-Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/autofill/autofill/1.0.0/autofill-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download2385600657367380063bin
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.13.1/4606d420282fe1e5c8d5c4e647ec188e1045b7be/core-1.13.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with LibrarySymbolTableTransform
 Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.autofill/autofill/1.0.0/d95a6e3b895ad8f037dd01d88c87138b6d5eb507/autofill-1.0.0.aar because:
-  Build cache is disabled
 Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/601343ff86f095e362baf08383ed405c/transformed/jetified-autofill-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/5b4d1f3ce70e657689d1ee4cb71e224a/transformed/jetified-autofill-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming autofill-1.0.0.aar (androidx.autofill:autofill:1.0.0) with LibrarySymbolTableTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/0f5d2b9c2fd6674d64ac9b7acb727e55/transformed/core-1.13.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-android/2.8.3/lifecycle-runtime-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download3901168959226427801bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel/2.8.3/lifecycle-viewmodel-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download15018262434406847395bin
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.8.3/b24817e8c78b402c8d44acf07aeacd71f000ead2/lifecycle-viewmodel-2.8.3.aar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-android/2.8.3/17fc8582c650ec8ac523ac325a548ef3d4d55643/lifecycle-runtime-release.aar because:
-  Build cache is disabled
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.8.3/b24817e8c78b402c8d44acf07aeacd71f000ead2/lifecycle-viewmodel-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/fd9aa1412f182e1b48fe83ac67aaf801/transformed/lifecycle-viewmodel-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/e42cb99897d8f93fd079b52321ddbec1/transformed/jetified-lifecycle-runtime-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/2ebb84e8cee8d01c0a8601bb2bc40a8f/transformed/jetified-lifecycle-runtime-release because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core-ktx/2.8.3/lifecycle-livedata-core-ktx-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download11443276928021494214bin
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.8.3/3aaf46d5bd206889d5bf452d816439b0adbbca41/lifecycle-livedata-core-ktx-2.8.3.aar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-process/2.8.3/lifecycle-process-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download717591749708349310bin
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with LibrarySymbolTableTransform
 Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with JetifyTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/342e001349582c80b15ec11b0589fd8f/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-process/2.8.3/765b59a3140714aaf2fcd3dd4974af733fda44f1/lifecycle-process-2.8.3.aar because:
-  Build cache is disabled
 Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with ExtractAarTransform
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with AarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/3e09463ecf6bcbde0b8b66bc17e363f2/transformed/jetified-lifecycle-process-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/12d9604ace0f7ad71a786aec92e2c655/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-ktx/2.8.3/lifecycle-viewmodel-ktx-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download7106629825300585638bin
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-ktx/2.8.3/c761311999a99df8820f8d4bdeb49fe9712eec1c/lifecycle-viewmodel-ktx-2.8.3.aar because:
-  Build cache is disabled
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/c614dc77a272011e88907024763a2bfa/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-android/2.8.3/lifecycle-viewmodel-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download8288398780527897040bin
+Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with LibrarySymbolTableTransform
+Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with JetifyTransform
+Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with ExtractAarTransform
+Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with LibrarySymbolTableTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with JetifyTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with ExtractAarTransform
+Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with LibrarySymbolTableTransform
+Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with JetifyTransform
+Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with ExtractAarTransform
+Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with LibrarySymbolTableTransform
 Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-android/2.8.3/d5a0169696d54d9651dc7f173585ed9b0f35f255/lifecycle-viewmodel-release.aar because:
-  Build cache is disabled
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/73589f71330a345f96aabc76dd7c8458/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with ExtractAarTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata/2.8.3/lifecycle-livedata-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download17443685115983940075bin
+Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with LibrarySymbolTableTransform
 Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with JetifyTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/ff62c37c2ff55fcc6f2d91193b96bdef/transformed/jetified-lifecycle-viewmodel-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.8.3/1aadbe28f1939b2105b2b6c491153e1756915dc3/lifecycle-livedata-2.8.3.aar because:
-  Build cache is disabled
 Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.8.3/1aadbe28f1939b2105b2b6c491153e1756915dc3/lifecycle-livedata-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/b00201f831d80d9f7d38cca5022c38dd/transformed/jetified-lifecycle-viewmodel-release because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with AarTransform
-Downloading https://repo.maven.apache.org/maven2/com/google/accompanist/accompanist-drawablepainter/0.32.0/accompanist-drawablepainter-0.32.0.aar to /home/runner/.gradle/.tmp/gradle_download7191143802030632882bin
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ecd038e6402fb5e0b15af27b3f621518/transformed/lifecycle-livedata-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.accompanist/accompanist-drawablepainter/0.32.0/95ccec9539314044fdff3aefac17a2983b53c340/accompanist-drawablepainter-0.32.0.aar because:
-  Build cache is disabled
-Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/baf93aeef51dca8324f2939aeeb19692/transformed/jetified-accompanist-drawablepainter-0.32.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/82d9eeb8c5809420a664f312c4ebdd4d/transformed/jetified-accompanist-drawablepainter-0.32.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-savedstate/2.8.3/lifecycle-viewmodel-savedstate-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download4462647772274381076bin
+Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with LibrarySymbolTableTransform
+Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with JetifyTransform
+Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with ExtractAarTransform
+Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with LibrarySymbolTableTransform
 Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-savedstate/2.8.3/52b7eb48a776d050e5c97c255ef82027ac839878/lifecycle-viewmodel-savedstate-2.8.3.aar because:
-  Build cache is disabled
 Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/83b88b9593f4de6776d30612fbe8f581/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/8dd3ba8ec78cfbd6e5dd4048a5f2d4d5/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-android/1.1.1/datastore-android-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download4691524238437810074bin
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-android/1.1.1/7a8d9ff6fd8cf0694179320055cb1d04b5ea8584/datastore-release.aar because:
-  Build cache is disabled
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6b89131695bf9539d14a3f9bccfc7178/transformed/jetified-datastore-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-core-android/1.1.1/datastore-core-android-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download831262402418768184bin
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/63cfcc36a49b2f9b493a70b0a166c716/transformed/jetified-datastore-release because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-core-android/1.1.1/cc90a97dbaf20ab27eb0299832d8db0d82591cec/datastore-core-release.aar because:
-  Build cache is disabled
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/d3e4689a34dac70210fccfd20a20e653/transformed/jetified-datastore-core-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c159abe2c60d87943d530656552df74f/transformed/jetified-datastore-core-release because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-android/1.6.8/runtime-android-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download7470924085745184964bin
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-installations-interop/17.1.1/firebase-installations-interop-17.1.1.aar to /home/runner/.gradle/.tmp/gradle_download5368590165641451189bin
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-installations-interop/17.1.1/c7b5bf3ade22e81023cb90de2fa857016dfa441/firebase-installations-interop-17.1.1.aar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/runtime/runtime-saveable-android/1.6.8/runtime-saveable-android-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download9985168144182134805bin
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6d733ce58258eb785f27e4b8a898b927/transformed/jetified-firebase-installations-interop-17.1.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/dff38fa25b6012c5179cc5c0a23c522a/transformed/jetified-firebase-installations-interop-17.1.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/datastore/datastore-preferences-android/1.1.1/datastore-preferences-android-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download4846750031314952934bin
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.datastore/datastore-preferences-android/1.1.1/927dbd4a74ba99501b1d879a22fa6fda1111d01e/datastore-preferences-release.aar because:
-  Build cache is disabled
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/e76a4c2fe7f640ea83009654807fc316/transformed/jetified-datastore-preferences-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/d4ad6c33563aa78816c2c4c2336d188b/transformed/jetified-datastore-preferences-release because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with JetifyTransform
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-tasks/18.1.0/play-services-tasks-18.1.0.aar to /home/runner/.gradle/.tmp/gradle_download18044622043903130386bin
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-tasks/18.1.0/9841a7984efd142b88e8563a5f99131f24e22e1/play-services-tasks-18.1.0.aar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-android/1.6.8/affd49c7395c4aa06adf14918737b3fcdd5f7fc6/runtime-release.aar because:
-  Build cache is disabled
+Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with LibrarySymbolTableTransform
+Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with JetifyTransform
+Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with ExtractAarTransform
+Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with LibrarySymbolTableTransform
 Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-saveable-android/1.6.8/179a9d4c93f63b76814a0c29030dc42d8812b19/runtime-saveable-release.aar because:
+Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with ExtractAarTransform
+Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with LibrarySymbolTableTransform
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with JetifyTransform
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/689871478ea1bb66a07a9eb4fd3d38dc/transformed/navigation-runtime-ktx-2.7.7 because:
   Build cache is disabled
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/8e83d67d72fa6baa34e10f8edb307d0f/transformed/jetified-play-services-tasks-18.1.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/1993d8535c4acca4d49e49b4e7b41515/transformed/jetified-play-services-tasks-18.1.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarTransform
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with ExtractAarTransform
+Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with LibrarySymbolTableTransform
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with JetifyTransform
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with ExtractAarTransform
+Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with LibrarySymbolTableTransform
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with JetifyTransform
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with ExtractAarTransform
+Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with LibrarySymbolTableTransform
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with JetifyTransform
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with ExtractAarTransform
+Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with LibrarySymbolTableTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with ExtractAarTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with LibrarySymbolTableTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with ExtractAarTransform
+Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with LibrarySymbolTableTransform
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarTransform
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-basement/18.3.0/play-services-basement-18.3.0.aar to /home/runner/.gradle/.tmp/gradle_download7106200043551019048bin
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with ExtractAarTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with LibrarySymbolTableTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/18.3.0/ac6d9f53fb09f9f0b6b2d3175a38d886e06bfccb/play-services-basement-18.3.0.aar because:
-  Build cache is disabled
-Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with ExtractAarTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/be37d22910ffe1000826a5f525af2631/transformed/jetified-play-services-basement-18.3.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/5ab884eb85eecb6072ddabd1606baeed/transformed/jetified-runtime-saveable-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with AarTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/e5979eb2e3cedf5ada2eb88bd6867b5b/transformed/jetified-runtime-saveable-release because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0 because:
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/5f4168a2050684f94b4396ba4c1074df/transformed/biometric-1.1.0 because:
   Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/fragment/fragment/1.5.1/fragment-1.5.1.aar to /home/runner/.gradle/.tmp/gradle_download2043781461758729238bin
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/62a89c8a5a7814efc2323d3ef14a7025/transformed/jetified-navigation-compose-2.7.7 because:
+  Build cache is disabled
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with ExtractAarTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with LibrarySymbolTableTransform
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with LibrarySymbolTableTransform
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with LibrarySymbolTableTransform
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.5.1/39660bdcb1ed2c71e181ec3ac7dbfa65fc0f701f/fragment-1.5.1.aar because:
-  Build cache is disabled
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.5.1/39660bdcb1ed2c71e181ec3ac7dbfa65fc0f701f/fragment-1.5.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarTransform
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with ExtractAarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ca1f86e7a9fb42d7bc5c7289ae4faf6b/transformed/fragment-1.5.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-livedata-core/2.8.3/lifecycle-livedata-core-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download5041711966433913812bin
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/87af3ab3ef778e99df349773a3ce7516/transformed/jetified-runtime-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with LibrarySymbolTableTransform
 Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.8.3/443d23dfd034076100e89ea244798d00ab4bba5/lifecycle-livedata-core-2.8.3.aar because:
-  Build cache is disabled
 Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.8.3/443d23dfd034076100e89ea244798d00ab4bba5/lifecycle-livedata-core-2.8.3.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/7d3baf87b4f0a34f6081558d071b2486/transformed/lifecycle-livedata-core-2.8.3 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-viewmodel-compose-android/2.8.3/lifecycle-viewmodel-compose-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download18187648541985076155bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-ktx-android/2.8.3/lifecycle-runtime-ktx-android-2.8.3.aar to /home/runner/.gradle/.tmp/gradle_download11709570088520769186bin
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-compose-android/2.8.3/c693df73ab4881f03bf9223b2d92a0c3981d46c6/lifecycle-viewmodel-compose-release.aar because:
-  Build cache is disabled
+Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with LibrarySymbolTableTransform
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime-ktx-android/2.8.3/5203b4e041ff9ebd854207a3fe0cacbf43e6b378/lifecycle-runtime-ktx-release.aar because:
-  Build cache is disabled
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/f88da9b229f9a71fca36d3edeecac967/transformed/jetified-lifecycle-runtime-ktx-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with LibrarySymbolTableTransform
+Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
 Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/9ccc4f5bcaf2125426cb2fa847bed5b1/transformed/jetified-lifecycle-viewmodel-compose-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/11c2ee4c86e22cf7a849112c35fcd99e/transformed/jetified-lifecycle-runtime-ktx-release because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/4216ac46f4dd78ea5452387d6318109e/transformed/jetified-lifecycle-viewmodel-compose-release because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/7195c5abd1e7c528b9e0dbf2c627bd4b/transformed/jetified-runtime-release because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity/1.9.0/activity-1.9.0.aar to /home/runner/.gradle/.tmp/gradle_download18046283543369784124bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-test-manifest/1.6.8/ui-test-manifest-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download1623372300422993200bin
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-test-manifest/1.6.8/5daaea866e961c161e09af891b121d9e169d068a/ui-test-manifest-1.6.8.aar because:
-  Build cache is disabled
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.9.0/f555772773dbe054d7e5306bc490068ef1ba409e/activity-1.9.0.aar because:
-  Build cache is disabled
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/2b533fddfbba0124af9f6dc8686e6b3f/transformed/jetified-ui-test-manifest-1.6.8.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-ktx/1.9.0/activity-ktx-1.9.0.aar to /home/runner/.gradle/.tmp/gradle_download4060961437664075845bin
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.activity/activity-ktx/1.9.0/5474c5da094e1b9b90d3e9d68b81a0d286b48fdd/activity-ktx-1.9.0.aar because:
-  Build cache is disabled
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with ExtractAarTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with AarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/bed9e0730d5173853cf19b00c1698065/transformed/jetified-activity-ktx-1.9.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/94a0edf39863a39660674abb0b77eb5b/transformed/jetified-activity-ktx-1.9.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/2dd83889db4b04b67891e2cc497b21fc/transformed/jetified-activity-1.9.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite-framework/2.4.0/sqlite-framework-2.4.0.aar to /home/runner/.gradle/.tmp/gradle_download2184523886378008599bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/activity/activity-compose/1.9.0/activity-compose-1.9.0.aar to /home/runner/.gradle/.tmp/gradle_download16911925190777648405bin
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite-framework/2.4.0/532d56a4f312d78767534ff1cc2f8084baec6c26/sqlite-framework-2.4.0.aar because:
-  Build cache is disabled
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with AarTransform
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite-framework/2.4.0/532d56a4f312d78767534ff1cc2f8084baec6c26/sqlite-framework-2.4.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/bdfd3774e10c84afe96895fc65e77fd1/transformed/jetified-activity-1.9.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/compose/ui/ui-android/1.6.8/ui-android-1.6.8.aar to /home/runner/.gradle/.tmp/gradle_download11097576776147453086bin
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with JetifyTransform
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with AarTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.activity/activity-compose/1.9.0/7b9fa701aa5adfbc3d47e41be400d6d57b70fb3a/activity-compose-1.9.0.aar because:
-  Build cache is disabled
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/06bdf0ec3db5c439a45be3256f1ec7b8/transformed/sqlite-framework-2.4.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/sqlite/sqlite/2.4.0/sqlite-2.4.0.aar to /home/runner/.gradle/.tmp/gradle_download8989252730665467829bin
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite/2.4.0/cc553e5621c8ad4e233059a724100afa9e2fd1f4/sqlite-2.4.0.aar because:
-  Build cache is disabled
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.sqlite/sqlite/2.4.0/cc553e5621c8ad4e233059a724100afa9e2fd1f4/sqlite-2.4.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/57bf7539704fa6450ecdba5e538c3c41/transformed/sqlite-2.4.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://repo.maven.apache.org/maven2/com/github/ajalt/timberkt/1.5.1/timberkt-1.5.1.aar to /home/runner/.gradle/.tmp/gradle_download10013867346931885806bin
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.github.ajalt/timberkt/1.5.1/6ea8be487824679a8f79fd5325677c64dd0df9b7/timberkt-1.5.1.aar because:
-  Build cache is disabled
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/ffb3f1a0aa71a9a9e71024cd9ee2cbaf/transformed/jetified-timberkt-1.5.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with AarTransform
-Downloading https://jitpack.io/com/github/davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar to /home/runner/.gradle/.tmp/gradle_download15003466312487788434bin
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/35519f1ac8a744daa184f1c76de87dd9/transformed/jetified-timberkt-1.5.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.github.davidliu/audioswitch/89582c47c9a04c62f90aa5e57251af4800a62c9a/368c11136b7fe69e61c1b8c1197ee63a6c77e715/audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar because:
-  Build cache is disabled
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/24992891fd048ce7f9e7fae612d5c4dc/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/9406b54808c4f0a78a1b73a49c149ac6/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/annotation/annotation-experimental/1.4.0/annotation-experimental-1.4.0.aar to /home/runner/.gradle/.tmp/gradle_download10825762107219491789bin
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation-experimental/1.4.0/c7a2038d831d0cfbfb9a440890b287c2e839ecf/annotation-experimental-1.4.0.aar because:
-  Build cache is disabled
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/074bed3149501c028cd2b36356396c01/transformed/jetified-annotation-experimental-1.4.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with ExtractAarTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/dcfd8a31e263a83f0427e4a52108a055/transformed/jetified-annotation-experimental-1.4.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/security/security-crypto/1.1.0-alpha06/security-crypto-1.1.0-alpha06.aar to /home/runner/.gradle/.tmp/gradle_download15950473081806279295bin
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.security/security-crypto/1.1.0-alpha06/d23f6c36fbbeea99668bf077e14184bb2d4fc7d1/security-crypto-1.1.0-alpha06.aar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/arch/core/core-runtime/2.2.0/core-runtime-2.2.0.aar to /home/runner/.gradle/.tmp/gradle_download18398966606833937716bin
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.2.0/39705982680d78556b679ef9d5400d4f17509b0b/core-runtime-2.2.0.aar because:
-  Build cache is disabled
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with ExtractAarTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/35c0be9b6ec5287ea51e02aed9c623a5/transformed/jetified-security-crypto-1.1.0-alpha06.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.2.0/39705982680d78556b679ef9d5400d4f17509b0b/core-runtime-2.2.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6de94b5c714da325c77a9c801d525d29/transformed/jetified-activity-compose-1.9.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c5aad215ddc97658f14e1e753d40c07a/transformed/core-runtime-2.2.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/a39c99389acba73b850247d011e864de/transformed/jetified-security-crypto-1.1.0-alpha06 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-components/18.0.0/firebase-components-18.0.0.aar to /home/runner/.gradle/.tmp/gradle_download15672909613452942397bin
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/18.0.0/bb3038eb5d7807378715a14e92745c387bdad239/firebase-components-18.0.0.aar because:
-  Build cache is disabled
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with AarTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/711f8147406917ac021753396008f153/transformed/jetified-firebase-components-18.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/9944ae0d47a351da577731b216c7a2db/transformed/jetified-firebase-components-18.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarTransform
+Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with LibrarySymbolTableTransform
 Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with JetifyTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ce48623519b6c4fe8b7813ff146044ad/transformed/jetified-activity-compose-1.9.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.compose.ui/ui-android/1.6.8/328694c84a63d2d3d06cec633928f5ab64d0ed1e/ui-release.aar because:
-  Build cache is disabled
-Downloading https://dl.google.com/dl/android/maven2/androidx/interpolator/interpolator/1.0.0/interpolator-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download14590429169712764761bin
+Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with ExtractAarTransform
+Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with LibrarySymbolTableTransform
+Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with JetifyTransform
+Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with ExtractAarTransform
+Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with LibrarySymbolTableTransform
+Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with JetifyTransform
+Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with ExtractAarTransform
+Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with LibrarySymbolTableTransform
+Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with JetifyTransform
+Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with ExtractAarTransform
+Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with LibrarySymbolTableTransform
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with JetifyTransform
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with ExtractAarTransform
+Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with LibrarySymbolTableTransform
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with JetifyTransform
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with ExtractAarTransform
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with LibrarySymbolTableTransform
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with JetifyTransform
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with ExtractAarTransform
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with LibrarySymbolTableTransform
+Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with JetifyTransform
+Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with ExtractAarTransform
+Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with LibrarySymbolTableTransform
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with JetifyTransform
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with ExtractAarTransform
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with LibrarySymbolTableTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with LibrarySymbolTableTransform
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with JetifyTransform
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with ExtractAarTransform
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with LibrarySymbolTableTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with LibrarySymbolTableTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with LibrarySymbolTableTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with LibrarySymbolTableTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with LibrarySymbolTableTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with LibrarySymbolTableTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with ExtractAarTransform
+Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with LibrarySymbolTableTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with JetifyTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with LibrarySymbolTableTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/8a01fa254a23b9388571eb6334b03707c7d122d7/interpolator-1.0.0.aar because:
-  Build cache is disabled
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/8a01fa254a23b9388571eb6334b03707c7d122d7/interpolator-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/cd6ab26c9cc7ec407318b6f66c333edf/transformed/interpolator-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/profileinstaller/profileinstaller/1.3.1/profileinstaller-1.3.1.aar to /home/runner/.gradle/.tmp/gradle_download16110287160257971303bin
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with JetifyTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/exifinterface/exifinterface/1.3.7/exifinterface-1.3.7.aar to /home/runner/.gradle/.tmp/gradle_download12852296389990290442bin
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with LibrarySymbolTableTransform
 Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.profileinstaller/profileinstaller/1.3.1/c0bac819b4f88a648011542273373d1e5093e3a7/profileinstaller-1.3.1.aar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.exifinterface/exifinterface/1.3.7/294ecda0567595907e142b6c364375521ba2b876/exifinterface-1.3.7.aar because:
-  Build cache is disabled
 Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.exifinterface/exifinterface/1.3.7/294ecda0567595907e142b6c364375521ba2b876/exifinterface-1.3.7.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with AarTransform
+Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with LibrarySymbolTableTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with JetifyTransform
 Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/228443c9519681f5bbed334ba2be4259/transformed/jetified-profileinstaller-1.3.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/6a7a06eb87123513e855eda952e5cd3a/transformed/exifinterface-1.3.7 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/versionedparcelable/versionedparcelable/1.1.1/versionedparcelable-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download3617094136618733686bin
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with LibrarySymbolTableTransform
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.1.1/18e18071e7715679e0593c570217edeb5ca48b9e/versionedparcelable-1.1.1.aar because:
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/0271000385cc42e5efaa68c391b321ee/transformed/jetified-lottie-compose-6.4.0 because:
   Build cache is disabled
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.1.1/18e18071e7715679e0593c570217edeb5ca48b9e/versionedparcelable-1.1.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/96e42c3d0b6d0f63453eb8d99e443f3f/transformed/versionedparcelable-1.1.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-datatransport/18.2.0/firebase-datatransport-18.2.0.aar to /home/runner/.gradle/.tmp/gradle_download1784646239761333403bin
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with LibrarySymbolTableTransform
 Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-datatransport/18.2.0/e1300ce0aa8bfca59bd1ebf007167a279ec3e239/firebase-datatransport-18.2.0.aar because:
-  Build cache is disabled
 Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/1f68de554fbf00e1a755a6432ced93df/transformed/jetified-firebase-datatransport-18.2.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-backend-cct/3.1.9/transport-backend-cct-3.1.9.aar to /home/runner/.gradle/.tmp/gradle_download9716370862388522834bin
+Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with LibrarySymbolTableTransform
 Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with ExtractAarTransform
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with LibrarySymbolTableTransform
 Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-backend-cct/3.1.9/fcabe9fa92663233c35b6d39ca6e6c8687cc9232/transport-backend-cct-3.1.9.aar because:
-  Build cache is disabled
-Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0 because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6895585c727871b417ffa4cda9897091/transformed/jetified-transport-backend-cct-3.1.9.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with ExtractAarTransform
-Downloading https://dl.google.com/dl/android/maven2/com/google/firebase/firebase-encoders-json/18.0.0/firebase-encoders-json-18.0.0.aar to /home/runner/.gradle/.tmp/gradle_download4126406461055329524bin
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with AarTransform
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-encoders-json/18.0.0/96bb325983a231881f1e195ed9d713189f421dea/firebase-encoders-json-18.0.0.aar because:
-  Build cache is disabled
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with LibrarySymbolTableTransform
 Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
 Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/314418ed8f7f5887323a7824b2ff1333/transformed/jetified-firebase-encoders-json-18.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with LibrarySymbolTableTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
 Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with ExtractAarTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/ae4f4c8ac2028a2dd67793b98564d220/transformed/jetified-firebase-encoders-json-18.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarTransform
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-runtime/3.1.9/transport-runtime-3.1.9.aar to /home/runner/.gradle/.tmp/gradle_download9504934137408894651bin
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with LibrarySymbolTableTransform
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with LibrarySymbolTableTransform
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with LibrarySymbolTableTransform
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-runtime/3.1.9/3aca9b6851513285cd500c03c94a0876cf222ac2/transport-runtime-3.1.9.aar because:
-  Build cache is disabled
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/90f0138d76edeb517322c34e2570a77d/transformed/jetified-transport-runtime-3.1.9.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/com/google/android/datatransport/transport-api/3.1.0/transport-api-3.1.0.aar to /home/runner/.gradle/.tmp/gradle_download147634987915784860bin
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with LibrarySymbolTableTransform
 Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with LibrarySymbolTableTransform
 Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with LibrarySymbolTableTransform
 Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-api/3.1.0/baaedf05b7d61114c4e46cdba296dee2f031895c/transport-api-3.1.0.aar because:
-  Build cache is disabled
 Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with LibrarySymbolTableTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
 Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/313eaafd61d97811a72774f123ecdeec/transformed/jetified-transport-api-3.1.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/0644a0d29214cf92001fc7ec59323c36/transformed/jetified-transport-api-3.1.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarTransform
-Downloading https://dl.google.com/dl/android/maven2/androidx/tracing/tracing/1.0.0/tracing-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download14492795308562381007bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/startup/startup-runtime/1.1.1/startup-runtime-1.1.1.aar to /home/runner/.gradle/.tmp/gradle_download14457485151962571236bin
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with JetifyTransform
+Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with LibrarySymbolTableTransform
 Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.tracing/tracing/1.0.0/69cef34711dffbc517e7a0a419ec4a98f84f496a/tracing-1.0.0.aar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.startup/startup-runtime/1.1.1/9d4ba67056aff98b69eadc1477c19a1e67cb9470/startup-runtime-1.1.1.aar because:
-  Build cache is disabled
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6cd41a11ff4848aaf8359c5732846e90/transformed/jetified-tracing-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/29b72f652bb07b1702701e770fbf3d27/transformed/jetified-startup-runtime-1.1.1.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/b005355a8b167d389b180020ab5b2ed7/transformed/jetified-tracing-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/32aecc08839e5349eb63d3f908a80ec9/transformed/jetified-startup-runtime-1.1.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/documentfile/documentfile/1.0.0/documentfile-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download7465449774440852871bin
-Downloading https://dl.google.com/dl/android/maven2/androidx/cursoradapter/cursoradapter/1.0.0/cursoradapter-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download1827043132386578530bin
-Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with JetifyTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with LibrarySymbolTableTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with JetifyTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with LibrarySymbolTableTransform
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/66104345c90cd8c2fd5ad2d3aad692b280e10c32/documentfile-1.0.0.aar because:
-  Build cache is disabled
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0/74014983a86b83cbce534dec4e7aa9312f5f5d82/cursoradapter-1.0.0.aar because:
-  Build cache is disabled
-Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with ExtractAarTransform
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/66104345c90cd8c2fd5ad2d3aad692b280e10c32/documentfile-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0/74014983a86b83cbce534dec4e7aa9312f5f5d82/cursoradapter-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with AarTransform
-Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/563f1ae14cb50c40d4f00cb37a007c7d/transformed/documentfile-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/b8c7b24d23b19366e365020da2ad2910/transformed/cursoradapter-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/print/print/1.0.0/print-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download6938005354572063939bin
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with JetifyTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with ExtractAarTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.print/print/1.0.0/7722094652c48ebe27acc94d74a55e759e4635ff/print-1.0.0.aar because:
-  Build cache is disabled
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.print/print/1.0.0/7722094652c48ebe27acc94d74a55e759e4635ff/print-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://dl.google.com/dl/android/maven2/androidx/localbroadcastmanager/localbroadcastmanager/1.0.0/localbroadcastmanager-1.0.0.aar to /home/runner/.gradle/.tmp/gradle_download6645080639223857198bin
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with LibrarySymbolTableTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with JetifyTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with ExtractAarTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with LibrarySymbolTableTransform
 Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with JetifyTransform
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with AarTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.localbroadcastmanager/localbroadcastmanager/1.0.0/2734f31c8321e83ce6b60570d14777fc33cc2ece/localbroadcastmanager-1.0.0.aar because:
-  Build cache is disabled
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/7aa9fa32fd6c519e174a009ea96fd762/transformed/print-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.localbroadcastmanager/localbroadcastmanager/1.0.0/2734f31c8321e83ce6b60570d14777fc33cc2ece/localbroadcastmanager-1.0.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/6f2d9f78cd522ae7f05e2a21b05d008a/transformed/localbroadcastmanager-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://repo.maven.apache.org/maven2/com/google/dagger/dagger-lint-aar/2.51/dagger-lint-aar-2.51.aar to /home/runner/.gradle/.tmp/gradle_download12173416377349252149bin
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with LibrarySymbolTableTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with JetifyTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with ExtractAarTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with LibrarySymbolTableTransform
 Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.dagger/dagger-lint-aar/2.51/4aea8d02b2a66c05908c912034b5c12d4359df08/dagger-lint-aar-2.51.aar because:
-  Build cache is disabled
 Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/c0b6d308766037db1250af24864f6722/transformed/jetified-dagger-lint-aar-2.51.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://repo.maven.apache.org/maven2/io/github/webrtc-sdk/android-prefixed/125.6422.04/android-prefixed-125.6422.04.aar to /home/runner/.gradle/.tmp/gradle_download565044988892091551bin
-Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/859bc6cdf9a9896f02c7847571662106/transformed/jetified-dagger-lint-aar-2.51 because:
-  Build cache is disabled
-  Caching not enabled.
-Downloading https://repo.maven.apache.org/maven2/com/jakewharton/timber/timber/4.7.0/timber-4.7.0.aar to /home/runner/.gradle/.tmp/gradle_download4981774716243240049bin
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with JetifyTransform
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/4.7.0/c583de96be19009e44308478e805518ab4c3ce40/timber-4.7.0.aar because:
-  Build cache is disabled
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/c5bae2d359ba97de4ec8df760285fb7c/transformed/jetified-timber-4.7.0.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c643e2e2468372b710cf72fecaaf724f/transformed/jetified-timber-4.7.0 because:
-  Build cache is disabled
-  Caching not enabled.
+Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with LibrarySymbolTableTransform
 Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with JetifyTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/18883bda8d679c0a5f10e7917f96ef6d/transformed/jetified-ui-release.aar because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/io.github.webrtc-sdk/android-prefixed/125.6422.04/f84370a63b6bfc07935bcb5f4fa99ef48a30950c/android-prefixed-125.6422.04.aar because:
-  Build cache is disabled
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/6bf8e463ab21c13a64f1ffafcabfd344/transformed/jetified-ui-release because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with ExtractAarTransform
-Caching disabled for ExtractAarTransform: /home/runner/.gradle/caches/8.9/transforms/6a1b4f95d1687bfac2e6f005656bed9b/transformed/jetified-android-prefixed-125.6422.04.aar because:
+Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with LibrarySymbolTableTransform
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with JetifyTransform
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with ExtractAarTransform
+Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with LibrarySymbolTableTransform
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/91f692a79e8a7a2c34e614b1ff7043a1/transformed/jetified-hilt-android-2.51 because:
   Build cache is disabled
-  Caching not enabled.
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/fe793b26f2c179503b60ddb0b86904ca/transformed/jetified-android-prefixed-125.6422.04 because:
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ef3f442681ed23eb787e8b3d92f91894/transformed/jetified-lottie-6.4.0 because:
   Build cache is disabled
-  Caching not enabled.
-Caching disabled for task ':app:checkDebugAarMetadata' because:
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c4fb84b3bf138070f54bc03406234413/transformed/jetified-coil-gif-2.6.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/4a5cf2719e11627ebb3264e7ef05a208/transformed/jetified-coil-compose-2.6.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/4e337e6e57f45c9bde04cc5aa1e297ca/transformed/jetified-coil-compose-base-2.6.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/f0289fd86cbf2ba90e1a40e5834910ac/transformed/jetified-coil-2.6.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ab817da3e20be026941787152e2b83f8/transformed/jetified-coil-base-2.6.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/e6b63a5a3fa2658beb3ee1b231416ac8/transformed/jetified-appcompat-resources-1.6.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/675d61efafca8cdd6cf74ab9b6268775/transformed/appcompat-1.6.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/3525d74b74cd7669a24d3614b0123873/transformed/jetified-firebase-measurement-connector-19.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/dc103915a6561d1f6d93e0e00f2eee56/transformed/jetified-firebase-iid-interop-17.1.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/35cf342f3fe4b9a84b0901004a56c594/transformed/jetified-play-services-cloud-messaging-17.2.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/12fba738395111168629d962774cef7f/transformed/jetified-play-services-stats-17.0.2 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/f710a0fe74528544854e315a6bc4ddca/transformed/jetified-room-ktx-2.6.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/a0b5341e7c67b37ddd75f8a664791498/transformed/legacy-support-core-utils-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/8a3f0b77d499009204ff3d3415ddb2dd/transformed/loader-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c93026be608a2f393eaf02c318e07abb/transformed/jetified-material3-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/b656dafb807c19d24aa41b15ae04918a/transformed/jetified-material-icons-core-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/b4ecca57a09504458f1d4d6d77649c02/transformed/jetified-material-ripple-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/bc0a77cac6f904fe80eeb26c6283ddeb/transformed/jetified-material-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/aebaf7e4634ee6044c4381047e2776a6/transformed/jetified-foundation-layout-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/7649848cf03266cfc59aad580cb0bdf1/transformed/jetified-foundation-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c306818d208379d0c28bd1175381340c/transformed/jetified-animation-core-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/2fd22fd68c98a1052c5546220b3efc7b/transformed/jetified-animation-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/1f24dd644cf1e49ef7d1048ab3d7f241/transformed/jetified-ui-tooling-data-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/41559fc1f5821534a1598b697e7e0807/transformed/jetified-ui-unit-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/84df08bfa3fe269a590a56d947d87226/transformed/jetified-ui-graphics-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/e4e526e3ed7743fc19b76275321a80a9/transformed/jetified-ui-text-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/936d262b4a2ac0719dc4fd439818754b/transformed/jetified-ui-geometry-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/8553ab9703fecd43db39d56f2ca48b54/transformed/jetified-ui-util-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/b72956dfea0b75bedb708a2e03a88b42/transformed/jetified-ui-tooling-preview-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/0ec33e5a617462da7d15f305f494b1a2/transformed/jetified-savedstate-ktx-1.2.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/3897b9ca7da3edd8abad5c73d010b207/transformed/jetified-savedstate-1.2.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/15dc1e94066f2f5b43eb62e21ca775e5/transformed/jetified-media3-ui-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/f22fab528e45ed14acfda891b25fd295/transformed/jetified-media3-extractor-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/62cf10ca0c3b94e4c3c5212f534f096a/transformed/jetified-media3-container-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/a463e44dab7f63504fe2e914f2c53a52/transformed/jetified-media3-datasource-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/728142e32db485ab6992115b1cf3ac2f/transformed/jetified-media3-decoder-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/85501421a3d0fa4a499da408c136aa14/transformed/jetified-media3-database-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/00d8f23f612d5e24761a67d0e3109c3c/transformed/jetified-media3-common-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/5e89a96a6138c1de48ce6d57964da014/transformed/jetified-media3-exoplayer-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/686191e0f6ad14a6b4818b2dd03cd350/transformed/media-1.7.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/292d114797830c6f0c893776752d7bb5/transformed/recyclerview-1.3.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/70514c785fd65c69cd904bb380c6cb76/transformed/viewpager-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/19a093e3b300203a41df7016213a1735/transformed/vectordrawable-animated-1.1.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/0a21a0907fd35d424216ebef3b5531af/transformed/vectordrawable-1.1.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/4cd8ea85e0a483b8645705bb2f54c9a3/transformed/jetified-customview-poolingcontainer-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/1744f4b6b7d443fb8a7d9bbb761e938a/transformed/jetified-core-ktx-1.13.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/70c28f5abd2f69915cd4d2234c5266e1/transformed/drawerlayout-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/58b7215f6404241d824d272d046101eb/transformed/customview-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/10d890693bf902ce9037df99588a7366/transformed/jetified-emoji2-views-helper-1.3.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/5b4d1f3ce70e657689d1ee4cb71e224a/transformed/jetified-autofill-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/0f5d2b9c2fd6674d64ac9b7acb727e55/transformed/core-1.13.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/12d9604ace0f7ad71a786aec92e2c655/transformed/jetified-lifecycle-livedata-core-ktx-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/2ebb84e8cee8d01c0a8601bb2bc40a8f/transformed/jetified-lifecycle-runtime-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/fd9aa1412f182e1b48fe83ac67aaf801/transformed/lifecycle-viewmodel-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/b00201f831d80d9f7d38cca5022c38dd/transformed/jetified-lifecycle-viewmodel-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ecd038e6402fb5e0b15af27b3f621518/transformed/lifecycle-livedata-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/73589f71330a345f96aabc76dd7c8458/transformed/jetified-lifecycle-viewmodel-ktx-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/8dd3ba8ec78cfbd6e5dd4048a5f2d4d5/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/82d9eeb8c5809420a664f312c4ebdd4d/transformed/jetified-accompanist-drawablepainter-0.32.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/e5979eb2e3cedf5ada2eb88bd6867b5b/transformed/jetified-runtime-saveable-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/7195c5abd1e7c528b9e0dbf2c627bd4b/transformed/jetified-runtime-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c159abe2c60d87943d530656552df74f/transformed/jetified-datastore-core-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/63cfcc36a49b2f9b493a70b0a166c716/transformed/jetified-datastore-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/d4ad6c33563aa78816c2c4c2336d188b/transformed/jetified-datastore-preferences-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/dff38fa25b6012c5179cc5c0a23c522a/transformed/jetified-firebase-installations-interop-17.1.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/1993d8535c4acca4d49e49b4e7b41515/transformed/jetified-play-services-tasks-18.1.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ca1f86e7a9fb42d7bc5c7289ae4faf6b/transformed/fragment-1.5.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/7d3baf87b4f0a34f6081558d071b2486/transformed/lifecycle-livedata-core-2.8.3 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/11c2ee4c86e22cf7a849112c35fcd99e/transformed/jetified-lifecycle-runtime-ktx-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/4216ac46f4dd78ea5452387d6318109e/transformed/jetified-lifecycle-viewmodel-compose-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/6bf8e463ab21c13a64f1ffafcabfd344/transformed/jetified-ui-release because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/bdfd3774e10c84afe96895fc65e77fd1/transformed/jetified-activity-1.9.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/94a0edf39863a39660674abb0b77eb5b/transformed/jetified-activity-ktx-1.9.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ce48623519b6c4fe8b7813ff146044ad/transformed/jetified-activity-compose-1.9.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/06bdf0ec3db5c439a45be3256f1ec7b8/transformed/sqlite-framework-2.4.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/57bf7539704fa6450ecdba5e538c3c41/transformed/sqlite-2.4.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/35519f1ac8a744daa184f1c76de87dd9/transformed/jetified-timberkt-1.5.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/9406b54808c4f0a78a1b73a49c149ac6/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/dcfd8a31e263a83f0427e4a52108a055/transformed/jetified-annotation-experimental-1.4.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/a39c99389acba73b850247d011e864de/transformed/jetified-security-crypto-1.1.0-alpha06 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c5aad215ddc97658f14e1e753d40c07a/transformed/core-runtime-2.2.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/9944ae0d47a351da577731b216c7a2db/transformed/jetified-firebase-components-18.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/cd6ab26c9cc7ec407318b6f66c333edf/transformed/interpolator-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/6a7a06eb87123513e855eda952e5cd3a/transformed/exifinterface-1.3.7 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/96e42c3d0b6d0f63453eb8d99e443f3f/transformed/versionedparcelable-1.1.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/ae4f4c8ac2028a2dd67793b98564d220/transformed/jetified-firebase-encoders-json-18.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/0644a0d29214cf92001fc7ec59323c36/transformed/jetified-transport-api-3.1.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/32aecc08839e5349eb63d3f908a80ec9/transformed/jetified-startup-runtime-1.1.1 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/b005355a8b167d389b180020ab5b2ed7/transformed/jetified-tracing-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/b8c7b24d23b19366e365020da2ad2910/transformed/cursoradapter-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/563f1ae14cb50c40d4f00cb37a007c7d/transformed/documentfile-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/6f2d9f78cd522ae7f05e2a21b05d008a/transformed/localbroadcastmanager-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/7aa9fa32fd6c519e174a009ea96fd762/transformed/print-1.0.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/859bc6cdf9a9896f02c7847571662106/transformed/jetified-dagger-lint-aar-2.51 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/fe793b26f2c179503b60ddb0b86904ca/transformed/jetified-android-prefixed-125.6422.04 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/c643e2e2468372b710cf72fecaaf724f/transformed/jetified-timber-4.7.0 because:
+  Build cache is disabled
+Caching disabled for LibrarySymbolTableTransform: /home/runner/.gradle/caches/8.9/transforms/08281efe7ab4004cb6363115cdcaad6a/transformed/navigation-common-2.7.7 because:
+  Build cache is disabled
+Registered task dependencies: app:debugCompileClasspath
+Skipping misunderstood TO dep string: androidx.compose.ui:ui-tooling
+Skipping misunderstood TO dep string: androidx.compose.ui:ui-test-manifest
+Skipping misunderstood TO dep string: androidx.compose.ui:ui
+Skipping misunderstood TO dep string: androidx.compose.ui:ui-tooling-preview
+Skipping misunderstood TO dep string: androidx.compose.material3:material3
+Skipping misunderstood TO dep string: androidx.compose.animation:animation
+Skipping misunderstood TO dep string: androidx.compose.foundation:foundation
+Skipping misunderstood TO dep string: com.google.firebase:firebase-messaging-ktx
+Starting dependency analysis
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Task ':app:processDebugResources' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:processDebugResources'.
+
+> Task :app:stripDebugDebugSymbols
+Caching disabled for task ':app:stripDebugDebugSymbols' because:
   Build cache is disabled
   Caching has been disabled for the task
-Task ':app:checkDebugAarMetadata' is not up-to-date because:
+Task ':app:stripDebugDebugSymbols' is not up-to-date because:
   No history is available.
+The input changes require a full rebuild for incremental task ':app:stripDebugDebugSymbols'.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/libdatastore_shared_counter.so' due to missing strip tool for ABI 'arm64-v8a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'arm64-v8a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/libdatastore_shared_counter.so' due to missing strip tool for ABI 'armeabi-v7a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'armeabi-v7a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/libdatastore_shared_counter.so' due to missing strip tool for ABI 'x86'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/libdatastore_shared_counter.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
+Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so, liblkjingle_peerconnection_so.so.
 
-Resolve mutations for :app:generateDebugResValues (Thread[Execution worker Thread 2,5,main]) started.
-:app:generateDebugResValues (Thread[Execution worker Thread 2,5,main]) started.
+> Task :app:processDebugResources FAILED
+Android resource linking failed:
+process = AAPT2 aapt2-8.4.2-11315950-linux Daemon #0:
+command = /home/runner/.gradle/caches/8.9/transforms/f4fa04736c1df0988aa9a5b80a725e7d/transformed/aapt2-8.4.2-11315950-linux/aapt2 link -I\
+        /usr/local/lib/android/sdk/platforms/android-35/android.jar\
+        --manifest\
+        /home/runner/work/Starscord/Starscord/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml\
+        -o\
+        /home/runner/work/Starscord/Starscord/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_\
+        -R\
+        @/home/runner/work/Starscord/Starscord/app/build/intermediates/incremental/processDebugResources/resources-list-for-resources-debug.ap_.txt\
+        --auto-add-overlay\
+        --custom-package\
+        com.nexus.android\
+        -0\
+        apk\
+        --output-text-symbols\
+        /home/runner/work/Starscord/Starscord/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt\
+        --no-version-vectors\
+        --proguard-minimal-keep-rules\
+        --no-proguard-location-reference\
+        --emit-ids\
+        /home/runner/work/Starscord/Starscord/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt
 
-> Task :app:generateDebugResValues
-Caching disabled for task ':app:generateDebugResValues' because:
+> Task :app:validateSigningDebug
+Caching disabled for task ':app:validateSigningDebug' because:
   Build cache is disabled
-Task ':app:generateDebugResValues' is not up-to-date because:
-  No history is available.
-Resolve mutations for :app:processDebugGoogleServices (Thread[Execution worker Thread 3,5,main]) started.
-:app:processDebugGoogleServices (Thread[Execution worker Thread 3,5,main]) started.
-
-> Task :app:processDebugGoogleServices FAILED
-Caching disabled for task ':app:processDebugGoogleServices' because:
-  Build cache is disabled
-Task ':app:processDebugGoogleServices' is not up-to-date because:
-  No history is available.
-Parsing json file: /home/runner/work/Starscord/Starscord/app/google-services.json
+  Caching has been disabled for the task
+Task ':app:validateSigningDebug' is not up-to-date because:
+  Task.upToDateWhen is false.
+Creating default debug keystore at /home/runner/.config/.android/debug.keystore
+AAPT2 aapt2-8.4.2-11315950-linux Daemon #0: shutdown
+AAPT2 aapt2-8.4.2-11315950-linux Daemon #1: shutdown
+AAPT2 aapt2-8.4.2-11315950-linux Daemon #2: shutdown
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':app:processDebugGoogleServices'.
-> No matching client found for package name 'com.nexus.android' in /home/runner/work/Starscord/Starscord/app/google-services.json
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: AAPT: error: resource android:style/Theme.Material.NoTitleBar not found.
+     error: failed linking references.
+     
+         
 
 * Try:
 > Run with --debug option to get more log output.
@@ -834,7 +733,7 @@ Execution failed for task ':app:processDebugGoogleServices'.
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:processDebugGoogleServices'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:processDebugResources'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
@@ -864,18 +763,49 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:pro
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.api.GradleException: No matching client found for package name 'com.nexus.android' in /home/runner/work/Starscord/Starscord/app/google-services.json
-	at com.google.gms.googleservices.GoogleServicesTask.action(GoogleServicesTask.kt:113)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:339)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:322)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:327)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
@@ -986,8 +916,78 @@ Caused by: org.gradle.api.GradleException: No matching client found for package 
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
+ERROR: AAPT: error: resource android:style/Theme.Material.NoTitleBar not found.
+error: failed linking references.
+
+    
+	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create(Aapt2Exception.kt:45)
+	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create$default(Aapt2Exception.kt:33)
+	at com.android.build.gradle.internal.res.Aapt2ErrorUtils.rewriteException(Aapt2ErrorUtils.kt:262)
+	at com.android.build.gradle.internal.res.Aapt2ErrorUtils.rewriteLinkException(Aapt2ErrorUtils.kt:133)
+	at com.android.build.gradle.internal.res.Aapt2ProcessResourcesRunnableKt.processResources(Aapt2ProcessResourcesRunnable.kt:76)
+	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:941)
+	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.access$invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:796)
+	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction.run(LinkApplicationAndroidResourcesTask.kt:432)
+	at com.android.build.gradle.internal.profile.ProfileAwareWorkAction.execute(ProfileAwareWorkAction.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:195)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:128)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:170)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:136)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:165)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:134)
+	... 2 more
 
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
@@ -996,5 +996,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 1m 29s
-4 actionable tasks: 4 executed
+BUILD FAILED in 2m 42s
+28 actionable tasks: 28 executed
