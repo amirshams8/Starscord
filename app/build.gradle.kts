@@ -63,6 +63,8 @@ dependencies {
     implementation("androidx.compose.animation:animation")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.activity:activity-compose:1.9.0")
+    // Extended icons — required for Explore, VolumeUp, Campaign, Forum, Tag, Mic, Headphones, Logout
+    implementation("androidx.compose.material:material-icons-extended")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
