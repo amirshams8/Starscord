@@ -145,6 +145,8 @@ dependencies {
     implementation("androidx.compose.animation:animation")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.activity:activity-compose:1.9.0")
+    // Extended icons — required for Explore, VolumeUp, Campaign, Forum, Tag, Mic, Headphones, Logout
+    implementation("androidx.compose.material:material-icons-extended")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
@@ -1358,8 +1360,30 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Campaign
+import androidx.compose.material.icons.filled.Explore
+import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.Headphones
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Tag
+import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -1483,14 +1507,12 @@ fun ServerRail(
             .padding(vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        // Home / DMs
         RailItem(selected = selectedId == "__dms__", onClick = onSelectDms) {
-            Icon(Icons.Default.Home, contentDescription = "DMs", tint = Color.White, modifier = Modifier.size(26.dp))
+            Icon(Icons.Filled.Home, contentDescription = "DMs", tint = Color.White, modifier = Modifier.size(26.dp))
         }
 
         HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
-        // Guilds
         LazyColumn(
             modifier = Modifier.weight(1f),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -1521,16 +1543,14 @@ fun ServerRail(
 
         HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
-        // Add server
         RailItem(selected = false, onClick = onAddServer, activeColor = NexusGreen) {
-            Icon(Icons.Default.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(26.dp))
+            Icon(Icons.Filled.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(26.dp))
         }
 
         Spacer(Modifier.height(8.dp))
 
-        // Explore servers
-        RailItem(selected = false, onClick = { /* TODO */ }, activeColor = NexusGreen) {
-            Icon(Icons.Default.Explore, contentDescription = "Explore Servers", tint = NexusGreen, modifier = Modifier.size(24.dp))
+        RailItem(selected = false, onClick = { /* TODO: explore */ }, activeColor = NexusGreen) {
+            Icon(Icons.Filled.Explore, contentDescription = "Explore Servers", tint = NexusGreen, modifier = Modifier.size(24.dp))
         }
 
         Spacer(Modifier.height(8.dp))
@@ -1573,7 +1593,7 @@ fun ChannelSidebar(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(guild.name, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 15.sp, modifier = Modifier.weight(1f))
-            Icon(Icons.Default.KeyboardArrowDown, contentDescription = "Server menu", tint = NexusTextMuted, modifier = Modifier.size(20.dp))
+            Icon(Icons.Filled.KeyboardArrowDown, contentDescription = "Server menu", tint = NexusTextMuted, modifier = Modifier.size(20.dp))
         }
         HorizontalDivider(color = NexusOutline)
 
@@ -1590,10 +1610,10 @@ fun ChannelSidebar(
                             .padding(start = 8.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        Icon(Icons.Default.KeyboardArrowDown, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                        Icon(Icons.Filled.KeyboardArrowDown, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
                         Spacer(Modifier.width(2.dp))
                         Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted, modifier = Modifier.weight(1f))
-                        Icon(Icons.Default.Add, contentDescription = "Add channel", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                        Icon(Icons.Filled.Add, contentDescription = "Add channel", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
                     }
                 }
                 items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch ->
@@ -1607,10 +1627,10 @@ fun ChannelSidebar(
 @Composable
 fun ChannelRow(channel: ChannelResponse, onClick: () -> Unit) {
     val icon: ImageVector = when (channel.type) {
-        "voice"        -> Icons.Default.VolumeUp
-        "announcement" -> Icons.Default.Campaign
-        "forum"        -> Icons.Default.Forum
-        else           -> Icons.Default.Tag
+        "voice"        -> Icons.Filled.VolumeUp
+        "announcement" -> Icons.Filled.Campaign
+        "forum"        -> Icons.Filled.Forum
+        else           -> Icons.Filled.Tag
     }
     Row(
         modifier = Modifier
@@ -1676,7 +1696,7 @@ fun DmSidebar(
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// User panel — bottom of sidebar
+// User panel — pinned at bottom of sidebar
 // ─────────────────────────────────────────────────────────────────────────────
 
 @Composable
@@ -1700,7 +1720,6 @@ fun UserPanel(
             .padding(horizontal = 8.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        // Avatar + status dot
         Box(modifier = Modifier.size(32.dp)) {
             Box(
                 modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple),
@@ -1712,7 +1731,6 @@ fun UserPanel(
                     Text(username.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
             }
-            // Status dot
             Box(
                 modifier = Modifier.size(10.dp).clip(CircleShape).background(NexusDark).align(Alignment.BottomEnd),
             ) {
@@ -1728,13 +1746,13 @@ fun UserPanel(
         }
 
         IconButton(onClick = { /* TODO mute */ }, modifier = Modifier.size(32.dp)) {
-            Icon(Icons.Default.Mic, contentDescription = "Mute", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Mic, contentDescription = "Mute", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         }
         IconButton(onClick = { /* TODO deafen */ }, modifier = Modifier.size(32.dp)) {
-            Icon(Icons.Default.Headphones, contentDescription = "Deafen", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Headphones, contentDescription = "Deafen", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         }
         IconButton(onClick = onSettings, modifier = Modifier.size(32.dp)) {
-            Icon(Icons.Default.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         }
     }
 }
@@ -1749,7 +1767,7 @@ fun AddServerDialog(
     onCreateServer: (name: String) -> Unit,
     onJoinServer: (inviteCode: String) -> Unit,
 ) {
-    var tab        by remember { mutableStateOf(0) }  // 0 = Create, 1 = Join
+    var tab        by remember { mutableStateOf(0) }
     var serverName by remember { mutableStateOf("") }
     var inviteCode by remember { mutableStateOf("") }
 
@@ -1774,7 +1792,6 @@ fun AddServerDialog(
                     fontSize = 13.sp,
                     color = NexusTextMuted,
                 )
-
                 Spacer(Modifier.height(16.dp))
 
                 Row {
@@ -1847,7 +1864,7 @@ private fun TabChip(label: String, selected: Boolean, onClick: () -> Unit) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// User menu (settings / logout)
+// User menu dialog
 // ─────────────────────────────────────────────────────────────────────────────
 
 @Composable
@@ -1871,14 +1888,14 @@ fun UserMenuDialog(
                 HorizontalDivider(color = NexusOutline)
                 TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Filled.Settings, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
                         Spacer(Modifier.width(10.dp))
                         Text("User Settings", color = NexusTextPrimary, fontSize = 14.sp)
                     }
                 }
                 TextButton(onClick = onLogout, modifier = Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Logout, contentDescription = null, tint = NexusRed, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Filled.Logout, contentDescription = null, tint = NexusRed, modifier = Modifier.size(18.dp))
                         Spacer(Modifier.width(10.dp))
                         Text("Log Out", color = NexusRed, fontSize = 14.sp)
                     }
