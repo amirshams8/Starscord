@@ -1,238 +1,113 @@
-//===== FILE: app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt =====
-package com.nexus.android.ui.navigation
-
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
-import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import com.nexus.android.di.AuthInterceptor
-import com.nexus.android.ui.screens.auth.LoginScreen
-import com.nexus.android.ui.screens.auth.RegisterScreen
-import com.nexus.android.ui.screens.chat.ChatScreen
-import com.nexus.android.ui.screens.home.HomeScreen
-import dagger.hilt.EntryPoint
-import dagger.hilt.InstallIn
-import dagger.hilt.android.EntryPointAccessors
-import dagger.hilt.components.SingletonComponent
-
-// Hilt entry point so we can pull AuthInterceptor inside a Composable
-@EntryPoint
-@InstallIn(SingletonComponent::class)
-interface NavAuthEntryPoint {
-    fun authInterceptor(): AuthInterceptor
+//===== FILE: app/build.gradle.kts =====
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt.android)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services")
 }
 
-sealed class Screen(val route: String) {
-    object Login    : Screen("login")
-    object Register : Screen("register")
-    object Home     : Screen("home")
-    object Chat     : Screen("chat/{channelId}/{guildId}") {
-        fun createRoute(c: String, g: String) = "chat/$c/$g"
-    }
-}
+android {
+    namespace   = "com.nexus.android"
+    compileSdk  = 35
 
-@Composable
-fun NexusNavGraph() {
-    val context = LocalContext.current
+    defaultConfig {
+        applicationId          = "com.nexus.android"
+        minSdk                 = 26
+        targetSdk              = 35
+        versionCode            = 1
+        versionName            = "1.0.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-    // Same singleton instance that Retrofit uses — token is already persisted
-    // in EncryptedSharedPreferences across restarts.
-    val authInterceptor = remember {
-        EntryPointAccessors
-            .fromApplication(context.applicationContext, NavAuthEntryPoint::class.java)
-            .authInterceptor()
+        buildConfigField("String","API_BASE_URL",    "\"https://api.yournexus.com/v1\"")
+        buildConfigField("String","GATEWAY_WSS_URL", "\"wss://gateway.yournexus.com\"")
+        buildConfigField("String","CDN_BASE_URL",    "\"https://api.yournexus.com/cdn\"")
+        buildConfigField("String","LIVEKIT_URL",     "\"wss://your-project.livekit.cloud\"")
     }
 
-    // KEY FIX: if token exists → skip Login and land directly on Home
-    val start = remember {
-        if (authInterceptor.accessToken.isNullOrBlank()) Screen.Login.route
-        else Screen.Home.route
+    buildTypes {
+        debug {
+            isDebuggable = true
+            buildConfigField("String","API_BASE_URL",    "\"http://192.168.29.48:3000/v1\"")
+            buildConfigField("String","GATEWAY_WSS_URL", "\"ws://192.168.29.48:3001\"")
+            buildConfigField("String","CDN_BASE_URL",    "\"http://192.168.29.48:3000/cdn\"")
+            buildConfigField("String","LIVEKIT_URL",     "\"wss://your-project.livekit.cloud\"")
+        }
+        release {
+            isMinifyEnabled    = true
+            isShrinkResources  = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
 
-    val nav = rememberNavController()
-
-    NavHost(navController = nav, startDestination = start) {
-
-        composable(Screen.Login.route) {
-            LoginScreen(
-                onLoginSuccess       = {
-                    nav.navigate(Screen.Home.route) {
-                        popUpTo(Screen.Login.route) { inclusive = true }
-                    }
-                },
-                onNavigateToRegister = { nav.navigate(Screen.Register.route) }
-            )
-        }
-
-        composable(Screen.Register.route) {
-            RegisterScreen(
-                onRegisterSuccess = {
-                    nav.navigate(Screen.Login.route) {
-                        popUpTo(Screen.Register.route) { inclusive = true }
-                    }
-                },
-                onNavigateToLogin = { nav.popBackStack() }
-            )
-        }
-
-        composable(Screen.Home.route) {
-            HomeScreen(
-                onOpenChannel = { channelId, guildId ->
-                    nav.navigate(Screen.Chat.createRoute(channelId, guildId))
-                },
-                onOpenVoice = { /* TODO: voice screen */ },
-                onLogout    = {
-                    authInterceptor.accessToken = null   // wipe stored token
-                    nav.navigate(Screen.Login.route) {
-                        popUpTo(Screen.Home.route) { inclusive = true }
-                    }
-                }
-            )
-        }
-
-        composable(
-            route     = Screen.Chat.route,
-            arguments = listOf(
-                navArgument("channelId") { type = NavType.StringType },
-                navArgument("guildId")   { type = NavType.StringType },
-            )
-        ) { back ->
-            ChatScreen(
-                channelId = back.arguments?.getString("channelId") ?: return@composable,
-                guildId   = back.arguments?.getString("guildId")   ?: return@composable,
-                onBack    = { nav.popBackStack() }
-            )
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions { jvmTarget = "17" }
+    buildFeatures { compose = true; buildConfig = true }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "META-INF/INDEX.LIST"
+            excludes += "META-INF/io.netty.versions.properties"
         }
     }
 }
 
+dependencies {
+    implementation(platform("androidx.compose:compose-bom:2024.06.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.animation:animation")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.activity:activity-compose:1.9.0")
+    // Extended icons — required for Explore, VolumeUp, Campaign, Forum, Tag, Mic, Headphones, Logout
+    implementation("androidx.compose.material:material-icons-extended")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-//===== FILE: app/src/main/java/com/nexus/android/di/AuthInterceptor.kt =====
-package com.nexus.android.di
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
-import android.content.Context
-import android.content.SharedPreferences
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKey
-import dagger.hilt.android.qualifiers.ApplicationContext
-import okhttp3.Interceptor
-import okhttp3.Response
-import javax.inject.Inject
-import javax.inject.Singleton
+    implementation("com.google.dagger:hilt-android:2.51")
+    kapt("com.google.dagger:hilt-compiler:2.51")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
-@Singleton
-class AuthInterceptor @Inject constructor(
-    @ApplicationContext private val context: Context
-) : Interceptor {
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.3")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
 
-    private val prefs: SharedPreferences by lazy {
-        val mk = MasterKey.Builder(context)
-            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
-            .build()
-        EncryptedSharedPreferences.create(
-            context,
-            "nexus_secure_prefs",
-            mk,
-            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-        )
-    }
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
-    // Nullable setter: passing null removes the key (used by logout)
-    var accessToken: String?
-        get()  = prefs.getString("access_token", null)
-        set(v) = if (v == null) prefs.edit().remove("access_token").apply()
-                 else           prefs.edit().putString("access_token", v).apply()
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    implementation("io.coil-kt:coil-gif:2.6.0")
 
-    override fun intercept(chain: Interceptor.Chain): Response {
-        val token = accessToken ?: return chain.proceed(chain.request())
-        return chain.proceed(
-            chain.request().newBuilder()
-                .header("Authorization", "Bearer $token")
-                .build()
-        )
-    }
-}
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
 
+    implementation("io.livekit:livekit-android:2.7.1")
 
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/auth/AuthViewModel.kt =====
-package com.nexus.android.ui.screens.auth
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-ui:1.3.1")
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.nexus.android.data.api.NexusApi
-import com.nexus.android.data.api.models.LoginRequest
-import com.nexus.android.data.api.models.RegisterRequest
-import com.nexus.android.di.AuthInterceptor
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
-import javax.inject.Inject
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
+    implementation("com.google.firebase:firebase-messaging-ktx")
 
-data class AuthState(
-    val email: String = "",
-    val password: String = "",
-    val username: String = "",
-    val loading: Boolean = false,
-    val error: String? = null,
-    val loginSuccess: Boolean = false,
-    val registerSuccess: Boolean = false,
-)
+    implementation("com.airbnb.android:lottie-compose:6.4.0")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+    implementation("androidx.biometric:biometric:1.1.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+    implementation("com.google.code.gson:gson:2.11.0")
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
 
-@HiltViewModel
-class AuthViewModel @Inject constructor(
-    private val api: NexusApi,
-    private val authInterceptor: AuthInterceptor,
-) : ViewModel() {
-
-    private val _state = MutableStateFlow(AuthState())
-    val state: StateFlow<AuthState> = _state.asStateFlow()
-
-    fun onEmailChange(v: String)    { _state.value = _state.value.copy(email    = v, error = null) }
-    fun onPasswordChange(v: String) { _state.value = _state.value.copy(password = v, error = null) }
-    fun onUsernameChange(v: String) { _state.value = _state.value.copy(username = v, error = null) }
-
-    fun login() = viewModelScope.launch {
-        _state.value = _state.value.copy(loading = true, error = null)
-        try {
-            val resp = api.login(LoginRequest(_state.value.email, _state.value.password))
-            if (resp.isSuccessful && resp.body() != null) {
-                // Persist token in EncryptedSharedPreferences — survives restarts
-                authInterceptor.accessToken = resp.body()!!.accessToken
-                _state.value = _state.value.copy(loading = false, loginSuccess = true)
-            } else {
-                _state.value = _state.value.copy(loading = false, error = "Invalid email or password")
-            }
-        } catch (e: Exception) {
-            _state.value = _state.value.copy(loading = false, error = "Network error: ${e.message}")
-        }
-    }
-
-    fun register() = viewModelScope.launch {
-        _state.value = _state.value.copy(loading = true, error = null)
-        if (_state.value.username.isBlank() || _state.value.email.isBlank() || _state.value.password.length < 8) {
-            _state.value = _state.value.copy(loading = false, error = "All fields required. Password min 8 chars.")
-            return@launch
-        }
-        try {
-            val resp = api.register(
-                RegisterRequest(_state.value.username, _state.value.email, _state.value.password)
-            )
-            if (resp.isSuccessful) {
-                _state.value = _state.value.copy(loading = false, registerSuccess = true)
-            } else {
-                _state.value = _state.value.copy(loading = false, error = "Username or email already taken")
-            }
-        } catch (e: Exception) {
-            _state.value = _state.value.copy(loading = false, error = "Network error: ${e.message}")
-        }
-    }
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }
 
 
@@ -247,8 +122,30 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Campaign
+import androidx.compose.material.icons.filled.Explore
+import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.Headphones
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Tag
+import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -372,14 +269,12 @@ fun ServerRail(
             .padding(vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        // Home / DMs
         RailItem(selected = selectedId == "__dms__", onClick = onSelectDms) {
-            Icon(Icons.Default.Home, contentDescription = "DMs", tint = Color.White, modifier = Modifier.size(26.dp))
+            Icon(Icons.Filled.Home, contentDescription = "DMs", tint = Color.White, modifier = Modifier.size(26.dp))
         }
 
         HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
-        // Guilds
         LazyColumn(
             modifier = Modifier.weight(1f),
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -410,16 +305,14 @@ fun ServerRail(
 
         HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
-        // Add server
         RailItem(selected = false, onClick = onAddServer, activeColor = NexusGreen) {
-            Icon(Icons.Default.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(26.dp))
+            Icon(Icons.Filled.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(26.dp))
         }
 
         Spacer(Modifier.height(8.dp))
 
-        // Explore servers
-        RailItem(selected = false, onClick = { /* TODO */ }, activeColor = NexusGreen) {
-            Icon(Icons.Default.Explore, contentDescription = "Explore Servers", tint = NexusGreen, modifier = Modifier.size(24.dp))
+        RailItem(selected = false, onClick = { /* TODO: explore */ }, activeColor = NexusGreen) {
+            Icon(Icons.Filled.Explore, contentDescription = "Explore Servers", tint = NexusGreen, modifier = Modifier.size(24.dp))
         }
 
         Spacer(Modifier.height(8.dp))
@@ -462,7 +355,7 @@ fun ChannelSidebar(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(guild.name, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 15.sp, modifier = Modifier.weight(1f))
-            Icon(Icons.Default.KeyboardArrowDown, contentDescription = "Server menu", tint = NexusTextMuted, modifier = Modifier.size(20.dp))
+            Icon(Icons.Filled.KeyboardArrowDown, contentDescription = "Server menu", tint = NexusTextMuted, modifier = Modifier.size(20.dp))
         }
         HorizontalDivider(color = NexusOutline)
 
@@ -479,10 +372,10 @@ fun ChannelSidebar(
                             .padding(start = 8.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        Icon(Icons.Default.KeyboardArrowDown, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                        Icon(Icons.Filled.KeyboardArrowDown, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
                         Spacer(Modifier.width(2.dp))
                         Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted, modifier = Modifier.weight(1f))
-                        Icon(Icons.Default.Add, contentDescription = "Add channel", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                        Icon(Icons.Filled.Add, contentDescription = "Add channel", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
                     }
                 }
                 items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch ->
@@ -496,10 +389,10 @@ fun ChannelSidebar(
 @Composable
 fun ChannelRow(channel: ChannelResponse, onClick: () -> Unit) {
     val icon: ImageVector = when (channel.type) {
-        "voice"        -> Icons.Default.VolumeUp
-        "announcement" -> Icons.Default.Campaign
-        "forum"        -> Icons.Default.Forum
-        else           -> Icons.Default.Tag
+        "voice"        -> Icons.Filled.VolumeUp
+        "announcement" -> Icons.Filled.Campaign
+        "forum"        -> Icons.Filled.Forum
+        else           -> Icons.Filled.Tag
     }
     Row(
         modifier = Modifier
@@ -565,7 +458,7 @@ fun DmSidebar(
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// User panel — bottom of sidebar
+// User panel — pinned at bottom of sidebar
 // ─────────────────────────────────────────────────────────────────────────────
 
 @Composable
@@ -589,7 +482,6 @@ fun UserPanel(
             .padding(horizontal = 8.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        // Avatar + status dot
         Box(modifier = Modifier.size(32.dp)) {
             Box(
                 modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple),
@@ -601,7 +493,6 @@ fun UserPanel(
                     Text(username.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
             }
-            // Status dot
             Box(
                 modifier = Modifier.size(10.dp).clip(CircleShape).background(NexusDark).align(Alignment.BottomEnd),
             ) {
@@ -617,13 +508,13 @@ fun UserPanel(
         }
 
         IconButton(onClick = { /* TODO mute */ }, modifier = Modifier.size(32.dp)) {
-            Icon(Icons.Default.Mic, contentDescription = "Mute", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Mic, contentDescription = "Mute", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         }
         IconButton(onClick = { /* TODO deafen */ }, modifier = Modifier.size(32.dp)) {
-            Icon(Icons.Default.Headphones, contentDescription = "Deafen", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Headphones, contentDescription = "Deafen", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         }
         IconButton(onClick = onSettings, modifier = Modifier.size(32.dp)) {
-            Icon(Icons.Default.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+            Icon(Icons.Filled.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         }
     }
 }
@@ -638,7 +529,7 @@ fun AddServerDialog(
     onCreateServer: (name: String) -> Unit,
     onJoinServer: (inviteCode: String) -> Unit,
 ) {
-    var tab        by remember { mutableStateOf(0) }  // 0 = Create, 1 = Join
+    var tab        by remember { mutableStateOf(0) }
     var serverName by remember { mutableStateOf("") }
     var inviteCode by remember { mutableStateOf("") }
 
@@ -663,7 +554,6 @@ fun AddServerDialog(
                     fontSize = 13.sp,
                     color = NexusTextMuted,
                 )
-
                 Spacer(Modifier.height(16.dp))
 
                 Row {
@@ -736,7 +626,7 @@ private fun TabChip(label: String, selected: Boolean, onClick: () -> Unit) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// User menu (settings / logout)
+// User menu dialog
 // ─────────────────────────────────────────────────────────────────────────────
 
 @Composable
@@ -760,14 +650,14 @@ fun UserMenuDialog(
                 HorizontalDivider(color = NexusOutline)
                 TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Filled.Settings, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
                         Spacer(Modifier.width(10.dp))
                         Text("User Settings", color = NexusTextPrimary, fontSize = 14.sp)
                     }
                 }
                 TextButton(onClick = onLogout, modifier = Modifier.fillMaxWidth()) {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.Logout, contentDescription = null, tint = NexusRed, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Filled.Logout, contentDescription = null, tint = NexusRed, modifier = Modifier.size(18.dp))
                         Spacer(Modifier.width(10.dp))
                         Text("Log Out", color = NexusRed, fontSize = 14.sp)
                     }
@@ -776,238 +666,3 @@ fun UserMenuDialog(
         }
     }
 }
-
-
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt =====
-package com.nexus.android.ui.screens.home
-
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.nexus.android.data.api.NexusApi
-import com.nexus.android.data.api.models.ChannelResponse
-import com.nexus.android.data.api.models.CreateGuildRequest
-import com.nexus.android.data.api.models.GuildResponse
-import com.nexus.android.data.api.models.UserResponse
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
-import javax.inject.Inject
-
-@HiltViewModel
-class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel() {
-
-    private val _guilds        = MutableStateFlow<List<GuildResponse>>(emptyList())
-    val guilds: StateFlow<List<GuildResponse>> = _guilds.asStateFlow()
-
-    private val _selectedGuild = MutableStateFlow<GuildResponse?>(null)
-    val selectedGuild: StateFlow<GuildResponse?> = _selectedGuild.asStateFlow()
-
-    private val _channels      = MutableStateFlow<List<ChannelResponse>>(emptyList())
-    val channels: StateFlow<List<ChannelResponse>> = _channels.asStateFlow()
-
-    private val _dmChannels    = MutableStateFlow<List<ChannelResponse>>(emptyList())
-    val dmChannels: StateFlow<List<ChannelResponse>> = _dmChannels.asStateFlow()
-
-    private val _currentUser   = MutableStateFlow<UserResponse?>(null)
-    val currentUser: StateFlow<UserResponse?> = _currentUser.asStateFlow()
-
-    private val _showDms       = MutableStateFlow(false)
-    val showDms: StateFlow<Boolean> = _showDms.asStateFlow()
-
-    init {
-        loadMe()
-        loadGuilds()
-        loadDmChannels()
-    }
-
-    private fun loadMe() = viewModelScope.launch {
-        try { api.getMe().body()?.let { _currentUser.value = it } } catch (_: Exception) {}
-    }
-
-    private fun loadGuilds() = viewModelScope.launch {
-        try { api.getMyGuilds().body()?.let { _guilds.value = it } } catch (_: Exception) {}
-    }
-
-    private fun loadDmChannels() = viewModelScope.launch {
-        try { api.getDmChannels().body()?.let { _dmChannels.value = it } } catch (_: Exception) {}
-    }
-
-    fun showDmsPanel() {
-        _showDms.value     = true
-        _selectedGuild.value = null
-    }
-
-    fun selectGuild(guild: GuildResponse) = viewModelScope.launch {
-        _showDms.value       = false
-        _selectedGuild.value = guild
-        try {
-            api.getGuild(guild.id).body()?.let {
-                _selectedGuild.value = it
-                _channels.value      = it.channels ?: emptyList()
-            }
-        } catch (_: Exception) {}
-    }
-
-    fun createGuild(name: String) = viewModelScope.launch {
-        try {
-            api.createGuild(CreateGuildRequest(name)).body()?.let { newGuild ->
-                _guilds.value = _guilds.value + newGuild
-                selectGuild(newGuild)
-            }
-        } catch (_: Exception) {}
-    }
-
-    fun joinByInvite(codeOrUrl: String) = viewModelScope.launch {
-        // Support full URLs like https://nexus.gg/invite/ABC123 or bare codes
-        val code = codeOrUrl.trimEnd('/').substringAfterLast('/')
-        try {
-            api.useInvite(code).body()?.let { guild ->
-                _guilds.value = (_guilds.value + guild).distinctBy { it.id }
-                selectGuild(guild)
-            }
-        } catch (_: Exception) {}
-    }
-}
-
-
-//===== FILE: app/src/main/java/com/nexus/android/data/api/NexusApi.kt =====
-package com.nexus.android.data.api
-
-import com.nexus.android.data.api.models.*
-import retrofit2.Response
-import retrofit2.http.*
-
-interface NexusApi {
-    @POST("auth/register")   suspend fun register(@Body body: RegisterRequest): Response<UserResponse>
-    @POST("auth/login")      suspend fun login(@Body body: LoginRequest): Response<LoginResponse>
-    @POST("auth/logout")     suspend fun logout(): Response<Unit>
-    @POST("auth/refresh")    suspend fun refreshToken(): Response<RefreshResponse>
-    @POST("auth/mfa/enable") suspend fun enableMfa(): Response<MfaEnableResponse>
-    @POST("auth/mfa/verify") suspend fun verifyMfa(@Body body: MfaVerifyRequest): Response<SuccessResponse>
-
-    @GET("users/@me")         suspend fun getMe(): Response<UserResponse>
-    @PATCH("users/@me")       suspend fun updateMe(@Body body: UpdateUserRequest): Response<UserResponse>
-    @GET("users/{id}")        suspend fun getUser(@Path("id") id: String): Response<UserResponse>
-    @GET("users/@me/guilds")  suspend fun getMyGuilds(): Response<List<GuildResponse>>
-
-    @GET("users/@me/channels")
-    suspend fun getDmChannels(): Response<List<ChannelResponse>>
-    @POST("users/@me/channels")
-    suspend fun openDm(@Body body: OpenDmRequest): Response<ChannelResponse>
-
-    @POST("guilds")           suspend fun createGuild(@Body body: CreateGuildRequest): Response<GuildResponse>
-    @GET("guilds/{id}")       suspend fun getGuild(@Path("id") id: String): Response<GuildResponse>
-    @PATCH("guilds/{id}")     suspend fun updateGuild(@Path("id") id: String, @Body body: Map<String, Any>): Response<GuildResponse>
-    @GET("guilds/{id}/members") suspend fun getGuildMembers(@Path("id") id: String, @Query("limit") limit: Int = 100): Response<List<MemberResponse>>
-    @PUT("guilds/{id}/members/@me")    suspend fun joinGuild(@Path("id") id: String): Response<MemberResponse>
-    @DELETE("guilds/{id}/members/@me") suspend fun leaveGuild(@Path("id") id: String): Response<Unit>
-
-    @GET("channels/{id}")     suspend fun getChannel(@Path("id") id: String): Response<ChannelResponse>
-    @PATCH("channels/{id}")   suspend fun updateChannel(@Path("id") id: String, @Body body: Map<String, Any>): Response<ChannelResponse>
-    @DELETE("channels/{id}")  suspend fun deleteChannel(@Path("id") id: String): Response<Unit>
-
-    @GET("channels/{channelId}/messages")
-    suspend fun getMessages(@Path("channelId") channelId: String, @Query("limit") limit: Int = 50, @Query("before") before: String? = null, @Query("after") after: String? = null): Response<List<MessageResponse>>
-
-    @POST("channels/{channelId}/messages")
-    suspend fun sendMessage(@Path("channelId") channelId: String, @Body body: SendMessageRequest): Response<MessageResponse>
-
-    @PATCH("channels/{channelId}/messages/{messageId}")
-    suspend fun editMessage(@Path("channelId") channelId: String, @Path("messageId") messageId: String, @Body body: EditMessageRequest): Response<MessageResponse>
-
-    @DELETE("channels/{channelId}/messages/{messageId}")
-    suspend fun deleteMessage(@Path("channelId") channelId: String, @Path("messageId") messageId: String): Response<Unit>
-
-    @PUT("channels/{channelId}/messages/{messageId}/reactions/{emoji}/@me")
-    suspend fun addReaction(@Path("channelId") channelId: String, @Path("messageId") messageId: String, @Path("emoji") emoji: String): Response<Unit>
-
-    @DELETE("channels/{channelId}/messages/{messageId}/reactions/{emoji}/@me")
-    suspend fun removeReaction(@Path("channelId") channelId: String, @Path("messageId") messageId: String, @Path("emoji") emoji: String): Response<Unit>
-
-    @POST("channels/{channelId}/typing")
-    suspend fun sendTyping(@Path("channelId") channelId: String): Response<Unit>
-
-    @POST("voice/token")      suspend fun getVoiceToken(@Body body: VoiceTokenRequest): Response<VoiceTokenResponse>
-    @DELETE("voice/leave")    suspend fun leaveVoice(@Body body: VoiceLeaveRequest): Response<Unit>
-
-    @GET("nitro/plans")       suspend fun getNitroPlans(): Response<NitroPlansResponse>
-    @POST("nitro/subscribe")  suspend fun subscribeNitro(@Body body: NitroSubscribeRequest): Response<SuccessResponse>
-    @POST("nitro/boost/{guildId}") suspend fun boostServer(@Path("guildId") guildId: String): Response<BoostResponse>
-
-    @GET("invites/{code}")      suspend fun getInvite(@Path("code") code: String): Response<InviteResponse>
-    @POST("invites/{code}/use") suspend fun useInvite(@Path("code") code: String): Response<GuildResponse>
-    @DELETE("invites/{code}")   suspend fun deleteInvite(@Path("code") code: String): Response<Unit>
-}
-
-
-//===== FILE: app/src/main/java/com/nexus/android/data/api/models/Models.kt =====
-package com.nexus.android.data.api.models
-
-import com.google.gson.annotations.SerializedName
-
-data class RegisterRequest(val username: String, val email: String, val password: String)
-data class LoginRequest(val email: String, val password: String, @SerializedName("mfaCode") val mfaCode: String? = null)
-data class LoginResponse(@SerializedName("access_token") val accessToken: String, @SerializedName("token_type") val tokenType: String, @SerializedName("expires_in") val expiresIn: Int, val user: UserResponse)
-data class RefreshResponse(@SerializedName("access_token") val accessToken: String)
-data class MfaEnableResponse(val secret: String, @SerializedName("qr_code") val qrCode: String)
-data class MfaVerifyRequest(val code: String)
-data class SuccessResponse(val success: Boolean)
-
-data class UserResponse(
-    val id: String, val username: String, val discriminator: String, val email: String? = null,
-    val avatar: String? = null, @SerializedName("avatar_animated") val avatarAnimated: Boolean = false,
-    val banner: String? = null, @SerializedName("banner_color") val bannerColor: String? = null,
-    val bio: String? = null, val pronouns: String? = null, val status: String = "online",
-    @SerializedName("custom_status") val customStatus: String? = null,
-    @SerializedName("nitro_type") val nitroType: String = "none",
-    @SerializedName("nitro_since") val nitroSince: String? = null,
-    val flags: Long = 0, @SerializedName("created_at") val createdAt: String? = null,
-)
-data class UpdateUserRequest(val username: String? = null, val bio: String? = null, val pronouns: String? = null, val avatar: String? = null, val banner: String? = null, @SerializedName("banner_color") val bannerColor: String? = null, @SerializedName("custom_status") val customStatus: String? = null, val status: String? = null)
-
-data class CreateGuildRequest(val name: String, val icon: String? = null)
-data class GuildResponse(
-    val id: String, val name: String, val icon: String? = null, @SerializedName("icon_animated") val iconAnimated: Boolean = false,
-    val banner: String? = null, @SerializedName("owner_id") val ownerId: String, val description: String? = null,
-    @SerializedName("boost_count") val boostCount: Int = 0, @SerializedName("boost_tier") val boostTier: Int = 0,
-    @SerializedName("vanity_url") val vanityUrl: String? = null, val channels: List<ChannelResponse>? = null,
-    val roles: List<RoleResponse>? = null, @SerializedName("joined_at") val joinedAt: String? = null,
-)
-
-data class ChannelResponse(
-    val id: String, @SerializedName("guild_id") val guildId: String? = null, val type: String, val name: String,
-    val position: Int = 0, val topic: String? = null, val nsfw: Boolean = false, val slowmode: Int = 0,
-    val bitrate: Int = 64000, @SerializedName("user_limit") val userLimit: Int = 0,
-    @SerializedName("parent_id") val parentId: String? = null, @SerializedName("last_message_id") val lastMessageId: String? = null,
-)
-
-// For opening a DM channel with another user
-data class OpenDmRequest(@SerializedName("recipient_id") val recipientId: String)
-
-data class MemberResponse(@SerializedName("guild_id") val guildId: String, @SerializedName("user_id") val userId: String, val nickname: String? = null, val roles: List<String> = emptyList(), @SerializedName("joined_at") val joinedAt: String, val user: UserResponse? = null)
-data class RoleResponse(val id: String, @SerializedName("guild_id") val guildId: String, val name: String, val color: Int = 0, val hoist: Boolean = false, val position: Int = 0, val permissions: String = "0", val mentionable: Boolean = false)
-
-data class SendMessageRequest(val content: String? = null, val tts: Boolean = false, val embeds: List<Any>? = null, val reference: MessageReferenceRequest? = null)
-data class EditMessageRequest(val content: String)
-data class MessageReferenceRequest(@SerializedName("message_id") val messageId: String)
-data class MessageResponse(
-    val id: String, @SerializedName("channel_id") val channelId: String, val author: UserResponse,
-    val content: String? = null, val type: String = "default", val pinned: Boolean = false, val tts: Boolean = false,
-    val attachments: List<Any>? = null, val embeds: List<Any>? = null, val reactions: List<ReactionResponse>? = null,
-    val reference: MessageResponse? = null, @SerializedName("edited_at") val editedAt: String? = null,
-    @SerializedName("created_at") val createdAt: String,
-)
-data class ReactionResponse(val emoji: String, val count: Int = 1, @SerializedName("user_id") val userId: String? = null)
-
-data class VoiceTokenRequest(@SerializedName("channelId") val channelId: String)
-data class VoiceLeaveRequest(@SerializedName("channelId") val channelId: String)
-data class VoiceTokenResponse(val token: String, @SerializedName("livekit_url") val livekitUrl: String, @SerializedName("channel_id") val channelId: String)
-
-data class NitroSubscribeRequest(val plan: String)
-data class BoostResponse(val success: Boolean, @SerializedName("boost_count") val boostCount: Int, val tier: Int)
-data class NitroPlansResponse(val plans: List<NitroPlan>)
-data class NitroPlan(val id: String, val name: String, val price: Int, val currency: String)
-
-data class InviteResponse(val code: String, val guild: GuildResponse, val channel: ChannelResponse, val uses: Int = 0, @SerializedName("max_uses") val maxUses: Int = 0, @SerializedName("expires_at") val expiresAt: String? = null)
