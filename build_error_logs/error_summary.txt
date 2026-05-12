@@ -7,16 +7,23 @@ No CMake errors
 No ninja errors
 
 -- C++ COMPILATION ERRORS --
-     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
-     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
-ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
-ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
 
 -- MISSING HEADERS/LIBRARIES --
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-No Kotlin/Java errors
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:183:13 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:183:32 Unresolved reference 'Explore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:260:41 Unresolved reference 'VolumeUp'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:261:41 Unresolved reference 'Campaign'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:262:41 Unresolved reference 'Forum'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:263:41 Unresolved reference 'Tag'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:381:13 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:381:32 Unresolved reference 'Mic'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:384:13 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:384:32 Unresolved reference 'Headphones'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:531:25 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:531:44 Unresolved reference 'Logout'.
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -371,197 +378,182 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 39-->[com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a] /home/runner/.gradle/caches/8.9/transforms/9406b54808c4f0a78a1b73a49c149ac6/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a/AndroidManifest.xml:9:5-11:38
 40-->[com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a] /home/runner/.gradle/caches/8.9/transforms/9406b54808c4f0a78a1b73a49c149ac6/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a/AndroidManifest.xml:10:9-52
 41-->[com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a] /home/runner/.gradle/caches/8.9/transforms/9406b54808c4f0a78a1b73a49c149ac6/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a/AndroidManifest.xml:11:9-35
-43-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19
+43-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-60:19
 44-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:23:9-33
 45-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:24:9-35
 46-->[androidx.core:core:1.13.1] /home/runner/.gradle/caches/8.9/transforms/0f5d2b9c2fd6674d64ac9b7acb727e55/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 49-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:30:9-43
-50-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:25:9-43
-51-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:26:9-41
+50-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:25:9-45
+51-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:27:9-41
 52-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:31:9-33
-53-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:27:9-54
-54-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:28:9-35
-55-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:29:9-43
-56-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:33:9-48:20
-57-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:34:13-41
-58-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:35:13-36
-59-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:37:13-49
-60-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:36:13-55
-61-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:38:13-41:29
-62-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:39:17-68
-62-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:39:25-66
-64-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:40:17-76
-64-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:40:27-74
-66-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:42:13-47:29
-66-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:42:28-53
-67-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:43:17-68
-67-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:43:25-66
-69-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:44:17-75
-69-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:44:27-73
-70-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:45:17-77
-70-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:45:27-75
-72-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:46:17-69
-73-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:46:46-67
-74-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:46:23-45
-78-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:50:9-124
-79-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:50:18-56
-80-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:50:57-81
-81-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:50:82-122
-82-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:9-133
-83-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:18-54
-84-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:57-81
-85-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:82-131
-86-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:9-56:19
-87-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:18-61
-88-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:62-86
-89-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:53:13-55:29
-90-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:54:17-77
-90-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:54:25-75
-94-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:58:9-129
-95-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:58:20-96
-96-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:58:97-127
-98-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:23:9-29:19
-99-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:24:13-84
-100-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:32:13-43
-101-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:25:13-37
-102-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:26:13-28:85
-103-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:27:17-129
-104-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:28:17-82
-105-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:57:13-59:85
-106-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:58:17-122
-107-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:59:17-82
-108-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:60:13-62:85
-109-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:61:17-119
-110-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:62:17-82
-111-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:15:13-17:85
-112-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:16:17-130
-113-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:17:17-82
-114-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:18:13-20:85
-115-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:19:17-127
-116-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:20:17-82
-117-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
-118-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
-119-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
-120-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
-121-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:36:17-109
-122-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:37:17-82
-123-->[com.google.firebase:firebase-datatransport:18.2.0] /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:25:13-27:85
-124-->[com.google.firebase:firebase-datatransport:18.2.0] /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:26:17-115
-125-->[com.google.firebase:firebase-datatransport:18.2.0] /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:27:17-82
-128-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:29:9-40:20
-129-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:30:13-78
-130-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:31:13-36
-131-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:32:13-73
-132-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:33:13-35:29
-133-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:34:17-81
-133-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:34:25-78
-136-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:37:13-39:40
-137-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:38:17-92
-138-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:39:17-37
-144-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:46:9-53:19
-145-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:47:13-82
-146-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:48:13-43
-147-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:49:13-37
-148-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:53:13-55:29
-149-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:54:17-77
-149-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:54:25-75
-153-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-154-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-155-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-156-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-158-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
-159-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
-160-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
-161-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
-162-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:27:13-37
-163-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:28:13-36
-165-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-166-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-167-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-168-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-169-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:30:9-34:43
-170-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:31:13-92
-171-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:32:13-35
-172-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:33:13-60
-173-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:34:13-40
-175-->[androidx.compose.ui:ui-tooling-android:1.6.8] /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
-176-->[androidx.compose.ui:ui-tooling-android:1.6.8] /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
-177-->[androidx.compose.ui:ui-tooling-android:1.6.8] /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
-179-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-180-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
-181-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
-182-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
-183-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-184-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
-185-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
-186-->[androidx.lifecycle:lifecycle-process:2.8.3] /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3/AndroidManifest.xml:29:13-31:52
-187-->[androidx.lifecycle:lifecycle-process:2.8.3] /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3/AndroidManifest.xml:30:17-78
-188-->[androidx.lifecycle:lifecycle-process:2.8.3] /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3/AndroidManifest.xml:31:17-49
-189-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
-190-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
-191-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
-194-->[com.google.android.gms:play-services-basement:18.3.0] /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
-195-->[com.google.android.gms:play-services-basement:18.3.0] /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
-196-->[com.google.android.gms:play-services-basement:18.3.0] /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
-198-->[androidx.compose.ui:ui-test-manifest:1.6.8] /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:23:9-25:39
-199-->[androidx.compose.ui:ui-test-manifest:1.6.8] /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:24:13-63
-200-->[androidx.compose.ui:ui-test-manifest:1.6.8] /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:25:13-36
-202-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
-203-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
-204-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
-205-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
-206-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
-207-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
-208-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
-209-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
-209-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
-211-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
-212-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
-212-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
-214-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
-215-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
-215-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
-217-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
-218-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
-218-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
-222-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
-223-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
-224-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
-225-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
-226-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
-227-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
-229-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
-230-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
-231-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
-232-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
-235-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
-236-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
-237-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
-     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
-     ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
-ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
-ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
+53-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:32:9-69
+54-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:26:9-56
+55-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:28:9-35
+56-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:29:9-43
+57-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:34:9-49:20
+58-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:35:13-41
+59-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:36:13-36
+60-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:38:13-49
+61-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:37:13-55
+62-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:39:13-42:29
+63-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:40:17-68
+63-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:40:25-66
+65-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:41:17-76
+65-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:41:27-74
+67-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:43:13-48:29
+67-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:43:28-53
+68-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:44:17-68
+68-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:44:25-66
+70-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:45:17-75
+70-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:45:27-73
+71-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:46:17-77
+71-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:46:27-75
+73-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:47:17-69
+74-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:47:46-67
+75-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:47:23-45
+79-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:9-124
+80-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:18-56
+81-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:57-81
+82-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:51:82-122
+83-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:9-133
+84-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:18-54
+85-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:57-81
+86-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:52:82-131
+87-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:53:9-57:19
+88-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:53:18-61
+89-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:53:62-86
+90-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:54:13-56:29
+91-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:55:17-77
+91-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:55:25-75
+95-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:59:9-129
+96-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:59:20-96
+97-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:59:97-127
+99-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:23:9-29:19
+100-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:24:13-84
+101-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+102-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:25:13-37
+103-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:26:13-28:85
+104-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:27:17-129
+105-->[com.google.firebase:firebase-messaging-ktx:24.0.0] /home/runner/.gradle/caches/8.9/transforms/5bc2604d400698f4a90a844c4238f7de/transformed/jetified-firebase-messaging-ktx-24.0.0/AndroidManifest.xml:28:17-82
+106-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:57:13-59:85
+107-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:58:17-122
+108-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:59:17-82
+109-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:60:13-62:85
+110-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:61:17-119
+111-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:62:17-82
+112-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:15:13-17:85
+113-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:16:17-130
+114-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:17:17-82
+115-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:18:13-20:85
+116-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:19:17-127
+117-->[com.google.firebase:firebase-installations:18.0.0] /home/runner/.gradle/caches/8.9/transforms/96c7d07c54de96b9ec7dac1333df1c5b/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:20:17-82
+118-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+119-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+120-->[com.google.firebase:firebase-common-ktx:21.0.0] /home/runner/.gradle/caches/8.9/transforms/cf56899baaafa7f388f21ec0cf023cb8/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+121-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+122-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+123-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+124-->[com.google.firebase:firebase-datatransport:18.2.0] /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:25:13-27:85
+125-->[com.google.firebase:firebase-datatransport:18.2.0] /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:26:17-115
+126-->[com.google.firebase:firebase-datatransport:18.2.0] /home/runner/.gradle/caches/8.9/transforms/ca7b99237dfc19263ced69a7e86a20e3/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:27:17-82
+129-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:29:9-40:20
+130-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:30:13-78
+131-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:31:13-36
+132-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:32:13-73
+133-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:33:13-35:29
+134-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:34:17-81
+134-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:34:25-78
+137-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:37:13-39:40
+138-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:38:17-92
+139-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:39:17-37
+145-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:46:9-53:19
+146-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:47:13-82
+147-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:48:13-43
+148-->[com.google.firebase:firebase-messaging:24.0.0] /home/runner/.gradle/caches/8.9/transforms/06b71b5ad2abddfe96420ee1076a28ed/transformed/jetified-firebase-messaging-24.0.0/AndroidManifest.xml:49:13-37
+149-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:54:13-56:29
+150-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:55:17-77
+150-->/home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:55:25-75
+154-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+155-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+156-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+157-->[com.google.android.gms:play-services-base:18.0.1] /home/runner/.gradle/caches/8.9/transforms/23b70b017bc03c0c9a74392cdab7c45f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+159-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+160-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+161-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+162-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+163-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+164-->[com.google.firebase:firebase-common:21.0.0] /home/runner/.gradle/caches/8.9/transforms/c074bf840be1e92777cde2a31c2659fa/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+166-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+167-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+168-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+169-->[androidx.room:room-runtime:2.6.1] /home/runner/.gradle/caches/8.9/transforms/dc1007412badaa60c5f5783f8a9f30b8/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+170-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:30:9-34:43
+171-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:31:13-92
+172-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:32:13-35
+173-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:33:13-60
+174-->[io.livekit:livekit-android:2.7.1] /home/runner/.gradle/caches/8.9/transforms/d02704dc01f77b978216b2e30523ef31/transformed/jetified-livekit-android-2.7.1/AndroidManifest.xml:34:13-40
+176-->[androidx.compose.ui:ui-tooling-android:1.6.8] /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+177-->[androidx.compose.ui:ui-tooling-android:1.6.8] /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+178-->[androidx.compose.ui:ui-tooling-android:1.6.8] /home/runner/.gradle/caches/8.9/transforms/7e1fe24cc93cb7870a3b19df6ef912cd/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+180-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+181-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+182-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+183-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+184-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+185-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+186-->[androidx.emoji2:emoji2:1.3.0] /home/runner/.gradle/caches/8.9/transforms/d74ce05f264e2b654ea25af3f80e3ed9/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+187-->[androidx.lifecycle:lifecycle-process:2.8.3] /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3/AndroidManifest.xml:29:13-31:52
+188-->[androidx.lifecycle:lifecycle-process:2.8.3] /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3/AndroidManifest.xml:30:17-78
+189-->[androidx.lifecycle:lifecycle-process:2.8.3] /home/runner/.gradle/caches/8.9/transforms/02cb76670fbe4d45d7f5752167aa4b76/transformed/jetified-lifecycle-process-2.8.3/AndroidManifest.xml:31:17-49
+190-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+191-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+192-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+195-->[com.google.android.gms:play-services-basement:18.3.0] /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+196-->[com.google.android.gms:play-services-basement:18.3.0] /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+197-->[com.google.android.gms:play-services-basement:18.3.0] /home/runner/.gradle/caches/8.9/transforms/887f49721f7318426466886f2daeff53/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+199-->[androidx.compose.ui:ui-test-manifest:1.6.8] /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:23:9-25:39
+200-->[androidx.compose.ui:ui-test-manifest:1.6.8] /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:24:13-63
+201-->[androidx.compose.ui:ui-test-manifest:1.6.8] /home/runner/.gradle/caches/8.9/transforms/98c88dc8c5fa13b0e94c92bb370beddd/transformed/jetified-ui-test-manifest-1.6.8/AndroidManifest.xml:25:13-36
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+205-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+208-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+212-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+215-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+216-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+216-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+218-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+219-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+219-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/993120938c1879173d35c6a4fdeb5ff3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+223-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+224-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+225-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+226-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+227-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+228-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/runner/.gradle/caches/8.9/transforms/0265031ab3c16397916529451d5a10db/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+230-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+231-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+232-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+233-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+236-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+237-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+238-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
 
 -- BUILD TASK FAILURES --
-> Task :app:processDebugResources FAILED
+> Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-BUILD FAILED in 1m 31s
-=======
-BUILD FAILED in 2m 48s
->>>>>>> Stashed changes
-=======
-BUILD FAILED in 1m 43s
->>>>>>> Stashed changes
-=======
-BUILD FAILED in 2m 29s
->>>>>>> Stashed changes
+BUILD FAILED in 50s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:processDebugResources'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
@@ -582,7 +574,7 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:pro
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
 --
-Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
 	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
 	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
 	at org.gradle.internal.Factories$1.create(Factories.java:31)
@@ -606,24 +598,17 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
 --
-Caused by: com.android.builder.internal.aapt.v2.Aapt2Exception: Android resource linking failed
-ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher (aka com.nexus.android:mipmap/ic_launcher) not found.
-    
-ERROR: /home/runner/work/Starscord/Starscord/app/src/main/AndroidManifest.xml:22:5-59:19: AAPT: error: resource mipmap/ic_launcher_round (aka com.nexus.android:mipmap/ic_launcher_round) not found.
-    
-	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create(Aapt2Exception.kt:45)
-	at com.android.builder.internal.aapt.v2.Aapt2Exception$Companion.create$default(Aapt2Exception.kt:33)
-	at com.android.build.gradle.internal.res.Aapt2ErrorUtils.rewriteException(Aapt2ErrorUtils.kt:262)
-	at com.android.build.gradle.internal.res.Aapt2ErrorUtils.rewriteLinkException(Aapt2ErrorUtils.kt:133)
-	at com.android.build.gradle.internal.res.Aapt2ProcessResourcesRunnableKt.processResources(Aapt2ProcessResourcesRunnable.kt:76)
-	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:941)
-	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$Companion.access$invokeAaptForSplit(LinkApplicationAndroidResourcesTask.kt:796)
-	at com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction.run(LinkApplicationAndroidResourcesTask.kt:432)
-	at com.android.build.gradle.internal.profile.ProfileAwareWorkAction.execute(ProfileAwareWorkAction.kt:74)
+Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
+	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:21)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:119)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:76)
 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
 
 -- NATIVE BUILD LOG (last 100 lines) --
