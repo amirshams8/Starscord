@@ -7,86 +7,248 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.window.Dialog
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.nexus.android.data.api.models.ChannelResponse
 import com.nexus.android.data.api.models.GuildResponse
+import com.nexus.android.data.api.models.UserResponse
 import com.nexus.android.ui.theme.*
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Root
+// ─────────────────────────────────────────────────────────────────────────────
+
 @Composable
-fun HomeScreen(onOpenChannel: (String, String) -> Unit, onOpenVoice: (String) -> Unit, vm: HomeViewModel = hiltViewModel()) {
-    val guilds         by vm.guilds.collectAsState()
-    val selectedGuild  by vm.selectedGuild.collectAsState()
-    val channels       by vm.channels.collectAsState()
+fun HomeScreen(
+    onOpenChannel: (channelId: String, guildId: String) -> Unit,
+    onOpenVoice: (channelId: String) -> Unit,
+    onLogout: () -> Unit,
+    vm: HomeViewModel = hiltViewModel(),
+) {
+    val guilds        by vm.guilds.collectAsState()
+    val selectedGuild by vm.selectedGuild.collectAsState()
+    val channels      by vm.channels.collectAsState()
+    val dmChannels    by vm.dmChannels.collectAsState()
+    val currentUser   by vm.currentUser.collectAsState()
+    val showDms       by vm.showDms.collectAsState()
+
+    var showAddServer by remember { mutableStateOf(false) }
+    var showUserMenu  by remember { mutableStateOf(false) }
 
     Row(modifier = Modifier.fillMaxSize().background(NexusDark)) {
-        ServerRail(guilds = guilds, selectedId = selectedGuild?.id, onSelect = vm::selectGuild)
-        if (selectedGuild != null) {
-            ChannelSidebar(
-                guild    = selectedGuild!!,
-                channels = channels,
-                onSelect = { ch ->
-                    if (ch.type == "voice") onOpenVoice(ch.id)
-                    else onOpenChannel(ch.id, selectedGuild!!.id)
+
+        // ── Left rail (72dp) ──────────────────────────────────────────────────
+        ServerRail(
+            guilds      = guilds,
+            selectedId  = if (showDms) "__dms__" else selectedGuild?.id,
+            onSelectDms = { vm.showDmsPanel() },
+            onSelect    = { vm.selectGuild(it) },
+            onAddServer = { showAddServer = true },
+        )
+
+        // ── Middle sidebar (240dp) ────────────────────────────────────────────
+        Column(
+            modifier = Modifier
+                .width(240.dp)
+                .fillMaxHeight()
+                .background(NexusDarkMedium)
+        ) {
+            Box(modifier = Modifier.weight(1f)) {
+                when {
+                    showDms -> DmSidebar(
+                        dmChannels = dmChannels,
+                        onOpenDm   = { onOpenChannel(it, "") },
+                    )
+                    selectedGuild != null -> ChannelSidebar(
+                        guild    = selectedGuild!!,
+                        channels = channels,
+                        onSelect = { ch ->
+                            if (ch.type == "voice") onOpenVoice(ch.id)
+                            else onOpenChannel(ch.id, selectedGuild!!.id)
+                        },
+                    )
+                    else -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Text("Select a server", color = NexusTextMuted, fontSize = 14.sp)
+                    }
                 }
-            )
-        } else {
-            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text("Select a server", color = NexusTextMuted)
             }
+
+            // User panel pinned at bottom
+            UserPanel(
+                username   = currentUser?.username ?: "...",
+                avatar     = currentUser?.avatar,
+                status     = currentUser?.status ?: "online",
+                onSettings = { showUserMenu = true },
+            )
         }
+    }
+
+    if (showAddServer) {
+        AddServerDialog(
+            onDismiss      = { showAddServer = false },
+            onCreateServer = { name -> vm.createGuild(name); showAddServer = false },
+            onJoinServer   = { code -> vm.joinByInvite(code); showAddServer = false },
+        )
+    }
+
+    if (showUserMenu) {
+        UserMenuDialog(
+            username  = currentUser?.username ?: "",
+            onDismiss = { showUserMenu = false },
+            onLogout  = { showUserMenu = false; onLogout() },
+        )
     }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Server rail
+// ─────────────────────────────────────────────────────────────────────────────
+
 @Composable
-fun ServerRail(guilds: List<GuildResponse>, selectedId: String?, onSelect: (GuildResponse) -> Unit) {
+fun ServerRail(
+    guilds: List<GuildResponse>,
+    selectedId: String?,
+    onSelectDms: () -> Unit,
+    onSelect: (GuildResponse) -> Unit,
+    onAddServer: () -> Unit,
+) {
     Column(
-        modifier = Modifier.width(72.dp).fillMaxHeight().background(NexusDark).padding(vertical = 8.dp),
+        modifier = Modifier
+            .width(72.dp)
+            .fillMaxHeight()
+            .background(NexusDark)
+            .padding(vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Box(modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
-            Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
+        // Home / DMs
+        RailItem(selected = selectedId == "__dms__", onClick = onSelectDms) {
+            Icon(Icons.Default.Home, contentDescription = "DMs", tint = Color.White, modifier = Modifier.size(26.dp))
         }
-        Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
-        guilds.forEach { guild ->
-            val selected = guild.id == selectedId
-            Box(
-                modifier = Modifier.padding(bottom = 8.dp).size(48.dp)
-                    .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape)
-                    .background(if (selected) NexusBlurple else NexusDarkMedium)
-                    .clickable { onSelect(guild) },
-                contentAlignment = Alignment.Center,
-            ) {
-                if (guild.icon != null) AsyncImage(model = guild.icon, contentDescription = guild.name, modifier = Modifier.fillMaxSize())
-                else Text(guild.name.take(2).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+
+        HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+
+        // Guilds
+        LazyColumn(
+            modifier = Modifier.weight(1f),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            items(guilds, key = { it.id }) { guild ->
+                val selected = guild.id == selectedId
+                RailItem(selected = selected, onClick = { onSelect(guild) }) {
+                    if (guild.icon != null) {
+                        AsyncImage(
+                            model = guild.icon,
+                            contentDescription = guild.name,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape),
+                        )
+                    } else {
+                        Text(
+                            text = guild.name.take(2).uppercase(),
+                            color = Color.White,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                        )
+                    }
+                }
             }
         }
+
+        HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+
+        // Add server
+        RailItem(selected = false, onClick = onAddServer, activeColor = NexusGreen) {
+            Icon(Icons.Default.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(26.dp))
+        }
+
+        Spacer(Modifier.height(8.dp))
+
+        // Explore servers
+        RailItem(selected = false, onClick = { /* TODO */ }, activeColor = NexusGreen) {
+            Icon(Icons.Default.Explore, contentDescription = "Explore Servers", tint = NexusGreen, modifier = Modifier.size(24.dp))
+        }
+
+        Spacer(Modifier.height(8.dp))
     }
 }
 
 @Composable
-fun ChannelSidebar(guild: GuildResponse, channels: List<ChannelResponse>, onSelect: (ChannelResponse) -> Unit) {
-    Column(modifier = Modifier.width(240.dp).fillMaxHeight().background(NexusDarkMedium)) {
-        Row(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+private fun RailItem(
+    selected: Boolean,
+    onClick: () -> Unit,
+    activeColor: Color = NexusBlurple,
+    content: @Composable BoxScope.() -> Unit,
+) {
+    Box(
+        modifier = Modifier
+            .size(48.dp)
+            .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape)
+            .background(if (selected) activeColor else NexusDarkMedium)
+            .clickable { onClick() },
+        contentAlignment = Alignment.Center,
+        content = content,
+    )
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Channel sidebar
+// ─────────────────────────────────────────────────────────────────────────────
+
+@Composable
+fun ChannelSidebar(
+    guild: GuildResponse,
+    channels: List<ChannelResponse>,
+    onSelect: (ChannelResponse) -> Unit,
+) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 14.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
             Text(guild.name, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 15.sp, modifier = Modifier.weight(1f))
+            Icon(Icons.Default.KeyboardArrowDown, contentDescription = "Server menu", tint = NexusTextMuted, modifier = Modifier.size(20.dp))
         }
-        Divider(color = NexusOutline)
+        HorizontalDivider(color = NexusOutline)
+
         val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
         val uncategorized = channels.filter { it.type != "category" && it.parentId == null }
+
         LazyColumn(modifier = Modifier.fillMaxSize().padding(top = 8.dp)) {
-            items(uncategorized) { ChannelRow(it) { onSelect(it) } }
+            items(uncategorized) { ch -> ChannelRow(ch) { onSelect(ch) } }
             categories.forEach { cat ->
-                item { Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted, modifier = Modifier.padding(start = 16.dp, top = 16.dp, bottom = 4.dp)) }
-                items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch -> ChannelRow(ch) { onSelect(ch) } }
+                item {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(start = 8.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Icon(Icons.Default.KeyboardArrowDown, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                        Spacer(Modifier.width(2.dp))
+                        Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted, modifier = Modifier.weight(1f))
+                        Icon(Icons.Default.Add, contentDescription = "Add channel", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                    }
+                }
+                items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch ->
+                    ChannelRow(ch) { onSelect(ch) }
+                }
             }
         }
     }
@@ -94,10 +256,284 @@ fun ChannelSidebar(guild: GuildResponse, channels: List<ChannelResponse>, onSele
 
 @Composable
 fun ChannelRow(channel: ChannelResponse, onClick: () -> Unit) {
-    val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
-    Row(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 8.dp, vertical = 4.dp).clip(RoundedCornerShape(4.dp)).padding(horizontal = 8.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
+    val icon: ImageVector = when (channel.type) {
+        "voice"        -> Icons.Default.VolumeUp
+        "announcement" -> Icons.Default.Campaign
+        "forum"        -> Icons.Default.Forum
+        else           -> Icons.Default.Tag
+    }
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+            .clip(RoundedCornerShape(4.dp))
+            .padding(horizontal = 8.dp, vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(icon, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
         Spacer(Modifier.width(6.dp))
         Text(channel.name, color = NexusTextMuted, fontSize = 14.sp)
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DM sidebar
+// ─────────────────────────────────────────────────────────────────────────────
+
+@Composable
+fun DmSidebar(
+    dmChannels: List<ChannelResponse>,
+    onOpenDm: (String) -> Unit,
+) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        Text(
+            text = "Direct Messages",
+            fontWeight = FontWeight.Bold,
+            color = NexusTextMuted,
+            fontSize = 11.sp,
+            modifier = Modifier.padding(start = 16.dp, top = 16.dp, bottom = 8.dp),
+        )
+        if (dmChannels.isEmpty()) {
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text("No DMs yet", color = NexusTextMuted, fontSize = 13.sp)
+            }
+        } else {
+            LazyColumn(modifier = Modifier.fillMaxSize()) {
+                items(dmChannels, key = { it.id }) { ch ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { onOpenDm(ch.id) }
+                            .padding(horizontal = 8.dp, vertical = 2.dp)
+                            .clip(RoundedCornerShape(4.dp))
+                            .padding(horizontal = 8.dp, vertical = 6.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(
+                            modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple),
+                            contentAlignment = Alignment.Center,
+                        ) {
+                            Text(ch.name.take(1).uppercase(), color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                        }
+                        Spacer(Modifier.width(8.dp))
+                        Text(ch.name, color = NexusTextMuted, fontSize = 14.sp)
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// User panel — bottom of sidebar
+// ─────────────────────────────────────────────────────────────────────────────
+
+@Composable
+fun UserPanel(
+    username: String,
+    avatar: String?,
+    status: String,
+    onSettings: () -> Unit,
+) {
+    val statusColor = when (status) {
+        "online" -> NexusGreen
+        "idle"   -> NexusYellow
+        "dnd"    -> NexusRed
+        else     -> NexusTextMuted
+    }
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(NexusDark)
+            .padding(horizontal = 8.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        // Avatar + status dot
+        Box(modifier = Modifier.size(32.dp)) {
+            Box(
+                modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple),
+                contentAlignment = Alignment.Center,
+            ) {
+                if (avatar != null) {
+                    AsyncImage(model = avatar, contentDescription = username, modifier = Modifier.fillMaxSize().clip(CircleShape))
+                } else {
+                    Text(username.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                }
+            }
+            // Status dot
+            Box(
+                modifier = Modifier.size(10.dp).clip(CircleShape).background(NexusDark).align(Alignment.BottomEnd),
+            ) {
+                Box(modifier = Modifier.size(8.dp).clip(CircleShape).background(statusColor).align(Alignment.Center))
+            }
+        }
+
+        Spacer(Modifier.width(8.dp))
+
+        Column(modifier = Modifier.weight(1f)) {
+            Text(username, color = NexusTextPrimary, fontSize = 13.sp, fontWeight = FontWeight.Bold, maxLines = 1)
+            Text(status.replaceFirstChar { it.uppercase() }, color = NexusTextMuted, fontSize = 11.sp)
+        }
+
+        IconButton(onClick = { /* TODO mute */ }, modifier = Modifier.size(32.dp)) {
+            Icon(Icons.Default.Mic, contentDescription = "Mute", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+        }
+        IconButton(onClick = { /* TODO deafen */ }, modifier = Modifier.size(32.dp)) {
+            Icon(Icons.Default.Headphones, contentDescription = "Deafen", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+        }
+        IconButton(onClick = onSettings, modifier = Modifier.size(32.dp)) {
+            Icon(Icons.Default.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+        }
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Add / Join server dialog
+// ─────────────────────────────────────────────────────────────────────────────
+
+@Composable
+fun AddServerDialog(
+    onDismiss: () -> Unit,
+    onCreateServer: (name: String) -> Unit,
+    onJoinServer: (inviteCode: String) -> Unit,
+) {
+    var tab        by remember { mutableStateOf(0) }  // 0 = Create, 1 = Join
+    var serverName by remember { mutableStateOf("") }
+    var inviteCode by remember { mutableStateOf("") }
+
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            shape  = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = NexusDarkMedium),
+        ) {
+            Column(modifier = Modifier.padding(24.dp)) {
+                Text(
+                    text = if (tab == 0) "Create a Server" else "Join a Server",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                    color = NexusTextPrimary,
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = if (tab == 0)
+                        "Give your server a name. You can always change it later."
+                    else
+                        "Enter an invite link or code to join an existing server.",
+                    fontSize = 13.sp,
+                    color = NexusTextMuted,
+                )
+
+                Spacer(Modifier.height(16.dp))
+
+                Row {
+                    TabChip(label = "Create", selected = tab == 0) { tab = 0 }
+                    Spacer(Modifier.width(8.dp))
+                    TabChip(label = "Join",   selected = tab == 1) { tab = 1 }
+                }
+
+                Spacer(Modifier.height(16.dp))
+
+                val tfColors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor   = NexusBlurple,
+                    unfocusedBorderColor = NexusOutline,
+                    focusedLabelColor    = NexusBlurple,
+                    unfocusedLabelColor  = NexusTextMuted,
+                    focusedTextColor     = NexusTextPrimary,
+                    unfocusedTextColor   = NexusTextPrimary,
+                )
+
+                if (tab == 0) {
+                    OutlinedTextField(
+                        value = serverName, onValueChange = { serverName = it },
+                        label = { Text("Server Name") }, singleLine = true,
+                        modifier = Modifier.fillMaxWidth(), colors = tfColors,
+                    )
+                } else {
+                    OutlinedTextField(
+                        value = inviteCode, onValueChange = { inviteCode = it },
+                        label = { Text("Invite Link or Code") }, singleLine = true,
+                        modifier = Modifier.fillMaxWidth(), colors = tfColors,
+                    )
+                }
+
+                Spacer(Modifier.height(20.dp))
+
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                    TextButton(onClick = onDismiss) { Text("Cancel", color = NexusTextMuted) }
+                    Spacer(Modifier.width(8.dp))
+                    Button(
+                        onClick = {
+                            if (tab == 0 && serverName.isNotBlank()) onCreateServer(serverName.trim())
+                            else if (tab == 1 && inviteCode.isNotBlank()) onJoinServer(inviteCode.trim())
+                        },
+                        colors  = ButtonDefaults.buttonColors(containerColor = NexusBlurple),
+                        enabled = if (tab == 0) serverName.isNotBlank() else inviteCode.isNotBlank(),
+                    ) {
+                        Text(if (tab == 0) "Create" else "Join", fontWeight = FontWeight.Bold)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun TabChip(label: String, selected: Boolean, onClick: () -> Unit) {
+    Surface(
+        shape    = RoundedCornerShape(20.dp),
+        color    = if (selected) NexusBlurple else NexusDarkLight,
+        modifier = Modifier.clickable { onClick() },
+    ) {
+        Text(
+            text       = label,
+            color      = if (selected) Color.White else NexusTextMuted,
+            fontSize   = 13.sp,
+            fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+            modifier   = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
+        )
+    }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// User menu (settings / logout)
+// ─────────────────────────────────────────────────────────────────────────────
+
+@Composable
+fun UserMenuDialog(
+    username: String,
+    onDismiss: () -> Unit,
+    onLogout: () -> Unit,
+) {
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            shape  = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = NexusDarkMedium),
+        ) {
+            Column(modifier = Modifier.padding(8.dp)) {
+                Text(
+                    text     = "Signed in as $username",
+                    fontSize = 12.sp,
+                    color    = NexusTextMuted,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                )
+                HorizontalDivider(color = NexusOutline)
+                TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.width(10.dp))
+                        Text("User Settings", color = NexusTextPrimary, fontSize = 14.sp)
+                    }
+                }
+                TextButton(onClick = onLogout, modifier = Modifier.fillMaxWidth()) {
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Default.Logout, contentDescription = null, tint = NexusRed, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.width(10.dp))
+                        Text("Log Out", color = NexusRed, fontSize = 14.sp)
+                    }
+                }
+            }
+        }
     }
 }

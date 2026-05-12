@@ -38,6 +38,9 @@ data class ChannelResponse(
     @SerializedName("parent_id") val parentId: String? = null, @SerializedName("last_message_id") val lastMessageId: String? = null,
 )
 
+// For opening a DM channel with another user
+data class OpenDmRequest(@SerializedName("recipient_id") val recipientId: String)
+
 data class MemberResponse(@SerializedName("guild_id") val guildId: String, @SerializedName("user_id") val userId: String, val nickname: String? = null, val roles: List<String> = emptyList(), @SerializedName("joined_at") val joinedAt: String, val user: UserResponse? = null)
 data class RoleResponse(val id: String, @SerializedName("guild_id") val guildId: String, val name: String, val color: Int = 0, val hoist: Boolean = false, val position: Int = 0, val permissions: String = "0", val mentionable: Boolean = false)
 

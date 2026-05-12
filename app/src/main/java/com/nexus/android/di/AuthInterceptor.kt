@@ -11,18 +11,35 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class AuthInterceptor @Inject constructor(@ApplicationContext private val context: Context) : Interceptor {
+class AuthInterceptor @Inject constructor(
+    @ApplicationContext private val context: Context
+) : Interceptor {
+
     private val prefs: SharedPreferences by lazy {
-        val mk = MasterKey.Builder(context).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build()
-        EncryptedSharedPreferences.create(context, "nexus_secure_prefs", mk, EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV, EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM)
+        val mk = MasterKey.Builder(context)
+            .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+            .build()
+        EncryptedSharedPreferences.create(
+            context,
+            "nexus_secure_prefs",
+            mk,
+            EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+        )
     }
 
+    // Nullable setter: passing null removes the key (used by logout)
     var accessToken: String?
-        get() = prefs.getString("access_token", null)
-        set(v) = prefs.edit().putString("access_token", v).apply()
+        get()  = prefs.getString("access_token", null)
+        set(v) = if (v == null) prefs.edit().remove("access_token").apply()
+                 else           prefs.edit().putString("access_token", v).apply()
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val token = accessToken ?: return chain.proceed(chain.request())
-        return chain.proceed(chain.request().newBuilder().header("Authorization", "Bearer $token").build())
+        return chain.proceed(
+            chain.request().newBuilder()
+                .header("Authorization", "Bearer $token")
+                .build()
+        )
     }
 }
