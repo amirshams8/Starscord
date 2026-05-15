@@ -173,7 +173,8 @@ fun MessageItem(
     onReact: (String) -> Unit,
     onOpenEmoji: () -> Unit,
 ) {
-    val sdf = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
+    val sdf    = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
+    val parser = remember { SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) }
     var showMenu by remember { mutableStateOf(false) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
@@ -205,7 +206,10 @@ fun MessageItem(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(message.author.username, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 14.sp)
                     Spacer(Modifier.width(6.dp))
-                    Text(sdf.format(message.createdAt), color = NexusTextMuted, fontSize = 11.sp)
+                    val time = remember(message.createdAt) {
+                        try { sdf.format(parser.parse(message.createdAt)!!) } catch (_: Exception) { "" }
+                    }
+                    Text(time, color = NexusTextMuted, fontSize = 11.sp)
                     if (message.editedAt != null) Text(" (edited)", color = NexusTextMuted, fontSize = 11.sp)
                 }
                 message.reference?.let { ref ->
