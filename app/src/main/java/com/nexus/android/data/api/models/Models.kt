@@ -20,29 +20,44 @@ data class UserResponse(
     @SerializedName("nitro_since") val nitroSince: String? = null,
     val flags: Long = 0, @SerializedName("created_at") val createdAt: String? = null,
 )
-data class UpdateUserRequest(val username: String? = null, val bio: String? = null, val pronouns: String? = null, val avatar: String? = null, val banner: String? = null, @SerializedName("banner_color") val bannerColor: String? = null, @SerializedName("custom_status") val customStatus: String? = null, val status: String? = null)
+data class UpdateUserRequest(
+    val username: String? = null, val bio: String? = null, val pronouns: String? = null,
+    val avatar: String? = null, val banner: String? = null,
+    @SerializedName("banner_color") val bannerColor: String? = null,
+    @SerializedName("custom_status") val customStatus: String? = null, val status: String? = null
+)
 
 data class CreateGuildRequest(val name: String, val icon: String? = null)
 data class GuildResponse(
-    val id: String, val name: String, val icon: String? = null, @SerializedName("icon_animated") val iconAnimated: Boolean = false,
+    val id: String, val name: String, val icon: String? = null,
+    @SerializedName("icon_animated") val iconAnimated: Boolean = false,
     val banner: String? = null, @SerializedName("owner_id") val ownerId: String, val description: String? = null,
     @SerializedName("boost_count") val boostCount: Int = 0, @SerializedName("boost_tier") val boostTier: Int = 0,
     @SerializedName("vanity_url") val vanityUrl: String? = null, val channels: List<ChannelResponse>? = null,
     val roles: List<RoleResponse>? = null, @SerializedName("joined_at") val joinedAt: String? = null,
 )
 
+// NEW: request body for creating a channel inside a guild
+data class CreateChannelRequest(val name: String, val type: String = "text", val parentId: String? = null)
+
 data class ChannelResponse(
     val id: String, @SerializedName("guild_id") val guildId: String? = null, val type: String, val name: String,
     val position: Int = 0, val topic: String? = null, val nsfw: Boolean = false, val slowmode: Int = 0,
     val bitrate: Int = 64000, @SerializedName("user_limit") val userLimit: Int = 0,
-    @SerializedName("parent_id") val parentId: String? = null, @SerializedName("last_message_id") val lastMessageId: String? = null,
+    @SerializedName("parent_id") val parentId: String? = null,
+    @SerializedName("last_message_id") val lastMessageId: String? = null,
 )
 
-// For opening a DM channel with another user
-data class OpenDmRequest(@SerializedName("recipient_id") val recipientId: String)
-
-data class MemberResponse(@SerializedName("guild_id") val guildId: String, @SerializedName("user_id") val userId: String, val nickname: String? = null, val roles: List<String> = emptyList(), @SerializedName("joined_at") val joinedAt: String, val user: UserResponse? = null)
-data class RoleResponse(val id: String, @SerializedName("guild_id") val guildId: String, val name: String, val color: Int = 0, val hoist: Boolean = false, val position: Int = 0, val permissions: String = "0", val mentionable: Boolean = false)
+data class MemberResponse(
+    @SerializedName("guild_id") val guildId: String, @SerializedName("user_id") val userId: String,
+    val nickname: String? = null, val roles: List<String> = emptyList(),
+    @SerializedName("joined_at") val joinedAt: String, val user: UserResponse? = null
+)
+data class RoleResponse(
+    val id: String, @SerializedName("guild_id") val guildId: String, val name: String,
+    val color: Int = 0, val hoist: Boolean = false, val position: Int = 0,
+    val permissions: String = "0", val mentionable: Boolean = false
+)
 
 data class SendMessageRequest(val content: String? = null, val tts: Boolean = false, val embeds: List<Any>? = null, val reference: MessageReferenceRequest? = null)
 data class EditMessageRequest(val content: String)
@@ -65,4 +80,12 @@ data class BoostResponse(val success: Boolean, @SerializedName("boost_count") va
 data class NitroPlansResponse(val plans: List<NitroPlan>)
 data class NitroPlan(val id: String, val name: String, val price: Int, val currency: String)
 
-data class InviteResponse(val code: String, val guild: GuildResponse, val channel: ChannelResponse, val uses: Int = 0, @SerializedName("max_uses") val maxUses: Int = 0, @SerializedName("expires_at") val expiresAt: String? = null)
+data class InviteResponse(
+    val code: String, val guild: GuildResponse, val channel: ChannelResponse,
+    val uses: Int = 0, @SerializedName("max_uses") val maxUses: Int = 0,
+    @SerializedName("expires_at") val expiresAt: String? = null
+)
+
+// NEW: invite creation request/response
+data class CreateInviteRequest(@SerializedName("max_uses") val maxUses: Int = 0, @SerializedName("max_age") val maxAge: Int = 86400)
+data class CreatedInviteResponse(val code: String, @SerializedName("guild_id") val guildId: String, @SerializedName("channel_id") val channelId: String)
