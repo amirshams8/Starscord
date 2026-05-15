@@ -2,6 +2,7 @@ package com.nexus.android.ui.screens.chat
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -46,28 +47,18 @@ fun ChatScreen(
     val uiState     by vm.uiState.collectAsState()
     val listState   = rememberLazyListState()
     var input       by remember { mutableStateOf("") }
+    var emojiPickerMessageId by remember { mutableStateOf<String?>(null) }
 
     LaunchedEffect(channelId)     { vm.loadChannel(channelId, guildId) }
     LaunchedEffect(messages.size) { if (messages.isNotEmpty()) listState.animateScrollToItem(messages.size - 1) }
 
-    // Common emoji picker state
-    var emojiPickerMessageId by remember { mutableStateOf<String?>(null) }
-
     Column(modifier = Modifier.fillMaxSize().background(NexusDarkLight)) {
-        // Top bar
         TopAppBar(
-            title = {
-                Column {
-                    Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                }
-            },
-            navigationIcon = {
-                IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, contentDescription = "Back") }
-            },
+            title = { Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp) },
+            navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, contentDescription = "Back") } },
             colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
         )
 
-        // Message list
         LazyColumn(
             state = listState,
             modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
@@ -90,7 +81,6 @@ fun ChatScreen(
             }
         }
 
-        // Emoji picker sheet (simple inline row)
         if (emojiPickerMessageId != null) {
             Surface(color = NexusDarkMedium) {
                 Row(
@@ -98,16 +88,11 @@ fun ChatScreen(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    val quickEmoji = listOf("👍", "❤️", "😂", "😮", "😢", "🔥", "🎉", "✅")
-                    quickEmoji.forEach { emoji ->
-                        Text(
-                            emoji,
-                            fontSize = 22.sp,
-                            modifier = Modifier.clickable {
-                                vm.toggleReaction(channelId, emojiPickerMessageId!!, emoji)
-                                emojiPickerMessageId = null
-                            }
-                        )
+                    listOf("👍","❤️","😂","😮","😢","🔥","🎉","✅").forEach { emoji ->
+                        Text(emoji, fontSize = 22.sp, modifier = Modifier.clickable {
+                            vm.toggleReaction(channelId, emojiPickerMessageId!!, emoji)
+                            emojiPickerMessageId = null
+                        })
                     }
                     Spacer(Modifier.weight(1f))
                     IconButton(onClick = { emojiPickerMessageId = null }, modifier = Modifier.size(28.dp)) {
@@ -117,16 +102,12 @@ fun ChatScreen(
             }
         }
 
-        // Typing indicator
         if (typingUsers.isNotEmpty()) {
-            Text(
-                "${typingUsers.joinToString(", ")} is typing...",
+            Text("${typingUsers.joinToString(", ")} is typing...",
                 fontSize = 12.sp, color = NexusTextMuted,
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
-            )
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp))
         }
 
-        // Input bar (with edit mode banner)
         if (uiState.editingMessageId != null) {
             Row(
                 modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(horizontal = 12.dp, vertical = 4.dp),
@@ -153,8 +134,8 @@ fun ChatScreen(
                 modifier = Modifier.weight(1f),
                 shape = RoundedCornerShape(24.dp),
                 colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor   = Color.Transparent,
-                    unfocusedBorderColor = Color.Transparent,
+                    focusedBorderColor      = Color.Transparent,
+                    unfocusedBorderColor    = Color.Transparent,
                     focusedContainerColor   = NexusDarkLight,
                     unfocusedContainerColor = NexusDarkLight,
                 ),
@@ -162,23 +143,20 @@ fun ChatScreen(
             )
             Spacer(Modifier.width(8.dp))
             if (uiState.editingMessageId != null) {
-                IconButton(
-                    onClick = { vm.submitEdit(channelId) },
-                    colors  = IconButtonDefaults.iconButtonColors(containerColor = NexusGreen),
-                ) { Icon(Icons.Default.Check, contentDescription = "Confirm edit", tint = Color.White) }
+                IconButton(onClick = { vm.submitEdit(channelId) },
+                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusGreen)) {
+                    Icon(Icons.Default.Check, contentDescription = "Confirm edit", tint = Color.White)
+                }
             } else {
                 IconButton(
-                    onClick = {
-                        if (input.isNotBlank()) { vm.sendMessage(channelId, input.trim()); input = "" }
-                    },
-                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusBlurple),
-                ) { Icon(Icons.Default.Send, contentDescription = "Send", tint = Color.White) }
+                    onClick = { if (input.isNotBlank()) { vm.sendMessage(channelId, input.trim()); input = "" } },
+                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusBlurple)) {
+                    Icon(Icons.Default.Send, contentDescription = "Send", tint = Color.White)
+                }
             }
         }
     }
 }
-
-// ── Message Item ──────────────────────────────────────────────────────────────
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -204,14 +182,8 @@ fun MessageItem(
             onDismissRequest = { showDeleteConfirm = false },
             title = { Text("Delete Message") },
             text  = { Text("Are you sure? This cannot be undone.") },
-            confirmButton = {
-                TextButton(onClick = { showDeleteConfirm = false; onDelete() }) {
-                    Text("Delete", color = NexusRed)
-                }
-            },
-            dismissButton = {
-                TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") }
-            },
+            confirmButton = { TextButton(onClick = { showDeleteConfirm = false; onDelete() }) { Text("Delete", color = NexusRed) } },
+            dismissButton = { TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") } },
         )
     }
 
@@ -222,11 +194,7 @@ fun MessageItem(
                 .combinedClickable(onClick = {}, onLongClick = { if (isOwn) showMenu = true })
                 .padding(vertical = 4.dp),
         ) {
-            // Avatar
-            Box(
-                modifier = Modifier.size(40.dp).clip(CircleShape).background(NexusBlurple),
-                contentAlignment = Alignment.Center,
-            ) {
+            Box(modifier = Modifier.size(40.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
                 if (message.author.avatar != null)
                     AsyncImage(model = message.author.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
                 else
@@ -240,7 +208,6 @@ fun MessageItem(
                     Text(sdf.format(message.createdAt), color = NexusTextMuted, fontSize = 11.sp)
                     if (message.editedAt != null) Text(" (edited)", color = NexusTextMuted, fontSize = 11.sp)
                 }
-                // Reply reference
                 message.reference?.let { ref ->
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Divider(modifier = Modifier.width(2.dp).height(12.dp), color = NexusOutline)
@@ -250,66 +217,38 @@ fun MessageItem(
                         Text(ref.content ?: "", color = NexusTextMuted, fontSize = 11.sp, maxLines = 1)
                     }
                 }
-                // Content (or edit field)
                 if (editingId == message.id) {
-                    OutlinedTextField(
-                        value = editingText,
-                        onValueChange = onEditChange,
-                        modifier = Modifier.fillMaxWidth().padding(end = 8.dp),
-                        singleLine = false,
-                        maxLines = 5,
-                    )
+                    OutlinedTextField(value = editingText, onValueChange = onEditChange,
+                        modifier = Modifier.fillMaxWidth().padding(end = 8.dp), singleLine = false, maxLines = 5)
                 } else {
                     if (!message.content.isNullOrBlank())
                         Text(message.content, color = NexusTextPrimary, fontSize = 15.sp, lineHeight = 20.sp)
                 }
-                // Reactions
                 if (!message.reactions.isNullOrEmpty()) {
                     Row(horizontalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 4.dp)) {
                         message.reactions.take(10).forEach { r ->
-                            Surface(
-                                shape = RoundedCornerShape(12.dp),
-                                color = NexusDarkMedium,
-                                modifier = Modifier.clickable { onReact(r.emoji) },
-                            ) {
-                                Text(
-                                    "${r.emoji} ${r.count}",
-                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
-                                    fontSize = 12.sp, color = NexusTextPrimary,
-                                )
+                            // FIX: use Surface onClick instead of Modifier.clickable to avoid unresolved reference
+                            Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, onClick = { onReact(r.emoji) }) {
+                                Text("${r.emoji} ${r.count}", modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+                                    fontSize = 12.sp, color = NexusTextPrimary)
                             }
                         }
-                        // Add reaction button
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = NexusDarkMedium,
-                            modifier = Modifier.clickable { onOpenEmoji() },
-                        ) {
+                        Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, onClick = { onOpenEmoji() }) {
                             Text("＋", modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp), fontSize = 12.sp, color = NexusTextMuted)
                         }
                     }
                 }
             }
         }
-
-        // Context menu (own messages only)
         DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
-            DropdownMenuItem(
-                text = { Text("Add Reaction") },
-                onClick = { showMenu = false; onOpenEmoji() },
-                leadingIcon = { Text("😀", fontSize = 16.sp) }
-            )
+            DropdownMenuItem(text = { Text("Add Reaction") }, onClick = { showMenu = false; onOpenEmoji() },
+                leadingIcon = { Text("😀", fontSize = 16.sp) })
             if (isOwn) {
-                DropdownMenuItem(
-                    text = { Text("Edit Message") },
-                    onClick = { showMenu = false; onEdit() },
-                    leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) }
-                )
-                DropdownMenuItem(
-                    text = { Text("Delete Message", color = NexusRed) },
+                DropdownMenuItem(text = { Text("Edit Message") }, onClick = { showMenu = false; onEdit() },
+                    leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) })
+                DropdownMenuItem(text = { Text("Delete Message", color = NexusRed) },
                     onClick = { showMenu = false; showDeleteConfirm = true },
-                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null, tint = NexusRed) }
-                )
+                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null, tint = NexusRed) })
             }
         }
     }
