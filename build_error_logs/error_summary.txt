@@ -12,18 +12,10 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:183:13 Overload resolution ambiguity between candidates:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:183:32 Unresolved reference 'Explore'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:260:41 Unresolved reference 'VolumeUp'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:261:41 Unresolved reference 'Campaign'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:262:41 Unresolved reference 'Forum'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:263:41 Unresolved reference 'Tag'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:381:13 Overload resolution ambiguity between candidates:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:381:32 Unresolved reference 'Mic'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:384:13 Overload resolution ambiguity between candidates:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:384:32 Unresolved reference 'Headphones'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:531:25 Overload resolution ambiguity between candidates:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:531:44 Unresolved reference 'Logout'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt:106:49 Unresolved reference 'clickable'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt:273:53 Unresolved reference 'clickable'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt:286:49 Unresolved reference 'clickable'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:372:18 This foundation API is experimental and is likely to change or be removed in the future.
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -130,6 +122,8 @@ Merging manifest with lower [androidx.compose.material:material-ripple-android:1
 Merging uses-sdk with lower [androidx.compose.material:material-ripple-android:1.6.8] AndroidManifest.xml:5:5-44
 Merging manifest with lower [androidx.compose.material:material-icons-core-android:1.6.8] AndroidManifest.xml:2:1-7:12
 Merging uses-sdk with lower [androidx.compose.material:material-icons-core-android:1.6.8] AndroidManifest.xml:5:5-44
+Merging manifest with lower [androidx.compose.material:material-icons-extended-android:1.6.8] AndroidManifest.xml:2:1-7:12
+Merging uses-sdk with lower [androidx.compose.material:material-icons-extended-android:1.6.8] AndroidManifest.xml:5:5-44
 Merging manifest with lower [androidx.compose.material:material-android:1.6.8] AndroidManifest.xml:2:1-7:12
 Merging uses-sdk with lower [androidx.compose.material:material-android:1.6.8] AndroidManifest.xml:5:5-44
 Merging manifest with lower [androidx.compose.foundation:foundation-layout-android:1.6.8] AndroidManifest.xml:2:1-7:12
@@ -549,11 +543,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 50s
-=======
-BUILD FAILED in 49s
->>>>>>> Stashed changes
+BUILD FAILED in 52s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:

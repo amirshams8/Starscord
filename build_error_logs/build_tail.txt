@@ -1,5 +1,20 @@
-<<<<<<< Updated upstream
-=======
+Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with IdentityTransform
+Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with JetifyTransform
+Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with IdentityTransform
+Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with JetifyTransform
+Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with IdentityTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
+Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
@@ -58,7 +73,6 @@ Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0)
 Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with AarToClassTransform
 Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with JetifyTransform
 Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with AarToClassTransform
->>>>>>> Stashed changes
 Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with JetifyTransform
 Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with AarToClassTransform
 Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
@@ -199,6 +213,7 @@ Transforming jetified-material3-release-api.jar with BuildToolsApiClasspathEntry
 Transforming jetified-coil-compose-base-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-foundation-layout-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-material-icons-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-material-icons-extended-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-material-ripple-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-foundation-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-animation-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
@@ -380,13 +395,8 @@ i: #1 retrying connecting to the daemon
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/incrementalData/debug, /home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/stubs/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state])
 w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
 Finished executing kotlin compiler using DAEMON strategy
-<<<<<<< Updated upstream
-Resolve mutations for :app:kaptDebugKotlin (Thread[included builds,5,main]) started.
-:app:kaptDebugKotlin (Thread[included builds,5,main]) started.
-=======
-Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker,5,main]) started.
-:app:kaptDebugKotlin (Thread[Execution worker,5,main]) started.
->>>>>>> Stashed changes
+Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
+:app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 
 > Task :app:kaptDebugKotlin
 Transforming R.jar with StructureTransformAction
@@ -410,6 +420,7 @@ Transforming jetified-material3-release-api.jar with StructureTransformAction
 Transforming jetified-coil-compose-base-2.6.0-api.jar with StructureTransformAction
 Transforming jetified-foundation-layout-release-api.jar with StructureTransformAction
 Transforming jetified-material-icons-core-release-api.jar with StructureTransformAction
+Transforming jetified-material-icons-extended-release-api.jar with StructureTransformAction
 Transforming jetified-material-ripple-release-api.jar with StructureTransformAction
 Transforming jetified-foundation-release-api.jar with StructureTransformAction
 Transforming jetified-animation-core-release-api.jar with StructureTransformAction
@@ -542,13 +553,8 @@ Task ':app:kaptDebugKotlin' is not up-to-date because:
 The input changes require a full rebuild for incremental task ':app:kaptDebugKotlin'.
 Running kapt annotation processing using the Gradle Worker API
 Using workers NONE isolation mode to run kapt
-<<<<<<< Updated upstream
-Resolve mutations for :app:compileDebugKotlin (Thread[included builds,5,main]) started.
-:app:compileDebugKotlin (Thread[included builds,5,main]) started.
-=======
-Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
-:app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
->>>>>>> Stashed changes
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 
 > Task :app:compileDebugKotlin
 Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
@@ -572,6 +578,7 @@ Transforming jetified-material3-release-api.jar with BuildToolsApiClasspathEntry
 Transforming jetified-coil-compose-base-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-foundation-layout-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-material-icons-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-material-icons-extended-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-material-ripple-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-foundation-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming jetified-animation-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
@@ -765,37 +772,17 @@ file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', n
 file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-Kotlin source files: /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/MainActivity.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Type.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Color.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Theme.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/LoginScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/RegisterScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/AuthViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/NexusApp.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/GatewayService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/NotificationService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/VoiceService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/NetworkModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/DatabaseModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/AuthInterceptor.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/entities/Entities.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/NexusDatabase.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/MessageDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/GuildDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/gateway/GatewayClient.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/NexusApi.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt
-Java source files: /home/runner/work/Starscord/Starscord/app/build/generated/source/buildConfig/debug/com/nexus/android/BuildConfig.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_VoiceService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_GatewayService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_MembersInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideNexusApiFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/DatabaseModule_ProvideDatabaseFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/AuthInterceptor_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideOkHttpClientFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideRetrofitFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/Hilt_MainActivity.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/MessageDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/GuildDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/NexusDatabase_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/gateway/GatewayClient_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_NetworkModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_navigation_NavAuthEntryPoint.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_DatabaseModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/dagger/hilt/internal/aggregatedroot/codegen/_com_nexus_android_NexusApp.java
+Kotlin source files: /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/MainActivity.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Type.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Color.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Theme.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/LoginScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/RegisterScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/AuthViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/NexusApp.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/GatewayService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/NotificationService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/VoiceService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/NetworkModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/DatabaseModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/AuthInterceptor.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/entities/Entities.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/NexusDatabase.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/MessageDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/GuildDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/gateway/GatewayClient.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/NexusApi.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt
+Java source files: /home/runner/work/Starscord/Starscord/app/build/generated/source/buildConfig/debug/com/nexus/android/BuildConfig.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_VoiceService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_GatewayService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_MembersInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideNexusApiFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/DatabaseModule_ProvideDatabaseFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/AuthInterceptor_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideOkHttpClientFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideRetrofitFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/Hilt_MainActivity.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/MessageDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/GuildDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/NexusDatabase_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/gateway/GatewayClient_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_NetworkModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_DatabaseModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/dagger/hilt/internal/aggregatedroot/codegen/_com_nexus_android_NexusApp.java
 Script source files: 
 Script file extensions: 
 Using Kotlin/JVM incremental compilation
 [KOTLIN] Kotlin compilation 'jdkHome' argument: null
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kotlin-classes/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state])
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:183:13 Overload resolution ambiguity between candidates:
-@Composable() @ComposableTarget(...) fun Icon(bitmap: ImageBitmap, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(painter: Painter, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(imageVector: ImageVector, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:183:32 Unresolved reference 'Explore'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:260:41 Unresolved reference 'VolumeUp'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:261:41 Unresolved reference 'Campaign'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:262:41 Unresolved reference 'Forum'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:263:41 Unresolved reference 'Tag'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:381:13 Overload resolution ambiguity between candidates:
-@Composable() @ComposableTarget(...) fun Icon(bitmap: ImageBitmap, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(painter: Painter, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(imageVector: ImageVector, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:381:32 Unresolved reference 'Mic'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:384:13 Overload resolution ambiguity between candidates:
-@Composable() @ComposableTarget(...) fun Icon(bitmap: ImageBitmap, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(painter: Painter, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(imageVector: ImageVector, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:384:32 Unresolved reference 'Headphones'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:531:25 Overload resolution ambiguity between candidates:
-@Composable() @ComposableTarget(...) fun Icon(bitmap: ImageBitmap, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(painter: Painter, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-@Composable() @ComposableTarget(...) fun Icon(imageVector: ImageVector, contentDescription: String?, modifier: Modifier = ..., tint: Color = ...): Unit
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:531:44 Unresolved reference 'Logout'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt:106:49 Unresolved reference 'clickable'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt:273:53 Unresolved reference 'clickable'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt:286:49 Unresolved reference 'clickable'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:372:18 This foundation API is experimental and is likely to change or be removed in the future.
 Finished executing kotlin compiler using DAEMON strategy
 
 > Task :app:compileDebugKotlin FAILED
@@ -844,35 +831,6 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -997,35 +955,6 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -1067,9 +996,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-<<<<<<< Updated upstream
-BUILD FAILED in 50s
-=======
-BUILD FAILED in 49s
->>>>>>> Stashed changes
+BUILD FAILED in 52s
 33 actionable tasks: 33 executed
