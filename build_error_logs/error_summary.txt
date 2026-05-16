@@ -540,7 +540,11 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:kaptGenerateStubsDebugKotlin FAILED
 FAILURE: Build failed with an exception.
+<<<<<<< Updated upstream
 BUILD FAILED in 42s
+=======
+BUILD FAILED in 43s
+>>>>>>> Stashed changes
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
