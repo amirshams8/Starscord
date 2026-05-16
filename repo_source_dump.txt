@@ -1534,7 +1534,7 @@ fun MessageItem(
                 }
                 message.reference?.let { ref ->
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Divider(modifier = Modifier.width(2.dp).height(12.dp), color = NexusOutline)
+                        Box(modifier = Modifier.width(2.dp).height(12.dp).background(NexusOutline))
                         Spacer(Modifier.width(4.dp))
                         Text(ref.author?.username ?: "", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                         Spacer(Modifier.width(4.dp))
@@ -1829,7 +1829,7 @@ fun ServerRail(
             contentAlignment = Alignment.Center,
         ) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
 
-        Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+        HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
         LazyColumn(
             modifier = Modifier.weight(1f),
@@ -1854,7 +1854,7 @@ fun ServerRail(
             }
         }
 
-        Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+        HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
         Box {
             Box(
@@ -1913,14 +1913,14 @@ fun ChannelSidebar(
                 DropdownMenuItem(text = { Text("Server Settings") },
                     onClick = { showGuildMenu = false; onOpenServerSettings() },
                     leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted) })
-                Divider(color = NexusOutline)
+                HorizontalDivider(color = NexusOutline)
                 DropdownMenuItem(text = { Text("Leave Server", color = NexusRed) },
                     onClick = { showGuildMenu = false; showLeaveConfirm = true },
                     leadingIcon = { Icon(Icons.Default.ExitToApp, contentDescription = null, tint = NexusRed) })
             }
         }
 
-        Divider(color = NexusOutline)
+        HorizontalDivider(color = NexusOutline)
 
         val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
         val uncategorized = channels.filter { it.type != "category" && it.parentId == null }
@@ -1945,7 +1945,7 @@ fun ChannelSidebar(
             }
         }
 
-        Divider(color = NexusOutline)
+        HorizontalDivider(color = NexusOutline)
 
         Row(
             modifier = Modifier.fillMaxWidth().background(NexusDark).padding(horizontal = 8.dp, vertical = 6.dp),
@@ -2894,7 +2894,7 @@ private fun SettingsRow(icon: ImageVector, label: String, badge: String? = null,
         if (badge != null) { Text(badge, color = NexusTextMuted, fontSize = 13.sp); Spacer(Modifier.width(8.dp)) }
         Icon(Icons.Default.ChevronRight, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
     }
-    Divider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
+    HorizontalDivider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
 }
 
 
@@ -2992,7 +2992,7 @@ private fun MembersSubScreen(members: List<MemberResponse>, roles: List<RoleResp
             LazyColumn(Modifier.fillMaxSize()) {
                 items(filtered, key = { it.userId }) { member ->
                     MemberListRow(member, roleMap)
-                    Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
                 }
             }
         }
@@ -3081,7 +3081,7 @@ private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
                 everyone?.let { ev ->
                     item {
                         RoleListRow(ev)
-                        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
                     }
                 }
                 if (rest.isNotEmpty()) {
@@ -3091,7 +3091,7 @@ private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
                     }
                     items(rest, key = { it.id }) { role ->
                         RoleListRow(role)
-                        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
                     }
                 }
             }
@@ -3239,7 +3239,7 @@ private fun ChannelSettingsRow(channel: ChannelResponse) {
         Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
         Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
     }
-    Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
+    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
 }
 
 
