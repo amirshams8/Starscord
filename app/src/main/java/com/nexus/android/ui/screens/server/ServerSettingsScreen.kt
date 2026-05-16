@@ -368,7 +368,7 @@ private fun RoleListRow(role: RoleResponse) {
 // ── Invites ───────────────────────────────────────────────────────────────────
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun InvitesSubScreen(invites: List<InviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
+private fun InvitesSubScreen(invites: List<GuildInviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
     val sdf = remember { SimpleDateFormat("MMM d, yyyy", Locale.getDefault()) }
 
     Scaffold(
@@ -397,13 +397,13 @@ private fun InvitesSubScreen(invites: List<InviteResponse>, onDelete: (String) -
 }
 
 @Composable
-private fun InviteRow(invite: InviteResponse, sdf: SimpleDateFormat, onDelete: (String) -> Unit) {
+private fun InviteRow(invite: GuildInviteResponse, sdf: SimpleDateFormat, onDelete: (String) -> Unit) {
     var showConfirm by remember { mutableStateOf(false) }
 
     Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
         Column(Modifier.weight(1f)) {
             Text(invite.code, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-            Text("Uses: ${invite.uses}${invite.maxUses?.let { "/$it" } ?: ""}  •  by ${invite.inviter?.username ?: "?"}",
+            Text("Uses: ${invite.uses}${if (invite.maxUses > 0) "/${invite.maxUses}" else ""}  •  by ${invite.creator?.username ?: "?"}",
                 color = NexusTextMuted, fontSize = 12.sp)
             invite.expiresAt?.let {
                 Text("Expires ${sdf.format(it)}", color = NexusTextMuted, fontSize = 12.sp)
@@ -437,8 +437,8 @@ private fun InviteRow(invite: InviteResponse, sdf: SimpleDateFormat, onDelete: (
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Unit) {
-    val categories    = channels.filter { it.type == 4 }.sortedBy { it.position }
-    val uncategorized = channels.filter { it.type != 4 && it.parentId == null }.sortedBy { it.position }
+    val categories    = channels.filter { it.type == "4" }.sortedBy { it.position }
+    val uncategorized = channels.filter { it.type != "4" && it.parentId == null }.sortedBy { it.position }
 
     Scaffold(
         topBar = {
@@ -469,8 +469,8 @@ private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Uni
 @Composable
 private fun ChannelSettingsRow(channel: ChannelResponse) {
     val icon = when (channel.type) {
-        2    -> Icons.Default.VolumeUp
-        4    -> Icons.Default.Folder
+        "2"  -> Icons.Default.VolumeUp
+        "4"  -> Icons.Default.Folder
         else -> Icons.Default.Tag
     }
     Row(Modifier.fillMaxWidth().clickable { }.padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
