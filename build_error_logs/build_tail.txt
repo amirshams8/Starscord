@@ -1,66 +1,3 @@
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarToClassTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarToClassTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with AarToClassTransform
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with JetifyTransform
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with AarToClassTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with JetifyTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with AarToClassTransform
-Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with JetifyTransform
-Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with AarToClassTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with JetifyTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with AarToClassTransform
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with JetifyTransform
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with AarToClassTransform
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with AarToClassTransform
-Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with JetifyTransform
-Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with IdentityTransform
-Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with JetifyTransform
-Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with AarToClassTransform
-Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with JetifyTransform
-Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with AarToClassTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarToClassTransform
-Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with JetifyTransform
-Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with AarToClassTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with JetifyTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarToClassTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with JetifyTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with IdentityTransform
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with JetifyTransform
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with IdentityTransform
-Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with JetifyTransform
-Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with IdentityTransform
-Transforming livekit-android-2.7.1.aar (io.livekit:livekit-android:2.7.1) with JetifyTransform
-Transforming livekit-android-2.7.1.aar (io.livekit:livekit-android:2.7.1) with AarToClassTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with JetifyTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with IdentityTransform
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with JetifyTransform
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with IdentityTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with JetifyTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with AarToClassTransform
 Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with JetifyTransform
 Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with AarToClassTransform
 Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with JetifyTransform
@@ -387,6 +324,15 @@ Using Kotlin/JVM incremental compilation
 i: starting the daemon as: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java -cp /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/2.0.0/fdc27dd047d592fa41d2dfa21e7621287a361612/kotlin-script-runtime-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx2048m -XX:ReservedCodeCacheSize=320m -Dkotlin.environment.keepalive -ea -XX:+UseCodeCacheFlushing -XX:+UseParallelGC --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /home/runner/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/2.0.0/fdc27dd047d592fa41d2dfa21e7621287a361612/kotlin-script-runtime-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
 i: #1 retrying connecting to the daemon 
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/incrementalData/debug, /home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/stubs/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state])
+
+> Task :app:writeDebugSigningConfigVersions
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
+  No history is available.
+
+> Task :app:kaptGenerateStubsDebugKotlin
 w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
 Finished executing kotlin compiler using DAEMON strategy
 Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
@@ -547,8 +493,8 @@ Task ':app:kaptDebugKotlin' is not up-to-date because:
 The input changes require a full rebuild for incremental task ':app:kaptDebugKotlin'.
 Running kapt annotation processing using the Gradle Worker API
 Using workers NONE isolation mode to run kapt
-Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
-:app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:compileDebugKotlin (Thread[included builds,5,main]) started.
+:app:compileDebugKotlin (Thread[included builds,5,main]) started.
 
 > Task :app:compileDebugKotlin
 Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
@@ -773,16 +719,12 @@ Script file extensions:
 Using Kotlin/JVM incremental compilation
 [KOTLIN] Kotlin compilation 'jdkHome' argument: null
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kotlin-classes/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state])
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:326:79 None of the following candidates is applicable:
-@Stable() fun Modifier.padding(paddingValues: PaddingValues): Modifier
-@Stable() fun Modifier.padding(all: Dp): Modifier
-@Stable() fun Modifier.padding(horizontal: Dp = ..., vertical: Dp = ...): Modifier
-@Stable() fun Modifier.padding(start: Dp = ..., top: Dp = ..., end: Dp = ..., bottom: Dp = ...): Modifier
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:469:49 None of the following candidates is applicable:
-@Stable() fun Modifier.padding(paddingValues: PaddingValues): Modifier
-@Stable() fun Modifier.padding(all: Dp): Modifier
-@Stable() fun Modifier.padding(horizontal: Dp = ..., vertical: Dp = ...): Modifier
-@Stable() fun Modifier.padding(start: Dp = ..., top: Dp = ..., end: Dp = ..., bottom: Dp = ...): Modifier
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:54:49 Argument type mismatch: actual type is 'kotlin.collections.List<com.nexus.android.data.api.models.GuildInviteResponse>', but 'kotlin.collections.List<com.nexus.android.data.api.models.InviteResponse>' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:406:95 Unresolved reference 'inviter'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:440:43 Operator '==' cannot be applied to 'kotlin.String' and 'kotlin.Int'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:441:43 Operator '!=' cannot be applied to 'kotlin.String' and 'kotlin.Int'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:472:9 Incompatible types 'kotlin.String' and 'kotlin.Int'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:473:9 Incompatible types 'kotlin.String' and 'kotlin.Int'.
 Finished executing kotlin compiler using DAEMON strategy
 
 > Task :app:compileDebugKotlin FAILED
@@ -831,6 +773,35 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -955,6 +926,35 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -996,5 +996,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD FAILED in 58s
+BUILD FAILED in 53s
 33 actionable tasks: 33 executed

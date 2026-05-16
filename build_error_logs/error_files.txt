@@ -2,9 +2,13 @@
 
 //===== FILE: app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt =====
 
-// ❌ ERRORS IN THIS FILE (2 error(s)):
-// Line 326: None of the following candidates is applicable:
-// Line 469: None of the following candidates is applicable:
+// ❌ ERRORS IN THIS FILE (6 error(s)):
+// Line 54: Argument type mismatch: actual type is 'kotlin.collections.List<com.nexus.android.data.api.models.GuildInviteResponse>', but 'kotlin.collections.List<com.nexus.android.data.api.models.InviteResponse>' was expected.
+// Line 406: Unresolved reference 'inviter'.
+// Line 440: Operator '==' cannot be applied to 'kotlin.String' and 'kotlin.Int'.
+// Line 441: Operator '!=' cannot be applied to 'kotlin.String' and 'kotlin.Int'.
+// Line 472: Incompatible types 'kotlin.String' and 'kotlin.Int'.
+// Line 473: Incompatible types 'kotlin.String' and 'kotlin.Int'.
 
    1    package com.nexus.android.ui.screens.server
    2    
@@ -59,7 +63,7 @@
   51            SubScreen.Overview  -> OverviewSubScreen(guild, uiState, { name -> vm.saveGuildName(guildId, name) }) { sub = SubScreen.None }
   52            SubScreen.Members   -> MembersSubScreen(members, roles) { sub = SubScreen.None }
   53            SubScreen.Roles     -> RolesSubScreen(roles) { sub = SubScreen.None }
-  54            SubScreen.Invites   -> InvitesSubScreen(invites, vm::deleteInvite) { sub = SubScreen.None }
+  54 ❌         SubScreen.Invites   -> InvitesSubScreen(invites, vm::deleteInvite) { sub = SubScreen.None }
   55            SubScreen.Channels  -> ChannelsSubScreen(channels) { sub = SubScreen.None }
   56            SubScreen.None      -> {
   57                Scaffold(
@@ -161,340 +165,333 @@
  153        onSave: (String) -> Unit, onBack: () -> Unit,
  154    ) {
  155        var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
- 156        Scaffold(
- 157            topBar = {
- 158                TopAppBar(
- 159                    title = { Text("Overview", fontWeight = FontWeight.Bold) },
- 160                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
- 161                    actions = {
- 162                        TextButton(onClick = { onSave(name) }, enabled = !uiState.saving && name.isNotBlank()) {
- 163                            if (uiState.saving) CircularProgressIndicator(Modifier.size(16.dp), strokeWidth = 2.dp, color = NexusBlurple)
- 164                            else Text("Save", color = NexusBlurple, fontWeight = FontWeight.Bold)
- 165                        }
- 166                    },
- 167                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
- 168                )
- 169            },
- 170            containerColor = NexusDark,
- 171        ) { padding ->
- 172            Column(Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState())) {
- 173                Spacer(Modifier.height(16.dp))
- 174                SectionHeader("Server Name")
- 175                Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
- 176                    OutlinedTextField(
- 177                        value = name, onValueChange = { name = it }, singleLine = true,
- 178                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
- 179                        colors = OutlinedTextFieldDefaults.colors(
- 180                            focusedBorderColor      = NexusBlurple, unfocusedBorderColor = Color.Transparent,
- 181                            focusedContainerColor   = NexusDarkLight, unfocusedContainerColor = NexusDarkLight,
- 182                        ),
- 183                    )
- 184                }
- 185                Spacer(Modifier.height(24.dp))
- 186                SectionHeader("Server Boost")
- 187                Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
- 188                    Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
- 189                        Icon(Icons.Default.Bolt, contentDescription = null, tint = NitroMid, modifier = Modifier.size(20.dp))
- 190                        Spacer(Modifier.width(12.dp))
- 191                        Column {
- 192                            Text("Level ${guild?.boostTier ?: 0}", color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
- 193                            Text("${guild?.boostCount ?: 0} boosts", color = NexusTextMuted, fontSize = 12.sp)
- 194                        }
- 195                    }
- 196                }
- 197                uiState.error?.let {
- 198                    Spacer(Modifier.height(8.dp))
- 199                    Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(horizontal = 16.dp))
- 200                }
- 201            }
- 202        }
- 203    }
- 204    
+ 156    
+ 157        Scaffold(
+ 158            topBar = {
+ 159                TopAppBar(
+ 160                    title = { Text("Overview", fontWeight = FontWeight.Bold) },
+ 161                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 162                    actions = {
+ 163                        TextButton(onClick = { onSave(name) }, enabled = !uiState.saving && name.isNotBlank()) {
+ 164                            if (uiState.saving) CircularProgressIndicator(Modifier.size(16.dp), strokeWidth = 2.dp, color = NexusBlurple)
+ 165                            else Text("Save", color = NexusBlurple, fontWeight = FontWeight.Bold)
+ 166                        }
+ 167                    },
+ 168                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 169                )
+ 170            },
+ 171            containerColor = NexusDark,
+ 172        ) { padding ->
+ 173            Column(Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState())) {
+ 174                Spacer(Modifier.height(16.dp))
+ 175                SectionHeader("Server Name")
+ 176                Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
+ 177                    OutlinedTextField(
+ 178                        value = name, onValueChange = { name = it }, singleLine = true,
+ 179                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+ 180                        colors = OutlinedTextFieldDefaults.colors(
+ 181                            focusedBorderColor      = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+ 182                            focusedContainerColor   = NexusDarkLight, unfocusedContainerColor = NexusDarkLight,
+ 183                        ),
+ 184                    )
+ 185                }
+ 186                Spacer(Modifier.height(24.dp))
+ 187                SectionHeader("Server Boost")
+ 188                Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
+ 189                    Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+ 190                        Icon(Icons.Default.Bolt, contentDescription = null, tint = NitroMid, modifier = Modifier.size(20.dp))
+ 191                        Spacer(Modifier.width(12.dp))
+ 192                        Column {
+ 193                            Text("Level ${guild?.boostTier ?: 0}", color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 194                            Text("${guild?.boostCount ?: 0} boosts", color = NexusTextMuted, fontSize = 12.sp)
+ 195                        }
+ 196                    }
+ 197                }
+ 198                uiState.error?.let {
+ 199                    Spacer(Modifier.height(8.dp))
+ 200                    Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(horizontal = 16.dp))
+ 201                }
+ 202            }
+ 203        }
+ 204    }
  205    
- 206    // ── Members ───────────────────────────────────────────────────────────────────
- 207    @OptIn(ExperimentalMaterial3Api::class)
- 208    @Composable
- 209    private fun MembersSubScreen(members: List<MemberResponse>, roles: List<RoleResponse>, onBack: () -> Unit) {
- 210        var query   by remember { mutableStateOf("") }
- 211        val roleMap = remember(roles) { roles.associateBy { it.id } }
- 212        val filtered = members.filter {
- 213            query.isBlank() || it.user?.username?.contains(query, true) == true || it.nickname?.contains(query, true) == true
- 214        }
- 215    
- 216        Scaffold(
- 217            topBar = {
- 218                TopAppBar(
- 219                    title = { Text("Members", fontWeight = FontWeight.Bold) },
- 220                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
- 221                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
- 222                )
- 223            },
- 224            containerColor = NexusDark,
- 225        ) { padding ->
- 226            Column(Modifier.fillMaxSize().padding(padding)) {
- 227                OutlinedTextField(
- 228                    value = query, onValueChange = { query = it },
- 229                    placeholder = { Text("Search Members", color = NexusTextMuted) },
- 230                    leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
- 231                    singleLine = true,
- 232                    modifier = Modifier.fillMaxWidth().padding(12.dp),
- 233                    shape = RoundedCornerShape(24.dp),
- 234                    colors = OutlinedTextFieldDefaults.colors(
- 235                        focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
- 236                        focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
- 237                    ),
- 238                )
- 239                LazyColumn(Modifier.fillMaxSize()) {
- 240                    items(filtered, key = { it.userId }) { member ->
- 241                        MemberListRow(member, roleMap)
- 242                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
- 243                    }
- 244                }
- 245            }
- 246        }
- 247    }
- 248    
- 249    @Composable
- 250    private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleResponse>) {
- 251        val displayName = member.nickname ?: member.user?.username ?: member.userId
- 252        val statusColor = when (member.user?.status) {
- 253            "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
- 254        }
- 255        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.Top) {
- 256            Box(Modifier.size(44.dp)) {
- 257                Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
- 258                    if (member.user?.avatar != null)
- 259                        AsyncImage(model = member.user.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
- 260                    else
- 261                        Text(displayName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
- 262                }
- 263                Box(Modifier.size(12.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
- 264                    Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
- 265                }
- 266            }
- 267            Spacer(Modifier.width(12.dp))
- 268            Column(Modifier.weight(1f)) {
- 269                Text(displayName, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
- 270                member.user?.let { Text("${it.username}#${it.discriminator}", color = NexusTextMuted, fontSize = 12.sp) }
- 271                if (member.roles.isNotEmpty()) {
- 272                    Spacer(Modifier.height(6.dp))
- 273                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
- 274                        member.roles.take(4).forEach { roleId ->
- 275                            val role = roleMap[roleId]
- 276                            val rc   = if ((role?.color ?: 0) != 0) Color(0xFF000000 or role!!.color.toLong()) else NexusOutline
- 277                            Surface(shape = RoundedCornerShape(4.dp), color = rc.copy(alpha = 0.2f)) {
- 278                                Row(Modifier.padding(horizontal = 6.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
- 279                                    Box(Modifier.size(8.dp).clip(CircleShape).background(rc))
- 280                                    Spacer(Modifier.width(4.dp))
- 281                                    Text(role?.name ?: roleId, color = NexusTextPrimary, fontSize = 11.sp)
- 282                                }
- 283                            }
- 284                        }
- 285                        if (member.roles.size > 4) Text("+${member.roles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
- 286                    }
- 287                }
- 288            }
- 289            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
- 290        }
- 291    }
- 292    
+ 206    
+ 207    // ── Members ───────────────────────────────────────────────────────────────────
+ 208    @OptIn(ExperimentalMaterial3Api::class)
+ 209    @Composable
+ 210    private fun MembersSubScreen(members: List<MemberResponse>, roles: List<RoleResponse>, onBack: () -> Unit) {
+ 211        var query   by remember { mutableStateOf("") }
+ 212        val roleMap = remember(roles) { roles.associateBy { it.id } }
+ 213        val filtered = members.filter {
+ 214            query.isBlank() || it.user?.username?.contains(query, true) == true || it.nickname?.contains(query, true) == true
+ 215        }
+ 216    
+ 217        Scaffold(
+ 218            topBar = {
+ 219                TopAppBar(
+ 220                    title = { Text("Members", fontWeight = FontWeight.Bold) },
+ 221                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 222                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 223                )
+ 224            },
+ 225            containerColor = NexusDark,
+ 226        ) { padding ->
+ 227            Column(Modifier.fillMaxSize().padding(padding)) {
+ 228                OutlinedTextField(
+ 229                    value = query, onValueChange = { query = it },
+ 230                    placeholder = { Text("Search Members", color = NexusTextMuted) },
+ 231                    leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+ 232                    singleLine = true,
+ 233                    modifier = Modifier.fillMaxWidth().padding(12.dp),
+ 234                    shape = RoundedCornerShape(24.dp),
+ 235                    colors = OutlinedTextFieldDefaults.colors(
+ 236                        focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+ 237                        focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+ 238                    ),
+ 239                )
+ 240                LazyColumn(Modifier.fillMaxSize()) {
+ 241                    items(filtered, key = { it.userId }) { member ->
+ 242                        MemberListRow(member, roleMap)
+ 243                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+ 244                    }
+ 245                }
+ 246            }
+ 247        }
+ 248    }
+ 249    
+ 250    @Composable
+ 251    private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleResponse>) {
+ 252        val displayName = member.nickname ?: member.user?.username ?: member.userId
+ 253        val statusColor = when (member.user?.status) {
+ 254            "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
+ 255        }
+ 256        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.Top) {
+ 257            Box(Modifier.size(44.dp)) {
+ 258                Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+ 259                    if (member.user?.avatar != null)
+ 260                        AsyncImage(model = member.user.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
+ 261                    else
+ 262                        Text(displayName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+ 263                }
+ 264                Box(Modifier.size(12.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
+ 265                    Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
+ 266                }
+ 267            }
+ 268            Spacer(Modifier.width(12.dp))
+ 269            Column(Modifier.weight(1f)) {
+ 270                Text(displayName, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 271                member.user?.let { Text("${it.username}#${it.discriminator}", color = NexusTextMuted, fontSize = 12.sp) }
+ 272                if (member.roles.isNotEmpty()) {
+ 273                    Spacer(Modifier.height(6.dp))
+ 274                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+ 275                        member.roles.take(4).forEach { roleId ->
+ 276                            val role = roleMap[roleId]
+ 277                            val rc   = if ((role?.color ?: 0) != 0) Color(0xFF000000 or role!!.color.toLong()) else NexusOutline
+ 278                            Surface(shape = RoundedCornerShape(4.dp), color = rc.copy(alpha = 0.2f)) {
+ 279                                Row(Modifier.padding(horizontal = 6.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
+ 280                                    Box(Modifier.size(8.dp).clip(CircleShape).background(rc))
+ 281                                    Spacer(Modifier.width(4.dp))
+ 282                                    Text(role?.name ?: roleId, color = NexusTextPrimary, fontSize = 11.sp)
+ 283                                }
+ 284                            }
+ 285                        }
+ 286                        if (member.roles.size > 4) Text("+${member.roles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
+ 287                    }
+ 288                }
+ 289            }
+ 290            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+ 291        }
+ 292    }
  293    
- 294    // ── Roles ─────────────────────────────────────────────────────────────────────
- 295    @OptIn(ExperimentalMaterial3Api::class)
- 296    @Composable
- 297    private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
- 298        var query    by remember { mutableStateOf("") }
- 299        val everyone = roles.firstOrNull { it.name == "@everyone" }
- 300        val rest     = roles.filter { it.name != "@everyone" && (query.isBlank() || it.name.contains(query, true)) }.sortedByDescending { it.position }
- 301    
- 302        Scaffold(
- 303            topBar = {
- 304                TopAppBar(
- 305                    title = { Text("Server Roles", fontWeight = FontWeight.Bold) },
- 306                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
- 307                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
- 308                )
- 309            },
- 310            containerColor = NexusDark,
- 311        ) { padding ->
- 312            Column(Modifier.fillMaxSize().padding(padding)) {
- 313                OutlinedTextField(
- 314                    value = query, onValueChange = { query = it },
- 315                    placeholder = { Text("Search", color = NexusTextMuted) },
- 316                    leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
- 317                    singleLine = true,
- 318                    modifier = Modifier.fillMaxWidth().padding(12.dp),
- 319                    shape = RoundedCornerShape(24.dp),
- 320                    colors = OutlinedTextFieldDefaults.colors(
- 321                        focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
- 322                        focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
- 323                    ),
- 324                )
- 325                Text("Use roles to group your server members and assign permissions.",
- 326 ❌                 color = NexusTextMuted, fontSize = 13.sp, modifier = Modifier.padding(horizontal = 16.dp, bottom = 8.dp))
- 327                LazyColumn(Modifier.fillMaxSize()) {
- 328                    everyone?.let { ev ->
- 329                        item {
- 330                            RoleListRow(ev)
- 331                            HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
- 332                        }
- 333                    }
- 334                    if (rest.isNotEmpty()) {
- 335                        item {
- 336                            Text("ROLES — ${rest.size}", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
- 337                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
- 338                        }
- 339                        items(rest, key = { it.id }) { role ->
- 340                            RoleListRow(role)
- 341                            HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
- 342                        }
- 343                    }
- 344                }
- 345            }
- 346        }
- 347    }
- 348    
- 349    @Composable
- 350    private fun RoleListRow(role: RoleResponse) {
- 351        val rc = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
- 352        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
- 353            Box(Modifier.size(36.dp).clip(CircleShape).background(rc.copy(alpha = 0.15f)), contentAlignment = Alignment.Center) {
- 354                Icon(Icons.Default.Shield, null, tint = rc, modifier = Modifier.size(20.dp))
- 355            }
- 356            Spacer(Modifier.width(12.dp))
- 357            Column(Modifier.weight(1f)) {
- 358                Text(role.name, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
- 359                Text("${role.memberCount} Members", color = NexusTextMuted, fontSize = 12.sp)
- 360            }
- 361            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
- 362        }
- 363    }
- 364    
- 365    
- 366    // ── Invites ───────────────────────────────────────────────────────────────────
- 367    @OptIn(ExperimentalMaterial3Api::class)
- 368    @Composable
- 369    private fun InvitesSubScreen(invites: List<GuildInviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
- 370        val isoFmt = remember { SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) }
- 371        Scaffold(
- 372            topBar = {
- 373                TopAppBar(
- 374                    title = { Text("Invites", fontWeight = FontWeight.Bold) },
- 375                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
- 376                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
- 377                )
- 378            },
- 379            containerColor = NexusDark,
- 380        ) { padding ->
- 381            if (invites.isEmpty()) {
- 382                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
- 383                    Text("No active invites", color = NexusTextMuted, fontSize = 14.sp)
- 384                }
- 385            } else {
- 386                LazyColumn(Modifier.fillMaxSize().padding(padding).padding(horizontal = 12.dp, vertical = 8.dp),
- 387                    verticalArrangement = Arrangement.spacedBy(8.dp)) {
- 388                    items(invites, key = { it.code }) { invite ->
- 389                        InviteCard(invite, isoFmt) { onDelete(invite.code) }
- 390                    }
- 391                }
- 392            }
- 393        }
- 394    }
- 395    
- 396    @Composable
- 397    private fun InviteCard(invite: GuildInviteResponse, isoFmt: SimpleDateFormat, onDelete: () -> Unit) {
- 398        var showMenu by remember { mutableStateOf(false) }
- 399        val expiryText = remember(invite.expiresAt) {
- 400            if (invite.expiresAt == null) "Never expires"
- 401            else try {
- 402                val diff = (isoFmt.parse(invite.expiresAt)?.time ?: 0L) - System.currentTimeMillis()
- 403                if (diff <= 0) "Expired"
- 404                else "%02d:%02d:%02d".format(diff / 3_600_000, (diff % 3_600_000) / 60_000, (diff % 60_000) / 1_000)
- 405                    .let { "Expires in: $it" }
- 406            } catch (_: Exception) { "Unknown" }
- 407        }
- 408        Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
- 409            Row(Modifier.padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
- 410                Column(Modifier.weight(1f)) {
- 411                    Text(invite.code, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp)
- 412                    val ch     = invite.channel
- 413                    val prefix = if (ch?.type == "voice") "🔊" else "#"
- 414                    Text("$prefix ${ch?.name ?: invite.channelId}", color = NexusTextMuted, fontSize = 13.sp)
- 415                    Spacer(Modifier.height(4.dp))
- 416                    Row(verticalAlignment = Alignment.CenterVertically) {
- 417                        Icon(Icons.Default.Schedule, null, tint = NexusGreen, modifier = Modifier.size(13.dp))
- 418                        Spacer(Modifier.width(4.dp))
- 419                        Text(expiryText, color = NexusGreen, fontSize = 12.sp)
- 420                    }
- 421                    invite.creator?.let { u ->
- 422                        Spacer(Modifier.height(4.dp))
- 423                        Row(verticalAlignment = Alignment.CenterVertically) {
- 424                            Box(Modifier.size(20.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
- 425                                Text(u.username.take(1).uppercase(), color = Color.White, fontSize = 10.sp)
- 426                            }
- 427                            Spacer(Modifier.width(6.dp))
- 428                            Text(u.username, color = NexusTextMuted, fontSize = 12.sp)
- 429                            Spacer(Modifier.width(12.dp))
- 430                            Text("Uses: ${invite.uses}", color = NexusTextPrimary, fontSize = 12.sp)
- 431                        }
- 432                    }
- 433                }
- 434                Box {
- 435                    IconButton(onClick = { showMenu = true }) { Icon(Icons.Default.MoreVert, null, tint = NexusTextMuted) }
- 436                    DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
- 437                        DropdownMenuItem(
- 438                            text = { Text("Revoke Invite", color = NexusRed) },
- 439                            onClick = { showMenu = false; onDelete() },
- 440                            leadingIcon = { Icon(Icons.Default.Delete, null, tint = NexusRed) },
- 441                        )
- 442                    }
- 443                }
- 444            }
- 445        }
- 446    }
- 447    
- 448    
- 449    // ── Channels ──────────────────────────────────────────────────────────────────
- 450    @OptIn(ExperimentalMaterial3Api::class)
- 451    @Composable
- 452    private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Unit) {
- 453        val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
- 454        val uncategorized = channels.filter { it.type != "category" && it.parentId == null }.sortedBy { it.position }
- 455        Scaffold(
- 456            topBar = {
- 457                TopAppBar(
- 458                    title = { Text("Channels", fontWeight = FontWeight.Bold) },
- 459                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
- 460                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
- 461                )
- 462            },
- 463            containerColor = NexusDark,
- 464        ) { padding ->
- 465            LazyColumn(Modifier.fillMaxSize().padding(padding)) {
- 466                items(uncategorized) { ch -> ChannelSettingsRow(ch) }
- 467                categories.forEach { cat ->
- 468                    item {
- 469 ❌                     Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, top = 16.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
- 470                            Text(cat.name.uppercase(), color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
- 471                            TextButton(onClick = {}) { Text("Edit", color = NexusBlurple, fontSize = 12.sp) }
- 472                        }
- 473                    }
- 474                    items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch -> ChannelSettingsRow(ch) }
- 475                }
- 476            }
- 477        }
- 478    }
- 479    
- 480    @Composable
- 481    private fun ChannelSettingsRow(channel: ChannelResponse) {
- 482        val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
- 483        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
- 484            Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
- 485            Spacer(Modifier.width(8.dp))
- 486            Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
- 487            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
- 488        }
- 489        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
- 490    }
+ 294    
+ 295    // ── Roles ─────────────────────────────────────────────────────────────────────
+ 296    @OptIn(ExperimentalMaterial3Api::class)
+ 297    @Composable
+ 298    private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
+ 299        var query    by remember { mutableStateOf("") }
+ 300        val everyone = roles.firstOrNull { it.name == "@everyone" }
+ 301        val rest     = roles.filter { it.name != "@everyone" && (query.isBlank() || it.name.contains(query, true)) }.sortedByDescending { it.position }
+ 302    
+ 303        Scaffold(
+ 304            topBar = {
+ 305                TopAppBar(
+ 306                    title = { Text("Server Roles", fontWeight = FontWeight.Bold) },
+ 307                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 308                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 309                )
+ 310            },
+ 311            containerColor = NexusDark,
+ 312        ) { padding ->
+ 313            Column(Modifier.fillMaxSize().padding(padding)) {
+ 314                OutlinedTextField(
+ 315                    value = query, onValueChange = { query = it },
+ 316                    placeholder = { Text("Search", color = NexusTextMuted) },
+ 317                    leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+ 318                    singleLine = true,
+ 319                    modifier = Modifier.fillMaxWidth().padding(12.dp),
+ 320                    shape = RoundedCornerShape(24.dp),
+ 321                    colors = OutlinedTextFieldDefaults.colors(
+ 322                        focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+ 323                        focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+ 324                    ),
+ 325                )
+ 326                // FIX line 326: padding(horizontal=..., bottom=...) is invalid — expand to explicit sides
+ 327                Text("Use roles to group your server members and assign permissions.",
+ 328                    color = NexusTextMuted, fontSize = 13.sp, modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 8.dp))
+ 329                LazyColumn(Modifier.fillMaxSize()) {
+ 330                    everyone?.let { ev ->
+ 331                        item {
+ 332                            RoleListRow(ev)
+ 333                            HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+ 334                        }
+ 335                    }
+ 336                    if (rest.isNotEmpty()) {
+ 337                        item {
+ 338                            Text("ROLES — ${rest.size}", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
+ 339                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+ 340                        }
+ 341                        items(rest, key = { it.id }) { role ->
+ 342                            RoleListRow(role)
+ 343                            HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+ 344                        }
+ 345                    }
+ 346                }
+ 347            }
+ 348        }
+ 349    }
+ 350    
+ 351    @Composable
+ 352    private fun RoleListRow(role: RoleResponse) {
+ 353        val roleColor = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
+ 354        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+ 355            Box(Modifier.size(32.dp).clip(CircleShape).background(roleColor.copy(alpha = 0.2f)), contentAlignment = Alignment.Center) {
+ 356                Box(Modifier.size(14.dp).clip(CircleShape).background(roleColor))
+ 357            }
+ 358            Spacer(Modifier.width(12.dp))
+ 359            Column(Modifier.weight(1f)) {
+ 360                Text(role.name, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 361                Text("${role.memberCount ?: 0} members", color = NexusTextMuted, fontSize = 12.sp)
+ 362            }
+ 363            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+ 364        }
+ 365    }
+ 366    
+ 367    
+ 368    // ── Invites ───────────────────────────────────────────────────────────────────
+ 369    @OptIn(ExperimentalMaterial3Api::class)
+ 370    @Composable
+ 371    private fun InvitesSubScreen(invites: List<InviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
+ 372        val sdf = remember { SimpleDateFormat("MMM d, yyyy", Locale.getDefault()) }
+ 373    
+ 374        Scaffold(
+ 375            topBar = {
+ 376                TopAppBar(
+ 377                    title = { Text("Invites", fontWeight = FontWeight.Bold) },
+ 378                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 379                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 380                )
+ 381            },
+ 382            containerColor = NexusDark,
+ 383        ) { padding ->
+ 384            if (invites.isEmpty()) {
+ 385                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+ 386                    Text("No active invites", color = NexusTextMuted)
+ 387                }
+ 388            } else {
+ 389                LazyColumn(Modifier.fillMaxSize().padding(padding)) {
+ 390                    items(invites, key = { it.code }) { invite ->
+ 391                        InviteRow(invite, sdf, onDelete)
+ 392                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 16.dp))
+ 393                    }
+ 394                }
+ 395            }
+ 396        }
+ 397    }
+ 398    
+ 399    @Composable
+ 400    private fun InviteRow(invite: InviteResponse, sdf: SimpleDateFormat, onDelete: (String) -> Unit) {
+ 401        var showConfirm by remember { mutableStateOf(false) }
+ 402    
+ 403        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+ 404            Column(Modifier.weight(1f)) {
+ 405                Text(invite.code, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 406 ❌             Text("Uses: ${invite.uses}${invite.maxUses?.let { "/$it" } ?: ""}  •  by ${invite.inviter?.username ?: "?"}",
+ 407                    color = NexusTextMuted, fontSize = 12.sp)
+ 408                invite.expiresAt?.let {
+ 409                    Text("Expires ${sdf.format(it)}", color = NexusTextMuted, fontSize = 12.sp)
+ 410                }
+ 411            }
+ 412            IconButton(onClick = { showConfirm = true }) {
+ 413                Icon(Icons.Default.Delete, null, tint = NexusRed)
+ 414            }
+ 415        }
+ 416    
+ 417        if (showConfirm) {
+ 418            AlertDialog(
+ 419                onDismissRequest = { showConfirm = false },
+ 420                title = { Text("Delete Invite") },
+ 421                text  = { Text("Delete invite ${invite.code}?") },
+ 422                confirmButton = {
+ 423                    TextButton(onClick = { onDelete(invite.code); showConfirm = false }) {
+ 424                        Text("Delete", color = NexusRed)
+ 425                    }
+ 426                },
+ 427                dismissButton = {
+ 428                    TextButton(onClick = { showConfirm = false }) { Text("Cancel") }
+ 429                },
+ 430                containerColor = NexusDarkMedium,
+ 431            )
+ 432        }
+ 433    }
+ 434    
+ 435    
+ 436    // ── Channels ──────────────────────────────────────────────────────────────────
+ 437    @OptIn(ExperimentalMaterial3Api::class)
+ 438    @Composable
+ 439    private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Unit) {
+ 440 ❌     val categories    = channels.filter { it.type == 4 }.sortedBy { it.position }
+ 441 ❌     val uncategorized = channels.filter { it.type != 4 && it.parentId == null }.sortedBy { it.position }
+ 442    
+ 443        Scaffold(
+ 444            topBar = {
+ 445                TopAppBar(
+ 446                    title = { Text("Channels", fontWeight = FontWeight.Bold) },
+ 447                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 448                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 449                )
+ 450            },
+ 451            containerColor = NexusDark,
+ 452        ) { padding ->
+ 453            LazyColumn(Modifier.fillMaxSize().padding(padding)) {
+ 454                items(uncategorized) { ch -> ChannelSettingsRow(ch) }
+ 455                categories.forEach { cat ->
+ 456                    item {
+ 457                        // FIX line 469: padding(horizontal=..., top=..., bottom=...) is invalid — expand to explicit sides
+ 458                        Row(Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+ 459                            Text(cat.name.uppercase(), color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+ 460                            TextButton(onClick = {}) { Text("Edit", color = NexusBlurple, fontSize = 12.sp) }
+ 461                        }
+ 462                    }
+ 463                    items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch -> ChannelSettingsRow(ch) }
+ 464                }
+ 465            }
+ 466        }
+ 467    }
+ 468    
+ 469    @Composable
+ 470    private fun ChannelSettingsRow(channel: ChannelResponse) {
+ 471        val icon = when (channel.type) {
+ 472 ❌         2    -> Icons.Default.VolumeUp
+ 473 ❌         4    -> Icons.Default.Folder
+ 474            else -> Icons.Default.Tag
+ 475        }
+ 476        Row(Modifier.fillMaxWidth().clickable { }.padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+ 477            Icon(icon, null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+ 478            Spacer(Modifier.width(12.dp))
+ 479            Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
+ 480            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+ 481        }
+ 482        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 46.dp))
+ 483    }
 
 

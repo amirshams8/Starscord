@@ -12,8 +12,12 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:326:79 None of the following candidates is applicable:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:469:49 None of the following candidates is applicable:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:54:49 Argument type mismatch: actual type is 'kotlin.collections.List<com.nexus.android.data.api.models.GuildInviteResponse>', but 'kotlin.collections.List<com.nexus.android.data.api.models.InviteResponse>' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:406:95 Unresolved reference 'inviter'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:440:43 Operator '==' cannot be applied to 'kotlin.String' and 'kotlin.Int'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:441:43 Operator '!=' cannot be applied to 'kotlin.String' and 'kotlin.Int'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:472:9 Incompatible types 'kotlin.String' and 'kotlin.Int'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:473:9 Incompatible types 'kotlin.String' and 'kotlin.Int'.
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -541,7 +545,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-BUILD FAILED in 58s
+BUILD FAILED in 53s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
