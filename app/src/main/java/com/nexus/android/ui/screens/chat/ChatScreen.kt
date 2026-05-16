@@ -11,12 +11,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Send
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -39,6 +34,7 @@ fun ChatScreen(
     channelId: String,
     guildId: String,
     onBack: () -> Unit,
+    onOpenMembers: (String, String) -> Unit,
     vm: ChatViewModel = hiltViewModel(),
 ) {
     val messages    by vm.messages.collectAsState()
@@ -54,8 +50,22 @@ fun ChatScreen(
 
     Column(modifier = Modifier.fillMaxSize().background(NexusDarkLight)) {
         TopAppBar(
-            title = { Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp) },
+            title = {
+                Row(
+                    modifier = Modifier.clickable { onOpenMembers(channelId, guildId) },
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                    Spacer(Modifier.width(4.dp))
+                    Text("›", color = NexusTextMuted, fontSize = 18.sp)
+                }
+            },
             navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, contentDescription = "Back") } },
+            actions = {
+                IconButton(onClick = { onOpenMembers(channelId, guildId) }) {
+                    Icon(Icons.Default.People, contentDescription = "Members", tint = NexusTextMuted)
+                }
+            },
             colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
         )
 
@@ -175,7 +185,7 @@ fun MessageItem(
 ) {
     val sdf    = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
     val parser = remember { SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) }
-    var showMenu by remember { mutableStateOf(false) }
+    var showMenu          by remember { mutableStateOf(false) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
     if (showDeleteConfirm) {
@@ -231,7 +241,6 @@ fun MessageItem(
                 if (!message.reactions.isNullOrEmpty()) {
                     Row(horizontalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 4.dp)) {
                         message.reactions.take(10).forEach { r ->
-                            // FIX: use Surface onClick instead of Modifier.clickable to avoid unresolved reference
                             Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, onClick = { onReact(r.emoji) }) {
                                 Text("${r.emoji} ${r.count}", modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                                     fontSize = 12.sp, color = NexusTextPrimary)

@@ -13,11 +13,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.ExitToApp
-import androidx.compose.material.icons.filled.Link
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -41,6 +37,7 @@ fun HomeScreen(
     onOpenVoice: (String) -> Unit,
     onOpenProfile: () -> Unit,
     onOpenSettings: () -> Unit,
+    onOpenServerSettings: (String) -> Unit,
     vm: HomeViewModel = hiltViewModel(),
 ) {
     val guilds        by vm.guilds.collectAsState()
@@ -65,16 +62,24 @@ fun HomeScreen(
         })
 
     Row(modifier = Modifier.fillMaxSize().background(NexusDark)) {
-        ServerRail(guilds = guilds, selectedId = selectedGuild?.id, onSelect = vm::selectGuild,
-            onAddServer = vm::showCreateGuildDialog, onJoinServer = vm::showJoinGuildDialog, onOpenProfile = onOpenProfile)
+        ServerRail(
+            guilds       = guilds,
+            selectedId   = selectedGuild?.id,
+            onSelect     = vm::selectGuild,
+            onAddServer  = vm::showCreateGuildDialog,
+            onJoinServer = vm::showJoinGuildDialog,
+            onOpenProfile = onOpenProfile,
+        )
         if (selectedGuild != null) {
             ChannelSidebar(
-                guild = selectedGuild!!, channels = channels,
-                onSelect = { ch -> if (ch.type == "voice") onOpenVoice(ch.id) else onOpenChannel(ch.id, selectedGuild!!.id) },
-                onLeaveGuild = { vm.leaveGuild(selectedGuild!!.id) },
+                guild           = selectedGuild!!,
+                channels        = channels,
+                onSelect        = { ch -> if (ch.type == "voice") onOpenVoice(ch.id) else onOpenChannel(ch.id, selectedGuild!!.id) },
+                onLeaveGuild    = { vm.leaveGuild(selectedGuild!!.id) },
                 onCreateChannel = vm::showCreateChannelDialog,
-                onInvite = { vm.generateInvite(it) },
-                onOpenSettings = onOpenSettings,
+                onInvite        = { vm.generateInvite(it) },
+                onOpenSettings  = onOpenSettings,
+                onOpenServerSettings = { onOpenServerSettings(selectedGuild!!.id) },
             )
         } else {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -95,22 +100,32 @@ fun ServerRail(
     onJoinServer: () -> Unit, onOpenProfile: () -> Unit,
 ) {
     var showAddMenu by remember { mutableStateOf(false) }
-    Column(modifier = Modifier.width(72.dp).fillMaxHeight().background(NexusDark).padding(vertical = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusBlurple).clickable(onClick = onOpenProfile),
-            contentAlignment = Alignment.Center) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
+    Column(
+        modifier = Modifier.width(72.dp).fillMaxHeight().background(NexusDark).padding(vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Box(
+            modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusBlurple).clickable(onClick = onOpenProfile),
+            contentAlignment = Alignment.Center,
+        ) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
 
         Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
-        LazyColumn(modifier = Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        LazyColumn(
+            modifier = Modifier.weight(1f),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
             items(guilds, key = { it.id }) { guild ->
                 val selected = guild.id == selectedId
-                Box(modifier = Modifier.size(48.dp)
-                    .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape)
-                    .background(if (selected) NexusBlurple else NexusDarkMedium)
-                    .clickable { onSelect(guild) },
-                    contentAlignment = Alignment.Center) {
+                Box(
+                    modifier = Modifier
+                        .size(48.dp)
+                        .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape)
+                        .background(if (selected) NexusBlurple else NexusDarkMedium)
+                        .clickable { onSelect(guild) },
+                    contentAlignment = Alignment.Center,
+                ) {
                     if (guild.icon != null)
                         AsyncImage(model = guild.icon, contentDescription = guild.name, modifier = Modifier.fillMaxSize())
                     else
@@ -122,8 +137,10 @@ fun ServerRail(
         Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
         Box {
-            Box(modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusDarkMedium).clickable { showAddMenu = true },
-                contentAlignment = Alignment.Center) {
+            Box(
+                modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusDarkMedium).clickable { showAddMenu = true },
+                contentAlignment = Alignment.Center,
+            ) {
                 Icon(Icons.Default.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(28.dp))
             }
             DropdownMenu(expanded = showAddMenu, onDismissRequest = { showAddMenu = false }) {
@@ -136,27 +153,33 @@ fun ServerRail(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ChannelSidebar(
     guild: GuildResponse, channels: List<ChannelResponse>,
     onSelect: (ChannelResponse) -> Unit, onLeaveGuild: () -> Unit,
-    onCreateChannel: () -> Unit, onInvite: (channelId: String) -> Unit, onOpenSettings: () -> Unit,
+    onCreateChannel: () -> Unit, onInvite: (channelId: String) -> Unit,
+    onOpenSettings: () -> Unit, onOpenServerSettings: () -> Unit,
 ) {
     var showGuildMenu    by remember { mutableStateOf(false) }
     var showLeaveConfirm by remember { mutableStateOf(false) }
 
     if (showLeaveConfirm) {
-        AlertDialog(onDismissRequest = { showLeaveConfirm = false },
+        AlertDialog(
+            onDismissRequest = { showLeaveConfirm = false },
             title = { Text("Leave '${guild.name}'?") },
             text  = { Text("You won't be able to rejoin without an invite.") },
             confirmButton = { TextButton(onClick = { showLeaveConfirm = false; onLeaveGuild() }) { Text("Leave", color = NexusRed) } },
-            dismissButton = { TextButton(onClick = { showLeaveConfirm = false }) { Text("Cancel") } })
+            dismissButton = { TextButton(onClick = { showLeaveConfirm = false }) { Text("Cancel") } },
+        )
     }
 
     Column(modifier = Modifier.width(240.dp).fillMaxHeight().background(NexusDarkMedium)) {
         Box {
-            Row(modifier = Modifier.fillMaxWidth().clickable { showGuildMenu = true }.padding(horizontal = 16.dp, vertical = 12.dp),
-                verticalAlignment = Alignment.CenterVertically) {
+            Row(
+                modifier = Modifier.fillMaxWidth().clickable { showGuildMenu = true }.padding(horizontal = 16.dp, vertical = 12.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
                 Text(guild.name, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 15.sp, modifier = Modifier.weight(1f))
                 Text("▾", color = NexusTextMuted, fontSize = 12.sp)
             }
@@ -167,6 +190,9 @@ fun ChannelSidebar(
                 DropdownMenuItem(text = { Text("Create Channel") },
                     onClick = { showGuildMenu = false; onCreateChannel() },
                     leadingIcon = { Icon(Icons.Default.Add, contentDescription = null, tint = NexusBlurple) })
+                DropdownMenuItem(text = { Text("Server Settings") },
+                    onClick = { showGuildMenu = false; onOpenServerSettings() },
+                    leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted) })
                 Divider(color = NexusOutline)
                 DropdownMenuItem(text = { Text("Leave Server", color = NexusRed) },
                     onClick = { showGuildMenu = false; showLeaveConfirm = true },
@@ -183,9 +209,12 @@ fun ChannelSidebar(
             items(uncategorized) { ch -> ChannelRow(ch, { onSelect(ch) }, { onInvite(ch.id) }) }
             categories.forEach { cat ->
                 item {
-                    Row(modifier = Modifier.fillMaxWidth().padding(start = 16.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
-                        verticalAlignment = Alignment.CenterVertically) {
-                        Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted, modifier = Modifier.weight(1f))
+                    Row(
+                        modifier = Modifier.fillMaxWidth().padding(start = 16.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold,
+                            color = NexusTextMuted, modifier = Modifier.weight(1f))
                         Icon(Icons.Default.Add, contentDescription = "Add channel", tint = NexusTextMuted,
                             modifier = Modifier.size(16.dp).clickable { onCreateChannel() })
                     }
@@ -198,9 +227,12 @@ fun ChannelSidebar(
 
         Divider(color = NexusOutline)
 
-        Row(modifier = Modifier.fillMaxWidth().background(NexusDark).padding(horizontal = 8.dp, vertical = 6.dp),
-            verticalAlignment = Alignment.CenterVertically) {
-            Box(modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+        Row(
+            modifier = Modifier.fillMaxWidth().background(NexusDark).padding(horizontal = 8.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Box(modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple),
+                contentAlignment = Alignment.Center) {
                 Text("A", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
             }
             Spacer(Modifier.width(8.dp))
@@ -212,27 +244,28 @@ fun ChannelSidebar(
     }
 }
 
-// FIX: added @OptIn(ExperimentalFoundationApi::class) — this was the error on line 372
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ChannelRow(channel: ChannelResponse, onClick: () -> Unit, onInvite: () -> Unit) {
     var showMenu by remember { mutableStateOf(false) }
     val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
     Box {
-        Row(modifier = Modifier.fillMaxWidth()
-            .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
-            .padding(horizontal = 8.dp, vertical = 1.dp)
-            .clip(RoundedCornerShape(4.dp))
-            .padding(horizontal = 8.dp, vertical = 6.dp),
-            verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
+                .padding(horizontal = 8.dp, vertical = 1.dp)
+                .clip(RoundedCornerShape(4.dp))
+                .padding(horizontal = 8.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
             Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
             Spacer(Modifier.width(6.dp))
             Text(channel.name, color = NexusTextMuted, fontSize = 14.sp, modifier = Modifier.weight(1f))
         }
         DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
             if (channel.type == "text") {
-                DropdownMenuItem(text = { Text("Copy Invite Link") },
-                    onClick = { showMenu = false; onInvite() },
+                DropdownMenuItem(text = { Text("Copy Invite Link") }, onClick = { showMenu = false; onInvite() },
                     leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) })
             }
         }
@@ -294,7 +327,7 @@ fun JoinGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onJ
 
 @Composable
 fun CreateChannelDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onCreate: (String, String) -> Unit) {
-    var name by remember { mutableStateOf("") }
+    var name         by remember { mutableStateOf("") }
     var selectedType by remember { mutableStateOf("text") }
     Dialog(onDismissRequest = onDismiss) {
         Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
@@ -309,10 +342,12 @@ fun CreateChannelDialog(loading: Boolean, error: String?, onDismiss: () -> Unit,
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     listOf("text" to "# Text", "voice" to "🔊 Voice").forEach { (type, label) ->
                         val selected = selectedType == type
-                        Surface(shape = RoundedCornerShape(8.dp), color = if (selected) NexusBlurple else NexusDarkLight,
+                        Surface(shape = RoundedCornerShape(8.dp),
+                            color = if (selected) NexusBlurple else NexusDarkLight,
                             modifier = Modifier.clickable { selectedType = type }.weight(1f)) {
                             Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 10.dp)) {
-                                Text(label, color = if (selected) Color.White else NexusTextMuted, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                                Text(label, color = if (selected) Color.White else NexusTextMuted,
+                                    fontSize = 13.sp, fontWeight = FontWeight.Bold)
                             }
                         }
                     }

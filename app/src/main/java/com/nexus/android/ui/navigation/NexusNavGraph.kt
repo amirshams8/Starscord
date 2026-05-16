@@ -11,16 +11,24 @@ import com.nexus.android.ui.screens.auth.RegisterScreen
 import com.nexus.android.ui.screens.chat.ChatScreen
 import com.nexus.android.ui.screens.home.HomeScreen
 import com.nexus.android.ui.screens.profile.ProfileScreen
+import com.nexus.android.ui.screens.server.ChannelMembersScreen
+import com.nexus.android.ui.screens.server.ServerSettingsScreen
 import com.nexus.android.ui.screens.settings.SettingsScreen
 
 sealed class Screen(val route: String) {
-    object Login    : Screen("login")
-    object Register : Screen("register")
-    object Home     : Screen("home")
-    object Profile  : Screen("profile")
-    object Settings : Screen("settings")
-    object Chat     : Screen("chat/{channelId}/{guildId}") {
+    object Login          : Screen("login")
+    object Register       : Screen("register")
+    object Home           : Screen("home")
+    object Profile        : Screen("profile")
+    object Settings       : Screen("settings")
+    object Chat           : Screen("chat/{channelId}/{guildId}") {
         fun createRoute(c: String, g: String) = "chat/$c/$g"
+    }
+    object ServerSettings : Screen("server_settings/{guildId}") {
+        fun createRoute(g: String) = "server_settings/$g"
+    }
+    object ChannelMembers : Screen("channel_members/{channelId}/{guildId}") {
+        fun createRoute(c: String, g: String) = "channel_members/$c/$g"
     }
 }
 
@@ -45,10 +53,11 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
 
         composable(Screen.Home.route) {
             HomeScreen(
-                onOpenChannel  = { channelId, guildId -> nav.navigate(Screen.Chat.createRoute(channelId, guildId)) },
-                onOpenVoice    = { /* TODO: voice screen */ },
-                onOpenProfile  = { nav.navigate(Screen.Profile.route) },
-                onOpenSettings = { nav.navigate(Screen.Settings.route) },
+                onOpenChannel        = { channelId, guildId -> nav.navigate(Screen.Chat.createRoute(channelId, guildId)) },
+                onOpenVoice          = { },
+                onOpenProfile        = { nav.navigate(Screen.Profile.route) },
+                onOpenSettings       = { nav.navigate(Screen.Settings.route) },
+                onOpenServerSettings = { guildId -> nav.navigate(Screen.ServerSettings.createRoute(guildId)) },
             )
         }
 
@@ -71,6 +80,31 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
             ),
         ) { back ->
             ChatScreen(
+                channelId     = back.arguments?.getString("channelId") ?: return@composable,
+                guildId       = back.arguments?.getString("guildId")   ?: return@composable,
+                onBack        = { nav.popBackStack() },
+                onOpenMembers = { cId, gId -> nav.navigate(Screen.ChannelMembers.createRoute(cId, gId)) },
+            )
+        }
+
+        composable(
+            route     = Screen.ServerSettings.route,
+            arguments = listOf(navArgument("guildId") { type = NavType.StringType }),
+        ) { back ->
+            ServerSettingsScreen(
+                guildId = back.arguments?.getString("guildId") ?: return@composable,
+                onBack  = { nav.popBackStack() },
+            )
+        }
+
+        composable(
+            route     = Screen.ChannelMembers.route,
+            arguments = listOf(
+                navArgument("channelId") { type = NavType.StringType },
+                navArgument("guildId")   { type = NavType.StringType },
+            ),
+        ) { back ->
+            ChannelMembersScreen(
                 channelId = back.arguments?.getString("channelId") ?: return@composable,
                 guildId   = back.arguments?.getString("guildId")   ?: return@composable,
                 onBack    = { nav.popBackStack() },
