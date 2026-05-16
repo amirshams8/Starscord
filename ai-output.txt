@@ -1,447 +1,255 @@
-//===== FILE: app/src/main/java/com/nexus/android/data/api/models/Models.kt =====
-package com.nexus.android.data.api.models
+//===== TERMUXFILE: nexus/app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt =====
+package com.nexus.android.ui.screens.home
 
-import com.google.gson.annotations.SerializedName
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.nexus.android.data.api.NexusApi
+import com.nexus.android.data.api.models.ChannelResponse
+import com.nexus.android.data.api.models.CreateChannelRequest
+import com.nexus.android.data.api.models.CreateGuildRequest
+import com.nexus.android.data.api.models.GuildResponse
+import com.nexus.android.data.gateway.GatewayClient
+import com.google.gson.Gson
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-data class RegisterRequest(val username: String, val email: String, val password: String)
-data class LoginRequest(val email: String, val password: String, @SerializedName("mfaCode") val mfaCode: String? = null)
-data class LoginResponse(
-    @SerializedName("access_token") val accessToken: String,
-    @SerializedName("token_type") val tokenType: String,
-    @SerializedName("expires_in") val expiresIn: Int,
-    val user: UserResponse,
-)
-data class RefreshResponse(@SerializedName("access_token") val accessToken: String)
-data class MfaEnableResponse(val secret: String, @SerializedName("qr_code") val qrCode: String)
-data class MfaVerifyRequest(val code: String)
-data class SuccessResponse(val success: Boolean)
-
-data class UserResponse(
-    val id: String,
-    val username: String,
-    val discriminator: String,
-    val email: String? = null,
-    val avatar: String? = null,
-    @SerializedName("avatar_animated") val avatarAnimated: Boolean = false,
-    val banner: String? = null,
-    @SerializedName("banner_color") val bannerColor: String? = null,
-    val bio: String? = null,
-    val pronouns: String? = null,
-    val status: String = "online",
-    @SerializedName("custom_status") val customStatus: String? = null,
-    @SerializedName("nitro_type") val nitroType: String = "none",
-    @SerializedName("nitro_since") val nitroSince: String? = null,
-    val flags: Long = 0,
-    @SerializedName("created_at") val createdAt: String? = null,
+data class HomeUiState(
+    val loading: Boolean = false,
+    val error: String? = null,
+    val createGuildLoading: Boolean = false,
+    val createChannelLoading: Boolean = false,
+    val inviteCode: String? = null,
+    val showCreateGuildDialog: Boolean = false,
+    val showJoinGuildDialog: Boolean = false,
+    val showCreateChannelDialog: Boolean = false,
+    val showInviteDialog: Boolean = false,
 )
 
-data class UpdateUserRequest(
-    val username: String? = null,
-    val bio: String? = null,
-    val pronouns: String? = null,
-    val avatar: String? = null,
-    val banner: String? = null,
-    @SerializedName("banner_color") val bannerColor: String? = null,
-    @SerializedName("custom_status") val customStatus: String? = null,
-    val status: String? = null,
-)
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val api: NexusApi,
+    private val gateway: GatewayClient,
+) : ViewModel() {
 
-data class CreateGuildRequest(val name: String, val icon: String? = null)
-data class GuildResponse(
-    val id: String,
-    val name: String,
-    val icon: String? = null,
-    @SerializedName("icon_animated") val iconAnimated: Boolean = false,
-    val banner: String? = null,
-    @SerializedName("owner_id") val ownerId: String,
-    val description: String? = null,
-    @SerializedName("boost_count") val boostCount: Int = 0,
-    @SerializedName("boost_tier") val boostTier: Int = 0,
-    @SerializedName("vanity_url") val vanityUrl: String? = null,
-    val channels: List<ChannelResponse>? = null,
-    val roles: List<RoleResponse>? = null,
-    @SerializedName("joined_at") val joinedAt: String? = null,
-)
+    private val _guilds        = MutableStateFlow<List<GuildResponse>>(emptyList())
+    val guilds: StateFlow<List<GuildResponse>> = _guilds.asStateFlow()
 
-data class CreateChannelRequest(val name: String, val type: String = "text", val parentId: String? = null)
+    private val _selectedGuild = MutableStateFlow<GuildResponse?>(null)
+    val selectedGuild: StateFlow<GuildResponse?> = _selectedGuild.asStateFlow()
 
-data class ChannelResponse(
-    val id: String,
-    @SerializedName("guild_id") val guildId: String? = null,
-    val type: String,
-    val name: String,
-    val position: Int = 0,
-    val topic: String? = null,
-    val nsfw: Boolean = false,
-    val slowmode: Int = 0,
-    val bitrate: Int = 64000,
-    @SerializedName("user_limit") val userLimit: Int = 0,
-    @SerializedName("parent_id") val parentId: String? = null,
-    @SerializedName("last_message_id") val lastMessageId: String? = null,
-)
+    private val _channels      = MutableStateFlow<List<ChannelResponse>>(emptyList())
+    val channels: StateFlow<List<ChannelResponse>> = _channels.asStateFlow()
 
-data class MemberResponse(
-    @SerializedName("guild_id") val guildId: String,
-    @SerializedName("user_id") val userId: String,
-    val nickname: String? = null,
-    val roles: List<String> = emptyList(),
-    @SerializedName("joined_at") val joinedAt: String,
-    val user: UserResponse? = null,
-)
+    private val _uiState       = MutableStateFlow(HomeUiState())
+    val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
-data class RoleResponse(
-    val id: String,
-    @SerializedName("guild_id") val guildId: String,
-    val name: String,
-    val color: Int = 0,
-    val hoist: Boolean = false,
-    val position: Int = 0,
-    val permissions: String = "0",
-    val mentionable: Boolean = false,
-    @SerializedName("member_count") val memberCount: Int = 0,
-)
+    private val gson = Gson()
 
-data class SendMessageRequest(
-    val content: String? = null,
-    val tts: Boolean = false,
-    val embeds: List<Any>? = null,
-    val reference: MessageReferenceRequest? = null,
-)
-data class EditMessageRequest(val content: String)
-data class MessageReferenceRequest(@SerializedName("message_id") val messageId: String)
-data class MessageResponse(
-    val id: String,
-    @SerializedName("channel_id") val channelId: String,
-    val author: UserResponse? = null,
-    val content: String? = null,
-    val type: String = "default",
-    val pinned: Boolean = false,
-    val tts: Boolean = false,
-    val attachments: List<Any>? = null,
-    val embeds: List<Any>? = null,
-    val reactions: List<ReactionResponse>? = null,
-    val reference: MessageResponse? = null,
-    @SerializedName("edited_at") val editedAt: String? = null,
-    @SerializedName("created_at") val createdAt: String,
-)
-data class ReactionResponse(
-    val emoji: String,
-    val count: Int = 1,
-    @SerializedName("user_id") val userId: String? = null,
-)
+    init {
+        loadGuilds()
+        collectGatewayEvents()
+    }
 
-data class VoiceTokenRequest(@SerializedName("channelId") val channelId: String)
-data class VoiceLeaveRequest(@SerializedName("channelId") val channelId: String)
-data class VoiceTokenResponse(
-    val token: String,
-    @SerializedName("livekit_url") val livekitUrl: String,
-    @SerializedName("channel_id") val channelId: String,
-)
+    // ── Gateway consumer ───────────────────────────────────────────────────────
 
-data class NitroSubscribeRequest(val plan: String)
-data class BoostResponse(val success: Boolean, @SerializedName("boost_count") val boostCount: Int, val tier: Int)
-data class NitroPlansResponse(val plans: List<NitroPlan>)
-data class NitroPlan(val id: String, val name: String, val price: Int, val currency: String)
+    private fun collectGatewayEvents() = viewModelScope.launch {
+        gateway.events.collect { event ->
+            val guildId = event.data.optString("guild_id").takeIf { it.isNotEmpty() }
+            when (event.type) {
 
-data class InviteResponse(
-    val code: String,
-    val guild: GuildResponse,
-    val channel: ChannelResponse,
-    val uses: Int = 0,
-    @SerializedName("max_uses") val maxUses: Int = 0,
-    @SerializedName("expires_at") val expiresAt: String? = null,
-)
-data class CreateInviteRequest(
-    @SerializedName("max_uses") val maxUses: Int = 0,
-    @SerializedName("max_age") val maxAge: Int = 86400,
-)
-data class CreatedInviteResponse(
-    val code: String,
-    @SerializedName("guild_id") val guildId: String,
-    @SerializedName("channel_id") val channelId: String,
-)
-data class GuildInviteResponse(
-    val code: String,
-    @SerializedName("guild_id") val guildId: String,
-    @SerializedName("channel_id") val channelId: String,
-    val channel: ChannelResponse? = null,
-    val creator: UserResponse? = null,
-    val uses: Int = 0,
-    @SerializedName("max_uses") val maxUses: Int = 0,
-    @SerializedName("max_age") val maxAge: Int = 86400,
-    @SerializedName("expires_at") val expiresAt: String? = null,
-    @SerializedName("created_at") val createdAt: String? = null,
-)
-
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt =====
-package com.nexus.android.ui.screens.chat
-
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.AsyncImage
-import com.nexus.android.data.api.models.MessageResponse
-import com.nexus.android.ui.theme.*
-import java.text.SimpleDateFormat
-import java.util.Locale
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun ChatScreen(
-    channelId: String,
-    guildId: String,
-    onBack: () -> Unit,
-    onOpenMembers: (String, String) -> Unit,
-    vm: ChatViewModel = hiltViewModel(),
-) {
-    val messages    by vm.messages.collectAsState()
-    val channelName by vm.channelName.collectAsState()
-    val typingUsers by vm.typingUsers.collectAsState()
-    val uiState     by vm.uiState.collectAsState()
-    val listState   = rememberLazyListState()
-    var input       by remember { mutableStateOf("") }
-    var emojiPickerMessageId by remember { mutableStateOf<String?>(null) }
-
-    LaunchedEffect(channelId)     { vm.loadChannel(channelId, guildId) }
-    LaunchedEffect(messages.size) { if (messages.isNotEmpty()) listState.animateScrollToItem(messages.size - 1) }
-
-    Column(modifier = Modifier.fillMaxSize().background(NexusDarkLight)) {
-        TopAppBar(
-            title = {
-                Row(
-                    modifier = Modifier.clickable { onOpenMembers(channelId, guildId) },
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                    Spacer(Modifier.width(4.dp))
-                    Text("›", color = NexusTextMuted, fontSize = 18.sp)
-                }
-            },
-            navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, contentDescription = "Back") } },
-            actions = {
-                IconButton(onClick = { onOpenMembers(channelId, guildId) }) {
-                    Icon(Icons.Default.People, contentDescription = "Members", tint = NexusTextMuted)
-                }
-            },
-            colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
-        )
-
-        LazyColumn(
-            state = listState,
-            modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(2.dp),
-        ) {
-            items(messages, key = { it.id }) { msg ->
-                MessageItem(
-                    message      = msg,
-                    isOwn        = msg.author?.id == vm.currentUserId,
-                    editingId    = uiState.editingMessageId,
-                    editingText  = uiState.editingContent,
-                    onEditChange = vm::onEditContentChange,
-                    onEditSubmit = { vm.submitEdit(channelId) },
-                    onEditCancel = vm::cancelEditing,
-                    onEdit       = { vm.startEditing(msg) },
-                    onDelete     = { vm.deleteMessage(channelId, msg.id) },
-                    onReact      = { emoji -> vm.toggleReaction(channelId, msg.id, emoji) },
-                    onOpenEmoji  = { emojiPickerMessageId = msg.id },
-                )
-            }
-        }
-
-        if (emojiPickerMessageId != null) {
-            Surface(color = NexusDarkMedium) {
-                Row(
-                    modifier = Modifier.fillMaxWidth().padding(8.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                ) {
-                    listOf("👍","❤️","😂","😮","😢","🔥","🎉","✅").forEach { emoji ->
-                        Text(emoji, fontSize = 22.sp, modifier = Modifier.clickable {
-                            vm.toggleReaction(channelId, emojiPickerMessageId!!, emoji)
-                            emojiPickerMessageId = null
-                        })
+                "CHANNEL_CREATE" -> {
+                    // Only update if it belongs to the currently selected guild
+                    if (guildId != null && guildId == _selectedGuild.value?.id) {
+                        val channel = gson.fromJson(event.data.toString(), ChannelResponse::class.java)
+                        if (_channels.value.none { it.id == channel.id }) {
+                            _channels.value = (_channels.value + channel).sortedBy { it.position }
+                        }
                     }
-                    Spacer(Modifier.weight(1f))
-                    IconButton(onClick = { emojiPickerMessageId = null }, modifier = Modifier.size(28.dp)) {
-                        Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                }
+
+                "CHANNEL_UPDATE" -> {
+                    if (guildId != null && guildId == _selectedGuild.value?.id) {
+                        val channel = gson.fromJson(event.data.toString(), ChannelResponse::class.java)
+                        _channels.value = _channels.value.map {
+                            if (it.id == channel.id) channel else it
+                        }
+                    }
+                }
+
+                "CHANNEL_DELETE" -> {
+                    val channelId = event.data.optString("id").takeIf { it.isNotEmpty() }
+                    if (channelId != null && guildId == _selectedGuild.value?.id) {
+                        _channels.value = _channels.value.filter { it.id != channelId }
+                    }
+                }
+
+                "GUILD_CREATE" -> {
+                    val guild = gson.fromJson(event.data.toString(), GuildResponse::class.java)
+                    if (_guilds.value.none { it.id == guild.id }) {
+                        _guilds.value = _guilds.value + guild
+                    }
+                }
+
+                "GUILD_UPDATE" -> {
+                    val guild = gson.fromJson(event.data.toString(), GuildResponse::class.java)
+                    _guilds.value = _guilds.value.map { if (it.id == guild.id) guild else it }
+                    if (_selectedGuild.value?.id == guild.id) {
+                        _selectedGuild.value = guild
+                    }
+                }
+
+                "GUILD_DELETE" -> {
+                    val id = event.data.optString("id").takeIf { it.isNotEmpty() }
+                    if (id != null) {
+                        _guilds.value = _guilds.value.filter { it.id != id }
+                        if (_selectedGuild.value?.id == id) {
+                            _selectedGuild.value = null
+                            _channels.value = emptyList()
+                        }
                     }
                 }
             }
         }
+    }
 
-        if (typingUsers.isNotEmpty()) {
-            Text("${typingUsers.joinToString(", ")} is typing...",
-                fontSize = 12.sp, color = NexusTextMuted,
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp))
+    // ── Dialog visibility ──────────────────────────────────────────────────────
+
+    fun showCreateGuildDialog()  { _uiState.value = _uiState.value.copy(showCreateGuildDialog = true, error = null) }
+    fun hideCreateGuildDialog()  { _uiState.value = _uiState.value.copy(showCreateGuildDialog = false) }
+    fun showJoinGuildDialog()    { _uiState.value = _uiState.value.copy(showJoinGuildDialog = true, error = null) }
+    fun hideJoinGuildDialog()    { _uiState.value = _uiState.value.copy(showJoinGuildDialog = false) }
+    fun showCreateChannelDialog(){ _uiState.value = _uiState.value.copy(showCreateChannelDialog = true, error = null) }
+    fun hideCreateChannelDialog(){ _uiState.value = _uiState.value.copy(showCreateChannelDialog = false) }
+    fun showInviteDialog(code: String) { _uiState.value = _uiState.value.copy(showInviteDialog = true, inviteCode = code) }
+    fun hideInviteDialog()       { _uiState.value = _uiState.value.copy(showInviteDialog = false, inviteCode = null) }
+    fun clearError()             { _uiState.value = _uiState.value.copy(error = null) }
+
+    // ── Guild loading ──────────────────────────────────────────────────────────
+
+    fun loadGuilds() = viewModelScope.launch {
+        _uiState.value = _uiState.value.copy(loading = true, error = null)
+        try {
+            api.getMyGuilds().body()?.let { _guilds.value = it }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Failed to load servers")
+        } finally {
+            _uiState.value = _uiState.value.copy(loading = false)
         }
+    }
 
-        if (uiState.editingMessageId != null) {
-            Row(
-                modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(horizontal = 12.dp, vertical = 4.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Icon(Icons.Default.Edit, contentDescription = null, tint = NexusBlurple, modifier = Modifier.size(14.dp))
-                Spacer(Modifier.width(6.dp))
-                Text("Editing message", color = NexusBlurple, fontSize = 12.sp, modifier = Modifier.weight(1f))
-                TextButton(onClick = vm::cancelEditing) { Text("Cancel", color = NexusTextMuted, fontSize = 12.sp) }
+    fun selectGuild(guild: GuildResponse) = viewModelScope.launch {
+        _selectedGuild.value = guild
+        _channels.value = emptyList()
+        try {
+            api.getGuild(guild.id).body()?.let {
+                _selectedGuild.value = it
+                _channels.value = it.channels ?: emptyList()
             }
-        }
+        } catch (_: Exception) {}
+    }
 
-        Row(
-            modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            OutlinedTextField(
-                value = if (uiState.editingMessageId != null) uiState.editingContent else input,
-                onValueChange = { v ->
-                    if (uiState.editingMessageId != null) vm.onEditContentChange(v)
-                    else { input = v; vm.sendTyping(channelId) }
-                },
-                placeholder = { Text("Message #$channelName", color = NexusTextMuted) },
-                modifier = Modifier.weight(1f),
-                shape = RoundedCornerShape(24.dp),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor      = Color.Transparent,
-                    unfocusedBorderColor    = Color.Transparent,
-                    focusedContainerColor   = NexusDarkLight,
-                    unfocusedContainerColor = NexusDarkLight,
-                ),
-                maxLines = 5,
-            )
-            Spacer(Modifier.width(8.dp))
-            if (uiState.editingMessageId != null) {
-                IconButton(onClick = { vm.submitEdit(channelId) },
-                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusGreen)) {
-                    Icon(Icons.Default.Check, contentDescription = "Confirm edit", tint = Color.White)
-                }
+    // ── Create guild ───────────────────────────────────────────────────────────
+
+    fun createGuild(name: String) = viewModelScope.launch {
+        if (name.isBlank()) {
+            _uiState.value = _uiState.value.copy(error = "Server name cannot be empty")
+            return@launch
+        }
+        _uiState.value = _uiState.value.copy(createGuildLoading = true, error = null)
+        try {
+            val resp = api.createGuild(CreateGuildRequest(name.trim()))
+            if (resp.isSuccessful && resp.body() != null) {
+                val newGuild = resp.body()!!
+                _guilds.value = _guilds.value + newGuild
+                _uiState.value = _uiState.value.copy(createGuildLoading = false, showCreateGuildDialog = false)
+                selectGuild(newGuild)
             } else {
-                IconButton(
-                    onClick = { if (input.isNotBlank()) { vm.sendMessage(channelId, input.trim()); input = "" } },
-                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusBlurple)) {
-                    Icon(Icons.Default.Send, contentDescription = "Send", tint = Color.White)
-                }
+                _uiState.value = _uiState.value.copy(createGuildLoading = false, error = "Failed to create server")
             }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(createGuildLoading = false, error = "Network error: ${e.message}")
         }
     }
-}
 
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun MessageItem(
-    message: MessageResponse,
-    isOwn: Boolean,
-    editingId: String?,
-    editingText: String,
-    onEditChange: (String) -> Unit,
-    onEditSubmit: () -> Unit,
-    onEditCancel: () -> Unit,
-    onEdit: () -> Unit,
-    onDelete: () -> Unit,
-    onReact: (String) -> Unit,
-    onOpenEmoji: () -> Unit,
-) {
-    val sdf    = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
-    val parser = remember { SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) }
-    var showMenu          by remember { mutableStateOf(false) }
-    var showDeleteConfirm by remember { mutableStateOf(false) }
+    // ── Join guild via invite ──────────────────────────────────────────────────
 
-    val authorName   = message.author?.username ?: "Unknown"
-    val authorAvatar = message.author?.avatar
-
-    if (showDeleteConfirm) {
-        AlertDialog(
-            onDismissRequest = { showDeleteConfirm = false },
-            title = { Text("Delete Message") },
-            text  = { Text("Are you sure? This cannot be undone.") },
-            confirmButton = { TextButton(onClick = { showDeleteConfirm = false; onDelete() }) { Text("Delete", color = NexusRed) } },
-            dismissButton = { TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") } },
-        )
+    fun joinGuildByInvite(code: String) = viewModelScope.launch {
+        val cleanCode = code.trim().removePrefix("https://discord.gg/").removePrefix("https://nexus.gg/").removePrefix("nexus.gg/")
+        if (cleanCode.isBlank()) {
+            _uiState.value = _uiState.value.copy(error = "Invalid invite link")
+            return@launch
+        }
+        _uiState.value = _uiState.value.copy(loading = true, error = null)
+        try {
+            val resp = api.useInvite(cleanCode)
+            if (resp.isSuccessful && resp.body() != null) {
+                val joined = resp.body()!!
+                if (_guilds.value.none { it.id == joined.id }) {
+                    _guilds.value = _guilds.value + joined
+                }
+                _uiState.value = _uiState.value.copy(loading = false, showJoinGuildDialog = false)
+                selectGuild(joined)
+            } else {
+                _uiState.value = _uiState.value.copy(loading = false, error = "Invalid or expired invite")
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(loading = false, error = "Network error: ${e.message}")
+        }
     }
 
-    Box {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .combinedClickable(onClick = {}, onLongClick = { if (isOwn) showMenu = true })
-                .padding(vertical = 4.dp),
-        ) {
-            Box(modifier = Modifier.size(40.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
-                if (authorAvatar != null)
-                    AsyncImage(model = authorAvatar, contentDescription = null, modifier = Modifier.fillMaxSize())
-                else
-                    Text(authorName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
+    // ── Leave guild ────────────────────────────────────────────────────────────
+
+    fun leaveGuild(guildId: String) = viewModelScope.launch {
+        try {
+            api.leaveGuild(guildId)
+            _guilds.value = _guilds.value.filter { it.id != guildId }
+            if (_selectedGuild.value?.id == guildId) {
+                _selectedGuild.value = null
+                _channels.value = emptyList()
             }
-            Spacer(Modifier.width(10.dp))
-            Column {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(authorName, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 14.sp)
-                    Spacer(Modifier.width(6.dp))
-                    val time = remember(message.createdAt) {
-                        try { sdf.format(parser.parse(message.createdAt)!!) } catch (_: Exception) { "" }
-                    }
-                    Text(time, color = NexusTextMuted, fontSize = 11.sp)
-                    if (message.editedAt != null) Text(" (edited)", color = NexusTextMuted, fontSize = 11.sp)
-                }
-                message.reference?.let { ref ->
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(modifier = Modifier.width(2.dp).height(12.dp).background(NexusOutline))
-                        Spacer(Modifier.width(4.dp))
-                        Text(ref.author?.username ?: "", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                        Spacer(Modifier.width(4.dp))
-                        Text(ref.content ?: "", color = NexusTextMuted, fontSize = 11.sp, maxLines = 1)
-                    }
-                }
-                if (editingId == message.id) {
-                    OutlinedTextField(value = editingText, onValueChange = onEditChange,
-                        modifier = Modifier.fillMaxWidth().padding(end = 8.dp), singleLine = false, maxLines = 5)
-                } else {
-                    if (!message.content.isNullOrBlank())
-                        Text(message.content, color = NexusTextPrimary, fontSize = 15.sp, lineHeight = 20.sp)
-                }
-                if (!message.reactions.isNullOrEmpty()) {
-                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 4.dp)) {
-                        message.reactions.take(10).forEach { r ->
-                            Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, onClick = { onReact(r.emoji) }) {
-                                Text("${r.emoji} ${r.count}", modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
-                                    fontSize = 12.sp, color = NexusTextPrimary)
-                            }
-                        }
-                        Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, onClick = { onOpenEmoji() }) {
-                            Text("＋", modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp), fontSize = 12.sp, color = NexusTextMuted)
-                        }
-                    }
-                }
-            }
+        } catch (_: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Failed to leave server")
         }
-        DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
-            DropdownMenuItem(text = { Text("Add Reaction") }, onClick = { showMenu = false; onOpenEmoji() },
-                leadingIcon = { Text("😀", fontSize = 16.sp) })
-            if (isOwn) {
-                DropdownMenuItem(text = { Text("Edit Message") }, onClick = { showMenu = false; onEdit() },
-                    leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) })
-                DropdownMenuItem(text = { Text("Delete Message", color = NexusRed) },
-                    onClick = { showMenu = false; showDeleteConfirm = true },
-                    leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null, tint = NexusRed) })
+    }
+
+    // ── Create channel ─────────────────────────────────────────────────────────
+
+    fun createChannel(name: String, type: String = "text", parentId: String? = null) = viewModelScope.launch {
+        val guildId = _selectedGuild.value?.id ?: return@launch
+        if (name.isBlank()) {
+            _uiState.value = _uiState.value.copy(error = "Channel name cannot be empty")
+            return@launch
+        }
+        _uiState.value = _uiState.value.copy(createChannelLoading = true, error = null)
+        try {
+            val resp = api.createChannel(guildId, CreateChannelRequest(name.trim().lowercase().replace(" ", "-"), type, parentId))
+            if (resp.isSuccessful && resp.body() != null) {
+                // Don't manually append — CHANNEL_CREATE gateway event will handle it
+                _uiState.value = _uiState.value.copy(createChannelLoading = false, showCreateChannelDialog = false)
+            } else {
+                _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Failed to create channel")
             }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Network error: ${e.message}")
+        }
+    }
+
+    // ── Generate invite ────────────────────────────────────────────────────────
+
+    fun generateInvite(channelId: String) = viewModelScope.launch {
+        try {
+            val resp = api.createInvite(channelId)
+            if (resp.isSuccessful && resp.body() != null) {
+                showInviteDialog(resp.body()!!.code)
+            } else {
+                _uiState.value = _uiState.value.copy(error = "Failed to generate invite")
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Network error: ${e.message}")
         }
     }
 }
