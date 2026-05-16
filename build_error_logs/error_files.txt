@@ -1,904 +1,500 @@
 ==== SOURCE CODE (ERROR FILES WITH HIGHLIGHTED LINES) ====
 
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt =====
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt =====
 
-// ❌ ERRORS IN THIS FILE (3 error(s)):
-// Line 106: Unresolved reference 'clickable'.
-// Line 273: Unresolved reference 'clickable'.
-// Line 286: Unresolved reference 'clickable'.
+// ❌ ERRORS IN THIS FILE (2 error(s)):
+// Line 326: None of the following candidates is applicable:
+// Line 469: None of the following candidates is applicable:
 
-   1    package com.nexus.android.ui.screens.chat
+   1    package com.nexus.android.ui.screens.server
    2    
-   3    import androidx.compose.foundation.ExperimentalFoundationApi
-   4    import androidx.compose.foundation.background
-   5    import androidx.compose.foundation.combinedClickable
-   6    import androidx.compose.foundation.layout.*
-   7    import androidx.compose.foundation.lazy.LazyColumn
-   8    import androidx.compose.foundation.lazy.items
-   9    import androidx.compose.foundation.lazy.rememberLazyListState
-  10    import androidx.compose.foundation.shape.CircleShape
-  11    import androidx.compose.foundation.shape.RoundedCornerShape
+   3    import androidx.compose.foundation.background
+   4    import androidx.compose.foundation.clickable
+   5    import androidx.compose.foundation.layout.*
+   6    import androidx.compose.foundation.lazy.LazyColumn
+   7    import androidx.compose.foundation.lazy.items
+   8    import androidx.compose.foundation.rememberScrollState
+   9    import androidx.compose.foundation.shape.CircleShape
+  10    import androidx.compose.foundation.shape.RoundedCornerShape
+  11    import androidx.compose.foundation.verticalScroll
   12    import androidx.compose.material.icons.Icons
-  13    import androidx.compose.material.icons.filled.ArrowBack
-  14    import androidx.compose.material.icons.filled.Check
-  15    import androidx.compose.material.icons.filled.Close
-  16    import androidx.compose.material.icons.filled.Delete
-  17    import androidx.compose.material.icons.filled.Edit
-  18    import androidx.compose.material.icons.filled.Send
-  19    import androidx.compose.material3.*
-  20    import androidx.compose.runtime.*
-  21    import androidx.compose.ui.Alignment
-  22    import androidx.compose.ui.Modifier
-  23    import androidx.compose.ui.draw.clip
-  24    import androidx.compose.ui.graphics.Color
-  25    import androidx.compose.ui.text.font.FontWeight
-  26    import androidx.compose.ui.unit.dp
-  27    import androidx.compose.ui.unit.sp
-  28    import androidx.hilt.navigation.compose.hiltViewModel
-  29    import coil.compose.AsyncImage
-  30    import com.nexus.android.data.api.models.MessageResponse
-  31    import com.nexus.android.ui.theme.*
-  32    import java.text.SimpleDateFormat
-  33    import java.util.Locale
-  34    
-  35    @OptIn(ExperimentalMaterial3Api::class)
-  36    @Composable
-  37    fun ChatScreen(
-  38        channelId: String,
-  39        guildId: String,
-  40        onBack: () -> Unit,
-  41        vm: ChatViewModel = hiltViewModel(),
-  42    ) {
-  43        val messages    by vm.messages.collectAsState()
-  44        val channelName by vm.channelName.collectAsState()
-  45        val typingUsers by vm.typingUsers.collectAsState()
-  46        val uiState     by vm.uiState.collectAsState()
-  47        val listState   = rememberLazyListState()
-  48        var input       by remember { mutableStateOf("") }
+  13    import androidx.compose.material.icons.filled.*
+  14    import androidx.compose.material3.*
+  15    import androidx.compose.runtime.*
+  16    import androidx.compose.ui.Alignment
+  17    import androidx.compose.ui.Modifier
+  18    import androidx.compose.ui.draw.clip
+  19    import androidx.compose.ui.graphics.Color
+  20    import androidx.compose.ui.graphics.vector.ImageVector
+  21    import androidx.compose.ui.text.font.FontWeight
+  22    import androidx.compose.ui.unit.dp
+  23    import androidx.compose.ui.unit.sp
+  24    import androidx.hilt.navigation.compose.hiltViewModel
+  25    import coil.compose.AsyncImage
+  26    import com.nexus.android.data.api.models.*
+  27    import com.nexus.android.ui.theme.*
+  28    import java.text.SimpleDateFormat
+  29    import java.util.Locale
+  30    
+  31    private enum class SubScreen { None, Overview, Members, Roles, Invites, Channels }
+  32    
+  33    @OptIn(ExperimentalMaterial3Api::class)
+  34    @Composable
+  35    fun ServerSettingsScreen(
+  36        guildId: String,
+  37        onBack: () -> Unit,
+  38        vm: ServerSettingsViewModel = hiltViewModel(),
+  39    ) {
+  40        val guild    by vm.guild.collectAsState()
+  41        val members  by vm.members.collectAsState()
+  42        val roles    by vm.roles.collectAsState()
+  43        val invites  by vm.invites.collectAsState()
+  44        val channels by vm.channels.collectAsState()
+  45        val uiState  by vm.uiState.collectAsState()
+  46        var sub      by remember { mutableStateOf(SubScreen.None) }
+  47    
+  48        LaunchedEffect(guildId) { vm.load(guildId) }
   49    
-  50        LaunchedEffect(channelId)     { vm.loadChannel(channelId, guildId) }
-  51        LaunchedEffect(messages.size) { if (messages.isNotEmpty()) listState.animateScrollToItem(messages.size - 1) }
-  52    
-  53        // Common emoji picker state
-  54        var emojiPickerMessageId by remember { mutableStateOf<String?>(null) }
-  55    
-  56        Column(modifier = Modifier.fillMaxSize().background(NexusDarkLight)) {
-  57            // Top bar
-  58            TopAppBar(
-  59                title = {
-  60                    Column {
-  61                        Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
-  62                    }
-  63                },
-  64                navigationIcon = {
-  65                    IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, contentDescription = "Back") }
-  66                },
-  67                colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
-  68            )
-  69    
-  70            // Message list
-  71            LazyColumn(
-  72                state = listState,
-  73                modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
-  74                verticalArrangement = Arrangement.spacedBy(2.dp),
-  75            ) {
-  76                items(messages, key = { it.id }) { msg ->
-  77                    MessageItem(
-  78                        message      = msg,
-  79                        isOwn        = msg.author.id == vm.currentUserId,
-  80                        editingId    = uiState.editingMessageId,
-  81                        editingText  = uiState.editingContent,
-  82                        onEditChange = vm::onEditContentChange,
-  83                        onEditSubmit = { vm.submitEdit(channelId) },
-  84                        onEditCancel = vm::cancelEditing,
-  85                        onEdit       = { vm.startEditing(msg) },
-  86                        onDelete     = { vm.deleteMessage(channelId, msg.id) },
-  87                        onReact      = { emoji -> vm.toggleReaction(channelId, msg.id, emoji) },
-  88                        onOpenEmoji  = { emojiPickerMessageId = msg.id },
-  89                    )
-  90                }
-  91            }
-  92    
-  93            // Emoji picker sheet (simple inline row)
-  94            if (emojiPickerMessageId != null) {
-  95                Surface(color = NexusDarkMedium) {
-  96                    Row(
-  97                        modifier = Modifier.fillMaxWidth().padding(8.dp),
-  98                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-  99                        verticalAlignment = Alignment.CenterVertically,
- 100                    ) {
- 101                        val quickEmoji = listOf("👍", "❤️", "😂", "😮", "😢", "🔥", "🎉", "✅")
- 102                        quickEmoji.forEach { emoji ->
- 103                            Text(
- 104                                emoji,
- 105                                fontSize = 22.sp,
- 106 ❌                             modifier = Modifier.clickable {
- 107                                    vm.toggleReaction(channelId, emojiPickerMessageId!!, emoji)
- 108                                    emojiPickerMessageId = null
- 109                                }
- 110                            )
- 111                        }
- 112                        Spacer(Modifier.weight(1f))
- 113                        IconButton(onClick = { emojiPickerMessageId = null }, modifier = Modifier.size(28.dp)) {
- 114                            Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
- 115                        }
- 116                    }
- 117                }
- 118            }
- 119    
- 120            // Typing indicator
- 121            if (typingUsers.isNotEmpty()) {
- 122                Text(
- 123                    "${typingUsers.joinToString(", ")} is typing...",
- 124                    fontSize = 12.sp, color = NexusTextMuted,
- 125                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp),
- 126                )
- 127            }
- 128    
- 129            // Input bar (with edit mode banner)
- 130            if (uiState.editingMessageId != null) {
- 131                Row(
- 132                    modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(horizontal = 12.dp, vertical = 4.dp),
- 133                    verticalAlignment = Alignment.CenterVertically,
- 134                ) {
- 135                    Icon(Icons.Default.Edit, contentDescription = null, tint = NexusBlurple, modifier = Modifier.size(14.dp))
- 136                    Spacer(Modifier.width(6.dp))
- 137                    Text("Editing message", color = NexusBlurple, fontSize = 12.sp, modifier = Modifier.weight(1f))
- 138                    TextButton(onClick = vm::cancelEditing) { Text("Cancel", color = NexusTextMuted, fontSize = 12.sp) }
- 139                }
- 140            }
- 141    
- 142            Row(
- 143                modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(8.dp),
- 144                verticalAlignment = Alignment.CenterVertically,
- 145            ) {
- 146                OutlinedTextField(
- 147                    value = if (uiState.editingMessageId != null) uiState.editingContent else input,
- 148                    onValueChange = { v ->
- 149                        if (uiState.editingMessageId != null) vm.onEditContentChange(v)
- 150                        else { input = v; vm.sendTyping(channelId) }
- 151                    },
- 152                    placeholder = { Text("Message #$channelName", color = NexusTextMuted) },
- 153                    modifier = Modifier.weight(1f),
- 154                    shape = RoundedCornerShape(24.dp),
- 155                    colors = OutlinedTextFieldDefaults.colors(
- 156                        focusedBorderColor   = Color.Transparent,
- 157                        unfocusedBorderColor = Color.Transparent,
- 158                        focusedContainerColor   = NexusDarkLight,
- 159                        unfocusedContainerColor = NexusDarkLight,
- 160                    ),
- 161                    maxLines = 5,
- 162                )
- 163                Spacer(Modifier.width(8.dp))
- 164                if (uiState.editingMessageId != null) {
- 165                    IconButton(
- 166                        onClick = { vm.submitEdit(channelId) },
- 167                        colors  = IconButtonDefaults.iconButtonColors(containerColor = NexusGreen),
- 168                    ) { Icon(Icons.Default.Check, contentDescription = "Confirm edit", tint = Color.White) }
- 169                } else {
- 170                    IconButton(
- 171                        onClick = {
- 172                            if (input.isNotBlank()) { vm.sendMessage(channelId, input.trim()); input = "" }
- 173                        },
- 174                        colors = IconButtonDefaults.iconButtonColors(containerColor = NexusBlurple),
- 175                    ) { Icon(Icons.Default.Send, contentDescription = "Send", tint = Color.White) }
- 176                }
- 177            }
- 178        }
- 179    }
- 180    
- 181    // ── Message Item ──────────────────────────────────────────────────────────────
- 182    
- 183    @OptIn(ExperimentalFoundationApi::class)
- 184    @Composable
- 185    fun MessageItem(
- 186        message: MessageResponse,
- 187        isOwn: Boolean,
- 188        editingId: String?,
- 189        editingText: String,
- 190        onEditChange: (String) -> Unit,
- 191        onEditSubmit: () -> Unit,
- 192        onEditCancel: () -> Unit,
- 193        onEdit: () -> Unit,
- 194        onDelete: () -> Unit,
- 195        onReact: (String) -> Unit,
- 196        onOpenEmoji: () -> Unit,
- 197    ) {
- 198        val sdf = remember { SimpleDateFormat("hh:mm a", Locale.getDefault()) }
- 199        var showMenu by remember { mutableStateOf(false) }
- 200        var showDeleteConfirm by remember { mutableStateOf(false) }
- 201    
- 202        if (showDeleteConfirm) {
- 203            AlertDialog(
- 204                onDismissRequest = { showDeleteConfirm = false },
- 205                title = { Text("Delete Message") },
- 206                text  = { Text("Are you sure? This cannot be undone.") },
- 207                confirmButton = {
- 208                    TextButton(onClick = { showDeleteConfirm = false; onDelete() }) {
- 209                        Text("Delete", color = NexusRed)
- 210                    }
- 211                },
- 212                dismissButton = {
- 213                    TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") }
- 214                },
- 215            )
- 216        }
- 217    
- 218        Box {
- 219            Row(
- 220                modifier = Modifier
- 221                    .fillMaxWidth()
- 222                    .combinedClickable(onClick = {}, onLongClick = { if (isOwn) showMenu = true })
- 223                    .padding(vertical = 4.dp),
- 224            ) {
- 225                // Avatar
- 226                Box(
- 227                    modifier = Modifier.size(40.dp).clip(CircleShape).background(NexusBlurple),
- 228                    contentAlignment = Alignment.Center,
- 229                ) {
- 230                    if (message.author.avatar != null)
- 231                        AsyncImage(model = message.author.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
- 232                    else
- 233                        Text(message.author.username.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
- 234                }
- 235                Spacer(Modifier.width(10.dp))
- 236                Column {
- 237                    Row(verticalAlignment = Alignment.CenterVertically) {
- 238                        Text(message.author.username, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 14.sp)
- 239                        Spacer(Modifier.width(6.dp))
- 240                        Text(sdf.format(message.createdAt), color = NexusTextMuted, fontSize = 11.sp)
- 241                        if (message.editedAt != null) Text(" (edited)", color = NexusTextMuted, fontSize = 11.sp)
- 242                    }
- 243                    // Reply reference
- 244                    message.reference?.let { ref ->
- 245                        Row(verticalAlignment = Alignment.CenterVertically) {
- 246                            Divider(modifier = Modifier.width(2.dp).height(12.dp), color = NexusOutline)
- 247                            Spacer(Modifier.width(4.dp))
- 248                            Text(ref.author?.username ?: "", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold)
- 249                            Spacer(Modifier.width(4.dp))
- 250                            Text(ref.content ?: "", color = NexusTextMuted, fontSize = 11.sp, maxLines = 1)
- 251                        }
- 252                    }
- 253                    // Content (or edit field)
- 254                    if (editingId == message.id) {
- 255                        OutlinedTextField(
- 256                            value = editingText,
- 257                            onValueChange = onEditChange,
- 258                            modifier = Modifier.fillMaxWidth().padding(end = 8.dp),
- 259                            singleLine = false,
- 260                            maxLines = 5,
- 261                        )
- 262                    } else {
- 263                        if (!message.content.isNullOrBlank())
- 264                            Text(message.content, color = NexusTextPrimary, fontSize = 15.sp, lineHeight = 20.sp)
- 265                    }
- 266                    // Reactions
- 267                    if (!message.reactions.isNullOrEmpty()) {
- 268                        Row(horizontalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 4.dp)) {
- 269                            message.reactions.take(10).forEach { r ->
- 270                                Surface(
- 271                                    shape = RoundedCornerShape(12.dp),
- 272                                    color = NexusDarkMedium,
- 273 ❌                                 modifier = Modifier.clickable { onReact(r.emoji) },
- 274                                ) {
- 275                                    Text(
- 276                                        "${r.emoji} ${r.count}",
- 277                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
- 278                                        fontSize = 12.sp, color = NexusTextPrimary,
- 279                                    )
- 280                                }
- 281                            }
- 282                            // Add reaction button
- 283                            Surface(
- 284                                shape = RoundedCornerShape(12.dp),
- 285                                color = NexusDarkMedium,
- 286 ❌                             modifier = Modifier.clickable { onOpenEmoji() },
- 287                            ) {
- 288                                Text("＋", modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp), fontSize = 12.sp, color = NexusTextMuted)
- 289                            }
- 290                        }
- 291                    }
- 292                }
- 293            }
- 294    
- 295            // Context menu (own messages only)
- 296            DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
- 297                DropdownMenuItem(
- 298                    text = { Text("Add Reaction") },
- 299                    onClick = { showMenu = false; onOpenEmoji() },
- 300                    leadingIcon = { Text("😀", fontSize = 16.sp) }
- 301                )
- 302                if (isOwn) {
- 303                    DropdownMenuItem(
- 304                        text = { Text("Edit Message") },
- 305                        onClick = { showMenu = false; onEdit() },
- 306                        leadingIcon = { Icon(Icons.Default.Edit, contentDescription = null) }
- 307                    )
- 308                    DropdownMenuItem(
- 309                        text = { Text("Delete Message", color = NexusRed) },
- 310                        onClick = { showMenu = false; showDeleteConfirm = true },
- 311                        leadingIcon = { Icon(Icons.Default.Delete, contentDescription = null, tint = NexusRed) }
- 312                    )
- 313                }
- 314            }
- 315        }
- 316    }
-
-
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt =====
-
-// ❌ ERRORS IN THIS FILE (1 error(s)):
-// Line 372: This foundation API is experimental and is likely to change or be removed in the future.
-
-   1    package com.nexus.android.ui.screens.home
-   2    
-   3    import android.content.ClipData
-   4    import android.content.ClipboardManager
-   5    import android.content.Context
-   6    import androidx.compose.foundation.background
-   7    import androidx.compose.foundation.clickable
-   8    import androidx.compose.foundation.combinedClickable
-   9    import androidx.compose.foundation.layout.*
-  10    import androidx.compose.foundation.lazy.LazyColumn
-  11    import androidx.compose.foundation.lazy.items
-  12    import androidx.compose.foundation.shape.CircleShape
-  13    import androidx.compose.foundation.shape.RoundedCornerShape
-  14    import androidx.compose.material.icons.Icons
-  15    import androidx.compose.material.icons.filled.Add
-  16    import androidx.compose.material.icons.filled.Close
-  17    import androidx.compose.material.icons.filled.ExitToApp
-  18    import androidx.compose.material.icons.filled.Link
-  19    import androidx.compose.material.icons.filled.Mic
-  20    import androidx.compose.material.icons.filled.MicOff
-  21    import androidx.compose.material.icons.filled.Search
-  22    import androidx.compose.material.icons.filled.Settings
-  23    import androidx.compose.material3.*
-  24    import androidx.compose.runtime.*
-  25    import androidx.compose.ui.Alignment
-  26    import androidx.compose.ui.Modifier
-  27    import androidx.compose.ui.draw.clip
-  28    import androidx.compose.ui.graphics.Color
-  29    import androidx.compose.ui.platform.LocalContext
-  30    import androidx.compose.ui.text.font.FontWeight
-  31    import androidx.compose.ui.unit.dp
-  32    import androidx.compose.ui.unit.sp
-  33    import androidx.compose.ui.window.Dialog
-  34    import androidx.hilt.navigation.compose.hiltViewModel
-  35    import coil.compose.AsyncImage
-  36    import com.nexus.android.data.api.models.ChannelResponse
-  37    import com.nexus.android.data.api.models.GuildResponse
-  38    import com.nexus.android.ui.theme.*
-  39    
-  40    @Composable
-  41    fun HomeScreen(
-  42        onOpenChannel: (String, String) -> Unit,
-  43        onOpenVoice: (String) -> Unit,
-  44        onOpenProfile: () -> Unit,
-  45        onOpenSettings: () -> Unit,
-  46        vm: HomeViewModel = hiltViewModel(),
-  47    ) {
-  48        val guilds        by vm.guilds.collectAsState()
-  49        val selectedGuild by vm.selectedGuild.collectAsState()
-  50        val channels      by vm.channels.collectAsState()
-  51        val uiState       by vm.uiState.collectAsState()
-  52        val context       = LocalContext.current
-  53    
-  54        // ── Dialogs ──────────────────────────────────────────────────────────────
-  55    
-  56        if (uiState.showCreateGuildDialog) {
-  57            CreateGuildDialog(
-  58                loading  = uiState.createGuildLoading,
-  59                error    = uiState.error,
-  60                onDismiss = vm::hideCreateGuildDialog,
-  61                onCreate  = vm::createGuild,
-  62            )
-  63        }
-  64    
-  65        if (uiState.showJoinGuildDialog) {
-  66            JoinGuildDialog(
-  67                loading   = uiState.loading,
-  68                error     = uiState.error,
-  69                onDismiss = vm::hideJoinGuildDialog,
-  70                onJoin    = vm::joinGuildByInvite,
-  71            )
-  72        }
-  73    
-  74        if (uiState.showCreateChannelDialog) {
-  75            CreateChannelDialog(
-  76                loading   = uiState.createChannelLoading,
-  77                error     = uiState.error,
-  78                onDismiss = vm::hideCreateChannelDialog,
-  79                onCreate  = { name, type -> vm.createChannel(name, type) },
-  80            )
-  81        }
-  82    
-  83        if (uiState.showInviteDialog && uiState.inviteCode != null) {
-  84            InviteDialog(
-  85                code      = uiState.inviteCode!!,
-  86                onDismiss = vm::hideInviteDialog,
-  87                onCopy    = { code ->
-  88                    val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-  89                    cm.setPrimaryClip(ClipData.newPlainText("Invite Link", "nexus.gg/$code"))
-  90                },
-  91            )
-  92        }
-  93    
-  94        // ── Root layout ───────────────────────────────────────────────────────────
-  95    
-  96        Row(modifier = Modifier.fillMaxSize().background(NexusDark)) {
-  97            ServerRail(
-  98                guilds         = guilds,
-  99                selectedId     = selectedGuild?.id,
- 100                onSelect       = vm::selectGuild,
- 101                onAddServer    = vm::showCreateGuildDialog,
- 102                onJoinServer   = vm::showJoinGuildDialog,
- 103                onOpenProfile  = onOpenProfile,
- 104            )
- 105    
- 106            if (selectedGuild != null) {
- 107                ChannelSidebar(
- 108                    guild    = selectedGuild!!,
- 109                    channels = channels,
- 110                    onSelect = { ch ->
- 111                        if (ch.type == "voice") onOpenVoice(ch.id)
- 112                        else onOpenChannel(ch.id, selectedGuild!!.id)
- 113                    },
- 114                    onLeaveGuild    = { vm.leaveGuild(selectedGuild!!.id) },
- 115                    onCreateChannel = vm::showCreateChannelDialog,
- 116                    onInvite        = { vm.generateInvite(it) },
- 117                    onOpenSettings  = onOpenSettings,
- 118                )
- 119            } else {
- 120                // Empty state
- 121                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
- 122                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
- 123                        Text("No servers yet", color = NexusTextPrimary, fontSize = 16.sp, fontWeight = FontWeight.Bold)
- 124                        Spacer(Modifier.height(8.dp))
- 125                        Text("Tap + to create or join one", color = NexusTextMuted, fontSize = 13.sp)
- 126                    }
- 127                }
- 128            }
+  50        when (sub) {
+  51            SubScreen.Overview  -> OverviewSubScreen(guild, uiState, { name -> vm.saveGuildName(guildId, name) }) { sub = SubScreen.None }
+  52            SubScreen.Members   -> MembersSubScreen(members, roles) { sub = SubScreen.None }
+  53            SubScreen.Roles     -> RolesSubScreen(roles) { sub = SubScreen.None }
+  54            SubScreen.Invites   -> InvitesSubScreen(invites, vm::deleteInvite) { sub = SubScreen.None }
+  55            SubScreen.Channels  -> ChannelsSubScreen(channels) { sub = SubScreen.None }
+  56            SubScreen.None      -> {
+  57                Scaffold(
+  58                    topBar = {
+  59                        TopAppBar(
+  60                            title = { Text("Server Settings", fontWeight = FontWeight.Bold) },
+  61                            navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.Close, "Close") } },
+  62                            colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+  63                        )
+  64                    },
+  65                    containerColor = NexusDark,
+  66                ) { padding ->
+  67                    if (uiState.loading) {
+  68                        Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+  69                            CircularProgressIndicator(color = NexusBlurple)
+  70                        }
+  71                    } else {
+  72                        Column(Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState())) {
+  73                            // Header
+  74                            Column(Modifier.fillMaxWidth().padding(vertical = 24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+  75                                Box(Modifier.size(80.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+  76                                    if (guild?.icon != null)
+  77                                        AsyncImage(model = guild!!.icon, contentDescription = null, modifier = Modifier.fillMaxSize())
+  78                                    else
+  79                                        Text(guild?.name?.take(2)?.uppercase() ?: "?", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+  80                                }
+  81                                Spacer(Modifier.height(8.dp))
+  82                                Text(guild?.name ?: "", color = NexusTextPrimary, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+  83                            }
+  84    
+  85                            SectionHeader("Settings")
+  86                            SettingsGroup {
+  87                                SettingsRow(Icons.Default.Info,               "Overview")    { sub = SubScreen.Overview }
+  88                                SettingsRow(Icons.Default.Shield,             "Moderation")  { }
+  89                                SettingsRow(Icons.Default.Assignment,         "Audit Log")   { }
+  90                                SettingsRow(Icons.Default.Tag,                "Channels")    { sub = SubScreen.Channels }
+  91                                SettingsRow(Icons.Default.Extension,          "Integrations"){ }
+  92                                SettingsRow(Icons.Default.EmojiEmotions,      "Emoji")       { }
+  93                                SettingsRow(Icons.Default.StickyNote2,        "Stickers")    { }
+  94                                SettingsRow(Icons.Default.Security,           "Security")    { }
+  95                            }
+  96    
+  97                            Spacer(Modifier.height(16.dp))
+  98                            SectionHeader("Community")
+  99                            SettingsGroup {
+ 100                                SettingsRow(Icons.Default.Groups, "Enable Community") { }
+ 101                            }
+ 102    
+ 103                            Spacer(Modifier.height(16.dp))
+ 104                            SectionHeader("User Management")
+ 105                            SettingsGroup {
+ 106                                SettingsRow(Icons.Default.People,              "Members", badge = "${members.size}") { sub = SubScreen.Members }
+ 107                                SettingsRow(Icons.Default.AdminPanelSettings,  "Roles",   badge = "${roles.size}")   { sub = SubScreen.Roles }
+ 108                                SettingsRow(Icons.Default.Link,                "Invites", badge = "${invites.size}") { sub = SubScreen.Invites }
+ 109                                SettingsRow(Icons.Default.Gavel,               "Bans")    { }
+ 110                            }
+ 111                            Spacer(Modifier.height(24.dp))
+ 112                        }
+ 113                    }
+ 114                }
+ 115            }
+ 116        }
+ 117    }
+ 118    
+ 119    @Composable
+ 120    private fun SectionHeader(title: String) {
+ 121        Text(title.uppercase(), color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
+ 122            modifier = Modifier.padding(start = 16.dp, top = 4.dp, bottom = 4.dp))
+ 123    }
+ 124    
+ 125    @Composable
+ 126    private fun SettingsGroup(content: @Composable ColumnScope.() -> Unit) {
+ 127        Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
+ 128            Column(content = content)
  129        }
  130    }
  131    
- 132    // ── Server Rail ───────────────────────────────────────────────────────────────
- 133    
- 134    @Composable
- 135    fun ServerRail(
- 136        guilds: List<GuildResponse>,
- 137        selectedId: String?,
- 138        onSelect: (GuildResponse) -> Unit,
- 139        onAddServer: () -> Unit,
- 140        onJoinServer: () -> Unit,
- 141        onOpenProfile: () -> Unit,
- 142    ) {
- 143        var showAddMenu by remember { mutableStateOf(false) }
- 144    
- 145        Column(
- 146            modifier = Modifier
- 147                .width(72.dp)
- 148                .fillMaxHeight()
- 149                .background(NexusDark)
- 150                .padding(vertical = 8.dp),
- 151            horizontalAlignment = Alignment.CenterHorizontally,
- 152        ) {
- 153            // Home / DM button
- 154            Box(
- 155                modifier = Modifier
- 156                    .size(48.dp)
- 157                    .clip(CircleShape)
- 158                    .background(NexusBlurple)
- 159                    .clickable(onClick = onOpenProfile),
- 160                contentAlignment = Alignment.Center,
- 161            ) {
- 162                Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp)
- 163            }
- 164    
- 165            Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
- 166    
- 167            // Guild list
- 168            LazyColumn(
- 169                modifier = Modifier.weight(1f),
- 170                horizontalAlignment = Alignment.CenterHorizontally,
- 171                verticalArrangement = Arrangement.spacedBy(8.dp),
- 172            ) {
- 173                items(guilds, key = { it.id }) { guild ->
- 174                    val selected = guild.id == selectedId
- 175                    Box(
- 176                        modifier = Modifier
- 177                            .size(48.dp)
- 178                            .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape)
- 179                            .background(if (selected) NexusBlurple else NexusDarkMedium)
- 180                            .clickable { onSelect(guild) },
- 181                        contentAlignment = Alignment.Center,
- 182                    ) {
- 183                        if (guild.icon != null)
- 184                            AsyncImage(model = guild.icon, contentDescription = guild.name, modifier = Modifier.fillMaxSize())
- 185                        else
- 186                            Text(guild.name.take(2).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
- 187                    }
- 188                }
- 189            }
- 190    
- 191            Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
- 192    
- 193            // Add server button with dropdown
- 194            Box {
- 195                Box(
- 196                    modifier = Modifier
- 197                        .size(48.dp)
- 198                        .clip(CircleShape)
- 199                        .background(NexusDarkMedium)
- 200                        .clickable { showAddMenu = true },
- 201                    contentAlignment = Alignment.Center,
- 202                ) {
- 203                    Icon(Icons.Default.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(28.dp))
- 204                }
- 205                DropdownMenu(
- 206                    expanded = showAddMenu,
- 207                    onDismissRequest = { showAddMenu = false },
- 208                ) {
- 209                    DropdownMenuItem(
- 210                        text = { Text("Create a Server") },
- 211                        onClick = { showAddMenu = false; onAddServer() },
- 212                        leadingIcon = { Icon(Icons.Default.Add, contentDescription = null, tint = NexusBlurple) }
- 213                    )
- 214                    DropdownMenuItem(
- 215                        text = { Text("Join a Server") },
- 216                        onClick = { showAddMenu = false; onJoinServer() },
- 217                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null, tint = NexusGreen) }
- 218                    )
- 219                }
- 220            }
- 221        }
- 222    }
- 223    
- 224    // ── Channel Sidebar ───────────────────────────────────────────────────────────
- 225    
- 226    @Composable
- 227    fun ChannelSidebar(
- 228        guild: GuildResponse,
- 229        channels: List<ChannelResponse>,
- 230        onSelect: (ChannelResponse) -> Unit,
- 231        onLeaveGuild: () -> Unit,
- 232        onCreateChannel: () -> Unit,
- 233        onInvite: (channelId: String) -> Unit,
- 234        onOpenSettings: () -> Unit,
- 235    ) {
- 236        var showGuildMenu by remember { mutableStateOf(false) }
- 237        var showLeaveConfirm by remember { mutableStateOf(false) }
- 238    
- 239        if (showLeaveConfirm) {
- 240            AlertDialog(
- 241                onDismissRequest = { showLeaveConfirm = false },
- 242                title = { Text("Leave '${guild.name}'?") },
- 243                text  = { Text("You won't be able to rejoin unless you have an invite.") },
- 244                confirmButton = {
- 245                    TextButton(onClick = { showLeaveConfirm = false; onLeaveGuild() }) {
- 246                        Text("Leave", color = NexusRed)
- 247                    }
- 248                },
- 249                dismissButton = {
- 250                    TextButton(onClick = { showLeaveConfirm = false }) { Text("Cancel") }
- 251                },
- 252            )
- 253        }
- 254    
- 255        Column(
- 256            modifier = Modifier
- 257                .width(240.dp)
- 258                .fillMaxHeight()
- 259                .background(NexusDarkMedium)
- 260        ) {
- 261            // Guild header with dropdown
- 262            Box {
- 263                Row(
- 264                    modifier = Modifier
- 265                        .fillMaxWidth()
- 266                        .clickable { showGuildMenu = true }
- 267                        .padding(horizontal = 16.dp, vertical = 12.dp),
- 268                    verticalAlignment = Alignment.CenterVertically,
- 269                ) {
- 270                    Text(
- 271                        guild.name,
- 272                        fontWeight = FontWeight.Bold,
- 273                        color = NexusTextPrimary,
- 274                        fontSize = 15.sp,
- 275                        modifier = Modifier.weight(1f),
- 276                    )
- 277                    Text("▾", color = NexusTextMuted, fontSize = 12.sp)
- 278                }
- 279                DropdownMenu(
- 280                    expanded = showGuildMenu,
- 281                    onDismissRequest = { showGuildMenu = false },
- 282                ) {
- 283                    DropdownMenuItem(
- 284                        text = { Text("Invite People") },
- 285                        onClick = {
- 286                            showGuildMenu = false
- 287                            // Invite to the first text channel
- 288                            channels.firstOrNull { it.type == "text" }?.let { onInvite(it.id) }
- 289                        },
- 290                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null, tint = NexusGreen) }
- 291                    )
- 292                    DropdownMenuItem(
- 293                        text = { Text("Create Channel") },
- 294                        onClick = { showGuildMenu = false; onCreateChannel() },
- 295                        leadingIcon = { Icon(Icons.Default.Add, contentDescription = null, tint = NexusBlurple) }
- 296                    )
- 297                    Divider(color = NexusOutline)
- 298                    DropdownMenuItem(
- 299                        text = { Text("Leave Server", color = NexusRed) },
- 300                        onClick = { showGuildMenu = false; showLeaveConfirm = true },
- 301                        leadingIcon = { Icon(Icons.Default.ExitToApp, contentDescription = null, tint = NexusRed) }
- 302                    )
- 303                }
- 304            }
- 305    
- 306            Divider(color = NexusOutline)
- 307    
- 308            // Channel list
- 309            val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
- 310            val uncategorized = channels.filter { it.type != "category" && it.parentId == null }
- 311    
- 312            LazyColumn(modifier = Modifier.weight(1f).padding(top = 8.dp)) {
- 313                items(uncategorized) { ch -> ChannelRow(ch, { onSelect(ch) }, { onInvite(ch.id) }) }
- 314                categories.forEach { cat ->
- 315                    item {
- 316                        Row(
- 317                            modifier = Modifier.fillMaxWidth().padding(start = 16.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
- 318                            verticalAlignment = Alignment.CenterVertically,
- 319                        ) {
- 320                            Text(
- 321                                cat.name.uppercase(),
- 322                                fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted,
- 323                                modifier = Modifier.weight(1f),
- 324                            )
- 325                            Icon(
- 326                                Icons.Default.Add,
- 327                                contentDescription = "Add channel",
- 328                                tint = NexusTextMuted,
- 329                                modifier = Modifier.size(16.dp).clickable { onCreateChannel() },
- 330                            )
- 331                        }
- 332                    }
- 333                    items(
- 334                        channels.filter { it.parentId == cat.id }.sortedBy { it.position }
- 335                    ) { ch -> ChannelRow(ch, { onSelect(ch) }, { onInvite(ch.id) }) }
- 336                }
- 337            }
- 338    
- 339            Divider(color = NexusOutline)
- 340    
- 341            // Bottom user bar
- 342            Row(
- 343                modifier = Modifier
- 344                    .fillMaxWidth()
- 345                    .background(NexusDark)
- 346                    .padding(horizontal = 8.dp, vertical = 6.dp),
- 347                verticalAlignment = Alignment.CenterVertically,
- 348            ) {
- 349                Box(modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
- 350                    Text("A", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
- 351                }
- 352                Spacer(Modifier.width(8.dp))
- 353                Column(modifier = Modifier.weight(1f)) {
- 354                    Text("Online", color = NexusGreen, fontSize = 11.sp, fontWeight = FontWeight.Bold)
- 355                }
- 356                IconButton(onClick = onOpenSettings, modifier = Modifier.size(32.dp)) {
- 357                    Icon(Icons.Default.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
- 358                }
- 359            }
- 360        }
- 361    }
- 362    
- 363    @Composable
- 364    fun ChannelRow(channel: ChannelResponse, onClick: () -> Unit, onInvite: () -> Unit) {
- 365        var showMenu by remember { mutableStateOf(false) }
- 366        val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
- 367    
- 368        Box {
- 369            Row(
- 370                modifier = Modifier
- 371                    .fillMaxWidth()
- 372 ❌                 .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
- 373                    .padding(horizontal = 8.dp, vertical = 1.dp)
- 374                    .clip(RoundedCornerShape(4.dp))
- 375                    .padding(horizontal = 8.dp, vertical = 6.dp),
- 376                verticalAlignment = Alignment.CenterVertically,
- 377            ) {
- 378                Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
- 379                Spacer(Modifier.width(6.dp))
- 380                Text(channel.name, color = NexusTextMuted, fontSize = 14.sp, modifier = Modifier.weight(1f))
- 381            }
- 382            DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
- 383                if (channel.type == "text") {
- 384                    DropdownMenuItem(
- 385                        text = { Text("Copy Invite Link") },
- 386                        onClick = { showMenu = false; onInvite() },
- 387                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) }
- 388                    )
- 389                }
- 390            }
- 391        }
- 392    }
- 393    
- 394    // ── Dialogs ───────────────────────────────────────────────────────────────────
+ 132    @Composable
+ 133    private fun SettingsRow(icon: ImageVector, label: String, badge: String? = null, onClick: () -> Unit) {
+ 134        Row(
+ 135            modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 16.dp, vertical = 14.dp),
+ 136            verticalAlignment = Alignment.CenterVertically,
+ 137        ) {
+ 138            Icon(icon, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(20.dp))
+ 139            Spacer(Modifier.width(16.dp))
+ 140            Text(label, color = NexusTextPrimary, fontSize = 15.sp, modifier = Modifier.weight(1f))
+ 141            if (badge != null) { Text(badge, color = NexusTextMuted, fontSize = 13.sp); Spacer(Modifier.width(8.dp)) }
+ 142            Icon(Icons.Default.ChevronRight, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+ 143        }
+ 144        Divider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
+ 145    }
+ 146    
+ 147    
+ 148    // ── Overview ──────────────────────────────────────────────────────────────────
+ 149    @OptIn(ExperimentalMaterial3Api::class)
+ 150    @Composable
+ 151    private fun OverviewSubScreen(
+ 152        guild: GuildResponse?, uiState: ServerSettingsUiState,
+ 153        onSave: (String) -> Unit, onBack: () -> Unit,
+ 154    ) {
+ 155        var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+ 156        Scaffold(
+ 157            topBar = {
+ 158                TopAppBar(
+ 159                    title = { Text("Overview", fontWeight = FontWeight.Bold) },
+ 160                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 161                    actions = {
+ 162                        TextButton(onClick = { onSave(name) }, enabled = !uiState.saving && name.isNotBlank()) {
+ 163                            if (uiState.saving) CircularProgressIndicator(Modifier.size(16.dp), strokeWidth = 2.dp, color = NexusBlurple)
+ 164                            else Text("Save", color = NexusBlurple, fontWeight = FontWeight.Bold)
+ 165                        }
+ 166                    },
+ 167                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 168                )
+ 169            },
+ 170            containerColor = NexusDark,
+ 171        ) { padding ->
+ 172            Column(Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState())) {
+ 173                Spacer(Modifier.height(16.dp))
+ 174                SectionHeader("Server Name")
+ 175                Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
+ 176                    OutlinedTextField(
+ 177                        value = name, onValueChange = { name = it }, singleLine = true,
+ 178                        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp),
+ 179                        colors = OutlinedTextFieldDefaults.colors(
+ 180                            focusedBorderColor      = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+ 181                            focusedContainerColor   = NexusDarkLight, unfocusedContainerColor = NexusDarkLight,
+ 182                        ),
+ 183                    )
+ 184                }
+ 185                Spacer(Modifier.height(24.dp))
+ 186                SectionHeader("Server Boost")
+ 187                Surface(color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
+ 188                    Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+ 189                        Icon(Icons.Default.Bolt, contentDescription = null, tint = NitroMid, modifier = Modifier.size(20.dp))
+ 190                        Spacer(Modifier.width(12.dp))
+ 191                        Column {
+ 192                            Text("Level ${guild?.boostTier ?: 0}", color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 193                            Text("${guild?.boostCount ?: 0} boosts", color = NexusTextMuted, fontSize = 12.sp)
+ 194                        }
+ 195                    }
+ 196                }
+ 197                uiState.error?.let {
+ 198                    Spacer(Modifier.height(8.dp))
+ 199                    Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(horizontal = 16.dp))
+ 200                }
+ 201            }
+ 202        }
+ 203    }
+ 204    
+ 205    
+ 206    // ── Members ───────────────────────────────────────────────────────────────────
+ 207    @OptIn(ExperimentalMaterial3Api::class)
+ 208    @Composable
+ 209    private fun MembersSubScreen(members: List<MemberResponse>, roles: List<RoleResponse>, onBack: () -> Unit) {
+ 210        var query   by remember { mutableStateOf("") }
+ 211        val roleMap = remember(roles) { roles.associateBy { it.id } }
+ 212        val filtered = members.filter {
+ 213            query.isBlank() || it.user?.username?.contains(query, true) == true || it.nickname?.contains(query, true) == true
+ 214        }
+ 215    
+ 216        Scaffold(
+ 217            topBar = {
+ 218                TopAppBar(
+ 219                    title = { Text("Members", fontWeight = FontWeight.Bold) },
+ 220                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 221                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 222                )
+ 223            },
+ 224            containerColor = NexusDark,
+ 225        ) { padding ->
+ 226            Column(Modifier.fillMaxSize().padding(padding)) {
+ 227                OutlinedTextField(
+ 228                    value = query, onValueChange = { query = it },
+ 229                    placeholder = { Text("Search Members", color = NexusTextMuted) },
+ 230                    leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+ 231                    singleLine = true,
+ 232                    modifier = Modifier.fillMaxWidth().padding(12.dp),
+ 233                    shape = RoundedCornerShape(24.dp),
+ 234                    colors = OutlinedTextFieldDefaults.colors(
+ 235                        focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+ 236                        focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+ 237                    ),
+ 238                )
+ 239                LazyColumn(Modifier.fillMaxSize()) {
+ 240                    items(filtered, key = { it.userId }) { member ->
+ 241                        MemberListRow(member, roleMap)
+ 242                        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+ 243                    }
+ 244                }
+ 245            }
+ 246        }
+ 247    }
+ 248    
+ 249    @Composable
+ 250    private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleResponse>) {
+ 251        val displayName = member.nickname ?: member.user?.username ?: member.userId
+ 252        val statusColor = when (member.user?.status) {
+ 253            "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
+ 254        }
+ 255        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.Top) {
+ 256            Box(Modifier.size(44.dp)) {
+ 257                Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+ 258                    if (member.user?.avatar != null)
+ 259                        AsyncImage(model = member.user.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
+ 260                    else
+ 261                        Text(displayName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+ 262                }
+ 263                Box(Modifier.size(12.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
+ 264                    Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
+ 265                }
+ 266            }
+ 267            Spacer(Modifier.width(12.dp))
+ 268            Column(Modifier.weight(1f)) {
+ 269                Text(displayName, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 270                member.user?.let { Text("${it.username}#${it.discriminator}", color = NexusTextMuted, fontSize = 12.sp) }
+ 271                if (member.roles.isNotEmpty()) {
+ 272                    Spacer(Modifier.height(6.dp))
+ 273                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+ 274                        member.roles.take(4).forEach { roleId ->
+ 275                            val role = roleMap[roleId]
+ 276                            val rc   = if ((role?.color ?: 0) != 0) Color(0xFF000000 or role!!.color.toLong()) else NexusOutline
+ 277                            Surface(shape = RoundedCornerShape(4.dp), color = rc.copy(alpha = 0.2f)) {
+ 278                                Row(Modifier.padding(horizontal = 6.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
+ 279                                    Box(Modifier.size(8.dp).clip(CircleShape).background(rc))
+ 280                                    Spacer(Modifier.width(4.dp))
+ 281                                    Text(role?.name ?: roleId, color = NexusTextPrimary, fontSize = 11.sp)
+ 282                                }
+ 283                            }
+ 284                        }
+ 285                        if (member.roles.size > 4) Text("+${member.roles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
+ 286                    }
+ 287                }
+ 288            }
+ 289            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+ 290        }
+ 291    }
+ 292    
+ 293    
+ 294    // ── Roles ─────────────────────────────────────────────────────────────────────
+ 295    @OptIn(ExperimentalMaterial3Api::class)
+ 296    @Composable
+ 297    private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
+ 298        var query    by remember { mutableStateOf("") }
+ 299        val everyone = roles.firstOrNull { it.name == "@everyone" }
+ 300        val rest     = roles.filter { it.name != "@everyone" && (query.isBlank() || it.name.contains(query, true)) }.sortedByDescending { it.position }
+ 301    
+ 302        Scaffold(
+ 303            topBar = {
+ 304                TopAppBar(
+ 305                    title = { Text("Server Roles", fontWeight = FontWeight.Bold) },
+ 306                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 307                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 308                )
+ 309            },
+ 310            containerColor = NexusDark,
+ 311        ) { padding ->
+ 312            Column(Modifier.fillMaxSize().padding(padding)) {
+ 313                OutlinedTextField(
+ 314                    value = query, onValueChange = { query = it },
+ 315                    placeholder = { Text("Search", color = NexusTextMuted) },
+ 316                    leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+ 317                    singleLine = true,
+ 318                    modifier = Modifier.fillMaxWidth().padding(12.dp),
+ 319                    shape = RoundedCornerShape(24.dp),
+ 320                    colors = OutlinedTextFieldDefaults.colors(
+ 321                        focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+ 322                        focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+ 323                    ),
+ 324                )
+ 325                Text("Use roles to group your server members and assign permissions.",
+ 326 ❌                 color = NexusTextMuted, fontSize = 13.sp, modifier = Modifier.padding(horizontal = 16.dp, bottom = 8.dp))
+ 327                LazyColumn(Modifier.fillMaxSize()) {
+ 328                    everyone?.let { ev ->
+ 329                        item {
+ 330                            RoleListRow(ev)
+ 331                            Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+ 332                        }
+ 333                    }
+ 334                    if (rest.isNotEmpty()) {
+ 335                        item {
+ 336                            Text("ROLES — ${rest.size}", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
+ 337                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+ 338                        }
+ 339                        items(rest, key = { it.id }) { role ->
+ 340                            RoleListRow(role)
+ 341                            Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+ 342                        }
+ 343                    }
+ 344                }
+ 345            }
+ 346        }
+ 347    }
+ 348    
+ 349    @Composable
+ 350    private fun RoleListRow(role: RoleResponse) {
+ 351        val rc = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
+ 352        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+ 353            Box(Modifier.size(36.dp).clip(CircleShape).background(rc.copy(alpha = 0.15f)), contentAlignment = Alignment.Center) {
+ 354                Icon(Icons.Default.Shield, null, tint = rc, modifier = Modifier.size(20.dp))
+ 355            }
+ 356            Spacer(Modifier.width(12.dp))
+ 357            Column(Modifier.weight(1f)) {
+ 358                Text(role.name, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+ 359                Text("${role.memberCount} Members", color = NexusTextMuted, fontSize = 12.sp)
+ 360            }
+ 361            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+ 362        }
+ 363    }
+ 364    
+ 365    
+ 366    // ── Invites ───────────────────────────────────────────────────────────────────
+ 367    @OptIn(ExperimentalMaterial3Api::class)
+ 368    @Composable
+ 369    private fun InvitesSubScreen(invites: List<GuildInviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
+ 370        val isoFmt = remember { SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) }
+ 371        Scaffold(
+ 372            topBar = {
+ 373                TopAppBar(
+ 374                    title = { Text("Invites", fontWeight = FontWeight.Bold) },
+ 375                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 376                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 377                )
+ 378            },
+ 379            containerColor = NexusDark,
+ 380        ) { padding ->
+ 381            if (invites.isEmpty()) {
+ 382                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+ 383                    Text("No active invites", color = NexusTextMuted, fontSize = 14.sp)
+ 384                }
+ 385            } else {
+ 386                LazyColumn(Modifier.fillMaxSize().padding(padding).padding(horizontal = 12.dp, vertical = 8.dp),
+ 387                    verticalArrangement = Arrangement.spacedBy(8.dp)) {
+ 388                    items(invites, key = { it.code }) { invite ->
+ 389                        InviteCard(invite, isoFmt) { onDelete(invite.code) }
+ 390                    }
+ 391                }
+ 392            }
+ 393        }
+ 394    }
  395    
  396    @Composable
- 397    fun CreateGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onCreate: (String) -> Unit) {
- 398        var name by remember { mutableStateOf("") }
- 399        Dialog(onDismissRequest = onDismiss) {
- 400            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 401                Column(modifier = Modifier.padding(24.dp)) {
- 402                    Row(verticalAlignment = Alignment.CenterVertically) {
- 403                        Text("Create a Server", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary, modifier = Modifier.weight(1f))
- 404                        IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) {
- 405                            Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted)
- 406                        }
- 407                    }
- 408                    Spacer(Modifier.height(8.dp))
- 409                    Text("Give your server a name.", color = NexusTextMuted, fontSize = 13.sp)
- 410                    Spacer(Modifier.height(16.dp))
- 411                    OutlinedTextField(
- 412                        value = name,
- 413                        onValueChange = { name = it },
- 414                        label = { Text("SERVER NAME") },
- 415                        singleLine = true,
- 416                        modifier = Modifier.fillMaxWidth(),
- 417                        isError = error != null,
- 418                    )
- 419                    error?.let {
- 420                        Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp))
- 421                    }
- 422                    Spacer(Modifier.height(20.dp))
- 423                    Button(
- 424                        onClick = { onCreate(name) },
- 425                        enabled = !loading && name.isNotBlank(),
- 426                        modifier = Modifier.fillMaxWidth().height(48.dp),
- 427                        colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple),
- 428                    ) {
- 429                        if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
- 430                        else Text("Create", fontWeight = FontWeight.Bold)
- 431                    }
- 432                }
- 433            }
- 434        }
- 435    }
- 436    
- 437    @Composable
- 438    fun JoinGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onJoin: (String) -> Unit) {
- 439        var code by remember { mutableStateOf("") }
- 440        Dialog(onDismissRequest = onDismiss) {
- 441            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 442                Column(modifier = Modifier.padding(24.dp)) {
- 443                    Row(verticalAlignment = Alignment.CenterVertically) {
- 444                        Text("Join a Server", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary, modifier = Modifier.weight(1f))
- 445                        IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) {
- 446                            Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted)
- 447                        }
- 448                    }
- 449                    Spacer(Modifier.height(8.dp))
- 450                    Text("Enter an invite link below.", color = NexusTextMuted, fontSize = 13.sp)
- 451                    Spacer(Modifier.height(16.dp))
- 452                    OutlinedTextField(
- 453                        value = code,
- 454                        onValueChange = { code = it },
- 455                        label = { Text("INVITE LINK OR CODE") },
- 456                        placeholder = { Text("nexus.gg/hTKzmn", color = NexusTextMuted) },
- 457                        singleLine = true,
- 458                        modifier = Modifier.fillMaxWidth(),
- 459                        isError = error != null,
- 460                    )
- 461                    error?.let {
- 462                        Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp))
- 463                    }
- 464                    Spacer(Modifier.height(20.dp))
- 465                    Button(
- 466                        onClick = { onJoin(code) },
- 467                        enabled = !loading && code.isNotBlank(),
- 468                        modifier = Modifier.fillMaxWidth().height(48.dp),
- 469                        colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple),
- 470                    ) {
- 471                        if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
- 472                        else Text("Join Server", fontWeight = FontWeight.Bold)
+ 397    private fun InviteCard(invite: GuildInviteResponse, isoFmt: SimpleDateFormat, onDelete: () -> Unit) {
+ 398        var showMenu by remember { mutableStateOf(false) }
+ 399        val expiryText = remember(invite.expiresAt) {
+ 400            if (invite.expiresAt == null) "Never expires"
+ 401            else try {
+ 402                val diff = (isoFmt.parse(invite.expiresAt)?.time ?: 0L) - System.currentTimeMillis()
+ 403                if (diff <= 0) "Expired"
+ 404                else "%02d:%02d:%02d".format(diff / 3_600_000, (diff % 3_600_000) / 60_000, (diff % 60_000) / 1_000)
+ 405                    .let { "Expires in: $it" }
+ 406            } catch (_: Exception) { "Unknown" }
+ 407        }
+ 408        Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
+ 409            Row(Modifier.padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
+ 410                Column(Modifier.weight(1f)) {
+ 411                    Text(invite.code, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+ 412                    val ch     = invite.channel
+ 413                    val prefix = if (ch?.type == "voice") "🔊" else "#"
+ 414                    Text("$prefix ${ch?.name ?: invite.channelId}", color = NexusTextMuted, fontSize = 13.sp)
+ 415                    Spacer(Modifier.height(4.dp))
+ 416                    Row(verticalAlignment = Alignment.CenterVertically) {
+ 417                        Icon(Icons.Default.Schedule, null, tint = NexusGreen, modifier = Modifier.size(13.dp))
+ 418                        Spacer(Modifier.width(4.dp))
+ 419                        Text(expiryText, color = NexusGreen, fontSize = 12.sp)
+ 420                    }
+ 421                    invite.creator?.let { u ->
+ 422                        Spacer(Modifier.height(4.dp))
+ 423                        Row(verticalAlignment = Alignment.CenterVertically) {
+ 424                            Box(Modifier.size(20.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+ 425                                Text(u.username.take(1).uppercase(), color = Color.White, fontSize = 10.sp)
+ 426                            }
+ 427                            Spacer(Modifier.width(6.dp))
+ 428                            Text(u.username, color = NexusTextMuted, fontSize = 12.sp)
+ 429                            Spacer(Modifier.width(12.dp))
+ 430                            Text("Uses: ${invite.uses}", color = NexusTextPrimary, fontSize = 12.sp)
+ 431                        }
+ 432                    }
+ 433                }
+ 434                Box {
+ 435                    IconButton(onClick = { showMenu = true }) { Icon(Icons.Default.MoreVert, null, tint = NexusTextMuted) }
+ 436                    DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+ 437                        DropdownMenuItem(
+ 438                            text = { Text("Revoke Invite", color = NexusRed) },
+ 439                            onClick = { showMenu = false; onDelete() },
+ 440                            leadingIcon = { Icon(Icons.Default.Delete, null, tint = NexusRed) },
+ 441                        )
+ 442                    }
+ 443                }
+ 444            }
+ 445        }
+ 446    }
+ 447    
+ 448    
+ 449    // ── Channels ──────────────────────────────────────────────────────────────────
+ 450    @OptIn(ExperimentalMaterial3Api::class)
+ 451    @Composable
+ 452    private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Unit) {
+ 453        val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
+ 454        val uncategorized = channels.filter { it.type != "category" && it.parentId == null }.sortedBy { it.position }
+ 455        Scaffold(
+ 456            topBar = {
+ 457                TopAppBar(
+ 458                    title = { Text("Channels", fontWeight = FontWeight.Bold) },
+ 459                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+ 460                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+ 461                )
+ 462            },
+ 463            containerColor = NexusDark,
+ 464        ) { padding ->
+ 465            LazyColumn(Modifier.fillMaxSize().padding(padding)) {
+ 466                items(uncategorized) { ch -> ChannelSettingsRow(ch) }
+ 467                categories.forEach { cat ->
+ 468                    item {
+ 469 ❌                     Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, top = 16.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+ 470                            Text(cat.name.uppercase(), color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+ 471                            TextButton(onClick = {}) { Text("Edit", color = NexusBlurple, fontSize = 12.sp) }
+ 472                        }
  473                    }
- 474                }
- 475            }
- 476        }
- 477    }
- 478    
- 479    @Composable
- 480    fun CreateChannelDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onCreate: (String, String) -> Unit) {
- 481        var name by remember { mutableStateOf("") }
- 482        var selectedType by remember { mutableStateOf("text") }
- 483        Dialog(onDismissRequest = onDismiss) {
- 484            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 485                Column(modifier = Modifier.padding(24.dp)) {
- 486                    Row(verticalAlignment = Alignment.CenterVertically) {
- 487                        Text("Create Channel", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary, modifier = Modifier.weight(1f))
- 488                        IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) {
- 489                            Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted)
- 490                        }
- 491                    }
- 492                    Spacer(Modifier.height(16.dp))
- 493                    Text("CHANNEL TYPE", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted)
- 494                    Spacer(Modifier.height(8.dp))
- 495                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
- 496                        listOf("text" to "# Text", "voice" to "🔊 Voice").forEach { (type, label) ->
- 497                            val selected = selectedType == type
- 498                            Surface(
- 499                                shape = RoundedCornerShape(8.dp),
- 500                                color = if (selected) NexusBlurple else NexusDarkLight,
- 501                                modifier = Modifier.clickable { selectedType = type }.weight(1f),
- 502                            ) {
- 503                                Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 10.dp)) {
- 504                                    Text(label, color = if (selected) Color.White else NexusTextMuted, fontSize = 13.sp, fontWeight = FontWeight.Bold)
- 505                                }
- 506                            }
- 507                        }
- 508                    }
- 509                    Spacer(Modifier.height(16.dp))
- 510                    OutlinedTextField(
- 511                        value = name,
- 512                        onValueChange = { name = it },
- 513                        label = { Text("CHANNEL NAME") },
- 514                        placeholder = { Text(if (selectedType == "voice") "General" else "new-channel", color = NexusTextMuted) },
- 515                        singleLine = true,
- 516                        modifier = Modifier.fillMaxWidth(),
- 517                        isError = error != null,
- 518                    )
- 519                    error?.let {
- 520                        Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp))
- 521                    }
- 522                    Spacer(Modifier.height(20.dp))
- 523                    Button(
- 524                        onClick = { onCreate(name, selectedType) },
- 525                        enabled = !loading && name.isNotBlank(),
- 526                        modifier = Modifier.fillMaxWidth().height(48.dp),
- 527                        colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple),
- 528                    ) {
- 529                        if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
- 530                        else Text("Create Channel", fontWeight = FontWeight.Bold)
- 531                    }
- 532                }
- 533            }
- 534        }
- 535    }
- 536    
- 537    @Composable
- 538    fun InviteDialog(code: String, onDismiss: () -> Unit, onCopy: (String) -> Unit) {
- 539        Dialog(onDismissRequest = onDismiss) {
- 540            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 541                Column(modifier = Modifier.padding(24.dp)) {
- 542                    Text("Invite People", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary)
- 543                    Spacer(Modifier.height(16.dp))
- 544                    Text("Share this link to invite people to your server:", color = NexusTextMuted, fontSize = 13.sp)
- 545                    Spacer(Modifier.height(12.dp))
- 546                    Surface(
- 547                        shape = RoundedCornerShape(8.dp),
- 548                        color = NexusDarkLight,
- 549                        modifier = Modifier.fillMaxWidth(),
- 550                    ) {
- 551                        Row(
- 552                            modifier = Modifier.padding(12.dp),
- 553                            verticalAlignment = Alignment.CenterVertically,
- 554                        ) {
- 555                            Text("nexus.gg/$code", color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
- 556                            TextButton(onClick = { onCopy(code) }) {
- 557                                Text("Copy", color = NexusBlurple, fontWeight = FontWeight.Bold)
- 558                            }
- 559                        }
- 560                    }
- 561                    Spacer(Modifier.height(8.dp))
- 562                    Text("Invite link expires in 24 hours.", color = NexusTextMuted, fontSize = 11.sp)
- 563                    Spacer(Modifier.height(16.dp))
- 564                    TextButton(onClick = onDismiss, modifier = Modifier.align(Alignment.End)) {
- 565                        Text("Done", color = NexusBlurple)
- 566                    }
- 567                }
- 568            }
- 569        }
- 570    }
+ 474                    items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch -> ChannelSettingsRow(ch) }
+ 475                }
+ 476            }
+ 477        }
+ 478    }
+ 479    
+ 480    @Composable
+ 481    private fun ChannelSettingsRow(channel: ChannelResponse) {
+ 482        val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
+ 483        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+ 484            Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
+ 485            Spacer(Modifier.width(8.dp))
+ 486            Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
+ 487            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+ 488        }
+ 489        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
+ 490    }
 
 
