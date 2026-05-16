@@ -149,7 +149,7 @@
  141            if (badge != null) { Text(badge, color = NexusTextMuted, fontSize = 13.sp); Spacer(Modifier.width(8.dp)) }
  142            Icon(Icons.Default.ChevronRight, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
  143        }
- 144        Divider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
+ 144        HorizontalDivider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
  145    }
  146    
  147    
@@ -247,7 +247,7 @@
  239                LazyColumn(Modifier.fillMaxSize()) {
  240                    items(filtered, key = { it.userId }) { member ->
  241                        MemberListRow(member, roleMap)
- 242                        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+ 242                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
  243                    }
  244                }
  245            }
@@ -336,7 +336,7 @@
  328                    everyone?.let { ev ->
  329                        item {
  330                            RoleListRow(ev)
- 331                            Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+ 331                            HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
  332                        }
  333                    }
  334                    if (rest.isNotEmpty()) {
@@ -346,7 +346,7 @@
  338                        }
  339                        items(rest, key = { it.id }) { role ->
  340                            RoleListRow(role)
- 341                            Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+ 341                            HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
  342                        }
  343                    }
  344                }
@@ -494,7 +494,7 @@
  486            Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
  487            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
  488        }
- 489        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
+ 489        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
  490    }
 
 
