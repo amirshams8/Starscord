@@ -141,7 +141,7 @@ private fun SettingsRow(icon: ImageVector, label: String, badge: String? = null,
         if (badge != null) { Text(badge, color = NexusTextMuted, fontSize = 13.sp); Spacer(Modifier.width(8.dp)) }
         Icon(Icons.Default.ChevronRight, contentDescription = null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
     }
-    Divider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
+    HorizontalDivider(color = NexusOutline.copy(alpha = 0.4f), modifier = Modifier.padding(start = 52.dp))
 }
 
 
@@ -239,7 +239,7 @@ private fun MembersSubScreen(members: List<MemberResponse>, roles: List<RoleResp
             LazyColumn(Modifier.fillMaxSize()) {
                 items(filtered, key = { it.userId }) { member ->
                     MemberListRow(member, roleMap)
-                    Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
                 }
             }
         }
@@ -328,7 +328,7 @@ private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
                 everyone?.let { ev ->
                     item {
                         RoleListRow(ev)
-                        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
                     }
                 }
                 if (rest.isNotEmpty()) {
@@ -338,7 +338,7 @@ private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
                     }
                     items(rest, key = { it.id }) { role ->
                         RoleListRow(role)
-                        Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
+                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 56.dp))
                     }
                 }
             }
@@ -486,5 +486,5 @@ private fun ChannelSettingsRow(channel: ChannelResponse) {
         Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
         Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
     }
-    Divider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
+    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
 }

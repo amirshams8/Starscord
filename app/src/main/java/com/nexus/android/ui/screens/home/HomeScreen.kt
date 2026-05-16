@@ -109,7 +109,7 @@ fun ServerRail(
             contentAlignment = Alignment.Center,
         ) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
 
-        Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+        HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
         LazyColumn(
             modifier = Modifier.weight(1f),
@@ -134,7 +134,7 @@ fun ServerRail(
             }
         }
 
-        Divider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+        HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
 
         Box {
             Box(
@@ -193,14 +193,14 @@ fun ChannelSidebar(
                 DropdownMenuItem(text = { Text("Server Settings") },
                     onClick = { showGuildMenu = false; onOpenServerSettings() },
                     leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted) })
-                Divider(color = NexusOutline)
+                HorizontalDivider(color = NexusOutline)
                 DropdownMenuItem(text = { Text("Leave Server", color = NexusRed) },
                     onClick = { showGuildMenu = false; showLeaveConfirm = true },
                     leadingIcon = { Icon(Icons.Default.ExitToApp, contentDescription = null, tint = NexusRed) })
             }
         }
 
-        Divider(color = NexusOutline)
+        HorizontalDivider(color = NexusOutline)
 
         val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
         val uncategorized = channels.filter { it.type != "category" && it.parentId == null }
@@ -225,7 +225,7 @@ fun ChannelSidebar(
             }
         }
 
-        Divider(color = NexusOutline)
+        HorizontalDivider(color = NexusOutline)
 
         Row(
             modifier = Modifier.fillMaxWidth().background(NexusDark).padding(horizontal = 8.dp, vertical = 6.dp),

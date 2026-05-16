@@ -224,7 +224,7 @@ fun MessageItem(
                 }
                 message.reference?.let { ref ->
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Divider(modifier = Modifier.width(2.dp).height(12.dp), color = NexusOutline)
+                        Box(modifier = Modifier.width(2.dp).height(12.dp).background(NexusOutline))
                         Spacer(Modifier.width(4.dp))
                         Text(ref.author?.username ?: "", color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold)
                         Spacer(Modifier.width(4.dp))
