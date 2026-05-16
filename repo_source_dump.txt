@@ -2906,6 +2906,7 @@ private fun OverviewSubScreen(
     onSave: (String) -> Unit, onBack: () -> Unit,
 ) {
     var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -3075,8 +3076,9 @@ private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
                     focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
                 ),
             )
+            // FIX line 326: padding(horizontal=..., bottom=...) is invalid — expand to explicit sides
             Text("Use roles to group your server members and assign permissions.",
-                color = NexusTextMuted, fontSize = 13.sp, modifier = Modifier.padding(horizontal = 16.dp, bottom = 8.dp))
+                color = NexusTextMuted, fontSize = 13.sp, modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 8.dp))
             LazyColumn(Modifier.fillMaxSize()) {
                 everyone?.let { ev ->
                     item {
@@ -3101,15 +3103,15 @@ private fun RolesSubScreen(roles: List<RoleResponse>, onBack: () -> Unit) {
 
 @Composable
 private fun RoleListRow(role: RoleResponse) {
-    val rc = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
+    val roleColor = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
     Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
-        Box(Modifier.size(36.dp).clip(CircleShape).background(rc.copy(alpha = 0.15f)), contentAlignment = Alignment.Center) {
-            Icon(Icons.Default.Shield, null, tint = rc, modifier = Modifier.size(20.dp))
+        Box(Modifier.size(32.dp).clip(CircleShape).background(roleColor.copy(alpha = 0.2f)), contentAlignment = Alignment.Center) {
+            Box(Modifier.size(14.dp).clip(CircleShape).background(roleColor))
         }
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
             Text(role.name, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-            Text("${role.memberCount} Members", color = NexusTextMuted, fontSize = 12.sp)
+            Text("${role.memberCount ?: 0} members", color = NexusTextMuted, fontSize = 12.sp)
         }
         Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
     }
@@ -3119,8 +3121,9 @@ private fun RoleListRow(role: RoleResponse) {
 // ── Invites ───────────────────────────────────────────────────────────────────
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun InvitesSubScreen(invites: List<GuildInviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
-    val isoFmt = remember { SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault()) }
+private fun InvitesSubScreen(invites: List<InviteResponse>, onDelete: (String) -> Unit, onBack: () -> Unit) {
+    val sdf = remember { SimpleDateFormat("MMM d, yyyy", Locale.getDefault()) }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -3133,13 +3136,13 @@ private fun InvitesSubScreen(invites: List<GuildInviteResponse>, onDelete: (Stri
     ) { padding ->
         if (invites.isEmpty()) {
             Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-                Text("No active invites", color = NexusTextMuted, fontSize = 14.sp)
+                Text("No active invites", color = NexusTextMuted)
             }
         } else {
-            LazyColumn(Modifier.fillMaxSize().padding(padding).padding(horizontal = 12.dp, vertical = 8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            LazyColumn(Modifier.fillMaxSize().padding(padding)) {
                 items(invites, key = { it.code }) { invite ->
-                    InviteCard(invite, isoFmt) { onDelete(invite.code) }
+                    InviteRow(invite, sdf, onDelete)
+                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 16.dp))
                 }
             }
         }
@@ -3147,54 +3150,38 @@ private fun InvitesSubScreen(invites: List<GuildInviteResponse>, onDelete: (Stri
 }
 
 @Composable
-private fun InviteCard(invite: GuildInviteResponse, isoFmt: SimpleDateFormat, onDelete: () -> Unit) {
-    var showMenu by remember { mutableStateOf(false) }
-    val expiryText = remember(invite.expiresAt) {
-        if (invite.expiresAt == null) "Never expires"
-        else try {
-            val diff = (isoFmt.parse(invite.expiresAt)?.time ?: 0L) - System.currentTimeMillis()
-            if (diff <= 0) "Expired"
-            else "%02d:%02d:%02d".format(diff / 3_600_000, (diff % 3_600_000) / 60_000, (diff % 60_000) / 1_000)
-                .let { "Expires in: $it" }
-        } catch (_: Exception) { "Unknown" }
-    }
-    Surface(shape = RoundedCornerShape(12.dp), color = NexusDarkMedium, modifier = Modifier.fillMaxWidth()) {
-        Row(Modifier.padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
-            Column(Modifier.weight(1f)) {
-                Text(invite.code, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                val ch     = invite.channel
-                val prefix = if (ch?.type == "voice") "🔊" else "#"
-                Text("$prefix ${ch?.name ?: invite.channelId}", color = NexusTextMuted, fontSize = 13.sp)
-                Spacer(Modifier.height(4.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(Icons.Default.Schedule, null, tint = NexusGreen, modifier = Modifier.size(13.dp))
-                    Spacer(Modifier.width(4.dp))
-                    Text(expiryText, color = NexusGreen, fontSize = 12.sp)
-                }
-                invite.creator?.let { u ->
-                    Spacer(Modifier.height(4.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(Modifier.size(20.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
-                            Text(u.username.take(1).uppercase(), color = Color.White, fontSize = 10.sp)
-                        }
-                        Spacer(Modifier.width(6.dp))
-                        Text(u.username, color = NexusTextMuted, fontSize = 12.sp)
-                        Spacer(Modifier.width(12.dp))
-                        Text("Uses: ${invite.uses}", color = NexusTextPrimary, fontSize = 12.sp)
-                    }
-                }
-            }
-            Box {
-                IconButton(onClick = { showMenu = true }) { Icon(Icons.Default.MoreVert, null, tint = NexusTextMuted) }
-                DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
-                    DropdownMenuItem(
-                        text = { Text("Revoke Invite", color = NexusRed) },
-                        onClick = { showMenu = false; onDelete() },
-                        leadingIcon = { Icon(Icons.Default.Delete, null, tint = NexusRed) },
-                    )
-                }
+private fun InviteRow(invite: InviteResponse, sdf: SimpleDateFormat, onDelete: (String) -> Unit) {
+    var showConfirm by remember { mutableStateOf(false) }
+
+    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Text(invite.code, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+            Text("Uses: ${invite.uses}${invite.maxUses?.let { "/$it" } ?: ""}  •  by ${invite.inviter?.username ?: "?"}",
+                color = NexusTextMuted, fontSize = 12.sp)
+            invite.expiresAt?.let {
+                Text("Expires ${sdf.format(it)}", color = NexusTextMuted, fontSize = 12.sp)
             }
         }
+        IconButton(onClick = { showConfirm = true }) {
+            Icon(Icons.Default.Delete, null, tint = NexusRed)
+        }
+    }
+
+    if (showConfirm) {
+        AlertDialog(
+            onDismissRequest = { showConfirm = false },
+            title = { Text("Delete Invite") },
+            text  = { Text("Delete invite ${invite.code}?") },
+            confirmButton = {
+                TextButton(onClick = { onDelete(invite.code); showConfirm = false }) {
+                    Text("Delete", color = NexusRed)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showConfirm = false }) { Text("Cancel") }
+            },
+            containerColor = NexusDarkMedium,
+        )
     }
 }
 
@@ -3203,8 +3190,9 @@ private fun InviteCard(invite: GuildInviteResponse, isoFmt: SimpleDateFormat, on
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Unit) {
-    val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
-    val uncategorized = channels.filter { it.type != "category" && it.parentId == null }.sortedBy { it.position }
+    val categories    = channels.filter { it.type == 4 }.sortedBy { it.position }
+    val uncategorized = channels.filter { it.type != 4 && it.parentId == null }.sortedBy { it.position }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -3219,7 +3207,8 @@ private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Uni
             items(uncategorized) { ch -> ChannelSettingsRow(ch) }
             categories.forEach { cat ->
                 item {
-                    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, top = 16.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                    // FIX line 469: padding(horizontal=..., top=..., bottom=...) is invalid — expand to explicit sides
+                    Row(Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text(cat.name.uppercase(), color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
                         TextButton(onClick = {}) { Text("Edit", color = NexusBlurple, fontSize = 12.sp) }
                     }
@@ -3232,14 +3221,18 @@ private fun ChannelsSubScreen(channels: List<ChannelResponse>, onBack: () -> Uni
 
 @Composable
 private fun ChannelSettingsRow(channel: ChannelResponse) {
-    val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
-    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
-        Spacer(Modifier.width(8.dp))
+    val icon = when (channel.type) {
+        2    -> Icons.Default.VolumeUp
+        4    -> Icons.Default.Folder
+        else -> Icons.Default.Tag
+    }
+    Row(Modifier.fillMaxWidth().clickable { }.padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+        Icon(icon, null, tint = NexusTextMuted, modifier = Modifier.size(18.dp))
+        Spacer(Modifier.width(12.dp))
         Text(channel.name, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
         Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
     }
-    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 40.dp))
+    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 46.dp))
 }
 
 
