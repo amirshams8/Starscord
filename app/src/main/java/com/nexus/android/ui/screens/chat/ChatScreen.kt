@@ -1,3 +1,174 @@
+package com.nexus.android.ui.screens.chat
+
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import coil.compose.AsyncImage
+import com.nexus.android.data.api.models.MessageResponse
+import com.nexus.android.ui.theme.*
+import java.text.SimpleDateFormat
+import java.util.Locale
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ChatScreen(
+    channelId: String,
+    guildId: String,
+    onBack: () -> Unit,
+    onOpenMembers: (String, String) -> Unit,
+    vm: ChatViewModel = hiltViewModel(),
+) {
+    val messages    by vm.messages.collectAsState()
+    val channelName by vm.channelName.collectAsState()
+    val typingUsers by vm.typingUsers.collectAsState()
+    val uiState     by vm.uiState.collectAsState()
+    val listState   = rememberLazyListState()
+    var input       by remember { mutableStateOf("") }
+    var emojiPickerMessageId by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(channelId)     { vm.loadChannel(channelId, guildId) }
+    LaunchedEffect(messages.size) { if (messages.isNotEmpty()) listState.animateScrollToItem(messages.size - 1) }
+
+    Column(modifier = Modifier.fillMaxSize().background(NexusDarkLight)) {
+        TopAppBar(
+            title = {
+                Row(
+                    modifier = Modifier.clickable { onOpenMembers(channelId, guildId) },
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                    Spacer(Modifier.width(4.dp))
+                    Text("›", color = NexusTextMuted, fontSize = 18.sp)
+                }
+            },
+            navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, contentDescription = "Back") } },
+            actions = {
+                IconButton(onClick = { onOpenMembers(channelId, guildId) }) {
+                    Icon(Icons.Default.People, contentDescription = "Members", tint = NexusTextMuted)
+                }
+            },
+            colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+        )
+
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.weight(1f).padding(horizontal = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(2.dp),
+        ) {
+            items(messages, key = { it.id }) { msg ->
+                MessageItem(
+                    message      = msg,
+                    isOwn        = msg.author?.id == vm.currentUserId,
+                    editingId    = uiState.editingMessageId,
+                    editingText  = uiState.editingContent,
+                    onEditChange = vm::onEditContentChange,
+                    onEditSubmit = { vm.submitEdit(channelId) },
+                    onEditCancel = vm::cancelEditing,
+                    onEdit       = { vm.startEditing(msg) },
+                    onDelete     = { vm.deleteMessage(channelId, msg.id) },
+                    onReact      = { emoji -> vm.toggleReaction(channelId, msg.id, emoji) },
+                    onOpenEmoji  = { emojiPickerMessageId = msg.id },
+                )
+            }
+        }
+
+        if (emojiPickerMessageId != null) {
+            Surface(color = NexusDarkMedium) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    listOf("👍","❤️","😂","😮","😢","🔥","🎉","✅").forEach { emoji ->
+                        Text(emoji, fontSize = 22.sp, modifier = Modifier.clickable {
+                            vm.toggleReaction(channelId, emojiPickerMessageId!!, emoji)
+                            emojiPickerMessageId = null
+                        })
+                    }
+                    Spacer(Modifier.weight(1f))
+                    IconButton(onClick = { emojiPickerMessageId = null }, modifier = Modifier.size(28.dp)) {
+                        Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                    }
+                }
+            }
+        }
+
+        if (typingUsers.isNotEmpty()) {
+            Text("${typingUsers.joinToString(", ")} is typing...",
+                fontSize = 12.sp, color = NexusTextMuted,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 2.dp))
+        }
+
+        if (uiState.editingMessageId != null) {
+            Row(
+                modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(horizontal = 12.dp, vertical = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Icon(Icons.Default.Edit, contentDescription = null, tint = NexusBlurple, modifier = Modifier.size(14.dp))
+                Spacer(Modifier.width(6.dp))
+                Text("Editing message", color = NexusBlurple, fontSize = 12.sp, modifier = Modifier.weight(1f))
+                TextButton(onClick = vm::cancelEditing) { Text("Cancel", color = NexusTextMuted, fontSize = 12.sp) }
+            }
+        }
+
+        Row(
+            modifier = Modifier.fillMaxWidth().background(NexusDarkMedium).padding(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            OutlinedTextField(
+                value = if (uiState.editingMessageId != null) uiState.editingContent else input,
+                onValueChange = { v ->
+                    if (uiState.editingMessageId != null) vm.onEditContentChange(v)
+                    else { input = v; vm.sendTyping(channelId) }
+                },
+                placeholder = { Text("Message #$channelName", color = NexusTextMuted) },
+                modifier = Modifier.weight(1f),
+                shape = RoundedCornerShape(24.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor      = Color.Transparent,
+                    unfocusedBorderColor    = Color.Transparent,
+                    focusedContainerColor   = NexusDarkLight,
+                    unfocusedContainerColor = NexusDarkLight,
+                ),
+                maxLines = 5,
+            )
+            Spacer(Modifier.width(8.dp))
+            if (uiState.editingMessageId != null) {
+                IconButton(onClick = { vm.submitEdit(channelId) },
+                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusGreen)) {
+                    Icon(Icons.Default.Check, contentDescription = "Confirm edit", tint = Color.White)
+                }
+            } else {
+                IconButton(
+                    onClick = { if (input.isNotBlank()) { vm.sendMessage(channelId, input.trim()); input = "" } },
+                    colors = IconButtonDefaults.iconButtonColors(containerColor = NexusBlurple)) {
+                    Icon(Icons.Default.Send, contentDescription = "Send", tint = Color.White)
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun MessageItem(
     message: MessageResponse,
@@ -17,6 +188,9 @@ fun MessageItem(
     var showMenu          by remember { mutableStateOf(false) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
+    val authorName   = message.author?.username ?: "Unknown"
+    val authorAvatar = message.author?.avatar
+
     if (showDeleteConfirm) {
         AlertDialog(
             onDismissRequest = { showDeleteConfirm = false },
@@ -26,9 +200,6 @@ fun MessageItem(
             dismissButton = { TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") } },
         )
     }
-
-    val authorName   = message.author?.username ?: "Unknown"
-    val authorAvatar = message.author?.avatar
 
     Box {
         Row(
