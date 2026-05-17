@@ -1,528 +1,3 @@
-<<<<<<< Updated upstream
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with DexingNoClasspathTransform
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with DexingNoClasspathTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with DexingNoClasspathTransform
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with DexingOutputSplitTransform
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with DexingOutputSplitTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with DexingOutputSplitTransform
-Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with DexingOutputSplitTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingNoClasspathTransform
-Transforming kotlinx-serialization-json-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0) with DexingOutputSplitTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingOutputSplitTransform
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with DexingNoClasspathTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingNoClasspathTransform
-=======
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
-Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-common-java8-2.8.3.jar (androidx.lifecycle:lifecycle-common-java8:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-process-2.8.3.aar (androidx.lifecycle:lifecycle-process:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with DexingOutputSplitTransform
-Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with DexingNoClasspathTransform
-Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with DexingNoClasspathTransform
-Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with DexingOutputSplitTransform
-Transforming accompanist-drawablepainter-0.32.0.aar (com.google.accompanist:accompanist-drawablepainter:0.32.0) with DexingOutputSplitTransform
-Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with DexingOutputSplitTransform
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with DexingNoClasspathTransform
-Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with DexingOutputSplitTransform
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with DexingOutputSplitTransform
-Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with DexingOutputSplitTransform
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with DexingNoClasspathTransform
-Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with DexingOutputSplitTransform
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with DexingNoClasspathTransform
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with DexingOutputSplitTransform
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with DexingOutputSplitTransform
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with DexingNoClasspathTransform
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with DexingOutputSplitTransform
-Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with DexingOutputSplitTransform
-Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with DexingOutputSplitTransform
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with DexingNoClasspathTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with DexingNoClasspathTransform
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with DexingOutputSplitTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with DexingOutputSplitTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with DexingNoClasspathTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with DexingOutputSplitTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with DexingNoClasspathTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with DexingOutputSplitTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with DexingNoClasspathTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with DexingNoClasspathTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with DexingOutputSplitTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with DexingOutputSplitTransform
-Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with DexingNoClasspathTransform
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with DexingOutputSplitTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with DexingNoClasspathTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with DexingNoClasspathTransform
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with DexingNoClasspathTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with DexingOutputSplitTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with DexingOutputSplitTransform
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with DexingOutputSplitTransform
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with DexingNoClasspathTransform
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with DexingNoClasspathTransform
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with DexingOutputSplitTransform
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with DexingNoClasspathTransform
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with DexingOutputSplitTransform
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with DexingOutputSplitTransform
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with DexingNoClasspathTransform
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with DexingNoClasspathTransform
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with DexingOutputSplitTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with DexingNoClasspathTransform
-Transforming timberkt-1.5.1.aar (com.github.ajalt:timberkt:1.5.1) with DexingOutputSplitTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with DexingOutputSplitTransform
-Transforming kotlinx-serialization-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.5.0) with DexingOutputSplitTransform
-Transforming kotlinx-serialization-json-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.5.0) with DexingOutputSplitTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingNoClasspathTransform
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with DexingNoClasspathTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingNoClasspathTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingOutputSplitTransform
->>>>>>> Stashed changes
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with DexingOutputSplitTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingOutputSplitTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with DexingNoClasspathTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with DexingOutputSplitTransform
-Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with DexingNoClasspathTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
-<<<<<<< Updated upstream
-Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with DexingOutputSplitTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingNoClasspathTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingNoClasspathTransform
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with DexingOutputSplitTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingOutputSplitTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingOutputSplitTransform
-=======
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
-Transforming exifinterface-1.3.7.aar (androidx.exifinterface:exifinterface:1.3.7) with DexingOutputSplitTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingNoClasspathTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingNoClasspathTransform
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with DexingOutputSplitTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingOutputSplitTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingOutputSplitTransform
->>>>>>> Stashed changes
-Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with DexingNoClasspathTransform
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with DexingNoClasspathTransform
-Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with DexingOutputSplitTransform
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with DexingOutputSplitTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with DexingNoClasspathTransform
-<<<<<<< Updated upstream
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with DexingNoClasspathTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with DexingOutputSplitTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with DexingOutputSplitTransform
-Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with DexingOutputSplitTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with DexingNoClasspathTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with DexingOutputSplitTransform
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingNoClasspathTransform
-Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with DexingOutputSplitTransform
-Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with DexingOutputSplitTransform
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingOutputSplitTransform
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingNoClasspathTransform
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingOutputSplitTransform
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with DexingOutputSplitTransform
-Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with DexingOutputSplitTransform
-Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingNoClasspathTransform
-=======
-Transforming hilt-navigation-1.2.0.aar (androidx.hilt:hilt-navigation:1.2.0) with DexingNoClasspathTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with DexingOutputSplitTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with DexingNoClasspathTransform
-Transforming hilt-navigation-1.2.0.aar (androidx.hilt:hilt-navigation:1.2.0) with DexingOutputSplitTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with DexingOutputSplitTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with DexingNoClasspathTransform
-Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with DexingOutputSplitTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with DexingOutputSplitTransform
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingNoClasspathTransform
-Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with DexingOutputSplitTransform
-Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with DexingOutputSplitTransform
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingOutputSplitTransform
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingNoClasspathTransform
-Transforming collection-ktx-1.4.0.jar (androidx.collection:collection-ktx:1.4.0) with DexingOutputSplitTransform
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingOutputSplitTransform
-Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingNoClasspathTransform
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with DexingOutputSplitTransform
->>>>>>> Stashed changes
-Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with DexingOutputSplitTransform
-Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingOutputSplitTransform
-Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with DexingNoClasspathTransform
-Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with DexingNoClasspathTransform
-<<<<<<< Updated upstream
-Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with DexingOutputSplitTransform
-Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with DexingOutputSplitTransform
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with DexingNoClasspathTransform
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with DexingOutputSplitTransform
-Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with DexingOutputSplitTransform
-Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with DexingOutputSplitTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with DexingOutputSplitTransform
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with DexingOutputSplitTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with DexingOutputSplitTransform
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with DexingOutputSplitTransform
-Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with DexingOutputSplitTransform
-Transforming kotlin-parcelize-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22) with DexingOutputSplitTransform
-Transforming kotlin-android-extensions-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22) with DexingOutputSplitTransform
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with DexingOutputSplitTransform
-Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with DexingOutputSplitTransform
-Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with DexingOutputSplitTransform
-Transforming tink-android-1.8.0.jar (com.google.crypto.tink:tink-android:1.8.0) with DexingOutputSplitTransform
-=======
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with DexingNoClasspathTransform
-Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with DexingOutputSplitTransform
-Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with DexingOutputSplitTransform
-Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with DexingOutputSplitTransform
-Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with DexingOutputSplitTransform
-Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with DexingOutputSplitTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with DexingOutputSplitTransform
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with DexingOutputSplitTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with DexingOutputSplitTransform
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with DexingOutputSplitTransform
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with DexingOutputSplitTransform
-Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with DexingOutputSplitTransform
-Transforming kotlin-parcelize-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-parcelize-runtime:1.9.22) with DexingOutputSplitTransform
-Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with DexingOutputSplitTransform
-Transforming kotlin-android-extensions-runtime-1.9.22.jar (org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.9.22) with DexingOutputSplitTransform
-Transforming tink-android-1.8.0.jar (com.google.crypto.tink:tink-android:1.8.0) with DexingOutputSplitTransform
-Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with DexingOutputSplitTransform
->>>>>>> Stashed changes
-Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with DexingOutputSplitTransform
-Transforming hilt-core-2.51.jar (com.google.dagger:hilt-core:2.51) with DexingOutputSplitTransform
-Transforming dagger-2.51.jar (com.google.dagger:dagger:2.51) with DexingOutputSplitTransform
-Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with DexingNoClasspathTransform
-Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with DexingOutputSplitTransform
-<<<<<<< Updated upstream
-Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with DexingOutputSplitTransform
-Transforming firebase-annotations-16.2.0.jar (com.google.firebase:firebase-annotations:16.2.0) with DexingOutputSplitTransform
-Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with DexingOutputSplitTransform
-Transforming android-jain-sip-ri-1.3.0-91.jar (javax.sip:android-jain-sip-ri:1.3.0-91) with DexingOutputSplitTransform
-Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with DexingOutputSplitTransform
-Transforming semver4j-3.1.0.jar (com.vdurmont:semver4j:3.1.0) with DexingOutputSplitTransform
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with DexingNoClasspathTransform
-Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with DexingOutputSplitTransform
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with DexingNoClasspathTransform
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with DexingOutputSplitTransform
-Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with DexingOutputSplitTransform
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with DexingOutputSplitTransform
-Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with DexingOutputSplitTransform
-Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with DexingOutputSplitTransform
-Transforming navigation-common-2.7.7.aar (androidx.navigation:navigation-common:2.7.7) with DexingNoClasspathTransform
-Transforming navigation-common-2.7.7.aar (androidx.navigation:navigation-common:2.7.7) with DexingOutputSplitTransform
-=======
-Transforming firebase-annotations-16.2.0.jar (com.google.firebase:firebase-annotations:16.2.0) with DexingOutputSplitTransform
-Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with DexingOutputSplitTransform
-Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with DexingOutputSplitTransform
-Transforming protobuf-javalite-3.22.0.jar (com.google.protobuf:protobuf-javalite:3.22.0) with DexingOutputSplitTransform
-Transforming android-jain-sip-ri-1.3.0-91.jar (javax.sip:android-jain-sip-ri:1.3.0-91) with DexingOutputSplitTransform
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with DexingNoClasspathTransform
-Transforming semver4j-3.1.0.jar (com.vdurmont:semver4j:3.1.0) with DexingOutputSplitTransform
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with DexingOutputSplitTransform
-Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with DexingOutputSplitTransform
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with DexingNoClasspathTransform
-Transforming timber-4.7.0.aar (com.jakewharton.timber:timber:4.7.0) with DexingOutputSplitTransform
-Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with DexingOutputSplitTransform
-Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with DexingOutputSplitTransform
-Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with DexingOutputSplitTransform
->>>>>>> Stashed changes
-Caching disabled for task ':app:mergeExtDexDebug' because:
-  Build cache is disabled
-Task ':app:mergeExtDexDebug' is not up-to-date because:
-  No history is available.
-The input changes require a full rebuild for incremental task ':app:mergeExtDexDebug'.
-Merging to '/home/runner/work/Starscord/Starscord/app/build/intermediates/dex/debug/mergeExtDexDebug' with D8 from all or a subset of dex files in /home/runner/.gradle/caches/8.9/transforms/7d4893eb285cb05ddc8557681754a830/transformed/jetified-hilt-navigation-compose-1.2.0-runtime/jetified-hilt-navigation-compose-1.2.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/0fd05a7872977f70d074732e131b90ad/transformed/jetified-hilt-navigation-1.2.0-runtime/jetified-hilt-navigation-1.2.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/0e7719982c00dbfc1cf16b0775fb498b/transformed/navigation-common-2.7.7-runtime/navigation-common-2.7.7-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3aa1e61ef73e913ef11d36c8372a9c98/transformed/navigation-runtime-2.7.7-runtime/navigation-runtime-2.7.7-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/b9e70ff7611e17feae094c88b1258712/transformed/jetified-navigation-compose-2.7.7-runtime/jetified-navigation-compose-2.7.7-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c664e7a6ccba3a94ffe23f54dc7c016f/transformed/biometric-1.1.0-runtime/biometric-1.1.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/950e00f22a9e4c26f38271b1e94f1515/transformed/jetified-lottie-compose-6.4.0-runtime/jetified-lottie-compose-6.4.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/40f1c3d99416b498f1f72a4e5a26178f/transformed/jetified-hilt-android-2.51-runtime/jetified-hilt-android-2.51-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/57f5da5f2c712349c9e53672f0832539/transformed/jetified-lottie-6.4.0-runtime/jetified-lottie-6.4.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/20c1fb8ecc8e4209fbba8de933bde618/transformed/jetified-coil-gif-2.6.0-runtime/jetified-coil-gif-2.6.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/7d8ef54d12ac57afe5d7daa7b733b10f/transformed/jetified-coil-compose-2.6.0-runtime/jetified-coil-compose-2.6.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/085139e221675d9539138019d0f7f900/transformed/jetified-coil-compose-base-2.6.0-runtime/jetified-coil-compose-base-2.6.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4474861657ba769649d939f927dc7e90/transformed/jetified-coil-2.6.0-runtime/jetified-coil-2.6.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c8d254c7ec7effe6856b375a6cc0f625/transformed/jetified-coil-base-2.6.0-runtime/jetified-coil-base-2.6.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4337b08876956f175fc8090c4d0260f2/transformed/jetified-appcompat-resources-1.6.1-runtime/jetified-appcompat-resources-1.6.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/64212ded1a18ebcfbb1af530b11fa699/transformed/appcompat-1.6.1-runtime/appcompat-1.6.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e8a38a3108bb5df33fe484f69bf07b6a/transformed/jetified-firebase-messaging-ktx-24.0.0-runtime/jetified-firebase-messaging-ktx-24.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/30ecebcc6142f0b9e5bd131cdb1ac04b/transformed/jetified-firebase-messaging-24.0.0-runtime/jetified-firebase-messaging-24.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/61fb2677eb640dbe85e848aebcdd50b6/transformed/jetified-play-services-base-18.0.1-runtime/jetified-play-services-base-18.0.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/583899bdae5e469c360615212b0cdd95/transformed/jetified-firebase-installations-18.0.0-runtime/jetified-firebase-installations-18.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c2579a912ae0cb7201a619b63bbb0547/transformed/jetified-firebase-common-ktx-21.0.0-runtime/jetified-firebase-common-ktx-21.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e4c00230976016449372b82d94c4d19c/transformed/jetified-firebase-common-21.0.0-runtime/jetified-firebase-common-21.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/a875f0cd587fd8756d9c8438d90e9b83/transformed/jetified-firebase-iid-interop-17.1.0-runtime/jetified-firebase-iid-interop-17.1.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c8518a914386de91def0c02de275ba59/transformed/jetified-firebase-measurement-connector-19.0.0-runtime/jetified-firebase-measurement-connector-19.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/d70fa77ae877a119777c917102317a13/transformed/jetified-play-services-cloud-messaging-17.2.0-runtime/jetified-play-services-cloud-messaging-17.2.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/cab7f5c253c87363f6463af92acf8540/transformed/jetified-play-services-stats-17.0.2-runtime/jetified-play-services-stats-17.0.2-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/2db8faadc8784ba2d20f665cfe6118c9/transformed/room-common-2.6.1/room-common-2.6.1_dex, /home/runner/.gradle/caches/8.9/transforms/a6fd35c2b7bc297d5cdd780412bb8034/transformed/room-runtime-2.6.1-runtime/room-runtime-2.6.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/2001809a8e5a13cff0a347786454ed57/transformed/jetified-room-ktx-2.6.1-runtime/jetified-room-ktx-2.6.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ded94aac1106593758d3b5514c3d22e7/transformed/jetified-livekit-android-2.7.1-runtime/jetified-livekit-android-2.7.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/6f443b35985786c55a323c88e07097c7/transformed/legacy-support-core-utils-1.0.0-runtime/legacy-support-core-utils-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/1bc71b30b739579246261fe642c1306f/transformed/loader-1.0.0-runtime/loader-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ab6631616af6907157bbd4c15ea311c3/transformed/jetified-material3-release-runtime/jetified-material3-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/03892e9e1bbfc8978ece89118fd7006e/transformed/jetified-material-ripple-release-runtime/jetified-material-ripple-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/979d4f0ca0f78995c1d53b28d5a5602b/transformed/jetified-material-icons-core-release-runtime/jetified-material-icons-core-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/57b0e3ec24641bceabf4f02599a5ec2a/transformed/jetified-material-icons-extended-release-runtime/jetified-material-icons-extended-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/9a7c258e643197b16aa07916b3fa360b/transformed/jetified-material-release-runtime/jetified-material-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/6ef3063246c2cd053b734edba3d08e69/transformed/jetified-foundation-layout-release-runtime/jetified-foundation-layout-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4fb66c680b7b6736e0097fec3a367f46/transformed/jetified-foundation-release-runtime/jetified-foundation-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/79f09f204da0b0020fc5858e4dddc76e/transformed/jetified-animation-core-release-runtime/jetified-animation-core-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/970eed4bc0e7c0cac0ca6a550ff0a3dd/transformed/jetified-animation-release-runtime/jetified-animation-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e4a98aeb56a2c5ebe39154cbe5d7d7aa/transformed/jetified-ui-tooling-data-release-runtime/jetified-ui-tooling-data-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/19343d687ecddb875ef4531758f79900/transformed/jetified-ui-unit-release-runtime/jetified-ui-unit-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/61c8d055a7397bf8d6f1d4a4300b485b/transformed/jetified-ui-graphics-release-runtime/jetified-ui-graphics-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/5b27423333759d0daa11af7b775344fd/transformed/jetified-ui-text-release-runtime/jetified-ui-text-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/a918e12a229168524f623030161309f3/transformed/jetified-ui-util-release-runtime/jetified-ui-util-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/11093d62736b201631eb612321cf139e/transformed/jetified-ui-geometry-release-runtime/jetified-ui-geometry-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/46e3f0ca40b04b5644e3f1a44531a20b/transformed/jetified-ui-tooling-preview-release-runtime/jetified-ui-tooling-preview-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/434d076a6fe127a196df3c7ed6b6f39b/transformed/jetified-ui-tooling-release-runtime/jetified-ui-tooling-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/f9f55a3802eb7ead157291c025e4a835/transformed/jetified-savedstate-ktx-1.2.1-runtime/jetified-savedstate-ktx-1.2.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/147b86152dbdbdd0db01cbc5e33b0eec/transformed/jetified-savedstate-1.2.1-runtime/jetified-savedstate-1.2.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/245a9e13ea05eeb107aeacfe3ad4d0f5/transformed/jetified-media3-ui-1.3.1-runtime/jetified-media3-ui-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/6b9624936e901551748ae8e7270b4575/transformed/jetified-media3-extractor-1.3.1-runtime/jetified-media3-extractor-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/58e2dfbace9c485ca7c055d1ab712e95/transformed/jetified-media3-container-1.3.1-runtime/jetified-media3-container-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/fba8e1d4d7f74130b70732c640ced764/transformed/jetified-media3-datasource-1.3.1-runtime/jetified-media3-datasource-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/9652044d74bb9de141a665ea55e51432/transformed/jetified-media3-decoder-1.3.1-runtime/jetified-media3-decoder-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/9672a6e3f74afd794a72cb8ff081984b/transformed/jetified-media3-database-1.3.1-runtime/jetified-media3-database-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/532612e7f4d6fa7d11691781029bcc4a/transformed/jetified-media3-common-1.3.1-runtime/jetified-media3-common-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/31481b14df0b45d8818134aa35cbba44/transformed/jetified-media3-exoplayer-1.3.1-runtime/jetified-media3-exoplayer-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c4c37889baf97d874052a2f3dbbe28c1/transformed/media-1.7.0-runtime/media-1.7.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e659561523bcca403b985c61563e8169/transformed/recyclerview-1.3.0-runtime/recyclerview-1.3.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e22e48609c8575db8ca2d806b13d5246/transformed/viewpager-1.0.0-runtime/viewpager-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4294f0ca89a5ee8c3833878e97947efd/transformed/vectordrawable-animated-1.1.0-runtime/vectordrawable-animated-1.1.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3653a66bafab7f3282c366e77bf7de6a/transformed/vectordrawable-1.1.0-runtime/vectordrawable-1.1.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/03f55b7317953b1dbd646b660972ba62/transformed/jetified-customview-poolingcontainer-1.0.0-runtime/jetified-customview-poolingcontainer-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ec02e8d09bb9e251f804162ac333d185/transformed/jetified-core-ktx-1.13.1-runtime/jetified-core-ktx-1.13.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/fed1a40ea376c15843f0741b2c9767e1/transformed/drawerlayout-1.0.0-runtime/drawerlayout-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/dcb41933cee9b5e6e8529a3415b8174b/transformed/customview-1.0.0-runtime/customview-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/2e0acedda97344845547673861ca98b2/transformed/jetified-emoji2-views-helper-1.3.0-runtime/jetified-emoji2-views-helper-1.3.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/1f2dcd2c2014d9d79cda7c4451b8e39c/transformed/jetified-emoji2-1.3.0-runtime/jetified-emoji2-1.3.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/64d013f0ebf0b93d098646567d570f07/transformed/jetified-autofill-1.0.0-runtime/jetified-autofill-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/8dd890713f3a9d83d24f6acead95c59f/transformed/core-1.13.1-runtime/core-1.13.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/a05f3c84e6a2fbf1245ae19f4b8e524e/transformed/jetified-lifecycle-process-2.8.3-runtime/jetified-lifecycle-process-2.8.3-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ab39bc4f93ae59a4eac792d5b5f443b7/transformed/jetified-lifecycle-runtime-release-runtime/jetified-lifecycle-runtime-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e960ccbc579961c7367dc2560866520d/transformed/jetified-lifecycle-viewmodel-release-runtime/jetified-lifecycle-viewmodel-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c9af066e6bd3e514795930a9ae48b65d/transformed/jetified-lifecycle-common-jvm-2.8.3/jetified-lifecycle-common-jvm-2.8.3_dex, /home/runner/.gradle/caches/8.9/transforms/eee2757a4a8def5a125726de6d4fd2e8/transformed/lifecycle-livedata-2.8.3-runtime/lifecycle-livedata-2.8.3-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/d9af60c18427b9a6356c23c9a122a925/transformed/jetified-lifecycle-viewmodel-savedstate-2.8.3-runtime/jetified-lifecycle-viewmodel-savedstate-2.8.3-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/54cb31c246b92b3c69c6a076deb5b5a4/transformed/jetified-accompanist-drawablepainter-0.32.0-runtime/jetified-accompanist-drawablepainter-0.32.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3ea6e6056edc6c3e81ab4bc09fc1fd5d/transformed/jetified-runtime-saveable-release-runtime/jetified-runtime-saveable-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3d2494a6efbce9ded82d86d84b5bf1ad/transformed/jetified-runtime-release-runtime/jetified-runtime-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/bdeeafae2b3b340fd31c9aba8a7bd24c/transformed/jetified-kotlinx-coroutines-android-1.8.1/jetified-kotlinx-coroutines-android-1.8.1_dex, /home/runner/.gradle/caches/8.9/transforms/399439ba350f4551fed2530c836d3820/transformed/jetified-datastore-core-okio-jvm-1.1.1/jetified-datastore-core-okio-jvm-1.1.1_dex, /home/runner/.gradle/caches/8.9/transforms/717fd6c44c43963826d3c4ee53b43c9f/transformed/jetified-datastore-core-release-runtime/jetified-datastore-core-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/a8cc1195fe762ea8cf70ea7e88c0a7d7/transformed/jetified-datastore-preferences-core-jvm-1.1.1/jetified-datastore-preferences-core-jvm-1.1.1_dex, /home/runner/.gradle/caches/8.9/transforms/a229d85187b21a7a030e609fc41744a1/transformed/jetified-datastore-release-runtime/jetified-datastore-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/cac095883fe5b3fa57434b13fedddf85/transformed/jetified-datastore-preferences-release-runtime/jetified-datastore-preferences-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3aac260c4ea24e3160ddd99fe2e63a78/transformed/jetified-kotlinx-coroutines-core-jvm-1.8.1/jetified-kotlinx-coroutines-core-jvm-1.8.1_dex, /home/runner/.gradle/caches/8.9/transforms/7e351b7189f536c91e4e90cb83116bc8/transformed/jetified-kotlinx-coroutines-play-services-1.8.1/jetified-kotlinx-coroutines-play-services-1.8.1_dex, /home/runner/.gradle/caches/8.9/transforms/097bdd5d9bbebb9254fd8c2d2285eb6d/transformed/jetified-firebase-installations-interop-17.1.1-runtime/jetified-firebase-installations-interop-17.1.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/716841b45a0c548e4b5afb0e49e55e90/transformed/jetified-play-services-tasks-18.1.0-runtime/jetified-play-services-tasks-18.1.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e24cb38d9d30c2737ee58188db79c874/transformed/jetified-play-services-basement-18.3.0-runtime/jetified-play-services-basement-18.3.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e403f031689d190117bd00525be710ac/transformed/fragment-1.5.1-runtime/fragment-1.5.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/563a15c58a4d05f631c08760589b4a1c/transformed/lifecycle-livedata-core-2.8.3-runtime/lifecycle-livedata-core-2.8.3-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/c717470a465e04db0e5e7ddc60b5f446/transformed/jetified-lifecycle-viewmodel-compose-release-runtime/jetified-lifecycle-viewmodel-compose-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/44ebd7808b5d08e6e6c2a2bacad1c301/transformed/jetified-ui-release-runtime/jetified-ui-release-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/0523a510cd8459f79ed7ccd22036f13a/transformed/jetified-activity-1.9.0-runtime/jetified-activity-1.9.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ed86bc66b5860fc9c10151d694207823/transformed/jetified-activity-compose-1.9.0-runtime/jetified-activity-compose-1.9.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ee96da8e6ba684a1571b3ef3e2cf829f/transformed/sqlite-framework-2.4.0-runtime/sqlite-framework-2.4.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/190533df42e9cb6e914c60ae8039262a/transformed/sqlite-2.4.0-runtime/sqlite-2.4.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/423a0a67557fc91bda487715cd970fb6/transformed/jetified-timberkt-1.5.1-runtime/jetified-timberkt-1.5.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/8723214f322b5dd0833f2867308cb6c0/transformed/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-runtime/jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/7b3d57f7841b2346a33e38866c90563b/transformed/jetified-kotlinx-serialization-core-jvm-1.5.0/jetified-kotlinx-serialization-core-jvm-1.5.0_dex, /home/runner/.gradle/caches/8.9/transforms/a0c16e5f463f3a55559532b3c5a51588/transformed/jetified-kotlinx-serialization-json-jvm-1.5.0/jetified-kotlinx-serialization-json-jvm-1.5.0_dex, /home/runner/.gradle/caches/8.9/transforms/0be4014b1add1339851c083f8caa5224/transformed/jetified-annotation-experimental-1.4.0-runtime/jetified-annotation-experimental-1.4.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/7cdb1234f440077509432f65ea824751/transformed/jetified-security-crypto-1.1.0-alpha06-runtime/jetified-security-crypto-1.1.0-alpha06-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/06e05d63fa0bab53604994f6152d9df3/transformed/core-runtime-2.2.0-runtime/core-runtime-2.2.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4a97f276414cffe5375594ea483cba72/transformed/jetified-firebase-components-18.0.0-runtime/jetified-firebase-components-18.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/b1e3c1051d0d297ea674f42fca0b6531/transformed/interpolator-1.0.0-runtime/interpolator-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3fe0de453715ee273a42b065ee8ec839/transformed/exifinterface-1.3.7-runtime/exifinterface-1.3.7-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/e5bf5e6223ad167bc57a287421c6a590/transformed/jetified-profileinstaller-1.3.1-runtime/jetified-profileinstaller-1.3.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/45b9185fa0e5ec92fa804a0b74a4ff36/transformed/core-common-2.2.0/core-common-2.2.0_dex, /home/runner/.gradle/caches/8.9/transforms/a24ba264eef2b9f802b847a3af7edc06/transformed/versionedparcelable-1.1.1-runtime/versionedparcelable-1.1.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4de022058c39f2226f5366fa5cb00921/transformed/jetified-firebase-datatransport-18.2.0-runtime/jetified-firebase-datatransport-18.2.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/4e5c9440d8f0461086a3a9a17fce1193/transformed/jetified-transport-backend-cct-3.1.9-runtime/jetified-transport-backend-cct-3.1.9-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/327f88d113fc3b30801b06b3cfffd0ac/transformed/jetified-firebase-encoders-json-18.0.0-runtime/jetified-firebase-encoders-json-18.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/a2a1ea7b50aaec11ffeb86111329c0d9/transformed/jetified-transport-runtime-3.1.9-runtime/jetified-transport-runtime-3.1.9-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/73c28a440d2787fbc21734e793a1bc62/transformed/jetified-firebase-encoders-proto-16.0.0/jetified-firebase-encoders-proto-16.0.0_dex, /home/runner/.gradle/caches/8.9/transforms/44b7876debc7c80d98703e0182dbd8ac/transformed/jetified-transport-api-3.1.0-runtime/jetified-transport-api-3.1.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/9ea2710966c25874039290540d2d7c73/transformed/jetified-firebase-encoders-17.0.0/jetified-firebase-encoders-17.0.0_dex, /home/runner/.gradle/caches/8.9/transforms/f2800424b386dad52eea61ba681b31fe/transformed/jetified-concurrent-futures-1.1.0/jetified-concurrent-futures-1.1.0_dex, /home/runner/.gradle/caches/8.9/transforms/e0cfaa83cf20213b3681350bce8d5109/transformed/jetified-startup-runtime-1.1.1-runtime/jetified-startup-runtime-1.1.1-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3e0aefecf1b3b0c672c381f5b49138f9/transformed/jetified-tracing-1.0.0-runtime/jetified-tracing-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/ec2cd0dca7adbf48e7c6ee01e27c2101/transformed/jetified-collection-jvm-1.4.0/jetified-collection-jvm-1.4.0_dex, /home/runner/.gradle/caches/8.9/transforms/5e521c316414819102b36d47d3cfcea6/transformed/cursoradapter-1.0.0-runtime/cursoradapter-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/af24cee5ff140c0aaea9f0aa879ac1c3/transformed/jetified-resourceinspection-annotation-1.0.1/jetified-resourceinspection-annotation-1.0.1_dex, /home/runner/.gradle/caches/8.9/transforms/c055f27549c08621f84e3a215eb00cf5/transformed/documentfile-1.0.0-runtime/documentfile-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/3deb44911666d318177fb1411e874a1f/transformed/localbroadcastmanager-1.0.0-runtime/localbroadcastmanager-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/5514ab6a8b2eb04f533dfb5e961eceb1/transformed/print-1.0.0-runtime/print-1.0.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/6ebc8722fdaf33b67d47654e87e08d74/transformed/jetified-annotation-jvm-1.8.0/jetified-annotation-jvm-1.8.0_dex, /home/runner/.gradle/caches/8.9/transforms/d05d1250c3bac553e0f3c7b8604c0560/transformed/jetified-logging-interceptor-4.12.0/jetified-logging-interceptor-4.12.0_dex, /home/runner/.gradle/caches/8.9/transforms/efb1efbece38e14e23b130c8f56c818d/transformed/jetified-converter-gson-2.11.0/jetified-converter-gson-2.11.0_dex, /home/runner/.gradle/caches/8.9/transforms/cb5e72cc945700e10149fc6a45c503c5/transformed/jetified-retrofit-2.11.0/jetified-retrofit-2.11.0_dex, /home/runner/.gradle/caches/8.9/transforms/cc45979e134c305d2fdc690fcf898aec/transformed/jetified-okhttp-4.12.0/jetified-okhttp-4.12.0_dex, /home/runner/.gradle/caches/8.9/transforms/604bc8237b96c0ab00c80af9f7e7a965/transformed/jetified-okio-jvm-3.8.0/jetified-okio-jvm-3.8.0_dex, /home/runner/.gradle/caches/8.9/transforms/e6efad2da63c19b45783b78c04d2c5cf/transformed/jetified-kotlin-parcelize-runtime-1.9.22/jetified-kotlin-parcelize-runtime-1.9.22_dex, /home/runner/.gradle/caches/8.9/transforms/7a72ca861dd896c1c1ef9fe5d542556e/transformed/jetified-kotlin-android-extensions-runtime-1.9.22/jetified-kotlin-android-extensions-runtime-1.9.22_dex, /home/runner/.gradle/caches/8.9/transforms/1dec139ce250caaed1c3f98e5f01df64/transformed/jetified-kotlin-stdlib-2.0.0/jetified-kotlin-stdlib-2.0.0_dex, /home/runner/.gradle/caches/8.9/transforms/1215cbc9eb918cc2e820989386e85b53/transformed/jetified-tink-android-1.8.0/jetified-tink-android-1.8.0_dex, /home/runner/.gradle/caches/8.9/transforms/38d44d6635cb4187768e32ce300cb05f/transformed/jetified-gson-2.11.0/jetified-gson-2.11.0_dex, /home/runner/.gradle/caches/8.9/transforms/9af0934dc152d50a4845137ca70f7209/transformed/jetified-annotations-23.0.0/jetified-annotations-23.0.0_dex, /home/runner/.gradle/caches/8.9/transforms/fcbf7c02c281379ecb980d4bdc515cf0/transformed/jetified-hilt-core-2.51/jetified-hilt-core-2.51_dex, /home/runner/.gradle/caches/8.9/transforms/0f68b843976090dbdb637c4ae9b598e4/transformed/jetified-dagger-2.51/jetified-dagger-2.51_dex, /home/runner/.gradle/caches/8.9/transforms/752784af0b3818caaf224a1f5ddcebea/transformed/jetified-jsr305-3.0.2/jetified-jsr305-3.0.2_dex, /home/runner/.gradle/caches/8.9/transforms/2405195e6542a867141d0def24f3f3aa/transformed/jetified-firebase-annotations-16.2.0/jetified-firebase-annotations-16.2.0_dex, /home/runner/.gradle/caches/8.9/transforms/7d9fecb6d6905efb854c9498548057db/transformed/jetified-javax.inject-1/jetified-javax.inject-1_dex, /home/runner/.gradle/caches/8.9/transforms/14e6b80c94004a9f66473d9c8dda3fa6/transformed/jetified-protobuf-javalite-3.22.0/jetified-protobuf-javalite-3.22.0_dex, /home/runner/.gradle/caches/8.9/transforms/7b07c2ff66d49a958d1e9b31b2d46138/transformed/jetified-android-jain-sip-ri-1.3.0-91/jetified-android-jain-sip-ri-1.3.0-91_dex, /home/runner/.gradle/caches/8.9/transforms/89c6b5411254585195286798728febcd/transformed/jetified-semver4j-3.1.0/jetified-semver4j-3.1.0_dex, /home/runner/.gradle/caches/8.9/transforms/091a4daf1dfd4cc65d4c52cc5966ceea/transformed/jetified-android-prefixed-125.6422.04-runtime/jetified-android-prefixed-125.6422.04-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/59578e862005c3785510b2f2a5ef4e64/transformed/jetified-error_prone_annotations-2.27.0/jetified-error_prone_annotations-2.27.0_dex, /home/runner/.gradle/caches/8.9/transforms/aa40f7e4fc00bf4effa9534d7aabb211/transformed/jetified-timber-4.7.0-runtime/jetified-timber-4.7.0-runtime_dex, /home/runner/.gradle/caches/8.9/transforms/2c5552a3d0d379ec3624b5d8564a8c41/transformed/jetified-guava-32.1.3-android/jetified-guava-32.1.3-android_dex, /home/runner/.gradle/caches/8.9/transforms/eadab45ef2c9bd3296dcefee204689a4/transformed/jetified-failureaccess-1.0.1/jetified-failureaccess-1.0.1_dex, and from all global synthetics files in 
-
-<<<<<<< Updated upstream
-Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
-:app:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
-Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker Thread 3,5,main]) started.
-:app:writeDebugAppMetadata (Thread[Execution worker Thread 3,5,main]) started.
-=======
-> Task :app:validateSigningDebug
-Caching disabled for task ':app:validateSigningDebug' because:
-  Build cache is disabled
-  Caching has been disabled for the task
-Task ':app:validateSigningDebug' is not up-to-date because:
-  Task.upToDateWhen is false.
-Creating default debug keystore at /home/runner/.config/.android/debug.keystore
-Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
-:app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
->>>>>>> Stashed changes
-
-> Task :app:writeDebugAppMetadata
-Caching disabled for task ':app:writeDebugAppMetadata' because:
-  Build cache is disabled
-  Caching has been disabled for the task
-Task ':app:writeDebugAppMetadata' is not up-to-date because:
-  No history is available.
-<<<<<<< Updated upstream
-Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 3,5,main]) started.
-:app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 3,5,main]) started.
-
-> Task :app:writeDebugSigningConfigVersions
-Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
-  Build cache is disabled
-  Caching has been disabled for the task
-Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
-  No history is available.
-
-> Task :app:stripDebugDebugSymbols
-Caching disabled for task ':app:stripDebugDebugSymbols' because:
-  Build cache is disabled
-  Caching has been disabled for the task
-Task ':app:stripDebugDebugSymbols' is not up-to-date because:
-  No history is available.
-The input changes require a full rebuild for incremental task ':app:stripDebugDebugSymbols'.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/libdatastore_shared_counter.so' due to missing strip tool for ABI 'arm64-v8a'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'arm64-v8a'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/libdatastore_shared_counter.so' due to missing strip tool for ABI 'armeabi-v7a'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'armeabi-v7a'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/libdatastore_shared_counter.so' due to missing strip tool for ABI 'x86'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/libdatastore_shared_counter.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
-C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
-C/C++: android.ndkPath from module build.gradle is not set
-C/C++: ndk.dir in local.properties is not set
-C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
-C/C++: sdkFolder is /usr/local/lib/android/sdk
-C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
-C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
-Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
-Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so, liblkjingle_peerconnection_so.so.
-=======
-Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
-:app:writeDebugSigningConfigVersions (Thread[Execution worker,5,main]) started.
->>>>>>> Stashed changes
-
-> Task :app:kaptGenerateStubsDebugKotlin
-Transforming hilt-navigation-compose-1.2.0.aar (androidx.hilt:hilt-navigation-compose:1.2.0) with JetifyTransform
-Transforming hilt-navigation-compose-1.2.0.aar (androidx.hilt:hilt-navigation-compose:1.2.0) with AarToClassTransform
-Transforming hilt-navigation-1.2.0.aar (androidx.hilt:hilt-navigation:1.2.0) with JetifyTransform
-Transforming hilt-navigation-1.2.0.aar (androidx.hilt:hilt-navigation:1.2.0) with AarToClassTransform
-Transforming hilt-android-2.51.aar (com.google.dagger:hilt-android:2.51) with JetifyTransform
-Transforming hilt-android-2.51.aar (com.google.dagger:hilt-android:2.51) with AarToClassTransform
-Transforming coil-compose-2.6.0.aar (io.coil-kt:coil-compose:2.6.0) with JetifyTransform
-Transforming coil-compose-2.6.0.aar (io.coil-kt:coil-compose:2.6.0) with AarToClassTransform
-Transforming coil-gif-2.6.0.aar (io.coil-kt:coil-gif:2.6.0) with JetifyTransform
-Transforming coil-gif-2.6.0.aar (io.coil-kt:coil-gif:2.6.0) with AarToClassTransform
-Transforming room-common-2.6.1.jar (androidx.room:room-common:2.6.1) with JetifyTransform
-Transforming room-common-2.6.1.jar (androidx.room:room-common:2.6.1) with IdentityTransform
-Transforming room-runtime-2.6.1.aar (androidx.room:room-runtime:2.6.1) with JetifyTransform
-Transforming room-runtime-2.6.1.aar (androidx.room:room-runtime:2.6.1) with AarToClassTransform
-Transforming room-ktx-2.6.1.aar (androidx.room:room-ktx:2.6.1) with JetifyTransform
-Transforming room-ktx-2.6.1.aar (androidx.room:room-ktx:2.6.1) with AarToClassTransform
-Transforming lottie-compose-6.4.0.aar (com.airbnb.android:lottie-compose:6.4.0) with JetifyTransform
-Transforming lottie-compose-6.4.0.aar (com.airbnb.android:lottie-compose:6.4.0) with AarToClassTransform
-Transforming navigation-common-2.7.7.aar (androidx.navigation:navigation-common:2.7.7) with JetifyTransform
-Transforming navigation-common-2.7.7.aar (androidx.navigation:navigation-common:2.7.7) with AarToClassTransform
-Transforming navigation-runtime-2.7.7.aar (androidx.navigation:navigation-runtime:2.7.7) with JetifyTransform
-Transforming navigation-runtime-2.7.7.aar (androidx.navigation:navigation-runtime:2.7.7) with AarToClassTransform
-Transforming navigation-common-ktx-2.7.7.aar (androidx.navigation:navigation-common-ktx:2.7.7) with JetifyTransform
-Transforming navigation-common-ktx-2.7.7.aar (androidx.navigation:navigation-common-ktx:2.7.7) with AarToClassTransform
-Transforming navigation-runtime-ktx-2.7.7.aar (androidx.navigation:navigation-runtime-ktx:2.7.7) with JetifyTransform
-Transforming navigation-runtime-ktx-2.7.7.aar (androidx.navigation:navigation-runtime-ktx:2.7.7) with AarToClassTransform
-Transforming navigation-compose-2.7.7.aar (androidx.navigation:navigation-compose:2.7.7) with JetifyTransform
-Transforming navigation-compose-2.7.7.aar (androidx.navigation:navigation-compose:2.7.7) with AarToClassTransform
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with JetifyTransform
-Transforming activity-ktx-1.9.0.aar (androidx.activity:activity-ktx:1.9.0) with AarToClassTransform
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with JetifyTransform
-Transforming activity-compose-1.9.0.aar (androidx.activity:activity-compose:1.9.0) with AarToClassTransform
-Transforming material3-release.aar (androidx.compose.material3:material3-android:1.2.1) with JetifyTransform
-Transforming material3-release.aar (androidx.compose.material3:material3-android:1.2.1) with AarToClassTransform
-Transforming coil-compose-base-2.6.0.aar (io.coil-kt:coil-compose-base:2.6.0) with JetifyTransform
-Transforming coil-compose-base-2.6.0.aar (io.coil-kt:coil-compose-base:2.6.0) with AarToClassTransform
-Transforming foundation-layout-release.aar (androidx.compose.foundation:foundation-layout-android:1.6.8) with JetifyTransform
-Transforming foundation-layout-release.aar (androidx.compose.foundation:foundation-layout-android:1.6.8) with AarToClassTransform
-Transforming material-icons-core-release.aar (androidx.compose.material:material-icons-core-android:1.6.8) with JetifyTransform
-Transforming material-icons-core-release.aar (androidx.compose.material:material-icons-core-android:1.6.8) with AarToClassTransform
-Transforming material-icons-extended-release.aar (androidx.compose.material:material-icons-extended-android:1.6.8) with JetifyTransform
-Transforming material-icons-extended-release.aar (androidx.compose.material:material-icons-extended-android:1.6.8) with AarToClassTransform
-Transforming material-ripple-release.aar (androidx.compose.material:material-ripple-android:1.6.8) with JetifyTransform
-Transforming material-ripple-release.aar (androidx.compose.material:material-ripple-android:1.6.8) with AarToClassTransform
-Transforming foundation-release.aar (androidx.compose.foundation:foundation-android:1.6.8) with JetifyTransform
-Transforming foundation-release.aar (androidx.compose.foundation:foundation-android:1.6.8) with AarToClassTransform
-Transforming animation-core-release.aar (androidx.compose.animation:animation-core-android:1.6.8) with JetifyTransform
-Transforming animation-core-release.aar (androidx.compose.animation:animation-core-android:1.6.8) with AarToClassTransform
-Transforming animation-release.aar (androidx.compose.animation:animation-android:1.6.8) with JetifyTransform
-Transforming animation-release.aar (androidx.compose.animation:animation-android:1.6.8) with AarToClassTransform
-Transforming ui-util-release.aar (androidx.compose.ui:ui-util-android:1.6.8) with JetifyTransform
-Transforming ui-util-release.aar (androidx.compose.ui:ui-util-android:1.6.8) with AarToClassTransform
-Transforming ui-unit-release.aar (androidx.compose.ui:ui-unit-android:1.6.8) with JetifyTransform
-Transforming ui-unit-release.aar (androidx.compose.ui:ui-unit-android:1.6.8) with AarToClassTransform
-Transforming ui-text-release.aar (androidx.compose.ui:ui-text-android:1.6.8) with JetifyTransform
-Transforming ui-text-release.aar (androidx.compose.ui:ui-text-android:1.6.8) with AarToClassTransform
-Transforming ui-graphics-release.aar (androidx.compose.ui:ui-graphics-android:1.6.8) with JetifyTransform
-Transforming ui-graphics-release.aar (androidx.compose.ui:ui-graphics-android:1.6.8) with AarToClassTransform
-Transforming ui-geometry-release.aar (androidx.compose.ui:ui-geometry-android:1.6.8) with JetifyTransform
-Transforming ui-geometry-release.aar (androidx.compose.ui:ui-geometry-android:1.6.8) with AarToClassTransform
-Transforming ui-tooling-data-release.aar (androidx.compose.ui:ui-tooling-data-android:1.6.8) with JetifyTransform
-Transforming ui-tooling-data-release.aar (androidx.compose.ui:ui-tooling-data-android:1.6.8) with AarToClassTransform
-Transforming ui-tooling-preview-release.aar (androidx.compose.ui:ui-tooling-preview-android:1.6.8) with JetifyTransform
-Transforming ui-tooling-preview-release.aar (androidx.compose.ui:ui-tooling-preview-android:1.6.8) with AarToClassTransform
-Transforming biometric-1.1.0.aar (androidx.biometric:biometric:1.1.0) with JetifyTransform
-Transforming biometric-1.1.0.aar (androidx.biometric:biometric:1.1.0) with AarToClassTransform
-Transforming firebase-messaging-ktx-24.0.0.aar (com.google.firebase:firebase-messaging-ktx:24.0.0) with JetifyTransform
-Transforming firebase-messaging-ktx-24.0.0.aar (com.google.firebase:firebase-messaging-ktx:24.0.0) with AarToClassTransform
-Transforming firebase-messaging-24.0.0.aar (com.google.firebase:firebase-messaging:24.0.0) with JetifyTransform
-Transforming firebase-messaging-24.0.0.aar (com.google.firebase:firebase-messaging:24.0.0) with AarToClassTransform
-Transforming firebase-iid-interop-17.1.0.aar (com.google.firebase:firebase-iid-interop:17.1.0) with JetifyTransform
-Transforming firebase-iid-interop-17.1.0.aar (com.google.firebase:firebase-iid-interop:17.1.0) with AarToClassTransform
-Transforming firebase-measurement-connector-19.0.0.aar (com.google.firebase:firebase-measurement-connector:19.0.0) with JetifyTransform
-Transforming firebase-measurement-connector-19.0.0.aar (com.google.firebase:firebase-measurement-connector:19.0.0) with AarToClassTransform
-Transforming firebase-installations-18.0.0.aar (com.google.firebase:firebase-installations:18.0.0) with JetifyTransform
-Transforming firebase-installations-18.0.0.aar (com.google.firebase:firebase-installations:18.0.0) with AarToClassTransform
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with AarToClassTransform
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with JetifyTransform
-Transforming firebase-installations-interop-17.1.1.aar (com.google.firebase:firebase-installations-interop:17.1.1) with AarToClassTransform
-Transforming firebase-common-ktx-21.0.0.aar (com.google.firebase:firebase-common-ktx:21.0.0) with JetifyTransform
-Transforming firebase-common-ktx-21.0.0.aar (com.google.firebase:firebase-common-ktx:21.0.0) with AarToClassTransform
-Transforming firebase-common-ktx-21.0.0.aar (com.google.firebase:firebase-common-ktx:21.0.0) with JetifyTransform
-Transforming firebase-common-ktx-21.0.0.aar (com.google.firebase:firebase-common-ktx:21.0.0) with AarToClassTransform
-Transforming firebase-common-ktx-21.0.0.aar (com.google.firebase:firebase-common-ktx:21.0.0) with JetifyTransform
-Transforming firebase-common-ktx-21.0.0.aar (com.google.firebase:firebase-common-ktx:21.0.0) with AarToClassTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with JetifyTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with AarToClassTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with JetifyTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with AarToClassTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with JetifyTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with AarToClassTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with JetifyTransform
-Transforming firebase-common-21.0.0.aar (com.google.firebase:firebase-common:21.0.0) with AarToClassTransform
-Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with JetifyTransform
-Transforming datastore-core-okio-jvm-1.1.1.jar (androidx.datastore:datastore-core-okio-jvm:1.1.1) with IdentityTransform
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with JetifyTransform
-Transforming datastore-core-release.aar (androidx.datastore:datastore-core-android:1.1.1) with AarToClassTransform
-Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with JetifyTransform
-Transforming datastore-preferences-core-jvm-1.1.1.jar (androidx.datastore:datastore-preferences-core-jvm:1.1.1) with IdentityTransform
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with JetifyTransform
-Transforming datastore-release.aar (androidx.datastore:datastore-android:1.1.1) with AarToClassTransform
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with JetifyTransform
-Transforming datastore-preferences-release.aar (androidx.datastore:datastore-preferences-android:1.1.1) with AarToClassTransform
-Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with JetifyTransform
-Transforming runtime-saveable-release.aar (androidx.compose.runtime:runtime-saveable-android:1.6.8) with AarToClassTransform
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with JetifyTransform
-Transforming runtime-release.aar (androidx.compose.runtime:runtime-android:1.6.8) with AarToClassTransform
-Transforming coil-2.6.0.aar (io.coil-kt:coil:2.6.0) with JetifyTransform
-Transforming coil-2.6.0.aar (io.coil-kt:coil:2.6.0) with AarToClassTransform
-Transforming coil-base-2.6.0.aar (io.coil-kt:coil-base:2.6.0) with JetifyTransform
-Transforming coil-base-2.6.0.aar (io.coil-kt:coil-base:2.6.0) with AarToClassTransform
-Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with JetifyTransform
-Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarToClassTransform
-Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with JetifyTransform
-Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarToClassTransform
-Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with JetifyTransform
-Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarToClassTransform
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with JetifyTransform
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with JetifyTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with JetifyTransform
-Transforming lifecycle-livedata-core-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3) with AarToClassTransform
-Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with JetifyTransform
-Transforming lifecycle-livedata-2.8.3.aar (androidx.lifecycle:lifecycle-livedata:2.8.3) with AarToClassTransform
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with JetifyTransform
-Transforming lifecycle-runtime-release.aar (androidx.lifecycle:lifecycle-runtime-android:2.8.3) with AarToClassTransform
-Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with JetifyTransform
-Transforming lifecycle-livedata-core-2.8.3.aar (androidx.lifecycle:lifecycle-livedata-core:2.8.3) with AarToClassTransform
-Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with JetifyTransform
-Transforming lifecycle-common-jvm-2.8.3.jar (androidx.lifecycle:lifecycle-common-jvm:2.8.3) with IdentityTransform
-Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with JetifyTransform
-Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with IdentityTransform
-Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with JetifyTransform
-Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with IdentityTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarToClassTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarToClassTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with AarToClassTransform
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with JetifyTransform
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with AarToClassTransform
 Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
@@ -890,16 +365,433 @@ i: starting the daemon as: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java -cp /home/
 i: #1 retrying connecting to the daemon 
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/incrementalData/debug, /home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/stubs/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state])
 w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
-e: Could not load module <Error module>
+Finished executing kotlin compiler using DAEMON strategy
+Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+:app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:kaptDebugKotlin
+Transforming R.jar with StructureTransformAction
+Transforming jetified-hilt-navigation-compose-1.2.0-api.jar with StructureTransformAction
+Transforming jetified-hilt-navigation-1.2.0-api.jar with StructureTransformAction
+Transforming jetified-hilt-android-2.51-api.jar with StructureTransformAction
+Transforming jetified-coil-compose-2.6.0-api.jar with StructureTransformAction
+Transforming jetified-coil-gif-2.6.0-api.jar with StructureTransformAction
+Transforming room-common-2.6.1.jar with StructureTransformAction
+Transforming room-runtime-2.6.1-api.jar with StructureTransformAction
+Transforming jetified-room-ktx-2.6.1-api.jar with StructureTransformAction
+Transforming jetified-lottie-compose-6.4.0-api.jar with StructureTransformAction
+Transforming navigation-common-2.7.7-api.jar with StructureTransformAction
+Transforming navigation-runtime-2.7.7-api.jar with StructureTransformAction
+Transforming navigation-common-ktx-2.7.7-api.jar with StructureTransformAction
+Transforming navigation-runtime-ktx-2.7.7-api.jar with StructureTransformAction
+Transforming jetified-navigation-compose-2.7.7-api.jar with StructureTransformAction
+Transforming jetified-activity-ktx-1.9.0-api.jar with StructureTransformAction
+Transforming jetified-activity-compose-1.9.0-api.jar with StructureTransformAction
+Transforming jetified-material3-release-api.jar with StructureTransformAction
+Transforming jetified-coil-compose-base-2.6.0-api.jar with StructureTransformAction
+Transforming jetified-foundation-layout-release-api.jar with StructureTransformAction
+Transforming jetified-material-icons-core-release-api.jar with StructureTransformAction
+Transforming jetified-material-icons-extended-release-api.jar with StructureTransformAction
+Transforming jetified-material-ripple-release-api.jar with StructureTransformAction
+Transforming jetified-foundation-release-api.jar with StructureTransformAction
+Transforming jetified-animation-core-release-api.jar with StructureTransformAction
+Transforming jetified-animation-release-api.jar with StructureTransformAction
+Transforming jetified-ui-util-release-api.jar with StructureTransformAction
+Transforming jetified-ui-unit-release-api.jar with StructureTransformAction
+Transforming jetified-ui-text-release-api.jar with StructureTransformAction
+Transforming jetified-ui-graphics-release-api.jar with StructureTransformAction
+Transforming jetified-ui-geometry-release-api.jar with StructureTransformAction
+Transforming jetified-ui-tooling-data-release-api.jar with StructureTransformAction
+Transforming jetified-ui-tooling-preview-release-api.jar with StructureTransformAction
+Transforming biometric-1.1.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-messaging-ktx-24.0.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-messaging-24.0.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-iid-interop-17.1.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-measurement-connector-19.0.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-installations-18.0.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-installations-interop-17.1.1-api.jar with StructureTransformAction
+Transforming jetified-firebase-common-ktx-21.0.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-common-21.0.0-api.jar with StructureTransformAction
+Transforming jetified-datastore-core-okio-jvm-1.1.1.jar with StructureTransformAction
+Transforming jetified-datastore-core-release-api.jar with StructureTransformAction
+Transforming jetified-datastore-preferences-core-jvm-1.1.1.jar with StructureTransformAction
+Transforming jetified-datastore-release-api.jar with StructureTransformAction
+Transforming jetified-datastore-preferences-release-api.jar with StructureTransformAction
+Transforming jetified-runtime-saveable-release-api.jar with StructureTransformAction
+Transforming jetified-runtime-release-api.jar with StructureTransformAction
+Transforming jetified-coil-2.6.0-api.jar with StructureTransformAction
+Transforming jetified-coil-base-2.6.0-api.jar with StructureTransformAction
+Transforming jetified-core-ktx-1.13.1-api.jar with StructureTransformAction
+Transforming loader-1.0.0-api.jar with StructureTransformAction
+Transforming viewpager-1.0.0-api.jar with StructureTransformAction
+Transforming customview-1.0.0-api.jar with StructureTransformAction
+Transforming core-1.13.1-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-livedata-core-ktx-2.8.3-api.jar with StructureTransformAction
+Transforming lifecycle-livedata-2.8.3-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-runtime-release-api.jar with StructureTransformAction
+Transforming lifecycle-livedata-core-2.8.3-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-common-jvm-2.8.3.jar with StructureTransformAction
+Transforming jetified-kotlinx-coroutines-core-jvm-1.8.1.jar with StructureTransformAction
+Transforming jetified-kotlinx-coroutines-play-services-1.8.1.jar with StructureTransformAction
+Transforming jetified-play-services-tasks-18.1.0-api.jar with StructureTransformAction
+Transforming jetified-play-services-basement-18.3.0-api.jar with StructureTransformAction
+Transforming fragment-1.5.1-api.jar with StructureTransformAction
+Transforming lifecycle-viewmodel-2.8.3-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-viewmodel-release-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-viewmodel-ktx-2.8.3-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-runtime-ktx-release-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-viewmodel-compose-release-api.jar with StructureTransformAction
+Transforming jetified-ui-release-api.jar with StructureTransformAction
+Transforming jetified-ui-tooling-release-api.jar with StructureTransformAction
+Transforming jetified-ui-test-manifest-1.6.8-api.jar with StructureTransformAction
+Transforming jetified-activity-1.9.0-api.jar with StructureTransformAction
+Transforming jetified-lifecycle-viewmodel-savedstate-2.8.3-api.jar with StructureTransformAction
+Transforming jetified-kotlinx-coroutines-android-1.8.1.jar with StructureTransformAction
+Transforming jetified-media3-exoplayer-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-media3-common-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-annotation-experimental-1.4.0-api.jar with StructureTransformAction
+Transforming jetified-savedstate-ktx-1.2.1-api.jar with StructureTransformAction
+Transforming jetified-savedstate-1.2.1-api.jar with StructureTransformAction
+Transforming jetified-converter-gson-2.11.0.jar with StructureTransformAction
+Transforming jetified-retrofit-2.11.0.jar with StructureTransformAction
+Transforming jetified-logging-interceptor-4.12.0.jar with StructureTransformAction
+Transforming jetified-livekit-android-2.7.1-api.jar with StructureTransformAction
+Transforming jetified-okhttp-4.12.0.jar with StructureTransformAction
+Transforming jetified-kotlin-stdlib-jdk8-1.9.0.jar with StructureTransformAction
+Transforming jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-api.jar with StructureTransformAction
+Transforming jetified-security-crypto-1.1.0-alpha06-api.jar with StructureTransformAction
+Transforming sqlite-framework-2.4.0-api.jar with StructureTransformAction
+Transforming sqlite-2.4.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-datatransport-18.2.0-api.jar with StructureTransformAction
+Transforming jetified-transport-backend-cct-3.1.9-api.jar with StructureTransformAction
+Transforming jetified-firebase-encoders-json-18.0.0-api.jar with StructureTransformAction
+Transforming jetified-transport-runtime-3.1.9-api.jar with StructureTransformAction
+Transforming jetified-firebase-encoders-proto-16.0.0.jar with StructureTransformAction
+Transforming jetified-firebase-encoders-17.0.0.jar with StructureTransformAction
+Transforming versionedparcelable-1.1.1-api.jar with StructureTransformAction
+Transforming jetified-collection-jvm-1.4.0.jar with StructureTransformAction
+Transforming jetified-transport-api-3.1.0-api.jar with StructureTransformAction
+Transforming core-runtime-2.2.0-api.jar with StructureTransformAction
+Transforming core-common-2.2.0.jar with StructureTransformAction
+Transforming jetified-annotation-jvm-1.8.0.jar with StructureTransformAction
+Transforming jetified-okio-jvm-3.8.0.jar with StructureTransformAction
+Transforming jetified-kotlin-stdlib-jdk7-1.9.0.jar with StructureTransformAction
+Transforming jetified-kotlin-stdlib-2.0.0.jar with StructureTransformAction
+Transforming jetified-media3-ui-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-gson-2.11.0.jar with StructureTransformAction
+Transforming jetified-annotations-23.0.0.jar with StructureTransformAction
+Transforming jetified-guava-32.1.3-android.jar with StructureTransformAction
+Transforming jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar with StructureTransformAction
+Transforming jetified-hilt-core-2.51.jar with StructureTransformAction
+Transforming jetified-dagger-2.51.jar with StructureTransformAction
+Transforming jetified-firebase-components-18.0.0-api.jar with StructureTransformAction
+Transforming jetified-firebase-annotations-16.2.0.jar with StructureTransformAction
+Transforming jetified-javax.inject-1.jar with StructureTransformAction
+Transforming jetified-dagger-lint-aar-2.51-api.jar with StructureTransformAction
+Transforming jetified-jsr305-3.0.2.jar with StructureTransformAction
+Transforming jetified-error_prone_annotations-2.27.0.jar with StructureTransformAction
+Transforming jetified-android-prefixed-125.6422.04-api.jar with StructureTransformAction
+Transforming jetified-failureaccess-1.0.1.jar with StructureTransformAction
+Transforming jetified-media3-container-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-media3-database-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-media3-datasource-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-media3-decoder-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-media3-extractor-1.3.1-api.jar with StructureTransformAction
+Transforming jetified-lottie-6.4.0-api.jar with StructureTransformAction
+Transforming android.jar with StructureTransformAction
+Transforming core-lambda-stubs.jar with StructureTransformAction
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+Caching disabled for task ':app:kaptDebugKotlin' because:
+  Build cache is disabled
+Task ':app:kaptDebugKotlin' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:kaptDebugKotlin'.
+Running kapt annotation processing using the Gradle Worker API
+Using workers NONE isolation mode to run kapt
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugKotlin
+Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-hilt-navigation-compose-1.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-hilt-navigation-1.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-hilt-android-2.51-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-coil-compose-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-coil-gif-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming room-common-2.6.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming room-runtime-2.6.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-room-ktx-2.6.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lottie-compose-6.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming navigation-common-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming navigation-runtime-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming navigation-common-ktx-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming navigation-runtime-ktx-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-navigation-compose-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-activity-ktx-1.9.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-activity-compose-1.9.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-material3-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-coil-compose-base-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-foundation-layout-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-material-icons-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-material-icons-extended-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-material-ripple-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-foundation-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-animation-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-animation-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-util-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-unit-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-text-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-graphics-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-geometry-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-tooling-data-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-tooling-preview-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming biometric-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-messaging-ktx-24.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-messaging-24.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-iid-interop-17.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-measurement-connector-19.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-installations-18.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-installations-interop-17.1.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-common-ktx-21.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-common-21.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-datastore-core-okio-jvm-1.1.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-datastore-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-datastore-preferences-core-jvm-1.1.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-datastore-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-datastore-preferences-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-runtime-saveable-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-runtime-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-coil-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-coil-base-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-core-ktx-1.13.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming loader-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming viewpager-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming customview-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-1.13.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-livedata-core-ktx-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-livedata-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-runtime-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-livedata-core-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-common-jvm-2.8.3.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-kotlinx-coroutines-core-jvm-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-kotlinx-coroutines-play-services-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-play-services-tasks-18.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-play-services-basement-18.3.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming fragment-1.5.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lifecycle-viewmodel-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-viewmodel-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-viewmodel-ktx-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-runtime-ktx-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-viewmodel-compose-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-tooling-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-ui-test-manifest-1.6.8-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-activity-1.9.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lifecycle-viewmodel-savedstate-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-kotlinx-coroutines-android-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-exoplayer-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-common-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-annotation-experimental-1.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-savedstate-ktx-1.2.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-savedstate-1.2.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-converter-gson-2.11.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-retrofit-2.11.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-logging-interceptor-4.12.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-livekit-android-2.7.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-okhttp-4.12.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-kotlin-stdlib-jdk8-1.9.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-security-crypto-1.1.0-alpha06-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming sqlite-framework-2.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming sqlite-2.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-datatransport-18.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-transport-backend-cct-3.1.9-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-encoders-json-18.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-transport-runtime-3.1.9-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-encoders-proto-16.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-encoders-17.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming versionedparcelable-1.1.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-collection-jvm-1.4.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-transport-api-3.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-runtime-2.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-common-2.2.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-annotation-jvm-1.8.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-okio-jvm-3.8.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-kotlin-stdlib-jdk7-1.9.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-kotlin-stdlib-2.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-ui-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-gson-2.11.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-annotations-23.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-guava-32.1.3-android.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-hilt-core-2.51.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-dagger-2.51.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-components-18.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-firebase-annotations-16.2.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-javax.inject-1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-dagger-lint-aar-2.51-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-jsr305-3.0.2.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-error_prone_annotations-2.27.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-android-prefixed-125.6422.04-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-failureaccess-1.0.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-container-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-database-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-datasource-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-decoder-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-media3-extractor-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jetified-lottie-6.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming android.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming core-lambda-stubs.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming debug with BuildToolsApiClasspathEntrySnapshotTransform
+Caching disabled for task ':app:compileDebugKotlin' because:
+  Build cache is disabled
+Task ':app:compileDebugKotlin' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:compileDebugKotlin'.
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
+file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
+Kotlin source files: /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/NexusApp.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/MainActivity.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/GatewayService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/NotificationService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/VoiceService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/AuthViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/LoginScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/RegisterScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ChannelMembersScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Theme.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Color.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Type.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/AuthInterceptor.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/DatabaseModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/NetworkModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/NexusApi.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/entities/Entities.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/NexusDatabase.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/GuildDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/MessageDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/gateway/GatewayClient.kt
+Java source files: /home/runner/work/Starscord/Starscord/app/build/generated/source/buildConfig/debug/com/nexus/android/BuildConfig.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_VoiceService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_GatewayService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_MembersInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/Hilt_MainActivity.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/DatabaseModule_ProvideDatabaseFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideNexusApiFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideRetrofitFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideOkHttpClientFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/AuthInterceptor_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/GuildDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/MessageDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/NexusDatabase_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/gateway/GatewayClient_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_DatabaseModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_voice_VoiceViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_dm_DmViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_dm_DmViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_server_ServerSettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_voice_VoiceViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_NetworkModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_server_ServerSettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/dagger/hilt/internal/aggregatedroot/codegen/_com_nexus_android_NexusApp.java
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kotlin-classes/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state])
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:88:36 Unresolved reference 'dmParticipants'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:88:67 Unresolved reference 'user'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:100:62 Unresolved reference 'avatar'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:111:54 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:111:56 Overload resolution ambiguity between candidates:
+@Composable() @ComposableTarget(...) fun Text(text: AnnotatedString, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., inlineContent: Map<String, InlineTextContent> = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit
+@Composable() @ComposableTarget(...) fun Text(text: String, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., onTextLayout: ((TextLayoutResult) -> Unit)? = ..., style: TextStyle = ...): Unit
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:7:42 Unresolved reference 'OpenDmRequest'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:35:47 Unresolved reference 'getDmChannels'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:52:28 Unresolved reference 'openDm'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:52:35 Unresolved reference 'OpenDmRequest'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:55:58 Unresolved reference 'id'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:57:30 Unresolved reference 'id'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:38 No parameter with name 'dmParticipants' found.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:58 Unresolved reference 'dmParticipants'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:81 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:86 Unresolved reference 'userId'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:12:32 Unresolved reference 'RoomListener'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:48:21 No parameter with name 'roomOptions' found.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:48:59 Unresolved reference 'RoomOptions'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:50:73 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:52:19 Unresolved reference 'addListener'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:52:40 Unresolved reference 'RoomListener'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:53:21 'onParticipantConnected' overrides nothing.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:54:84 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:56:21 'onParticipantDisconnected' overrides nothing.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:57:84 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:59:21 'onActiveSpeakersChanged' overrides nothing.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:60:73 Argument type mismatch: actual type is 'kotlin.collections.Set<io.livekit.android.room.participant.Participant.Identity>', but 'kotlin.collections.Set<kotlin.String>' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:75:33 Suspend function 'suspend fun setMicrophoneEnabled(enabled: Boolean): Unit' should be called only from a coroutine or another suspend function.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:15 Unresolved reference 'audioTracks'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:44 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:55 Unresolved reference 'track'.
 Finished executing kotlin compiler using DAEMON strategy
 
-> Task :app:kaptGenerateStubsDebugKotlin FAILED
+> Task :app:compileDebugKotlin FAILED
 AAPT2 aapt2-8.4.2-11315950-linux Daemon #0: shutdown
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':app:kaptGenerateStubsDebugKotlin'.
+Execution failed for task ':app:compileDebugKotlin'.
 > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
    > Compilation error. See log for more details
 
@@ -909,7 +801,7 @@ Execution failed for task ':app:kaptGenerateStubsDebugKotlin'.
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:kaptGenerateStubsDebugKotlin'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
@@ -939,35 +831,6 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:kap
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -1044,7 +907,7 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
@@ -1092,35 +955,6 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -1162,9 +996,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-<<<<<<< Updated upstream
-BUILD FAILED in 42s
-=======
-BUILD FAILED in 43s
->>>>>>> Stashed changes
-31 actionable tasks: 31 executed
+BUILD FAILED in 54s
+33 actionable tasks: 33 executed

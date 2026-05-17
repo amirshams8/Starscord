@@ -12,7 +12,37 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: Could not load module <Error module>
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:88:36 Unresolved reference 'dmParticipants'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:88:67 Unresolved reference 'user'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:100:62 Unresolved reference 'avatar'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:111:54 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:111:56 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:7:42 Unresolved reference 'OpenDmRequest'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:35:47 Unresolved reference 'getDmChannels'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:52:28 Unresolved reference 'openDm'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:52:35 Unresolved reference 'OpenDmRequest'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:55:58 Unresolved reference 'id'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:57:30 Unresolved reference 'id'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:38 No parameter with name 'dmParticipants' found.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:58 Unresolved reference 'dmParticipants'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:81 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:86 Unresolved reference 'userId'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:12:32 Unresolved reference 'RoomListener'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:48:21 No parameter with name 'roomOptions' found.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:48:59 Unresolved reference 'RoomOptions'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:50:73 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:52:19 Unresolved reference 'addListener'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:52:40 Unresolved reference 'RoomListener'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:53:21 'onParticipantConnected' overrides nothing.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:54:84 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:56:21 'onParticipantDisconnected' overrides nothing.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:57:84 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:59:21 'onActiveSpeakersChanged' overrides nothing.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:60:73 Argument type mismatch: actual type is 'kotlin.collections.Set<io.livekit.android.room.participant.Participant.Identity>', but 'kotlin.collections.Set<kotlin.String>' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:75:33 Suspend function 'suspend fun setMicrophoneEnabled(enabled: Boolean): Unit' should be called only from a coroutine or another suspend function.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:15 Unresolved reference 'audioTracks'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:44 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:55 Unresolved reference 'track'.
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -538,17 +568,13 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 238-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/runner/.gradle/caches/8.9/transforms/aaf7c6ac4b47d795aaeecf7e79518cd1/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
 
 -- BUILD TASK FAILURES --
-> Task :app:kaptGenerateStubsDebugKotlin FAILED
+> Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 42s
-=======
-BUILD FAILED in 43s
->>>>>>> Stashed changes
+BUILD FAILED in 54s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:kaptGenerateStubsDebugKotlin'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
