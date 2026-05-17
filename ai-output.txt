@@ -1,102 +1,865 @@
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt =====
-package com.nexus.android.ui.screens.voice
+//===== FILE: app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt =====
+package com.nexus.android.ui.navigation
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
-import com.nexus.android.data.api.NexusApi
-import com.nexus.android.data.api.models.VoiceLeaveRequest
-import com.nexus.android.data.api.models.VoiceTokenRequest
-import dagger.hilt.android.lifecycle.HiltViewModel
-import io.livekit.android.LiveKit
-import io.livekit.android.events.RoomEvent
-import io.livekit.android.events.collect
-import io.livekit.android.room.Room
-import io.livekit.android.room.participant.Participant
-import io.livekit.android.room.track.RemoteTrackPublication
-import io.livekit.android.room.track.Track
-import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
-import javax.inject.Inject
+import android.content.Context
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.nexus.android.ui.screens.auth.LoginScreen
+import com.nexus.android.ui.screens.auth.RegisterScreen
+import com.nexus.android.ui.screens.chat.ChatScreen
+import com.nexus.android.ui.screens.dm.DmListScreen
+import com.nexus.android.ui.screens.home.HomeScreen
+import com.nexus.android.ui.screens.profile.ProfileScreen
+import com.nexus.android.ui.screens.server.ChannelMembersScreen
+import com.nexus.android.ui.screens.server.ServerSettingsScreen
+import com.nexus.android.ui.screens.settings.SettingsScreen
+import com.nexus.android.ui.screens.voice.VoiceScreen
 
-data class VoiceUiState(
-    val connecting: Boolean = false,
-    val muted: Boolean = false,
-    val deafened: Boolean = false,
-    val speaking: Set<String> = emptySet(),
-    val error: String? = null,
+sealed class Screen(val route: String) {
+    object Login          : Screen("login")
+    object Register       : Screen("register")
+    object Home           : Screen("home")
+    object Profile        : Screen("profile")
+    object Settings       : Screen("settings")
+    object DmList         : Screen("dm_list")
+    object DmChat         : Screen("dm_chat/{channelId}") {
+        fun createRoute(c: String) = "dm_chat/$c"
+    }
+    object Chat           : Screen("chat/{channelId}/{guildId}") {
+        fun createRoute(c: String, g: String) = "chat/$c/$g"
+    }
+    object Voice          : Screen("voice/{channelId}/{channelName}") {
+        fun createRoute(c: String, n: String) = "voice/$c/${n.replace("/", "-")}"
+    }
+    object ServerSettings : Screen("server_settings/{guildId}") {
+        fun createRoute(g: String) = "server_settings/$g"
+    }
+    object ChannelMembers : Screen("channel_members/{channelId}/{guildId}") {
+        fun createRoute(c: String, g: String) = "channel_members/$c/$g"
+    }
+}
+
+// FIX: Read stored access token from EncryptedSharedPreferences to decide start destination.
+// Token is written by AuthInterceptor under key "access_token" in "nexus_secure_prefs".
+private fun hasStoredToken(context: Context): Boolean {
+    return try {
+        val masterKey = androidx.security.crypto.MasterKey.Builder(context)
+            .setKeyScheme(androidx.security.crypto.MasterKey.KeyScheme.AES256_GCM)
+            .build()
+        val prefs = androidx.security.crypto.EncryptedSharedPreferences.create(
+            context,
+            "nexus_secure_prefs",
+            masterKey,
+            androidx.security.crypto.EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            androidx.security.crypto.EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
+        )
+        prefs.getString("access_token", null) != null
+    } catch (_: Exception) { false }
+}
+
+@Composable
+fun NexusNavGraph() {
+    val context = LocalContext.current
+    // FIX: start at Home if token exists, Login otherwise — no more login prompt on every restart
+    val startDestination = if (hasStoredToken(context)) Screen.Home.route else Screen.Login.route
+    val nav = rememberNavController()
+    NavHost(navController = nav, startDestination = startDestination) {
+
+        composable(Screen.Login.route) {
+            LoginScreen(
+                onLoginSuccess       = { nav.navigate(Screen.Home.route) { popUpTo(Screen.Login.route) { inclusive = true } } },
+                onNavigateToRegister = { nav.navigate(Screen.Register.route) },
+            )
+        }
+
+        composable(Screen.Register.route) {
+            RegisterScreen(
+                onRegisterSuccess = { nav.navigate(Screen.Login.route) { popUpTo(Screen.Register.route) { inclusive = true } } },
+                onNavigateToLogin = { nav.popBackStack() },
+            )
+        }
+
+        composable(Screen.Home.route) {
+            HomeScreen(
+                onOpenChannel        = { cId, gId -> nav.navigate(Screen.Chat.createRoute(cId, gId)) },
+                onOpenVoice          = { cId, name -> nav.navigate(Screen.Voice.createRoute(cId, name)) },
+                onOpenProfile        = { nav.navigate(Screen.Profile.route) },
+                onOpenSettings       = { nav.navigate(Screen.Settings.route) },
+                onOpenServerSettings = { gId -> nav.navigate(Screen.ServerSettings.createRoute(gId)) },
+                onOpenDms            = { nav.navigate(Screen.DmList.route) },
+            )
+        }
+
+        composable(Screen.DmList.route) {
+            DmListScreen(
+                onOpenDm = { cId -> nav.navigate(Screen.DmChat.createRoute(cId)) },
+                onBack   = { nav.popBackStack() },
+            )
+        }
+
+        composable(
+            route     = Screen.DmChat.route,
+            arguments = listOf(navArgument("channelId") { type = NavType.StringType }),
+        ) { back ->
+            ChatScreen(
+                channelId     = back.arguments?.getString("channelId") ?: return@composable,
+                guildId       = "dm",
+                onBack        = { nav.popBackStack() },
+                onOpenMembers = { _, _ -> },
+            )
+        }
+
+        composable(Screen.Profile.route) {
+            ProfileScreen(onBack = { nav.popBackStack() })
+        }
+
+        composable(Screen.Settings.route) {
+            SettingsScreen(
+                onBack   = { nav.popBackStack() },
+                onLogout = { nav.navigate(Screen.Login.route) { popUpTo(0) { inclusive = true } } },
+            )
+        }
+
+        composable(
+            route     = Screen.Chat.route,
+            arguments = listOf(
+                navArgument("channelId") { type = NavType.StringType },
+                navArgument("guildId")   { type = NavType.StringType },
+            ),
+        ) { back ->
+            ChatScreen(
+                channelId     = back.arguments?.getString("channelId") ?: return@composable,
+                guildId       = back.arguments?.getString("guildId") ?: return@composable,
+                onBack        = { nav.popBackStack() },
+                onOpenMembers = { cId, gId -> nav.navigate(Screen.ChannelMembers.createRoute(cId, gId)) },
+            )
+        }
+
+        composable(
+            route     = Screen.Voice.route,
+            arguments = listOf(
+                navArgument("channelId")   { type = NavType.StringType },
+                navArgument("channelName") { type = NavType.StringType },
+            ),
+        ) { back ->
+            VoiceScreen(
+                channelId   = back.arguments?.getString("channelId") ?: return@composable,
+                channelName = back.arguments?.getString("channelName") ?: "Voice",
+                onLeave     = { nav.popBackStack() },
+            )
+        }
+
+        composable(
+            route     = Screen.ServerSettings.route,
+            arguments = listOf(navArgument("guildId") { type = NavType.StringType }),
+        ) { back ->
+            ServerSettingsScreen(
+                guildId = back.arguments?.getString("guildId") ?: return@composable,
+                onBack  = { nav.popBackStack() },
+            )
+        }
+
+        composable(
+            route     = Screen.ChannelMembers.route,
+            arguments = listOf(
+                navArgument("channelId") { type = NavType.StringType },
+                navArgument("guildId")   { type = NavType.StringType },
+            ),
+        ) { back ->
+            ChannelMembersScreen(
+                channelId = back.arguments?.getString("channelId") ?: return@composable,
+                guildId   = back.arguments?.getString("guildId") ?: return@composable,
+                onBack    = { nav.popBackStack() },
+            )
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt =====
+package com.nexus.android.data.api.models
+
+import com.google.gson.annotations.SerializedName
+
+// FIX: joinedAt is now nullable.
+// Gson silently deserializes absent/null JSON fields as null even for non-nullable Kotlin types,
+// which causes a Kotlin runtime NPE ("lateinit … was null") when the field is touched in Compose
+// LazyColumn item composition. Making it nullable? stops the crash with zero logic changes elsewhere.
+data class MemberResponse(
+    @SerializedName("guild_id")  val guildId: String,
+    @SerializedName("user_id")   val userId: String,
+    val nickname: String? = null,
+    val roles: List<String> = emptyList(),
+    @SerializedName("joined_at") val joinedAt: String? = null,
+    val user: UserResponse? = null,
 )
 
-@HiltViewModel
-class VoiceViewModel @Inject constructor(
-    application: Application,
-    private val api: NexusApi,
-) : AndroidViewModel(application) {
-    private val _uiState      = MutableStateFlow(VoiceUiState())
-    val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
-    private val _participants = MutableStateFlow<List<String>>(emptyList())
-    val participants: StateFlow<List<String>> = _participants.asStateFlow()
-    private var room: Room? = null
 
-    private fun Participant.identityString(): String = identity?.value ?: ""
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/server/ChannelMembersScreen.kt =====
+package com.nexus.android.ui.screens.server
 
-    fun join(channelId: String) = viewModelScope.launch {
-        _uiState.value = VoiceUiState(connecting = true)
-        try {
-            val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
-            if (!resp.isSuccessful || resp.body() == null) {
-                _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
-            }
-            val body = resp.body()!!
-            val r = LiveKit.create(getApplication())
-            room = r
-            r.connect(body.livekitUrl, body.token)
-            r.localParticipant.setMicrophoneEnabled(true)
-            _participants.value = r.remoteParticipants.values.map { it.identityString() }
-            _uiState.value = VoiceUiState(connecting = false)
-            launch {
-                r.events.collect { event ->
-                    when (event) {
-                        is RoomEvent.ParticipantConnected -> {
-                            _participants.value = r.remoteParticipants.values.map { it.identityString() }
-                        }
-                        is RoomEvent.ParticipantDisconnected -> {
-                            _participants.value = r.remoteParticipants.values.map { it.identityString() }
-                        }
-                        is RoomEvent.ActiveSpeakersChanged -> {
-                            _uiState.value = _uiState.value.copy(
-                                speaking = event.speakers.map { it.identityString() }.toSet()
-                            )
-                        }
-                        else -> Unit
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import coil.compose.AsyncImage
+import com.nexus.android.data.api.models.MemberResponse
+import com.nexus.android.data.api.models.RoleResponse
+import com.nexus.android.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ChannelMembersScreen(
+    channelId: String,
+    guildId: String,
+    onBack: () -> Unit,
+    vm: ServerSettingsViewModel = hiltViewModel(),
+) {
+    val members  by vm.members.collectAsState()
+    val roles    by vm.roles.collectAsState()
+    val channels by vm.channels.collectAsState()
+    var query    by remember { mutableStateOf("") }
+
+    LaunchedEffect(guildId) { vm.load(guildId) }
+
+    val channelName = channels.firstOrNull { it.id == channelId }?.name ?: channelId
+    val roleMap     = remember(roles) { roles.associateBy { it.id } }
+
+    val filtered = members.filter {
+        query.isBlank() ||
+        it.user?.username?.contains(query, true) == true ||
+        it.nickname?.contains(query, true) == true
+    }
+
+    val online  = filtered.filter { it.user?.status != null && it.user.status != "offline" }
+    val offline = filtered.filter { it.user?.status == null || it.user.status == "offline" }
+
+    fun topRoleName(m: MemberResponse): String =
+        m.roles.mapNotNull { roleMap[it] }.maxByOrNull { it.position }?.name ?: "Members"
+
+    val onlineGrouped = online.groupBy { topRoleName(it) }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Column {
+                        Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                        Text("${online.size} Online · ${offline.size} Offline", color = NexusTextMuted, fontSize = 11.sp)
+                    }
+                },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+            )
+        },
+        containerColor = NexusDark,
+    ) { padding ->
+        Column(Modifier.fillMaxSize().padding(padding)) {
+            OutlinedTextField(
+                value = query, onValueChange = { query = it },
+                placeholder = { Text("Search members", color = NexusTextMuted) },
+                leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth().padding(12.dp),
+                shape = RoundedCornerShape(24.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+                    focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+                ),
+            )
+            LazyColumn(Modifier.fillMaxSize()) {
+                onlineGrouped.forEach { (roleName, groupMembers) ->
+                    item {
+                        Text("${roleName.uppercase()} — ${groupMembers.size}",
+                            color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+                    }
+                    items(groupMembers, key = { "on_${it.userId}" }) { m ->
+                        ChannelMemberRow(m, roleMap)
+                    }
+                }
+                if (offline.isNotEmpty()) {
+                    item {
+                        Text("OFFLINE — ${offline.size}",
+                            color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
+                    }
+                    items(offline, key = { "off_${it.userId}" }) { m ->
+                        ChannelMemberRow(m, roleMap, dimmed = true)
                     }
                 }
             }
-        } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
-    }
-
-    fun leave(channelId: String) {
-        viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
-        room?.disconnect(); room = null
-        _uiState.value = VoiceUiState(); _participants.value = emptyList()
-    }
-
-    fun toggleMute() = viewModelScope.launch {
-        val m = !_uiState.value.muted
-        room?.localParticipant?.setMicrophoneEnabled(!m)
-        _uiState.value = _uiState.value.copy(muted = m)
-    }
-
-    fun toggleDeafen() {
-        val d = !_uiState.value.deafened
-        room?.remoteParticipants?.values?.forEach { p ->
-            p.trackPublications.values
-                .filterIsInstance<RemoteTrackPublication>()
-                .filter { it.kind == Track.Kind.AUDIO }
-                .forEach { it.setSubscribed(!d) }
         }
-        _uiState.value = _uiState.value.copy(deafened = d)
+    }
+}
+
+@Composable
+private fun ChannelMemberRow(member: MemberResponse, roleMap: Map<String, RoleResponse>, dimmed: Boolean = false) {
+    val displayName = member.nickname ?: member.user?.username ?: member.userId
+    val statusColor = when (member.user?.status) {
+        "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
+    }
+    // FIX: safe let chain — no !! operator; role lookup from map is nullable so must use let
+    val topRoleColor = member.roles
+        .mapNotNull { roleMap[it] }
+        .maxByOrNull { it.position }
+        ?.let { role -> if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else null }
+
+    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+        Box(Modifier.size(40.dp)) {
+            Box(
+                Modifier.size(40.dp).clip(CircleShape).background(NexusBlurple.copy(alpha = if (dimmed) 0.5f else 1f)),
+                contentAlignment = Alignment.Center,
+            ) {
+                if (member.user?.avatar != null)
+                    AsyncImage(model = member.user.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
+                else
+                    Text(displayName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
+            }
+            Box(Modifier.size(12.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
+                Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
+            }
+        }
+        Spacer(Modifier.width(12.dp))
+        Column {
+            Text(displayName, color = topRoleColor ?: if (dimmed) NexusTextMuted else NexusTextPrimary,
+                fontWeight = FontWeight.Medium, fontSize = 14.sp)
+            member.user?.customStatus?.let { Text(it, color = NexusTextMuted, fontSize = 12.sp, maxLines = 1) }
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt =====
+package com.nexus.android.ui.screens.server
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import coil.compose.AsyncImage
+import com.nexus.android.data.api.models.GuildResponse
+import com.nexus.android.data.api.models.MemberResponse
+import com.nexus.android.data.api.models.RoleResponse
+import com.nexus.android.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ServerSettingsScreen(
+    guildId: String,
+    onBack: () -> Unit,
+    vm: ServerSettingsViewModel = hiltViewModel(),
+) {
+    val guild   by vm.guild.collectAsState()
+    val members by vm.members.collectAsState()
+    val roles   by vm.roles.collectAsState()
+    val uiState by vm.uiState.collectAsState()
+    var tab     by remember { mutableStateOf(0) }
+
+    LaunchedEffect(guildId) { vm.load(guildId) }
+
+    val roleMap = remember(roles) { roles.associateBy { it.id } }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(guild?.name ?: "Server Settings", fontWeight = FontWeight.Bold) },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+            )
+        },
+        containerColor = NexusDark,
+    ) { padding ->
+        Column(Modifier.fillMaxSize().padding(padding)) {
+            TabRow(selectedTabIndex = tab, containerColor = NexusDarkMedium, contentColor = NexusBlurple) {
+                listOf("Overview", "Members", "Roles").forEachIndexed { i, label ->
+                    Tab(selected = tab == i, onClick = { tab = i }, text = { Text(label, fontSize = 13.sp) })
+                }
+            }
+            when (tab) {
+                0 -> OverviewSubScreen(guild, uiState, vm)
+                1 -> MembersSubScreen(members, roleMap)
+                2 -> RolesSubScreen(roles)
+            }
+        }
+    }
+}
+
+@Composable
+private fun OverviewSubScreen(
+    guild: GuildResponse?,
+    uiState: ServerSettingsUiState,
+    vm: ServerSettingsViewModel,
+) {
+    var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+    Column(Modifier.fillMaxSize().padding(16.dp)) {
+        if (uiState.error != null)
+            Text(uiState.error, color = NexusRed, fontSize = 13.sp, modifier = Modifier.padding(bottom = 8.dp))
+        OutlinedTextField(
+            value = name, onValueChange = { name = it },
+            label = { Text("SERVER NAME") },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+            colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = NexusBlurple),
+        )
+        Spacer(Modifier.height(16.dp))
+        Button(
+            onClick = { vm.updateGuildName(name) },
+            enabled = name.isNotBlank() && name != guild?.name && !uiState.loading,
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple),
+        ) {
+            if (uiState.loading) CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp, color = Color.White)
+            else Text("Save Changes", fontWeight = FontWeight.Bold)
+        }
+        Spacer(Modifier.height(24.dp))
+        Text("DANGER ZONE", color = NexusRed, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.height(8.dp))
+        OutlinedButton(
+            onClick = vm::deleteGuild,
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = NexusRed),
+            border = androidx.compose.foundation.BorderStroke(1.dp, NexusRed),
+        ) { Text("Delete Server", fontWeight = FontWeight.Bold) }
+    }
+}
+
+@Composable
+private fun MembersSubScreen(members: List<MemberResponse>, roleMap: Map<String, RoleResponse>) {
+    var query by remember { mutableStateOf("") }
+    val filtered = members.filter {
+        query.isBlank() ||
+        it.user?.username?.contains(query, true) == true ||
+        it.nickname?.contains(query, true) == true
+    }
+    Column(Modifier.fillMaxSize()) {
+        OutlinedTextField(
+            value = query, onValueChange = { query = it },
+            placeholder = { Text("Search Members", color = NexusTextMuted) },
+            leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            shape = RoundedCornerShape(24.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+                focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+            ),
+        )
+        LazyColumn(Modifier.fillMaxSize()) {
+            items(filtered, key = { it.userId }) { member ->
+                MemberListRow(member, roleMap)
+                HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+            }
+        }
+    }
+}
+
+@Composable
+private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleResponse>) {
+    val displayName = member.nickname ?: member.user?.username ?: member.userId
+    val statusColor = when (member.user?.status) {
+        "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
+    }
+    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.Top) {
+        Box(Modifier.size(44.dp)) {
+            Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+                if (member.user?.avatar != null)
+                    AsyncImage(model = member.user.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
+                else
+                    Text(displayName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            }
+            Box(Modifier.size(12.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
+                Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
+            }
+        }
+        Spacer(Modifier.width(12.dp))
+        Column(Modifier.weight(1f)) {
+            Text(displayName, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+            member.user?.let { Text("${it.username}#${it.discriminator}", color = NexusTextMuted, fontSize = 12.sp) }
+            if (member.roles.isNotEmpty()) {
+                Spacer(Modifier.height(6.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                    member.roles.take(4).forEach { roleId ->
+                        // FIX: safe let — no !! operator anywhere in role color resolution
+                        val role = roleMap[roleId]
+                        val rc = role?.let { r ->
+                            if (r.color != 0) Color(0xFF000000 or r.color.toLong()) else NexusOutline
+                        } ?: NexusOutline
+                        Surface(shape = RoundedCornerShape(4.dp), color = rc.copy(alpha = 0.2f)) {
+                            Row(Modifier.padding(horizontal = 6.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
+                                Box(Modifier.size(8.dp).clip(CircleShape).background(rc))
+                                Spacer(Modifier.width(4.dp))
+                                Text(role?.name ?: roleId, color = NexusTextPrimary, fontSize = 11.sp)
+                            }
+                        }
+                    }
+                    if (member.roles.size > 4) Text("+${member.roles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
+                }
+            }
+        }
+        Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+    }
+}
+
+@Composable
+private fun RolesSubScreen(roles: List<RoleResponse>) {
+    var query    by remember { mutableStateOf("") }
+    val everyone = roles.firstOrNull { it.name == "@everyone" }
+    val rest     = roles
+        .filter { it.name != "@everyone" && (query.isBlank() || it.name.contains(query, true)) }
+        .sortedByDescending { it.position }
+
+    Column(Modifier.fillMaxSize()) {
+        OutlinedTextField(
+            value = query, onValueChange = { query = it },
+            placeholder = { Text("Search Roles", color = NexusTextMuted) },
+            leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
+            singleLine = true, modifier = Modifier.fillMaxWidth().padding(12.dp),
+            shape = RoundedCornerShape(24.dp),
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
+                focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
+            ),
+        )
+        LazyColumn(Modifier.fillMaxSize()) {
+            items(rest, key = { it.id }) { role ->
+                val rc = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
+                Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Box(Modifier.size(16.dp).clip(CircleShape).background(rc))
+                    Spacer(Modifier.width(12.dp))
+                    Text(role.name, color = NexusTextPrimary, fontWeight = FontWeight.Medium, fontSize = 14.sp, modifier = Modifier.weight(1f))
+                    Text("${role.memberCount}", color = NexusTextMuted, fontSize = 12.sp)
+                }
+                HorizontalDivider(color = NexusOutline.copy(alpha = 0.2f))
+            }
+            everyone?.let { ev ->
+                item {
+                    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Box(Modifier.size(16.dp).clip(CircleShape).background(NexusTextMuted))
+                        Spacer(Modifier.width(12.dp))
+                        Text(ev.name, color = NexusTextMuted, fontWeight = FontWeight.Medium, fontSize = 14.sp)
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt =====
+package com.nexus.android.ui.screens.home
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.nexus.android.data.api.NexusApi
+import com.nexus.android.data.api.models.ChannelResponse
+import com.nexus.android.data.api.models.CreateChannelRequest
+import com.nexus.android.data.api.models.CreateGuildRequest
+import com.nexus.android.data.api.models.GuildResponse
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import org.json.JSONObject
+import javax.inject.Inject
+
+data class HomeUiState(
+    val loading: Boolean = false,
+    val error: String? = null,
+    val createGuildLoading: Boolean = false,
+    val createChannelLoading: Boolean = false,
+    val inviteCode: String? = null,
+    val showCreateGuildDialog: Boolean = false,
+    val showJoinGuildDialog: Boolean = false,
+    val showCreateChannelDialog: Boolean = false,
+    val showInviteDialog: Boolean = false,
+)
+
+@HiltViewModel
+class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel() {
+
+    private val _guilds        = MutableStateFlow<List<GuildResponse>>(emptyList())
+    val guilds: StateFlow<List<GuildResponse>> = _guilds.asStateFlow()
+
+    private val _selectedGuild = MutableStateFlow<GuildResponse?>(null)
+    val selectedGuild: StateFlow<GuildResponse?> = _selectedGuild.asStateFlow()
+
+    private val _channels      = MutableStateFlow<List<ChannelResponse>>(emptyList())
+    val channels: StateFlow<List<ChannelResponse>> = _channels.asStateFlow()
+
+    private val _uiState       = MutableStateFlow(HomeUiState())
+    val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
+
+    init { loadGuilds() }
+
+    // ── Dialog visibility ──────────────────────────────────────────────────────
+
+    fun showCreateGuildDialog()   { _uiState.value = _uiState.value.copy(showCreateGuildDialog = true,    error = null) }
+    fun hideCreateGuildDialog()   { _uiState.value = _uiState.value.copy(showCreateGuildDialog = false,   error = null) }
+    fun showJoinGuildDialog()     { _uiState.value = _uiState.value.copy(showJoinGuildDialog = true,      error = null) }
+    fun hideJoinGuildDialog()     { _uiState.value = _uiState.value.copy(showJoinGuildDialog = false,     error = null) }
+    fun showCreateChannelDialog() { _uiState.value = _uiState.value.copy(showCreateChannelDialog = true,  error = null) }
+    fun hideCreateChannelDialog() { _uiState.value = _uiState.value.copy(showCreateChannelDialog = false, error = null) }
+    fun showInviteDialog(code: String) { _uiState.value = _uiState.value.copy(showInviteDialog = true, inviteCode = code) }
+    fun hideInviteDialog()        { _uiState.value = _uiState.value.copy(showInviteDialog = false, inviteCode = null) }
+    fun clearError()              { _uiState.value = _uiState.value.copy(error = null) }
+
+    // ── Guild loading ──────────────────────────────────────────────────────────
+
+    fun loadGuilds() = viewModelScope.launch {
+        _uiState.value = _uiState.value.copy(loading = true, error = null)
+        try {
+            val guilds = api.getMyGuilds().body() ?: emptyList()
+            _guilds.value = guilds
+            // FIX: auto-select first guild on cold start so channels load without requiring a tap
+            if (guilds.isNotEmpty() && _selectedGuild.value == null) {
+                selectGuild(guilds.first())
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Failed to load servers")
+        } finally {
+            _uiState.value = _uiState.value.copy(loading = false)
+        }
     }
 
-    override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
+    fun selectGuild(guild: GuildResponse) = viewModelScope.launch {
+        _selectedGuild.value = guild
+        _channels.value = emptyList()
+        try {
+            api.getGuild(guild.id).body()?.let {
+                _selectedGuild.value = it
+                _channels.value = it.channels ?: emptyList()
+            }
+        } catch (_: Exception) {}
+    }
+
+    // ── Create guild ───────────────────────────────────────────────────────────
+
+    fun createGuild(name: String) = viewModelScope.launch {
+        if (name.isBlank()) {
+            _uiState.value = _uiState.value.copy(error = "Server name cannot be empty")
+            return@launch
+        }
+        if (name.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(error = "Server name must be at least 2 characters")
+            return@launch
+        }
+        _uiState.value = _uiState.value.copy(createGuildLoading = true, error = null)
+        try {
+            val resp = api.createGuild(CreateGuildRequest(name.trim()))
+            if (resp.isSuccessful && resp.body() != null) {
+                val newGuild = resp.body()!!
+                _guilds.value = _guilds.value + newGuild
+                _uiState.value = _uiState.value.copy(createGuildLoading = false, showCreateGuildDialog = false, error = null)
+                selectGuild(newGuild)
+            } else {
+                val serverMsg = try {
+                    resp.errorBody()?.string()?.let { JSONObject(it).optString("error", null) }
+                } catch (_: Exception) { null }
+                _uiState.value = _uiState.value.copy(
+                    createGuildLoading = false,
+                    error = serverMsg ?: when (resp.code()) {
+                        400  -> "Invalid server name"
+                        401  -> "Not logged in. Please restart the app."
+                        409  -> "A server with that name already exists"
+                        500  -> "Server error. Is the backend running?"
+                        else -> "Failed to create server (${resp.code()})"
+                    }
+                )
+            }
+        } catch (e: Exception) {
+            val msg = when {
+                e.message?.contains("Unable to resolve host") == true ||
+                e.message?.contains("Failed to connect") == true ||
+                e.message?.contains("Connection refused") == true ->
+                    "Cannot reach server. Check your network or backend URL."
+                else -> "Network error: ${e.message}"
+            }
+            _uiState.value = _uiState.value.copy(createGuildLoading = false, error = msg)
+        }
+    }
+
+    // ── Join guild via invite ──────────────────────────────────────────────────
+
+    fun joinGuildByInvite(code: String) = viewModelScope.launch {
+        val cleanCode = code.trim()
+            .removePrefix("https://discord.gg/")
+            .removePrefix("https://nexus.gg/")
+            .removePrefix("nexus.gg/")
+        if (cleanCode.isBlank()) {
+            _uiState.value = _uiState.value.copy(error = "Invalid invite link")
+            return@launch
+        }
+        _uiState.value = _uiState.value.copy(loading = true, error = null)
+        try {
+            val resp = api.useInvite(cleanCode)
+            if (resp.isSuccessful && resp.body() != null) {
+                val guild = resp.body()!!
+                if (_guilds.value.none { it.id == guild.id }) _guilds.value = _guilds.value + guild
+                _uiState.value = _uiState.value.copy(loading = false, showJoinGuildDialog = false, error = null)
+                selectGuild(guild)
+            } else {
+                val serverMsg = try {
+                    resp.errorBody()?.string()?.let { JSONObject(it).optString("error", null) }
+                } catch (_: Exception) { null }
+                _uiState.value = _uiState.value.copy(
+                    loading = false,
+                    error   = serverMsg ?: when (resp.code()) {
+                        400 -> "Invalid or expired invite"
+                        404 -> "Invite not found"
+                        else -> "Failed to join server (${resp.code()})"
+                    }
+                )
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(loading = false, error = "Network error: ${e.message}")
+        }
+    }
+
+    // ── Create channel ─────────────────────────────────────────────────────────
+
+    fun createChannel(name: String, type: String = "text", parentId: String? = null) = viewModelScope.launch {
+        val guildId = _selectedGuild.value?.id ?: return@launch
+        if (name.isBlank()) {
+            _uiState.value = _uiState.value.copy(error = "Channel name cannot be empty")
+            return@launch
+        }
+        _uiState.value = _uiState.value.copy(createChannelLoading = true, error = null)
+        try {
+            val resp = api.createChannel(guildId, CreateChannelRequest(name.trim(), type, parentId))
+            if (resp.isSuccessful && resp.body() != null) {
+                val ch = resp.body()!!
+                _channels.value = _channels.value + ch
+                _uiState.value = _uiState.value.copy(createChannelLoading = false, showCreateChannelDialog = false, error = null)
+            } else {
+                val serverMsg = try {
+                    resp.errorBody()?.string()?.let { JSONObject(it).optString("error", null) }
+                } catch (_: Exception) { null }
+                _uiState.value = _uiState.value.copy(
+                    createChannelLoading = false,
+                    error = serverMsg ?: "Failed to create channel"
+                )
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Network error: ${e.message}")
+        }
+    }
+}
+
+
+//===== TERMUXFILE: nexus/backend/src/routes/voice.ts =====
+import { FastifyInstance } from 'fastify';
+import { AccessToken } from 'livekit-server-sdk';
+import { prisma, redis } from '../server';
+import { authenticate } from '../middleware/auth';
+
+export default async function voiceRoutes(app: FastifyInstance) {
+
+  // POST /v1/voice/token
+  app.post('/token', { preHandler: [authenticate] }, async (req, reply) => {
+    const { channelId } = req.body as any;
+    if (!channelId) return reply.status(400).send({ error: 'channelId required' });
+    const userId = (req.user as any).sub;
+    try {
+      const channel = await prisma.channel.findUnique({ where: { id: channelId } });
+      if (!channel || channel.type !== 'voice')
+        return reply.status(400).send({ error: 'Not a voice channel' });
+      if (!process.env.LIVEKIT_API_KEY || !process.env.LIVEKIT_API_SECRET || !process.env.LIVEKIT_URL)
+        return reply.status(503).send({ error: 'Voice not configured — add LIVEKIT_API_KEY, LIVEKIT_API_SECRET, LIVEKIT_URL to ecosystem.config.js' });
+      const at = new AccessToken(process.env.LIVEKIT_API_KEY, process.env.LIVEKIT_API_SECRET, { identity: userId });
+      at.addGrant({ roomJoin: true, room: channelId, canPublish: true, canSubscribe: true });
+      const token = await at.toJwt();
+      if (redis) {
+        await redis.hset(`voice_states:${channelId}`, userId, JSON.stringify({
+          user_id: userId, channel_id: channelId, guild_id: channel.guildId,
+          self_mute: false, self_deaf: false,
+        }));
+        if (channel.guildId)
+          await redis.publish(`guild:${channel.guildId}`, JSON.stringify({
+            type: 'VOICE_STATE_UPDATE',
+            data: { user_id: userId, channel_id: channelId, guild_id: channel.guildId },
+          }));
+      }
+      return reply.status(200).send({ token, livekit_url: process.env.LIVEKIT_URL, channel_id: channelId });
+    } catch (e: any) {
+      req.log.error({ err: e }, 'voice/token failed');
+      return reply.status(500).send({ error: 'Failed to generate voice token' });
+    }
+  });
+
+  // DELETE /v1/voice/leave
+  app.delete('/leave', { preHandler: [authenticate] }, async (req, reply) => {
+    const { channelId } = req.body as any;
+    const userId = (req.user as any).sub;
+    try {
+      const channel = await prisma.channel.findUnique({ where: { id: channelId } });
+      if (redis) {
+        await redis.hdel(`voice_states:${channelId}`, userId);
+        if (channel?.guildId)
+          await redis.publish(`guild:${channel.guildId}`, JSON.stringify({
+            type: 'VOICE_STATE_UPDATE',
+            data: { user_id: userId, channel_id: null, guild_id: channel.guildId },
+          }));
+      }
+      return reply.status(204).send();
+    } catch (e: any) {
+      req.log.error({ err: e }, 'voice/leave failed');
+      return reply.status(500).send({ error: 'Failed to leave voice channel' });
+    }
+  });
+
+  // GET /v1/voice/state/:channelId
+  app.get('/state/:channelId', { preHandler: [authenticate] }, async (req, reply) => {
+    try {
+      if (!redis) return reply.status(200).send([]);
+      const states = await redis.hgetall(`voice_states:${(req.params as any).channelId}`);
+      return reply.status(200).send(Object.values(states || {}).map(v => JSON.parse(v)));
+    } catch (e: any) {
+      req.log.error({ err: e }, 'voice/state failed');
+      return reply.status(500).send({ error: 'Failed to get voice state' });
+    }
+  });
+
+  // FIX: GET /v1/voice/regions — LiveKit has no regions; stub this endpoint so any
+  // Discord-compat client or internal SDK call doesn't get a 404 → 401 cascade.
+  app.get('/regions', { preHandler: [authenticate] }, async (_req, reply) => {
+    return reply.status(200).send([
+      { id: 'default', name: 'Default', optimal: true, deprecated: false, custom: false },
+    ]);
+  });
 }
