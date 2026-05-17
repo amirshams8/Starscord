@@ -38,6 +38,7 @@ fun HomeScreen(
     onOpenProfile: () -> Unit,
     onOpenSettings: () -> Unit,
     onOpenServerSettings: (String) -> Unit,
+    onOpenDms: () -> Unit,
     vm: HomeViewModel = hiltViewModel(),
 ) {
     val guilds        by vm.guilds.collectAsState()
@@ -63,12 +64,13 @@ fun HomeScreen(
 
     Row(modifier = Modifier.fillMaxSize().background(NexusDark)) {
         ServerRail(
-            guilds       = guilds,
-            selectedId   = selectedGuild?.id,
-            onSelect     = vm::selectGuild,
-            onAddServer  = vm::showCreateGuildDialog,
-            onJoinServer = vm::showJoinGuildDialog,
+            guilds        = guilds,
+            selectedId    = selectedGuild?.id,
+            onSelect      = vm::selectGuild,
+            onAddServer   = vm::showCreateGuildDialog,
+            onJoinServer  = vm::showJoinGuildDialog,
             onOpenProfile = onOpenProfile,
+            onOpenDms     = onOpenDms,
         )
         if (selectedGuild != null) {
             ChannelSidebar(
@@ -85,8 +87,7 @@ fun HomeScreen(
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("No server selected", color = NexusTextPrimary, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                    Spacer(Modifier.height(8.dp))
-                    Text("Tap + to create or join one", color = NexusTextMuted, fontSize = 13.sp)
+                    Text("Select a server from the sidebar", color = NexusTextMuted, fontSize = 13.sp)
                 }
             }
         }
@@ -98,18 +99,28 @@ fun ServerRail(
     guilds: List<GuildResponse>, selectedId: String?,
     onSelect: (GuildResponse) -> Unit, onAddServer: () -> Unit,
     onJoinServer: () -> Unit, onOpenProfile: () -> Unit,
+    onOpenDms: () -> Unit,
 ) {
     var showAddMenu by remember { mutableStateOf(false) }
     Column(
         modifier = Modifier.width(72.dp).fillMaxHeight().background(NexusDark).padding(vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        // Profile button
         Box(
             modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusBlurple).clickable(onClick = onOpenProfile),
             contentAlignment = Alignment.Center,
         ) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
 
         HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+
+        // DM button
+        Box(
+            modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusDarkMedium).clickable(onClick = onOpenDms),
+            contentAlignment = Alignment.Center,
+        ) { Icon(Icons.Default.Forum, contentDescription = "DMs", tint = NexusTextMuted, modifier = Modifier.size(24.dp)) }
+
+        Spacer(Modifier.height(8.dp))
 
         LazyColumn(
             modifier = Modifier.weight(1f),
