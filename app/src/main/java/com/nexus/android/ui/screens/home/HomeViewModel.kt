@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 import javax.inject.Inject
 
 data class HomeUiState(
@@ -19,7 +20,7 @@ data class HomeUiState(
     val error: String? = null,
     val createGuildLoading: Boolean = false,
     val createChannelLoading: Boolean = false,
-    val inviteCode: String? = null,           // populated after generating invite
+    val inviteCode: String? = null,
     val showCreateGuildDialog: Boolean = false,
     val showJoinGuildDialog: Boolean = false,
     val showCreateChannelDialog: Boolean = false,
@@ -45,22 +46,27 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
 
     // ── Dialog visibility ──────────────────────────────────────────────────────
 
-    fun showCreateGuildDialog()  { _uiState.value = _uiState.value.copy(showCreateGuildDialog = true, error = null) }
-    fun hideCreateGuildDialog()  { _uiState.value = _uiState.value.copy(showCreateGuildDialog = false) }
-    fun showJoinGuildDialog()    { _uiState.value = _uiState.value.copy(showJoinGuildDialog = true, error = null) }
-    fun hideJoinGuildDialog()    { _uiState.value = _uiState.value.copy(showJoinGuildDialog = false) }
-    fun showCreateChannelDialog(){ _uiState.value = _uiState.value.copy(showCreateChannelDialog = true, error = null) }
-    fun hideCreateChannelDialog(){ _uiState.value = _uiState.value.copy(showCreateChannelDialog = false) }
+    fun showCreateGuildDialog()   { _uiState.value = _uiState.value.copy(showCreateGuildDialog = true,    error = null) }
+    fun hideCreateGuildDialog()   { _uiState.value = _uiState.value.copy(showCreateGuildDialog = false,   error = null) }
+    fun showJoinGuildDialog()     { _uiState.value = _uiState.value.copy(showJoinGuildDialog = true,      error = null) }
+    fun hideJoinGuildDialog()     { _uiState.value = _uiState.value.copy(showJoinGuildDialog = false,     error = null) }
+    fun showCreateChannelDialog() { _uiState.value = _uiState.value.copy(showCreateChannelDialog = true,  error = null) }
+    fun hideCreateChannelDialog() { _uiState.value = _uiState.value.copy(showCreateChannelDialog = false, error = null) }
     fun showInviteDialog(code: String) { _uiState.value = _uiState.value.copy(showInviteDialog = true, inviteCode = code) }
-    fun hideInviteDialog()       { _uiState.value = _uiState.value.copy(showInviteDialog = false, inviteCode = null) }
-    fun clearError()             { _uiState.value = _uiState.value.copy(error = null) }
+    fun hideInviteDialog()        { _uiState.value = _uiState.value.copy(showInviteDialog = false, inviteCode = null) }
+    fun clearError()              { _uiState.value = _uiState.value.copy(error = null) }
 
     // ── Guild loading ──────────────────────────────────────────────────────────
 
     fun loadGuilds() = viewModelScope.launch {
         _uiState.value = _uiState.value.copy(loading = true, error = null)
         try {
-            api.getMyGuilds().body()?.let { _guilds.value = it }
+            val guilds = api.getMyGuilds().body() ?: emptyList()
+            _guilds.value = guilds
+            // FIX: auto-select first guild on cold start so channels load without requiring a tap
+            if (guilds.isNotEmpty() && _selectedGuild.value == null) {
+                selectGuild(guilds.first())
+            }
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(error = "Failed to load servers")
         } finally {
@@ -86,26 +92,52 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
             _uiState.value = _uiState.value.copy(error = "Server name cannot be empty")
             return@launch
         }
+        if (name.trim().length < 2) {
+            _uiState.value = _uiState.value.copy(error = "Server name must be at least 2 characters")
+            return@launch
+        }
         _uiState.value = _uiState.value.copy(createGuildLoading = true, error = null)
         try {
             val resp = api.createGuild(CreateGuildRequest(name.trim()))
             if (resp.isSuccessful && resp.body() != null) {
                 val newGuild = resp.body()!!
                 _guilds.value = _guilds.value + newGuild
-                _uiState.value = _uiState.value.copy(createGuildLoading = false, showCreateGuildDialog = false)
+                _uiState.value = _uiState.value.copy(createGuildLoading = false, showCreateGuildDialog = false, error = null)
                 selectGuild(newGuild)
             } else {
-                _uiState.value = _uiState.value.copy(createGuildLoading = false, error = "Failed to create server")
+                val serverMsg = try {
+                    resp.errorBody()?.string()?.let { JSONObject(it).optString("error", null) }
+                } catch (_: Exception) { null }
+                _uiState.value = _uiState.value.copy(
+                    createGuildLoading = false,
+                    error = serverMsg ?: when (resp.code()) {
+                        400  -> "Invalid server name"
+                        401  -> "Not logged in. Please restart the app."
+                        409  -> "A server with that name already exists"
+                        500  -> "Server error. Is the backend running?"
+                        else -> "Failed to create server (${resp.code()})"
+                    }
+                )
             }
         } catch (e: Exception) {
-            _uiState.value = _uiState.value.copy(createGuildLoading = false, error = "Network error: ${e.message}")
+            val msg = when {
+                e.message?.contains("Unable to resolve host") == true ||
+                e.message?.contains("Failed to connect") == true ||
+                e.message?.contains("Connection refused") == true ->
+                    "Cannot reach server. Check your network or backend URL."
+                else -> "Network error: ${e.message}"
+            }
+            _uiState.value = _uiState.value.copy(createGuildLoading = false, error = msg)
         }
     }
 
     // ── Join guild via invite ──────────────────────────────────────────────────
 
     fun joinGuildByInvite(code: String) = viewModelScope.launch {
-        val cleanCode = code.trim().removePrefix("https://discord.gg/").removePrefix("https://nexus.gg/").removePrefix("nexus.gg/")
+        val cleanCode = code.trim()
+            .removePrefix("https://discord.gg/")
+            .removePrefix("https://nexus.gg/")
+            .removePrefix("nexus.gg/")
         if (cleanCode.isBlank()) {
             _uiState.value = _uiState.value.copy(error = "Invalid invite link")
             return@launch
@@ -114,32 +146,25 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         try {
             val resp = api.useInvite(cleanCode)
             if (resp.isSuccessful && resp.body() != null) {
-                val joined = resp.body()!!
-                if (_guilds.value.none { it.id == joined.id }) {
-                    _guilds.value = _guilds.value + joined
-                }
-                _uiState.value = _uiState.value.copy(loading = false, showJoinGuildDialog = false)
-                selectGuild(joined)
+                val guild = resp.body()!!
+                if (_guilds.value.none { it.id == guild.id }) _guilds.value = _guilds.value + guild
+                _uiState.value = _uiState.value.copy(loading = false, showJoinGuildDialog = false, error = null)
+                selectGuild(guild)
             } else {
-                _uiState.value = _uiState.value.copy(loading = false, error = "Invalid or expired invite")
+                val serverMsg = try {
+                    resp.errorBody()?.string()?.let { JSONObject(it).optString("error", null) }
+                } catch (_: Exception) { null }
+                _uiState.value = _uiState.value.copy(
+                    loading = false,
+                    error   = serverMsg ?: when (resp.code()) {
+                        400 -> "Invalid or expired invite"
+                        404 -> "Invite not found"
+                        else -> "Failed to join server (${resp.code()})"
+                    }
+                )
             }
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(loading = false, error = "Network error: ${e.message}")
-        }
-    }
-
-    // ── Leave guild ────────────────────────────────────────────────────────────
-
-    fun leaveGuild(guildId: String) = viewModelScope.launch {
-        try {
-            api.leaveGuild(guildId)
-            _guilds.value = _guilds.value.filter { it.id != guildId }
-            if (_selectedGuild.value?.id == guildId) {
-                _selectedGuild.value = null
-                _channels.value = emptyList()
-            }
-        } catch (_: Exception) {
-            _uiState.value = _uiState.value.copy(error = "Failed to leave server")
         }
     }
 
@@ -153,30 +178,22 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         }
         _uiState.value = _uiState.value.copy(createChannelLoading = true, error = null)
         try {
-            val resp = api.createChannel(guildId, CreateChannelRequest(name.trim().lowercase().replace(" ", "-"), type, parentId))
+            val resp = api.createChannel(guildId, CreateChannelRequest(name.trim(), type, parentId))
             if (resp.isSuccessful && resp.body() != null) {
-                _channels.value = _channels.value + resp.body()!!
-                _uiState.value = _uiState.value.copy(createChannelLoading = false, showCreateChannelDialog = false)
+                val ch = resp.body()!!
+                _channels.value = _channels.value + ch
+                _uiState.value = _uiState.value.copy(createChannelLoading = false, showCreateChannelDialog = false, error = null)
             } else {
-                _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Failed to create channel")
+                val serverMsg = try {
+                    resp.errorBody()?.string()?.let { JSONObject(it).optString("error", null) }
+                } catch (_: Exception) { null }
+                _uiState.value = _uiState.value.copy(
+                    createChannelLoading = false,
+                    error = serverMsg ?: "Failed to create channel"
+                )
             }
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Network error: ${e.message}")
-        }
-    }
-
-    // ── Generate invite ────────────────────────────────────────────────────────
-
-    fun generateInvite(channelId: String) = viewModelScope.launch {
-        try {
-            val resp = api.createInvite(channelId)
-            if (resp.isSuccessful && resp.body() != null) {
-                showInviteDialog(resp.body()!!.code)
-            } else {
-                _uiState.value = _uiState.value.copy(error = "Failed to generate invite")
-            }
-        } catch (e: Exception) {
-            _uiState.value = _uiState.value.copy(error = "Network error: ${e.message}")
         }
     }
 }

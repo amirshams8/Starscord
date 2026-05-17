@@ -1,6 +1,8 @@
 package com.nexus.android.ui.navigation
 
+import android.content.Context
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -41,8 +43,29 @@ sealed class Screen(val route: String) {
     }
 }
 
+// FIX: Read stored access token from EncryptedSharedPreferences to decide start destination.
+// Token is written by AuthInterceptor under key "access_token" in "nexus_secure_prefs".
+private fun hasStoredToken(context: Context): Boolean {
+    return try {
+        val masterKey = androidx.security.crypto.MasterKey.Builder(context)
+            .setKeyScheme(androidx.security.crypto.MasterKey.KeyScheme.AES256_GCM)
+            .build()
+        val prefs = androidx.security.crypto.EncryptedSharedPreferences.create(
+            context,
+            "nexus_secure_prefs",
+            masterKey,
+            androidx.security.crypto.EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+            androidx.security.crypto.EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
+        )
+        prefs.getString("access_token", null) != null
+    } catch (_: Exception) { false }
+}
+
 @Composable
-fun NexusNavGraph(startDestination: String = Screen.Login.route) {
+fun NexusNavGraph() {
+    val context = LocalContext.current
+    // FIX: start at Home if token exists, Login otherwise — no more login prompt on every restart
+    val startDestination = if (hasStoredToken(context)) Screen.Home.route else Screen.Login.route
     val nav = rememberNavController()
     NavHost(navController = nav, startDestination = startDestination) {
 
@@ -63,7 +86,7 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
         composable(Screen.Home.route) {
             HomeScreen(
                 onOpenChannel        = { cId, gId -> nav.navigate(Screen.Chat.createRoute(cId, gId)) },
-                onOpenVoice          = { cId -> nav.navigate(Screen.Voice.createRoute(cId, cId)) },
+                onOpenVoice          = { cId, name -> nav.navigate(Screen.Voice.createRoute(cId, name)) },
                 onOpenProfile        = { nav.navigate(Screen.Profile.route) },
                 onOpenSettings       = { nav.navigate(Screen.Settings.route) },
                 onOpenServerSettings = { gId -> nav.navigate(Screen.ServerSettings.createRoute(gId)) },
@@ -110,7 +133,7 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
         ) { back ->
             ChatScreen(
                 channelId     = back.arguments?.getString("channelId") ?: return@composable,
-                guildId       = back.arguments?.getString("guildId")   ?: return@composable,
+                guildId       = back.arguments?.getString("guildId") ?: return@composable,
                 onBack        = { nav.popBackStack() },
                 onOpenMembers = { cId, gId -> nav.navigate(Screen.ChannelMembers.createRoute(cId, gId)) },
             )
@@ -124,8 +147,8 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
             ),
         ) { back ->
             VoiceScreen(
-                channelId   = back.arguments?.getString("channelId")   ?: return@composable,
-                channelName = back.arguments?.getString("channelName") ?: "voice",
+                channelId   = back.arguments?.getString("channelId") ?: return@composable,
+                channelName = back.arguments?.getString("channelName") ?: "Voice",
                 onLeave     = { nav.popBackStack() },
             )
         }
@@ -149,7 +172,7 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
         ) { back ->
             ChannelMembersScreen(
                 channelId = back.arguments?.getString("channelId") ?: return@composable,
-                guildId   = back.arguments?.getString("guildId")   ?: return@composable,
+                guildId   = back.arguments?.getString("guildId") ?: return@composable,
                 onBack    = { nav.popBackStack() },
             )
         }
