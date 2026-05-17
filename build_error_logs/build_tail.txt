@@ -1,5 +1,8 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with JetifyTransform
 Transforming kotlinx-coroutines-core-jvm-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1) with IdentityTransform
 Transforming kotlinx-coroutines-play-services-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1) with JetifyTransform
@@ -9,6 +12,9 @@ Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-service
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
@@ -20,6 +26,9 @@ Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-serv
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
 Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
@@ -423,6 +432,7 @@ w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
 Finished executing kotlin compiler using DAEMON strategy
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 :app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 =======
@@ -431,6 +441,10 @@ Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker,5,main]) sta
 >>>>>>> Stashed changes
 =======
 Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+:app:kaptDebugKotlin (Thread[Execution worker,5,main]) started.
+>>>>>>> Stashed changes
+=======
+Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker,5,main]) started.
 :app:kaptDebugKotlin (Thread[Execution worker,5,main]) started.
 >>>>>>> Stashed changes
 
@@ -591,6 +605,7 @@ Running kapt annotation processing using the Gradle Worker API
 Using workers NONE isolation mode to run kapt
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 =======
@@ -600,6 +615,10 @@ Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker,5,main]) 
 =======
 Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
 :app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
+>>>>>>> Stashed changes
+=======
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
 >>>>>>> Stashed changes
 
 > Task :app:compileDebugKotlin
@@ -1045,11 +1064,15 @@ For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BUILD FAILED in 54s
 =======
 BUILD FAILED in 56s
 >>>>>>> Stashed changes
 =======
 BUILD FAILED in 54s
+>>>>>>> Stashed changes
+=======
+BUILD FAILED in 58s
 >>>>>>> Stashed changes
 33 actionable tasks: 33 executed
