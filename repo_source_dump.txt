@@ -3941,7 +3941,6 @@ import io.livekit.android.events.RoomEvent
 import io.livekit.android.events.collect
 import io.livekit.android.room.Room
 import io.livekit.android.room.participant.Participant
-import io.livekit.android.room.participant.RemoteParticipant
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -3965,6 +3964,9 @@ class VoiceViewModel @Inject constructor(
     val participants: StateFlow<List<String>> = _participants.asStateFlow()
     private var room: Room? = null
 
+    // identity is Participant.Identity? (nullable value class) in LiveKit 2.x
+    private fun Participant.identityString(): String = identity?.value ?: ""
+
     fun join(channelId: String) = viewModelScope.launch {
         _uiState.value = VoiceUiState(connecting = true)
         try {
@@ -3975,25 +3977,22 @@ class VoiceViewModel @Inject constructor(
             val body = resp.body()!!
             val r = LiveKit.create(getApplication())
             room = r
-            // LiveKit 2.x: connect() is a suspend fun with no roomOptions named param
             r.connect(body.livekitUrl, body.token)
             r.localParticipant.setMicrophoneEnabled(true)
-            // Snapshot current remote participants (identity is Participant.Identity value class)
-            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+            _participants.value = r.remoteParticipants.values.map { it.identityString() }
             _uiState.value = VoiceUiState(connecting = false)
-            // LiveKit 2.x: observe room events via Flow
             launch {
                 r.events.collect { event ->
                     when (event) {
                         is RoomEvent.ParticipantConnected -> {
-                            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+                            _participants.value = r.remoteParticipants.values.map { it.identityString() }
                         }
                         is RoomEvent.ParticipantDisconnected -> {
-                            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+                            _participants.value = r.remoteParticipants.values.map { it.identityString() }
                         }
                         is RoomEvent.ActiveSpeakersChanged -> {
                             _uiState.value = _uiState.value.copy(
-                                speaking = event.speakers.map { it.identity.value }.toSet()
+                                speaking = event.speakers.map { it.identityString() }.toSet()
                             )
                         }
                         else -> Unit
@@ -4011,16 +4010,17 @@ class VoiceViewModel @Inject constructor(
 
     fun toggleMute() = viewModelScope.launch {
         val m = !_uiState.value.muted
-        // setMicrophoneEnabled is suspend in LiveKit 2.x
         room?.localParticipant?.setMicrophoneEnabled(!m)
         _uiState.value = _uiState.value.copy(muted = m)
     }
 
     fun toggleDeafen() {
         val d = !_uiState.value.deafened
-        // LiveKit 2.x: audioTracks replaced by getTrackPublications() or trackPublications
+        // audioTrackPublications returns List<TrackPublication>; track is on the publication
         room?.remoteParticipants?.values?.forEach { p ->
-            p.audioTrackPublications.forEach { pub -> pub.track?.enabled = !d }
+            p.audioTrackPublications.forEach { pub ->
+                pub.track?.let { it.enabled = !d }
+            }
         }
         _uiState.value = _uiState.value.copy(deafened = d)
     }
