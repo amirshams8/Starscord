@@ -544,11 +544,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 58s
-=======
-BUILD FAILED in 1m 5s
->>>>>>> Stashed changes
+BUILD FAILED in 54s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
