@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with JetifyTransform
 Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with AarToClassTransform
 Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
@@ -56,6 +57,8 @@ Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:trans
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarToClassTransform
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
 Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarToClassTransform
+=======
+>>>>>>> Stashed changes
 Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with JetifyTransform
 Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with IdentityTransform
 Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with JetifyTransform
@@ -366,8 +369,13 @@ i: #1 retrying connecting to the daemon
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/incrementalData/debug, /home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/stubs/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state])
 w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
 Finished executing kotlin compiler using DAEMON strategy
+<<<<<<< Updated upstream
 Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
 :app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+=======
+Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker,5,main]) started.
+:app:kaptDebugKotlin (Thread[included builds,5,main]) started.
+>>>>>>> Stashed changes
 
 > Task :app:kaptDebugKotlin
 Transforming R.jar with StructureTransformAction
@@ -524,8 +532,13 @@ Task ':app:kaptDebugKotlin' is not up-to-date because:
 The input changes require a full rebuild for incremental task ':app:kaptDebugKotlin'.
 Running kapt annotation processing using the Gradle Worker API
 Using workers NONE isolation mode to run kapt
+<<<<<<< Updated upstream
 Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
 :app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+=======
+Resolve mutations for :app:compileDebugKotlin (Thread[included builds,5,main]) started.
+:app:compileDebugKotlin (Thread[included builds,5,main]) started.
+>>>>>>> Stashed changes
 
 > Task :app:compileDebugKotlin
 Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
@@ -996,5 +1009,9 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
+<<<<<<< Updated upstream
 BUILD FAILED in 54s
+=======
+BUILD FAILED in 1m
+>>>>>>> Stashed changes
 33 actionable tasks: 33 executed
