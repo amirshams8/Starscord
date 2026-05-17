@@ -12,7 +12,15 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:91:21 Unresolved reference 'setSubscribed'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt:9:12 Redeclaration:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt:90:12 Redeclaration:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt:89:40 Argument type mismatch: actual type is 'kotlin.Function2<kotlin.String, ERROR CLASS: Cannot infer type for parameter name, kotlin.Unit>', but 'kotlin.Function1<kotlin.String, kotlin.Unit>' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt:89:47 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:80:40 Unresolved reference 'leaveGuild'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:82:40 Unresolved reference 'generateInvite'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:88:28 Unresolved reference 'updateGuildName'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:100:27 Unresolved reference 'deleteGuild'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:104:13 @Composable invocations can only happen from the context of a @Composable function
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -540,7 +548,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-BUILD FAILED in 55s
+BUILD FAILED in 1m 2s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
