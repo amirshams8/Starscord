@@ -2,9 +2,8 @@
 
 //===== FILE: app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt =====
 
-// ❌ ERRORS IN THIS FILE (2 error(s)):
-// Line 93: Argument type mismatch: actual type is 'kotlin.Function1<io.livekit.android.room.track.RemoteTrackPublication, kotlin.Unit>', but 'kotlin.Function1<T, kotlin.Unit>' was expected.
-// Line 94: Unresolved reference 'enabled'.
+// ❌ ERRORS IN THIS FILE (1 error(s)):
+// Line 91: Unresolved reference 'setSubscribed'.
 
    1    package com.nexus.android.ui.screens.voice
    2    
@@ -20,92 +19,89 @@
   12    import io.livekit.android.events.collect
   13    import io.livekit.android.room.Room
   14    import io.livekit.android.room.participant.Participant
-  15    import io.livekit.android.room.participant.RemoteParticipant
-  16    import io.livekit.android.room.track.RemoteTrackPublication
-  17    import kotlinx.coroutines.flow.*
-  18    import kotlinx.coroutines.launch
-  19    import javax.inject.Inject
-  20    
-  21    data class VoiceUiState(
-  22        val connecting: Boolean = false,
-  23        val muted: Boolean = false,
-  24        val deafened: Boolean = false,
-  25        val speaking: Set<String> = emptySet(),
-  26        val error: String? = null,
-  27    )
-  28    
-  29    @HiltViewModel
-  30    class VoiceViewModel @Inject constructor(
-  31        application: Application,
-  32        private val api: NexusApi,
-  33    ) : AndroidViewModel(application) {
-  34        private val _uiState      = MutableStateFlow(VoiceUiState())
-  35        val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
-  36        private val _participants = MutableStateFlow<List<String>>(emptyList())
-  37        val participants: StateFlow<List<String>> = _participants.asStateFlow()
-  38        private var room: Room? = null
+  15    import kotlinx.coroutines.flow.*
+  16    import kotlinx.coroutines.launch
+  17    import javax.inject.Inject
+  18    
+  19    data class VoiceUiState(
+  20        val connecting: Boolean = false,
+  21        val muted: Boolean = false,
+  22        val deafened: Boolean = false,
+  23        val speaking: Set<String> = emptySet(),
+  24        val error: String? = null,
+  25    )
+  26    
+  27    @HiltViewModel
+  28    class VoiceViewModel @Inject constructor(
+  29        application: Application,
+  30        private val api: NexusApi,
+  31    ) : AndroidViewModel(application) {
+  32        private val _uiState      = MutableStateFlow(VoiceUiState())
+  33        val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
+  34        private val _participants = MutableStateFlow<List<String>>(emptyList())
+  35        val participants: StateFlow<List<String>> = _participants.asStateFlow()
+  36        private var room: Room? = null
+  37    
+  38        private fun Participant.identityString(): String = identity?.value ?: ""
   39    
-  40        private fun Participant.identityString(): String = identity?.value ?: ""
-  41    
-  42        fun join(channelId: String) = viewModelScope.launch {
-  43            _uiState.value = VoiceUiState(connecting = true)
-  44            try {
-  45                val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
-  46                if (!resp.isSuccessful || resp.body() == null) {
-  47                    _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
-  48                }
-  49                val body = resp.body()!!
-  50                val r = LiveKit.create(getApplication())
-  51                room = r
-  52                r.connect(body.livekitUrl, body.token)
-  53                r.localParticipant.setMicrophoneEnabled(true)
-  54                _participants.value = r.remoteParticipants.values.map { it.identityString() }
-  55                _uiState.value = VoiceUiState(connecting = false)
-  56                launch {
-  57                    r.events.collect { event ->
-  58                        when (event) {
-  59                            is RoomEvent.ParticipantConnected -> {
-  60                                _participants.value = r.remoteParticipants.values.map { it.identityString() }
-  61                            }
-  62                            is RoomEvent.ParticipantDisconnected -> {
-  63                                _participants.value = r.remoteParticipants.values.map { it.identityString() }
-  64                            }
-  65                            is RoomEvent.ActiveSpeakersChanged -> {
-  66                                _uiState.value = _uiState.value.copy(
-  67                                    speaking = event.speakers.map { it.identityString() }.toSet()
-  68                                )
-  69                            }
-  70                            else -> Unit
-  71                        }
-  72                    }
-  73                }
-  74            } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
-  75        }
-  76    
-  77        fun leave(channelId: String) {
-  78            viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
-  79            room?.disconnect(); room = null
-  80            _uiState.value = VoiceUiState(); _participants.value = emptyList()
-  81        }
-  82    
-  83        fun toggleMute() = viewModelScope.launch {
-  84            val m = !_uiState.value.muted
-  85            room?.localParticipant?.setMicrophoneEnabled(!m)
-  86            _uiState.value = _uiState.value.copy(muted = m)
-  87        }
-  88    
-  89        fun toggleDeafen() {
-  90            val d = !_uiState.value.deafened
-  91            // In LiveKit 2.x, set enabled on the RemoteTrackPublication directly
-  92            room?.remoteParticipants?.values?.forEach { p: RemoteParticipant ->
-  93 ❌             p.audioTrackPublications.forEach { pub: RemoteTrackPublication ->
-  94 ❌                 pub.enabled = !d
-  95                }
-  96            }
-  97            _uiState.value = _uiState.value.copy(deafened = d)
-  98        }
-  99    
- 100        override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
- 101    }
+  40        fun join(channelId: String) = viewModelScope.launch {
+  41            _uiState.value = VoiceUiState(connecting = true)
+  42            try {
+  43                val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
+  44                if (!resp.isSuccessful || resp.body() == null) {
+  45                    _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
+  46                }
+  47                val body = resp.body()!!
+  48                val r = LiveKit.create(getApplication())
+  49                room = r
+  50                r.connect(body.livekitUrl, body.token)
+  51                r.localParticipant.setMicrophoneEnabled(true)
+  52                _participants.value = r.remoteParticipants.values.map { it.identityString() }
+  53                _uiState.value = VoiceUiState(connecting = false)
+  54                launch {
+  55                    r.events.collect { event ->
+  56                        when (event) {
+  57                            is RoomEvent.ParticipantConnected -> {
+  58                                _participants.value = r.remoteParticipants.values.map { it.identityString() }
+  59                            }
+  60                            is RoomEvent.ParticipantDisconnected -> {
+  61                                _participants.value = r.remoteParticipants.values.map { it.identityString() }
+  62                            }
+  63                            is RoomEvent.ActiveSpeakersChanged -> {
+  64                                _uiState.value = _uiState.value.copy(
+  65                                    speaking = event.speakers.map { it.identityString() }.toSet()
+  66                                )
+  67                            }
+  68                            else -> Unit
+  69                        }
+  70                    }
+  71                }
+  72            } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
+  73        }
+  74    
+  75        fun leave(channelId: String) {
+  76            viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
+  77            room?.disconnect(); room = null
+  78            _uiState.value = VoiceUiState(); _participants.value = emptyList()
+  79        }
+  80    
+  81        fun toggleMute() = viewModelScope.launch {
+  82            val m = !_uiState.value.muted
+  83            room?.localParticipant?.setMicrophoneEnabled(!m)
+  84            _uiState.value = _uiState.value.copy(muted = m)
+  85        }
+  86    
+  87        fun toggleDeafen() {
+  88            val d = !_uiState.value.deafened
+  89            room?.remoteParticipants?.values?.forEach { p ->
+  90                p.audioTrackPublications.forEach { pub ->
+  91 ❌                 pub.setSubscribed(!d)
+  92                }
+  93            }
+  94            _uiState.value = _uiState.value.copy(deafened = d)
+  95        }
+  96    
+  97        override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
+  98    }
 
 
