@@ -614,14 +614,8 @@ data class ChannelResponse(
     @SerializedName("dm_participants") val dmParticipants: List<DmParticipant>? = null,
 )
 
-data class MemberResponse(
-    @SerializedName("guild_id") val guildId: String,
-    @SerializedName("user_id") val userId: String,
-    val nickname: String? = null,
-    val roles: List<String> = emptyList(),
-    @SerializedName("joined_at") val joinedAt: String,
-    val user: UserResponse? = null,
-)
+// FIX: MemberResponse removed from here — it lives in MemberResponse.kt (with nullable joinedAt).
+// Having it in both files caused a "Redeclaration" compile error.
 
 data class RoleResponse(
     val id: String,
@@ -1156,6 +1150,7 @@ fun NexusNavGraph() {
         composable(Screen.Home.route) {
             HomeScreen(
                 onOpenChannel        = { cId, gId -> nav.navigate(Screen.Chat.createRoute(cId, gId)) },
+                // FIX: HomeScreen.onOpenVoice is (String, String) -> Unit — pass both channelId and channelName
                 onOpenVoice          = { cId, name -> nav.navigate(Screen.Voice.createRoute(cId, name)) },
                 onOpenProfile        = { nav.navigate(Screen.Profile.route) },
                 onOpenSettings       = { nav.navigate(Screen.Settings.route) },
@@ -2063,7 +2058,8 @@ import com.nexus.android.ui.theme.*
 @Composable
 fun HomeScreen(
     onOpenChannel: (String, String) -> Unit,
-    onOpenVoice: (String) -> Unit,
+    // FIX: was (String) -> Unit — Voice route needs both channelId and channelName
+    onOpenVoice: (String, String) -> Unit,
     onOpenProfile: () -> Unit,
     onOpenSettings: () -> Unit,
     onOpenServerSettings: (String) -> Unit,
@@ -2105,7 +2101,9 @@ fun HomeScreen(
             ChannelSidebar(
                 guild           = selectedGuild!!,
                 channels        = channels,
-                onSelect        = { ch -> if (ch.type == "voice") onOpenVoice(ch.id) else onOpenChannel(ch.id, selectedGuild!!.id) },
+                // FIX: voice channels pass both id and name to onOpenVoice
+                onSelect        = { ch -> if (ch.type == "voice") onOpenVoice(ch.id, ch.name) else onOpenChannel(ch.id, selectedGuild!!.id) },
+                // FIX: leaveGuild and generateInvite now exist in HomeViewModel
                 onLeaveGuild    = { vm.leaveGuild(selectedGuild!!.id) },
                 onCreateChannel = vm::showCreateChannelDialog,
                 onInvite        = { vm.generateInvite(it) },
@@ -2331,7 +2329,7 @@ fun CreateGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, o
                     modifier = Modifier.fillMaxWidth().height(48.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple)) {
                     if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
-                    else Text("Create", fontWeight = FontWeight.Bold)
+                    else Text("Create Server", fontWeight = FontWeight.Bold)
                 }
             }
         }
@@ -2631,6 +2629,39 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
             }
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Network error: ${e.message}")
+        }
+    }
+
+    // ── Leave guild ────────────────────────────────────────────────────────────
+    // FIX: added — was called by HomeScreen but missing from ViewModel
+
+    fun leaveGuild(guildId: String) = viewModelScope.launch {
+        try {
+            api.leaveGuild(guildId)
+            _guilds.value = _guilds.value.filter { it.id != guildId }
+            if (_selectedGuild.value?.id == guildId) {
+                _selectedGuild.value = _guilds.value.firstOrNull()
+                _channels.value = emptyList()
+                _selectedGuild.value?.let { selectGuild(it) }
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Failed to leave server: ${e.message}")
+        }
+    }
+
+    // ── Generate invite ────────────────────────────────────────────────────────
+    // FIX: added — was called by HomeScreen but missing from ViewModel
+
+    fun generateInvite(channelId: String) = viewModelScope.launch {
+        try {
+            val resp = api.createInvite(channelId)
+            if (resp.isSuccessful && resp.body() != null) {
+                showInviteDialog(resp.body()!!.code)
+            } else {
+                _uiState.value = _uiState.value.copy(error = "Failed to generate invite")
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Network error: ${e.message}")
         }
     }
 }
@@ -3163,7 +3194,24 @@ private fun OverviewSubScreen(
     uiState: ServerSettingsUiState,
     vm: ServerSettingsViewModel,
 ) {
-    var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+    var name              by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+    // FIX: delete confirm dialog must be state inside the composable, not inside onClick lambda
+    var showDeleteConfirm by remember { mutableStateOf(false) }
+
+    if (showDeleteConfirm) {
+        AlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
+            title = { Text("Delete '${guild?.name}'?") },
+            text  = { Text("This action is permanent and cannot be undone. All channels and messages will be lost.") },
+            confirmButton = {
+                TextButton(onClick = { showDeleteConfirm = false; vm.deleteGuild() }) {
+                    Text("Delete", color = NexusRed)
+                }
+            },
+            dismissButton = { TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") } },
+        )
+    }
+
     Column(Modifier.fillMaxSize().padding(16.dp)) {
         if (uiState.error != null)
             Text(uiState.error, color = NexusRed, fontSize = 13.sp, modifier = Modifier.padding(bottom = 8.dp))
@@ -3176,6 +3224,7 @@ private fun OverviewSubScreen(
         )
         Spacer(Modifier.height(16.dp))
         Button(
+            // FIX: was vm.updateGuildName(name) — method renamed to match VM
             onClick = { vm.updateGuildName(name) },
             enabled = name.isNotBlank() && name != guild?.name && !uiState.loading,
             modifier = Modifier.fillMaxWidth(),
@@ -3188,7 +3237,9 @@ private fun OverviewSubScreen(
         Text("DANGER ZONE", color = NexusRed, fontSize = 11.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(8.dp))
         OutlinedButton(
-            onClick = vm::deleteGuild,
+            // FIX: was vm::deleteGuild method reference which didn't exist;
+            // now sets showDeleteConfirm = true so the AlertDialog above opens inside the composable context
+            onClick = { showDeleteConfirm = true },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.outlinedButtonColors(contentColor = NexusRed),
             border = androidx.compose.foundation.BorderStroke(1.dp, NexusRed),
@@ -3252,7 +3303,6 @@ private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleRespo
                 Spacer(Modifier.height(6.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     member.roles.take(4).forEach { roleId ->
-                        // FIX: safe let — no !! operator anywhere in role color resolution
                         val role = roleMap[roleId]
                         val rc = role?.let { r ->
                             if (r.color != 0) Color(0xFF000000 or r.color.toLong()) else NexusOutline
@@ -3378,16 +3428,34 @@ class ServerSettingsViewModel @Inject constructor(private val api: NexusApi) : V
         }
     }
 
-    fun saveGuildName(guildId: String, name: String) = viewModelScope.launch {
+    // FIX: renamed from saveGuildName(guildId, name) to updateGuildName(name).
+    // Screen calls vm.updateGuildName(name); guildId is read from internal state.
+    fun updateGuildName(name: String) = viewModelScope.launch {
+        val guildId = _guild.value?.id ?: return@launch
         if (name.isBlank()) return@launch
-        _uiState.value = _uiState.value.copy(saving = true)
+        _uiState.value = _uiState.value.copy(saving = true, error = null)
         try {
             api.updateGuild(guildId, mapOf("name" to name)).body()?.let {
                 _guild.value = it
                 _uiState.value = _uiState.value.copy(saving = false, saveSuccess = true)
+            } ?: run {
+                _uiState.value = _uiState.value.copy(saving = false, error = "Failed to save")
             }
         } catch (_: Exception) {
             _uiState.value = _uiState.value.copy(saving = false, error = "Failed to save")
+        }
+    }
+
+    // FIX: added — was called by ServerSettingsScreen but missing from ViewModel
+    fun deleteGuild() = viewModelScope.launch {
+        val guildId = _guild.value?.id ?: return@launch
+        _uiState.value = _uiState.value.copy(loading = true, error = null)
+        try {
+            api.deleteGuild(guildId)
+            // Signal success — the screen/nav should pop back on success
+            _uiState.value = _uiState.value.copy(loading = false, saveSuccess = true)
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(loading = false, error = "Failed to delete server: ${e.message}")
         }
     }
 
