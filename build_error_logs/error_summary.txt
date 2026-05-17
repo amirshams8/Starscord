@@ -12,9 +12,8 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:21 Unresolved reference 'track'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:32 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:37 Unresolved reference 'enabled'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:46 Argument type mismatch: actual type is 'kotlin.Function1<io.livekit.android.room.track.RemoteTrackPublication, kotlin.Unit>', but 'kotlin.Function1<T, kotlin.Unit>' was expected.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:94:21 Unresolved reference 'enabled'.
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -542,11 +541,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 56s
-=======
-BUILD FAILED in 54s
->>>>>>> Stashed changes
+BUILD FAILED in 58s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
