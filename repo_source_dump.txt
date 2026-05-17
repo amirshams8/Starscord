@@ -49,6 +49,9 @@ FILE TREE (SELECTED FOLDERS)
 │   │   │   │   │   │   │   │   │   ├── chat
 │   │   │   │   │   │   │   │   │   │   ├── ChatScreen.kt
 │   │   │   │   │   │   │   │   │   │   ├── ChatViewModel.kt
+│   │   │   │   │   │   │   │   │   ├── dm
+│   │   │   │   │   │   │   │   │   │   ├── DmListScreen.kt
+│   │   │   │   │   │   │   │   │   │   ├── DmViewModel.kt
 │   │   │   │   │   │   │   │   │   ├── home
 │   │   │   │   │   │   │   │   │   │   ├── HomeScreen.kt
 │   │   │   │   │   │   │   │   │   │   ├── HomeViewModel.kt
@@ -62,6 +65,9 @@ FILE TREE (SELECTED FOLDERS)
 │   │   │   │   │   │   │   │   │   ├── settings
 │   │   │   │   │   │   │   │   │   │   ├── SettingsScreen.kt
 │   │   │   │   │   │   │   │   │   │   ├── SettingsViewModel.kt
+│   │   │   │   │   │   │   │   │   ├── voice
+│   │   │   │   │   │   │   │   │   │   ├── VoiceScreen.kt
+│   │   │   │   │   │   │   │   │   │   ├── VoiceViewModel.kt
 │   │   │   │   │   │   │   │   ├── theme
 │   │   │   │   │   │   │   │   │   ├── Color.kt
 │   │   │   │   │   │   │   │   │   ├── Theme.kt
@@ -1035,11 +1041,13 @@ import androidx.navigation.navArgument
 import com.nexus.android.ui.screens.auth.LoginScreen
 import com.nexus.android.ui.screens.auth.RegisterScreen
 import com.nexus.android.ui.screens.chat.ChatScreen
+import com.nexus.android.ui.screens.dm.DmListScreen
 import com.nexus.android.ui.screens.home.HomeScreen
 import com.nexus.android.ui.screens.profile.ProfileScreen
 import com.nexus.android.ui.screens.server.ChannelMembersScreen
 import com.nexus.android.ui.screens.server.ServerSettingsScreen
 import com.nexus.android.ui.screens.settings.SettingsScreen
+import com.nexus.android.ui.screens.voice.VoiceScreen
 
 sealed class Screen(val route: String) {
     object Login          : Screen("login")
@@ -1047,8 +1055,15 @@ sealed class Screen(val route: String) {
     object Home           : Screen("home")
     object Profile        : Screen("profile")
     object Settings       : Screen("settings")
+    object DmList         : Screen("dm_list")
+    object DmChat         : Screen("dm_chat/{channelId}") {
+        fun createRoute(c: String) = "dm_chat/$c"
+    }
     object Chat           : Screen("chat/{channelId}/{guildId}") {
         fun createRoute(c: String, g: String) = "chat/$c/$g"
+    }
+    object Voice          : Screen("voice/{channelId}/{channelName}") {
+        fun createRoute(c: String, n: String) = "voice/$c/${n.replace("/", "-")}"
     }
     object ServerSettings : Screen("server_settings/{guildId}") {
         fun createRoute(g: String) = "server_settings/$g"
@@ -1079,11 +1094,31 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
 
         composable(Screen.Home.route) {
             HomeScreen(
-                onOpenChannel        = { channelId, guildId -> nav.navigate(Screen.Chat.createRoute(channelId, guildId)) },
-                onOpenVoice          = { },
+                onOpenChannel        = { cId, gId -> nav.navigate(Screen.Chat.createRoute(cId, gId)) },
+                onOpenVoice          = { cId -> nav.navigate(Screen.Voice.createRoute(cId, cId)) },
                 onOpenProfile        = { nav.navigate(Screen.Profile.route) },
                 onOpenSettings       = { nav.navigate(Screen.Settings.route) },
-                onOpenServerSettings = { guildId -> nav.navigate(Screen.ServerSettings.createRoute(guildId)) },
+                onOpenServerSettings = { gId -> nav.navigate(Screen.ServerSettings.createRoute(gId)) },
+                onOpenDms            = { nav.navigate(Screen.DmList.route) },
+            )
+        }
+
+        composable(Screen.DmList.route) {
+            DmListScreen(
+                onOpenDm = { cId -> nav.navigate(Screen.DmChat.createRoute(cId)) },
+                onBack   = { nav.popBackStack() },
+            )
+        }
+
+        composable(
+            route     = Screen.DmChat.route,
+            arguments = listOf(navArgument("channelId") { type = NavType.StringType }),
+        ) { back ->
+            ChatScreen(
+                channelId     = back.arguments?.getString("channelId") ?: return@composable,
+                guildId       = "dm",
+                onBack        = { nav.popBackStack() },
+                onOpenMembers = { _, _ -> },
             )
         }
 
@@ -1110,6 +1145,20 @@ fun NexusNavGraph(startDestination: String = Screen.Login.route) {
                 guildId       = back.arguments?.getString("guildId")   ?: return@composable,
                 onBack        = { nav.popBackStack() },
                 onOpenMembers = { cId, gId -> nav.navigate(Screen.ChannelMembers.createRoute(cId, gId)) },
+            )
+        }
+
+        composable(
+            route     = Screen.Voice.route,
+            arguments = listOf(
+                navArgument("channelId")   { type = NavType.StringType },
+                navArgument("channelName") { type = NavType.StringType },
+            ),
+        ) { back ->
+            VoiceScreen(
+                channelId   = back.arguments?.getString("channelId")   ?: return@composable,
+                channelName = back.arguments?.getString("channelName") ?: "voice",
+                onLeave     = { nav.popBackStack() },
             )
         }
 
@@ -1720,6 +1769,196 @@ class ChatViewModel @Inject constructor(
 }
 
 
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt =====
+package com.nexus.android.ui.screens.dm
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import coil.compose.AsyncImage
+import com.nexus.android.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DmListScreen(
+    onOpenDm: (String) -> Unit,
+    onBack: () -> Unit,
+    vm: DmViewModel = hiltViewModel(),
+) {
+    val dmChannels by vm.dmChannels.collectAsState()
+    val uiState    by vm.uiState.collectAsState()
+    var showNewDm  by remember { mutableStateOf(false) }
+    var newDmUser  by remember { mutableStateOf("") }
+
+    if (showNewDm) {
+        AlertDialog(
+            onDismissRequest = { showNewDm = false; newDmUser = "" },
+            title = { Text("New Message") },
+            text = {
+                OutlinedTextField(
+                    value = newDmUser, onValueChange = { newDmUser = it },
+                    placeholder = { Text("User ID", color = NexusTextMuted) }, singleLine = true,
+                    colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = NexusBlurple, unfocusedBorderColor = NexusOutline),
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    if (newDmUser.isNotBlank()) {
+                        vm.openDm(newDmUser.trim()) { onOpenDm(it) }
+                        showNewDm = false; newDmUser = ""
+                    }
+                }) { Text("Open DM", color = NexusBlurple) }
+            },
+            dismissButton = { TextButton(onClick = { showNewDm = false; newDmUser = "" }) { Text("Cancel") } },
+            containerColor = NexusDarkMedium,
+        )
+    }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Direct Messages", fontWeight = FontWeight.Bold) },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+                actions = { IconButton(onClick = { showNewDm = true }) { Icon(Icons.Default.Edit, "New DM", tint = NexusTextMuted) } },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+            )
+        },
+        containerColor = NexusDark,
+    ) { padding ->
+        if (uiState.loading) {
+            Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(color = NexusBlurple)
+            }
+        } else if (dmChannels.isEmpty()) {
+            Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Icon(Icons.Default.Forum, null, tint = NexusTextMuted, modifier = Modifier.size(48.dp))
+                    Spacer(Modifier.height(12.dp))
+                    Text("No direct messages yet", color = NexusTextMuted)
+                    Spacer(Modifier.height(8.dp))
+                    TextButton(onClick = { showNewDm = true }) { Text("Start a conversation", color = NexusBlurple) }
+                }
+            }
+        } else {
+            LazyColumn(Modifier.fillMaxSize().padding(padding)) {
+                items(dmChannels, key = { it.id }) { ch ->
+                    val other = ch.dmParticipants?.firstOrNull()?.user
+                    val name  = other?.username ?: "Unknown"
+                    val statusColor = when (other?.status) {
+                        "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
+                    }
+                    Row(
+                        modifier = Modifier.fillMaxWidth().clickable { onOpenDm(ch.id) }.padding(horizontal = 16.dp, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(Modifier.size(44.dp)) {
+                            Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+                                if (other?.avatar != null)
+                                    AsyncImage(model = other.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
+                                else
+                                    Text(name.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
+                            }
+                            Box(Modifier.size(13.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
+                                Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
+                            }
+                        }
+                        Spacer(Modifier.width(12.dp))
+                        Column(Modifier.weight(1f)) {
+                            Text(name, color = NexusTextPrimary, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
+                            other?.customStatus?.let { Text(it, color = NexusTextMuted, fontSize = 12.sp, maxLines = 1) }
+                        }
+                        Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                    }
+                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+                }
+            }
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt =====
+package com.nexus.android.ui.screens.dm
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.nexus.android.data.api.NexusApi
+import com.nexus.android.data.api.models.ChannelResponse
+import com.nexus.android.data.api.models.OpenDmRequest
+import com.nexus.android.data.gateway.GatewayClient
+import com.google.gson.Gson
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+data class DmUiState(val loading: Boolean = false, val error: String? = null)
+
+@HiltViewModel
+class DmViewModel @Inject constructor(
+    private val api: NexusApi,
+    private val gateway: GatewayClient,
+) : ViewModel() {
+    private val _dmChannels = MutableStateFlow<List<ChannelResponse>>(emptyList())
+    val dmChannels: StateFlow<List<ChannelResponse>> = _dmChannels.asStateFlow()
+    private val _uiState = MutableStateFlow(DmUiState())
+    val uiState: StateFlow<DmUiState> = _uiState.asStateFlow()
+    private var myUserId = ""
+    private val gson = Gson()
+
+    init { loadDms(); collectGateway() }
+
+    private fun loadDms() = viewModelScope.launch {
+        _uiState.value = DmUiState(loading = true)
+        try {
+            myUserId = api.getMe().body()?.id ?: ""
+            _dmChannels.value = stripSelf(api.getDmChannels().body() ?: emptyList())
+            _uiState.value = DmUiState()
+        } catch (e: Exception) { _uiState.value = DmUiState(error = e.message) }
+    }
+
+    private fun collectGateway() = viewModelScope.launch {
+        gateway.events.collect { event ->
+            if (event.type == "DM_CHANNEL_CREATE") {
+                val ch = gson.fromJson(event.data.toString(), ChannelResponse::class.java)
+                if (_dmChannels.value.none { it.id == ch.id })
+                    _dmChannels.value = listOf(stripSelf(listOf(ch)).first()) + _dmChannels.value
+            }
+        }
+    }
+
+    fun openDm(recipientId: String, onSuccess: (String) -> Unit) = viewModelScope.launch {
+        try {
+            val resp = api.openDm(OpenDmRequest(recipientId))
+            if (resp.isSuccessful && resp.body() != null) {
+                val ch = resp.body()!!
+                if (_dmChannels.value.none { it.id == ch.id })
+                    _dmChannels.value = listOf(stripSelf(listOf(ch)).first()) + _dmChannels.value
+                onSuccess(ch.id)
+            } else _uiState.value = _uiState.value.copy(error = "User not found")
+        } catch (e: Exception) { _uiState.value = _uiState.value.copy(error = e.message) }
+    }
+
+    private fun stripSelf(channels: List<ChannelResponse>) =
+        channels.map { ch -> ch.copy(dmParticipants = ch.dmParticipants?.filter { it.userId != myUserId }) }
+}
+
+
 //===== FILE: app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt =====
 package com.nexus.android.ui.screens.home
 
@@ -1761,6 +2000,7 @@ fun HomeScreen(
     onOpenProfile: () -> Unit,
     onOpenSettings: () -> Unit,
     onOpenServerSettings: (String) -> Unit,
+    onOpenDms: () -> Unit,
     vm: HomeViewModel = hiltViewModel(),
 ) {
     val guilds        by vm.guilds.collectAsState()
@@ -1786,12 +2026,13 @@ fun HomeScreen(
 
     Row(modifier = Modifier.fillMaxSize().background(NexusDark)) {
         ServerRail(
-            guilds       = guilds,
-            selectedId   = selectedGuild?.id,
-            onSelect     = vm::selectGuild,
-            onAddServer  = vm::showCreateGuildDialog,
-            onJoinServer = vm::showJoinGuildDialog,
+            guilds        = guilds,
+            selectedId    = selectedGuild?.id,
+            onSelect      = vm::selectGuild,
+            onAddServer   = vm::showCreateGuildDialog,
+            onJoinServer  = vm::showJoinGuildDialog,
             onOpenProfile = onOpenProfile,
+            onOpenDms     = onOpenDms,
         )
         if (selectedGuild != null) {
             ChannelSidebar(
@@ -1808,8 +2049,7 @@ fun HomeScreen(
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("No server selected", color = NexusTextPrimary, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                    Spacer(Modifier.height(8.dp))
-                    Text("Tap + to create or join one", color = NexusTextMuted, fontSize = 13.sp)
+                    Text("Select a server from the sidebar", color = NexusTextMuted, fontSize = 13.sp)
                 }
             }
         }
@@ -1821,18 +2061,28 @@ fun ServerRail(
     guilds: List<GuildResponse>, selectedId: String?,
     onSelect: (GuildResponse) -> Unit, onAddServer: () -> Unit,
     onJoinServer: () -> Unit, onOpenProfile: () -> Unit,
+    onOpenDms: () -> Unit,
 ) {
     var showAddMenu by remember { mutableStateOf(false) }
     Column(
         modifier = Modifier.width(72.dp).fillMaxHeight().background(NexusDark).padding(vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+        // Profile button
         Box(
             modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusBlurple).clickable(onClick = onOpenProfile),
             contentAlignment = Alignment.Center,
         ) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
 
         HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+
+        // DM button
+        Box(
+            modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusDarkMedium).clickable(onClick = onOpenDms),
+            contentAlignment = Alignment.Center,
+        ) { Icon(Icons.Default.Forum, contentDescription = "DMs", tint = NexusTextMuted, modifier = Modifier.size(24.dp)) }
+
+        Spacer(Modifier.height(8.dp))
 
         LazyColumn(
             modifier = Modifier.weight(1f),
@@ -3527,6 +3777,219 @@ class SettingsViewModel @Inject constructor(
             authInterceptor.accessToken = null
         }
     }
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/voice/VoiceScreen.kt =====
+package com.nexus.android.ui.screens.voice
+
+import android.Manifest
+import android.content.pm.PackageManager
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.nexus.android.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun VoiceScreen(
+    channelId: String,
+    channelName: String,
+    onLeave: () -> Unit,
+    vm: VoiceViewModel = hiltViewModel(),
+) {
+    val uiState      by vm.uiState.collectAsState()
+    val participants by vm.participants.collectAsState()
+    val context      = LocalContext.current
+
+    val permLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        if (granted) vm.join(channelId) else onLeave()
+    }
+    LaunchedEffect(channelId) {
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)
+            vm.join(channelId)
+        else
+            permLauncher.launch(Manifest.permission.RECORD_AUDIO)
+    }
+    DisposableEffect(Unit) { onDispose { vm.leave(channelId) } }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Column {
+                        Text("🔊 $channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                        Text("Voice Connected", color = NexusGreen, fontSize = 11.sp)
+                    }
+                },
+                navigationIcon = {
+                    IconButton(onClick = { vm.leave(channelId); onLeave() }) {
+                        Icon(Icons.Default.CallEnd, "Leave", tint = NexusRed)
+                    }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+            )
+        },
+        containerColor = NexusDark,
+        bottomBar = {
+            Row(Modifier.fillMaxWidth().background(NexusDarkMedium).padding(16.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
+                FloatingActionButton(onClick = vm::toggleMute,
+                    containerColor = if (uiState.muted) NexusRed else NexusDarkLight, modifier = Modifier.size(56.dp)) {
+                    Icon(if (uiState.muted) Icons.Default.MicOff else Icons.Default.Mic, "Mute", tint = Color.White)
+                }
+                FloatingActionButton(onClick = vm::toggleDeafen,
+                    containerColor = if (uiState.deafened) NexusRed else NexusDarkLight, modifier = Modifier.size(56.dp)) {
+                    Icon(if (uiState.deafened) Icons.Default.HeadsetOff else Icons.Default.Headset, "Deafen", tint = Color.White)
+                }
+                FloatingActionButton(onClick = { vm.leave(channelId); onLeave() },
+                    containerColor = NexusRed, modifier = Modifier.size(56.dp)) {
+                    Icon(Icons.Default.CallEnd, "Leave", tint = Color.White)
+                }
+            }
+        },
+    ) { padding ->
+        when {
+            uiState.error != null -> Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                Text(uiState.error!!, color = NexusRed)
+            }
+            uiState.connecting -> Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    CircularProgressIndicator(color = NexusBlurple)
+                    Spacer(Modifier.height(12.dp))
+                    Text("Connecting to voice...", color = NexusTextMuted)
+                }
+            }
+            else -> LazyColumn(Modifier.fillMaxSize().padding(padding).padding(horizontal = 16.dp)) {
+                item {
+                    Text("PARTICIPANTS — ${participants.size}", color = NexusTextMuted,
+                        fontSize = 11.sp, fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(top = 12.dp, bottom = 8.dp))
+                }
+                items(participants) { p ->
+                    Row(Modifier.fillMaxWidth().padding(vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Box(Modifier.size(40.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+                            Text(p.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
+                        }
+                        Spacer(Modifier.width(12.dp))
+                        Text(p, color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
+                        if (uiState.speaking.contains(p))
+                            Icon(Icons.Default.Mic, null, tint = NexusGreen, modifier = Modifier.size(16.dp))
+                    }
+                }
+                item { Spacer(Modifier.height(80.dp)) }
+            }
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt =====
+package com.nexus.android.ui.screens.voice
+
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
+import com.nexus.android.data.api.NexusApi
+import com.nexus.android.data.api.models.VoiceLeaveRequest
+import com.nexus.android.data.api.models.VoiceTokenRequest
+import dagger.hilt.android.lifecycle.HiltViewModel
+import io.livekit.android.LiveKit
+import io.livekit.android.room.Room
+import io.livekit.android.room.RoomListener
+import io.livekit.android.room.participant.Participant
+import io.livekit.android.room.participant.RemoteParticipant
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+data class VoiceUiState(
+    val connecting: Boolean = false,
+    val muted: Boolean = false,
+    val deafened: Boolean = false,
+    val speaking: Set<String> = emptySet(),
+    val error: String? = null,
+)
+
+@HiltViewModel
+class VoiceViewModel @Inject constructor(
+    application: Application,
+    private val api: NexusApi,
+) : AndroidViewModel(application) {
+    private val _uiState      = MutableStateFlow(VoiceUiState())
+    val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
+    private val _participants = MutableStateFlow<List<String>>(emptyList())
+    val participants: StateFlow<List<String>> = _participants.asStateFlow()
+    private var room: Room? = null
+
+    fun join(channelId: String) = viewModelScope.launch {
+        _uiState.value = VoiceUiState(connecting = true)
+        try {
+            val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
+            if (!resp.isSuccessful || resp.body() == null) {
+                _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
+            }
+            val body = resp.body()!!
+            room = LiveKit.create(getApplication()).also { r ->
+                r.connect(body.livekitUrl, body.token,
+                    roomOptions = io.livekit.android.room.RoomOptions(adaptiveStream = true, dynacast = true))
+                r.localParticipant.setMicrophoneEnabled(true)
+                _participants.value = r.remoteParticipants.values.map { it.identity ?: "" }
+                _uiState.value = VoiceUiState(connecting = false)
+                r.addListener(object : RoomListener {
+                    override fun onParticipantConnected(room: Room, participant: RemoteParticipant) {
+                        _participants.value = room.remoteParticipants.values.map { it.identity ?: "" }
+                    }
+                    override fun onParticipantDisconnected(room: Room, participant: RemoteParticipant) {
+                        _participants.value = room.remoteParticipants.values.map { it.identity ?: "" }
+                    }
+                    override fun onActiveSpeakersChanged(speakers: List<Participant>, room: Room) {
+                        _uiState.value = _uiState.value.copy(speaking = speakers.mapNotNull { it.identity }.toSet())
+                    }
+                })
+            }
+        } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
+    }
+
+    fun leave(channelId: String) {
+        viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
+        room?.disconnect(); room = null
+        _uiState.value = VoiceUiState(); _participants.value = emptyList()
+    }
+
+    fun toggleMute() {
+        val m = !_uiState.value.muted
+        room?.localParticipant?.setMicrophoneEnabled(!m)
+        _uiState.value = _uiState.value.copy(muted = m)
+    }
+
+    fun toggleDeafen() {
+        val d = !_uiState.value.deafened
+        room?.remoteParticipants?.values?.forEach { p ->
+            p.audioTracks.values.forEach { pub -> pub.track?.enabled = !d }
+        }
+        _uiState.value = _uiState.value.copy(deafened = d)
+    }
+
+    override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
 }
 
 
