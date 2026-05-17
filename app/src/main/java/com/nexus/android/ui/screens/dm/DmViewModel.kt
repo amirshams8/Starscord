@@ -60,5 +60,7 @@ class DmViewModel @Inject constructor(
     }
 
     private fun stripSelf(channels: List<ChannelResponse>) =
-        channels.map { ch -> ch.copy(dmParticipants = ch.dmParticipants?.filter { it.userId != myUserId }) }
+        channels.map { ch ->
+            ch.copy(dmParticipants = ch.dmParticipants?.filter { it.userId != myUserId })
+        }
 }

@@ -8,8 +8,9 @@ import com.nexus.android.data.api.models.VoiceLeaveRequest
 import com.nexus.android.data.api.models.VoiceTokenRequest
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.livekit.android.LiveKit
+import io.livekit.android.events.RoomEvent
+import io.livekit.android.events.collect
 import io.livekit.android.room.Room
-import io.livekit.android.room.RoomListener
 import io.livekit.android.room.participant.Participant
 import io.livekit.android.room.participant.RemoteParticipant
 import kotlinx.coroutines.flow.*
@@ -43,23 +44,32 @@ class VoiceViewModel @Inject constructor(
                 _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
             }
             val body = resp.body()!!
-            room = LiveKit.create(getApplication()).also { r ->
-                r.connect(body.livekitUrl, body.token,
-                    roomOptions = io.livekit.android.room.RoomOptions(adaptiveStream = true, dynacast = true))
-                r.localParticipant.setMicrophoneEnabled(true)
-                _participants.value = r.remoteParticipants.values.map { it.identity ?: "" }
-                _uiState.value = VoiceUiState(connecting = false)
-                r.addListener(object : RoomListener {
-                    override fun onParticipantConnected(room: Room, participant: RemoteParticipant) {
-                        _participants.value = room.remoteParticipants.values.map { it.identity ?: "" }
+            val r = LiveKit.create(getApplication())
+            room = r
+            // LiveKit 2.x: connect() is a suspend fun with no roomOptions named param
+            r.connect(body.livekitUrl, body.token)
+            r.localParticipant.setMicrophoneEnabled(true)
+            // Snapshot current remote participants (identity is Participant.Identity value class)
+            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+            _uiState.value = VoiceUiState(connecting = false)
+            // LiveKit 2.x: observe room events via Flow
+            launch {
+                r.events.collect { event ->
+                    when (event) {
+                        is RoomEvent.ParticipantConnected -> {
+                            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+                        }
+                        is RoomEvent.ParticipantDisconnected -> {
+                            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+                        }
+                        is RoomEvent.ActiveSpeakersChanged -> {
+                            _uiState.value = _uiState.value.copy(
+                                speaking = event.speakers.map { it.identity.value }.toSet()
+                            )
+                        }
+                        else -> Unit
                     }
-                    override fun onParticipantDisconnected(room: Room, participant: RemoteParticipant) {
-                        _participants.value = room.remoteParticipants.values.map { it.identity ?: "" }
-                    }
-                    override fun onActiveSpeakersChanged(speakers: List<Participant>, room: Room) {
-                        _uiState.value = _uiState.value.copy(speaking = speakers.mapNotNull { it.identity }.toSet())
-                    }
-                })
+                }
             }
         } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
     }
@@ -70,16 +80,18 @@ class VoiceViewModel @Inject constructor(
         _uiState.value = VoiceUiState(); _participants.value = emptyList()
     }
 
-    fun toggleMute() {
+    fun toggleMute() = viewModelScope.launch {
         val m = !_uiState.value.muted
+        // setMicrophoneEnabled is suspend in LiveKit 2.x
         room?.localParticipant?.setMicrophoneEnabled(!m)
         _uiState.value = _uiState.value.copy(muted = m)
     }
 
     fun toggleDeafen() {
         val d = !_uiState.value.deafened
+        // LiveKit 2.x: audioTracks replaced by getTrackPublications() or trackPublications
         room?.remoteParticipants?.values?.forEach { p ->
-            p.audioTracks.values.forEach { pub -> pub.track?.enabled = !d }
+            p.audioTrackPublications.forEach { pub -> pub.track?.enabled = !d }
         }
         _uiState.value = _uiState.value.copy(deafened = d)
     }

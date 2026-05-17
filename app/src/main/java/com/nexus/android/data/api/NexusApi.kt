@@ -70,6 +70,13 @@ interface NexusApi {
     @POST("channels/{channelId}/typing")
     suspend fun sendTyping(@Path("channelId") channelId: String): Response<Unit>
 
+    // DM endpoints
+    @GET("users/@me/channels")
+    suspend fun getDmChannels(): Response<List<ChannelResponse>>
+
+    @POST("users/@me/channels")
+    suspend fun openDm(@Body body: OpenDmRequest): Response<ChannelResponse>
+
     @POST("voice/token")   suspend fun getVoiceToken(@Body body: VoiceTokenRequest): Response<VoiceTokenResponse>
     @DELETE("voice/leave") suspend fun leaveVoice(@Body body: VoiceLeaveRequest): Response<Unit>
 

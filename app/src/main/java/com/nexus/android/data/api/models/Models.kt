@@ -64,6 +64,12 @@ data class GuildResponse(
 
 data class CreateChannelRequest(val name: String, val type: String = "text", val parentId: String? = null)
 
+// DmParticipant holds the other user in a DM channel
+data class DmParticipant(
+    @SerializedName("user_id") val userId: String,
+    val user: UserResponse? = null,
+)
+
 data class ChannelResponse(
     val id: String,
     @SerializedName("guild_id") val guildId: String? = null,
@@ -77,6 +83,8 @@ data class ChannelResponse(
     @SerializedName("user_limit") val userLimit: Int = 0,
     @SerializedName("parent_id") val parentId: String? = null,
     @SerializedName("last_message_id") val lastMessageId: String? = null,
+    // DM-specific: list of participants (excluding self after stripSelf filtering)
+    @SerializedName("dm_participants") val dmParticipants: List<DmParticipant>? = null,
 )
 
 data class MemberResponse(
@@ -171,3 +179,6 @@ data class GuildInviteResponse(
     @SerializedName("expires_at") val expiresAt: String? = null,
     @SerializedName("created_at") val createdAt: String? = null,
 )
+
+// DM request model
+data class OpenDmRequest(@SerializedName("recipient_id") val recipientId: String)

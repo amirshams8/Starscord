@@ -108,7 +108,11 @@ fun DmListScreen(
                         Spacer(Modifier.width(12.dp))
                         Column(Modifier.weight(1f)) {
                             Text(name, color = NexusTextPrimary, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
-                            other?.customStatus?.let { Text(it, color = NexusTextMuted, fontSize = 12.sp, maxLines = 1) }
+                            // Fix: explicit String type so Kotlin resolves Text overload unambiguously
+                            val status: String? = other?.customStatus
+                            if (status != null) {
+                                Text(status, color = NexusTextMuted, fontSize = 12.sp, maxLines = 1)
+                            }
                         }
                         Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
                     }
