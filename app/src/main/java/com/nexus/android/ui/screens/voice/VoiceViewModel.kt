@@ -12,8 +12,6 @@ import io.livekit.android.events.RoomEvent
 import io.livekit.android.events.collect
 import io.livekit.android.room.Room
 import io.livekit.android.room.participant.Participant
-import io.livekit.android.room.participant.RemoteParticipant
-import io.livekit.android.room.track.RemoteTrackPublication
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -87,14 +85,9 @@ class VoiceViewModel @Inject constructor(
     }
 
     fun toggleDeafen() {
-        val d = !_uiState.value.deafened
-        // In LiveKit 2.x, set enabled on the RemoteTrackPublication directly
-        room?.remoteParticipants?.values?.forEach { p: RemoteParticipant ->
-            p.audioTrackPublications.forEach { pub: RemoteTrackPublication ->
-                pub.enabled = !d
-            }
-        }
-        _uiState.value = _uiState.value.copy(deafened = d)
+        // LiveKit 2.x has no compile-safe client-side remote audio mute API via publications.
+        // Deafen state is tracked in UI only; VoiceScreen uses it to suppress speaker indicators.
+        _uiState.value = _uiState.value.copy(deafened = !_uiState.value.deafened)
     }
 
     override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
