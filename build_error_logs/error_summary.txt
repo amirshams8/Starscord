@@ -12,11 +12,9 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:53:80 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:60:96 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:63:96 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:67:76 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:94:59 Unresolved reference 'track'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:21 Unresolved reference 'track'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:32 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:93:37 Unresolved reference 'enabled'.
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -544,19 +542,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-BUILD FAILED in 54s
-=======
 BUILD FAILED in 56s
->>>>>>> Stashed changes
-=======
-BUILD FAILED in 54s
->>>>>>> Stashed changes
-=======
-BUILD FAILED in 58s
->>>>>>> Stashed changes
 
 -- EXCEPTION STACK TRACES --
 * Exception is:
