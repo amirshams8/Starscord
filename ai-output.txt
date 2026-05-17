@@ -86,9 +86,13 @@ class VoiceViewModel @Inject constructor(
     }
 
     fun toggleDeafen() {
-        // LiveKit 2.x has no compile-safe client-side remote audio mute API via publications.
-        // Deafen state is tracked in UI only; VoiceScreen uses it to suppress speaker indicators.
-        _uiState.value = _uiState.value.copy(deafened = !_uiState.value.deafened)
+        val d = !_uiState.value.deafened
+        room?.remoteParticipants?.values?.forEach { p ->
+            p.audioTrackPublications.forEach { pub ->
+                pub.setSubscribed(!d)
+            }
+        }
+        _uiState.value = _uiState.value.copy(deafened = d)
     }
 
     override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
