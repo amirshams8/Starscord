@@ -1,235 +1,13 @@
 ==== SOURCE CODE (ERROR FILES WITH HIGHLIGHTED LINES) ====
 
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt =====
-
-// ❌ ERRORS IN THIS FILE (5 error(s)):
-// Line 88: Unresolved reference 'dmParticipants'.
-// Line 88: Unresolved reference 'user'.
-// Line 100: Unresolved reference 'avatar'.
-// Line 111: Cannot infer type for this parameter. Please specify it explicitly.
-// Line 111: Overload resolution ambiguity between candidates:
-
-   1    package com.nexus.android.ui.screens.dm
-   2    
-   3    import androidx.compose.foundation.background
-   4    import androidx.compose.foundation.clickable
-   5    import androidx.compose.foundation.layout.*
-   6    import androidx.compose.foundation.lazy.LazyColumn
-   7    import androidx.compose.foundation.lazy.items
-   8    import androidx.compose.foundation.shape.CircleShape
-   9    import androidx.compose.material.icons.Icons
-  10    import androidx.compose.material.icons.filled.*
-  11    import androidx.compose.material3.*
-  12    import androidx.compose.runtime.*
-  13    import androidx.compose.ui.Alignment
-  14    import androidx.compose.ui.Modifier
-  15    import androidx.compose.ui.draw.clip
-  16    import androidx.compose.ui.graphics.Color
-  17    import androidx.compose.ui.text.font.FontWeight
-  18    import androidx.compose.ui.unit.dp
-  19    import androidx.compose.ui.unit.sp
-  20    import androidx.hilt.navigation.compose.hiltViewModel
-  21    import coil.compose.AsyncImage
-  22    import com.nexus.android.ui.theme.*
-  23    
-  24    @OptIn(ExperimentalMaterial3Api::class)
-  25    @Composable
-  26    fun DmListScreen(
-  27        onOpenDm: (String) -> Unit,
-  28        onBack: () -> Unit,
-  29        vm: DmViewModel = hiltViewModel(),
-  30    ) {
-  31        val dmChannels by vm.dmChannels.collectAsState()
-  32        val uiState    by vm.uiState.collectAsState()
-  33        var showNewDm  by remember { mutableStateOf(false) }
-  34        var newDmUser  by remember { mutableStateOf("") }
-  35    
-  36        if (showNewDm) {
-  37            AlertDialog(
-  38                onDismissRequest = { showNewDm = false; newDmUser = "" },
-  39                title = { Text("New Message") },
-  40                text = {
-  41                    OutlinedTextField(
-  42                        value = newDmUser, onValueChange = { newDmUser = it },
-  43                        placeholder = { Text("User ID", color = NexusTextMuted) }, singleLine = true,
-  44                        colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = NexusBlurple, unfocusedBorderColor = NexusOutline),
-  45                    )
-  46                },
-  47                confirmButton = {
-  48                    TextButton(onClick = {
-  49                        if (newDmUser.isNotBlank()) {
-  50                            vm.openDm(newDmUser.trim()) { onOpenDm(it) }
-  51                            showNewDm = false; newDmUser = ""
-  52                        }
-  53                    }) { Text("Open DM", color = NexusBlurple) }
-  54                },
-  55                dismissButton = { TextButton(onClick = { showNewDm = false; newDmUser = "" }) { Text("Cancel") } },
-  56                containerColor = NexusDarkMedium,
-  57            )
-  58        }
-  59    
-  60        Scaffold(
-  61            topBar = {
-  62                TopAppBar(
-  63                    title = { Text("Direct Messages", fontWeight = FontWeight.Bold) },
-  64                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
-  65                    actions = { IconButton(onClick = { showNewDm = true }) { Icon(Icons.Default.Edit, "New DM", tint = NexusTextMuted) } },
-  66                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
-  67                )
-  68            },
-  69            containerColor = NexusDark,
-  70        ) { padding ->
-  71            if (uiState.loading) {
-  72                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-  73                    CircularProgressIndicator(color = NexusBlurple)
-  74                }
-  75            } else if (dmChannels.isEmpty()) {
-  76                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-  77                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-  78                        Icon(Icons.Default.Forum, null, tint = NexusTextMuted, modifier = Modifier.size(48.dp))
-  79                        Spacer(Modifier.height(12.dp))
-  80                        Text("No direct messages yet", color = NexusTextMuted)
-  81                        Spacer(Modifier.height(8.dp))
-  82                        TextButton(onClick = { showNewDm = true }) { Text("Start a conversation", color = NexusBlurple) }
-  83                    }
-  84                }
-  85            } else {
-  86                LazyColumn(Modifier.fillMaxSize().padding(padding)) {
-  87                    items(dmChannels, key = { it.id }) { ch ->
-  88 ❌                     val other = ch.dmParticipants?.firstOrNull()?.user
-  89                        val name  = other?.username ?: "Unknown"
-  90                        val statusColor = when (other?.status) {
-  91                            "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
-  92                        }
-  93                        Row(
-  94                            modifier = Modifier.fillMaxWidth().clickable { onOpenDm(ch.id) }.padding(horizontal = 16.dp, vertical = 10.dp),
-  95                            verticalAlignment = Alignment.CenterVertically,
-  96                        ) {
-  97                            Box(Modifier.size(44.dp)) {
-  98                                Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
-  99                                    if (other?.avatar != null)
- 100 ❌                                     AsyncImage(model = other.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
- 101                                    else
- 102                                        Text(name.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
- 103                                }
- 104                                Box(Modifier.size(13.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
- 105                                    Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
- 106                                }
- 107                            }
- 108                            Spacer(Modifier.width(12.dp))
- 109                            Column(Modifier.weight(1f)) {
- 110                                Text(name, color = NexusTextPrimary, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
- 111 ❌                             other?.customStatus?.let { Text(it, color = NexusTextMuted, fontSize = 12.sp, maxLines = 1) }
- 112                            }
- 113                            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
- 114                        }
- 115                        HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
- 116                    }
- 117                }
- 118            }
- 119        }
- 120    }
-
-
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt =====
-
-// ❌ ERRORS IN THIS FILE (10 error(s)):
-// Line 7: Unresolved reference 'OpenDmRequest'.
-// Line 35: Unresolved reference 'getDmChannels'.
-// Line 52: Unresolved reference 'OpenDmRequest'.
-// Line 52: Unresolved reference 'openDm'.
-// Line 55: Unresolved reference 'id'.
-// Line 57: Unresolved reference 'id'.
-// Line 63: Cannot infer type for this parameter. Please specify it explicitly.
-// Line 63: No parameter with name 'dmParticipants' found.
-// Line 63: Unresolved reference 'dmParticipants'.
-// Line 63: Unresolved reference 'userId'.
-
-   1    package com.nexus.android.ui.screens.dm
-   2    
-   3    import androidx.lifecycle.ViewModel
-   4    import androidx.lifecycle.viewModelScope
-   5    import com.nexus.android.data.api.NexusApi
-   6    import com.nexus.android.data.api.models.ChannelResponse
-   7 ❌ import com.nexus.android.data.api.models.OpenDmRequest
-   8    import com.nexus.android.data.gateway.GatewayClient
-   9    import com.google.gson.Gson
-  10    import dagger.hilt.android.lifecycle.HiltViewModel
-  11    import kotlinx.coroutines.flow.*
-  12    import kotlinx.coroutines.launch
-  13    import javax.inject.Inject
-  14    
-  15    data class DmUiState(val loading: Boolean = false, val error: String? = null)
-  16    
-  17    @HiltViewModel
-  18    class DmViewModel @Inject constructor(
-  19        private val api: NexusApi,
-  20        private val gateway: GatewayClient,
-  21    ) : ViewModel() {
-  22        private val _dmChannels = MutableStateFlow<List<ChannelResponse>>(emptyList())
-  23        val dmChannels: StateFlow<List<ChannelResponse>> = _dmChannels.asStateFlow()
-  24        private val _uiState = MutableStateFlow(DmUiState())
-  25        val uiState: StateFlow<DmUiState> = _uiState.asStateFlow()
-  26        private var myUserId = ""
-  27        private val gson = Gson()
-  28    
-  29        init { loadDms(); collectGateway() }
-  30    
-  31        private fun loadDms() = viewModelScope.launch {
-  32            _uiState.value = DmUiState(loading = true)
-  33            try {
-  34                myUserId = api.getMe().body()?.id ?: ""
-  35 ❌             _dmChannels.value = stripSelf(api.getDmChannels().body() ?: emptyList())
-  36                _uiState.value = DmUiState()
-  37            } catch (e: Exception) { _uiState.value = DmUiState(error = e.message) }
-  38        }
-  39    
-  40        private fun collectGateway() = viewModelScope.launch {
-  41            gateway.events.collect { event ->
-  42                if (event.type == "DM_CHANNEL_CREATE") {
-  43                    val ch = gson.fromJson(event.data.toString(), ChannelResponse::class.java)
-  44                    if (_dmChannels.value.none { it.id == ch.id })
-  45                        _dmChannels.value = listOf(stripSelf(listOf(ch)).first()) + _dmChannels.value
-  46                }
-  47            }
-  48        }
-  49    
-  50        fun openDm(recipientId: String, onSuccess: (String) -> Unit) = viewModelScope.launch {
-  51            try {
-  52 ❌             val resp = api.openDm(OpenDmRequest(recipientId))
-  53                if (resp.isSuccessful && resp.body() != null) {
-  54                    val ch = resp.body()!!
-  55 ❌                 if (_dmChannels.value.none { it.id == ch.id })
-  56                        _dmChannels.value = listOf(stripSelf(listOf(ch)).first()) + _dmChannels.value
-  57 ❌                 onSuccess(ch.id)
-  58                } else _uiState.value = _uiState.value.copy(error = "User not found")
-  59            } catch (e: Exception) { _uiState.value = _uiState.value.copy(error = e.message) }
-  60        }
-  61    
-  62        private fun stripSelf(channels: List<ChannelResponse>) =
-  63 ❌         channels.map { ch -> ch.copy(dmParticipants = ch.dmParticipants?.filter { it.userId != myUserId }) }
-  64    }
-
-
 //===== FILE: app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt =====
 
-// ❌ ERRORS IN THIS FILE (16 error(s)):
-// Line 12: Unresolved reference 'RoomListener'.
-// Line 48: No parameter with name 'roomOptions' found.
-// Line 48: Unresolved reference 'RoomOptions'.
-// Line 50: Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
-// Line 52: Unresolved reference 'RoomListener'.
-// Line 52: Unresolved reference 'addListener'.
-// Line 53: 'onParticipantConnected' overrides nothing.
-// Line 54: Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
-// Line 56: 'onParticipantDisconnected' overrides nothing.
-// Line 57: Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
-// Line 59: 'onActiveSpeakersChanged' overrides nothing.
-// Line 60: Argument type mismatch: actual type is 'kotlin.collections.Set<io.livekit.android.room.participant.Participant.Identity>', but 'kotlin.collections.Set<kotlin.String>' was expected.
-// Line 75: Suspend function 'suspend fun setMicrophoneEnabled(enabled: Boolean): Unit' should be called only from a coroutine or another suspend function.
-// Line 82: Cannot infer type for this parameter. Please specify it explicitly.
-// Line 82: Unresolved reference 'audioTracks'.
-// Line 82: Unresolved reference 'track'.
+// ❌ ERRORS IN THIS FILE (5 error(s)):
+// Line 53: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+// Line 60: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+// Line 63: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+// Line 67: Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+// Line 94: Unresolved reference 'track'.
 
    1    package com.nexus.android.ui.screens.voice
    2    
@@ -241,83 +19,95 @@
    8    import com.nexus.android.data.api.models.VoiceTokenRequest
    9    import dagger.hilt.android.lifecycle.HiltViewModel
   10    import io.livekit.android.LiveKit
-  11    import io.livekit.android.room.Room
-  12 ❌ import io.livekit.android.room.RoomListener
-  13    import io.livekit.android.room.participant.Participant
-  14    import io.livekit.android.room.participant.RemoteParticipant
-  15    import kotlinx.coroutines.flow.*
-  16    import kotlinx.coroutines.launch
-  17    import javax.inject.Inject
-  18    
-  19    data class VoiceUiState(
-  20        val connecting: Boolean = false,
-  21        val muted: Boolean = false,
-  22        val deafened: Boolean = false,
-  23        val speaking: Set<String> = emptySet(),
-  24        val error: String? = null,
-  25    )
-  26    
-  27    @HiltViewModel
-  28    class VoiceViewModel @Inject constructor(
-  29        application: Application,
-  30        private val api: NexusApi,
-  31    ) : AndroidViewModel(application) {
-  32        private val _uiState      = MutableStateFlow(VoiceUiState())
-  33        val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
-  34        private val _participants = MutableStateFlow<List<String>>(emptyList())
-  35        val participants: StateFlow<List<String>> = _participants.asStateFlow()
-  36        private var room: Room? = null
-  37    
-  38        fun join(channelId: String) = viewModelScope.launch {
-  39            _uiState.value = VoiceUiState(connecting = true)
-  40            try {
-  41                val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
-  42                if (!resp.isSuccessful || resp.body() == null) {
-  43                    _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
-  44                }
-  45                val body = resp.body()!!
-  46                room = LiveKit.create(getApplication()).also { r ->
-  47                    r.connect(body.livekitUrl, body.token,
-  48 ❌                     roomOptions = io.livekit.android.room.RoomOptions(adaptiveStream = true, dynacast = true))
-  49                    r.localParticipant.setMicrophoneEnabled(true)
-  50 ❌                 _participants.value = r.remoteParticipants.values.map { it.identity ?: "" }
-  51                    _uiState.value = VoiceUiState(connecting = false)
-  52 ❌                 r.addListener(object : RoomListener {
-  53 ❌                     override fun onParticipantConnected(room: Room, participant: RemoteParticipant) {
-  54 ❌                         _participants.value = room.remoteParticipants.values.map { it.identity ?: "" }
-  55                        }
-  56 ❌                     override fun onParticipantDisconnected(room: Room, participant: RemoteParticipant) {
-  57 ❌                         _participants.value = room.remoteParticipants.values.map { it.identity ?: "" }
-  58                        }
-  59 ❌                     override fun onActiveSpeakersChanged(speakers: List<Participant>, room: Room) {
-  60 ❌                         _uiState.value = _uiState.value.copy(speaking = speakers.mapNotNull { it.identity }.toSet())
-  61                        }
-  62                    })
-  63                }
-  64            } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
-  65        }
-  66    
-  67        fun leave(channelId: String) {
-  68            viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
-  69            room?.disconnect(); room = null
-  70            _uiState.value = VoiceUiState(); _participants.value = emptyList()
-  71        }
-  72    
-  73        fun toggleMute() {
-  74            val m = !_uiState.value.muted
-  75 ❌         room?.localParticipant?.setMicrophoneEnabled(!m)
-  76            _uiState.value = _uiState.value.copy(muted = m)
-  77        }
-  78    
-  79        fun toggleDeafen() {
-  80            val d = !_uiState.value.deafened
-  81            room?.remoteParticipants?.values?.forEach { p ->
-  82 ❌             p.audioTracks.values.forEach { pub -> pub.track?.enabled = !d }
-  83            }
-  84            _uiState.value = _uiState.value.copy(deafened = d)
-  85        }
-  86    
-  87        override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
-  88    }
+  11    import io.livekit.android.events.RoomEvent
+  12    import io.livekit.android.events.collect
+  13    import io.livekit.android.room.Room
+  14    import io.livekit.android.room.participant.Participant
+  15    import io.livekit.android.room.participant.RemoteParticipant
+  16    import kotlinx.coroutines.flow.*
+  17    import kotlinx.coroutines.launch
+  18    import javax.inject.Inject
+  19    
+  20    data class VoiceUiState(
+  21        val connecting: Boolean = false,
+  22        val muted: Boolean = false,
+  23        val deafened: Boolean = false,
+  24        val speaking: Set<String> = emptySet(),
+  25        val error: String? = null,
+  26    )
+  27    
+  28    @HiltViewModel
+  29    class VoiceViewModel @Inject constructor(
+  30        application: Application,
+  31        private val api: NexusApi,
+  32    ) : AndroidViewModel(application) {
+  33        private val _uiState      = MutableStateFlow(VoiceUiState())
+  34        val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
+  35        private val _participants = MutableStateFlow<List<String>>(emptyList())
+  36        val participants: StateFlow<List<String>> = _participants.asStateFlow()
+  37        private var room: Room? = null
+  38    
+  39        fun join(channelId: String) = viewModelScope.launch {
+  40            _uiState.value = VoiceUiState(connecting = true)
+  41            try {
+  42                val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
+  43                if (!resp.isSuccessful || resp.body() == null) {
+  44                    _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
+  45                }
+  46                val body = resp.body()!!
+  47                val r = LiveKit.create(getApplication())
+  48                room = r
+  49                // LiveKit 2.x: connect() is a suspend fun with no roomOptions named param
+  50                r.connect(body.livekitUrl, body.token)
+  51                r.localParticipant.setMicrophoneEnabled(true)
+  52                // Snapshot current remote participants (identity is Participant.Identity value class)
+  53 ❌             _participants.value = r.remoteParticipants.values.map { it.identity.value }
+  54                _uiState.value = VoiceUiState(connecting = false)
+  55                // LiveKit 2.x: observe room events via Flow
+  56                launch {
+  57                    r.events.collect { event ->
+  58                        when (event) {
+  59                            is RoomEvent.ParticipantConnected -> {
+  60 ❌                             _participants.value = r.remoteParticipants.values.map { it.identity.value }
+  61                            }
+  62                            is RoomEvent.ParticipantDisconnected -> {
+  63 ❌                             _participants.value = r.remoteParticipants.values.map { it.identity.value }
+  64                            }
+  65                            is RoomEvent.ActiveSpeakersChanged -> {
+  66                                _uiState.value = _uiState.value.copy(
+  67 ❌                                 speaking = event.speakers.map { it.identity.value }.toSet()
+  68                                )
+  69                            }
+  70                            else -> Unit
+  71                        }
+  72                    }
+  73                }
+  74            } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
+  75        }
+  76    
+  77        fun leave(channelId: String) {
+  78            viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
+  79            room?.disconnect(); room = null
+  80            _uiState.value = VoiceUiState(); _participants.value = emptyList()
+  81        }
+  82    
+  83        fun toggleMute() = viewModelScope.launch {
+  84            val m = !_uiState.value.muted
+  85            // setMicrophoneEnabled is suspend in LiveKit 2.x
+  86            room?.localParticipant?.setMicrophoneEnabled(!m)
+  87            _uiState.value = _uiState.value.copy(muted = m)
+  88        }
+  89    
+  90        fun toggleDeafen() {
+  91            val d = !_uiState.value.deafened
+  92            // LiveKit 2.x: audioTracks replaced by getTrackPublications() or trackPublications
+  93            room?.remoteParticipants?.values?.forEach { p ->
+  94 ❌             p.audioTrackPublications.forEach { pub -> pub.track?.enabled = !d }
+  95            }
+  96            _uiState.value = _uiState.value.copy(deafened = d)
+  97        }
+  98    
+  99        override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
+ 100    }
 
 

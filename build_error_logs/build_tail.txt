@@ -1,3 +1,34 @@
+<<<<<<< Updated upstream
+=======
+Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with JetifyTransform
+Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with IdentityTransform
+Transforming livekit-android-2.7.1.aar (io.livekit:livekit-android:2.7.1) with JetifyTransform
+Transforming livekit-android-2.7.1.aar (io.livekit:livekit-android:2.7.1) with AarToClassTransform
+Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with JetifyTransform
+Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with IdentityTransform
+Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with JetifyTransform
+Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with IdentityTransform
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with JetifyTransform
+Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with AarToClassTransform
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with JetifyTransform
+Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with AarToClassTransform
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with JetifyTransform
+Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with AarToClassTransform
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with JetifyTransform
+Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with AarToClassTransform
+Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with JetifyTransform
+Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with AarToClassTransform
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
+Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with AarToClassTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarToClassTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
+Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarToClassTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarToClassTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
+Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarToClassTransform
+>>>>>>> Stashed changes
 Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with JetifyTransform
 Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with IdentityTransform
 Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with JetifyTransform
@@ -309,7 +340,11 @@ Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOption
 w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
 Finished executing kotlin compiler using DAEMON strategy
 Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+<<<<<<< Updated upstream
 :app:kaptDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+=======
+:app:kaptDebugKotlin (Thread[included builds,5,main]) started.
+>>>>>>> Stashed changes
 
 > Task :app:kaptDebugKotlin
 Transforming R.jar with StructureTransformAction
@@ -692,39 +727,11 @@ Script file extensions:
 Using Kotlin/JVM incremental compilation
 [KOTLIN] Kotlin compilation 'jdkHome' argument: null
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kotlin-classes/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state])
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:88:36 Unresolved reference 'dmParticipants'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:88:67 Unresolved reference 'user'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:100:62 Unresolved reference 'avatar'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:111:54 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt:111:56 Overload resolution ambiguity between candidates:
-@Composable() @ComposableTarget(...) fun Text(text: AnnotatedString, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., inlineContent: Map<String, InlineTextContent> = ..., onTextLayout: (TextLayoutResult) -> Unit = ..., style: TextStyle = ...): Unit
-@Composable() @ComposableTarget(...) fun Text(text: String, modifier: Modifier = ..., color: Color = ..., fontSize: TextUnit = ..., fontStyle: FontStyle? = ..., fontWeight: FontWeight? = ..., fontFamily: FontFamily? = ..., letterSpacing: TextUnit = ..., textDecoration: TextDecoration? = ..., textAlign: TextAlign? = ..., lineHeight: TextUnit = ..., overflow: TextOverflow = ..., softWrap: Boolean = ..., maxLines: Int = ..., minLines: Int = ..., onTextLayout: ((TextLayoutResult) -> Unit)? = ..., style: TextStyle = ...): Unit
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:7:42 Unresolved reference 'OpenDmRequest'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:35:47 Unresolved reference 'getDmChannels'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:52:28 Unresolved reference 'openDm'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:52:35 Unresolved reference 'OpenDmRequest'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:55:58 Unresolved reference 'id'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:57:30 Unresolved reference 'id'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:38 No parameter with name 'dmParticipants' found.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:58 Unresolved reference 'dmParticipants'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:81 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt:63:86 Unresolved reference 'userId'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:12:32 Unresolved reference 'RoomListener'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:48:21 No parameter with name 'roomOptions' found.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:48:59 Unresolved reference 'RoomOptions'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:50:73 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:52:19 Unresolved reference 'addListener'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:52:40 Unresolved reference 'RoomListener'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:53:21 'onParticipantConnected' overrides nothing.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:54:84 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:56:21 'onParticipantDisconnected' overrides nothing.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:57:84 Argument type mismatch: actual type is 'kotlin.Any', but 'kotlin.String' was expected.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:59:21 'onActiveSpeakersChanged' overrides nothing.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:60:73 Argument type mismatch: actual type is 'kotlin.collections.Set<io.livekit.android.room.participant.Participant.Identity>', but 'kotlin.collections.Set<kotlin.String>' was expected.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:75:33 Suspend function 'suspend fun setMicrophoneEnabled(enabled: Boolean): Unit' should be called only from a coroutine or another suspend function.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:15 Unresolved reference 'audioTracks'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:44 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:82:55 Unresolved reference 'track'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:53:80 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:60:96 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:63:96 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:67:76 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'io.livekit.android.room.participant.Participant.Identity?'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt:94:59 Unresolved reference 'track'.
 Finished executing kotlin compiler using DAEMON strategy
 
 > Task :app:compileDebugKotlin FAILED
@@ -996,5 +1003,9 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
+<<<<<<< Updated upstream
 BUILD FAILED in 58s
+=======
+BUILD FAILED in 1m 5s
+>>>>>>> Stashed changes
 33 actionable tasks: 33 executed
