@@ -1,0 +1,573 @@
+//===== FILE: app/src/main/java/com/nexus/android/data/api/models/Models.kt =====
+package com.nexus.android.data.api.models
+
+import com.google.gson.annotations.SerializedName
+
+data class RegisterRequest(val username: String, val email: String, val password: String)
+data class LoginRequest(val email: String, val password: String, @SerializedName("mfaCode") val mfaCode: String? = null)
+data class LoginResponse(
+    @SerializedName("access_token") val accessToken: String,
+    @SerializedName("token_type") val tokenType: String,
+    @SerializedName("expires_in") val expiresIn: Int,
+    val user: UserResponse,
+)
+data class RefreshResponse(@SerializedName("access_token") val accessToken: String)
+data class MfaEnableResponse(val secret: String, @SerializedName("qr_code") val qrCode: String)
+data class MfaVerifyRequest(val code: String)
+data class SuccessResponse(val success: Boolean)
+
+data class UserResponse(
+    val id: String,
+    val username: String,
+    val discriminator: String,
+    val email: String? = null,
+    val avatar: String? = null,
+    @SerializedName("avatar_animated") val avatarAnimated: Boolean = false,
+    val banner: String? = null,
+    @SerializedName("banner_color") val bannerColor: String? = null,
+    val bio: String? = null,
+    val pronouns: String? = null,
+    val status: String = "online",
+    @SerializedName("custom_status") val customStatus: String? = null,
+    @SerializedName("nitro_type") val nitroType: String = "none",
+    @SerializedName("nitro_since") val nitroSince: String? = null,
+    val flags: Long = 0,
+    @SerializedName("created_at") val createdAt: String? = null,
+)
+
+data class UpdateUserRequest(
+    val username: String? = null,
+    val bio: String? = null,
+    val pronouns: String? = null,
+    val avatar: String? = null,
+    val banner: String? = null,
+    @SerializedName("banner_color") val bannerColor: String? = null,
+    @SerializedName("custom_status") val customStatus: String? = null,
+    val status: String? = null,
+)
+
+data class CreateGuildRequest(val name: String, val icon: String? = null)
+data class GuildResponse(
+    val id: String,
+    val name: String,
+    val icon: String? = null,
+    @SerializedName("icon_animated") val iconAnimated: Boolean = false,
+    val banner: String? = null,
+    @SerializedName("owner_id") val ownerId: String,
+    val description: String? = null,
+    @SerializedName("boost_count") val boostCount: Int = 0,
+    @SerializedName("boost_tier") val boostTier: Int = 0,
+    @SerializedName("vanity_url") val vanityUrl: String? = null,
+    val channels: List<ChannelResponse>? = null,
+    val roles: List<RoleResponse>? = null,
+    @SerializedName("joined_at") val joinedAt: String? = null,
+)
+
+data class CreateChannelRequest(val name: String, val type: String = "text", val parentId: String? = null)
+
+// DmParticipant holds the other user in a DM channel
+data class DmParticipant(
+    @SerializedName("user_id") val userId: String,
+    val user: UserResponse? = null,
+)
+
+data class ChannelResponse(
+    val id: String,
+    @SerializedName("guild_id") val guildId: String? = null,
+    val type: String,
+    val name: String,
+    val position: Int = 0,
+    val topic: String? = null,
+    val nsfw: Boolean = false,
+    val slowmode: Int = 0,
+    val bitrate: Int = 64000,
+    @SerializedName("user_limit") val userLimit: Int = 0,
+    @SerializedName("parent_id") val parentId: String? = null,
+    @SerializedName("last_message_id") val lastMessageId: String? = null,
+    // DM-specific: list of participants (excluding self after stripSelf filtering)
+    @SerializedName("dm_participants") val dmParticipants: List<DmParticipant>? = null,
+)
+
+data class MemberResponse(
+    @SerializedName("guild_id") val guildId: String,
+    @SerializedName("user_id") val userId: String,
+    val nickname: String? = null,
+    val roles: List<String> = emptyList(),
+    @SerializedName("joined_at") val joinedAt: String,
+    val user: UserResponse? = null,
+)
+
+data class RoleResponse(
+    val id: String,
+    @SerializedName("guild_id") val guildId: String,
+    val name: String,
+    val color: Int = 0,
+    val hoist: Boolean = false,
+    val position: Int = 0,
+    val permissions: String = "0",
+    val mentionable: Boolean = false,
+    @SerializedName("member_count") val memberCount: Int = 0,
+)
+
+data class SendMessageRequest(
+    val content: String? = null,
+    val tts: Boolean = false,
+    val embeds: List<Any>? = null,
+    val reference: MessageReferenceRequest? = null,
+)
+data class EditMessageRequest(val content: String)
+data class MessageReferenceRequest(@SerializedName("message_id") val messageId: String)
+data class MessageResponse(
+    val id: String,
+    @SerializedName("channel_id") val channelId: String,
+    val author: UserResponse? = null,
+    val content: String? = null,
+    val type: String = "default",
+    val pinned: Boolean = false,
+    val tts: Boolean = false,
+    val attachments: List<Any>? = null,
+    val embeds: List<Any>? = null,
+    val reactions: List<ReactionResponse>? = null,
+    val reference: MessageResponse? = null,
+    @SerializedName("edited_at") val editedAt: String? = null,
+    @SerializedName("created_at") val createdAt: String,
+)
+data class ReactionResponse(
+    val emoji: String,
+    val count: Int = 1,
+    @SerializedName("user_id") val userId: String? = null,
+)
+
+data class VoiceTokenRequest(@SerializedName("channelId") val channelId: String)
+data class VoiceLeaveRequest(@SerializedName("channelId") val channelId: String)
+data class VoiceTokenResponse(
+    val token: String,
+    @SerializedName("livekit_url") val livekitUrl: String,
+    @SerializedName("channel_id") val channelId: String,
+)
+
+data class NitroSubscribeRequest(val plan: String)
+data class BoostResponse(val success: Boolean, @SerializedName("boost_count") val boostCount: Int, val tier: Int)
+data class NitroPlansResponse(val plans: List<NitroPlan>)
+data class NitroPlan(val id: String, val name: String, val price: Int, val currency: String)
+
+data class InviteResponse(
+    val code: String,
+    val guild: GuildResponse,
+    val channel: ChannelResponse,
+    val uses: Int = 0,
+    @SerializedName("max_uses") val maxUses: Int = 0,
+    @SerializedName("expires_at") val expiresAt: String? = null,
+)
+data class CreateInviteRequest(
+    @SerializedName("max_uses") val maxUses: Int = 0,
+    @SerializedName("max_age") val maxAge: Int = 86400,
+)
+data class CreatedInviteResponse(
+    val code: String,
+    @SerializedName("guild_id") val guildId: String,
+    @SerializedName("channel_id") val channelId: String,
+)
+data class GuildInviteResponse(
+    val code: String,
+    @SerializedName("guild_id") val guildId: String,
+    @SerializedName("channel_id") val channelId: String,
+    val channel: ChannelResponse? = null,
+    val creator: UserResponse? = null,
+    val uses: Int = 0,
+    @SerializedName("max_uses") val maxUses: Int = 0,
+    @SerializedName("max_age") val maxAge: Int = 86400,
+    @SerializedName("expires_at") val expiresAt: String? = null,
+    @SerializedName("created_at") val createdAt: String? = null,
+)
+
+// DM request model
+data class OpenDmRequest(@SerializedName("recipient_id") val recipientId: String)
+
+//===== FILE: app/src/main/java/com/nexus/android/data/api/NexusApi.kt =====
+package com.nexus.android.data.api
+
+import com.nexus.android.data.api.models.*
+import retrofit2.Response
+import retrofit2.http.*
+
+interface NexusApi {
+    @POST("auth/register")   suspend fun register(@Body body: RegisterRequest): Response<UserResponse>
+    @POST("auth/login")      suspend fun login(@Body body: LoginRequest): Response<LoginResponse>
+    @POST("auth/logout")     suspend fun logout(): Response<Unit>
+    @POST("auth/refresh")    suspend fun refreshToken(): Response<RefreshResponse>
+    @POST("auth/mfa/enable") suspend fun enableMfa(): Response<MfaEnableResponse>
+    @POST("auth/mfa/verify") suspend fun verifyMfa(@Body body: MfaVerifyRequest): Response<SuccessResponse>
+
+    @GET("users/@me")        suspend fun getMe(): Response<UserResponse>
+    @PATCH("users/@me")      suspend fun updateMe(@Body body: UpdateUserRequest): Response<UserResponse>
+    @GET("users/{id}")       suspend fun getUser(@Path("id") id: String): Response<UserResponse>
+    @GET("users/@me/guilds") suspend fun getMyGuilds(): Response<List<GuildResponse>>
+
+    @POST("guilds")          suspend fun createGuild(@Body body: CreateGuildRequest): Response<GuildResponse>
+    @GET("guilds/{id}")      suspend fun getGuild(@Path("id") id: String): Response<GuildResponse>
+    @PATCH("guilds/{id}")    suspend fun updateGuild(@Path("id") id: String, @Body body: Map<String, Any>): Response<GuildResponse>
+    @DELETE("guilds/{id}")   suspend fun deleteGuild(@Path("id") id: String): Response<Unit>
+
+    @GET("guilds/{id}/members")
+    suspend fun getGuildMembers(@Path("id") id: String, @Query("limit") limit: Int = 100): Response<List<MemberResponse>>
+
+    @PUT("guilds/{id}/members/@me")    suspend fun joinGuild(@Path("id") id: String): Response<MemberResponse>
+    @DELETE("guilds/{id}/members/@me") suspend fun leaveGuild(@Path("id") id: String): Response<Unit>
+
+    @GET("guilds/{id}/roles")   suspend fun getGuildRoles(@Path("id") id: String): Response<List<RoleResponse>>
+    @GET("guilds/{id}/invites") suspend fun getGuildInvites(@Path("id") id: String): Response<List<GuildInviteResponse>>
+
+    @POST("guilds/{id}/channels")
+    suspend fun createChannel(@Path("id") guildId: String, @Body body: CreateChannelRequest): Response<ChannelResponse>
+
+    @POST("channels/{id}/invites")
+    suspend fun createInvite(@Path("id") channelId: String, @Body body: CreateInviteRequest = CreateInviteRequest()): Response<CreatedInviteResponse>
+
+    @GET("channels/{id}")    suspend fun getChannel(@Path("id") id: String): Response<ChannelResponse>
+    @PATCH("channels/{id}")  suspend fun updateChannel(@Path("id") id: String, @Body body: Map<String, Any>): Response<ChannelResponse>
+    @DELETE("channels/{id}") suspend fun deleteChannel(@Path("id") id: String): Response<Unit>
+
+    @GET("channels/{id}/members")
+    suspend fun getChannelMembers(@Path("id") channelId: String): Response<List<MemberResponse>>
+
+    @GET("channels/{channelId}/messages")
+    suspend fun getMessages(
+        @Path("channelId") channelId: String,
+        @Query("limit") limit: Int = 50,
+        @Query("before") before: String? = null,
+        @Query("after") after: String? = null,
+    ): Response<List<MessageResponse>>
+
+    @POST("channels/{channelId}/messages")
+    suspend fun sendMessage(@Path("channelId") channelId: String, @Body body: SendMessageRequest): Response<MessageResponse>
+
+    @PATCH("channels/{channelId}/messages/{messageId}")
+    suspend fun editMessage(@Path("channelId") channelId: String, @Path("messageId") messageId: String, @Body body: EditMessageRequest): Response<MessageResponse>
+
+    @DELETE("channels/{channelId}/messages/{messageId}")
+    suspend fun deleteMessage(@Path("channelId") channelId: String, @Path("messageId") messageId: String): Response<Unit>
+
+    @PUT("channels/{channelId}/messages/{messageId}/reactions/{emoji}/@me")
+    suspend fun addReaction(@Path("channelId") channelId: String, @Path("messageId") messageId: String, @Path("emoji") emoji: String): Response<Unit>
+
+    @DELETE("channels/{channelId}/messages/{messageId}/reactions/{emoji}/@me")
+    suspend fun removeReaction(@Path("channelId") channelId: String, @Path("messageId") messageId: String, @Path("emoji") emoji: String): Response<Unit>
+
+    @POST("channels/{channelId}/typing")
+    suspend fun sendTyping(@Path("channelId") channelId: String): Response<Unit>
+
+    // DM endpoints
+    @GET("users/@me/channels")
+    suspend fun getDmChannels(): Response<List<ChannelResponse>>
+
+    @POST("users/@me/channels")
+    suspend fun openDm(@Body body: OpenDmRequest): Response<ChannelResponse>
+
+    @POST("voice/token")   suspend fun getVoiceToken(@Body body: VoiceTokenRequest): Response<VoiceTokenResponse>
+    @DELETE("voice/leave") suspend fun leaveVoice(@Body body: VoiceLeaveRequest): Response<Unit>
+
+    @GET("nitro/plans")      suspend fun getNitroPlans(): Response<NitroPlansResponse>
+    @POST("nitro/subscribe") suspend fun subscribeNitro(@Body body: NitroSubscribeRequest): Response<SuccessResponse>
+    @POST("nitro/boost/{guildId}") suspend fun boostServer(@Path("guildId") guildId: String): Response<BoostResponse>
+
+    @GET("invites/{code}")       suspend fun getInvite(@Path("code") code: String): Response<InviteResponse>
+    @POST("invites/{code}/use")  suspend fun useInvite(@Path("code") code: String): Response<GuildResponse>
+    @DELETE("invites/{code}")    suspend fun deleteInvite(@Path("code") code: String): Response<Unit>
+}
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt =====
+package com.nexus.android.ui.screens.dm
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.nexus.android.data.api.NexusApi
+import com.nexus.android.data.api.models.ChannelResponse
+import com.nexus.android.data.api.models.OpenDmRequest
+import com.nexus.android.data.gateway.GatewayClient
+import com.google.gson.Gson
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+data class DmUiState(val loading: Boolean = false, val error: String? = null)
+
+@HiltViewModel
+class DmViewModel @Inject constructor(
+    private val api: NexusApi,
+    private val gateway: GatewayClient,
+) : ViewModel() {
+    private val _dmChannels = MutableStateFlow<List<ChannelResponse>>(emptyList())
+    val dmChannels: StateFlow<List<ChannelResponse>> = _dmChannels.asStateFlow()
+    private val _uiState = MutableStateFlow(DmUiState())
+    val uiState: StateFlow<DmUiState> = _uiState.asStateFlow()
+    private var myUserId = ""
+    private val gson = Gson()
+
+    init { loadDms(); collectGateway() }
+
+    private fun loadDms() = viewModelScope.launch {
+        _uiState.value = DmUiState(loading = true)
+        try {
+            myUserId = api.getMe().body()?.id ?: ""
+            _dmChannels.value = stripSelf(api.getDmChannels().body() ?: emptyList())
+            _uiState.value = DmUiState()
+        } catch (e: Exception) { _uiState.value = DmUiState(error = e.message) }
+    }
+
+    private fun collectGateway() = viewModelScope.launch {
+        gateway.events.collect { event ->
+            if (event.type == "DM_CHANNEL_CREATE") {
+                val ch = gson.fromJson(event.data.toString(), ChannelResponse::class.java)
+                if (_dmChannels.value.none { it.id == ch.id })
+                    _dmChannels.value = listOf(stripSelf(listOf(ch)).first()) + _dmChannels.value
+            }
+        }
+    }
+
+    fun openDm(recipientId: String, onSuccess: (String) -> Unit) = viewModelScope.launch {
+        try {
+            val resp = api.openDm(OpenDmRequest(recipientId))
+            if (resp.isSuccessful && resp.body() != null) {
+                val ch = resp.body()!!
+                if (_dmChannels.value.none { it.id == ch.id })
+                    _dmChannels.value = listOf(stripSelf(listOf(ch)).first()) + _dmChannels.value
+                onSuccess(ch.id)
+            } else _uiState.value = _uiState.value.copy(error = "User not found")
+        } catch (e: Exception) { _uiState.value = _uiState.value.copy(error = e.message) }
+    }
+
+    private fun stripSelf(channels: List<ChannelResponse>) =
+        channels.map { ch ->
+            ch.copy(dmParticipants = ch.dmParticipants?.filter { it.userId != myUserId })
+        }
+}
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt =====
+package com.nexus.android.ui.screens.dm
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import coil.compose.AsyncImage
+import com.nexus.android.ui.theme.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun DmListScreen(
+    onOpenDm: (String) -> Unit,
+    onBack: () -> Unit,
+    vm: DmViewModel = hiltViewModel(),
+) {
+    val dmChannels by vm.dmChannels.collectAsState()
+    val uiState    by vm.uiState.collectAsState()
+    var showNewDm  by remember { mutableStateOf(false) }
+    var newDmUser  by remember { mutableStateOf("") }
+
+    if (showNewDm) {
+        AlertDialog(
+            onDismissRequest = { showNewDm = false; newDmUser = "" },
+            title = { Text("New Message") },
+            text = {
+                OutlinedTextField(
+                    value = newDmUser, onValueChange = { newDmUser = it },
+                    placeholder = { Text("User ID", color = NexusTextMuted) }, singleLine = true,
+                    colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = NexusBlurple, unfocusedBorderColor = NexusOutline),
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    if (newDmUser.isNotBlank()) {
+                        vm.openDm(newDmUser.trim()) { onOpenDm(it) }
+                        showNewDm = false; newDmUser = ""
+                    }
+                }) { Text("Open DM", color = NexusBlurple) }
+            },
+            dismissButton = { TextButton(onClick = { showNewDm = false; newDmUser = "" }) { Text("Cancel") } },
+            containerColor = NexusDarkMedium,
+        )
+    }
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Direct Messages", fontWeight = FontWeight.Bold) },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
+                actions = { IconButton(onClick = { showNewDm = true }) { Icon(Icons.Default.Edit, "New DM", tint = NexusTextMuted) } },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
+            )
+        },
+        containerColor = NexusDark,
+    ) { padding ->
+        if (uiState.loading) {
+            Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(color = NexusBlurple)
+            }
+        } else if (dmChannels.isEmpty()) {
+            Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Icon(Icons.Default.Forum, null, tint = NexusTextMuted, modifier = Modifier.size(48.dp))
+                    Spacer(Modifier.height(12.dp))
+                    Text("No direct messages yet", color = NexusTextMuted)
+                    Spacer(Modifier.height(8.dp))
+                    TextButton(onClick = { showNewDm = true }) { Text("Start a conversation", color = NexusBlurple) }
+                }
+            }
+        } else {
+            LazyColumn(Modifier.fillMaxSize().padding(padding)) {
+                items(dmChannels, key = { it.id }) { ch ->
+                    val other = ch.dmParticipants?.firstOrNull()?.user
+                    val name  = other?.username ?: "Unknown"
+                    val statusColor = when (other?.status) {
+                        "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
+                    }
+                    Row(
+                        modifier = Modifier.fillMaxWidth().clickable { onOpenDm(ch.id) }.padding(horizontal = 16.dp, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(Modifier.size(44.dp)) {
+                            Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
+                                if (other?.avatar != null)
+                                    AsyncImage(model = other.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
+                                else
+                                    Text(name.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold)
+                            }
+                            Box(Modifier.size(13.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
+                                Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
+                            }
+                        }
+                        Spacer(Modifier.width(12.dp))
+                        Column(Modifier.weight(1f)) {
+                            Text(name, color = NexusTextPrimary, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
+                            // Fix: explicit String type so Kotlin resolves Text overload unambiguously
+                            val status: String? = other?.customStatus
+                            if (status != null) {
+                                Text(status, color = NexusTextMuted, fontSize = 12.sp, maxLines = 1)
+                            }
+                        }
+                        Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
+                    }
+                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
+                }
+            }
+        }
+    }
+}
+
+//===== FILE: app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt =====
+package com.nexus.android.ui.screens.voice
+
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
+import com.nexus.android.data.api.NexusApi
+import com.nexus.android.data.api.models.VoiceLeaveRequest
+import com.nexus.android.data.api.models.VoiceTokenRequest
+import dagger.hilt.android.lifecycle.HiltViewModel
+import io.livekit.android.LiveKit
+import io.livekit.android.events.RoomEvent
+import io.livekit.android.events.collect
+import io.livekit.android.room.Room
+import io.livekit.android.room.participant.Participant
+import io.livekit.android.room.participant.RemoteParticipant
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+data class VoiceUiState(
+    val connecting: Boolean = false,
+    val muted: Boolean = false,
+    val deafened: Boolean = false,
+    val speaking: Set<String> = emptySet(),
+    val error: String? = null,
+)
+
+@HiltViewModel
+class VoiceViewModel @Inject constructor(
+    application: Application,
+    private val api: NexusApi,
+) : AndroidViewModel(application) {
+    private val _uiState      = MutableStateFlow(VoiceUiState())
+    val uiState: StateFlow<VoiceUiState> = _uiState.asStateFlow()
+    private val _participants = MutableStateFlow<List<String>>(emptyList())
+    val participants: StateFlow<List<String>> = _participants.asStateFlow()
+    private var room: Room? = null
+
+    fun join(channelId: String) = viewModelScope.launch {
+        _uiState.value = VoiceUiState(connecting = true)
+        try {
+            val resp = api.getVoiceToken(VoiceTokenRequest(channelId))
+            if (!resp.isSuccessful || resp.body() == null) {
+                _uiState.value = VoiceUiState(error = "Failed to get voice token"); return@launch
+            }
+            val body = resp.body()!!
+            val r = LiveKit.create(getApplication())
+            room = r
+            // LiveKit 2.x: connect() is a suspend fun with no roomOptions named param
+            r.connect(body.livekitUrl, body.token)
+            r.localParticipant.setMicrophoneEnabled(true)
+            // Snapshot current remote participants (identity is Participant.Identity value class)
+            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+            _uiState.value = VoiceUiState(connecting = false)
+            // LiveKit 2.x: observe room events via Flow
+            launch {
+                r.events.collect { event ->
+                    when (event) {
+                        is RoomEvent.ParticipantConnected -> {
+                            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+                        }
+                        is RoomEvent.ParticipantDisconnected -> {
+                            _participants.value = r.remoteParticipants.values.map { it.identity.value }
+                        }
+                        is RoomEvent.ActiveSpeakersChanged -> {
+                            _uiState.value = _uiState.value.copy(
+                                speaking = event.speakers.map { it.identity.value }.toSet()
+                            )
+                        }
+                        else -> Unit
+                    }
+                }
+            }
+        } catch (e: Exception) { _uiState.value = VoiceUiState(error = "Voice error: ${e.message}") }
+    }
+
+    fun leave(channelId: String) {
+        viewModelScope.launch { try { api.leaveVoice(VoiceLeaveRequest(channelId)) } catch (_: Exception) {} }
+        room?.disconnect(); room = null
+        _uiState.value = VoiceUiState(); _participants.value = emptyList()
+    }
+
+    fun toggleMute() = viewModelScope.launch {
+        val m = !_uiState.value.muted
+        // setMicrophoneEnabled is suspend in LiveKit 2.x
+        room?.localParticipant?.setMicrophoneEnabled(!m)
+        _uiState.value = _uiState.value.copy(muted = m)
+    }
+
+    fun toggleDeafen() {
+        val d = !_uiState.value.deafened
+        // LiveKit 2.x: audioTracks replaced by getTrackPublications() or trackPublications
+        room?.remoteParticipants?.values?.forEach { p ->
+            p.audioTrackPublications.forEach { pub -> pub.track?.enabled = !d }
+        }
+        _uiState.value = _uiState.value.copy(deafened = d)
+    }
+
+    override fun onCleared() { room?.disconnect(); room = null; super.onCleared() }
+}
