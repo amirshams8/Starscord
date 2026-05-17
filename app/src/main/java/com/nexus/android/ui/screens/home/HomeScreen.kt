@@ -34,7 +34,8 @@ import com.nexus.android.ui.theme.*
 @Composable
 fun HomeScreen(
     onOpenChannel: (String, String) -> Unit,
-    onOpenVoice: (String) -> Unit,
+    // FIX: was (String) -> Unit — Voice route needs both channelId and channelName
+    onOpenVoice: (String, String) -> Unit,
     onOpenProfile: () -> Unit,
     onOpenSettings: () -> Unit,
     onOpenServerSettings: (String) -> Unit,
@@ -76,7 +77,9 @@ fun HomeScreen(
             ChannelSidebar(
                 guild           = selectedGuild!!,
                 channels        = channels,
-                onSelect        = { ch -> if (ch.type == "voice") onOpenVoice(ch.id) else onOpenChannel(ch.id, selectedGuild!!.id) },
+                // FIX: voice channels pass both id and name to onOpenVoice
+                onSelect        = { ch -> if (ch.type == "voice") onOpenVoice(ch.id, ch.name) else onOpenChannel(ch.id, selectedGuild!!.id) },
+                // FIX: leaveGuild and generateInvite now exist in HomeViewModel
                 onLeaveGuild    = { vm.leaveGuild(selectedGuild!!.id) },
                 onCreateChannel = vm::showCreateChannelDialog,
                 onInvite        = { vm.generateInvite(it) },
@@ -302,7 +305,7 @@ fun CreateGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, o
                     modifier = Modifier.fillMaxWidth().height(48.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple)) {
                     if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
-                    else Text("Create", fontWeight = FontWeight.Bold)
+                    else Text("Create Server", fontWeight = FontWeight.Bold)
                 }
             }
         }

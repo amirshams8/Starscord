@@ -72,7 +72,24 @@ private fun OverviewSubScreen(
     uiState: ServerSettingsUiState,
     vm: ServerSettingsViewModel,
 ) {
-    var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+    var name              by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
+    // FIX: delete confirm dialog must be state inside the composable, not inside onClick lambda
+    var showDeleteConfirm by remember { mutableStateOf(false) }
+
+    if (showDeleteConfirm) {
+        AlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
+            title = { Text("Delete '${guild?.name}'?") },
+            text  = { Text("This action is permanent and cannot be undone. All channels and messages will be lost.") },
+            confirmButton = {
+                TextButton(onClick = { showDeleteConfirm = false; vm.deleteGuild() }) {
+                    Text("Delete", color = NexusRed)
+                }
+            },
+            dismissButton = { TextButton(onClick = { showDeleteConfirm = false }) { Text("Cancel") } },
+        )
+    }
+
     Column(Modifier.fillMaxSize().padding(16.dp)) {
         if (uiState.error != null)
             Text(uiState.error, color = NexusRed, fontSize = 13.sp, modifier = Modifier.padding(bottom = 8.dp))
@@ -85,6 +102,7 @@ private fun OverviewSubScreen(
         )
         Spacer(Modifier.height(16.dp))
         Button(
+            // FIX: was vm.updateGuildName(name) — method renamed to match VM
             onClick = { vm.updateGuildName(name) },
             enabled = name.isNotBlank() && name != guild?.name && !uiState.loading,
             modifier = Modifier.fillMaxWidth(),
@@ -97,7 +115,9 @@ private fun OverviewSubScreen(
         Text("DANGER ZONE", color = NexusRed, fontSize = 11.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(8.dp))
         OutlinedButton(
-            onClick = vm::deleteGuild,
+            // FIX: was vm::deleteGuild method reference which didn't exist;
+            // now sets showDeleteConfirm = true so the AlertDialog above opens inside the composable context
+            onClick = { showDeleteConfirm = true },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.outlinedButtonColors(contentColor = NexusRed),
             border = androidx.compose.foundation.BorderStroke(1.dp, NexusRed),
@@ -161,7 +181,6 @@ private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleRespo
                 Spacer(Modifier.height(6.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     member.roles.take(4).forEach { roleId ->
-                        // FIX: safe let — no !! operator anywhere in role color resolution
                         val role = roleMap[roleId]
                         val rc = role?.let { r ->
                             if (r.color != 0) Color(0xFF000000 or r.color.toLong()) else NexusOutline

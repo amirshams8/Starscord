@@ -57,16 +57,34 @@ class ServerSettingsViewModel @Inject constructor(private val api: NexusApi) : V
         }
     }
 
-    fun saveGuildName(guildId: String, name: String) = viewModelScope.launch {
+    // FIX: renamed from saveGuildName(guildId, name) to updateGuildName(name).
+    // Screen calls vm.updateGuildName(name); guildId is read from internal state.
+    fun updateGuildName(name: String) = viewModelScope.launch {
+        val guildId = _guild.value?.id ?: return@launch
         if (name.isBlank()) return@launch
-        _uiState.value = _uiState.value.copy(saving = true)
+        _uiState.value = _uiState.value.copy(saving = true, error = null)
         try {
             api.updateGuild(guildId, mapOf("name" to name)).body()?.let {
                 _guild.value = it
                 _uiState.value = _uiState.value.copy(saving = false, saveSuccess = true)
+            } ?: run {
+                _uiState.value = _uiState.value.copy(saving = false, error = "Failed to save")
             }
         } catch (_: Exception) {
             _uiState.value = _uiState.value.copy(saving = false, error = "Failed to save")
+        }
+    }
+
+    // FIX: added — was called by ServerSettingsScreen but missing from ViewModel
+    fun deleteGuild() = viewModelScope.launch {
+        val guildId = _guild.value?.id ?: return@launch
+        _uiState.value = _uiState.value.copy(loading = true, error = null)
+        try {
+            api.deleteGuild(guildId)
+            // Signal success — the screen/nav should pop back on success
+            _uiState.value = _uiState.value.copy(loading = false, saveSuccess = true)
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(loading = false, error = "Failed to delete server: ${e.message}")
         }
     }
 

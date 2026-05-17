@@ -196,4 +196,37 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
             _uiState.value = _uiState.value.copy(createChannelLoading = false, error = "Network error: ${e.message}")
         }
     }
+
+    // ── Leave guild ────────────────────────────────────────────────────────────
+    // FIX: added — was called by HomeScreen but missing from ViewModel
+
+    fun leaveGuild(guildId: String) = viewModelScope.launch {
+        try {
+            api.leaveGuild(guildId)
+            _guilds.value = _guilds.value.filter { it.id != guildId }
+            if (_selectedGuild.value?.id == guildId) {
+                _selectedGuild.value = _guilds.value.firstOrNull()
+                _channels.value = emptyList()
+                _selectedGuild.value?.let { selectGuild(it) }
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Failed to leave server: ${e.message}")
+        }
+    }
+
+    // ── Generate invite ────────────────────────────────────────────────────────
+    // FIX: added — was called by HomeScreen but missing from ViewModel
+
+    fun generateInvite(channelId: String) = viewModelScope.launch {
+        try {
+            val resp = api.createInvite(channelId)
+            if (resp.isSuccessful && resp.body() != null) {
+                showInviteDialog(resp.body()!!.code)
+            } else {
+                _uiState.value = _uiState.value.copy(error = "Failed to generate invite")
+            }
+        } catch (e: Exception) {
+            _uiState.value = _uiState.value.copy(error = "Network error: ${e.message}")
+        }
+    }
 }

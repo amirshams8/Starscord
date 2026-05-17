@@ -86,6 +86,7 @@ fun NexusNavGraph() {
         composable(Screen.Home.route) {
             HomeScreen(
                 onOpenChannel        = { cId, gId -> nav.navigate(Screen.Chat.createRoute(cId, gId)) },
+                // FIX: HomeScreen.onOpenVoice is (String, String) -> Unit — pass both channelId and channelName
                 onOpenVoice          = { cId, name -> nav.navigate(Screen.Voice.createRoute(cId, name)) },
                 onOpenProfile        = { nav.navigate(Screen.Profile.route) },
                 onOpenSettings       = { nav.navigate(Screen.Settings.route) },

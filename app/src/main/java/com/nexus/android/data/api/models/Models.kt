@@ -87,14 +87,8 @@ data class ChannelResponse(
     @SerializedName("dm_participants") val dmParticipants: List<DmParticipant>? = null,
 )
 
-data class MemberResponse(
-    @SerializedName("guild_id") val guildId: String,
-    @SerializedName("user_id") val userId: String,
-    val nickname: String? = null,
-    val roles: List<String> = emptyList(),
-    @SerializedName("joined_at") val joinedAt: String,
-    val user: UserResponse? = null,
-)
+// FIX: MemberResponse removed from here — it lives in MemberResponse.kt (with nullable joinedAt).
+// Having it in both files caused a "Redeclaration" compile error.
 
 data class RoleResponse(
     val id: String,
