@@ -13,6 +13,8 @@ import io.livekit.android.events.RoomEvent
 import io.livekit.android.events.collect
 import io.livekit.android.room.Room
 import io.livekit.android.room.participant.Participant
+import io.livekit.android.room.participant.RemoteParticipant
+import io.livekit.android.room.track.RemoteTrackPublication
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -36,7 +38,6 @@ class VoiceViewModel @Inject constructor(
     val participants: StateFlow<List<String>> = _participants.asStateFlow()
     private var room: Room? = null
 
-    // identity is Participant.Identity? (nullable value class) in LiveKit 2.x
     private fun Participant.identityString(): String = identity?.value ?: ""
 
     fun join(channelId: String) = viewModelScope.launch {
@@ -88,10 +89,10 @@ class VoiceViewModel @Inject constructor(
 
     fun toggleDeafen() {
         val d = !_uiState.value.deafened
-        // audioTrackPublications returns List<TrackPublication>; track is on the publication
-        room?.remoteParticipants?.values?.forEach { p ->
-            p.audioTrackPublications.forEach { pub ->
-                pub.track?.let { it.enabled = !d }
+        // In LiveKit 2.x, set enabled on the RemoteTrackPublication directly
+        room?.remoteParticipants?.values?.forEach { p: RemoteParticipant ->
+            p.audioTrackPublications.forEach { pub: RemoteTrackPublication ->
+                pub.enabled = !d
             }
         }
         _uiState.value = _uiState.value.copy(deafened = d)
