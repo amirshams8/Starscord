@@ -35,6 +35,7 @@ FILE TREE (SELECTED FOLDERS)
 │   │   │   │   │   │   │   │   ├── AuthInterceptor.kt
 │   │   │   │   │   │   │   │   ├── DatabaseModule.kt
 │   │   │   │   │   │   │   │   ├── NetworkModule.kt
+│   │   │   │   │   │   │   │   ├── TokenRefreshAuthenticator.kt
 │   │   │   │   │   │   │   ├── service
 │   │   │   │   │   │   │   │   ├── GatewayService.kt
 │   │   │   │   │   │   │   │   ├── NotificationService.kt
@@ -872,7 +873,7 @@ class AuthInterceptor @Inject constructor(
     @ApplicationContext private val context: Context
 ) : Interceptor {
 
-    private val prefs: SharedPreferences by lazy {
+    val prefs: SharedPreferences by lazy {
         val mk = MasterKey.Builder(context)
             .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
             .build()
@@ -885,11 +886,22 @@ class AuthInterceptor @Inject constructor(
         )
     }
 
-    // Nullable setter: passing null removes the key (used by logout)
+    // Access token — attached as Bearer on every request
     var accessToken: String?
         get()  = prefs.getString("access_token", null)
         set(v) = if (v == null) prefs.edit().remove("access_token").apply()
                  else           prefs.edit().putString("access_token", v).apply()
+
+    // Refresh token — stored at login time, sent as Cookie on /auth/refresh
+    var refreshToken: String?
+        get()  = prefs.getString("refresh_token", null)
+        set(v) = if (v == null) prefs.edit().remove("refresh_token").apply()
+                 else           prefs.edit().putString("refresh_token", v).apply()
+
+    // Clear both tokens (called on logout)
+    fun clearTokens() {
+        prefs.edit().remove("access_token").remove("refresh_token").apply()
+    }
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val token = accessToken ?: return chain.proceed(chain.request())
@@ -943,19 +955,134 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
     @Provides @Singleton
-    fun provideOkHttpClient(authInterceptor: AuthInterceptor): OkHttpClient =
+    fun provideOkHttpClient(
+        authInterceptor: AuthInterceptor,
+        tokenRefreshAuthenticator: TokenRefreshAuthenticator,
+    ): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(HttpLoggingInterceptor().apply { level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE })
-            .connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+            .authenticator(tokenRefreshAuthenticator)          // <-- new: handles 401 auto-refresh
+            .addInterceptor(HttpLoggingInterceptor().apply {
+                level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
+                        else HttpLoggingInterceptor.Level.NONE
+            })
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .build()
 
     @Provides @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit =
-        Retrofit.Builder().baseUrl(BuildConfig.API_BASE_URL + "/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
+        Retrofit.Builder()
+            .baseUrl(BuildConfig.API_BASE_URL + "/")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
 
     @Provides @Singleton
     fun provideNexusApi(retrofit: Retrofit): NexusApi = retrofit.create(NexusApi::class.java)
+}
+
+
+//===== FILE: app/src/main/java/com/nexus/android/di/TokenRefreshAuthenticator.kt =====
+package com.nexus.android.di
+
+import android.util.Log
+import com.nexus.android.BuildConfig
+import okhttp3.Authenticator
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.Route
+import okhttp3.Response
+import org.json.JSONObject
+import javax.inject.Inject
+import javax.inject.Singleton
+
+/**
+ * OkHttp Authenticator — fires automatically on any 401 response.
+ *
+ * Flow:
+ *  1. Read the stored refresh token from AuthInterceptor prefs.
+ *  2. POST /v1/auth/refresh with Cookie: refresh_token=<value>
+ *  3. On success  → save new access token, retry original request once.
+ *  4. On failure  → return null (OkHttp cancels the call; app stays on
+ *                   whatever screen it was — the ViewModel error handler
+ *                   will surface "Not logged in" to the user).
+ *
+ * The @Singleton scope + `@volatile` flag prevent concurrent refreshes from
+ * hammering the backend when multiple parallel calls all get 401 at once.
+ */
+@Singleton
+class TokenRefreshAuthenticator @Inject constructor(
+    private val authInterceptor: AuthInterceptor
+) : Authenticator {
+
+    @Volatile private var isRefreshing = false
+
+    override fun authenticate(route: Route?, response: Response): Request? {
+        // Don't retry refresh calls themselves — prevents infinite loops
+        if (response.request.url.encodedPath.contains("/auth/refresh")) return null
+
+        // Only one thread should refresh at a time
+        synchronized(this) {
+            if (isRefreshing) return null
+            isRefreshing = true
+        }
+
+        return try {
+            val refreshToken = authInterceptor.refreshToken ?: run {
+                Log.w("TokenRefresh", "No refresh token stored — user must log in again")
+                return null
+            }
+
+            val refreshUrl = "${BuildConfig.API_BASE_URL}/auth/refresh"
+            Log.d("TokenRefresh", "Access token expired — attempting refresh")
+
+            // Build a plain OkHttp call (NOT Retrofit — avoids dependency cycles with NetworkModule)
+            val refreshClient = OkHttpClient()
+            val body = "{}".toRequestBody("application/json".toMediaType())
+            val refreshRequest = Request.Builder()
+                .url(refreshUrl)
+                .post(body)
+                .header("Cookie", "refresh_token=$refreshToken")
+                .build()
+
+            val refreshResponse = refreshClient.newCall(refreshRequest).execute()
+            if (!refreshResponse.isSuccessful) {
+                Log.w("TokenRefresh", "Refresh failed: ${refreshResponse.code}")
+                // Wipe both tokens so NexusNavGraph reroutes to Login on next launch
+                authInterceptor.clearTokens()
+                return null
+            }
+
+            val newToken = refreshResponse.body?.string()?.let {
+                runCatching { JSONObject(it).getString("access_token") }.getOrNull()
+            }
+
+            if (newToken == null) {
+                Log.w("TokenRefresh", "Refresh response had no access_token")
+                authInterceptor.clearTokens()
+                return null
+            }
+
+            Log.d("TokenRefresh", "Token refreshed successfully")
+            authInterceptor.accessToken = newToken
+
+            // Retry the original request with the fresh token
+            response.request.newBuilder()
+                .header("Authorization", "Bearer $newToken")
+                .build()
+
+        } catch (e: Exception) {
+            Log.e("TokenRefresh", "Exception during token refresh", e)
+            null
+        } finally {
+            isRefreshing = false
+        }
+    }
 }
 
 
@@ -1289,8 +1416,20 @@ class AuthViewModel @Inject constructor(
         try {
             val resp = api.login(LoginRequest(_state.value.email, _state.value.password))
             if (resp.isSuccessful && resp.body() != null) {
-                // Persist token in EncryptedSharedPreferences — survives restarts
+                // Save access token (used by AuthInterceptor on every request)
                 authInterceptor.accessToken = resp.body()!!.accessToken
+
+                // FIX: extract and persist the refresh_token from Set-Cookie header so
+                // TokenRefreshAuthenticator can silently renew the access token after 15 min
+                val setCookie = resp.headers().values("Set-Cookie")
+                val refreshToken = setCookie
+                    .firstOrNull { it.startsWith("refresh_token=") }
+                    ?.substringAfter("refresh_token=")
+                    ?.substringBefore(";")   // strip path/expires/etc.
+                if (refreshToken != null) {
+                    authInterceptor.refreshToken = refreshToken
+                }
+
                 _state.value = _state.value.copy(loading = false, loginSuccess = true)
             } else {
                 _state.value = _state.value.copy(loading = false, error = "Invalid email or password")
