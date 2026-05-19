@@ -51,8 +51,9 @@ fun ChannelMembersScreen(
     val online  = filtered.filter { it.user?.status != null && it.user.status != "offline" }
     val offline = filtered.filter { it.user?.status == null || it.user.status == "offline" }
 
+    // FIX: use .orEmpty() so null roles list does not throw NPE
     fun topRoleName(m: MemberResponse): String =
-        m.roles.mapNotNull { roleMap[it] }.maxByOrNull { it.position }?.name ?: "Members"
+        m.roles.orEmpty().mapNotNull { roleMap[it] }.maxByOrNull { it.position }?.name ?: "Members"
 
     val onlineGrouped = online.groupBy { topRoleName(it) }
 
@@ -62,7 +63,7 @@ fun ChannelMembersScreen(
                 title = {
                     Column {
                         Text("#$channelName", fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                        Text("${online.size} Online · ${offline.size} Offline", color = NexusTextMuted, fontSize = 11.sp)
+                        Text("${online.size} Online - ${offline.size} Offline", color = NexusTextMuted, fontSize = 11.sp)
                     }
                 },
                 navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
@@ -87,7 +88,7 @@ fun ChannelMembersScreen(
             LazyColumn(Modifier.fillMaxSize()) {
                 onlineGrouped.forEach { (roleName, groupMembers) ->
                     item {
-                        Text("${roleName.uppercase()} — ${groupMembers.size}",
+                        Text("${roleName.uppercase()} -- ${groupMembers.size}",
                             color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
                     }
@@ -97,7 +98,7 @@ fun ChannelMembersScreen(
                 }
                 if (offline.isNotEmpty()) {
                     item {
-                        Text("OFFLINE — ${offline.size}",
+                        Text("OFFLINE -- ${offline.size}",
                             color = NexusTextMuted, fontSize = 11.sp, fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
                     }
@@ -116,11 +117,13 @@ private fun ChannelMemberRow(member: MemberResponse, roleMap: Map<String, RoleRe
     val statusColor = when (member.user?.status) {
         "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
     }
-    // FIX: safe let chain — no !! operator; role lookup from map is nullable so must use let
-    val topRoleColor = member.roles
+    // FIX: .orEmpty() guards against null roles; mask color bits to avoid Color() IAE on negative ints
+    val topRoleColor = member.roles.orEmpty()
         .mapNotNull { roleMap[it] }
         .maxByOrNull { it.position }
-        ?.let { role -> if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else null }
+        ?.let { role ->
+            if (role.color != 0) Color(0xFF000000L or (role.color.toLong() and 0x00FFFFFFL)) else null
+        }
 
     Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
         Box(Modifier.size(40.dp)) {

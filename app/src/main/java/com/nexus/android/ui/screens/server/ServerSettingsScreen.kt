@@ -73,7 +73,6 @@ private fun OverviewSubScreen(
     vm: ServerSettingsViewModel,
 ) {
     var name              by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
-    // FIX: delete confirm dialog must be state inside the composable, not inside onClick lambda
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
     if (showDeleteConfirm) {
@@ -102,7 +101,6 @@ private fun OverviewSubScreen(
         )
         Spacer(Modifier.height(16.dp))
         Button(
-            // FIX: was vm.updateGuildName(name) — method renamed to match VM
             onClick = { vm.updateGuildName(name) },
             enabled = name.isNotBlank() && name != guild?.name && !uiState.loading,
             modifier = Modifier.fillMaxWidth(),
@@ -115,8 +113,6 @@ private fun OverviewSubScreen(
         Text("DANGER ZONE", color = NexusRed, fontSize = 11.sp, fontWeight = FontWeight.Bold)
         Spacer(Modifier.height(8.dp))
         OutlinedButton(
-            // FIX: was vm::deleteGuild method reference which didn't exist;
-            // now sets showDeleteConfirm = true so the AlertDialog above opens inside the composable context
             onClick = { showDeleteConfirm = true },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.outlinedButtonColors(contentColor = NexusRed),
@@ -177,13 +173,16 @@ private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleRespo
         Column(Modifier.weight(1f)) {
             Text(displayName, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
             member.user?.let { Text("${it.username}#${it.discriminator}", color = NexusTextMuted, fontSize = 12.sp) }
-            if (member.roles.isNotEmpty()) {
+            // FIX: .orEmpty() -- member.roles is nullable after Gson deserialization (NPE was the crash)
+            val memberRoles = member.roles.orEmpty()
+            if (memberRoles.isNotEmpty()) {
                 Spacer(Modifier.height(6.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    member.roles.take(4).forEach { roleId ->
+                    memberRoles.take(4).forEach { roleId ->
                         val role = roleMap[roleId]
                         val rc = role?.let { r ->
-                            if (r.color != 0) Color(0xFF000000 or r.color.toLong()) else NexusOutline
+                            // FIX: mask to 24-bit before OR with alpha to prevent Color() IAE on negative ints
+                            if (r.color != 0) Color(0xFF000000L or (r.color.toLong() and 0x00FFFFFFL)) else NexusOutline
                         } ?: NexusOutline
                         Surface(shape = RoundedCornerShape(4.dp), color = rc.copy(alpha = 0.2f)) {
                             Row(Modifier.padding(horizontal = 6.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -193,7 +192,7 @@ private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleRespo
                             }
                         }
                     }
-                    if (member.roles.size > 4) Text("+${member.roles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
+                    if (memberRoles.size > 4) Text("+${memberRoles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
                 }
             }
         }
@@ -223,7 +222,8 @@ private fun RolesSubScreen(roles: List<RoleResponse>) {
         )
         LazyColumn(Modifier.fillMaxSize()) {
             items(rest, key = { it.id }) { role ->
-                val rc = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
+                // FIX: mask color to 24-bit before OR-ing with alpha to prevent Color() IAE
+                val rc = if (role.color != 0) Color(0xFF000000L or (role.color.toLong() and 0x00FFFFFFL)) else NexusTextMuted
                 Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
                     Box(Modifier.size(16.dp).clip(CircleShape).background(rc))
                     Spacer(Modifier.width(12.dp))
