@@ -16,16 +16,30 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
+
     @Provides @Singleton
-    fun provideOkHttpClient(authInterceptor: AuthInterceptor): OkHttpClient =
+    fun provideOkHttpClient(
+        authInterceptor: AuthInterceptor,
+        tokenRefreshAuthenticator: TokenRefreshAuthenticator,
+    ): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(HttpLoggingInterceptor().apply { level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE })
-            .connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+            .authenticator(tokenRefreshAuthenticator)          // <-- new: handles 401 auto-refresh
+            .addInterceptor(HttpLoggingInterceptor().apply {
+                level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY
+                        else HttpLoggingInterceptor.Level.NONE
+            })
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .build()
 
     @Provides @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit =
-        Retrofit.Builder().baseUrl(BuildConfig.API_BASE_URL + "/").client(client).addConverterFactory(GsonConverterFactory.create()).build()
+        Retrofit.Builder()
+            .baseUrl(BuildConfig.API_BASE_URL + "/")
+            .client(client)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
 
     @Provides @Singleton
     fun provideNexusApi(retrofit: Retrofit): NexusApi = retrofit.create(NexusApi::class.java)

@@ -15,7 +15,7 @@ class AuthInterceptor @Inject constructor(
     @ApplicationContext private val context: Context
 ) : Interceptor {
 
-    private val prefs: SharedPreferences by lazy {
+    val prefs: SharedPreferences by lazy {
         val mk = MasterKey.Builder(context)
             .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
             .build()
@@ -28,11 +28,22 @@ class AuthInterceptor @Inject constructor(
         )
     }
 
-    // Nullable setter: passing null removes the key (used by logout)
+    // Access token — attached as Bearer on every request
     var accessToken: String?
         get()  = prefs.getString("access_token", null)
         set(v) = if (v == null) prefs.edit().remove("access_token").apply()
                  else           prefs.edit().putString("access_token", v).apply()
+
+    // Refresh token — stored at login time, sent as Cookie on /auth/refresh
+    var refreshToken: String?
+        get()  = prefs.getString("refresh_token", null)
+        set(v) = if (v == null) prefs.edit().remove("refresh_token").apply()
+                 else           prefs.edit().putString("refresh_token", v).apply()
+
+    // Clear both tokens (called on logout)
+    fun clearTokens() {
+        prefs.edit().remove("access_token").remove("refresh_token").apply()
+    }
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val token = accessToken ?: return chain.proceed(chain.request())

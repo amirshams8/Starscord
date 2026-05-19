@@ -41,8 +41,20 @@ class AuthViewModel @Inject constructor(
         try {
             val resp = api.login(LoginRequest(_state.value.email, _state.value.password))
             if (resp.isSuccessful && resp.body() != null) {
-                // Persist token in EncryptedSharedPreferences — survives restarts
+                // Save access token (used by AuthInterceptor on every request)
                 authInterceptor.accessToken = resp.body()!!.accessToken
+
+                // FIX: extract and persist the refresh_token from Set-Cookie header so
+                // TokenRefreshAuthenticator can silently renew the access token after 15 min
+                val setCookie = resp.headers().values("Set-Cookie")
+                val refreshToken = setCookie
+                    .firstOrNull { it.startsWith("refresh_token=") }
+                    ?.substringAfter("refresh_token=")
+                    ?.substringBefore(";")   // strip path/expires/etc.
+                if (refreshToken != null) {
+                    authInterceptor.refreshToken = refreshToken
+                }
+
                 _state.value = _state.value.copy(loading = false, loginSuccess = true)
             } else {
                 _state.value = _state.value.copy(loading = false, error = "Invalid email or password")
