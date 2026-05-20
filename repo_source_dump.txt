@@ -2638,9 +2638,22 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         try {
             val guilds = api.getMyGuilds().body() ?: emptyList()
             _guilds.value = guilds
-            // FIX: auto-select first guild on cold start so channels load without requiring a tap
+
+            // FIX: getMyGuilds() returns full guild objects with channels already embedded
+            // (backend does include: { channels: { orderBy: [{ position: 'asc' }] } }).
+            // Previously, selectGuild() was called here which immediately wiped _channels to
+            // emptyList() then fired a SECOND api.getGuild() call. If that second call failed
+            // for any reason (network blip, exception) the silent catch(_: Exception){} meant
+            // channels stayed empty forever with no error and no retry — the channels disappear
+            // on every app restart bug.
+            //
+            // Fix: on cold start, seed selectedGuild and channels directly from the already-loaded
+            // getMyGuilds() response. No second network call needed. selectGuild() is still used
+            // for user-initiated guild switches (tap in ServerRail) where a fresh fetch is correct.
             if (guilds.isNotEmpty() && _selectedGuild.value == null) {
-                selectGuild(guilds.first())
+                val first = guilds.first()
+                _selectedGuild.value = first
+                _channels.value = first.channels ?: emptyList()
             }
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(error = "Failed to load servers")
@@ -2649,15 +2662,23 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         }
     }
 
+    // Called when the user taps a guild in ServerRail. Seeding channels from the already-loaded
+    // guild object gives instant visual feedback; the api.getGuild() refresh then updates with
+    // any server-side changes (new channels, reordering, etc.).
     fun selectGuild(guild: GuildResponse) = viewModelScope.launch {
         _selectedGuild.value = guild
-        _channels.value = emptyList()
+        // Seed immediately from the cached guild object so channels never flash empty on tap
+        _channels.value = guild.channels ?: emptyList()
         try {
-            api.getGuild(guild.id).body()?.let {
-                _selectedGuild.value = it
-                _channels.value = it.channels ?: emptyList()
+            val fresh = api.getGuild(guild.id).body()
+            if (fresh != null) {
+                _selectedGuild.value = fresh
+                _channels.value = fresh.channels ?: emptyList()
             }
-        } catch (_: Exception) {}
+            // If the call fails (non-2xx), we already have the cached channels showing — no wipe
+        } catch (_: Exception) {
+            // Network error on refresh — cached channels remain visible, no crash, no blank screen
+        }
     }
 
     // ── Create guild ───────────────────────────────────────────────────────────
@@ -2773,16 +2794,16 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
     }
 
     // ── Leave guild ────────────────────────────────────────────────────────────
-    // FIX: added — was called by HomeScreen but missing from ViewModel
 
     fun leaveGuild(guildId: String) = viewModelScope.launch {
         try {
             api.leaveGuild(guildId)
             _guilds.value = _guilds.value.filter { it.id != guildId }
             if (_selectedGuild.value?.id == guildId) {
-                _selectedGuild.value = _guilds.value.firstOrNull()
-                _channels.value = emptyList()
-                _selectedGuild.value?.let { selectGuild(it) }
+                val next = _guilds.value.firstOrNull()
+                _selectedGuild.value = next
+                _channels.value = next?.channels ?: emptyList()
+                next?.let { selectGuild(it) }
             }
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(error = "Failed to leave server: ${e.message}")
@@ -2790,7 +2811,6 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
     }
 
     // ── Generate invite ────────────────────────────────────────────────────────
-    // FIX: added — was called by HomeScreen but missing from ViewModel
 
     fun generateInvite(channelId: String) = viewModelScope.launch {
         try {
