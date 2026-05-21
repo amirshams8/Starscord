@@ -1,5 +1,6 @@
 package com.nexus.android.ui.screens.home
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nexus.android.data.api.NexusApi
@@ -14,6 +15,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.json.JSONObject
 import javax.inject.Inject
+
+private const val TAG = "HomeViewModel"
 
 data class HomeUiState(
     val loading: Boolean = false,
@@ -59,50 +62,67 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
     // ── Guild loading ──────────────────────────────────────────────────────────
 
     fun loadGuilds() = viewModelScope.launch {
+        Log.d(TAG, "loadGuilds() called")
         _uiState.value = _uiState.value.copy(loading = true, error = null)
         try {
-            val guilds = api.getMyGuilds().body() ?: emptyList()
+            val response = api.getMyGuilds()
+            Log.d(TAG, "getMyGuilds() HTTP ${response.code()} isSuccessful=${response.isSuccessful}")
+
+            if (!response.isSuccessful) {
+                Log.e(TAG, "getMyGuilds() failed: code=${response.code()} error=${response.errorBody()?.string()}")
+                _uiState.value = _uiState.value.copy(loading = false, error = "Failed to load servers (${response.code()})")
+                return@launch
+            }
+
+            val guilds = response.body() ?: emptyList()
+            Log.d(TAG, "getMyGuilds() parsed: guilds.size=${guilds.size}")
+
+            guilds.forEachIndexed { i, g ->
+                Log.d(TAG, "  guild[$i] id=${g.id} name='${g.name}' channels=${g.channels?.size ?: "NULL"} roles=${g.roles?.size ?: "NULL"}")
+                g.channels?.forEachIndexed { ci, ch ->
+                    Log.d(TAG, "    channel[$ci] id=${ch.id} name='${ch.name}' type=${ch.type}")
+                }
+            }
+
             _guilds.value = guilds
 
-            // FIX: getMyGuilds() returns full guild objects with channels already embedded
-            // (backend does include: { channels: { orderBy: [{ position: 'asc' }] } }).
-            // Previously, selectGuild() was called here which immediately wiped _channels to
-            // emptyList() then fired a SECOND api.getGuild() call. If that second call failed
-            // for any reason (network blip, exception) the silent catch(_: Exception){} meant
-            // channels stayed empty forever with no error and no retry — the channels disappear
-            // on every app restart bug.
-            //
-            // Fix: on cold start, seed selectedGuild and channels directly from the already-loaded
-            // getMyGuilds() response. No second network call needed. selectGuild() is still used
-            // for user-initiated guild switches (tap in ServerRail) where a fresh fetch is correct.
             if (guilds.isNotEmpty() && _selectedGuild.value == null) {
                 val first = guilds.first()
+                Log.d(TAG, "auto-selecting guild '${first.name}' channels=${first.channels?.size ?: "NULL"}")
                 _selectedGuild.value = first
                 _channels.value = first.channels ?: emptyList()
+                Log.d(TAG, "_channels set to ${_channels.value.size} items from getMyGuilds() response")
+            } else {
+                Log.d(TAG, "skipping auto-select: guilds.isEmpty=${guilds.isEmpty()} selectedGuild=${_selectedGuild.value?.name}")
             }
         } catch (e: Exception) {
+            Log.e(TAG, "loadGuilds() exception: ${e::class.simpleName}: ${e.message}", e)
             _uiState.value = _uiState.value.copy(error = "Failed to load servers")
         } finally {
             _uiState.value = _uiState.value.copy(loading = false)
         }
     }
 
-    // Called when the user taps a guild in ServerRail. Seeding channels from the already-loaded
-    // guild object gives instant visual feedback; the api.getGuild() refresh then updates with
-    // any server-side changes (new channels, reordering, etc.).
     fun selectGuild(guild: GuildResponse) = viewModelScope.launch {
+        Log.d(TAG, "selectGuild() called: id=${guild.id} name='${guild.name}' cached_channels=${guild.channels?.size ?: "NULL"}")
         _selectedGuild.value = guild
-        // Seed immediately from the cached guild object so channels never flash empty on tap
+        // seed immediately from cached guild so channels never flash empty
         _channels.value = guild.channels ?: emptyList()
+        Log.d(TAG, "_channels seeded from cache: ${_channels.value.size} items")
         try {
-            val fresh = api.getGuild(guild.id).body()
+            val response = api.getGuild(guild.id)
+            Log.d(TAG, "getGuild() HTTP ${response.code()} isSuccessful=${response.isSuccessful}")
+            val fresh = response.body()
             if (fresh != null) {
+                Log.d(TAG, "getGuild() fresh: channels=${fresh.channels?.size ?: "NULL"}")
                 _selectedGuild.value = fresh
                 _channels.value = fresh.channels ?: emptyList()
+                Log.d(TAG, "_channels updated from getGuild(): ${_channels.value.size} items")
+            } else {
+                Log.w(TAG, "getGuild() body was null — keeping cached channels (${_channels.value.size} items)")
             }
-            // If the call fails (non-2xx), we already have the cached channels showing — no wipe
-        } catch (_: Exception) {
-            // Network error on refresh — cached channels remain visible, no crash, no blank screen
+        } catch (e: Exception) {
+            Log.e(TAG, "getGuild() exception (cached channels kept): ${e::class.simpleName}: ${e.message}")
         }
     }
 
@@ -120,6 +140,7 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         _uiState.value = _uiState.value.copy(createGuildLoading = true, error = null)
         try {
             val resp = api.createGuild(CreateGuildRequest(name.trim()))
+            Log.d(TAG, "createGuild() HTTP ${resp.code()}")
             if (resp.isSuccessful && resp.body() != null) {
                 val newGuild = resp.body()!!
                 _guilds.value = _guilds.value + newGuild
@@ -166,6 +187,7 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         _uiState.value = _uiState.value.copy(loading = true, error = null)
         try {
             val resp = api.useInvite(cleanCode)
+            Log.d(TAG, "joinGuildByInvite() HTTP ${resp.code()}")
             if (resp.isSuccessful && resp.body() != null) {
                 val guild = resp.body()!!
                 if (_guilds.value.none { it.id == guild.id }) _guilds.value = _guilds.value + guild
@@ -200,6 +222,7 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
         _uiState.value = _uiState.value.copy(createChannelLoading = true, error = null)
         try {
             val resp = api.createChannel(guildId, CreateChannelRequest(name.trim(), type, parentId))
+            Log.d(TAG, "createChannel() HTTP ${resp.code()}")
             if (resp.isSuccessful && resp.body() != null) {
                 val ch = resp.body()!!
                 _channels.value = _channels.value + ch
@@ -221,6 +244,7 @@ class HomeViewModel @Inject constructor(private val api: NexusApi) : ViewModel()
     // ── Leave guild ────────────────────────────────────────────────────────────
 
     fun leaveGuild(guildId: String) = viewModelScope.launch {
+        Log.d(TAG, "leaveGuild() id=$guildId")
         try {
             api.leaveGuild(guildId)
             _guilds.value = _guilds.value.filter { it.id != guildId }
