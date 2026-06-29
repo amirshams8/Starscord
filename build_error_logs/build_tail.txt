@@ -1,15 +1,26 @@
   Build cache is disabled
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/16991580d2461051e3fd7e88a13eefd9/transformed/jetified-gson-2.11.0.jar because:
   Build cache is disabled
+<<<<<<< Updated upstream
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/b078a9b465fdfc1e8a3297277a2488b4/transformed/jetified-annotations-23.0.0.jar because:
   Build cache is disabled
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/96c525f237168f2afa3631130285e5f5/transformed/jetified-hilt-core-2.51.jar because:
   Build cache is disabled
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/76db5fbc96c8542ab9ff7c64579b5e52/transformed/jetified-dagger-2.51.jar because:
+=======
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/96c525f237168f2afa3631130285e5f5/transformed/jetified-hilt-core-2.51.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/b078a9b465fdfc1e8a3297277a2488b4/transformed/jetified-annotations-23.0.0.jar because:
+>>>>>>> Stashed changes
   Build cache is disabled
 Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/859bc6cdf9a9896f02c7847571662106/transformed/jetified-dagger-lint-aar-2.51 because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
+=======
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/76db5fbc96c8542ab9ff7c64579b5e52/transformed/jetified-dagger-2.51.jar because:
+  Build cache is disabled
+>>>>>>> Stashed changes
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/3b7f70850404e4b278d16b698aa36d3f/transformed/jetified-jsr305-3.0.2.jar because:
   Build cache is disabled
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/a36471bf394d061656f2d2f3c74bb289/transformed/jetified-firebase-annotations-16.2.0.jar because:
@@ -30,6 +41,7 @@ Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transf
 Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c643e2e2468372b710cf72fecaaf724f/transformed/jetified-timber-4.7.0 because:
   Build cache is disabled
   Caching not enabled.
+<<<<<<< Updated upstream
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/459cf56a463aee289fcff71b8ab6ca60/transformed/jetified-guava-32.1.3-android.jar because:
   Build cache is disabled
 Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/ee42341e821528ba8816dd647f502cf2/transformed/jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
@@ -40,6 +52,18 @@ Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/08
   Build cache is disabled
   Caching not enabled.
 Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/e25441b79d2f97a23382595869c6325a/transformed/jetified-hilt-navigation-1.2.0 because:
+=======
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/ee42341e821528ba8816dd647f502cf2/transformed/jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/459cf56a463aee289fcff71b8ab6ca60/transformed/jetified-guava-32.1.3-android.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/4b6d9bbc1ff64e7e0a378e3846c74988/transformed/jetified-failureaccess-1.0.1.jar because:
+  Build cache is disabled
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/e093cd1120eebd19048f1191f8e78d2e/transformed/navigation-runtime-2.7.7 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/08281efe7ab4004cb6363115cdcaad6a/transformed/navigation-common-2.7.7 because:
+>>>>>>> Stashed changes
   Build cache is disabled
   Caching not enabled.
 Caching disabled for task ':app:mergeDebugNativeLibs' because:
@@ -55,10 +79,17 @@ Caching disabled for task ':app:validateSigningDebug' because:
 Task ':app:validateSigningDebug' is not up-to-date because:
   Task.upToDateWhen is false.
 Creating default debug keystore at /home/runner/.config/.android/debug.keystore
+<<<<<<< Updated upstream
 Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
 :app:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
 Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
 :app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
+=======
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker,5,main]) started.
+:app:writeDebugAppMetadata (Thread[Execution worker,5,main]) started.
+>>>>>>> Stashed changes
 
 > Task :app:writeDebugAppMetadata
 Caching disabled for task ':app:writeDebugAppMetadata' because:
@@ -66,8 +97,13 @@ Caching disabled for task ':app:writeDebugAppMetadata' because:
   Caching has been disabled for the task
 Task ':app:writeDebugAppMetadata' is not up-to-date because:
   No history is available.
+<<<<<<< Updated upstream
 Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
 :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
+=======
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[Execution worker,5,main]) started.
+>>>>>>> Stashed changes
 
 > Task :app:writeDebugSigningConfigVersions
 Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
@@ -148,7 +184,11 @@ C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignor
 C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
 Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
 Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so, liblkjingle_peerconnection_so.so.
+<<<<<<< Updated upstream
 Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+=======
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
+>>>>>>> Stashed changes
 :app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
 
 > Task :app:compileDebugKotlin
@@ -996,5 +1036,9 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
+<<<<<<< Updated upstream
 BUILD FAILED in 3m 38s
+=======
+BUILD FAILED in 4m 2s
+>>>>>>> Stashed changes
 33 actionable tasks: 33 executed
