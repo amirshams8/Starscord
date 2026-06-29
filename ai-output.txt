@@ -1,679 +1,2109 @@
-//===== FILE: README.md =====
+//===== FILE: modules/core/src/main/kotlin/com/checkmate/core/AppUsageTracker.kt =====
+package com.checkmate.core
 
-# ♟️ Checkmate
+import android.app.AppOpsManager
+import android.app.usage.UsageStatsManager
+import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
+import android.os.Process
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
-> **AI-powered accountability app for JEE / NEET / CUET aspirants.**  
-> Not another study timer. Actual crack-the-exam intelligence.
+/** One app's foreground time for a given window (today, by default). */
+data class AppUsageEntry(
+    val packageName: String,
+    val label: String,
+    val foregroundMillis: Long
+)
 
----
+/** Total foreground screen time for a single day, used for the weekly history chart. */
+data class DailyScreenTime(
+    val dayLabel: String,
+    val totalMillis: Long
+)
 
-## 📲 Download
+/**
+ * AppUsageTracker — Digital-Wellbeing-style on-device usage stats reader.
+ *
+ * Backed by UsageStatsManager. Requires the user to grant "Usage access" in
+ * Settings → Apps → Special app access → Usage access — this is a protected
+ * permission (PACKAGE_USAGE_STATS is already declared in the manifest) and
+ * cannot be granted via a normal runtime permission dialog, only via that
+ * settings screen (see SettingsScreen's "Usage Access" tile).
+ *
+ * All reads are local — nothing here talks to the network. GuardianNotifier
+ * uses buildUsageReportText() to push a text summary to the guardian via
+ * Telegram/WhatsApp.
+ */
+object AppUsageTracker {
 
-| Version | Link |
-|---|---|
-| Latest APK | **[⬇ Download Checkmate.apk](https://github.com/your-username/checkmate/releases/latest)** |
-| Release Notes | [Changelog](https://github.com/your-username/checkmate/releases) |
-
-> **Android 8.0+** required. Enable "Install from unknown sources" before installing.
-
----
-
-## What is Checkmate?
-
-Most study apps give you a timer and call it productivity. Checkmate is different — it knows **who you are**, **what exam you're preparing for**, **which topics you're weak in**, **when your coaching tests are**, and generates a **specific, reasoned daily plan** around all of it.
-
-It also makes sure you actually execute that plan — with a floating attention bar, distraction blocking, WhatsApp guardian reports, and an AI mentor that gives real feedback, not generic motivation.
-
----
-
-## ✨ Features
-
-### 🧠 Adaptive AI Planner
-- Generates topic-specific tasks, not vague ones ("Torque — coaching test in 2 days, PYQ 6.2%, you marked weak")
-- Powered by Groq (LLaMA 3.1) with rule-based fallback — works even offline
-- Driven by your full profile: exam target, score gap, weak topics, stress level, available hours
-- Brings in your coaching test schedule, daily topic check-in, and past behavior
-
-### 👤 Student Consultation Profile
-- One-time setup: exam, exam date, class, coaching name, target score, mock scores, weak subjects/topics, sleep hours, stress level, blocked time slots
-- Drives every decision the planner makes — nothing is generic
-
-### 📅 Daily Check-In
-- Every morning: select today's topics from the official NTA syllabus (JEE / NEET / CUET)
-- Rate yesterday's sessions, log your stress and sleep
-- Resets at 3 AM, feeds directly into today's plan generation
-
-### 📋 Coaching Schedule Upload
-- Paste or type your coaching test + lecture schedule
-- Groq extracts a structured schedule — upcoming tests, subjects, chapters
-- Planner always knows what's coming in the next 7 days
-
-### ⏱️ Attention Cycle System
-- 30-min focus → 5-min break → 10-min long break
-- Floating overlay bar with phase timer and confirm button
-- **Pause / Resume** support — tracks real focus time, not wall clock time
-- Stats show actual focus time, pause count, pause rate (fatigue signals)
-
-### 🚫 WorkMode (Distraction Blocker)
-- Blocks selected apps during study sessions
-- Accessibility service-based — no root needed
-
-### 💬 WhatsApp Guardian Reports
-- Sends study session summaries to a parent/guardian via WhatsApp
-- Runs in an isolated process — survives even if main app is killed
-
-### 🤖 Mentor AI
-- Chat interface with a mentor that knows your full situation
-- Injected with: your profile, behavior ledger, PYQ weightage, exam strategy
-- Gives specific, curriculum-aware guidance — not motivational quotes
-- Knows JEE/NEET chapter difficulty, common misconceptions, spaced repetition strategy, burnout recovery
-
-### 📊 Stats & Behavior Ledger
-- Tracks skip rate, streak, attention cycles, pause patterns
-- Behavior data feeds back into planner and mentor for personalized adjustments
-
-### 🔊 Voice Feedback (TTS)
-- Android TTS built-in, ElevenLabs as optional upgrade
-- Planner speaks plan summary after generation
-- Configurable via settings toggle
-
-### 🔑 BYOK (Bring Your Own Key)
-- Multi-provider LLM support: Groq, OpenRouter, Claude, Gemini
-- You control your API keys — no subscription, no data sent to our servers
-
----
-
-## 🏗️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Language | Kotlin 1.9.22 |
-| UI | Jetpack Compose |
-| Architecture | Multi-module (core / planner / psyche / automation / callhandler) |
-| Database | Room |
-| LLM | Groq (LLaMA 3.1) · OpenRouter · Gemini · Claude |
-| TTS | Android TTS · ElevenLabs (optional) |
-| Build | AGP 8.2.2 · Gradle 8.4 · JDK 17 |
-
----
-
-## 📁 Module Structure
-
-```
-checkmate/
-├── app/                    # Main app, UI, services
-│   ├── ui/home/            # Today screen, task cards
-│   ├── ui/planner/         # Plan generation, daily check-in, coaching schedule
-│   ├── ui/mentor/          # AI mentor chat
-│   ├── ui/consultation/    # Student profile setup
-│   ├── ui/stats/           # Focus stats
-│   ├── service/            # AttentionCycle, FloatingBar, WhatsApp reporter
-│   └── automation/         # WorkMode distraction blocker
-├── modules/
-│   ├── core/               # LLM gateway, ConsultationProfile, ExamSyllabus, MentorKnowledge
-│   ├── planner/            # AdaptivePlanner, StudyTask, BehaviorLedger
-│   ├── psyche/             # PsycheEngine behavioral tracking
-│   ├── automation/         # App blocking engine
-│   └── callhandler/        # Call management during sessions
-```
-
----
-
-## 🚀 Build from Source
-
-**Prerequisites:** Android Studio Hedgehog+, JDK 17, Android SDK 34
-
-```bash
-git clone https://github.com/your-username/checkmate.git
-cd checkmate
-./gradlew assembleDebug
-```
-
-APK will be at `app/build/outputs/apk/debug/app-debug.apk`
-
-**Add your API key** in Settings → LLM Provider after first launch.
-
----
-
-## ⚙️ Permissions Required
-
-| Permission | Why |
-|---|---|
-| Accessibility Service | WorkMode distraction blocking |
-| Notification Listener | WhatsApp guardian reports (isolated process) |
-| Draw Over Other Apps | Floating attention bar |
-| Foreground Service | Attention cycle timer |
-
----
-
-## 🗺️ Roadmap
-
-- [x] Adaptive AI planner with full student context
-- [x] Pause/Resume with real focus time tracking
-- [x] Coaching schedule upload + Groq extraction
-- [x] Daily NTA syllabus check-in
-- [x] AI Mentor screen
-- [x] WhatsApp guardian reports
-- [ ] Timeline view (study blocks on day strip)
-- [ ] Offline on-device LLM fallback
-- [ ] iOS port
-
----
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE)
-
----
-
-*Built for JEE / NEET / CUET aspirants who are serious about execution.*
-
-//===== FILE: index.html =====
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Checkmate — Crack the Exam</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0a0a0a;
-      --surface: #111111;
-      --border: #1e1e1e;
-      --accent: #e8ff47;
-      --accent2: #ff4747;
-      --text: #f0f0f0;
-      --muted: #666;
-      --mono: 'Space Mono', monospace;
-      --display: 'Bebas Neue', sans-serif;
-      --body: 'DM Sans', sans-serif;
+    /** True once the user has granted Usage Access for this app. */
+    fun hasUsageAccess(context: Context): Boolean {
+        val appOps = context.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
+        val mode = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            appOps.unsafeCheckOpNoThrow(
+                AppOpsManager.OPSTR_GET_USAGE_STATS, Process.myUid(), context.packageName
+            )
+        } else {
+            @Suppress("DEPRECATION")
+            appOps.checkOpNoThrow(
+                AppOpsManager.OPSTR_GET_USAGE_STATS, Process.myUid(), context.packageName
+            )
+        }
+        return mode == AppOpsManager.MODE_ALLOWED
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--body);
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 999;
-      opacity: 0.4;
-    }
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 2.5rem;
-      background: rgba(10,10,10,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo { font-family: var(--display); font-size: 1.8rem; letter-spacing: 2px; color: var(--accent); }
-    .nav-logo span { color: var(--text); }
-    nav a { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
-    nav a:hover { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; }
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 8rem 2.5rem 5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-grid {
-      position: absolute; inset: 0;
-      background-image:
-        linear-gradient(rgba(232,255,71,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(232,255,71,0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .hero-glow {
-      position: absolute; top: -20%; right: -10%;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(232,255,71,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-glow2 {
-      position: absolute; bottom: 10%; left: -15%;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(255,71,71,0.04) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-tag {
-      font-family: var(--mono); font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 1.5rem;
-      opacity: 0; animation: fadeUp 0.8s 0.2s ease forwards;
-    }
-    .hero-title {
-      font-family: var(--display);
-      font-size: clamp(4.5rem, 12vw, 11rem);
-      line-height: 0.9; letter-spacing: 4px; margin-bottom: 2.5rem;
-      opacity: 0; animation: fadeUp 0.8s 0.4s ease forwards;
-    }
-    .hero-title .accent { color: var(--accent); }
-    .hero-title .dim { color: #333; }
-    .hero-sub {
-      max-width: 560px; font-size: 1.1rem; font-weight: 300; color: #aaa;
-      line-height: 1.8; margin-bottom: 3rem;
-      opacity: 0; animation: fadeUp 0.8s 0.6s ease forwards;
-    }
-    .hero-actions {
-      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
-      opacity: 0; animation: fadeUp 0.8s 0.8s ease forwards;
-    }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      background: var(--accent); color: #000;
-      font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      padding: 1rem 2rem; text-decoration: none; border: none; cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,255,71,0.25); }
-    .btn-secondary {
-      font-family: var(--mono); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--muted); text-decoration: none;
-      border-bottom: 1px solid var(--border); padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
-    .hero-stats {
-      position: absolute; right: 2.5rem; bottom: 5rem;
-      display: flex; flex-direction: column; gap: 2rem;
-      opacity: 0; animation: fadeIn 1s 1.2s ease forwards;
-    }
-    .hero-stat { text-align: right; }
-    .hero-stat-num { font-family: var(--display); font-size: 2.5rem; color: var(--accent); line-height: 1; }
-    .hero-stat-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-    .marquee-wrap {
-      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-      overflow: hidden; padding: 0.8rem 0; background: var(--surface);
-    }
-    .marquee-track {
-      display: flex; gap: 3rem; white-space: nowrap;
-      animation: marquee 22s linear infinite;
-    }
-    .marquee-item { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); flex-shrink: 0; }
-    .marquee-item .dot { color: var(--accent); margin-right: 3rem; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    section { padding: 7rem 2.5rem; max-width: 1200px; margin: 0 auto; }
-    .section-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-    .section-title { font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: 2px; line-height: 1; margin-bottom: 1.5rem; }
-    .section-desc { color: var(--muted); font-weight: 300; max-width: 480px; font-size: 1rem; line-height: 1.9; }
-    .features-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; border: 1px solid var(--border); background: var(--border); }
-    .feature-card {
-      background: var(--bg); padding: 2.5rem;
-      transition: background 0.3s; position: relative; overflow: hidden;
-    }
-    .feature-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
-    }
-    .feature-card:hover { background: var(--surface); }
-    .feature-card:hover::before { transform: scaleX(1); }
-    .feature-icon { font-size: 1.8rem; margin-bottom: 1.2rem; display: block; }
-    .feature-title { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text); margin-bottom: 0.8rem; }
-    .feature-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
-    .feature-desc strong { color: var(--accent); font-weight: 400; }
-    .example-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .example-section section { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .task-card-demo { background: var(--bg); border: 1px solid var(--border); padding: 2rem; position: relative; }
-    .task-card-demo::after {
-      content: 'ACTIVE'; position: absolute; top: 1rem; right: 1rem;
-      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 2px;
-      color: var(--accent); border: 1px solid var(--accent); padding: 0.2rem 0.5rem;
-    }
-    .task-subject { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-    .task-title { font-size: 1.15rem; font-weight: 500; margin-bottom: 0.4rem; }
-    .task-reason { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; font-style: italic; }
-    .timer-bar { height: 2px; background: var(--border); margin-bottom: 1.5rem; position: relative; }
-    .timer-fill { position: absolute; top: 0; left: 0; height: 100%; width: 62%; background: var(--accent); }
-    .task-meta { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; }
-    .task-meta-item { font-family: var(--mono); font-size: 0.65rem; color: var(--muted); letter-spacing: 1px; }
-    .task-meta-item span { color: var(--text); }
-    .task-actions { display: flex; gap: 0.8rem; }
-    .task-btn { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase; padding: 0.5rem 1rem; border: 1px solid var(--border); background: none; color: var(--muted); cursor: pointer; }
-    .task-btn.primary { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 700; }
-    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); margin-top: 2rem; }
-    .compare-col { background: var(--bg); padding: 1.5rem; }
-    .compare-col h4 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
-    .compare-col.bad h4 { color: var(--accent2); }
-    .compare-col.good h4 { color: var(--accent); }
-    .compare-item { font-size: 0.85rem; color: var(--muted); padding: 0.4rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
-    .compare-item:last-child { border: none; }
-    .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 3rem; }
-    .stack-item { background: var(--bg); padding: 1.8rem; }
-    .stack-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
-    .stack-value { font-size: 0.95rem; color: var(--text); }
-    .cta-section { background: var(--accent); color: #000; padding: 6rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
-    .cta-section::before {
-      content: '♟'; position: absolute; font-size: 40rem; opacity: 0.04;
-      top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 1; pointer-events: none;
-    }
-    .cta-title { font-family: var(--display); font-size: clamp(3rem, 8vw, 7rem); letter-spacing: 4px; line-height: 0.9; margin-bottom: 1.5rem; position: relative; }
-    .cta-desc { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 2px; color: rgba(0,0,0,0.6); margin-bottom: 3rem; text-transform: uppercase; }
-    .cta-btn {
-      display: inline-flex; align-items: center; gap: 0.8rem;
-      background: #000; color: var(--accent);
-      font-family: var(--mono); font-size: 0.8rem; font-weight: 700;
-      letter-spacing: 2px; text-transform: uppercase;
-      padding: 1.2rem 2.5rem; text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s; position: relative;
-    }
-    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
-    .cta-note { margin-top: 1.5rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 1px; color: rgba(0,0,0,0.45); }
-    footer {
-      border-top: 1px solid var(--border); padding: 3rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
-    .footer-logo { font-family: var(--display); font-size: 1.4rem; letter-spacing: 2px; color: var(--accent); }
-    .footer-links { display: flex; gap: 2rem; }
-    .footer-links a { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-copy { font-family: var(--mono); font-size: 0.6rem; color: #333; letter-spacing: 1px; }
-    .perms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
-    .perm-item { border: 1px solid var(--border); padding: 1.2rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
-    .perm-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
-    .perm-title { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text); margin-bottom: 0.3rem; }
-    .perm-desc { font-size: 0.8rem; color: var(--muted); }
-    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .hero { padding: 7rem 1.5rem 3rem; }
-      .hero-stats { display: none; }
-      section { padding: 4rem 1.5rem; }
-      .features-header { grid-template-columns: 1fr; gap: 2rem; }
-      .example-section section { grid-template-columns: 1fr; gap: 3rem; }
-      .compare-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; }
-      .footer-links { justify-content: center; }
-    }
-  </style>
-</head>
-<body>
 
-<nav>
-  <div class="nav-logo">Check<span>mate</span></div>
-  <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#how">How It Works</a>
-    <a href="#stack">Stack</a>
-    <a href="#download">Download</a>
-    <a href="https://github.com/your-username/checkmate" target="_blank">GitHub ↗</a>
-  </div>
-</nav>
+    /**
+     * Today's per-app foreground time, sorted by time spent (desc).
+     * Excludes Checkmate itself and apps under 1 minute of usage.
+     * Returns an empty list (never throws) if Usage Access isn't granted.
+     */
+    fun getTodayUsage(context: Context, limit: Int = 8): List<AppUsageEntry> {
+        if (!hasUsageAccess(context)) return emptyList()
 
-<div class="hero">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-tag">♟ JEE · NEET · CUET Accountability App</div>
-  <h1 class="hero-title">
-    CHECK<br>
-    <span class="accent">MATE</span><br>
-    <span class="dim">YOUR EXAM</span>
-  </h1>
-  <p class="hero-sub">
-    Not another study timer. An AI that knows your syllabus, your weak spots, your coaching schedule — and builds a plan that actually makes sense for <em>your</em> exam.
-  </p>
-  <div class="hero-actions">
-    <a href="https://github.com/your-username/checkmate/releases/latest" class="btn-primary">⬇ Download APK</a>
-    <a href="https://github.com/your-username/checkmate" class="btn-secondary">View on GitHub →</a>
-  </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">3</div>
-      <div class="hero-stat-label">Exams Supported</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">6</div>
-      <div class="hero-stat-label">Modules</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">0₹</div>
-      <div class="hero-stat-label">No Subscription</div>
-    </div>
-  </div>
-</div>
+        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
+        val startTime = startOfTodayMillis()
+        val endTime = System.currentTimeMillis()
 
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span class="marquee-item">Adaptive AI Planner <span class="dot">◆</span></span>
-    <span class="marquee-item">JEE / NEET / CUET <span class="dot">◆</span></span>
-    <span class="marquee-item">Pause / Resume Timer <span class="dot">◆</span></span>
-    <span class="marquee-item">WorkMode Blocking <span class="dot">◆</span></span>
-    <span class="marquee-item">WhatsApp Guardian Reports <span class="dot">◆</span></span>
-    <span class="marquee-item">AI Mentor Chat <span class="dot">◆</span></span>
-    <span class="marquee-item">NTA Syllabus Built-In <span class="dot">◆</span></span>
-    <span class="marquee-item">BYOK — Your API Keys <span class="dot">◆</span></span>
-    <span class="marquee-item">Adaptive AI Planner <span class="dot">◆</span></span>
-    <span class="marquee-item">JEE / NEET / CUET <span class="dot">◆</span></span>
-    <span class="marquee-item">Pause / Resume Timer <span class="dot">◆</span></span>
-    <span class="marquee-item">WorkMode Blocking <span class="dot">◆</span></span>
-    <span class="marquee-item">WhatsApp Guardian Reports <span class="dot">◆</span></span>
-    <span class="marquee-item">AI Mentor Chat <span class="dot">◆</span></span>
-    <span class="marquee-item">NTA Syllabus Built-In <span class="dot">◆</span></span>
-    <span class="marquee-item">BYOK — Your API Keys <span class="dot">◆</span></span>
-  </div>
-</div>
+        val stats = try {
+            usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime)
+        } catch (e: Exception) {
+            null
+        } ?: return emptyList()
 
-<hr class="divider" />
+        val pm = context.packageManager
+        return stats
+            .filter { it.totalTimeInForeground >= 60_000L && it.packageName != context.packageName }
+            .groupBy { it.packageName }
+            .map { (pkg, group) -> pkg to group.sumOf { it.totalTimeInForeground } }
+            .mapNotNull { (pkg, millis) ->
+                val label = resolveLabel(pm, pkg) ?: return@mapNotNull null
+                AppUsageEntry(pkg, label, millis)
+            }
+            .sortedByDescending { it.foregroundMillis }
+            .take(limit)
+    }
 
-<section id="features">
-  <div class="features-header">
-    <div>
-      <div class="section-label">What's inside</div>
-      <h2 class="section-title">Built for<br>serious<br>aspirants</h2>
-    </div>
-    <div class="section-desc">
-      Every feature exists to solve one problem: the gap between knowing what to study and actually executing it, day after day, until the exam.
-    </div>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card">
-      <span class="feature-icon">🧠</span>
-      <div class="feature-title">Adaptive AI Planner</div>
-      <p class="feature-desc">Generates <strong>topic-specific tasks with reasons</strong> — not "Study Physics 45 min." Knows your coaching test dates, PYQ weightage, weak topics, and available hours.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">👤</span>
-      <div class="feature-title">Student Profile</div>
-      <p class="feature-desc">One-time setup: exam, date, coaching, target score, mock scores, weak subjects, sleep, stress, blocked slots. <strong>Every plan adapts to you.</strong></p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">📅</span>
-      <div class="feature-title">Daily Check-In</div>
-      <p class="feature-desc">Every morning: select today's topics from the <strong>official NTA syllabus</strong>. Rate yesterday. Log wellbeing. Plan generates with full context.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">📋</span>
-      <div class="feature-title">Coaching Schedule Upload</div>
-      <p class="feature-desc">Paste your coaching schedule — Groq extracts test dates, subjects, chapters. <strong>Planner always knows what's coming</strong> in the next 7 days.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">⏱️</span>
-      <div class="feature-title">Attention Cycle + Pause</div>
-      <p class="feature-desc">30-min focus → 5-min break → 10-min long break. Floating overlay bar. <strong>Real pause/resume</strong> — stats track actual focus time, not wall clock time.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🚫</span>
-      <div class="feature-title">WorkMode Blocker</div>
-      <p class="feature-desc">Blocks distracting apps during sessions using the Accessibility API. <strong>No root needed.</strong> You choose which apps get blocked.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">💬</span>
-      <div class="feature-title">WhatsApp Guardian Reports</div>
-      <p class="feature-desc">Automatically sends session summaries to a parent/guardian. Runs in <strong>an isolated process</strong> — survives even if the main app is killed.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🤖</span>
-      <div class="feature-title">Mentor AI</div>
-      <p class="feature-desc">Chat with an AI that knows your full situation. <strong>Real guidance</strong> — chapter difficulty, misconceptions, spaced repetition, burnout detection. Not motivation quotes.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">📊</span>
-      <div class="feature-title">Behavior Ledger + Stats</div>
-      <p class="feature-desc">Skip rate, streaks, pause patterns, attention quality. <strong>Behavior data feeds back</strong> into the planner and mentor for adaptive adjustments over time.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔑</span>
-      <div class="feature-title">BYOK — Your Keys</div>
-      <p class="feature-desc">Supports <strong>Groq, OpenRouter, Gemini, Claude</strong>. Bring your own API key — no subscription, no data sent to our servers. Full control.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔊</span>
-      <div class="feature-title">Voice Feedback (TTS)</div>
-      <p class="feature-desc">Android TTS built-in. ElevenLabs as optional upgrade. Planner <strong>speaks your plan summary</strong> after generation. Toggle in settings.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🌙</span>
-      <div class="feature-title">Offline Fallback</div>
-      <p class="feature-desc">LLM call fails? The <strong>rule-based planner</strong> kicks in automatically so you always get a plan, even without internet.</p>
-    </div>
-  </div>
-</section>
+    /** Total tracked screen time today, in millis, across all apps (not just the top [limit]). */
+    fun getTodayTotalMillis(context: Context): Long =
+        getTodayUsage(context, limit = Int.MAX_VALUE).sumOf { it.foregroundMillis }
 
-<hr class="divider" />
+    /**
+     * Last [days] days of total foreground screen time, oldest first —
+     * feeds a Digital-Wellbeing-style weekly history bar chart.
+     */
+    fun getScreenTimeHistory(context: Context, days: Int = 7): List<DailyScreenTime> {
+        if (!hasUsageAccess(context)) return emptyList()
 
-<div class="example-section" id="how">
-  <section>
-    <div>
-      <div class="section-label">The difference</div>
-      <h2 class="section-title">Tasks that<br>make sense</h2>
-      <p class="section-desc" style="margin-bottom: 2rem;">
-        Checkmate doesn't generate vague placeholders. It reasons about your specific situation and creates tasks with context you can actually trust.
-      </p>
-      <div class="compare-grid">
-        <div class="compare-col bad">
-          <h4>❌ Other apps</h4>
-          <div class="compare-item">Study Physics 45 min</div>
-          <div class="compare-item">Revise Chemistry</div>
-          <div class="compare-item">Practice Maths</div>
-          <div class="compare-item">Read Biology notes</div>
-        </div>
-        <div class="compare-col good">
-          <h4>✓ Checkmate</h4>
-          <div class="compare-item">Torque & Angular Momentum — test in 2 days, PYQ 6.2%, you marked weak</div>
-          <div class="compare-item">Organic: Named Reactions — 68% skip rate this week, fix this</div>
-          <div class="compare-item">Binomial Theorem PYQs — 8.1% weightage, under-practiced</div>
-          <div class="compare-item">NCERT Plant Physiology — 3 coaching lectures pending</div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="task-card-demo">
-        <div class="task-subject">Physics · JEE</div>
-        <div class="task-title">Torque & Angular Momentum</div>
-        <div class="task-reason">"Coaching test in 2 days · PYQ 6.2% · marked weak"</div>
-        <div class="timer-bar"><div class="timer-fill"></div></div>
-        <div class="task-meta">
-          <div class="task-meta-item">Duration <span>45 min</span></div>
-          <div class="task-meta-item">Focus <span>28 min</span></div>
-          <div class="task-meta-item">Phase <span>FOCUS 1</span></div>
-        </div>
-        <div class="task-actions">
-          <button class="task-btn">⏸ PAUSE</button>
-          <button class="task-btn primary">✓ DONE</button>
-          <button class="task-btn">→ SKIP</button>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as UsageStatsManager
+        val dayFmt = SimpleDateFormat("EEE", Locale.getDefault())
+        val result = mutableListOf<DailyScreenTime>()
 
-<hr class="divider" />
+        for (i in (days - 1) downTo 0) {
+            val dayStart = Calendar.getInstance().apply {
+                add(Calendar.DAY_OF_YEAR, -i)
+                set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0)
+                set(Calendar.SECOND, 0); set(Calendar.MILLISECOND, 0)
+            }
+            val start = dayStart.timeInMillis
+            val end = (start + 24L * 60 * 60 * 1000) - 1
+            val stats = try {
+                usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, start, end)
+            } catch (e: Exception) {
+                null
+            } ?: emptyList()
 
-<section>
-  <div class="section-label">Transparency</div>
-  <h2 class="section-title" style="margin-bottom: 0.8rem;">Permissions<br>& why</h2>
-  <p class="section-desc" style="margin-bottom: 0;">We only ask for what we actually use.</p>
-  <div class="perms-grid">
-    <div class="perm-item">
-      <div class="perm-icon">♿</div>
-      <div>
-        <div class="perm-title">Accessibility Service</div>
-        <div class="perm-desc">WorkMode distraction blocking. Detects when blocked apps are opened and redirects.</div>
-      </div>
-    </div>
-    <div class="perm-item">
-      <div class="perm-icon">🔔</div>
-      <div>
-        <div class="perm-title">Notification Listener</div>
-        <div class="perm-desc">WhatsApp guardian reports. Runs in an isolated process so it survives app kill.</div>
-      </div>
-    </div>
-    <div class="perm-item">
-      <div class="perm-icon">🪟</div>
-      <div>
-        <div class="perm-title">Draw Over Other Apps</div>
-        <div class="perm-desc">Floating attention bar with phase timer, pause button, and session confirmation.</div>
-      </div>
-    </div>
-    <div class="perm-item">
-      <div class="perm-icon">⚙️</div>
-      <div>
-        <div class="perm-title">Foreground Service</div>
-        <div class="perm-desc">Keeps the attention cycle timer alive while you study without interruption.</div>
-      </div>
-    </div>
-  </div>
-</section>
+            val total = stats
+                .filter { it.packageName != context.packageName }
+                .sumOf { it.totalTimeInForeground }
+            result.add(DailyScreenTime(dayFmt.format(dayStart.time), total))
+        }
+        return result
+    }
 
-<hr class="divider" />
+    /** Plain-text usage summary for guardian reports (Telegram / WhatsApp EOD message). */
+    fun buildUsageReportText(context: Context): String {
+        if (!hasUsageAccess(context)) return "App usage: permission not granted on student's device."
+        val apps = getTodayUsage(context, limit = 5)
+        val total = getTodayTotalMillis(context)
+        if (apps.isEmpty()) return "App usage today: no significant usage recorded."
 
-<section id="stack">
-  <div class="section-label">Under the hood</div>
-  <h2 class="section-title" style="margin-bottom: 0.5rem;">Tech Stack</h2>
-  <p class="section-desc">Built with modern Android tooling. Native Kotlin and Jetpack Compose all the way down.</p>
-  <div class="stack-grid">
-    <div class="stack-item"><div class="stack-label">Language</div><div class="stack-value">Kotlin 1.9.22</div></div>
-    <div class="stack-item"><div class="stack-label">UI</div><div class="stack-value">Jetpack Compose</div></div>
-    <div class="stack-item"><div class="stack-label">Database</div><div class="stack-value">Room</div></div>
-    <div class="stack-item"><div class="stack-label">LLM</div><div class="stack-value">Groq · OpenRouter<br>Gemini · Claude</div></div>
-    <div class="stack-item"><div class="stack-label">TTS</div><div class="stack-value">Android TTS<br>ElevenLabs (opt.)</div></div>
-    <div class="stack-item"><div class="stack-label">Build</div><div class="stack-value">AGP 8.2.2<br>Gradle 8.4 · JDK 17</div></div>
-    <div class="stack-item"><div class="stack-label">Architecture</div><div class="stack-value">Multi-module<br>MVVM</div></div>
-    <div class="stack-item"><div class="stack-label">Min SDK</div><div class="stack-value">Android 8.0 (API 26)</div></div>
-  </div>
-</section>
+        return buildString {
+            appendLine("App Usage Today (total ${formatDuration(total)})")
+            apps.forEach { appendLine("  - ${it.label}: ${formatDuration(it.foregroundMillis)}") }
+        }.trim()
+    }
 
-<div class="cta-section" id="download">
-  <h2 class="cta-title">READY TO<br>EXECUTE?</h2>
-  <p class="cta-desc">Free · Open Source · No Subscription · Your Keys</p>
-  <a href="https://github.com/your-username/checkmate/releases/latest" class="cta-btn">⬇ Download Latest APK</a>
-  <p class="cta-note">Android 8.0+ · Enable "Install from unknown sources" first</p>
-</div>
+    fun formatDuration(millis: Long): String {
+        val totalMinutes = millis / 60_000L
+        val h = totalMinutes / 60
+        val m = totalMinutes % 60
+        return if (h > 0) "${h}h ${m}m" else "${m}m"
+    }
 
-<footer>
-  <div class="footer-logo">♟ Checkmate</div>
-  <div class="footer-links">
-    <a href="https://github.com/your-username/checkmate">GitHub</a>
-    <a href="https://github.com/your-username/checkmate/releases">Releases</a>
-    <a href="https://github.com/your-username/checkmate/issues">Issues</a>
-    <a href="https://github.com/your-username/checkmate/blob/main/LICENSE">MIT License</a>
-  </div>
-  <div class="footer-copy">Built for JEE · NEET · CUET aspirants</div>
-</footer>
+    private fun startOfTodayMillis(): Long = Calendar.getInstance().apply {
+        set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0)
+        set(Calendar.SECOND, 0); set(Calendar.MILLISECOND, 0)
+    }.timeInMillis
 
-</body>
-</html>
+    private fun resolveLabel(pm: PackageManager, pkg: String): String? = try {
+        val info = pm.getApplicationInfo(pkg, 0)
+        pm.getApplicationLabel(info).toString()
+    } catch (e: PackageManager.NameNotFoundException) {
+        null
+    }
+}
+
+
+//===== FILE: modules/core/src/main/kotlin/com/checkmate/core/AttentionCycleManager.kt =====
+package com.checkmate.core
+
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+
+// PROMPT_DONE: focus block just ended — timer frozen, waiting for user decision
+enum class AttentionPhase { FOCUS, SHORT_BREAK, LONG_BREAK, PAUSED, PROMPT_DONE, DONE }
+
+data class CycleState(
+    val phase:               AttentionPhase = AttentionPhase.FOCUS,
+    val phaseSecondsLeft:    Long           = 30 * 60,
+    val totalSessionSeconds: Long           = 0,
+    val cycleIndex:          Int            = 1,
+    val needsAttentionCheck: Boolean        = false,
+    val phaseJustChanged:    Boolean        = false,
+    val checksPassed:        Int            = 0,
+    val checksMissed:        Int            = 0,
+    val taskId:              String         = "",
+    val taskName:            String         = "",
+    val pausedAt:            Long           = 0L,
+    val totalPausedMs:       Long           = 0L,
+    // Total length of the active task in seconds — used by the floating bar
+    // to scale its progress indicator correctly in both Pomodoro and plain mode.
+    val totalDurationSecs:   Long           = 0L,
+    // Snapshot (taken at start()) of whether Pomodoro-style breaks/checks are
+    // active for this session. Exposed on state so UI doesn't need prefs access.
+    val pomodoroEnabled:     Boolean        = true
+)
+
+object AttentionCycleManager {
+
+    private const val FOCUS_SECS               = 30 * 60L
+    private const val SHORT_BREAK_SECS         = 5  * 60L
+    private const val LONG_BREAK_SECS          = 10 * 60L
+    private const val FOCUS_BLOCKS_BEFORE_LONG = 2
+
+    // Pref key — read once per session in start() and snapshotted onto CycleState
+    // and into the private var below so mid-session toggling in Settings never
+    // changes the rules of an already-running session.
+    const val PREF_POMODORO_ENABLED = "pomodoro_enabled"
+
+    private val _state = MutableStateFlow(CycleState())
+    val stateFlow: StateFlow<CycleState> = _state.asStateFlow()
+
+    private var focusBlocksDone     = 0
+    private var checkWindowOpen     = false
+    private var checkWindowOpenedAt = 0L
+    private var totalDurationSecs   = 0L
+    private var elapsedTotal        = 0L
+    private var phaseBeforePause:   AttentionPhase = AttentionPhase.FOCUS
+    // The break phase queued up while we're showing PROMPT_DONE
+    private var pendingBreakPhase:  AttentionPhase = AttentionPhase.SHORT_BREAK
+    // When false: no 30-min blocks, no breaks, no PROMPT_DONE prompts, no
+    // forced attention-check taps — just one continuous focus timer for the
+    // whole task duration. Toggled via Settings → Work Mode → Pomodoro Breaks.
+    private var pomodoroEnabled     = true
+
+    fun start(taskId: String, taskName: String, durationMinutes: Long) {
+        pomodoroEnabled   = CheckmatePrefs.getBoolean(PREF_POMODORO_ENABLED, true)
+        totalDurationSecs = durationMinutes * 60
+        elapsedTotal      = 0
+        focusBlocksDone   = 0
+        checkWindowOpen   = false
+        pendingBreakPhase = AttentionPhase.SHORT_BREAK
+
+        val initialSecondsLeft = if (pomodoroEnabled) FOCUS_SECS else totalDurationSecs
+
+        _state.value = CycleState(
+            phase             = AttentionPhase.FOCUS,
+            phaseSecondsLeft  = initialSecondsLeft,
+            taskId            = taskId,
+            taskName          = taskName,
+            totalDurationSecs = totalDurationSecs,
+            pomodoroEnabled   = pomodoroEnabled
+        )
+    }
+
+    /** Called from the floating bar \"✅ Mark Done\" button during PROMPT_DONE. */
+    fun confirmDone() {
+        val done = _state.value.copy(
+            phase            = AttentionPhase.DONE,
+            phaseJustChanged = true
+        )
+        _state.value = done
+    }
+
+    /**
+     * Called from the floating bar \"➡ Continue\" button during PROMPT_DONE.
+     * Advances to the queued break phase so the cycle keeps going.
+     */
+    fun dismissPromptAndBreak() {
+        val breakSecs = if (pendingBreakPhase == AttentionPhase.LONG_BREAK)
+            LONG_BREAK_SECS else SHORT_BREAK_SECS
+        _state.value = _state.value.copy(
+            phase               = pendingBreakPhase,
+            phaseSecondsLeft    = breakSecs,
+            needsAttentionCheck = false,
+            phaseJustChanged    = true
+        )
+    }
+
+    /** Blueprint 2.2: Pause — freezes tick loop, records pausedAt timestamp */
+    fun pause() {
+        val current = _state.value
+        if (current.phase == AttentionPhase.PAUSED ||
+            current.phase == AttentionPhase.DONE   ||
+            current.phase == AttentionPhase.PROMPT_DONE) return
+        phaseBeforePause = current.phase
+        _state.value = current.copy(
+            phase            = AttentionPhase.PAUSED,
+            phaseJustChanged = true,
+            pausedAt         = System.currentTimeMillis()
+        )
+    }
+
+    /** Blueprint 2.2: Resume — restarts tick, accumulates totalPausedMs */
+    fun resume() {
+        val current = _state.value
+        if (current.phase != AttentionPhase.PAUSED) return
+        val pauseDuration = if (current.pausedAt > 0L)
+            System.currentTimeMillis() - current.pausedAt else 0L
+        _state.value = current.copy(
+            phase            = phaseBeforePause,
+            phaseJustChanged = true,
+            pausedAt         = 0L,
+            totalPausedMs    = current.totalPausedMs + pauseDuration
+        )
+    }
+
+    fun tick(): CycleState {
+        val current = _state.value
+        // Freeze tick while paused, in prompt, or done
+        if (current.phase == AttentionPhase.PAUSED     ||
+            current.phase == AttentionPhase.PROMPT_DONE ||
+            current.phase == AttentionPhase.DONE)
+            return current
+
+        elapsedTotal++
+
+        if (totalDurationSecs > 0 && elapsedTotal >= totalDurationSecs) {
+            val done = current.copy(
+                phase               = AttentionPhase.DONE,
+                phaseJustChanged    = true,
+                phaseSecondsLeft    = 0,
+                totalSessionSeconds = elapsedTotal
+            )
+            _state.value = done
+            return done
+        }
+
+        val newSecondsLeft = current.phaseSecondsLeft - 1
+
+        // ── Plain continuous timer: no breaks, no PROMPT_DONE, no forced checks ──
+        if (!pomodoroEnabled) {
+            val next = current.copy(
+                phaseSecondsLeft    = newSecondsLeft.coerceAtLeast(0),
+                totalSessionSeconds = elapsedTotal,
+                needsAttentionCheck = false,
+                phaseJustChanged    = false
+            )
+            _state.value = next
+            return next
+        }
+
+        // ── Pomodoro mode: 30-min focus blocks with breaks + attention checks ──
+        val needsCheck = current.phase == AttentionPhase.FOCUS
+                && newSecondsLeft in 0..120 && !checkWindowOpen
+        if (needsCheck) {
+            checkWindowOpen     = true
+            checkWindowOpenedAt = elapsedTotal
+        }
+
+        var checksMissed = current.checksMissed
+        if (checkWindowOpen && elapsedTotal - checkWindowOpenedAt > 120) {
+            checksMissed++
+            checkWindowOpen = false
+        }
+
+        if (newSecondsLeft <= 0) {
+            return when (current.phase) {
+                AttentionPhase.FOCUS -> {
+                    focusBlocksDone++
+                    // Decide what break comes *after* the prompt
+                    pendingBreakPhase = if (focusBlocksDone % FOCUS_BLOCKS_BEFORE_LONG == 0)
+                        AttentionPhase.LONG_BREAK else AttentionPhase.SHORT_BREAK
+
+                    // Enter PROMPT_DONE — timer frozen, user decides
+                    val next = current.copy(
+                        phase               = AttentionPhase.PROMPT_DONE,
+                        phaseSecondsLeft    = 0,
+                        totalSessionSeconds = elapsedTotal,
+                        cycleIndex          = focusBlocksDone + 1,
+                        needsAttentionCheck = false,
+                        phaseJustChanged    = true,
+                        checksMissed        = checksMissed
+                    )
+                    _state.value = next; next
+                }
+                AttentionPhase.SHORT_BREAK, AttentionPhase.LONG_BREAK -> {
+                    checkWindowOpen = false
+                    val next = current.copy(
+                        phase               = AttentionPhase.FOCUS,
+                        phaseSecondsLeft    = FOCUS_SECS,
+                        totalSessionSeconds = elapsedTotal,
+                        needsAttentionCheck = false,
+                        phaseJustChanged    = true,
+                        checksMissed        = checksMissed
+                    )
+                    _state.value = next; next
+                }
+                else -> current
+            }
+        }
+
+        val next = current.copy(
+            phaseSecondsLeft    = newSecondsLeft,
+            totalSessionSeconds = elapsedTotal,
+            needsAttentionCheck = checkWindowOpen,
+            phaseJustChanged    = false,
+            checksMissed        = checksMissed
+        )
+        _state.value = next
+        return next
+    }
+
+    fun confirmAttention() {
+        checkWindowOpen = false
+        _state.value = _state.value.copy(
+            checksPassed        = _state.value.checksPassed + 1,
+            needsAttentionCheck = false
+        )
+    }
+
+    fun currentState(): CycleState = _state.value
+
+    fun reset() {
+        focusBlocksDone     = 0
+        checkWindowOpen     = false
+        elapsedTotal        = 0
+        totalDurationSecs   = 0
+        pendingBreakPhase   = AttentionPhase.SHORT_BREAK
+        pomodoroEnabled     = true
+        _state.value        = CycleState()
+    }
+}
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt =====
+package com.checkmate.service
+
+import android.app.*
+import android.content.Context
+import android.content.Intent
+import android.content.pm.ServiceInfo
+import android.os.*
+import androidx.core.app.NotificationCompat
+import com.checkmate.core.AttentionCycleManager
+import com.checkmate.core.AttentionPhase
+import com.checkmate.core.tts.CheckmateTTS
+import kotlinx.coroutines.*
+
+class AttentionCycleService : Service() {
+
+    companion object {
+        private const val CHANNEL_ID        = "attention_cycle_channel"
+        private const val NOTIF_ID          = 42
+        const val EXTRA_TASK_ID             = "task_id"
+        const val EXTRA_TASK_NAME           = "task_name"
+        const val EXTRA_DURATION_MIN        = "duration_min"
+        // Projection token extras — passed so getMediaProjection() runs AFTER startForeground()
+        const val EXTRA_PROJECTION_CODE     = "projection_result_code"
+        const val EXTRA_PROJECTION_DATA     = "projection_data"
+        const val ACTION_PAUSE              = "com.checkmate.ATTENTION_PAUSE"
+        const val ACTION_RESUME             = "com.checkmate.ATTENTION_RESUME"
+        // Notification action buttons — these mirror what the floating attention
+        // bar offers, so a student who turns the bar off in Settings can still
+        // confirm attention / mark done / take a break from the notification.
+        const val ACTION_MARK_DONE          = "com.checkmate.ATTENTION_MARK_DONE"
+        const val ACTION_TAKE_BREAK         = "com.checkmate.ATTENTION_TAKE_BREAK"
+        const val ACTION_CONFIRM_ATTENTION  = "com.checkmate.ATTENTION_CONFIRM"
+
+        fun start(
+            context: Context,
+            taskId: String,
+            taskName: String,
+            durationMinutes: Long,
+            projectionResultCode: Int = Activity.RESULT_CANCELED,
+            projectionData: Intent?   = null
+        ) {
+            val intent = Intent(context, AttentionCycleService::class.java).apply {
+                putExtra(EXTRA_TASK_ID,          taskId)
+                putExtra(EXTRA_TASK_NAME,         taskName)
+                putExtra(EXTRA_DURATION_MIN,      durationMinutes)
+                putExtra(EXTRA_PROJECTION_CODE,   projectionResultCode)
+                putExtra(EXTRA_PROJECTION_DATA,   projectionData)
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                context.startForegroundService(intent)
+            else
+                context.startService(intent)
+        }
+
+        fun stop(context: Context) =
+            context.stopService(Intent(context, AttentionCycleService::class.java))
+
+        fun sendPause(context: Context) =
+            context.sendBroadcast(Intent(ACTION_PAUSE).setPackage(context.packageName))
+
+        fun sendResume(context: Context) =
+            context.sendBroadcast(Intent(ACTION_RESUME).setPackage(context.packageName))
+    }
+
+    private val scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+    private var cycleJob: Job? = null
+    private var isPaused = false
+    private var lastTaskName = "Task"
+
+    // Tracks the last elapsed-second mark at which we pushed a status+screenshot update,
+    // so we fire roughly every StatusReporter.STATUS_INTERVAL_SECONDS regardless of pauses.
+    private var lastStatusPushAt = 0L
+
+    private val controlReceiver = object : android.content.BroadcastReceiver() {
+        override fun onReceive(ctx: Context?, intent: Intent?) {
+            when (intent?.action) {
+                ACTION_PAUSE             -> { isPaused = true;  AttentionCycleManager.pause() }
+                ACTION_RESUME            -> { isPaused = false; AttentionCycleManager.resume() }
+                ACTION_MARK_DONE         -> AttentionCycleManager.confirmDone()
+                ACTION_TAKE_BREAK        -> AttentionCycleManager.dismissPromptAndBreak()
+                ACTION_CONFIRM_ATTENTION -> AttentionCycleManager.confirmAttention()
+            }
+        }
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        createChannel()
+        val filter = android.content.IntentFilter().apply {
+            addAction(ACTION_PAUSE)
+            addAction(ACTION_RESUME)
+            addAction(ACTION_MARK_DONE)
+            addAction(ACTION_TAKE_BREAK)
+            addAction(ACTION_CONFIRM_ATTENTION)
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(controlReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+        } else {
+            @Suppress("UnspecifiedRegisterReceiverFlag")
+            registerReceiver(controlReceiver, filter)
+        }
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        val taskId      = intent?.getStringExtra(EXTRA_TASK_ID)         ?: "task"
+        val taskName    = intent?.getStringExtra(EXTRA_TASK_NAME)       ?: "Task"
+        val durationMin = intent?.getLongExtra(EXTRA_DURATION_MIN, 60L) ?: 60L
+        lastTaskName = taskName
+
+        // startForeground() MUST be called before getMediaProjection() on Android 14+.
+        // We call it first here, then immediately store the projection token below.
+        startForegroundCompat(buildNotification(initialPhaseLabel(durationMin), taskName))
+
+        // Now it is safe to call getMediaProjection() — the mediaProjection FGS type is active.
+        val projCode = intent?.getIntExtra(EXTRA_PROJECTION_CODE, Activity.RESULT_CANCELED)
+            ?: Activity.RESULT_CANCELED
+        val projData = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+            intent?.getParcelableExtra(EXTRA_PROJECTION_DATA, Intent::class.java)
+        else
+            @Suppress("DEPRECATION") intent?.getParcelableExtra(EXTRA_PROJECTION_DATA)
+
+        if (projCode == Activity.RESULT_OK && projData != null) {
+            ScreenCaptureManager.storeProjectionToken(applicationContext, projCode, projData)
+        }
+
+        AttentionCycleManager.start(taskId, taskName, durationMin)
+        lastStatusPushAt = 0L
+        startCycleLoop(taskName)
+        return START_NOT_STICKY
+    }
+
+    private fun initialPhaseLabel(durationMin: Long): String {
+        val pomodoro = AttentionCycleManager.currentState().pomodoroEnabled
+        return if (pomodoro) "FOCUS — 30:00" else "FOCUS — ${durationMin}:00"
+    }
+
+    private fun startCycleLoop(taskName: String) {
+        cycleJob?.cancel()
+        cycleJob = scope.launch {
+            while (isActive) {
+                if (isPaused) {
+                    val cs = AttentionCycleManager.currentState()
+                    (getSystemService(NOTIFICATION_SERVICE) as NotificationManager)
+                        .notify(NOTIF_ID, buildNotification("PAUSED", taskName, cs.totalSessionSeconds, cs.cycleIndex))
+                    delay(1_000)
+                    continue
+                }
+                val cs = AttentionCycleManager.tick()
+                (getSystemService(NOTIFICATION_SERVICE) as NotificationManager)
+                    .notify(NOTIF_ID, buildNotification(
+                        phaseLabel(cs.phase, cs.phaseSecondsLeft),
+                        taskName, cs.totalSessionSeconds, cs.cycleIndex, cs.needsAttentionCheck, cs.phase))
+
+                if (cs.phaseJustChanged) {
+                    when (cs.phase) {
+                        AttentionPhase.PROMPT_DONE -> CheckmateTTS.speak(
+                            this@AttentionCycleService,
+                            "30 minutes done. Mark task complete or take a break?"
+                        )
+                        AttentionPhase.SHORT_BREAK -> CheckmateTTS.speak(
+                            this@AttentionCycleService, "Take a 5 minute break."
+                        )
+                        AttentionPhase.LONG_BREAK  -> CheckmateTTS.speak(
+                            this@AttentionCycleService, "Good work. 10 minute break."
+                        )
+                        AttentionPhase.FOCUS       -> CheckmateTTS.speak(
+                            this@AttentionCycleService, "Break over. Back to focus."
+                        )
+                        AttentionPhase.PAUSED      -> {}
+                        AttentionPhase.DONE        -> {
+                            CheckmateTTS.speak(this@AttentionCycleService, "Session complete.")
+                            stopSelf(); return@launch
+                        }
+                    }
+                }
+                if (cs.needsAttentionCheck && cs.phaseSecondsLeft % 30L == 0L)
+                    CheckmateTTS.speak(this@AttentionCycleService, "Still focused? Tap the check.")
+
+                // ── Periodic status + screenshot push to guardian bot ──────────────
+                if (cs.totalSessionSeconds - lastStatusPushAt >= StatusReporter.STATUS_INTERVAL_SECONDS) {
+                    lastStatusPushAt = cs.totalSessionSeconds
+                    val snapshot = cs
+                    launch(Dispatchers.IO) {
+                        StatusReporter.pushStatus(this@AttentionCycleService, snapshot)
+                    }
+                }
+
+                delay(1_000)
+            }
+        }
+    }
+
+    private fun phaseLabel(phase: AttentionPhase, secondsLeft: Long): String {
+        val m = secondsLeft / 60; val s = secondsLeft % 60
+        val t = String.format("%d:%02d", m, s)
+        return when (phase) {
+            AttentionPhase.FOCUS        -> "FOCUS — $t"
+            AttentionPhase.SHORT_BREAK  -> "SHORT BREAK — $t"
+            AttentionPhase.LONG_BREAK   -> "LONG BREAK — $t"
+            AttentionPhase.PAUSED       -> "PAUSED — $t"
+            AttentionPhase.PROMPT_DONE  -> "MARK DONE?"
+            AttentionPhase.DONE         -> "SESSION COMPLETE"
+        }
+    }
+
+    private fun buildNotification(
+        phaseText: String, taskName: String,
+        totalSeconds: Long = 0L, cycleIndex: Int = 0, needsCheck: Boolean = false,
+        phase: AttentionPhase = AttentionPhase.FOCUS
+    ): Notification {
+        val tm = totalSeconds / 60; val ts = totalSeconds % 60
+        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+            .setContentTitle(if (needsCheck) "ATTN: $phaseText" else phaseText)
+            .setContentText("$taskName  |  ${tm}m ${ts}s  |  Cycle $cycleIndex")
+            .setSmallIcon(android.R.drawable.ic_menu_recent_history)
+            .setOngoing(true).setOnlyAlertOnce(!needsCheck)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+
+        // Action buttons mirror the floating attention bar so the same controls
+        // are available from the notification when the overlay bar is off.
+        if (phase == AttentionPhase.PROMPT_DONE) {
+            builder.addAction(0, "✅ Mark Done", actionPendingIntent(ACTION_MARK_DONE, 1))
+            builder.addAction(0, "➡ Break",      actionPendingIntent(ACTION_TAKE_BREAK, 2))
+        } else if (needsCheck) {
+            builder.addAction(0, "✅ I'm here", actionPendingIntent(ACTION_CONFIRM_ATTENTION, 3))
+        }
+        if (phase != AttentionPhase.DONE && phase != AttentionPhase.PROMPT_DONE) {
+            val pauseLabel = if (isPaused) "▶ Resume" else "⏸ Pause"
+            val pauseAction = if (isPaused) ACTION_RESUME else ACTION_PAUSE
+            builder.addAction(0, pauseLabel, actionPendingIntent(pauseAction, 4))
+        }
+
+        return builder.build()
+    }
+
+    private fun actionPendingIntent(action: String, requestCode: Int): PendingIntent {
+        val intent = Intent(action).setPackage(packageName)
+        return PendingIntent.getBroadcast(
+            this, requestCode, intent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+    }
+
+    private fun startForegroundCompat(n: Notification) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+            startForeground(NOTIF_ID, n,
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC or
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION)
+        else startForeground(NOTIF_ID, n)
+    }
+
+    private fun createChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val ch = NotificationChannel(CHANNEL_ID, "Attention Cycle", NotificationManager.IMPORTANCE_HIGH)
+            (getSystemService(NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(ch)
+        }
+    }
+
+    override fun onDestroy() {
+        cycleJob?.cancel(); scope.cancel()
+        try { unregisterReceiver(controlReceiver) } catch (_: Exception) {}
+        AttentionCycleManager.reset()
+        super.onDestroy()
+    }
+
+    override fun onBind(intent: Intent?): IBinder? = null
+}
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt =====
+package com.checkmate.service
+
+import android.app.*
+import android.content.Context
+import android.content.Intent
+import android.graphics.PixelFormat
+import android.os.Build
+import android.os.IBinder
+import android.view.Gravity
+import android.view.MotionEvent
+import android.view.WindowManager
+import androidx.compose.animation.core.*
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.Text
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.app.NotificationCompat
+import androidx.lifecycle.*
+import androidx.savedstate.SavedStateRegistry
+import androidx.savedstate.SavedStateRegistryController
+import androidx.savedstate.SavedStateRegistryOwner
+import androidx.savedstate.setViewTreeSavedStateRegistryOwner
+import com.checkmate.core.AttentionCycleManager
+import com.checkmate.core.AttentionPhase
+import com.checkmate.core.CheckmatePrefs
+
+class FloatingAttentionService : Service(),
+    LifecycleOwner,
+    ViewModelStoreOwner,
+    SavedStateRegistryOwner {
+
+    private val lifecycleRegistry = LifecycleRegistry(this)
+    override val lifecycle: Lifecycle get() = lifecycleRegistry
+
+    private val vmStore = ViewModelStore()
+    override val viewModelStore: ViewModelStore get() = vmStore
+
+    private val savedStateController = SavedStateRegistryController.create(this)
+    override val savedStateRegistry: SavedStateRegistry
+        get() = savedStateController.savedStateRegistry
+
+    private lateinit var windowManager: WindowManager
+    private var overlayView: ComposeView? = null
+
+    companion object {
+        private const val CHANNEL_ID = "floating_attention_channel"
+        private const val NOTIF_ID   = 99
+
+        // Pref key for the Settings → Work Mode → "Floating Focus Bar" toggle.
+        // When off, the overlay never shows; the student still gets the same
+        // controls (Done / Break / Confirm / Pause) via notification buttons
+        // added in AttentionCycleService, so nothing becomes un-controllable.
+        const val PREF_FOCUS_BAR_ENABLED = "focus_bar_enabled"
+
+        fun start(context: Context) {
+            if (!CheckmatePrefs.getBoolean(PREF_FOCUS_BAR_ENABLED, true)) return
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+                !android.provider.Settings.canDrawOverlays(context)) return
+            val intent = Intent(context, FloatingAttentionService::class.java)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                context.startForegroundService(intent)
+            else
+                context.startService(intent)
+        }
+
+        fun stop(context: Context) {
+            context.stopService(Intent(context, FloatingAttentionService::class.java))
+        }
+    }
+
+    override fun onCreate() {
+        savedStateController.performAttach()
+        savedStateController.performRestore(null)
+        lifecycleRegistry.currentState = Lifecycle.State.CREATED
+        super.onCreate()
+        windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
+        createChannel()
+    }
+
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        startForeground(NOTIF_ID, buildNotification())
+        lifecycleRegistry.currentState = Lifecycle.State.STARTED
+        lifecycleRegistry.currentState = Lifecycle.State.RESUMED
+        showOverlay()
+        return START_NOT_STICKY
+    }
+
+    private fun showOverlay() {
+        if (overlayView != null) return
+        val params = WindowManager.LayoutParams(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT,
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+            else
+                @Suppress("DEPRECATION") WindowManager.LayoutParams.TYPE_PHONE,
+            WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+                    WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+            PixelFormat.TRANSLUCENT
+        ).apply { gravity = Gravity.TOP }
+
+        val view = ComposeView(this).apply {
+            setViewTreeLifecycleOwner(this@FloatingAttentionService)
+            setViewTreeViewModelStoreOwner(this@FloatingAttentionService)
+            setViewTreeSavedStateRegistryOwner(this@FloatingAttentionService)
+            setContent { AttentionBar(onDismiss = { stop(this@FloatingAttentionService) }) }
+        }
+        windowManager.addView(view, params)
+        overlayView = view
+    }
+
+    override fun onDestroy() {
+        lifecycleRegistry.currentState = Lifecycle.State.DESTROYED
+        overlayView?.let { windowManager.removeView(it) }
+        overlayView = null
+        super.onDestroy()
+    }
+
+    override fun onBind(intent: Intent?): IBinder? = null
+
+    private fun buildNotification(): Notification =
+        NotificationCompat.Builder(this, CHANNEL_ID)
+            .setContentTitle("Attention overlay active")
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setOngoing(true).setPriority(NotificationCompat.PRIORITY_LOW).build()
+
+    private fun createChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val ch = NotificationChannel(CHANNEL_ID, "Floating Attention Bar", NotificationManager.IMPORTANCE_LOW)
+            (getSystemService(NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(ch)
+        }
+    }
+}
+
+// ── Colors ────────────────────────────────────────────────────────────────────
+
+private val CGreen  = Color(0xFF00C896)
+private val CAmber  = Color(0xFFFFB347)
+private val CGray   = Color(0xFF9090A8)
+private val CRed    = Color(0xFFFF4444)
+private val CPurple = Color(0xFFBB86FC)
+private val CBg     = Color(0xF0111122)
+
+// ── Bar Composable ────────────────────────────────────────────────────────────
+
+@Composable
+private fun AttentionBar(onDismiss: () -> Unit) {
+    val cs by AttentionCycleManager.stateFlow.collectAsState()
+
+    LaunchedEffect(cs.phase) {
+        if (cs.phase == AttentionPhase.DONE) onDismiss()
+    }
+
+    val phaseColor = when (cs.phase) {
+        AttentionPhase.FOCUS        -> CGreen
+        AttentionPhase.SHORT_BREAK  -> CGreen
+        AttentionPhase.LONG_BREAK   -> CAmber
+        AttentionPhase.PAUSED       -> CAmber
+        AttentionPhase.PROMPT_DONE  -> CPurple
+        AttentionPhase.DONE         -> CGray
+    }
+
+    // FOCUS phase length depends on mode: a fixed 30-min block in Pomodoro
+    // mode, or the whole task duration in plain continuous-timer mode.
+    val totalPhaseSecs = when (cs.phase) {
+        AttentionPhase.FOCUS       -> if (cs.pomodoroEnabled) 30 * 60L
+                                       else cs.totalDurationSecs.coerceAtLeast(1L)
+        AttentionPhase.SHORT_BREAK -> 5  * 60L
+        AttentionPhase.LONG_BREAK  -> 10 * 60L
+        else                       -> 1L
+    }
+    val progress = when (cs.phase) {
+        AttentionPhase.PROMPT_DONE -> 1f   // bar full at prompt
+        else -> (1f - cs.phaseSecondsLeft.toFloat() / totalPhaseSecs.toFloat()).coerceIn(0f, 1f)
+    }
+
+    val m = cs.phaseSecondsLeft / 60
+    val s = cs.phaseSecondsLeft % 60
+
+    val phaseLabel = when (cs.phase) {
+        AttentionPhase.FOCUS        -> "FOCUS"
+        AttentionPhase.SHORT_BREAK  -> "BREAK"
+        AttentionPhase.LONG_BREAK   -> "LONG BREAK"
+        AttentionPhase.PAUSED       -> "PAUSED"
+        AttentionPhase.PROMPT_DONE  -> "MARK DONE?"
+        AttentionPhase.DONE         -> "DONE"
+    }
+
+    // Pulse color when paused or prompting
+    val infiniteTransition = rememberInfiniteTransition(label = "pulse")
+    val pulseAlpha by infiniteTransition.animateFloat(
+        initialValue  = 0.5f,
+        targetValue   = 1f,
+        animationSpec = infiniteRepeatable(
+            tween(700, easing = LinearEasing), RepeatMode.Reverse
+        ),
+        label = "pulseAlpha"
+    )
+    val shouldPulse = cs.phase == AttentionPhase.PAUSED || cs.phase == AttentionPhase.PROMPT_DONE
+    val displayColor = if (shouldPulse) phaseColor.copy(alpha = pulseAlpha) else phaseColor
+
+    Column(Modifier.fillMaxWidth().background(CBg)) {
+
+        if (cs.phase == AttentionPhase.PROMPT_DONE) {
+            // ── Prompt row: task done or take a break? ────────────────────────
+            Row(
+                modifier              = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 14.dp, vertical = 8.dp),
+                verticalAlignment     = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text       = "30m done!",
+                    fontSize   = 12.sp,
+                    color      = displayColor,
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                    // ✅ Mark task done
+                    Text(
+                        text       = "✅ Done",
+                        fontSize   = 13.sp,
+                        color      = CGreen,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Monospace,
+                        modifier   = Modifier.clickable(
+                            indication        = null,
+                            interactionSource = remember { MutableInteractionSource() }
+                        ) { AttentionCycleManager.confirmDone() }
+                    )
+                    // ➡ Take break and continue task
+                    Text(
+                        text       = "➡ Break",
+                        fontSize   = 13.sp,
+                        color      = CAmber,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Monospace,
+                        modifier   = Modifier.clickable(
+                            indication        = null,
+                            interactionSource = remember { MutableInteractionSource() }
+                        ) { AttentionCycleManager.dismissPromptAndBreak() }
+                    )
+                }
+            }
+        } else {
+            // ── Normal row: phase label + timer + controls ────────────────────
+            Row(
+                modifier              = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 14.dp, vertical = 6.dp),
+                verticalAlignment     = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                // Left: phase + timer + cycle
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text       = phaseLabel,
+                        fontSize   = 11.sp,
+                        color      = displayColor,
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text       = "%02d:%02d".format(m, s),
+                        fontSize   = 13.sp,
+                        color      = displayColor,
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.Bold
+                    )
+                    if (cs.pomodoroEnabled) {
+                        Spacer(Modifier.width(6.dp))
+                        Text(
+                            text       = "· C${cs.cycleIndex}",
+                            fontSize   = 10.sp,
+                            color      = CGray,
+                            fontFamily = FontFamily.Monospace
+                        )
+                    }
+                }
+
+                // Right: ✅ confirm attention + ⏸/▶ pause + ✕ dismiss
+                Row(verticalAlignment = Alignment.CenterVertically) {
+
+                    if (cs.needsAttentionCheck) {
+                        Text(
+                            text     = "✅",
+                            fontSize = 18.sp,
+                            modifier = Modifier
+                                .padding(end = 12.dp)
+                                .clickable(
+                                    indication        = null,
+                                    interactionSource = remember { MutableInteractionSource() }
+                                ) { AttentionCycleManager.confirmAttention() }
+                        )
+                    }
+
+                    if (cs.phase != AttentionPhase.DONE) {
+                        val pauseIcon  = if (cs.phase == AttentionPhase.PAUSED) "▶" else "⏸"
+                        val pauseColor = if (cs.phase == AttentionPhase.PAUSED) CGreen else CAmber
+                        Text(
+                            text     = pauseIcon,
+                            fontSize = 16.sp,
+                            color    = pauseColor,
+                            modifier = Modifier
+                                .padding(end = 12.dp)
+                                .clickable(
+                                    indication        = null,
+                                    interactionSource = remember { MutableInteractionSource() }
+                                ) {
+                                    if (cs.phase == AttentionPhase.PAUSED) AttentionCycleManager.resume()
+                                    else AttentionCycleManager.pause()
+                                }
+                        )
+                    }
+
+                    Text(
+                        text       = "✕",
+                        fontSize   = 13.sp,
+                        color      = CRed.copy(alpha = 0.85f),
+                        fontFamily = FontFamily.Monospace,
+                        modifier   = Modifier.clickable(
+                            indication        = null,
+                            interactionSource = remember { MutableInteractionSource() },
+                            onClick           = onDismiss
+                        )
+                    )
+                }
+            }
+        }
+
+        LinearProgressIndicator(
+            progress   = { progress },
+            modifier   = Modifier
+                .fillMaxWidth()
+                .height(3.dp)
+                .clip(RoundedCornerShape(0.dp)),
+            color      = displayColor,
+            trackColor = displayColor.copy(alpha = 0.12f)
+        )
+    }
+}
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt =====
+package com.checkmate.ui.settings
+
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.checkmate.core.AttentionCycleManager
+import com.checkmate.core.CheckmatePrefs
+import com.checkmate.service.FloatingAttentionService
+import com.checkmate.ui.theme.*
+
+@Composable
+fun SettingsScreen() {
+    val context = LocalContext.current
+    var showAppSelector     by remember { mutableStateOf(false) }
+    var showWebsiteBlocker  by remember { mutableStateOf(false) }
+
+    if (showAppSelector) {
+        AppSelectorScreen(onBack = { showAppSelector = false })
+        return
+    }
+    if (showWebsiteBlocker) {
+        WebsiteBlockerScreen(onBack = { showWebsiteBlocker = false })
+        return
+    }
+
+    Column(
+        modifier        = Modifier.fillMaxSize().background(BgDark)
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        Spacer(Modifier.height(20.dp))
+        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+            Text("Settings", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = White90)
+        }
+        Spacer(Modifier.height(8.dp))
+
+        // ── LLM API Keys ──
+        SettingSection("AI PROVIDERS") {
+            LlmProviderSettings(context)
+        }
+
+        // ── Voice / TTS ──
+        SettingSection("VOICE") {
+            VoiceSettings(context)
+        }
+
+        // ── Work Mode ──
+        SettingSection("WORK MODE") {
+            FocusCycleSettings(context)
+            HorizontalDivider(color = White10)
+            SettingTile(
+                title    = "Blocked Apps",
+                subtitle = "Block distraction apps incl. Google & system apps",
+                icon     = Icons.Default.Block
+            ) { showAppSelector = true }
+            HorizontalDivider(color = White10)
+            SettingTile(
+                title    = "Blocked Websites",
+                subtitle = "Block distracting domains in any browser",
+                icon     = Icons.Default.Language
+            ) { showWebsiteBlocker = true }
+            HorizontalDivider(color = White10)
+            SettingTile(
+                title    = "Accessibility Service",
+                subtitle = "Required for app/site blocking and WhatsApp automation",
+                icon     = Icons.Default.Accessibility
+            ) {
+                context.startActivity(
+                    Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
+            }
+        }
+
+        // ── Permissions ──
+        SettingSection("PERMISSIONS") {
+            SettingTile(
+                title    = "Notification Listener",
+                subtitle = "Required for WhatsApp message detection",
+                icon     = Icons.Default.Notifications
+            ) {
+                context.startActivity(
+                    Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
+            }
+            HorizontalDivider(color = White10)
+            SettingTile(
+                title    = "Overlay Permission",
+                subtitle = "Required for floating attention timer",
+                icon     = Icons.Default.Layers
+            ) {
+                context.startActivity(
+                    Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:${context.packageName}"))
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
+            }
+            HorizontalDivider(color = White10)
+            SettingTile(
+                title    = "Usage Access",
+                subtitle = "Required for app usage history (Digital Wellbeing-style stats)",
+                icon     = Icons.Default.History
+            ) {
+                context.startActivity(
+                    Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
+            }
+        }
+
+        Spacer(Modifier.height(32.dp))
+    }
+}
+
+// ── Focus Cycle Settings (Floating bar + Pomodoro breaks toggles) ────────────
+
+@Composable
+private fun FocusCycleSettings(context: Context) {
+    var barEnabled by remember {
+        mutableStateOf(CheckmatePrefs.getBoolean(FloatingAttentionService.PREF_FOCUS_BAR_ENABLED, true))
+    }
+    var pomodoroEnabled by remember {
+        mutableStateOf(CheckmatePrefs.getBoolean(AttentionCycleManager.PREF_POMODORO_ENABLED, true))
+    }
+
+    Column {
+        // Floating Focus Bar toggle
+        Row(
+            modifier          = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 14.dp, vertical = 10.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                if (barEnabled) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                null, tint = AccentGreen, modifier = Modifier.size(20.dp)
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text("Floating Focus Bar", fontSize = 14.sp, color = White90)
+                Text(
+                    if (barEnabled)
+                        "Shows the on-screen timer bar over other apps during focus sessions"
+                    else
+                        "Bar hidden — use the notification to mark done / take a break / confirm checks",
+                    fontSize = 11.sp, color = White60
+                )
+            }
+            Switch(
+                checked         = barEnabled,
+                onCheckedChange = {
+                    barEnabled = it
+                    CheckmatePrefs.putBoolean(FloatingAttentionService.PREF_FOCUS_BAR_ENABLED, it)
+                },
+                colors = SwitchDefaults.colors(
+                    checkedThumbColor   = BgDark,
+                    checkedTrackColor   = AccentGreen,
+                    uncheckedThumbColor = White60,
+                    uncheckedTrackColor = White10
+                )
+            )
+        }
+
+        HorizontalDivider(color = White10)
+
+        // Pomodoro Breaks toggle
+        Row(
+            modifier          = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 14.dp, vertical = 10.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(Icons.Default.Timer, null, tint = AccentAmber, modifier = Modifier.size(20.dp))
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text("Pomodoro Breaks", fontSize = 14.sp, color = White90)
+                Text(
+                    if (pomodoroEnabled)
+                        "30 min focus / 5–10 min break cycles, with attention check-ins"
+                    else
+                        "Off — one continuous focus timer for the full task, no forced breaks or checks",
+                    fontSize = 11.sp, color = White60
+                )
+            }
+            Switch(
+                checked         = pomodoroEnabled,
+                onCheckedChange = {
+                    pomodoroEnabled = it
+                    CheckmatePrefs.putBoolean(AttentionCycleManager.PREF_POMODORO_ENABLED, it)
+                },
+                colors = SwitchDefaults.colors(
+                    checkedThumbColor   = BgDark,
+                    checkedTrackColor   = AccentGreen,
+                    uncheckedThumbColor = White60,
+                    uncheckedTrackColor = White10
+                )
+            )
+        }
+        Text(
+            "Takes effect on your next focus session — won't change one already running.",
+            fontSize = 10.sp, color = White30,
+            modifier = Modifier.padding(start = 46.dp, end = 14.dp, bottom = 8.dp)
+        )
+    }
+}
+
+// ── LLM Provider Settings ─────────────────────────────────────────────────────
+
+private val LLM_PROVIDERS = listOf("Groq", "Claude", "Gemini", "OpenRouter")
+
+@Composable
+private fun LlmProviderSettings(context: Context) {
+    val providers = LLM_PROVIDERS
+
+    var selectedProvider by remember {
+        mutableStateOf(CheckmatePrefs.getString("llm_provider", "Groq") ?: "Groq")
+    }
+
+    // One key state per provider
+    val keys = providers.associateWith { provider ->
+        remember(provider) {
+            mutableStateOf(
+                CheckmatePrefs.getString("llm_key_${provider.lowercase()}", "") ?: ""
+            )
+        }
+    }
+
+    // Provider selector chips
+    Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+        Text("Active Provider", fontSize = 12.sp, color = White60,
+            modifier = Modifier.padding(bottom = 6.dp))
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            providers.forEach { provider ->
+                val selected = provider == selectedProvider
+                FilterChip(
+                    selected = selected,
+                    onClick  = {
+                        selectedProvider = provider
+                        CheckmatePrefs.putString("llm_provider", provider)
+                    },
+                    label    = { Text(provider, fontSize = 12.sp) },
+                    colors   = FilterChipDefaults.filterChipColors(
+                        selectedContainerColor = AccentGreen,
+                        selectedLabelColor     = BgDark
+                    )
+                )
+            }
+        }
+    }
+
+    HorizontalDivider(color = White10)
+
+    // API key field for the currently selected provider
+    val currentKey = keys[selectedProvider]
+    if (currentKey != null) {
+        var showKey by remember { mutableStateOf(false) }
+        var saved   by remember { mutableStateOf(false) }
+
+        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+            Text("$selectedProvider API Key", fontSize = 12.sp, color = White60,
+                modifier = Modifier.padding(bottom = 6.dp))
+            OutlinedTextField(
+                value         = currentKey.value,
+                onValueChange = { currentKey.value = it; saved = false },
+                modifier      = Modifier.fillMaxWidth(),
+                singleLine    = true,
+                placeholder   = { Text("Paste API key here", color = White30, fontSize = 13.sp) },
+                visualTransformation = if (showKey) VisualTransformation.None
+                                       else PasswordVisualTransformation(),
+                trailingIcon  = {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        IconButton(onClick = { showKey = !showKey }) {
+                            Icon(
+                                if (showKey) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+                                null, tint = White60
+                            )
+                        }
+                        IconButton(onClick = {
+                            CheckmatePrefs.putString(
+                                "llm_key_${selectedProvider.lowercase()}",
+                                currentKey.value.trim()
+                            )
+                            saved = true
+                        }) {
+                            Icon(
+                                if (saved) Icons.Default.Check else Icons.Default.Save,
+                                null,
+                                tint = if (saved) AccentGreen else White60
+                            )
+                        }
+                    }
+                },
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor   = AccentGreen,
+                    unfocusedBorderColor = White30,
+                    cursorColor          = AccentGreen,
+                    focusedTextColor     = White90,
+                    unfocusedTextColor   = White90
+                )
+            )
+            if (saved) {
+                Text("Saved ✓", fontSize = 11.sp, color = AccentGreen,
+                    modifier = Modifier.padding(top = 4.dp))
+            }
+        }
+    }
+
+    HorizontalDivider(color = White10)
+
+    // ── Guardian WhatsApp number ──────────────────────────────────────────────
+    var guardianNumber by remember {
+        mutableStateOf(CheckmatePrefs.getString("guardian_number", "") ?: "")
+    }
+    var guardianSaved by remember { mutableStateOf(false) }
+
+    Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+        Text("Guardian WhatsApp Number", fontSize = 12.sp, color = White60,
+            modifier = Modifier.padding(bottom = 6.dp))
+        OutlinedTextField(
+            value         = guardianNumber,
+            onValueChange = { guardianNumber = it; guardianSaved = false },
+            modifier      = Modifier.fillMaxWidth(),
+            singleLine    = true,
+            placeholder   = { Text("+91XXXXXXXXXX", color = White30, fontSize = 13.sp) },
+            leadingIcon   = { Icon(Icons.Default.Phone, null, tint = White60) },
+            trailingIcon  = {
+                IconButton(onClick = {
+                    CheckmatePrefs.putString("guardian_number", guardianNumber.trim())
+                    guardianSaved = true
+                }) {
+                    Icon(
+                        if (guardianSaved) Icons.Default.Check else Icons.Default.Save,
+                        null,
+                        tint = if (guardianSaved) AccentGreen else White60
+                    )
+                }
+            },
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor   = AccentGreen,
+                unfocusedBorderColor = White30,
+                cursorColor          = AccentGreen,
+                focusedTextColor     = White90,
+                unfocusedTextColor   = White90
+            )
+        )
+        if (guardianSaved) {
+            Text("Saved ✓", fontSize = 11.sp, color = AccentGreen,
+                modifier = Modifier.padding(top = 4.dp))
+        }
+    }
+
+    HorizontalDivider(color = White10)
+
+    // ── Guardian Telegram Chat ID ─────────────────────────────────────────────
+    var telegramChatId by remember {
+        mutableStateOf(CheckmatePrefs.getString("telegram_chat_id", "") ?: "")
+    }
+    var telegramSaved by remember { mutableStateOf(false) }
+
+    Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+        Text("Guardian Telegram Chat ID", fontSize = 12.sp, color = White60,
+            modifier = Modifier.padding(bottom = 6.dp))
+        Text(
+            "Guardian: open Telegram → message @userinfobot → copy the id: number here",
+            fontSize = 11.sp,
+            color    = White30,
+            modifier = Modifier.padding(bottom = 6.dp)
+        )
+        OutlinedTextField(
+            value         = telegramChatId,
+            onValueChange = { telegramChatId = it; telegramSaved = false },
+            modifier      = Modifier.fillMaxWidth(),
+            singleLine    = true,
+            placeholder   = { Text("e.g. 123456789", color = White30, fontSize = 13.sp) },
+            leadingIcon   = { Icon(Icons.Default.Send, null, tint = White60) },
+            trailingIcon  = {
+                IconButton(onClick = {
+                    CheckmatePrefs.putString("telegram_chat_id", telegramChatId.trim())
+                    telegramSaved = true
+                }) {
+                    Icon(
+                        if (telegramSaved) Icons.Default.Check else Icons.Default.Save,
+                        null,
+                        tint = if (telegramSaved) AccentGreen else White60
+                    )
+                }
+            },
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor   = AccentGreen,
+                unfocusedBorderColor = White30,
+                cursorColor          = AccentGreen,
+                focusedTextColor     = White90,
+                unfocusedTextColor   = White90
+            )
+        )
+        if (telegramSaved) {
+            Text("Saved ✓", fontSize = 11.sp, color = AccentGreen,
+                modifier = Modifier.padding(top = 4.dp))
+        }
+    }
+}
+
+// ── Voice / TTS Settings ──────────────────────────────────────────────────────
+
+@Composable
+private fun VoiceSettings(context: Context) {
+    var ttsEnabled by remember {
+        mutableStateOf(CheckmatePrefs.getBoolean("tts_enabled", true))
+    }
+
+    Row(
+        modifier          = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 14.dp, vertical = 4.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(Icons.Default.RecordVoiceOver, null, tint = AccentGreen,
+            modifier = Modifier.size(20.dp))
+        Spacer(Modifier.width(12.dp))
+        Column(Modifier.weight(1f)) {
+            Text("Voice Feedback", fontSize = 14.sp, color = White90)
+            Text(
+                if (ttsEnabled) "Mentor speaks task summaries aloud" else "Voice feedback is off",
+                fontSize = 11.sp, color = White60
+            )
+        }
+        Switch(
+            checked         = ttsEnabled,
+            onCheckedChange = {
+                ttsEnabled = it
+                CheckmatePrefs.putBoolean("tts_enabled", it)
+            },
+            colors = SwitchDefaults.colors(
+                checkedThumbColor   = BgDark,
+                checkedTrackColor   = AccentGreen,
+                uncheckedThumbColor = White60,
+                uncheckedTrackColor = White10
+            )
+        )
+    }
+}
+
+// ── Shared layout helpers ─────────────────────────────────────────────────────
+
+@Composable
+private fun SettingSection(title: String, content: @Composable ColumnScope.() -> Unit) {
+    Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+        Text(
+            title,
+            fontSize      = 11.sp,
+            fontWeight    = FontWeight.Bold,
+            letterSpacing = androidx.compose.ui.unit.TextUnit(2f, androidx.compose.ui.unit.TextUnitType.Sp),
+            color         = White60,
+            modifier      = Modifier.padding(top = 16.dp, bottom = 8.dp)
+        )
+        Surface(
+            shape  = RoundedCornerShape(12.dp),
+            color  = BgCard,
+            border = BorderStroke(0.5.dp, White10)
+        ) {
+            Column(content = content)
+        }
+    }
+}
+
+@Composable
+private fun SettingTile(title: String, subtitle: String, icon: ImageVector, onClick: () -> Unit) {
+    Surface(onClick = onClick, color = androidx.compose.ui.graphics.Color.Transparent) {
+        Row(
+            modifier          = Modifier.fillMaxWidth().padding(14.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(icon, null, tint = AccentGreen, modifier = Modifier.size(20.dp))
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text(title, fontSize = 14.sp, color = White90)
+                Text(subtitle, fontSize = 11.sp, color = White60)
+            }
+            Icon(Icons.Default.ChevronRight, null, tint = White30, modifier = Modifier.size(16.dp))
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt =====
+package com.checkmate.ui.stats
+
+import android.content.Context
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.checkmate.core.AppUsageTracker
+import com.checkmate.planner.PlanStore
+import com.checkmate.psyche.BehaviorLedger
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+data class StatsState(
+    val streakDays:           Int                      = 0,
+    val todayCompletion:      Int                      = 0,
+    val weekCompletion:       Int                      = 0,
+    val weeklyData:           List<Pair<String, Int>>  = emptyList(),
+    val subjectStats:         List<Pair<String, Int>>  = emptyList(),
+    val attentionChecksPassed: Int                     = 0,
+    val attentionChecksMissed: Int                     = 0,
+    val avgFocusMinutes:      Int                      = 0,
+    // App usage (Digital Wellbeing-style)
+    val hasUsageAccess:       Boolean                  = true,
+    val appUsageToday:        List<Pair<String, Int>>  = emptyList(), // label -> minutes
+    val totalScreenMinutesToday: Int                   = 0,
+    val screenTimeHistory:    List<Pair<String, Int>>  = emptyList()  // day -> minutes
+)
+
+class StatsViewModel : ViewModel() {
+    private val _state = MutableStateFlow(StatsState())
+    val state: StateFlow<StatsState> = _state.asStateFlow()
+
+    init { loadStats() }
+
+    private fun loadStats() {
+        viewModelScope.launch {
+            val streak       = PlanStore.getStreakDays()
+            val todayPct     = PlanStore.getTodayCompletionPercent()
+            val weekPct      = PlanStore.getWeekCompletionPercent()
+            val weekly       = PlanStore.getWeeklyData()
+            val subjectData  = PlanStore.getSubjectStats()
+            val ledger       = BehaviorLedger.getAttentionStats()
+            _state.update { it.copy(
+                streakDays            = streak,
+                todayCompletion       = todayPct,
+                weekCompletion        = weekPct,
+                weeklyData            = weekly,
+                subjectStats          = subjectData,
+                attentionChecksPassed = ledger.checksPassed,
+                attentionChecksMissed = ledger.checksMissed,
+                avgFocusMinutes       = ledger.avgFocusMinutes
+            )}
+        }
+    }
+
+    /**
+     * Loads on-device app usage history (today's breakdown + 7-day screen
+     * time). Called from StatsScreen with the composable's Context since
+     * UsageStatsManager needs it. Safe to call repeatedly (e.g. on resume).
+     */
+    fun loadAppUsage(context: Context) {
+        viewModelScope.launch {
+            val granted = AppUsageTracker.hasUsageAccess(context)
+            if (!granted) {
+                _state.update { it.copy(hasUsageAccess = false) }
+                return@launch
+            }
+            val (today, history) = withContext(Dispatchers.IO) {
+                val today = AppUsageTracker.getTodayUsage(context, limit = 6)
+                    .map { it.label to (it.foregroundMillis / 60_000L).toInt() }
+                val history = AppUsageTracker.getScreenTimeHistory(context, days = 7)
+                    .map { it.dayLabel to (it.totalMillis / 60_000L).toInt() }
+                today to history
+            }
+            val totalMinutes = AppUsageTracker.getTodayTotalMillis(context).let { (it / 60_000L).toInt() }
+            _state.update { it.copy(
+                hasUsageAccess          = true,
+                appUsageToday           = today,
+                totalScreenMinutesToday = totalMinutes,
+                screenTimeHistory       = history
+            )}
+        }
+    }
+}
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt =====
+package com.checkmate.ui.stats
+
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.checkmate.ui.theme.*
+
+@Composable
+fun StatsScreen(vm: StatsViewModel = viewModel()) {
+    val state by vm.state.collectAsState()
+    val context = LocalContext.current
+
+    LaunchedEffect(Unit) { vm.loadAppUsage(context) }
+
+    Column(
+        modifier            = Modifier.fillMaxSize().background(BgDark).verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        Spacer(Modifier.height(20.dp))
+        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+            Text("Stats", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = White90)
+            Text("Your performance overview", fontSize = 13.sp, color = White60)
+        }
+        Row(
+            modifier              = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            // Fix: Icons.Default.LocalFire does not exist — correct name is LocalFireDepartment
+            StatTile("Streak", "${state.streakDays}d", Icons.Default.LocalFireDepartment, AccentAmber, Modifier.weight(1f))
+            StatTile("Today",  "${state.todayCompletion}%", Icons.Default.Today,     AccentGreen, Modifier.weight(1f))
+            StatTile("Week",   "${state.weekCompletion}%",  Icons.Default.DateRange,  AccentBlue,  Modifier.weight(1f))
+        }
+        Surface(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            shape    = RoundedCornerShape(14.dp),
+            color    = BgCard,
+            border   = BorderStroke(0.5.dp, White10)
+        ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text("This Week", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+                Spacer(Modifier.height(16.dp))
+                WeeklyBarChart(state.weeklyData)
+            }
+        }
+        Surface(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            shape    = RoundedCornerShape(14.dp),
+            color    = BgCard,
+            border   = BorderStroke(0.5.dp, White10)
+        ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text("By Subject", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+                Spacer(Modifier.height(12.dp))
+                state.subjectStats.forEach { (subject, pct) ->
+                    SubjectBar(subject, pct)
+                    Spacer(Modifier.height(8.dp))
+                }
+            }
+        }
+        Surface(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            shape    = RoundedCornerShape(14.dp),
+            color    = BgCard,
+            border   = BorderStroke(0.5.dp, White10)
+        ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text("Attention Quality", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+                Spacer(Modifier.height(8.dp))
+                Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
+                    AttentionStat("Checks Passed", "${state.attentionChecksPassed}")
+                    AttentionStat("Checks Missed", "${state.attentionChecksMissed}")
+                    AttentionStat("Avg Focus",     "${state.avgFocusMinutes}m")
+                }
+            }
+        }
+
+        // ── App Usage Today (Digital Wellbeing-style) ─────────────────────────
+        Surface(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            shape    = RoundedCornerShape(14.dp),
+            color    = BgCard,
+            border   = BorderStroke(0.5.dp, White10)
+        ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Row(
+                    modifier              = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment     = Alignment.CenterVertically
+                ) {
+                    Text("App Usage Today", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+                    if (state.hasUsageAccess) {
+                        Text(
+                            formatMinutes(state.totalScreenMinutesToday),
+                            fontSize = 13.sp, color = AccentGreen, fontFamily = FontFamily.Monospace
+                        )
+                    }
+                }
+                Spacer(Modifier.height(12.dp))
+
+                if (!state.hasUsageAccess) {
+                    Text(
+                        "Grant Usage Access in Settings → Permissions to see app usage history.",
+                        fontSize = 12.sp, color = White60
+                    )
+                } else if (state.appUsageToday.isEmpty()) {
+                    Text("No significant usage recorded yet today.", fontSize = 12.sp, color = White60)
+                } else {
+                    val maxMinutes = state.appUsageToday.maxOf { it.second }.coerceAtLeast(1)
+                    state.appUsageToday.forEach { (label, minutes) ->
+                        UsageBar(label, minutes, maxMinutes)
+                        Spacer(Modifier.height(8.dp))
+                    }
+                }
+            }
+        }
+
+        // ── Screen Time History (7 days) ──────────────────────────────────────
+        if (state.hasUsageAccess && state.screenTimeHistory.isNotEmpty()) {
+            Surface(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                shape    = RoundedCornerShape(14.dp),
+                color    = BgCard,
+                border   = BorderStroke(0.5.dp, White10)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text("Screen Time — Last 7 Days", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+                    Spacer(Modifier.height(16.dp))
+                    ScreenTimeBarChart(state.screenTimeHistory)
+                }
+            }
+        }
+
+        Spacer(Modifier.height(24.dp))
+    }
+}
+
+@Composable
+private fun StatTile(label: String, value: String, icon: androidx.compose.ui.graphics.vector.ImageVector, color: Color, modifier: Modifier) {
+    Surface(modifier = modifier, shape = RoundedCornerShape(12.dp), color = BgCard, border = BorderStroke(0.5.dp, White10)) {
+        Column(modifier = Modifier.padding(14.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Icon(icon, null, tint = color, modifier = Modifier.size(22.dp))
+            Spacer(Modifier.height(6.dp))
+            Text(value, fontSize = 20.sp, fontWeight = FontWeight.Bold, color = color)
+            Text(label, fontSize = 11.sp, color = White60)
+        }
+    }
+}
+
+@Composable
+private fun WeeklyBarChart(data: List<Pair<String, Int>>) {
+    val maxVal = data.maxOfOrNull { it.second }?.coerceAtLeast(1) ?: 1
+    Row(
+        modifier              = Modifier.fillMaxWidth().height(100.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment     = Alignment.Bottom
+    ) {
+        data.forEach { (day, pct) ->
+            Column(
+                modifier            = Modifier.weight(1f),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Bottom
+            ) {
+                Box(
+                    modifier         = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 4.dp),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    val barHeight = (pct.toFloat() / maxVal) * 80f
+                    Box(
+                        modifier = Modifier
+                            .width(28.dp)
+                            .height(barHeight.coerceAtLeast(4f).dp)
+                            .clip(RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp))
+                            .background(if (pct >= 70) AccentGreen else if (pct >= 40) AccentAmber else AccentRed)
+                    )
+                }
+                Spacer(Modifier.height(4.dp))
+                Text(day, fontSize = 10.sp, color = White60, fontFamily = FontFamily.Monospace)
+            }
+        }
+    }
+}
+
+@Composable
+private fun SubjectBar(subject: String, pct: Int) {
+    Column {
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+            Text(subject, fontSize = 13.sp, color = White90)
+            Text("$pct%", fontSize = 13.sp, color = White60, fontFamily = FontFamily.Monospace)
+        }
+        Spacer(Modifier.height(4.dp))
+        LinearProgressIndicator(
+            progress   = { pct / 100f },
+            modifier   = Modifier.fillMaxWidth().height(5.dp).clip(RoundedCornerShape(3.dp)),
+            color      = AccentGreen,
+            trackColor = White10
+        )
+    }
+}
+
+@Composable
+private fun AttentionStat(label: String, value: String) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(value, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = White90)
+        Text(label, fontSize = 11.sp, color = White60)
+    }
+}
+
+// ── App usage helpers ─────────────────────────────────────────────────────────
+
+@Composable
+private fun UsageBar(label: String, minutes: Int, maxMinutes: Int) {
+    Column {
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+            Text(label, fontSize = 13.sp, color = White90, maxLines = 1)
+            Text(formatMinutes(minutes), fontSize = 12.sp, color = White60, fontFamily = FontFamily.Monospace)
+        }
+        Spacer(Modifier.height(4.dp))
+        LinearProgressIndicator(
+            progress   = { (minutes.toFloat() / maxMinutes.toFloat()).coerceIn(0f, 1f) },
+            modifier   = Modifier.fillMaxWidth().height(5.dp).clip(RoundedCornerShape(3.dp)),
+            color      = AccentBlue,
+            trackColor = White10
+        )
+    }
+}
+
+@Composable
+private fun ScreenTimeBarChart(data: List<Pair<String, Int>>) {
+    val maxVal = data.maxOfOrNull { it.second }?.coerceAtLeast(1) ?: 1
+    Row(
+        modifier              = Modifier.fillMaxWidth().height(100.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment     = Alignment.Bottom
+    ) {
+        data.forEach { (day, minutes) ->
+            Column(
+                modifier            = Modifier.weight(1f),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Bottom
+            ) {
+                Box(
+                    modifier         = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 4.dp),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    val barHeight = (minutes.toFloat() / maxVal) * 80f
+                    Box(
+                        modifier = Modifier
+                            .width(28.dp)
+                            .height(barHeight.coerceAtLeast(4f).dp)
+                            .clip(RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp))
+                            .background(AccentBlue)
+                    )
+                }
+                Spacer(Modifier.height(4.dp))
+                Text(day, fontSize = 10.sp, color = White60, fontFamily = FontFamily.Monospace)
+            }
+        }
+    }
+}
+
+private fun formatMinutes(totalMinutes: Int): String {
+    val h = totalMinutes / 60
+    val m = totalMinutes % 60
+    return if (h > 0) "${h}h ${m}m" else "${m}m"
+}
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt =====
+package com.checkmate.service
+
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
+import com.checkmate.automation.AutomationEngine
+import com.checkmate.core.AppUsageTracker
+import com.checkmate.core.CheckmatePrefs
+import com.checkmate.core.DailyChecklist
+import com.checkmate.planner.PlanStore
+import com.checkmate.planner.model.TaskState
+import java.util.Calendar
+
+object GuardianNotifier {
+
+    private const val TAG = "GuardianNotifier"
+    const val ACTION_EOD_SUMMARY = "com.checkmate.EOD_SUMMARY"
+
+    fun notifyTaskStarted(context: Context, subject: String, topic: String, durationMinutes: Int) {
+        val number = getGuardianNumber() ?: return
+        val msg = "Checkmate: Started $subject — $topic (${durationMinutes}min) at ${timeNow()}"
+        openWhatsAppAndSend(context, number, msg)
+        Log.d(TAG, "Guardian notified: task started")
+    }
+
+    fun notifySkipStreak(context: Context, skipCount: Int, lastTopic: String) {
+        val number = getGuardianNumber() ?: return
+        val msg = "Checkmate Alert: $skipCount tasks skipped in a row. Last: $lastTopic. Time: ${timeNow()}"
+        openWhatsAppAndSend(context, number, msg)
+        Log.d(TAG, "Guardian notified: skip streak=$skipCount")
+    }
+
+    fun scheduleEndOfDaySummary(context: Context) {
+        val am = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val pi = PendingIntent.getBroadcast(
+            context, 9001,
+            Intent(context, EodSummaryReceiver::class.java).apply { action = ACTION_EOD_SUMMARY },
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        val cal = Calendar.getInstance().apply {
+            set(Calendar.HOUR_OF_DAY, 21)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+            if (timeInMillis < System.currentTimeMillis()) add(Calendar.DAY_OF_YEAR, 1)
+        }
+        am.setRepeating(AlarmManager.RTC_WAKEUP, cal.timeInMillis, AlarmManager.INTERVAL_DAY, pi)
+        Log.d(TAG, "EOD summary alarm set for 21:00 daily")
+    }
+
+    /**
+     * Builds and sends the daily report to the guardian — tasks, checklist,
+     * and (new) an on-device app usage breakdown for the day, Digital
+     * Wellbeing-style. Sent via WhatsApp (existing path) and, if a Telegram
+     * chat id is configured, also pushed straight to the guardian bot so the
+     * Telegram channel carries the same usage history, not just screenshots.
+     */
+    fun sendEndOfDaySummary(context: Context) {
+        val number = getGuardianNumber()
+        val tasks   = PlanStore.getTodayTasksSnapshot_Sync()
+        val done    = tasks.count { it.state == TaskState.DONE }
+        val skipped = tasks.count { it.state == TaskState.SKIPPED }
+        val total   = tasks.size
+        val pct     = if (total > 0) done * 100 / total else 0
+
+        val taskLines = tasks.joinToString("\n") { t ->
+            val icon = when (t.state) {
+                TaskState.DONE    -> "done"
+                TaskState.SKIPPED -> "skip"
+                else              -> "miss"
+            }
+            "[$icon] ${t.subject}: ${t.topic}"
+        }
+
+        val checklistSummary = DailyChecklist.getTodaySummaryText()
+        val usageSummary = AppUsageTracker.buildUsageReportText(context)
+
+        val msg = buildString {
+            appendLine("Checkmate Daily Report — ${dateToday()}")
+            appendLine("Tasks: $done/$total ($pct%)")
+            if (skipped > 0) appendLine("Skipped: $skipped")
+            appendLine()
+            appendLine(taskLines)
+            if (checklistSummary.isNotBlank()) {
+                appendLine()
+                appendLine(checklistSummary)
+            }
+            appendLine()
+            appendLine(usageSummary)
+        }.trim()
+
+        if (number != null) {
+            openWhatsAppAndSend(context, number, msg)
+            Log.d(TAG, "EOD summary sent to guardian via WhatsApp")
+        }
+
+        // Push the same report straight to the Telegram bot, independent of
+        // the WhatsApp path, so guardians who only use Telegram still get it.
+        if (TelegramAlertBot.getChatId() != null) {
+            Thread {
+                TelegramAlertBot.sendAlert(context, msg)
+                Log.d(TAG, "EOD summary sent to guardian via Telegram")
+            }.start()
+        }
+    }
+
+    /**
+     * Sends just the app usage breakdown to the guardian via Telegram —
+     * useful as an on-demand "usage" report independent of the once-a-day
+     * EOD summary. Call from a background thread or let it spin its own.
+     */
+    fun sendAppUsageReport(context: Context) {
+        if (TelegramAlertBot.getChatId() == null) {
+            Log.w(TAG, "telegram_chat_id not set — skipping usage report")
+            return
+        }
+        val text = "Checkmate — ${dateToday()}\n${AppUsageTracker.buildUsageReportText(context)}"
+        Thread {
+            TelegramAlertBot.sendAlert(context, text)
+            Log.d(TAG, "Usage report sent to guardian via Telegram")
+        }.start()
+    }
+
+    fun notifyDistractionAlert(
+        context: Context,
+        kind: String,
+        target: String,
+        screenshotUri: Uri? = null
+    ) {
+        val label = if (kind == "app") "app: $target" else "website: $target"
+        val msg   = "⚠️ Checkmate Alert: Student attempted to open blocked $label " +
+                    "3 times during study session at ${timeNow()}."
+        Log.w(TAG, "Distraction alert: $label")
+
+        val number = getGuardianNumber()
+        if (number != null) {
+            openWhatsAppAndSend(context, number, msg)
+            Log.d(TAG, "Distraction alert sent via WhatsApp (text)")
+        }
+
+        Thread {
+            TelegramAlertBot.sendAlert(context, msg, screenshotUri)
+            Log.d(TAG, "Distraction alert sent via Telegram (screenshot)")
+        }.start()
+    }
+
+    private fun openWhatsAppAndSend(context: Context, number: String, message: String) {
+        val clean = number.replace(Regex("[^0-9]"), "")
+        if (clean.isBlank()) { Log.e(TAG, "Empty guardian number"); return }
+
+        AutomationEngine.queueWhatsAppMessage(message)
+
+        val intentA = Intent(Intent.ACTION_VIEW,
+            Uri.parse("whatsapp://send?phone=$clean")).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        if (runCatching { context.startActivity(intentA) }.isSuccess) {
+            Log.d(TAG, "WhatsApp opened via method A"); return
+        }
+
+        val intentB = Intent(Intent.ACTION_VIEW,
+            Uri.parse("https://wa.me/$clean")).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        }
+        runCatching { context.startActivity(intentB) }
+            .onSuccess { Log.d(TAG, "WhatsApp opened via method B") }
+            .onFailure { Log.e(TAG, "Both WA methods failed: ${it.message}") }
+    }
+
+    private fun getGuardianNumber(): String? {
+        val n = CheckmatePrefs.getString("guardian_number", null)
+        if (n.isNullOrBlank()) { Log.w(TAG, "Guardian number not set"); return null }
+        return n
+    }
+
+    private fun timeNow(): String {
+        val c = Calendar.getInstance()
+        return String.format("%02d:%02d", c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE))
+    }
+
+    private fun dateToday(): String {
+        val c = Calendar.getInstance()
+        return String.format("%02d/%02d/%04d",
+            c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH) + 1, c.get(Calendar.YEAR))
+    }
+}
+
+class EodSummaryReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent?) {
+        if (intent?.action == GuardianNotifier.ACTION_EOD_SUMMARY)
+            GuardianNotifier.sendEndOfDaySummary(context)
+    }
+}
