@@ -12,15 +12,328 @@ No ninja errors
 No missing deps
 
 -- KOTLIN/JAVA ERRORS --
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt:9:12 Redeclaration:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt:90:12 Redeclaration:
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt:89:40 Argument type mismatch: actual type is 'kotlin.Function2<kotlin.String, ERROR CLASS: Cannot infer type for parameter name, kotlin.Unit>', but 'kotlin.Function1<kotlin.String, kotlin.Unit>' was expected.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt:89:47 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:80:40 Unresolved reference 'leaveGuild'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:82:40 Unresolved reference 'generateInvite'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:88:28 Unresolved reference 'updateGuildName'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:100:27 Unresolved reference 'deleteGuild'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:104:13 @Composable invocations can only happen from the context of a @Composable function
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:9:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:10:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:11:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:77:65 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:78:65 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:79:45 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:80:45 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:81:45 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:123:13 Unresolved reference 'ScreenCaptureManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:126:9 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:133:24 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:142:30 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:148:26 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:156:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:156:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:160:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:160:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:163:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:163:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:166:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:166:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:169:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:170:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:171:29 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:177:21 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:180:63 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/text/compareTo' in 'compareTo'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:180:66 Unresolved reference 'StatusReporter'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:184:25 Unresolved reference 'StatusReporter'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:193:35 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:196:16 'when' expression must be exhaustive. Add an 'else' branch.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:197:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:198:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:199:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:200:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:201:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:202:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:209:16 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:209:33 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:221:22 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:227:22 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:227:54 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:262:9 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:36:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:37:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:38:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:69:18 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:161:15 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:161:15 Property delegate must have a 'getValue(Nothing?, KProperty0<ERROR CLASS: Cannot infer argument for type parameter T>)' method. None of the following functions is applicable:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:163:23 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:164:16 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:164:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:167:22 'when' expression must be exhaustive. Add an 'else' branch.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:167:31 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:168:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:169:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:170:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:171:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:172:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:173:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:178:35 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:179:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:179:46 Unresolved reference 'pomodoroEnabled'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:180:48 Unresolved reference 'totalDurationSecs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:181:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:182:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:185:29 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:186:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:187:26 Unresolved reference 'phaseSecondsLeft'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:190:16 Unresolved reference 'phaseSecondsLeft'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:191:16 Unresolved reference 'phaseSecondsLeft'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:193:22 'when' expression must be exhaustive. Add an 'else' branch.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:193:31 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:194:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:195:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:196:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:197:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:198:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:199:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:26 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:35 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:63 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:72 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:217:16 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:217:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:244:29 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:256:29 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:286:28 Unresolved reference 'pomodoroEnabled'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:289:51 Unresolved reference 'cycleIndex'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:300:28 Unresolved reference 'needsAttentionCheck'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:309:37 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:313:28 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:313:37 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:314:49 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:314:58 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:315:49 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:315:58 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:326:44 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:326:53 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:326:76 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:327:42 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:10:22 Unresolved reference 'automation'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:11:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:12:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:13:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:14:22 Unresolved reference 'planner'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:15:22 Unresolved reference 'planner'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:64:23 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:65:37 Unresolved reference 'it'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:65:49 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:66:37 Unresolved reference 'it'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:66:49 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:68:43 None of the following candidates is applicable:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:68:49 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:70:52 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:71:32 Unresolved reference 'state'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:72:17 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:73:17 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:76:26 Unresolved reference 'subject'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:76:40 Unresolved reference 'topic'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:79:32 Unresolved reference 'DailyChecklist'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:80:28 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:85:25 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/compareTo' in 'compareTo'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:87:13 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:90:17 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:93:13 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:103:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:105:17 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:117:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:121:51 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:123:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:146:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:155:9 Unresolved reference 'AutomationEngine'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:175:17 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:177:16 Return type mismatch: expected 'kotlin.String?', actual 'kotlin.Any'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:23:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:24:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:26:25 Unresolved reference 'theme'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:35:9 Unresolved reference 'AppSelectorScreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:39:9 Unresolved reference 'WebsiteBlockerScreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:44:50 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:44:61 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:50:86 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:67:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:73:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:79:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:104:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:116:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:137:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:137:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:138:9 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:138:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:140:28 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:140:28 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:141:9 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:141:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:141:50 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:154:30 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:158:70 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:164:47 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:171:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:174:43 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:175:43 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:176:43 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:177:43 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:182:35 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:191:52 Unresolved reference 'AccentAmber'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:194:67 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:200:47 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:207:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:207:47 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:210:43 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:211:43 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:212:43 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:213:43 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:219:39 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:234:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:241:17 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:248:59 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:257:25 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:261:50 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:262:50 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:269:31 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:278:73 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:285:70 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:293:46 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:297:29 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:306:51 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:306:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:312:44 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:313:44 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:314:44 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:315:44 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:316:44 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:320:59 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:326:31 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:330:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:335:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:342:61 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:343:70 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:346:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:352:51 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:352:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:357:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:358:40 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:359:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:360:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:361:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:365:55 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:370:31 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:374:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:379:69 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:384:24 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:392:62 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:393:69 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:396:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:402:51 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:402:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:407:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:408:40 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:409:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:410:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:411:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:415:55 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:425:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:425:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:426:9 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:426:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:435:58 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:439:62 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:442:43 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:449:17 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:452:39 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:453:39 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:454:39 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:455:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:471:29 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:476:22 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:477:22 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:477:43 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:491:37 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:494:55 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:495:58 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:497:59 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:20:25 Unresolved reference 'theme'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:30:54 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:30:65 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:35:83 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:36:73 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:43:91 Unresolved reference 'AccentAmber'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:44:86 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:45:87 Unresolved reference 'AccentBlue'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:50:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:51:24 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:51:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:54:95 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:62:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:63:24 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:63:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:66:96 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:77:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:78:24 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:78:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:81:103 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:95:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:96:24 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:96:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:104:105 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:108:55 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:117:51 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:120:96 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:136:28 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:137:28 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:137:49 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:140:115 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:153:77 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:153:94 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:153:115 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:158:51 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:30 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:56 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:88 Unresolved reference 'AccentAmber'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:105 Unresolved reference 'AccentRed'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:191:53 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:201:53 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:202:53 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:208:26 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:209:26 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:217:77 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:218:47 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:228:51 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:229:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:235:26 Unresolved reference 'AccentBlue'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:236:26 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:265:30 Overload resolution ambiguity between candidates:
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:265:41 Unresolved reference 'AccentBlue'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:269:53 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:6:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:7:22 Unresolved reference 'planner'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:8:22 Unresolved reference 'psyche'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:38:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:39:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:40:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:41:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:42:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:43:32 Unresolved reference 'BehaviorLedger'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:64:27 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:69:36 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:69:36 Function 'component1()' is ambiguous for this expression: 
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:69:36 Function 'component2()' is ambiguous for this expression: 
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:70:29 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:71:26 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:71:31 Unresolved reference 'label'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:71:44 Unresolved reference 'foregroundMillis'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:72:31 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:73:26 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:73:31 Unresolved reference 'dayLabel'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:73:47 Unresolved reference 'totalMillis'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:74:23 Not enough information to infer type argument for 'A'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:74:23 Not enough information to infer type argument for 'B'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:76:32 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:76:81 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:76:87 None of the following candidates is applicable:
 
 -- XML RESOURCE ERRORS --
 Merging manifest with lower [androidx.hilt:hilt-navigation-compose:1.2.0] AndroidManifest.xml:2:1-7:12
@@ -548,11 +861,7 @@ Merging application with lower [com.jakewharton.timber:timber:4.7.0] AndroidMani
 -- BUILD TASK FAILURES --
 > Task :app:compileDebugKotlin FAILED
 FAILURE: Build failed with an exception.
-<<<<<<< Updated upstream
-BUILD FAILED in 1m 2s
-=======
-BUILD FAILED in 59s
->>>>>>> Stashed changes
+BUILD FAILED in 3m 38s
 
 -- EXCEPTION STACK TRACES --
 * Exception is:

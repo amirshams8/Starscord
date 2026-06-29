@@ -1,566 +1,155 @@
-<<<<<<< Updated upstream
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with JetifyTransform
-Transforming play-services-tasks-18.1.0.aar (com.google.android.gms:play-services-tasks:18.1.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with JetifyTransform
-Transforming play-services-basement-18.3.0.aar (com.google.android.gms:play-services-basement:18.3.0) with AarToClassTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarToClassTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with JetifyTransform
-Transforming fragment-1.5.1.aar (androidx.fragment:fragment:1.5.1) with AarToClassTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-release.aar (androidx.lifecycle:lifecycle-viewmodel-android:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-ktx-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3) with AarToClassTransform
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with JetifyTransform
-Transforming lifecycle-runtime-ktx-release.aar (androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.3) with AarToClassTransform
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-compose-release.aar (androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3) with AarToClassTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with JetifyTransform
-Transforming ui-release.aar (androidx.compose.ui:ui-android:1.6.8) with AarToClassTransform
-Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with JetifyTransform
-Transforming ui-tooling-release.aar (androidx.compose.ui:ui-tooling-android:1.6.8) with AarToClassTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with JetifyTransform
-Transforming ui-test-manifest-1.6.8.aar (androidx.compose.ui:ui-test-manifest:1.6.8) with AarToClassTransform
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with JetifyTransform
-Transforming activity-1.9.0.aar (androidx.activity:activity:1.9.0) with AarToClassTransform
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with JetifyTransform
-Transforming lifecycle-viewmodel-savedstate-2.8.3.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.3) with AarToClassTransform
-Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with JetifyTransform
-Transforming kotlinx-coroutines-android-1.8.1.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1) with IdentityTransform
-Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with JetifyTransform
-Transforming media3-exoplayer-1.3.1.aar (androidx.media3:media3-exoplayer:1.3.1) with AarToClassTransform
-Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with JetifyTransform
-Transforming media3-common-1.3.1.aar (androidx.media3:media3-common:1.3.1) with AarToClassTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with JetifyTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarToClassTransform
-Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with JetifyTransform
-Transforming savedstate-ktx-1.2.1.aar (androidx.savedstate:savedstate-ktx:1.2.1) with AarToClassTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with JetifyTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarToClassTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with JetifyTransform
-Transforming converter-gson-2.11.0.jar (com.squareup.retrofit2:converter-gson:2.11.0) with IdentityTransform
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with JetifyTransform
-Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with IdentityTransform
-Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with JetifyTransform
-Transforming logging-interceptor-4.12.0.jar (com.squareup.okhttp3:logging-interceptor:4.12.0) with IdentityTransform
-Transforming livekit-android-2.7.1.aar (io.livekit:livekit-android:2.7.1) with JetifyTransform
-Transforming livekit-android-2.7.1.aar (io.livekit:livekit-android:2.7.1) with AarToClassTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with JetifyTransform
-Transforming okhttp-4.12.0.jar (com.squareup.okhttp3:okhttp:4.12.0) with IdentityTransform
-=======
->>>>>>> Stashed changes
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with JetifyTransform
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with IdentityTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with JetifyTransform
-Transforming audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a.aar (com.github.davidliu:audioswitch:89582c47c9a04c62f90aa5e57251af4800a62c9a) with AarToClassTransform
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with JetifyTransform
-Transforming security-crypto-1.1.0-alpha06.aar (androidx.security:security-crypto:1.1.0-alpha06) with AarToClassTransform
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with JetifyTransform
-Transforming sqlite-framework-2.4.0.aar (androidx.sqlite:sqlite-framework:2.4.0) with AarToClassTransform
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with JetifyTransform
-Transforming sqlite-2.4.0.aar (androidx.sqlite:sqlite:2.4.0) with AarToClassTransform
-Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with JetifyTransform
-Transforming firebase-datatransport-18.2.0.aar (com.google.firebase:firebase-datatransport:18.2.0) with AarToClassTransform
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with JetifyTransform
-Transforming transport-backend-cct-3.1.9.aar (com.google.android.datatransport:transport-backend-cct:3.1.9) with AarToClassTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarToClassTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with JetifyTransform
-Transforming firebase-encoders-json-18.0.0.aar (com.google.firebase:firebase-encoders-json:18.0.0) with AarToClassTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarToClassTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with JetifyTransform
-Transforming transport-runtime-3.1.9.aar (com.google.android.datatransport:transport-runtime:3.1.9) with AarToClassTransform
-Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with JetifyTransform
-Transforming firebase-encoders-proto-16.0.0.jar (com.google.firebase:firebase-encoders-proto:16.0.0) with IdentityTransform
-Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with JetifyTransform
-Transforming firebase-encoders-17.0.0.jar (com.google.firebase:firebase-encoders:17.0.0) with IdentityTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with JetifyTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarToClassTransform
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with JetifyTransform
-Transforming collection-jvm-1.4.0.jar (androidx.collection:collection-jvm:1.4.0) with IdentityTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarToClassTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarToClassTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with JetifyTransform
-Transforming transport-api-3.1.0.aar (com.google.android.datatransport:transport-api:3.1.0) with AarToClassTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarToClassTransform
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with JetifyTransform
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
-Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with JetifyTransform
-Transforming annotation-jvm-1.8.0.jar (androidx.annotation:annotation-jvm:1.8.0) with IdentityTransform
-Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with JetifyTransform
-Transforming okio-jvm-3.8.0.jar (com.squareup.okio:okio-jvm:3.8.0) with IdentityTransform
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with JetifyTransform
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with IdentityTransform
-Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with JetifyTransform
-Transforming kotlin-stdlib-2.0.0.jar (org.jetbrains.kotlin:kotlin-stdlib:2.0.0) with IdentityTransform
-Transforming media3-ui-1.3.1.aar (androidx.media3:media3-ui:1.3.1) with JetifyTransform
-Transforming media3-ui-1.3.1.aar (androidx.media3:media3-ui:1.3.1) with AarToClassTransform
-Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with JetifyTransform
-Transforming gson-2.11.0.jar (com.google.code.gson:gson:2.11.0) with IdentityTransform
-Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with JetifyTransform
-Transforming annotations-23.0.0.jar (org.jetbrains:annotations:23.0.0) with IdentityTransform
-Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with JetifyTransform
-Transforming guava-32.1.3-android.jar (com.google.guava:guava:32.1.3-android) with IdentityTransform
-Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with JetifyTransform
-Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with IdentityTransform
-Transforming hilt-core-2.51.jar (com.google.dagger:hilt-core:2.51) with JetifyTransform
-Transforming hilt-core-2.51.jar (com.google.dagger:hilt-core:2.51) with IdentityTransform
-Transforming dagger-2.51.jar (com.google.dagger:dagger:2.51) with JetifyTransform
-Transforming dagger-2.51.jar (com.google.dagger:dagger:2.51) with IdentityTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarToClassTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarToClassTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with JetifyTransform
-Transforming firebase-components-18.0.0.aar (com.google.firebase:firebase-components:18.0.0) with AarToClassTransform
-Transforming firebase-annotations-16.2.0.jar (com.google.firebase:firebase-annotations:16.2.0) with JetifyTransform
-Transforming firebase-annotations-16.2.0.jar (com.google.firebase:firebase-annotations:16.2.0) with IdentityTransform
-Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with JetifyTransform
-Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with IdentityTransform
-Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with JetifyTransform
-Transforming dagger-lint-aar-2.51.aar (com.google.dagger:dagger-lint-aar:2.51) with AarToClassTransform
-Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with JetifyTransform
-Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with IdentityTransform
-Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with JetifyTransform
-Transforming error_prone_annotations-2.27.0.jar (com.google.errorprone:error_prone_annotations:2.27.0) with IdentityTransform
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with JetifyTransform
-Transforming android-prefixed-125.6422.04.aar (io.github.webrtc-sdk:android-prefixed:125.6422.04) with AarToClassTransform
-Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with JetifyTransform
-Transforming failureaccess-1.0.1.jar (com.google.guava:failureaccess:1.0.1) with IdentityTransform
-Transforming media3-container-1.3.1.aar (androidx.media3:media3-container:1.3.1) with JetifyTransform
-Transforming media3-container-1.3.1.aar (androidx.media3:media3-container:1.3.1) with AarToClassTransform
-Transforming media3-database-1.3.1.aar (androidx.media3:media3-database:1.3.1) with JetifyTransform
-Transforming media3-database-1.3.1.aar (androidx.media3:media3-database:1.3.1) with AarToClassTransform
-Transforming media3-datasource-1.3.1.aar (androidx.media3:media3-datasource:1.3.1) with JetifyTransform
-Transforming media3-datasource-1.3.1.aar (androidx.media3:media3-datasource:1.3.1) with AarToClassTransform
-Transforming media3-decoder-1.3.1.aar (androidx.media3:media3-decoder:1.3.1) with JetifyTransform
-Transforming media3-decoder-1.3.1.aar (androidx.media3:media3-decoder:1.3.1) with AarToClassTransform
-Transforming media3-extractor-1.3.1.aar (androidx.media3:media3-extractor:1.3.1) with JetifyTransform
-Transforming media3-extractor-1.3.1.aar (androidx.media3:media3-extractor:1.3.1) with AarToClassTransform
-Transforming lottie-6.4.0.aar (com.airbnb.android:lottie:6.4.0) with JetifyTransform
-Transforming lottie-6.4.0.aar (com.airbnb.android:lottie:6.4.0) with AarToClassTransform
-Transforming hilt-compiler-2.51.jar (com.google.dagger:hilt-compiler:2.51) with JetifyTransform
-Transforming room-migration-2.6.1.jar (androidx.room:room-migration:2.6.1) with JetifyTransform
-Transforming room-compiler-processing-2.6.1.jar (androidx.room:room-compiler-processing:2.6.1) with JetifyTransform
-Transforming room-common-2.6.1.jar (androidx.room:room-common:2.6.1) with JetifyTransform
-Transforming room-compiler-2.6.1.jar (androidx.room:room-compiler:2.6.1) with JetifyTransform
-Transforming dagger-compiler-2.51.jar (com.google.dagger:dagger-compiler:2.51) with JetifyTransform
-Transforming dagger-spi-2.51.jar (com.google.dagger:dagger-spi:2.51) with JetifyTransform
-Transforming dagger-2.51.jar (com.google.dagger:dagger:2.51) with JetifyTransform
-Transforming auto-common-0.11.jar (com.google.auto:auto-common:0.11) with JetifyTransform
-Transforming google-java-format-1.5.jar (com.google.googlejavaformat:google-java-format:1.5) with JetifyTransform
-Transforming guava-33.0.0-jre.jar (com.google.guava:guava:33.0.0-jre) with JetifyTransform
-Transforming jsr305-3.0.2.jar (com.google.code.findbugs:jsr305:3.0.2) with JetifyTransform
-Transforming symbol-processing-api-1.9.20-1.0.14.jar (com.google.devtools.ksp:symbol-processing-api:1.9.20-1.0.14) with JetifyTransform
-Transforming failureaccess-1.0.2.jar (com.google.guava:failureaccess:1.0.2) with JetifyTransform
-Transforming kotlinpoet-javapoet-1.14.2.jar (com.squareup:kotlinpoet-javapoet:1.14.2) with JetifyTransform
-Transforming javapoet-1.13.0.jar (com.squareup:javapoet:1.13.0) with JetifyTransform
-Transforming javax.inject-1.jar (javax.inject:javax.inject:1) with JetifyTransform
-Transforming incap-0.2.jar (net.ltgt.gradle.incap:incap:0.2) with JetifyTransform
-Transforming kotlinpoet-1.14.2.jar (com.squareup:kotlinpoet:1.14.2) with JetifyTransform
-Transforming kotlin-stdlib-jdk8-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0) with JetifyTransform
-Transforming kotlin-reflect-1.8.21.jar (org.jetbrains.kotlin:kotlin-reflect:1.8.21) with JetifyTransform
-Transforming kotlin-stdlib-jdk7-1.9.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0) with JetifyTransform
-Transforming kotlin-stdlib-1.9.20.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.20) with JetifyTransform
-Transforming auto-value-annotations-1.6.3.jar (com.google.auto.value:auto-value-annotations:1.6.3) with JetifyTransform
-Transforming annotations-12.0.jar (com.intellij:annotations:12.0) with JetifyTransform
-Transforming commons-codec-1.15.jar (commons-codec:commons-codec:1.15) with JetifyTransform
-Transforming sqlite-jdbc-3.41.2.2.jar (org.xerial:sqlite-jdbc:3.41.2.2) with JetifyTransform
-Transforming checker-compat-qual-2.5.5.jar (org.checkerframework:checker-compat-qual:2.5.5) with JetifyTransform
-Transforming listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava) with JetifyTransform
-Transforming checker-qual-3.41.0.jar (org.checkerframework:checker-qual:3.41.0) with JetifyTransform
-Transforming error_prone_annotations-2.23.0.jar (com.google.errorprone:error_prone_annotations:2.23.0) with JetifyTransform
-Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with JetifyTransform
-Transforming annotation-1.3.0.jar (androidx.annotation:annotation:1.3.0) with JetifyTransform
-Transforming gson-2.9.0.jar (com.google.code.gson:gson:2.9.0) with JetifyTransform
-Transforming javac-shaded-9-dev-r4023-3.jar (com.google.errorprone:javac-shaded:9-dev-r4023-3) with JetifyTransform
-Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-hilt-navigation-compose-1.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-hilt-navigation-1.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-hilt-android-2.51-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-coil-compose-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-coil-gif-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming room-common-2.6.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming room-runtime-2.6.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-room-ktx-2.6.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lottie-compose-6.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming navigation-common-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming navigation-runtime-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming navigation-common-ktx-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming navigation-runtime-ktx-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-navigation-compose-2.7.7-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-activity-ktx-1.9.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-activity-compose-1.9.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-material3-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-coil-compose-base-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-foundation-layout-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-material-icons-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-material-icons-extended-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-material-ripple-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-foundation-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-animation-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-animation-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-util-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-unit-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-text-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-graphics-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-geometry-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-tooling-data-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-tooling-preview-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming biometric-1.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-messaging-ktx-24.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-messaging-24.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-iid-interop-17.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-measurement-connector-19.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-installations-18.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-installations-interop-17.1.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-common-ktx-21.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-common-21.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-datastore-core-okio-jvm-1.1.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-datastore-core-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-datastore-preferences-core-jvm-1.1.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-datastore-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-datastore-preferences-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-runtime-saveable-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-runtime-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-coil-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-coil-base-2.6.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-core-ktx-1.13.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming loader-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming viewpager-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming customview-1.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming core-1.13.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-livedata-core-ktx-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming lifecycle-livedata-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-runtime-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming lifecycle-livedata-core-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-common-jvm-2.8.3.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-kotlinx-coroutines-core-jvm-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-kotlinx-coroutines-play-services-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-play-services-tasks-18.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-play-services-basement-18.3.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming fragment-1.5.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming lifecycle-viewmodel-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-viewmodel-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-viewmodel-ktx-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-runtime-ktx-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-viewmodel-compose-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-tooling-release-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-ui-test-manifest-1.6.8-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-activity-1.9.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lifecycle-viewmodel-savedstate-2.8.3-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-kotlinx-coroutines-android-1.8.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-exoplayer-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-common-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-annotation-experimental-1.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-savedstate-ktx-1.2.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-savedstate-1.2.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-converter-gson-2.11.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-retrofit-2.11.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-logging-interceptor-4.12.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-livekit-android-2.7.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-okhttp-4.12.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-kotlin-stdlib-jdk8-1.9.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-security-crypto-1.1.0-alpha06-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming sqlite-framework-2.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming sqlite-2.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-datatransport-18.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-transport-backend-cct-3.1.9-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-encoders-json-18.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-transport-runtime-3.1.9-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-encoders-proto-16.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-encoders-17.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming versionedparcelable-1.1.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-collection-jvm-1.4.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-transport-api-3.1.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming core-runtime-2.2.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming core-common-2.2.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-annotation-jvm-1.8.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-okio-jvm-3.8.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-kotlin-stdlib-jdk7-1.9.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-kotlin-stdlib-2.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-ui-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-gson-2.11.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-annotations-23.0.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-guava-32.1.3-android.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-hilt-core-2.51.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-dagger-2.51.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-components-18.0.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-firebase-annotations-16.2.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-javax.inject-1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-dagger-lint-aar-2.51-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-jsr305-3.0.2.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-error_prone_annotations-2.27.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-android-prefixed-125.6422.04-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-failureaccess-1.0.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-container-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-database-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-datasource-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-decoder-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-media3-extractor-1.3.1-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming jetified-lottie-6.4.0-api.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming android.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Transforming core-lambda-stubs.jar with BuildToolsApiClasspathEntrySnapshotTransform
-Registered task dependencies: app:kotlinCompilerClasspath
-Starting dependency analysis
-Registered task dependencies: app:kotlinCompilerPluginClasspathDebug
-Starting dependency analysis
-Caching disabled for task ':app:kaptGenerateStubsDebugKotlin' because:
   Build cache is disabled
-Task ':app:kaptGenerateStubsDebugKotlin' is not up-to-date because:
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/16991580d2461051e3fd7e88a13eefd9/transformed/jetified-gson-2.11.0.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/b078a9b465fdfc1e8a3297277a2488b4/transformed/jetified-annotations-23.0.0.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/96c525f237168f2afa3631130285e5f5/transformed/jetified-hilt-core-2.51.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/76db5fbc96c8542ab9ff7c64579b5e52/transformed/jetified-dagger-2.51.jar because:
+  Build cache is disabled
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/859bc6cdf9a9896f02c7847571662106/transformed/jetified-dagger-lint-aar-2.51 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/3b7f70850404e4b278d16b698aa36d3f/transformed/jetified-jsr305-3.0.2.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/a36471bf394d061656f2d2f3c74bb289/transformed/jetified-firebase-annotations-16.2.0.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/77d1abc8f35d5a231cc989d8e036426c/transformed/jetified-javax.inject-1.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/6629a5964776e2c3cb87b18f2addf3d5/transformed/jetified-protobuf-javalite-3.22.0.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/131dbfb770b74bd5ad95cdedb9605e31/transformed/jetified-android-jain-sip-ri-1.3.0-91.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/80f0332fe9ea1d6a124812fbcd9dcac4/transformed/jetified-semver4j-3.1.0.jar because:
+  Build cache is disabled
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/fe793b26f2c179503b60ddb0b86904ca/transformed/jetified-android-prefixed-125.6422.04 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/1a04ab776ab3a627abb24e96704bd276/transformed/jetified-error_prone_annotations-2.27.0.jar because:
+  Build cache is disabled
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/c643e2e2468372b710cf72fecaaf724f/transformed/jetified-timber-4.7.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/459cf56a463aee289fcff71b8ab6ca60/transformed/jetified-guava-32.1.3-android.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/ee42341e821528ba8816dd647f502cf2/transformed/jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar because:
+  Build cache is disabled
+Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/8.9/transforms/4b6d9bbc1ff64e7e0a378e3846c74988/transformed/jetified-failureaccess-1.0.1.jar because:
+  Build cache is disabled
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/08281efe7ab4004cb6363115cdcaad6a/transformed/navigation-common-2.7.7 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/8.9/transforms/e25441b79d2f97a23382595869c6325a/transformed/jetified-hilt-navigation-1.2.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for task ':app:mergeDebugNativeLibs' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mergeDebugNativeLibs' is not up-to-date because:
   No history is available.
-The input changes require a full rebuild for incremental task ':app:kaptGenerateStubsDebugKotlin'.
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-Using Kotlin/JVM incremental compilation
-[KOTLIN] Kotlin compilation 'jdkHome' argument: null
-i: starting the daemon as: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java -cp /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/2.0.0/fdc27dd047d592fa41d2dfa21e7621287a361612/kotlin-script-runtime-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx2048m -XX:ReservedCodeCacheSize=320m -Dkotlin.environment.keepalive -ea -XX:+UseCodeCacheFlushing -XX:+UseParallelGC --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /home/runner/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/2.0.0/fdc27dd047d592fa41d2dfa21e7621287a361612/kotlin-script-runtime-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
-i: #1 retrying connecting to the daemon 
-Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/incrementalData/debug, /home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/stubs/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state])
-w: Kapt currently doesn't support language version 2.0+. Falling back to 1.9.
-Finished executing kotlin compiler using DAEMON strategy
-<<<<<<< Updated upstream
-Resolve mutations for :app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
-:app:kaptDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
-=======
-Resolve mutations for :app:kaptDebugKotlin (Thread[included builds,5,main]) started.
-:app:kaptDebugKotlin (Thread[included builds,5,main]) started.
->>>>>>> Stashed changes
 
-> Task :app:kaptDebugKotlin
-Transforming R.jar with StructureTransformAction
-Transforming jetified-hilt-navigation-compose-1.2.0-api.jar with StructureTransformAction
-Transforming jetified-hilt-navigation-1.2.0-api.jar with StructureTransformAction
-Transforming jetified-hilt-android-2.51-api.jar with StructureTransformAction
-Transforming jetified-coil-compose-2.6.0-api.jar with StructureTransformAction
-Transforming jetified-coil-gif-2.6.0-api.jar with StructureTransformAction
-Transforming room-common-2.6.1.jar with StructureTransformAction
-Transforming room-runtime-2.6.1-api.jar with StructureTransformAction
-Transforming jetified-room-ktx-2.6.1-api.jar with StructureTransformAction
-Transforming jetified-lottie-compose-6.4.0-api.jar with StructureTransformAction
-Transforming navigation-common-2.7.7-api.jar with StructureTransformAction
-Transforming navigation-runtime-2.7.7-api.jar with StructureTransformAction
-Transforming navigation-common-ktx-2.7.7-api.jar with StructureTransformAction
-Transforming navigation-runtime-ktx-2.7.7-api.jar with StructureTransformAction
-Transforming jetified-navigation-compose-2.7.7-api.jar with StructureTransformAction
-Transforming jetified-activity-ktx-1.9.0-api.jar with StructureTransformAction
-Transforming jetified-activity-compose-1.9.0-api.jar with StructureTransformAction
-Transforming jetified-material3-release-api.jar with StructureTransformAction
-Transforming jetified-coil-compose-base-2.6.0-api.jar with StructureTransformAction
-Transforming jetified-foundation-layout-release-api.jar with StructureTransformAction
-Transforming jetified-material-icons-core-release-api.jar with StructureTransformAction
-Transforming jetified-material-icons-extended-release-api.jar with StructureTransformAction
-Transforming jetified-material-ripple-release-api.jar with StructureTransformAction
-Transforming jetified-foundation-release-api.jar with StructureTransformAction
-Transforming jetified-animation-core-release-api.jar with StructureTransformAction
-Transforming jetified-animation-release-api.jar with StructureTransformAction
-Transforming jetified-ui-util-release-api.jar with StructureTransformAction
-Transforming jetified-ui-unit-release-api.jar with StructureTransformAction
-Transforming jetified-ui-text-release-api.jar with StructureTransformAction
-Transforming jetified-ui-graphics-release-api.jar with StructureTransformAction
-Transforming jetified-ui-geometry-release-api.jar with StructureTransformAction
-Transforming jetified-ui-tooling-data-release-api.jar with StructureTransformAction
-Transforming jetified-ui-tooling-preview-release-api.jar with StructureTransformAction
-Transforming biometric-1.1.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-messaging-ktx-24.0.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-messaging-24.0.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-iid-interop-17.1.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-measurement-connector-19.0.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-installations-18.0.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-installations-interop-17.1.1-api.jar with StructureTransformAction
-Transforming jetified-firebase-common-ktx-21.0.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-common-21.0.0-api.jar with StructureTransformAction
-Transforming jetified-datastore-core-okio-jvm-1.1.1.jar with StructureTransformAction
-Transforming jetified-datastore-core-release-api.jar with StructureTransformAction
-Transforming jetified-datastore-preferences-core-jvm-1.1.1.jar with StructureTransformAction
-Transforming jetified-datastore-release-api.jar with StructureTransformAction
-Transforming jetified-datastore-preferences-release-api.jar with StructureTransformAction
-Transforming jetified-runtime-saveable-release-api.jar with StructureTransformAction
-Transforming jetified-runtime-release-api.jar with StructureTransformAction
-Transforming jetified-coil-2.6.0-api.jar with StructureTransformAction
-Transforming jetified-coil-base-2.6.0-api.jar with StructureTransformAction
-Transforming jetified-core-ktx-1.13.1-api.jar with StructureTransformAction
-Transforming loader-1.0.0-api.jar with StructureTransformAction
-Transforming viewpager-1.0.0-api.jar with StructureTransformAction
-Transforming customview-1.0.0-api.jar with StructureTransformAction
-Transforming core-1.13.1-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-livedata-core-ktx-2.8.3-api.jar with StructureTransformAction
-Transforming lifecycle-livedata-2.8.3-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-runtime-release-api.jar with StructureTransformAction
-Transforming lifecycle-livedata-core-2.8.3-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-common-jvm-2.8.3.jar with StructureTransformAction
-Transforming jetified-kotlinx-coroutines-core-jvm-1.8.1.jar with StructureTransformAction
-Transforming jetified-kotlinx-coroutines-play-services-1.8.1.jar with StructureTransformAction
-Transforming jetified-play-services-tasks-18.1.0-api.jar with StructureTransformAction
-Transforming jetified-play-services-basement-18.3.0-api.jar with StructureTransformAction
-Transforming fragment-1.5.1-api.jar with StructureTransformAction
-Transforming lifecycle-viewmodel-2.8.3-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-viewmodel-release-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-viewmodel-ktx-2.8.3-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-runtime-ktx-release-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-viewmodel-compose-release-api.jar with StructureTransformAction
-Transforming jetified-ui-release-api.jar with StructureTransformAction
-Transforming jetified-ui-tooling-release-api.jar with StructureTransformAction
-Transforming jetified-ui-test-manifest-1.6.8-api.jar with StructureTransformAction
-Transforming jetified-activity-1.9.0-api.jar with StructureTransformAction
-Transforming jetified-lifecycle-viewmodel-savedstate-2.8.3-api.jar with StructureTransformAction
-Transforming jetified-kotlinx-coroutines-android-1.8.1.jar with StructureTransformAction
-Transforming jetified-media3-exoplayer-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-media3-common-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-annotation-experimental-1.4.0-api.jar with StructureTransformAction
-Transforming jetified-savedstate-ktx-1.2.1-api.jar with StructureTransformAction
-Transforming jetified-savedstate-1.2.1-api.jar with StructureTransformAction
-Transforming jetified-converter-gson-2.11.0.jar with StructureTransformAction
-Transforming jetified-retrofit-2.11.0.jar with StructureTransformAction
-Transforming jetified-logging-interceptor-4.12.0.jar with StructureTransformAction
-Transforming jetified-livekit-android-2.7.1-api.jar with StructureTransformAction
-Transforming jetified-okhttp-4.12.0.jar with StructureTransformAction
-Transforming jetified-kotlin-stdlib-jdk8-1.9.0.jar with StructureTransformAction
-Transforming jetified-audioswitch-89582c47c9a04c62f90aa5e57251af4800a62c9a-api.jar with StructureTransformAction
-Transforming jetified-security-crypto-1.1.0-alpha06-api.jar with StructureTransformAction
-Transforming sqlite-framework-2.4.0-api.jar with StructureTransformAction
-Transforming sqlite-2.4.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-datatransport-18.2.0-api.jar with StructureTransformAction
-Transforming jetified-transport-backend-cct-3.1.9-api.jar with StructureTransformAction
-Transforming jetified-firebase-encoders-json-18.0.0-api.jar with StructureTransformAction
-Transforming jetified-transport-runtime-3.1.9-api.jar with StructureTransformAction
-Transforming jetified-firebase-encoders-proto-16.0.0.jar with StructureTransformAction
-Transforming jetified-firebase-encoders-17.0.0.jar with StructureTransformAction
-Transforming versionedparcelable-1.1.1-api.jar with StructureTransformAction
-Transforming jetified-collection-jvm-1.4.0.jar with StructureTransformAction
-Transforming jetified-transport-api-3.1.0-api.jar with StructureTransformAction
-Transforming core-runtime-2.2.0-api.jar with StructureTransformAction
-Transforming core-common-2.2.0.jar with StructureTransformAction
-Transforming jetified-annotation-jvm-1.8.0.jar with StructureTransformAction
-Transforming jetified-okio-jvm-3.8.0.jar with StructureTransformAction
-Transforming jetified-kotlin-stdlib-jdk7-1.9.0.jar with StructureTransformAction
-Transforming jetified-kotlin-stdlib-2.0.0.jar with StructureTransformAction
-Transforming jetified-media3-ui-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-gson-2.11.0.jar with StructureTransformAction
-Transforming jetified-annotations-23.0.0.jar with StructureTransformAction
-Transforming jetified-guava-32.1.3-android.jar with StructureTransformAction
-Transforming jetified-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar with StructureTransformAction
-Transforming jetified-hilt-core-2.51.jar with StructureTransformAction
-Transforming jetified-dagger-2.51.jar with StructureTransformAction
-Transforming jetified-firebase-components-18.0.0-api.jar with StructureTransformAction
-Transforming jetified-firebase-annotations-16.2.0.jar with StructureTransformAction
-Transforming jetified-javax.inject-1.jar with StructureTransformAction
-Transforming jetified-dagger-lint-aar-2.51-api.jar with StructureTransformAction
-Transforming jetified-jsr305-3.0.2.jar with StructureTransformAction
-Transforming jetified-error_prone_annotations-2.27.0.jar with StructureTransformAction
-Transforming jetified-android-prefixed-125.6422.04-api.jar with StructureTransformAction
-Transforming jetified-failureaccess-1.0.1.jar with StructureTransformAction
-Transforming jetified-media3-container-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-media3-database-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-media3-datasource-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-media3-decoder-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-media3-extractor-1.3.1-api.jar with StructureTransformAction
-Transforming jetified-lottie-6.4.0-api.jar with StructureTransformAction
-Transforming android.jar with StructureTransformAction
-Transforming core-lambda-stubs.jar with StructureTransformAction
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-Caching disabled for task ':app:kaptDebugKotlin' because:
+> Task :app:validateSigningDebug
+Caching disabled for task ':app:validateSigningDebug' because:
   Build cache is disabled
-Task ':app:kaptDebugKotlin' is not up-to-date because:
+  Caching has been disabled for the task
+Task ':app:validateSigningDebug' is not up-to-date because:
+  Task.upToDateWhen is false.
+Creating default debug keystore at /home/runner/.config/.android/debug.keystore
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
+:app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :app:writeDebugAppMetadata
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugAppMetadata' is not up-to-date because:
   No history is available.
-The input changes require a full rebuild for incremental task ':app:kaptDebugKotlin'.
-Running kapt annotation processing using the Gradle Worker API
-Using workers NONE isolation mode to run kapt
-<<<<<<< Updated upstream
-Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
-:app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
-=======
-Resolve mutations for :app:compileDebugKotlin (Thread[included builds,5,main]) started.
-:app:compileDebugKotlin (Thread[included builds,5,main]) started.
->>>>>>> Stashed changes
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
+  No history is available.
+
+> Task :app:stripDebugDebugSymbols
+Caching disabled for task ':app:stripDebugDebugSymbols' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:stripDebugDebugSymbols' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:stripDebugDebugSymbols'.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/libdatastore_shared_counter.so' due to missing strip tool for ABI 'arm64-v8a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/arm64-v8a/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'arm64-v8a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/libdatastore_shared_counter.so' due to missing strip tool for ABI 'armeabi-v7a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/armeabi-v7a/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'armeabi-v7a'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/libdatastore_shared_counter.so' due to missing strip tool for ABI 'x86'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/libdatastore_shared_counter.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
+C/C++: android.ndkVersion from module build.gradle is [26.1.10909125]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is /usr/local/lib/android/sdk
+C/C++: Folder /usr/local/lib/android/sdk/ndk/26.1.10909125 does not exist. Ignoring.
+C/C++: Folder /usr/local/lib/android/sdk/ndk-bundle does not exist. Ignoring.
+Unable to strip library '/home/runner/work/Starscord/Starscord/app/build/intermediates/merged_native_libs/debug/mergeDebugNativeLibs/out/lib/x86_64/liblkjingle_peerconnection_so.so' due to missing strip tool for ABI 'x86_64'. Packaging it as is.
+Unable to strip the following libraries, packaging them as they are: libdatastore_shared_counter.so, liblkjingle_peerconnection_so.so.
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
 
 > Task :app:compileDebugKotlin
 Transforming R.jar with BuildToolsApiClasspathEntrySnapshotTransform
@@ -694,6 +283,8 @@ Transforming jetified-lottie-6.4.0-api.jar with BuildToolsApiClasspathEntrySnaps
 Transforming android.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming core-lambda-stubs.jar with BuildToolsApiClasspathEntrySnapshotTransform
 Transforming debug with BuildToolsApiClasspathEntrySnapshotTransform
+Caching disabled for BuildToolsApiClasspathEntrySnapshotTransform: /home/runner/work/Starscord/Starscord/app/build/tmp/kapt3/classes/debug because:
+  Build cache is disabled
 Caching disabled for task ':app:compileDebugKotlin' because:
   Build cache is disabled
 Task ':app:compileDebugKotlin' is not up-to-date because:
@@ -709,12 +300,6 @@ file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', no
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
@@ -726,7 +311,6 @@ file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', no
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
@@ -737,12 +321,6 @@ file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', no
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
@@ -754,12 +332,6 @@ file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', no
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
@@ -771,35 +343,450 @@ file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', no
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
-file or directory '/home/runner/work/Starscord/Starscord/app/src/main/kotlin', not found
 file or directory '/home/runner/work/Starscord/Starscord/app/src/debug/java', not found
-Kotlin source files: /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/NexusApp.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/MainActivity.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/GatewayService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/NotificationService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/VoiceService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/AuthViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/LoginScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/RegisterScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ChannelMembersScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Theme.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Color.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Type.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/AuthInterceptor.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/DatabaseModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/NetworkModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/NexusApi.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/entities/Entities.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/NexusDatabase.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/GuildDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/MessageDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/gateway/GatewayClient.kt
-Java source files: /home/runner/work/Starscord/Starscord/app/build/generated/source/buildConfig/debug/com/nexus/android/BuildConfig.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_VoiceService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_GatewayService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_MembersInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/Hilt_MainActivity.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/DatabaseModule_ProvideDatabaseFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideNexusApiFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideRetrofitFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideOkHttpClientFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/AuthInterceptor_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/GuildDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/MessageDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/NexusDatabase_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/gateway/GatewayClient_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_DatabaseModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_voice_VoiceViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_dm_DmViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_dm_DmViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_server_ServerSettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_voice_VoiceViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_NetworkModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_server_ServerSettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/dagger/hilt/internal/aggregatedroot/codegen/_com_nexus_android_NexusApp.java
+Kotlin source files: /home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt, /home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt, /home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt, /home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/NotificationService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/GatewayService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/service/VoiceService.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/chat/ChatScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/settings/SettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/AuthViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/RegisterScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/auth/LoginScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/dm/DmListScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/profile/ProfileViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ChannelMembersScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceScreen.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/voice/VoiceViewModel.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Color.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Type.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/theme/Theme.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/MainActivity.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/DatabaseModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/NetworkModule.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/TokenRefreshAuthenticator.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/di/AuthInterceptor.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/NexusApi.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/NexusDatabase.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/GuildDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/dao/MessageDao.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/local/entities/Entities.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/gateway/GatewayClient.kt, /home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/NexusApp.kt
+Java source files: /home/runner/work/Starscord/Starscord/app/build/generated/source/buildConfig/debug/com/nexus/android/BuildConfig.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_VoiceService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/Hilt_GatewayService.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/service/GatewayService_MembersInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/Hilt_MainActivity.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/home/HomeViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/chat/ChatViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/settings/SettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/auth/AuthViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/dm/DmViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/profile/ProfileViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/server/ServerSettingsViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_HiltModules.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_HiltModules_KeyModule_ProvideFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/ui/screens/voice/VoiceViewModel_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/TokenRefreshAuthenticator_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideRetrofitFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/DatabaseModule_ProvideDatabaseFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideNexusApiFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/NetworkModule_ProvideOkHttpClientFactory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/di/AuthInterceptor_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/NexusDatabase_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/GuildDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/local/dao/MessageDao_Impl.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/com/nexus/android/data/gateway/GatewayClient_Factory.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_voice_VoiceViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_server_ServerSettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_NexusApp_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_NetworkModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_di_DatabaseModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_server_ServerSettingsViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_VoiceService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_service_GatewayService_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_auth_AuthViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_profile_ProfileViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_chat_ChatViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_dm_DmViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_voice_VoiceViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_settings_SettingsViewModel_HiltModules_KeyModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_MainActivity_GeneratedInjector.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_dm_DmViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/hilt_aggregated_deps/_com_nexus_android_ui_screens_home_HomeViewModel_HiltModules_BindsModule.java, /home/runner/work/Starscord/Starscord/app/build/generated/source/kapt/debug/dagger/hilt/internal/aggregatedroot/codegen/_com_nexus_android_NexusApp.java
 Script source files: 
 Script file extensions: 
 Using Kotlin/JVM incremental compilation
 [KOTLIN] Kotlin compilation 'jdkHome' argument: null
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/home/runner/work/Starscord/Starscord/app/build/tmp/kotlin-classes/debug, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/cacheable, /home/runner/work/Starscord/Starscord/app/build/kotlin/compileDebugKotlin/local-state])
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt:9:12 Redeclaration:
-data class MemberResponse : Any
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/data/api/models/Models.kt:90:12 Redeclaration:
-data class MemberResponse : Any
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt:89:40 Argument type mismatch: actual type is 'kotlin.Function2<kotlin.String, ERROR CLASS: Cannot infer type for parameter name, kotlin.Unit>', but 'kotlin.Function1<kotlin.String, kotlin.Unit>' was expected.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt:89:47 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:80:40 Unresolved reference 'leaveGuild'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt:82:40 Unresolved reference 'generateInvite'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:88:28 Unresolved reference 'updateGuildName'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:100:27 Unresolved reference 'deleteGuild'.
-e: file:///home/runner/work/Starscord/Starscord/app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt:104:13 @Composable invocations can only happen from the context of a @Composable function
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:9:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:10:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:11:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:77:65 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:78:65 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:79:45 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:80:45 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:81:45 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:123:13 Unresolved reference 'ScreenCaptureManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:126:9 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:133:24 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:142:30 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:148:26 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:156:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:156:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:160:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:160:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:163:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:163:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:166:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:166:55 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:169:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:170:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:171:29 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:177:21 Unresolved reference 'CheckmateTTS'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:180:63 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/text/compareTo' in 'compareTo'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:180:66 Unresolved reference 'StatusReporter'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:184:25 Unresolved reference 'StatusReporter'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:193:35 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:196:16 'when' expression must be exhaustive. Add an 'else' branch.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:197:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:198:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:199:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:200:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:201:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:202:13 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:209:16 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:209:33 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:221:22 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:227:22 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:227:54 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt:262:9 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:36:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:37:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:38:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:69:18 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:161:15 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:161:15 Property delegate must have a 'getValue(Nothing?, KProperty0<ERROR CLASS: Cannot infer argument for type parameter T>)' method. None of the following functions is applicable:
+fun <T> State<T>.getValue(thisObj: Any?, property: KProperty<*>): T
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:163:23 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:164:16 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:164:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:167:22 'when' expression must be exhaustive. Add an 'else' branch.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:167:31 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:168:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:169:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:170:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:171:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:172:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:173:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:178:35 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:179:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:179:46 Unresolved reference 'pomodoroEnabled'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:180:48 Unresolved reference 'totalDurationSecs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:181:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:182:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:185:29 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:186:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:187:26 Unresolved reference 'phaseSecondsLeft'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:190:16 Unresolved reference 'phaseSecondsLeft'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:191:16 Unresolved reference 'phaseSecondsLeft'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:193:22 'when' expression must be exhaustive. Add an 'else' branch.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:193:31 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:194:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:195:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:196:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:197:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:198:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:199:9 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:26 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:35 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:63 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:212:72 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:217:16 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:217:25 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:244:29 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:256:29 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:286:28 Unresolved reference 'pomodoroEnabled'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:289:51 Unresolved reference 'cycleIndex'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:300:28 Unresolved reference 'needsAttentionCheck'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:309:37 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:313:28 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:313:37 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:314:49 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:314:58 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:315:49 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:315:58 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:326:44 Unresolved reference 'phase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:326:53 Unresolved reference 'AttentionPhase'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:326:76 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt:327:42 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:10:22 Unresolved reference 'automation'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:11:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:12:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:13:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:14:22 Unresolved reference 'planner'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:15:22 Unresolved reference 'planner'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:64:23 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:65:37 Unresolved reference 'it'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:65:49 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:66:37 Unresolved reference 'it'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:66:49 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:68:43 None of the following candidates is applicable:
+@InlineOnly() fun BigDecimal.times(other: BigDecimal): BigDecimal
+@InlineOnly() fun BigInteger.times(other: BigInteger): BigInteger
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:68:49 Overload resolution ambiguity between candidates:
+@InlineOnly() fun BigDecimal.div(other: BigDecimal): BigDecimal
+@InlineOnly() fun BigInteger.div(other: BigInteger): BigInteger
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:70:52 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:71:32 Unresolved reference 'state'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:72:17 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:73:17 Unresolved reference 'TaskState'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:76:26 Unresolved reference 'subject'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:76:40 Unresolved reference 'topic'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:79:32 Unresolved reference 'DailyChecklist'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:80:28 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:85:25 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/compareTo' in 'compareTo'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:87:13 Overload resolution ambiguity between candidates:
+@SinceKotlin(...) @InlineOnly() fun Appendable.appendLine(value: Char): Appendable
+@SinceKotlin(...) @InlineOnly() fun Appendable.appendLine(value: CharSequence?): Appendable
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: StringBuffer?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Byte): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Double): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Float): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Int): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Long): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Short): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: StringBuilder?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Any?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Boolean): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Char): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: CharArray): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: CharSequence?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: String?): StringBuilder
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:90:17 Overload resolution ambiguity between candidates:
+@SinceKotlin(...) @InlineOnly() fun Appendable.appendLine(value: Char): Appendable
+@SinceKotlin(...) @InlineOnly() fun Appendable.appendLine(value: CharSequence?): Appendable
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: StringBuffer?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Byte): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Double): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Float): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Int): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Long): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Short): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: StringBuilder?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Any?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Boolean): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Char): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: CharArray): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: CharSequence?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: String?): StringBuilder
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:93:13 Overload resolution ambiguity between candidates:
+@SinceKotlin(...) @InlineOnly() fun Appendable.appendLine(value: Char): Appendable
+@SinceKotlin(...) @InlineOnly() fun Appendable.appendLine(value: CharSequence?): Appendable
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: StringBuffer?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Byte): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Double): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Float): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Int): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Long): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Short): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: StringBuilder?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Any?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Boolean): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: Char): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: CharArray): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: CharSequence?): StringBuilder
+@SinceKotlin(...) @InlineOnly() fun StringBuilder.appendLine(value: String?): StringBuilder
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:103:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:105:17 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:117:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:121:51 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:123:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:146:13 Unresolved reference 'TelegramAlertBot'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:155:9 Unresolved reference 'AutomationEngine'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:175:17 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt:177:16 Return type mismatch: expected 'kotlin.String?', actual 'kotlin.Any'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:23:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:24:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:26:25 Unresolved reference 'theme'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:35:9 Unresolved reference 'AppSelectorScreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:39:9 Unresolved reference 'WebsiteBlockerScreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:44:50 Overload resolution ambiguity between candidates:
+@Stable() fun Modifier.background(brush: Brush, shape: Shape = ..., @FloatRange(...) alpha: Float = ...): Modifier
+@Stable() fun Modifier.background(color: Color, shape: Shape = ...): Modifier
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:44:61 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:50:86 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:67:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:73:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:79:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:104:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:116:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:137:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:137:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:138:9 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:138:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:140:28 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:140:28 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:141:9 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:141:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:141:50 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:154:30 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:158:70 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:164:47 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:171:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:174:43 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:175:43 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:176:43 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:177:43 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:182:35 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:191:52 Unresolved reference 'AccentAmber'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:194:67 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:200:47 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:207:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:207:47 Unresolved reference 'AttentionCycleManager'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:210:43 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:211:43 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:212:43 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:213:43 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:219:39 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:234:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:241:17 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:248:59 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:257:25 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:261:50 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:262:50 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:269:31 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:278:73 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:285:70 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:293:46 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:297:29 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:306:51 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:306:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:312:44 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:313:44 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:314:44 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:315:44 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:316:44 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:320:59 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:326:31 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:330:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:335:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:342:61 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:343:70 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:346:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:352:51 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:352:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:357:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:358:40 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:359:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:360:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:361:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:365:55 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:370:31 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:374:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:379:69 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:384:24 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:392:62 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:393:69 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:396:21 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:402:51 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:402:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:407:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:408:40 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:409:40 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:410:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:411:40 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:415:55 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:425:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:425:23 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:426:9 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:426:24 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:435:58 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:439:62 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:442:43 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:449:17 Unresolved reference 'CheckmatePrefs'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:452:39 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:453:39 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:454:39 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:455:39 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:471:29 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:476:22 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:477:22 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:477:43 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:491:37 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:494:55 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:495:58 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt:497:59 Unresolved reference 'White30'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:20:25 Unresolved reference 'theme'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:30:54 Overload resolution ambiguity between candidates:
+@Stable() fun Modifier.background(brush: Brush, shape: Shape = ..., @FloatRange(...) alpha: Float = ...): Modifier
+@Stable() fun Modifier.background(color: Color, shape: Shape = ...): Modifier
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:30:65 Unresolved reference 'BgDark'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:35:83 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:36:73 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:43:91 Unresolved reference 'AccentAmber'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:44:86 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:45:87 Unresolved reference 'AccentBlue'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:50:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:51:24 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:51:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:54:95 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:62:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:63:24 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:63:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:66:96 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:77:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:78:24 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:78:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:81:103 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:95:24 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:96:24 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:96:45 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:104:105 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:108:55 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:117:51 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:120:96 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:136:28 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:137:28 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:137:49 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:140:115 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:153:77 Unresolved reference 'BgCard'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:153:94 Overload resolution ambiguity between candidates:
+constructor(width: Dp, brush: Brush): BorderStroke
+@Stable() fun BorderStroke(width: Dp, color: Color): BorderStroke
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:153:115 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:158:51 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:30 Overload resolution ambiguity between candidates:
+@Stable() fun Modifier.background(brush: Brush, shape: Shape = ..., @FloatRange(...) alpha: Float = ...): Modifier
+@Stable() fun Modifier.background(color: Color, shape: Shape = ...): Modifier
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:56 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:88 Unresolved reference 'AccentAmber'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:187:105 Unresolved reference 'AccentRed'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:191:53 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:201:53 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:202:53 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:208:26 Unresolved reference 'AccentGreen'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:209:26 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:217:77 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:218:47 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:228:51 Unresolved reference 'White90'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:229:68 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:235:26 Unresolved reference 'AccentBlue'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:236:26 Unresolved reference 'White10'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:265:30 Overload resolution ambiguity between candidates:
+@Stable() fun Modifier.background(brush: Brush, shape: Shape = ..., @FloatRange(...) alpha: Float = ...): Modifier
+@Stable() fun Modifier.background(color: Color, shape: Shape = ...): Modifier
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:265:41 Unresolved reference 'AccentBlue'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt:269:53 Unresolved reference 'White60'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:6:22 Unresolved reference 'core'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:7:22 Unresolved reference 'planner'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:8:22 Unresolved reference 'psyche'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:38:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:39:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:40:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:41:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:42:32 Unresolved reference 'PlanStore'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:43:32 Unresolved reference 'BehaviorLedger'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:64:27 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:69:36 Not enough information to infer type argument for 'T'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:69:36 Function 'component1()' is ambiguous for this expression: 
+@InlineOnly() fun <T> Array<out T>.component1(): T
+@InlineOnly() fun BooleanArray.component1(): Boolean
+@InlineOnly() fun ByteArray.component1(): Byte
+@InlineOnly() fun CharArray.component1(): Char
+@InlineOnly() fun DoubleArray.component1(): Double
+@InlineOnly() fun FloatArray.component1(): Float
+@InlineOnly() fun IntArray.component1(): Int
+@InlineOnly() fun LongArray.component1(): Long
+@InlineOnly() fun ShortArray.component1(): Short
+@InlineOnly() fun <T> List<T>.component1(): T
+@InlineOnly() fun <K, V> Map.Entry<K, V>.component1(): K
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun UByteArray.component1(): UByte
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun UIntArray.component1(): UInt
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun ULongArray.component1(): ULong
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun UShortArray.component1(): UShort.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:69:36 Function 'component2()' is ambiguous for this expression: 
+@InlineOnly() fun <T> Array<out T>.component2(): T
+@InlineOnly() fun BooleanArray.component2(): Boolean
+@InlineOnly() fun ByteArray.component2(): Byte
+@InlineOnly() fun CharArray.component2(): Char
+@InlineOnly() fun DoubleArray.component2(): Double
+@InlineOnly() fun FloatArray.component2(): Float
+@InlineOnly() fun IntArray.component2(): Int
+@InlineOnly() fun LongArray.component2(): Long
+@InlineOnly() fun ShortArray.component2(): Short
+@InlineOnly() fun <T> List<T>.component2(): T
+@InlineOnly() fun <K, V> Map.Entry<K, V>.component2(): V
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun UByteArray.component2(): UByte
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun UIntArray.component2(): UInt
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun ULongArray.component2(): ULong
+@SinceKotlin(...) @ExperimentalUnsignedTypes() @InlineOnly() fun UShortArray.component2(): UShort.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:70:29 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:71:26 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:71:31 Unresolved reference 'label'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:71:44 Unresolved reference 'foregroundMillis'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:72:31 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:73:26 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:73:31 Unresolved reference 'dayLabel'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:73:47 Unresolved reference 'totalMillis'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:74:23 Not enough information to infer type argument for 'A'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:74:23 Not enough information to infer type argument for 'B'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:76:32 Unresolved reference 'AppUsageTracker'.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:76:81 Cannot infer type for this parameter. Please specify it explicitly.
+e: file:///home/runner/work/Starscord/Starscord/app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt:76:87 None of the following candidates is applicable:
+@InlineOnly() fun BigDecimal.div(other: BigDecimal): BigDecimal
+@InlineOnly() fun BigInteger.div(other: BigInteger): BigInteger
 Finished executing kotlin compiler using DAEMON strategy
 
 > Task :app:compileDebugKotlin FAILED
 AAPT2 aapt2-8.4.2-11315950-linux Daemon #0: shutdown
+AAPT2 aapt2-8.4.2-11315950-linux Daemon #1: shutdown
+AAPT2 aapt2-8.4.2-11315950-linux Daemon #2: shutdown
+AAPT2 aapt2-8.4.2-11315950-linux Daemon #3: shutdown
 
 FAILURE: Build failed with an exception.
 
@@ -844,35 +831,6 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -997,35 +955,6 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -1067,9 +996,5 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/8.9/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-<<<<<<< Updated upstream
-BUILD FAILED in 1m 2s
-=======
-BUILD FAILED in 59s
->>>>>>> Stashed changes
+BUILD FAILED in 3m 38s
 33 actionable tasks: 33 executed

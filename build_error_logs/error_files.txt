@@ -1,1053 +1,2038 @@
 ==== SOURCE CODE (ERROR FILES WITH HIGHLIGHTED LINES) ====
 
-//===== FILE: app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt =====
+//===== FILE: app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt =====
 
-// ❌ ERRORS IN THIS FILE (1 error(s)):
-// Line 9: Redeclaration:
+// ❌ ERRORS IN THIS FILE (40 error(s)):
+// Line 9: Unresolved reference 'core'.
+// Line 10: Unresolved reference 'core'.
+// Line 11: Unresolved reference 'core'.
+// Line 77: Unresolved reference 'AttentionCycleManager'.
+// Line 78: Unresolved reference 'AttentionCycleManager'.
+// Line 79: Unresolved reference 'AttentionCycleManager'.
+// Line 80: Unresolved reference 'AttentionCycleManager'.
+// Line 81: Unresolved reference 'AttentionCycleManager'.
+// Line 123: Unresolved reference 'ScreenCaptureManager'.
+// Line 126: Unresolved reference 'AttentionCycleManager'.
+// Line 133: Unresolved reference 'AttentionCycleManager'.
+// Line 142: Unresolved reference 'AttentionCycleManager'.
+// Line 148: Unresolved reference 'AttentionCycleManager'.
+// Line 156: Unresolved reference 'AttentionPhase'.
+// Line 156: Unresolved reference 'CheckmateTTS'.
+// Line 160: Unresolved reference 'AttentionPhase'.
+// Line 160: Unresolved reference 'CheckmateTTS'.
+// Line 163: Unresolved reference 'AttentionPhase'.
+// Line 163: Unresolved reference 'CheckmateTTS'.
+// Line 166: Unresolved reference 'AttentionPhase'.
+// Line 166: Unresolved reference 'CheckmateTTS'.
+// Line 169: Unresolved reference 'AttentionPhase'.
+// Line 170: Unresolved reference 'AttentionPhase'.
+// Line 171: Unresolved reference 'CheckmateTTS'.
+// Line 177: Unresolved reference 'CheckmateTTS'.
+// Line 180: 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/text/compareTo' in 'compareTo'.
+// Line 180: Unresolved reference 'StatusReporter'.
+// Line 184: Unresolved reference 'StatusReporter'.
+// Line 193: Unresolved reference 'AttentionPhase'.
+// Line 196: 'when' expression must be exhaustive. Add an 'else' branch.
+// Line 197: Unresolved reference 'AttentionPhase'.
+// Line 198: Unresolved reference 'AttentionPhase'.
+// Line 199: Unresolved reference 'AttentionPhase'.
+// Line 200: Unresolved reference 'AttentionPhase'.
+// Line 201: Unresolved reference 'AttentionPhase'.
+// Line 202: Unresolved reference 'AttentionPhase'.
+// Line 209: Unresolved reference 'AttentionPhase'.
+// Line 221: Unresolved reference 'AttentionPhase'.
+// Line 227: Unresolved reference 'AttentionPhase'.
+// Line 262: Unresolved reference 'AttentionCycleManager'.
 
-   1    package com.nexus.android.data.api.models
+   1    package com.checkmate.service
    2    
-   3    import com.google.gson.annotations.SerializedName
-   4    
-   5    // FIX: joinedAt is now nullable.
-   6    // Gson silently deserializes absent/null JSON fields as null even for non-nullable Kotlin types,
-   7    // which causes a Kotlin runtime NPE ("lateinit … was null") when the field is touched in Compose
-   8    // LazyColumn item composition. Making it nullable? stops the crash with zero logic changes elsewhere.
-   9 ❌ data class MemberResponse(
-  10        @SerializedName("guild_id")  val guildId: String,
-  11        @SerializedName("user_id")   val userId: String,
-  12        val nickname: String? = null,
-  13        val roles: List<String> = emptyList(),
-  14        @SerializedName("joined_at") val joinedAt: String? = null,
-  15        val user: UserResponse? = null,
-  16    )
-
-
-//===== FILE: app/src/main/java/com/nexus/android/data/api/models/Models.kt =====
-
-// ❌ ERRORS IN THIS FILE (1 error(s)):
-// Line 90: Redeclaration:
-
-   1    package com.nexus.android.data.api.models
-   2    
-   3    import com.google.gson.annotations.SerializedName
-   4    
-   5    data class RegisterRequest(val username: String, val email: String, val password: String)
-   6    data class LoginRequest(val email: String, val password: String, @SerializedName("mfaCode") val mfaCode: String? = null)
-   7    data class LoginResponse(
-   8        @SerializedName("access_token") val accessToken: String,
-   9        @SerializedName("token_type") val tokenType: String,
-  10        @SerializedName("expires_in") val expiresIn: Int,
-  11        val user: UserResponse,
-  12    )
-  13    data class RefreshResponse(@SerializedName("access_token") val accessToken: String)
-  14    data class MfaEnableResponse(val secret: String, @SerializedName("qr_code") val qrCode: String)
-  15    data class MfaVerifyRequest(val code: String)
-  16    data class SuccessResponse(val success: Boolean)
-  17    
-  18    data class UserResponse(
-  19        val id: String,
-  20        val username: String,
-  21        val discriminator: String,
-  22        val email: String? = null,
-  23        val avatar: String? = null,
-  24        @SerializedName("avatar_animated") val avatarAnimated: Boolean = false,
-  25        val banner: String? = null,
-  26        @SerializedName("banner_color") val bannerColor: String? = null,
-  27        val bio: String? = null,
-  28        val pronouns: String? = null,
-  29        val status: String = "online",
-  30        @SerializedName("custom_status") val customStatus: String? = null,
-  31        @SerializedName("nitro_type") val nitroType: String = "none",
-  32        @SerializedName("nitro_since") val nitroSince: String? = null,
-  33        val flags: Long = 0,
-  34        @SerializedName("created_at") val createdAt: String? = null,
-  35    )
-  36    
-  37    data class UpdateUserRequest(
-  38        val username: String? = null,
-  39        val bio: String? = null,
-  40        val pronouns: String? = null,
-  41        val avatar: String? = null,
-  42        val banner: String? = null,
-  43        @SerializedName("banner_color") val bannerColor: String? = null,
-  44        @SerializedName("custom_status") val customStatus: String? = null,
-  45        val status: String? = null,
-  46    )
-  47    
-  48    data class CreateGuildRequest(val name: String, val icon: String? = null)
-  49    data class GuildResponse(
-  50        val id: String,
-  51        val name: String,
-  52        val icon: String? = null,
-  53        @SerializedName("icon_animated") val iconAnimated: Boolean = false,
-  54        val banner: String? = null,
-  55        @SerializedName("owner_id") val ownerId: String,
-  56        val description: String? = null,
-  57        @SerializedName("boost_count") val boostCount: Int = 0,
-  58        @SerializedName("boost_tier") val boostTier: Int = 0,
-  59        @SerializedName("vanity_url") val vanityUrl: String? = null,
-  60        val channels: List<ChannelResponse>? = null,
-  61        val roles: List<RoleResponse>? = null,
-  62        @SerializedName("joined_at") val joinedAt: String? = null,
-  63    )
+   3    import android.app.*
+   4    import android.content.Context
+   5    import android.content.Intent
+   6    import android.content.pm.ServiceInfo
+   7    import android.os.*
+   8    import androidx.core.app.NotificationCompat
+   9 ❌ import com.checkmate.core.AttentionCycleManager
+  10 ❌ import com.checkmate.core.AttentionPhase
+  11 ❌ import com.checkmate.core.tts.CheckmateTTS
+  12    import kotlinx.coroutines.*
+  13    
+  14    class AttentionCycleService : Service() {
+  15    
+  16        companion object {
+  17            private const val CHANNEL_ID        = "attention_cycle_channel"
+  18            private const val NOTIF_ID          = 42
+  19            const val EXTRA_TASK_ID             = "task_id"
+  20            const val EXTRA_TASK_NAME           = "task_name"
+  21            const val EXTRA_DURATION_MIN        = "duration_min"
+  22            // Projection token extras — passed so getMediaProjection() runs AFTER startForeground()
+  23            const val EXTRA_PROJECTION_CODE     = "projection_result_code"
+  24            const val EXTRA_PROJECTION_DATA     = "projection_data"
+  25            const val ACTION_PAUSE              = "com.checkmate.ATTENTION_PAUSE"
+  26            const val ACTION_RESUME             = "com.checkmate.ATTENTION_RESUME"
+  27            // Notification action buttons — these mirror what the floating attention
+  28            // bar offers, so a student who turns the bar off in Settings can still
+  29            // confirm attention / mark done / take a break from the notification.
+  30            const val ACTION_MARK_DONE          = "com.checkmate.ATTENTION_MARK_DONE"
+  31            const val ACTION_TAKE_BREAK         = "com.checkmate.ATTENTION_TAKE_BREAK"
+  32            const val ACTION_CONFIRM_ATTENTION  = "com.checkmate.ATTENTION_CONFIRM"
+  33    
+  34            fun start(
+  35                context: Context,
+  36                taskId: String,
+  37                taskName: String,
+  38                durationMinutes: Long,
+  39                projectionResultCode: Int = Activity.RESULT_CANCELED,
+  40                projectionData: Intent?   = null
+  41            ) {
+  42                val intent = Intent(context, AttentionCycleService::class.java).apply {
+  43                    putExtra(EXTRA_TASK_ID,          taskId)
+  44                    putExtra(EXTRA_TASK_NAME,         taskName)
+  45                    putExtra(EXTRA_DURATION_MIN,      durationMinutes)
+  46                    putExtra(EXTRA_PROJECTION_CODE,   projectionResultCode)
+  47                    putExtra(EXTRA_PROJECTION_DATA,   projectionData)
+  48                }
+  49                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+  50                    context.startForegroundService(intent)
+  51                else
+  52                    context.startService(intent)
+  53            }
+  54    
+  55            fun stop(context: Context) =
+  56                context.stopService(Intent(context, AttentionCycleService::class.java))
+  57    
+  58            fun sendPause(context: Context) =
+  59                context.sendBroadcast(Intent(ACTION_PAUSE).setPackage(context.packageName))
+  60    
+  61            fun sendResume(context: Context) =
+  62                context.sendBroadcast(Intent(ACTION_RESUME).setPackage(context.packageName))
+  63        }
   64    
-  65    data class CreateChannelRequest(val name: String, val type: String = "text", val parentId: String? = null)
-  66    
-  67    // DmParticipant holds the other user in a DM channel
-  68    data class DmParticipant(
-  69        @SerializedName("user_id") val userId: String,
-  70        val user: UserResponse? = null,
-  71    )
-  72    
-  73    data class ChannelResponse(
-  74        val id: String,
-  75        @SerializedName("guild_id") val guildId: String? = null,
-  76        val type: String,
-  77        val name: String,
-  78        val position: Int = 0,
-  79        val topic: String? = null,
-  80        val nsfw: Boolean = false,
-  81        val slowmode: Int = 0,
-  82        val bitrate: Int = 64000,
-  83        @SerializedName("user_limit") val userLimit: Int = 0,
-  84        @SerializedName("parent_id") val parentId: String? = null,
-  85        @SerializedName("last_message_id") val lastMessageId: String? = null,
-  86        // DM-specific: list of participants (excluding self after stripSelf filtering)
-  87        @SerializedName("dm_participants") val dmParticipants: List<DmParticipant>? = null,
-  88    )
-  89    
-  90 ❌ data class MemberResponse(
-  91        @SerializedName("guild_id") val guildId: String,
-  92        @SerializedName("user_id") val userId: String,
-  93        val nickname: String? = null,
-  94        val roles: List<String> = emptyList(),
-  95        @SerializedName("joined_at") val joinedAt: String,
-  96        val user: UserResponse? = null,
-  97    )
-  98    
-  99    data class RoleResponse(
- 100        val id: String,
- 101        @SerializedName("guild_id") val guildId: String,
- 102        val name: String,
- 103        val color: Int = 0,
- 104        val hoist: Boolean = false,
- 105        val position: Int = 0,
- 106        val permissions: String = "0",
- 107        val mentionable: Boolean = false,
- 108        @SerializedName("member_count") val memberCount: Int = 0,
- 109    )
- 110    
- 111    data class SendMessageRequest(
- 112        val content: String? = null,
- 113        val tts: Boolean = false,
- 114        val embeds: List<Any>? = null,
- 115        val reference: MessageReferenceRequest? = null,
- 116    )
- 117    data class EditMessageRequest(val content: String)
- 118    data class MessageReferenceRequest(@SerializedName("message_id") val messageId: String)
- 119    data class MessageResponse(
- 120        val id: String,
- 121        @SerializedName("channel_id") val channelId: String,
- 122        val author: UserResponse? = null,
- 123        val content: String? = null,
- 124        val type: String = "default",
- 125        val pinned: Boolean = false,
- 126        val tts: Boolean = false,
- 127        val attachments: List<Any>? = null,
- 128        val embeds: List<Any>? = null,
- 129        val reactions: List<ReactionResponse>? = null,
- 130        val reference: MessageResponse? = null,
- 131        @SerializedName("edited_at") val editedAt: String? = null,
- 132        @SerializedName("created_at") val createdAt: String,
- 133    )
- 134    data class ReactionResponse(
- 135        val emoji: String,
- 136        val count: Int = 1,
- 137        @SerializedName("user_id") val userId: String? = null,
- 138    )
- 139    
- 140    data class VoiceTokenRequest(@SerializedName("channelId") val channelId: String)
- 141    data class VoiceLeaveRequest(@SerializedName("channelId") val channelId: String)
- 142    data class VoiceTokenResponse(
- 143        val token: String,
- 144        @SerializedName("livekit_url") val livekitUrl: String,
- 145        @SerializedName("channel_id") val channelId: String,
- 146    )
- 147    
- 148    data class NitroSubscribeRequest(val plan: String)
- 149    data class BoostResponse(val success: Boolean, @SerializedName("boost_count") val boostCount: Int, val tier: Int)
- 150    data class NitroPlansResponse(val plans: List<NitroPlan>)
- 151    data class NitroPlan(val id: String, val name: String, val price: Int, val currency: String)
- 152    
- 153    data class InviteResponse(
- 154        val code: String,
- 155        val guild: GuildResponse,
- 156        val channel: ChannelResponse,
- 157        val uses: Int = 0,
- 158        @SerializedName("max_uses") val maxUses: Int = 0,
- 159        @SerializedName("expires_at") val expiresAt: String? = null,
- 160    )
- 161    data class CreateInviteRequest(
- 162        @SerializedName("max_uses") val maxUses: Int = 0,
- 163        @SerializedName("max_age") val maxAge: Int = 86400,
- 164    )
- 165    data class CreatedInviteResponse(
- 166        val code: String,
- 167        @SerializedName("guild_id") val guildId: String,
- 168        @SerializedName("channel_id") val channelId: String,
- 169    )
- 170    data class GuildInviteResponse(
- 171        val code: String,
- 172        @SerializedName("guild_id") val guildId: String,
- 173        @SerializedName("channel_id") val channelId: String,
- 174        val channel: ChannelResponse? = null,
- 175        val creator: UserResponse? = null,
- 176        val uses: Int = 0,
- 177        @SerializedName("max_uses") val maxUses: Int = 0,
- 178        @SerializedName("max_age") val maxAge: Int = 86400,
- 179        @SerializedName("expires_at") val expiresAt: String? = null,
- 180        @SerializedName("created_at") val createdAt: String? = null,
- 181    )
- 182    
- 183    // DM request model
- 184    data class OpenDmRequest(@SerializedName("recipient_id") val recipientId: String)
+  65        private val scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+  66        private var cycleJob: Job? = null
+  67        private var isPaused = false
+  68        private var lastTaskName = "Task"
+  69    
+  70        // Tracks the last elapsed-second mark at which we pushed a status+screenshot update,
+  71        // so we fire roughly every StatusReporter.STATUS_INTERVAL_SECONDS regardless of pauses.
+  72        private var lastStatusPushAt = 0L
+  73    
+  74        private val controlReceiver = object : android.content.BroadcastReceiver() {
+  75            override fun onReceive(ctx: Context?, intent: Intent?) {
+  76                when (intent?.action) {
+  77 ❌                 ACTION_PAUSE             -> { isPaused = true;  AttentionCycleManager.pause() }
+  78 ❌                 ACTION_RESUME            -> { isPaused = false; AttentionCycleManager.resume() }
+  79 ❌                 ACTION_MARK_DONE         -> AttentionCycleManager.confirmDone()
+  80 ❌                 ACTION_TAKE_BREAK        -> AttentionCycleManager.dismissPromptAndBreak()
+  81 ❌                 ACTION_CONFIRM_ATTENTION -> AttentionCycleManager.confirmAttention()
+  82                }
+  83            }
+  84        }
+  85    
+  86        override fun onCreate() {
+  87            super.onCreate()
+  88            createChannel()
+  89            val filter = android.content.IntentFilter().apply {
+  90                addAction(ACTION_PAUSE)
+  91                addAction(ACTION_RESUME)
+  92                addAction(ACTION_MARK_DONE)
+  93                addAction(ACTION_TAKE_BREAK)
+  94                addAction(ACTION_CONFIRM_ATTENTION)
+  95            }
+  96            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+  97                registerReceiver(controlReceiver, filter, Context.RECEIVER_NOT_EXPORTED)
+  98            } else {
+  99                @Suppress("UnspecifiedRegisterReceiverFlag")
+ 100                registerReceiver(controlReceiver, filter)
+ 101            }
+ 102        }
+ 103    
+ 104        override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+ 105            val taskId      = intent?.getStringExtra(EXTRA_TASK_ID)         ?: "task"
+ 106            val taskName    = intent?.getStringExtra(EXTRA_TASK_NAME)       ?: "Task"
+ 107            val durationMin = intent?.getLongExtra(EXTRA_DURATION_MIN, 60L) ?: 60L
+ 108            lastTaskName = taskName
+ 109    
+ 110            // startForeground() MUST be called before getMediaProjection() on Android 14+.
+ 111            // We call it first here, then immediately store the projection token below.
+ 112            startForegroundCompat(buildNotification(initialPhaseLabel(durationMin), taskName))
+ 113    
+ 114            // Now it is safe to call getMediaProjection() — the mediaProjection FGS type is active.
+ 115            val projCode = intent?.getIntExtra(EXTRA_PROJECTION_CODE, Activity.RESULT_CANCELED)
+ 116                ?: Activity.RESULT_CANCELED
+ 117            val projData = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+ 118                intent?.getParcelableExtra(EXTRA_PROJECTION_DATA, Intent::class.java)
+ 119            else
+ 120                @Suppress("DEPRECATION") intent?.getParcelableExtra(EXTRA_PROJECTION_DATA)
+ 121    
+ 122            if (projCode == Activity.RESULT_OK && projData != null) {
+ 123 ❌             ScreenCaptureManager.storeProjectionToken(applicationContext, projCode, projData)
+ 124            }
+ 125    
+ 126 ❌         AttentionCycleManager.start(taskId, taskName, durationMin)
+ 127            lastStatusPushAt = 0L
+ 128            startCycleLoop(taskName)
+ 129            return START_NOT_STICKY
+ 130        }
+ 131    
+ 132        private fun initialPhaseLabel(durationMin: Long): String {
+ 133 ❌         val pomodoro = AttentionCycleManager.currentState().pomodoroEnabled
+ 134            return if (pomodoro) "FOCUS — 30:00" else "FOCUS — ${durationMin}:00"
+ 135        }
+ 136    
+ 137        private fun startCycleLoop(taskName: String) {
+ 138            cycleJob?.cancel()
+ 139            cycleJob = scope.launch {
+ 140                while (isActive) {
+ 141                    if (isPaused) {
+ 142 ❌                     val cs = AttentionCycleManager.currentState()
+ 143                        (getSystemService(NOTIFICATION_SERVICE) as NotificationManager)
+ 144                            .notify(NOTIF_ID, buildNotification("PAUSED", taskName, cs.totalSessionSeconds, cs.cycleIndex))
+ 145                        delay(1_000)
+ 146                        continue
+ 147                    }
+ 148 ❌                 val cs = AttentionCycleManager.tick()
+ 149                    (getSystemService(NOTIFICATION_SERVICE) as NotificationManager)
+ 150                        .notify(NOTIF_ID, buildNotification(
+ 151                            phaseLabel(cs.phase, cs.phaseSecondsLeft),
+ 152                            taskName, cs.totalSessionSeconds, cs.cycleIndex, cs.needsAttentionCheck, cs.phase))
+ 153    
+ 154                    if (cs.phaseJustChanged) {
+ 155                        when (cs.phase) {
+ 156 ❌                         AttentionPhase.PROMPT_DONE -> CheckmateTTS.speak(
+ 157                                this@AttentionCycleService,
+ 158                                "30 minutes done. Mark task complete or take a break?"
+ 159                            )
+ 160 ❌                         AttentionPhase.SHORT_BREAK -> CheckmateTTS.speak(
+ 161                                this@AttentionCycleService, "Take a 5 minute break."
+ 162                            )
+ 163 ❌                         AttentionPhase.LONG_BREAK  -> CheckmateTTS.speak(
+ 164                                this@AttentionCycleService, "Good work. 10 minute break."
+ 165                            )
+ 166 ❌                         AttentionPhase.FOCUS       -> CheckmateTTS.speak(
+ 167                                this@AttentionCycleService, "Break over. Back to focus."
+ 168                            )
+ 169 ❌                         AttentionPhase.PAUSED      -> {}
+ 170 ❌                         AttentionPhase.DONE        -> {
+ 171 ❌                             CheckmateTTS.speak(this@AttentionCycleService, "Session complete.")
+ 172                                stopSelf(); return@launch
+ 173                            }
+ 174                        }
+ 175                    }
+ 176                    if (cs.needsAttentionCheck && cs.phaseSecondsLeft % 30L == 0L)
+ 177 ❌                     CheckmateTTS.speak(this@AttentionCycleService, "Still focused? Tap the check.")
+ 178    
+ 179                    // ── Periodic status + screenshot push to guardian bot ──────────────
+ 180 ❌                 if (cs.totalSessionSeconds - lastStatusPushAt >= StatusReporter.STATUS_INTERVAL_SECONDS) {
+ 181                        lastStatusPushAt = cs.totalSessionSeconds
+ 182                        val snapshot = cs
+ 183                        launch(Dispatchers.IO) {
+ 184 ❌                         StatusReporter.pushStatus(this@AttentionCycleService, snapshot)
+ 185                        }
+ 186                    }
+ 187    
+ 188                    delay(1_000)
+ 189                }
+ 190            }
+ 191        }
+ 192    
+ 193 ❌     private fun phaseLabel(phase: AttentionPhase, secondsLeft: Long): String {
+ 194            val m = secondsLeft / 60; val s = secondsLeft % 60
+ 195            val t = String.format("%d:%02d", m, s)
+ 196 ❌         return when (phase) {
+ 197 ❌             AttentionPhase.FOCUS        -> "FOCUS — $t"
+ 198 ❌             AttentionPhase.SHORT_BREAK  -> "SHORT BREAK — $t"
+ 199 ❌             AttentionPhase.LONG_BREAK   -> "LONG BREAK — $t"
+ 200 ❌             AttentionPhase.PAUSED       -> "PAUSED — $t"
+ 201 ❌             AttentionPhase.PROMPT_DONE  -> "MARK DONE?"
+ 202 ❌             AttentionPhase.DONE         -> "SESSION COMPLETE"
+ 203            }
+ 204        }
+ 205    
+ 206        private fun buildNotification(
+ 207            phaseText: String, taskName: String,
+ 208            totalSeconds: Long = 0L, cycleIndex: Int = 0, needsCheck: Boolean = false,
+ 209 ❌         phase: AttentionPhase = AttentionPhase.FOCUS
+ 210        ): Notification {
+ 211            val tm = totalSeconds / 60; val ts = totalSeconds % 60
+ 212            val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+ 213                .setContentTitle(if (needsCheck) "ATTN: $phaseText" else phaseText)
+ 214                .setContentText("$taskName  |  ${tm}m ${ts}s  |  Cycle $cycleIndex")
+ 215                .setSmallIcon(android.R.drawable.ic_menu_recent_history)
+ 216                .setOngoing(true).setOnlyAlertOnce(!needsCheck)
+ 217                .setPriority(NotificationCompat.PRIORITY_HIGH)
+ 218    
+ 219            // Action buttons mirror the floating attention bar so the same controls
+ 220            // are available from the notification when the overlay bar is off.
+ 221 ❌         if (phase == AttentionPhase.PROMPT_DONE) {
+ 222                builder.addAction(0, "✅ Mark Done", actionPendingIntent(ACTION_MARK_DONE, 1))
+ 223                builder.addAction(0, "➡ Break",      actionPendingIntent(ACTION_TAKE_BREAK, 2))
+ 224            } else if (needsCheck) {
+ 225                builder.addAction(0, "✅ I'm here", actionPendingIntent(ACTION_CONFIRM_ATTENTION, 3))
+ 226            }
+ 227 ❌         if (phase != AttentionPhase.DONE && phase != AttentionPhase.PROMPT_DONE) {
+ 228                val pauseLabel = if (isPaused) "▶ Resume" else "⏸ Pause"
+ 229                val pauseAction = if (isPaused) ACTION_RESUME else ACTION_PAUSE
+ 230                builder.addAction(0, pauseLabel, actionPendingIntent(pauseAction, 4))
+ 231            }
+ 232    
+ 233            return builder.build()
+ 234        }
+ 235    
+ 236        private fun actionPendingIntent(action: String, requestCode: Int): PendingIntent {
+ 237            val intent = Intent(action).setPackage(packageName)
+ 238            return PendingIntent.getBroadcast(
+ 239                this, requestCode, intent,
+ 240                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+ 241            )
+ 242        }
+ 243    
+ 244        private fun startForegroundCompat(n: Notification) {
+ 245            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+ 246                startForeground(NOTIF_ID, n,
+ 247                    ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC or
+ 248                    ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION)
+ 249            else startForeground(NOTIF_ID, n)
+ 250        }
+ 251    
+ 252        private fun createChannel() {
+ 253            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+ 254                val ch = NotificationChannel(CHANNEL_ID, "Attention Cycle", NotificationManager.IMPORTANCE_HIGH)
+ 255                (getSystemService(NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(ch)
+ 256            }
+ 257        }
+ 258    
+ 259        override fun onDestroy() {
+ 260            cycleJob?.cancel(); scope.cancel()
+ 261            try { unregisterReceiver(controlReceiver) } catch (_: Exception) {}
+ 262 ❌         AttentionCycleManager.reset()
+ 263            super.onDestroy()
+ 264        }
+ 265    
+ 266        override fun onBind(intent: Intent?): IBinder? = null
+ 267    }
 
 
-//===== FILE: app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt =====
+//===== FILE: app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt =====
 
-// ❌ ERRORS IN THIS FILE (2 error(s)):
-// Line 89: Argument type mismatch: actual type is 'kotlin.Function2<kotlin.String, ERROR CLASS: Cannot infer type for parameter name, kotlin.Unit>', but 'kotlin.Function1<kotlin.String, kotlin.Unit>' was expected.
-// Line 89: Cannot infer type for this parameter. Please specify it explicitly.
+// ❌ ERRORS IN THIS FILE (56 error(s)):
+// Line 36: Unresolved reference 'core'.
+// Line 37: Unresolved reference 'core'.
+// Line 38: Unresolved reference 'core'.
+// Line 69: Unresolved reference 'CheckmatePrefs'.
+// Line 161: Property delegate must have a 'getValue(Nothing?, KProperty0<ERROR CLASS: Cannot infer argument for type parameter T>)' method. None of the following functions is applicable:
+// Line 161: Unresolved reference 'AttentionCycleManager'.
+// Line 163: Unresolved reference 'phase'.
+// Line 164: Unresolved reference 'AttentionPhase'.
+// Line 164: Unresolved reference 'phase'.
+// Line 167: 'when' expression must be exhaustive. Add an 'else' branch.
+// Line 167: Unresolved reference 'phase'.
+// Line 168: Unresolved reference 'AttentionPhase'.
+// Line 169: Unresolved reference 'AttentionPhase'.
+// Line 170: Unresolved reference 'AttentionPhase'.
+// Line 171: Unresolved reference 'AttentionPhase'.
+// Line 172: Unresolved reference 'AttentionPhase'.
+// Line 173: Unresolved reference 'AttentionPhase'.
+// Line 178: Unresolved reference 'phase'.
+// Line 179: Unresolved reference 'AttentionPhase'.
+// Line 179: Unresolved reference 'pomodoroEnabled'.
+// Line 180: Unresolved reference 'totalDurationSecs'.
+// Line 181: Unresolved reference 'AttentionPhase'.
+// Line 182: Unresolved reference 'AttentionPhase'.
+// Line 185: Unresolved reference 'phase'.
+// Line 186: Unresolved reference 'AttentionPhase'.
+// Line 187: Unresolved reference 'phaseSecondsLeft'.
+// Line 190: Unresolved reference 'phaseSecondsLeft'.
+// Line 191: Unresolved reference 'phaseSecondsLeft'.
+// Line 193: 'when' expression must be exhaustive. Add an 'else' branch.
+// Line 193: Unresolved reference 'phase'.
+// Line 194: Unresolved reference 'AttentionPhase'.
+// Line 195: Unresolved reference 'AttentionPhase'.
+// Line 196: Unresolved reference 'AttentionPhase'.
+// Line 197: Unresolved reference 'AttentionPhase'.
+// Line 198: Unresolved reference 'AttentionPhase'.
+// Line 199: Unresolved reference 'AttentionPhase'.
+// Line 212: Unresolved reference 'AttentionPhase'.
+// Line 212: Unresolved reference 'phase'.
+// Line 217: Unresolved reference 'AttentionPhase'.
+// Line 217: Unresolved reference 'phase'.
+// Line 244: Unresolved reference 'AttentionCycleManager'.
+// Line 256: Unresolved reference 'AttentionCycleManager'.
+// Line 286: Unresolved reference 'pomodoroEnabled'.
+// Line 289: Unresolved reference 'cycleIndex'.
+// Line 300: Unresolved reference 'needsAttentionCheck'.
+// Line 309: Unresolved reference 'AttentionCycleManager'.
+// Line 313: Unresolved reference 'AttentionPhase'.
+// Line 313: Unresolved reference 'phase'.
+// Line 314: Unresolved reference 'AttentionPhase'.
+// Line 314: Unresolved reference 'phase'.
+// Line 315: Unresolved reference 'AttentionPhase'.
+// Line 315: Unresolved reference 'phase'.
+// Line 326: Unresolved reference 'AttentionCycleManager'.
+// Line 326: Unresolved reference 'AttentionPhase'.
+// Line 326: Unresolved reference 'phase'.
+// Line 327: Unresolved reference 'AttentionCycleManager'.
 
-   1    package com.nexus.android.ui.navigation
+   1    package com.checkmate.service
    2    
-   3    import android.content.Context
-   4    import androidx.compose.runtime.Composable
-   5    import androidx.compose.ui.platform.LocalContext
-   6    import androidx.navigation.NavType
-   7    import androidx.navigation.compose.NavHost
-   8    import androidx.navigation.compose.composable
-   9    import androidx.navigation.compose.rememberNavController
-  10    import androidx.navigation.navArgument
-  11    import com.nexus.android.ui.screens.auth.LoginScreen
-  12    import com.nexus.android.ui.screens.auth.RegisterScreen
-  13    import com.nexus.android.ui.screens.chat.ChatScreen
-  14    import com.nexus.android.ui.screens.dm.DmListScreen
-  15    import com.nexus.android.ui.screens.home.HomeScreen
-  16    import com.nexus.android.ui.screens.profile.ProfileScreen
-  17    import com.nexus.android.ui.screens.server.ChannelMembersScreen
-  18    import com.nexus.android.ui.screens.server.ServerSettingsScreen
-  19    import com.nexus.android.ui.screens.settings.SettingsScreen
-  20    import com.nexus.android.ui.screens.voice.VoiceScreen
-  21    
-  22    sealed class Screen(val route: String) {
-  23        object Login          : Screen("login")
-  24        object Register       : Screen("register")
-  25        object Home           : Screen("home")
-  26        object Profile        : Screen("profile")
-  27        object Settings       : Screen("settings")
-  28        object DmList         : Screen("dm_list")
-  29        object DmChat         : Screen("dm_chat/{channelId}") {
-  30            fun createRoute(c: String) = "dm_chat/$c"
-  31        }
-  32        object Chat           : Screen("chat/{channelId}/{guildId}") {
-  33            fun createRoute(c: String, g: String) = "chat/$c/$g"
-  34        }
-  35        object Voice          : Screen("voice/{channelId}/{channelName}") {
-  36            fun createRoute(c: String, n: String) = "voice/$c/${n.replace("/", "-")}"
-  37        }
-  38        object ServerSettings : Screen("server_settings/{guildId}") {
-  39            fun createRoute(g: String) = "server_settings/$g"
-  40        }
-  41        object ChannelMembers : Screen("channel_members/{channelId}/{guildId}") {
-  42            fun createRoute(c: String, g: String) = "channel_members/$c/$g"
-  43        }
-  44    }
-  45    
-  46    // FIX: Read stored access token from EncryptedSharedPreferences to decide start destination.
-  47    // Token is written by AuthInterceptor under key "access_token" in "nexus_secure_prefs".
-  48    private fun hasStoredToken(context: Context): Boolean {
-  49        return try {
-  50            val masterKey = androidx.security.crypto.MasterKey.Builder(context)
-  51                .setKeyScheme(androidx.security.crypto.MasterKey.KeyScheme.AES256_GCM)
-  52                .build()
-  53            val prefs = androidx.security.crypto.EncryptedSharedPreferences.create(
-  54                context,
-  55                "nexus_secure_prefs",
-  56                masterKey,
-  57                androidx.security.crypto.EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-  58                androidx.security.crypto.EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
-  59            )
-  60            prefs.getString("access_token", null) != null
-  61        } catch (_: Exception) { false }
-  62    }
-  63    
-  64    @Composable
-  65    fun NexusNavGraph() {
-  66        val context = LocalContext.current
-  67        // FIX: start at Home if token exists, Login otherwise — no more login prompt on every restart
-  68        val startDestination = if (hasStoredToken(context)) Screen.Home.route else Screen.Login.route
-  69        val nav = rememberNavController()
-  70        NavHost(navController = nav, startDestination = startDestination) {
-  71    
-  72            composable(Screen.Login.route) {
-  73                LoginScreen(
-  74                    onLoginSuccess       = { nav.navigate(Screen.Home.route) { popUpTo(Screen.Login.route) { inclusive = true } } },
-  75                    onNavigateToRegister = { nav.navigate(Screen.Register.route) },
-  76                )
+   3    import android.app.*
+   4    import android.content.Context
+   5    import android.content.Intent
+   6    import android.graphics.PixelFormat
+   7    import android.os.Build
+   8    import android.os.IBinder
+   9    import android.view.Gravity
+  10    import android.view.MotionEvent
+  11    import android.view.WindowManager
+  12    import androidx.compose.animation.core.*
+  13    import androidx.compose.foundation.background
+  14    import androidx.compose.foundation.clickable
+  15    import androidx.compose.foundation.interaction.MutableInteractionSource
+  16    import androidx.compose.foundation.layout.*
+  17    import androidx.compose.foundation.shape.RoundedCornerShape
+  18    import androidx.compose.material3.LinearProgressIndicator
+  19    import androidx.compose.material3.Text
+  20    import androidx.compose.runtime.*
+  21    import androidx.compose.ui.Alignment
+  22    import androidx.compose.ui.Modifier
+  23    import androidx.compose.ui.draw.clip
+  24    import androidx.compose.ui.graphics.Color
+  25    import androidx.compose.ui.platform.ComposeView
+  26    import androidx.compose.ui.text.font.FontFamily
+  27    import androidx.compose.ui.text.font.FontWeight
+  28    import androidx.compose.ui.unit.dp
+  29    import androidx.compose.ui.unit.sp
+  30    import androidx.core.app.NotificationCompat
+  31    import androidx.lifecycle.*
+  32    import androidx.savedstate.SavedStateRegistry
+  33    import androidx.savedstate.SavedStateRegistryController
+  34    import androidx.savedstate.SavedStateRegistryOwner
+  35    import androidx.savedstate.setViewTreeSavedStateRegistryOwner
+  36 ❌ import com.checkmate.core.AttentionCycleManager
+  37 ❌ import com.checkmate.core.AttentionPhase
+  38 ❌ import com.checkmate.core.CheckmatePrefs
+  39    
+  40    class FloatingAttentionService : Service(),
+  41        LifecycleOwner,
+  42        ViewModelStoreOwner,
+  43        SavedStateRegistryOwner {
+  44    
+  45        private val lifecycleRegistry = LifecycleRegistry(this)
+  46        override val lifecycle: Lifecycle get() = lifecycleRegistry
+  47    
+  48        private val vmStore = ViewModelStore()
+  49        override val viewModelStore: ViewModelStore get() = vmStore
+  50    
+  51        private val savedStateController = SavedStateRegistryController.create(this)
+  52        override val savedStateRegistry: SavedStateRegistry
+  53            get() = savedStateController.savedStateRegistry
+  54    
+  55        private lateinit var windowManager: WindowManager
+  56        private var overlayView: ComposeView? = null
+  57    
+  58        companion object {
+  59            private const val CHANNEL_ID = "floating_attention_channel"
+  60            private const val NOTIF_ID   = 99
+  61    
+  62            // Pref key for the Settings → Work Mode → "Floating Focus Bar" toggle.
+  63            // When off, the overlay never shows; the student still gets the same
+  64            // controls (Done / Break / Confirm / Pause) via notification buttons
+  65            // added in AttentionCycleService, so nothing becomes un-controllable.
+  66            const val PREF_FOCUS_BAR_ENABLED = "focus_bar_enabled"
+  67    
+  68            fun start(context: Context) {
+  69 ❌             if (!CheckmatePrefs.getBoolean(PREF_FOCUS_BAR_ENABLED, true)) return
+  70                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M &&
+  71                    !android.provider.Settings.canDrawOverlays(context)) return
+  72                val intent = Intent(context, FloatingAttentionService::class.java)
+  73                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+  74                    context.startForegroundService(intent)
+  75                else
+  76                    context.startService(intent)
   77            }
   78    
-  79            composable(Screen.Register.route) {
-  80                RegisterScreen(
-  81                    onRegisterSuccess = { nav.navigate(Screen.Login.route) { popUpTo(Screen.Register.route) { inclusive = true } } },
-  82                    onNavigateToLogin = { nav.popBackStack() },
-  83                )
-  84            }
-  85    
-  86            composable(Screen.Home.route) {
-  87                HomeScreen(
-  88                    onOpenChannel        = { cId, gId -> nav.navigate(Screen.Chat.createRoute(cId, gId)) },
-  89 ❌                 onOpenVoice          = { cId, name -> nav.navigate(Screen.Voice.createRoute(cId, name)) },
-  90                    onOpenProfile        = { nav.navigate(Screen.Profile.route) },
-  91                    onOpenSettings       = { nav.navigate(Screen.Settings.route) },
-  92                    onOpenServerSettings = { gId -> nav.navigate(Screen.ServerSettings.createRoute(gId)) },
-  93                    onOpenDms            = { nav.navigate(Screen.DmList.route) },
-  94                )
-  95            }
-  96    
-  97            composable(Screen.DmList.route) {
-  98                DmListScreen(
-  99                    onOpenDm = { cId -> nav.navigate(Screen.DmChat.createRoute(cId)) },
- 100                    onBack   = { nav.popBackStack() },
- 101                )
- 102            }
- 103    
- 104            composable(
- 105                route     = Screen.DmChat.route,
- 106                arguments = listOf(navArgument("channelId") { type = NavType.StringType }),
- 107            ) { back ->
- 108                ChatScreen(
- 109                    channelId     = back.arguments?.getString("channelId") ?: return@composable,
- 110                    guildId       = "dm",
- 111                    onBack        = { nav.popBackStack() },
- 112                    onOpenMembers = { _, _ -> },
- 113                )
- 114            }
- 115    
- 116            composable(Screen.Profile.route) {
- 117                ProfileScreen(onBack = { nav.popBackStack() })
- 118            }
- 119    
- 120            composable(Screen.Settings.route) {
- 121                SettingsScreen(
- 122                    onBack   = { nav.popBackStack() },
- 123                    onLogout = { nav.navigate(Screen.Login.route) { popUpTo(0) { inclusive = true } } },
- 124                )
- 125            }
- 126    
- 127            composable(
- 128                route     = Screen.Chat.route,
- 129                arguments = listOf(
- 130                    navArgument("channelId") { type = NavType.StringType },
- 131                    navArgument("guildId")   { type = NavType.StringType },
- 132                ),
- 133            ) { back ->
- 134                ChatScreen(
- 135                    channelId     = back.arguments?.getString("channelId") ?: return@composable,
- 136                    guildId       = back.arguments?.getString("guildId") ?: return@composable,
- 137                    onBack        = { nav.popBackStack() },
- 138                    onOpenMembers = { cId, gId -> nav.navigate(Screen.ChannelMembers.createRoute(cId, gId)) },
- 139                )
- 140            }
- 141    
- 142            composable(
- 143                route     = Screen.Voice.route,
- 144                arguments = listOf(
- 145                    navArgument("channelId")   { type = NavType.StringType },
- 146                    navArgument("channelName") { type = NavType.StringType },
- 147                ),
- 148            ) { back ->
- 149                VoiceScreen(
- 150                    channelId   = back.arguments?.getString("channelId") ?: return@composable,
- 151                    channelName = back.arguments?.getString("channelName") ?: "Voice",
- 152                    onLeave     = { nav.popBackStack() },
- 153                )
- 154            }
- 155    
- 156            composable(
- 157                route     = Screen.ServerSettings.route,
- 158                arguments = listOf(navArgument("guildId") { type = NavType.StringType }),
- 159            ) { back ->
- 160                ServerSettingsScreen(
- 161                    guildId = back.arguments?.getString("guildId") ?: return@composable,
- 162                    onBack  = { nav.popBackStack() },
- 163                )
- 164            }
- 165    
- 166            composable(
- 167                route     = Screen.ChannelMembers.route,
- 168                arguments = listOf(
- 169                    navArgument("channelId") { type = NavType.StringType },
- 170                    navArgument("guildId")   { type = NavType.StringType },
- 171                ),
- 172            ) { back ->
- 173                ChannelMembersScreen(
- 174                    channelId = back.arguments?.getString("channelId") ?: return@composable,
- 175                    guildId   = back.arguments?.getString("guildId") ?: return@composable,
- 176                    onBack    = { nav.popBackStack() },
- 177                )
- 178            }
- 179        }
- 180    }
-
-
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt =====
-
-// ❌ ERRORS IN THIS FILE (2 error(s)):
-// Line 80: Unresolved reference 'leaveGuild'.
-// Line 82: Unresolved reference 'generateInvite'.
-
-   1    package com.nexus.android.ui.screens.home
-   2    
-   3    import android.content.ClipData
-   4    import android.content.ClipboardManager
-   5    import android.content.Context
-   6    import androidx.compose.foundation.ExperimentalFoundationApi
-   7    import androidx.compose.foundation.background
-   8    import androidx.compose.foundation.clickable
-   9    import androidx.compose.foundation.combinedClickable
-  10    import androidx.compose.foundation.layout.*
-  11    import androidx.compose.foundation.lazy.LazyColumn
-  12    import androidx.compose.foundation.lazy.items
-  13    import androidx.compose.foundation.shape.CircleShape
-  14    import androidx.compose.foundation.shape.RoundedCornerShape
-  15    import androidx.compose.material.icons.Icons
-  16    import androidx.compose.material.icons.filled.*
-  17    import androidx.compose.material3.*
-  18    import androidx.compose.runtime.*
-  19    import androidx.compose.ui.Alignment
-  20    import androidx.compose.ui.Modifier
-  21    import androidx.compose.ui.draw.clip
-  22    import androidx.compose.ui.graphics.Color
-  23    import androidx.compose.ui.platform.LocalContext
-  24    import androidx.compose.ui.text.font.FontWeight
-  25    import androidx.compose.ui.unit.dp
-  26    import androidx.compose.ui.unit.sp
-  27    import androidx.compose.ui.window.Dialog
-  28    import androidx.hilt.navigation.compose.hiltViewModel
-  29    import coil.compose.AsyncImage
-  30    import com.nexus.android.data.api.models.ChannelResponse
-  31    import com.nexus.android.data.api.models.GuildResponse
-  32    import com.nexus.android.ui.theme.*
-  33    
-  34    @Composable
-  35    fun HomeScreen(
-  36        onOpenChannel: (String, String) -> Unit,
-  37        onOpenVoice: (String) -> Unit,
-  38        onOpenProfile: () -> Unit,
-  39        onOpenSettings: () -> Unit,
-  40        onOpenServerSettings: (String) -> Unit,
-  41        onOpenDms: () -> Unit,
-  42        vm: HomeViewModel = hiltViewModel(),
-  43    ) {
-  44        val guilds        by vm.guilds.collectAsState()
-  45        val selectedGuild by vm.selectedGuild.collectAsState()
-  46        val channels      by vm.channels.collectAsState()
-  47        val uiState       by vm.uiState.collectAsState()
-  48        val context       = LocalContext.current
-  49    
-  50        if (uiState.showCreateGuildDialog)
-  51            CreateGuildDialog(loading = uiState.createGuildLoading, error = uiState.error,
-  52                onDismiss = vm::hideCreateGuildDialog, onCreate = vm::createGuild)
-  53        if (uiState.showJoinGuildDialog)
-  54            JoinGuildDialog(loading = uiState.loading, error = uiState.error,
-  55                onDismiss = vm::hideJoinGuildDialog, onJoin = vm::joinGuildByInvite)
-  56        if (uiState.showCreateChannelDialog)
-  57            CreateChannelDialog(loading = uiState.createChannelLoading, error = uiState.error,
-  58                onDismiss = vm::hideCreateChannelDialog, onCreate = { name, type -> vm.createChannel(name, type) })
-  59        if (uiState.showInviteDialog && uiState.inviteCode != null)
-  60            InviteDialog(code = uiState.inviteCode!!, onDismiss = vm::hideInviteDialog, onCopy = { code ->
-  61                val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-  62                cm.setPrimaryClip(ClipData.newPlainText("Invite Link", "nexus.gg/$code"))
-  63            })
-  64    
-  65        Row(modifier = Modifier.fillMaxSize().background(NexusDark)) {
-  66            ServerRail(
-  67                guilds        = guilds,
-  68                selectedId    = selectedGuild?.id,
-  69                onSelect      = vm::selectGuild,
-  70                onAddServer   = vm::showCreateGuildDialog,
-  71                onJoinServer  = vm::showJoinGuildDialog,
-  72                onOpenProfile = onOpenProfile,
-  73                onOpenDms     = onOpenDms,
-  74            )
-  75            if (selectedGuild != null) {
-  76                ChannelSidebar(
-  77                    guild           = selectedGuild!!,
-  78                    channels        = channels,
-  79                    onSelect        = { ch -> if (ch.type == "voice") onOpenVoice(ch.id) else onOpenChannel(ch.id, selectedGuild!!.id) },
-  80 ❌                 onLeaveGuild    = { vm.leaveGuild(selectedGuild!!.id) },
-  81                    onCreateChannel = vm::showCreateChannelDialog,
-  82 ❌                 onInvite        = { vm.generateInvite(it) },
-  83                    onOpenSettings  = onOpenSettings,
-  84                    onOpenServerSettings = { onOpenServerSettings(selectedGuild!!.id) },
-  85                )
-  86            } else {
-  87                Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-  88                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-  89                        Text("No server selected", color = NexusTextPrimary, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-  90                        Text("Select a server from the sidebar", color = NexusTextMuted, fontSize = 13.sp)
-  91                    }
-  92                }
-  93            }
-  94        }
-  95    }
-  96    
-  97    @Composable
-  98    fun ServerRail(
-  99        guilds: List<GuildResponse>, selectedId: String?,
- 100        onSelect: (GuildResponse) -> Unit, onAddServer: () -> Unit,
- 101        onJoinServer: () -> Unit, onOpenProfile: () -> Unit,
- 102        onOpenDms: () -> Unit,
- 103    ) {
- 104        var showAddMenu by remember { mutableStateOf(false) }
- 105        Column(
- 106            modifier = Modifier.width(72.dp).fillMaxHeight().background(NexusDark).padding(vertical = 8.dp),
- 107            horizontalAlignment = Alignment.CenterHorizontally,
- 108        ) {
- 109            // Profile button
- 110            Box(
- 111                modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusBlurple).clickable(onClick = onOpenProfile),
- 112                contentAlignment = Alignment.Center,
- 113            ) { Text("N", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 20.sp) }
+  79            fun stop(context: Context) {
+  80                context.stopService(Intent(context, FloatingAttentionService::class.java))
+  81            }
+  82        }
+  83    
+  84        override fun onCreate() {
+  85            savedStateController.performAttach()
+  86            savedStateController.performRestore(null)
+  87            lifecycleRegistry.currentState = Lifecycle.State.CREATED
+  88            super.onCreate()
+  89            windowManager = getSystemService(WINDOW_SERVICE) as WindowManager
+  90            createChannel()
+  91        }
+  92    
+  93        override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+  94            startForeground(NOTIF_ID, buildNotification())
+  95            lifecycleRegistry.currentState = Lifecycle.State.STARTED
+  96            lifecycleRegistry.currentState = Lifecycle.State.RESUMED
+  97            showOverlay()
+  98            return START_NOT_STICKY
+  99        }
+ 100    
+ 101        private fun showOverlay() {
+ 102            if (overlayView != null) return
+ 103            val params = WindowManager.LayoutParams(
+ 104                WindowManager.LayoutParams.MATCH_PARENT,
+ 105                WindowManager.LayoutParams.WRAP_CONTENT,
+ 106                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+ 107                    WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+ 108                else
+ 109                    @Suppress("DEPRECATION") WindowManager.LayoutParams.TYPE_PHONE,
+ 110                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
+ 111                        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+ 112                PixelFormat.TRANSLUCENT
+ 113            ).apply { gravity = Gravity.TOP }
  114    
- 115            HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
- 116    
- 117            // DM button
- 118            Box(
- 119                modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusDarkMedium).clickable(onClick = onOpenDms),
- 120                contentAlignment = Alignment.Center,
- 121            ) { Icon(Icons.Default.Forum, contentDescription = "DMs", tint = NexusTextMuted, modifier = Modifier.size(24.dp)) }
- 122    
- 123            Spacer(Modifier.height(8.dp))
+ 115            val view = ComposeView(this).apply {
+ 116                setViewTreeLifecycleOwner(this@FloatingAttentionService)
+ 117                setViewTreeViewModelStoreOwner(this@FloatingAttentionService)
+ 118                setViewTreeSavedStateRegistryOwner(this@FloatingAttentionService)
+ 119                setContent { AttentionBar(onDismiss = { stop(this@FloatingAttentionService) }) }
+ 120            }
+ 121            windowManager.addView(view, params)
+ 122            overlayView = view
+ 123        }
  124    
- 125            LazyColumn(
- 126                modifier = Modifier.weight(1f),
- 127                horizontalAlignment = Alignment.CenterHorizontally,
- 128                verticalArrangement = Arrangement.spacedBy(8.dp),
- 129            ) {
- 130                items(guilds, key = { it.id }) { guild ->
- 131                    val selected = guild.id == selectedId
- 132                    Box(
- 133                        modifier = Modifier
- 134                            .size(48.dp)
- 135                            .clip(if (selected) RoundedCornerShape(16.dp) else CircleShape)
- 136                            .background(if (selected) NexusBlurple else NexusDarkMedium)
- 137                            .clickable { onSelect(guild) },
- 138                        contentAlignment = Alignment.Center,
- 139                    ) {
- 140                        if (guild.icon != null)
- 141                            AsyncImage(model = guild.icon, contentDescription = guild.name, modifier = Modifier.fillMaxSize())
- 142                        else
- 143                            Text(guild.name.take(2).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 14.sp)
- 144                    }
- 145                }
- 146            }
+ 125        override fun onDestroy() {
+ 126            lifecycleRegistry.currentState = Lifecycle.State.DESTROYED
+ 127            overlayView?.let { windowManager.removeView(it) }
+ 128            overlayView = null
+ 129            super.onDestroy()
+ 130        }
+ 131    
+ 132        override fun onBind(intent: Intent?): IBinder? = null
+ 133    
+ 134        private fun buildNotification(): Notification =
+ 135            NotificationCompat.Builder(this, CHANNEL_ID)
+ 136                .setContentTitle("Attention overlay active")
+ 137                .setSmallIcon(android.R.drawable.ic_dialog_info)
+ 138                .setOngoing(true).setPriority(NotificationCompat.PRIORITY_LOW).build()
+ 139    
+ 140        private fun createChannel() {
+ 141            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+ 142                val ch = NotificationChannel(CHANNEL_ID, "Floating Attention Bar", NotificationManager.IMPORTANCE_LOW)
+ 143                (getSystemService(NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(ch)
+ 144            }
+ 145        }
+ 146    }
  147    
- 148            HorizontalDivider(modifier = Modifier.width(32.dp).padding(vertical = 8.dp), color = NexusOutline)
+ 148    // ── Colors ────────────────────────────────────────────────────────────────────
  149    
- 150            Box {
- 151                Box(
- 152                    modifier = Modifier.size(48.dp).clip(CircleShape).background(NexusDarkMedium).clickable { showAddMenu = true },
- 153                    contentAlignment = Alignment.Center,
- 154                ) {
- 155                    Icon(Icons.Default.Add, contentDescription = "Add Server", tint = NexusGreen, modifier = Modifier.size(28.dp))
- 156                }
- 157                DropdownMenu(expanded = showAddMenu, onDismissRequest = { showAddMenu = false }) {
- 158                    DropdownMenuItem(text = { Text("Create a Server") }, onClick = { showAddMenu = false; onAddServer() },
- 159                        leadingIcon = { Icon(Icons.Default.Add, contentDescription = null, tint = NexusBlurple) })
- 160                    DropdownMenuItem(text = { Text("Join a Server") }, onClick = { showAddMenu = false; onJoinServer() },
- 161                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null, tint = NexusGreen) })
- 162                }
- 163            }
- 164        }
- 165    }
+ 150    private val CGreen  = Color(0xFF00C896)
+ 151    private val CAmber  = Color(0xFFFFB347)
+ 152    private val CGray   = Color(0xFF9090A8)
+ 153    private val CRed    = Color(0xFFFF4444)
+ 154    private val CPurple = Color(0xFFBB86FC)
+ 155    private val CBg     = Color(0xF0111122)
+ 156    
+ 157    // ── Bar Composable ────────────────────────────────────────────────────────────
+ 158    
+ 159    @Composable
+ 160    private fun AttentionBar(onDismiss: () -> Unit) {
+ 161 ❌     val cs by AttentionCycleManager.stateFlow.collectAsState()
+ 162    
+ 163 ❌     LaunchedEffect(cs.phase) {
+ 164 ❌         if (cs.phase == AttentionPhase.DONE) onDismiss()
+ 165        }
  166    
- 167    @OptIn(ExperimentalFoundationApi::class)
- 168    @Composable
- 169    fun ChannelSidebar(
- 170        guild: GuildResponse, channels: List<ChannelResponse>,
- 171        onSelect: (ChannelResponse) -> Unit, onLeaveGuild: () -> Unit,
- 172        onCreateChannel: () -> Unit, onInvite: (channelId: String) -> Unit,
- 173        onOpenSettings: () -> Unit, onOpenServerSettings: () -> Unit,
- 174    ) {
- 175        var showGuildMenu    by remember { mutableStateOf(false) }
- 176        var showLeaveConfirm by remember { mutableStateOf(false) }
- 177    
- 178        if (showLeaveConfirm) {
- 179            AlertDialog(
- 180                onDismissRequest = { showLeaveConfirm = false },
- 181                title = { Text("Leave '${guild.name}'?") },
- 182                text  = { Text("You won't be able to rejoin without an invite.") },
- 183                confirmButton = { TextButton(onClick = { showLeaveConfirm = false; onLeaveGuild() }) { Text("Leave", color = NexusRed) } },
- 184                dismissButton = { TextButton(onClick = { showLeaveConfirm = false }) { Text("Cancel") } },
- 185            )
- 186        }
- 187    
- 188        Column(modifier = Modifier.width(240.dp).fillMaxHeight().background(NexusDarkMedium)) {
- 189            Box {
- 190                Row(
- 191                    modifier = Modifier.fillMaxWidth().clickable { showGuildMenu = true }.padding(horizontal = 16.dp, vertical = 12.dp),
- 192                    verticalAlignment = Alignment.CenterVertically,
- 193                ) {
- 194                    Text(guild.name, fontWeight = FontWeight.Bold, color = NexusTextPrimary, fontSize = 15.sp, modifier = Modifier.weight(1f))
- 195                    Text("▾", color = NexusTextMuted, fontSize = 12.sp)
- 196                }
- 197                DropdownMenu(expanded = showGuildMenu, onDismissRequest = { showGuildMenu = false }) {
- 198                    DropdownMenuItem(text = { Text("Invite People") },
- 199                        onClick = { showGuildMenu = false; channels.firstOrNull { it.type == "text" }?.let { onInvite(it.id) } },
- 200                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null, tint = NexusGreen) })
- 201                    DropdownMenuItem(text = { Text("Create Channel") },
- 202                        onClick = { showGuildMenu = false; onCreateChannel() },
- 203                        leadingIcon = { Icon(Icons.Default.Add, contentDescription = null, tint = NexusBlurple) })
- 204                    DropdownMenuItem(text = { Text("Server Settings") },
- 205                        onClick = { showGuildMenu = false; onOpenServerSettings() },
- 206                        leadingIcon = { Icon(Icons.Default.Settings, contentDescription = null, tint = NexusTextMuted) })
- 207                    HorizontalDivider(color = NexusOutline)
- 208                    DropdownMenuItem(text = { Text("Leave Server", color = NexusRed) },
- 209                        onClick = { showGuildMenu = false; showLeaveConfirm = true },
- 210                        leadingIcon = { Icon(Icons.Default.ExitToApp, contentDescription = null, tint = NexusRed) })
- 211                }
- 212            }
- 213    
- 214            HorizontalDivider(color = NexusOutline)
- 215    
- 216            val categories    = channels.filter { it.type == "category" }.sortedBy { it.position }
- 217            val uncategorized = channels.filter { it.type != "category" && it.parentId == null }
- 218    
- 219            LazyColumn(modifier = Modifier.weight(1f).padding(top = 8.dp)) {
- 220                items(uncategorized) { ch -> ChannelRow(ch, { onSelect(ch) }, { onInvite(ch.id) }) }
- 221                categories.forEach { cat ->
- 222                    item {
- 223                        Row(
- 224                            modifier = Modifier.fillMaxWidth().padding(start = 16.dp, top = 16.dp, bottom = 4.dp, end = 8.dp),
- 225                            verticalAlignment = Alignment.CenterVertically,
- 226                        ) {
- 227                            Text(cat.name.uppercase(), fontSize = 11.sp, fontWeight = FontWeight.Bold,
- 228                                color = NexusTextMuted, modifier = Modifier.weight(1f))
- 229                            Icon(Icons.Default.Add, contentDescription = "Add channel", tint = NexusTextMuted,
- 230                                modifier = Modifier.size(16.dp).clickable { onCreateChannel() })
- 231                        }
- 232                    }
- 233                    items(channels.filter { it.parentId == cat.id }.sortedBy { it.position }) { ch ->
- 234                        ChannelRow(ch, { onSelect(ch) }, { onInvite(ch.id) })
- 235                    }
- 236                }
- 237            }
- 238    
- 239            HorizontalDivider(color = NexusOutline)
- 240    
- 241            Row(
- 242                modifier = Modifier.fillMaxWidth().background(NexusDark).padding(horizontal = 8.dp, vertical = 6.dp),
- 243                verticalAlignment = Alignment.CenterVertically,
- 244            ) {
- 245                Box(modifier = Modifier.size(32.dp).clip(CircleShape).background(NexusBlurple),
- 246                    contentAlignment = Alignment.Center) {
- 247                    Text("A", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
- 248                }
- 249                Spacer(Modifier.width(8.dp))
- 250                Text("Online", color = NexusGreen, fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
- 251                IconButton(onClick = onOpenSettings, modifier = Modifier.size(32.dp)) {
- 252                    Icon(Icons.Default.Settings, contentDescription = "Settings", tint = NexusTextMuted, modifier = Modifier.size(18.dp))
- 253                }
- 254            }
- 255        }
- 256    }
- 257    
- 258    @OptIn(ExperimentalFoundationApi::class)
- 259    @Composable
- 260    fun ChannelRow(channel: ChannelResponse, onClick: () -> Unit, onInvite: () -> Unit) {
- 261        var showMenu by remember { mutableStateOf(false) }
- 262        val prefix = when (channel.type) { "voice" -> "🔊"; "announcement" -> "📢"; "forum" -> "💬"; else -> "#" }
- 263        Box {
- 264            Row(
- 265                modifier = Modifier
- 266                    .fillMaxWidth()
- 267                    .combinedClickable(onClick = onClick, onLongClick = { showMenu = true })
- 268                    .padding(horizontal = 8.dp, vertical = 1.dp)
- 269                    .clip(RoundedCornerShape(4.dp))
- 270                    .padding(horizontal = 8.dp, vertical = 6.dp),
- 271                verticalAlignment = Alignment.CenterVertically,
- 272            ) {
- 273                Text(prefix, color = NexusTextMuted, fontSize = 16.sp)
- 274                Spacer(Modifier.width(6.dp))
- 275                Text(channel.name, color = NexusTextMuted, fontSize = 14.sp, modifier = Modifier.weight(1f))
- 276            }
- 277            DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
- 278                if (channel.type == "text") {
- 279                    DropdownMenuItem(text = { Text("Copy Invite Link") }, onClick = { showMenu = false; onInvite() },
- 280                        leadingIcon = { Icon(Icons.Default.Link, contentDescription = null) })
- 281                }
- 282            }
- 283        }
- 284    }
- 285    
- 286    @Composable
- 287    fun CreateGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onCreate: (String) -> Unit) {
- 288        var name by remember { mutableStateOf("") }
- 289        Dialog(onDismissRequest = onDismiss) {
- 290            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 291                Column(modifier = Modifier.padding(24.dp)) {
- 292                    Row(verticalAlignment = Alignment.CenterVertically) {
- 293                        Text("Create a Server", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary, modifier = Modifier.weight(1f))
- 294                        IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) { Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted) }
- 295                    }
- 296                    Spacer(Modifier.height(16.dp))
- 297                    OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("SERVER NAME") },
- 298                        singleLine = true, modifier = Modifier.fillMaxWidth(), isError = error != null)
- 299                    error?.let { Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp)) }
- 300                    Spacer(Modifier.height(20.dp))
- 301                    Button(onClick = { onCreate(name) }, enabled = !loading && name.isNotBlank(),
- 302                        modifier = Modifier.fillMaxWidth().height(48.dp),
- 303                        colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple)) {
- 304                        if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
- 305                        else Text("Create", fontWeight = FontWeight.Bold)
- 306                    }
- 307                }
- 308            }
- 309        }
- 310    }
- 311    
- 312    @Composable
- 313    fun JoinGuildDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onJoin: (String) -> Unit) {
- 314        var code by remember { mutableStateOf("") }
- 315        Dialog(onDismissRequest = onDismiss) {
- 316            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 317                Column(modifier = Modifier.padding(24.dp)) {
- 318                    Row(verticalAlignment = Alignment.CenterVertically) {
- 319                        Text("Join a Server", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary, modifier = Modifier.weight(1f))
- 320                        IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) { Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted) }
- 321                    }
- 322                    Spacer(Modifier.height(16.dp))
- 323                    OutlinedTextField(value = code, onValueChange = { code = it }, label = { Text("INVITE LINK OR CODE") },
- 324                        placeholder = { Text("nexus.gg/ABCD1234", color = NexusTextMuted) },
- 325                        singleLine = true, modifier = Modifier.fillMaxWidth(), isError = error != null)
- 326                    error?.let { Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp)) }
- 327                    Spacer(Modifier.height(20.dp))
- 328                    Button(onClick = { onJoin(code) }, enabled = !loading && code.isNotBlank(),
- 329                        modifier = Modifier.fillMaxWidth().height(48.dp),
- 330                        colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple)) {
- 331                        if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
- 332                        else Text("Join Server", fontWeight = FontWeight.Bold)
- 333                    }
- 334                }
- 335            }
- 336        }
- 337    }
- 338    
- 339    @Composable
- 340    fun CreateChannelDialog(loading: Boolean, error: String?, onDismiss: () -> Unit, onCreate: (String, String) -> Unit) {
- 341        var name         by remember { mutableStateOf("") }
- 342        var selectedType by remember { mutableStateOf("text") }
- 343        Dialog(onDismissRequest = onDismiss) {
- 344            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 345                Column(modifier = Modifier.padding(24.dp)) {
- 346                    Row(verticalAlignment = Alignment.CenterVertically) {
- 347                        Text("Create Channel", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary, modifier = Modifier.weight(1f))
- 348                        IconButton(onClick = onDismiss, modifier = Modifier.size(24.dp)) { Icon(Icons.Default.Close, contentDescription = "Close", tint = NexusTextMuted) }
- 349                    }
- 350                    Spacer(Modifier.height(16.dp))
- 351                    Text("CHANNEL TYPE", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = NexusTextMuted)
- 352                    Spacer(Modifier.height(8.dp))
- 353                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
- 354                        listOf("text" to "# Text", "voice" to "🔊 Voice").forEach { (type, label) ->
- 355                            val selected = selectedType == type
- 356                            Surface(shape = RoundedCornerShape(8.dp),
- 357                                color = if (selected) NexusBlurple else NexusDarkLight,
- 358                                modifier = Modifier.clickable { selectedType = type }.weight(1f)) {
- 359                                Box(contentAlignment = Alignment.Center, modifier = Modifier.padding(vertical = 10.dp)) {
- 360                                    Text(label, color = if (selected) Color.White else NexusTextMuted,
- 361                                        fontSize = 13.sp, fontWeight = FontWeight.Bold)
- 362                                }
- 363                            }
- 364                        }
- 365                    }
- 366                    Spacer(Modifier.height(16.dp))
- 367                    OutlinedTextField(value = name, onValueChange = { name = it }, label = { Text("CHANNEL NAME") },
- 368                        placeholder = { Text(if (selectedType == "voice") "General" else "new-channel", color = NexusTextMuted) },
- 369                        singleLine = true, modifier = Modifier.fillMaxWidth(), isError = error != null)
- 370                    error?.let { Text(it, color = NexusRed, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp)) }
- 371                    Spacer(Modifier.height(20.dp))
- 372                    Button(onClick = { onCreate(name, selectedType) }, enabled = !loading && name.isNotBlank(),
- 373                        modifier = Modifier.fillMaxWidth().height(48.dp),
- 374                        colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple)) {
- 375                        if (loading) CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp, color = Color.White)
- 376                        else Text("Create Channel", fontWeight = FontWeight.Bold)
- 377                    }
- 378                }
- 379            }
- 380        }
- 381    }
- 382    
- 383    @Composable
- 384    fun InviteDialog(code: String, onDismiss: () -> Unit, onCopy: (String) -> Unit) {
- 385        Dialog(onDismissRequest = onDismiss) {
- 386            Surface(shape = RoundedCornerShape(16.dp), color = NexusDarkMedium, tonalElevation = 8.dp) {
- 387                Column(modifier = Modifier.padding(24.dp)) {
- 388                    Text("Invite People", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = NexusTextPrimary)
- 389                    Spacer(Modifier.height(16.dp))
- 390                    Text("Share this link to invite others:", color = NexusTextMuted, fontSize = 13.sp)
- 391                    Spacer(Modifier.height(12.dp))
- 392                    Surface(shape = RoundedCornerShape(8.dp), color = NexusDarkLight, modifier = Modifier.fillMaxWidth()) {
- 393                        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
- 394                            Text("nexus.gg/$code", color = NexusTextPrimary, fontSize = 14.sp, modifier = Modifier.weight(1f))
- 395                            TextButton(onClick = { onCopy(code) }) { Text("Copy", color = NexusBlurple, fontWeight = FontWeight.Bold) }
- 396                        }
- 397                    }
- 398                    Spacer(Modifier.height(8.dp))
- 399                    Text("Expires in 24 hours.", color = NexusTextMuted, fontSize = 11.sp)
- 400                    Spacer(Modifier.height(16.dp))
- 401                    TextButton(onClick = onDismiss, modifier = Modifier.align(Alignment.End)) { Text("Done", color = NexusBlurple) }
- 402                }
- 403            }
- 404        }
- 405    }
-
-
-//===== FILE: app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt =====
-
-// ❌ ERRORS IN THIS FILE (3 error(s)):
-// Line 88: Unresolved reference 'updateGuildName'.
-// Line 100: Unresolved reference 'deleteGuild'.
-// Line 104: @Composable invocations can only happen from the context of a @Composable function
-
-   1    package com.nexus.android.ui.screens.server
-   2    
-   3    import androidx.compose.foundation.background
-   4    import androidx.compose.foundation.layout.*
-   5    import androidx.compose.foundation.lazy.LazyColumn
-   6    import androidx.compose.foundation.lazy.items
-   7    import androidx.compose.foundation.shape.CircleShape
-   8    import androidx.compose.foundation.shape.RoundedCornerShape
-   9    import androidx.compose.material.icons.Icons
-  10    import androidx.compose.material.icons.filled.*
-  11    import androidx.compose.material3.*
-  12    import androidx.compose.runtime.*
-  13    import androidx.compose.ui.Alignment
-  14    import androidx.compose.ui.Modifier
-  15    import androidx.compose.ui.draw.clip
-  16    import androidx.compose.ui.graphics.Color
-  17    import androidx.compose.ui.text.font.FontWeight
-  18    import androidx.compose.ui.unit.dp
-  19    import androidx.compose.ui.unit.sp
-  20    import androidx.hilt.navigation.compose.hiltViewModel
-  21    import coil.compose.AsyncImage
-  22    import com.nexus.android.data.api.models.GuildResponse
-  23    import com.nexus.android.data.api.models.MemberResponse
-  24    import com.nexus.android.data.api.models.RoleResponse
-  25    import com.nexus.android.ui.theme.*
-  26    
-  27    @OptIn(ExperimentalMaterial3Api::class)
-  28    @Composable
-  29    fun ServerSettingsScreen(
-  30        guildId: String,
-  31        onBack: () -> Unit,
-  32        vm: ServerSettingsViewModel = hiltViewModel(),
-  33    ) {
-  34        val guild   by vm.guild.collectAsState()
-  35        val members by vm.members.collectAsState()
-  36        val roles   by vm.roles.collectAsState()
-  37        val uiState by vm.uiState.collectAsState()
-  38        var tab     by remember { mutableStateOf(0) }
-  39    
-  40        LaunchedEffect(guildId) { vm.load(guildId) }
-  41    
-  42        val roleMap = remember(roles) { roles.associateBy { it.id } }
-  43    
-  44        Scaffold(
-  45            topBar = {
-  46                TopAppBar(
-  47                    title = { Text(guild?.name ?: "Server Settings", fontWeight = FontWeight.Bold) },
-  48                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Default.ArrowBack, "Back") } },
-  49                    colors = TopAppBarDefaults.topAppBarColors(containerColor = NexusDarkMedium),
-  50                )
-  51            },
-  52            containerColor = NexusDark,
-  53        ) { padding ->
-  54            Column(Modifier.fillMaxSize().padding(padding)) {
-  55                TabRow(selectedTabIndex = tab, containerColor = NexusDarkMedium, contentColor = NexusBlurple) {
-  56                    listOf("Overview", "Members", "Roles").forEachIndexed { i, label ->
-  57                        Tab(selected = tab == i, onClick = { tab = i }, text = { Text(label, fontSize = 13.sp) })
-  58                    }
-  59                }
-  60                when (tab) {
-  61                    0 -> OverviewSubScreen(guild, uiState, vm)
-  62                    1 -> MembersSubScreen(members, roleMap)
-  63                    2 -> RolesSubScreen(roles)
-  64                }
-  65            }
-  66        }
-  67    }
-  68    
-  69    @Composable
-  70    private fun OverviewSubScreen(
-  71        guild: GuildResponse?,
-  72        uiState: ServerSettingsUiState,
-  73        vm: ServerSettingsViewModel,
-  74    ) {
-  75        var name by remember(guild?.name) { mutableStateOf(guild?.name ?: "") }
-  76        Column(Modifier.fillMaxSize().padding(16.dp)) {
-  77            if (uiState.error != null)
-  78                Text(uiState.error, color = NexusRed, fontSize = 13.sp, modifier = Modifier.padding(bottom = 8.dp))
-  79            OutlinedTextField(
-  80                value = name, onValueChange = { name = it },
-  81                label = { Text("SERVER NAME") },
-  82                singleLine = true,
-  83                modifier = Modifier.fillMaxWidth(),
-  84                colors = OutlinedTextFieldDefaults.colors(focusedBorderColor = NexusBlurple),
-  85            )
-  86            Spacer(Modifier.height(16.dp))
-  87            Button(
-  88 ❌             onClick = { vm.updateGuildName(name) },
-  89                enabled = name.isNotBlank() && name != guild?.name && !uiState.loading,
-  90                modifier = Modifier.fillMaxWidth(),
-  91                colors = ButtonDefaults.buttonColors(containerColor = NexusBlurple),
-  92            ) {
-  93                if (uiState.loading) CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp, color = Color.White)
-  94                else Text("Save Changes", fontWeight = FontWeight.Bold)
-  95            }
-  96            Spacer(Modifier.height(24.dp))
-  97            Text("DANGER ZONE", color = NexusRed, fontSize = 11.sp, fontWeight = FontWeight.Bold)
-  98            Spacer(Modifier.height(8.dp))
-  99            OutlinedButton(
- 100 ❌             onClick = vm::deleteGuild,
- 101                modifier = Modifier.fillMaxWidth(),
- 102                colors = ButtonDefaults.outlinedButtonColors(contentColor = NexusRed),
- 103                border = androidx.compose.foundation.BorderStroke(1.dp, NexusRed),
- 104 ❌         ) { Text("Delete Server", fontWeight = FontWeight.Bold) }
- 105        }
- 106    }
- 107    
- 108    @Composable
- 109    private fun MembersSubScreen(members: List<MemberResponse>, roleMap: Map<String, RoleResponse>) {
- 110        var query by remember { mutableStateOf("") }
- 111        val filtered = members.filter {
- 112            query.isBlank() ||
- 113            it.user?.username?.contains(query, true) == true ||
- 114            it.nickname?.contains(query, true) == true
- 115        }
- 116        Column(Modifier.fillMaxSize()) {
- 117            OutlinedTextField(
- 118                value = query, onValueChange = { query = it },
- 119                placeholder = { Text("Search Members", color = NexusTextMuted) },
- 120                leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
- 121                singleLine = true,
- 122                modifier = Modifier.fillMaxWidth().padding(12.dp),
- 123                shape = RoundedCornerShape(24.dp),
- 124                colors = OutlinedTextFieldDefaults.colors(
- 125                    focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
- 126                    focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
- 127                ),
- 128            )
- 129            LazyColumn(Modifier.fillMaxSize()) {
- 130                items(filtered, key = { it.userId }) { member ->
- 131                    MemberListRow(member, roleMap)
- 132                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.3f), modifier = Modifier.padding(start = 72.dp))
- 133                }
- 134            }
- 135        }
- 136    }
- 137    
- 138    @Composable
- 139    private fun MemberListRow(member: MemberResponse, roleMap: Map<String, RoleResponse>) {
- 140        val displayName = member.nickname ?: member.user?.username ?: member.userId
- 141        val statusColor = when (member.user?.status) {
- 142            "online" -> NexusGreen; "idle" -> NexusYellow; "dnd" -> NexusRed; else -> NexusTextMuted
- 143        }
- 144        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.Top) {
- 145            Box(Modifier.size(44.dp)) {
- 146                Box(Modifier.size(44.dp).clip(CircleShape).background(NexusBlurple), contentAlignment = Alignment.Center) {
- 147                    if (member.user?.avatar != null)
- 148                        AsyncImage(model = member.user.avatar, contentDescription = null, modifier = Modifier.fillMaxSize())
- 149                    else
- 150                        Text(displayName.take(1).uppercase(), color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp)
- 151                }
- 152                Box(Modifier.size(12.dp).align(Alignment.BottomEnd).clip(CircleShape).background(NexusDark).padding(2.dp)) {
- 153                    Box(Modifier.fillMaxSize().clip(CircleShape).background(statusColor))
- 154                }
- 155            }
- 156            Spacer(Modifier.width(12.dp))
- 157            Column(Modifier.weight(1f)) {
- 158                Text(displayName, color = NexusTextPrimary, fontWeight = FontWeight.Bold, fontSize = 14.sp)
- 159                member.user?.let { Text("${it.username}#${it.discriminator}", color = NexusTextMuted, fontSize = 12.sp) }
- 160                if (member.roles.isNotEmpty()) {
- 161                    Spacer(Modifier.height(6.dp))
- 162                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
- 163                        member.roles.take(4).forEach { roleId ->
- 164                            // FIX: safe let — no !! operator anywhere in role color resolution
- 165                            val role = roleMap[roleId]
- 166                            val rc = role?.let { r ->
- 167                                if (r.color != 0) Color(0xFF000000 or r.color.toLong()) else NexusOutline
- 168                            } ?: NexusOutline
- 169                            Surface(shape = RoundedCornerShape(4.dp), color = rc.copy(alpha = 0.2f)) {
- 170                                Row(Modifier.padding(horizontal = 6.dp, vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
- 171                                    Box(Modifier.size(8.dp).clip(CircleShape).background(rc))
- 172                                    Spacer(Modifier.width(4.dp))
- 173                                    Text(role?.name ?: roleId, color = NexusTextPrimary, fontSize = 11.sp)
- 174                                }
- 175                            }
- 176                        }
- 177                        if (member.roles.size > 4) Text("+${member.roles.size - 4}", color = NexusTextMuted, fontSize = 11.sp)
- 178                    }
- 179                }
- 180            }
- 181            Icon(Icons.Default.ChevronRight, null, tint = NexusTextMuted, modifier = Modifier.size(16.dp))
- 182        }
- 183    }
- 184    
- 185    @Composable
- 186    private fun RolesSubScreen(roles: List<RoleResponse>) {
- 187        var query    by remember { mutableStateOf("") }
- 188        val everyone = roles.firstOrNull { it.name == "@everyone" }
- 189        val rest     = roles
- 190            .filter { it.name != "@everyone" && (query.isBlank() || it.name.contains(query, true)) }
- 191            .sortedByDescending { it.position }
+ 167 ❌     val phaseColor = when (cs.phase) {
+ 168 ❌         AttentionPhase.FOCUS        -> CGreen
+ 169 ❌         AttentionPhase.SHORT_BREAK  -> CGreen
+ 170 ❌         AttentionPhase.LONG_BREAK   -> CAmber
+ 171 ❌         AttentionPhase.PAUSED       -> CAmber
+ 172 ❌         AttentionPhase.PROMPT_DONE  -> CPurple
+ 173 ❌         AttentionPhase.DONE         -> CGray
+ 174        }
+ 175    
+ 176        // FOCUS phase length depends on mode: a fixed 30-min block in Pomodoro
+ 177        // mode, or the whole task duration in plain continuous-timer mode.
+ 178 ❌     val totalPhaseSecs = when (cs.phase) {
+ 179 ❌         AttentionPhase.FOCUS       -> if (cs.pomodoroEnabled) 30 * 60L
+ 180 ❌                                        else cs.totalDurationSecs.coerceAtLeast(1L)
+ 181 ❌         AttentionPhase.SHORT_BREAK -> 5  * 60L
+ 182 ❌         AttentionPhase.LONG_BREAK  -> 10 * 60L
+ 183            else                       -> 1L
+ 184        }
+ 185 ❌     val progress = when (cs.phase) {
+ 186 ❌         AttentionPhase.PROMPT_DONE -> 1f   // bar full at prompt
+ 187 ❌         else -> (1f - cs.phaseSecondsLeft.toFloat() / totalPhaseSecs.toFloat()).coerceIn(0f, 1f)
+ 188        }
+ 189    
+ 190 ❌     val m = cs.phaseSecondsLeft / 60
+ 191 ❌     val s = cs.phaseSecondsLeft % 60
  192    
- 193        Column(Modifier.fillMaxSize()) {
- 194            OutlinedTextField(
- 195                value = query, onValueChange = { query = it },
- 196                placeholder = { Text("Search Roles", color = NexusTextMuted) },
- 197                leadingIcon = { Icon(Icons.Default.Search, null, tint = NexusTextMuted) },
- 198                singleLine = true, modifier = Modifier.fillMaxWidth().padding(12.dp),
- 199                shape = RoundedCornerShape(24.dp),
- 200                colors = OutlinedTextFieldDefaults.colors(
- 201                    focusedBorderColor = NexusBlurple, unfocusedBorderColor = Color.Transparent,
- 202                    focusedContainerColor = NexusDarkMedium, unfocusedContainerColor = NexusDarkMedium,
- 203                ),
- 204            )
- 205            LazyColumn(Modifier.fillMaxSize()) {
- 206                items(rest, key = { it.id }) { role ->
- 207                    val rc = if (role.color != 0) Color(0xFF000000 or role.color.toLong()) else NexusTextMuted
- 208                    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
- 209                        Box(Modifier.size(16.dp).clip(CircleShape).background(rc))
- 210                        Spacer(Modifier.width(12.dp))
- 211                        Text(role.name, color = NexusTextPrimary, fontWeight = FontWeight.Medium, fontSize = 14.sp, modifier = Modifier.weight(1f))
- 212                        Text("${role.memberCount}", color = NexusTextMuted, fontSize = 12.sp)
- 213                    }
- 214                    HorizontalDivider(color = NexusOutline.copy(alpha = 0.2f))
- 215                }
- 216                everyone?.let { ev ->
- 217                    item {
- 218                        Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
- 219                            Box(Modifier.size(16.dp).clip(CircleShape).background(NexusTextMuted))
- 220                            Spacer(Modifier.width(12.dp))
- 221                            Text(ev.name, color = NexusTextMuted, fontWeight = FontWeight.Medium, fontSize = 14.sp)
- 222                        }
- 223                    }
- 224                }
- 225            }
- 226        }
- 227    }
+ 193 ❌     val phaseLabel = when (cs.phase) {
+ 194 ❌         AttentionPhase.FOCUS        -> "FOCUS"
+ 195 ❌         AttentionPhase.SHORT_BREAK  -> "BREAK"
+ 196 ❌         AttentionPhase.LONG_BREAK   -> "LONG BREAK"
+ 197 ❌         AttentionPhase.PAUSED       -> "PAUSED"
+ 198 ❌         AttentionPhase.PROMPT_DONE  -> "MARK DONE?"
+ 199 ❌         AttentionPhase.DONE         -> "DONE"
+ 200        }
+ 201    
+ 202        // Pulse color when paused or prompting
+ 203        val infiniteTransition = rememberInfiniteTransition(label = "pulse")
+ 204        val pulseAlpha by infiniteTransition.animateFloat(
+ 205            initialValue  = 0.5f,
+ 206            targetValue   = 1f,
+ 207            animationSpec = infiniteRepeatable(
+ 208                tween(700, easing = LinearEasing), RepeatMode.Reverse
+ 209            ),
+ 210            label = "pulseAlpha"
+ 211        )
+ 212 ❌     val shouldPulse = cs.phase == AttentionPhase.PAUSED || cs.phase == AttentionPhase.PROMPT_DONE
+ 213        val displayColor = if (shouldPulse) phaseColor.copy(alpha = pulseAlpha) else phaseColor
+ 214    
+ 215        Column(Modifier.fillMaxWidth().background(CBg)) {
+ 216    
+ 217 ❌         if (cs.phase == AttentionPhase.PROMPT_DONE) {
+ 218                // ── Prompt row: task done or take a break? ────────────────────────
+ 219                Row(
+ 220                    modifier              = Modifier
+ 221                        .fillMaxWidth()
+ 222                        .padding(horizontal = 14.dp, vertical = 8.dp),
+ 223                    verticalAlignment     = Alignment.CenterVertically,
+ 224                    horizontalArrangement = Arrangement.SpaceBetween
+ 225                ) {
+ 226                    Text(
+ 227                        text       = "30m done!",
+ 228                        fontSize   = 12.sp,
+ 229                        color      = displayColor,
+ 230                        fontFamily = FontFamily.Monospace,
+ 231                        fontWeight = FontWeight.Bold
+ 232                    )
+ 233                    Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+ 234                        // ✅ Mark task done
+ 235                        Text(
+ 236                            text       = "✅ Done",
+ 237                            fontSize   = 13.sp,
+ 238                            color      = CGreen,
+ 239                            fontWeight = FontWeight.Bold,
+ 240                            fontFamily = FontFamily.Monospace,
+ 241                            modifier   = Modifier.clickable(
+ 242                                indication        = null,
+ 243                                interactionSource = remember { MutableInteractionSource() }
+ 244 ❌                         ) { AttentionCycleManager.confirmDone() }
+ 245                        )
+ 246                        // ➡ Take break and continue task
+ 247                        Text(
+ 248                            text       = "➡ Break",
+ 249                            fontSize   = 13.sp,
+ 250                            color      = CAmber,
+ 251                            fontWeight = FontWeight.Bold,
+ 252                            fontFamily = FontFamily.Monospace,
+ 253                            modifier   = Modifier.clickable(
+ 254                                indication        = null,
+ 255                                interactionSource = remember { MutableInteractionSource() }
+ 256 ❌                         ) { AttentionCycleManager.dismissPromptAndBreak() }
+ 257                        )
+ 258                    }
+ 259                }
+ 260            } else {
+ 261                // ── Normal row: phase label + timer + controls ────────────────────
+ 262                Row(
+ 263                    modifier              = Modifier
+ 264                        .fillMaxWidth()
+ 265                        .padding(horizontal = 14.dp, vertical = 6.dp),
+ 266                    verticalAlignment     = Alignment.CenterVertically,
+ 267                    horizontalArrangement = Arrangement.SpaceBetween
+ 268                ) {
+ 269                    // Left: phase + timer + cycle
+ 270                    Row(verticalAlignment = Alignment.CenterVertically) {
+ 271                        Text(
+ 272                            text       = phaseLabel,
+ 273                            fontSize   = 11.sp,
+ 274                            color      = displayColor,
+ 275                            fontFamily = FontFamily.Monospace,
+ 276                            fontWeight = FontWeight.Bold
+ 277                        )
+ 278                        Spacer(Modifier.width(8.dp))
+ 279                        Text(
+ 280                            text       = "%02d:%02d".format(m, s),
+ 281                            fontSize   = 13.sp,
+ 282                            color      = displayColor,
+ 283                            fontFamily = FontFamily.Monospace,
+ 284                            fontWeight = FontWeight.Bold
+ 285                        )
+ 286 ❌                     if (cs.pomodoroEnabled) {
+ 287                            Spacer(Modifier.width(6.dp))
+ 288                            Text(
+ 289 ❌                             text       = "· C${cs.cycleIndex}",
+ 290                                fontSize   = 10.sp,
+ 291                                color      = CGray,
+ 292                                fontFamily = FontFamily.Monospace
+ 293                            )
+ 294                        }
+ 295                    }
+ 296    
+ 297                    // Right: ✅ confirm attention + ⏸/▶ pause + ✕ dismiss
+ 298                    Row(verticalAlignment = Alignment.CenterVertically) {
+ 299    
+ 300 ❌                     if (cs.needsAttentionCheck) {
+ 301                            Text(
+ 302                                text     = "✅",
+ 303                                fontSize = 18.sp,
+ 304                                modifier = Modifier
+ 305                                    .padding(end = 12.dp)
+ 306                                    .clickable(
+ 307                                        indication        = null,
+ 308                                        interactionSource = remember { MutableInteractionSource() }
+ 309 ❌                                 ) { AttentionCycleManager.confirmAttention() }
+ 310                            )
+ 311                        }
+ 312    
+ 313 ❌                     if (cs.phase != AttentionPhase.DONE) {
+ 314 ❌                         val pauseIcon  = if (cs.phase == AttentionPhase.PAUSED) "▶" else "⏸"
+ 315 ❌                         val pauseColor = if (cs.phase == AttentionPhase.PAUSED) CGreen else CAmber
+ 316                            Text(
+ 317                                text     = pauseIcon,
+ 318                                fontSize = 16.sp,
+ 319                                color    = pauseColor,
+ 320                                modifier = Modifier
+ 321                                    .padding(end = 12.dp)
+ 322                                    .clickable(
+ 323                                        indication        = null,
+ 324                                        interactionSource = remember { MutableInteractionSource() }
+ 325                                    ) {
+ 326 ❌                                     if (cs.phase == AttentionPhase.PAUSED) AttentionCycleManager.resume()
+ 327 ❌                                     else AttentionCycleManager.pause()
+ 328                                    }
+ 329                            )
+ 330                        }
+ 331    
+ 332                        Text(
+ 333                            text       = "✕",
+ 334                            fontSize   = 13.sp,
+ 335                            color      = CRed.copy(alpha = 0.85f),
+ 336                            fontFamily = FontFamily.Monospace,
+ 337                            modifier   = Modifier.clickable(
+ 338                                indication        = null,
+ 339                                interactionSource = remember { MutableInteractionSource() },
+ 340                                onClick           = onDismiss
+ 341                            )
+ 342                        )
+ 343                    }
+ 344                }
+ 345            }
+ 346    
+ 347            LinearProgressIndicator(
+ 348                progress   = { progress },
+ 349                modifier   = Modifier
+ 350                    .fillMaxWidth()
+ 351                    .height(3.dp)
+ 352                    .clip(RoundedCornerShape(0.dp)),
+ 353                color      = displayColor,
+ 354                trackColor = displayColor.copy(alpha = 0.12f)
+ 355            )
+ 356        }
+ 357    }
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt =====
+
+// ❌ ERRORS IN THIS FILE (34 error(s)):
+// Line 10: Unresolved reference 'automation'.
+// Line 11: Unresolved reference 'core'.
+// Line 12: Unresolved reference 'core'.
+// Line 13: Unresolved reference 'core'.
+// Line 14: Unresolved reference 'planner'.
+// Line 15: Unresolved reference 'planner'.
+// Line 64: Unresolved reference 'PlanStore'.
+// Line 65: Unresolved reference 'TaskState'.
+// Line 65: Unresolved reference 'it'.
+// Line 66: Unresolved reference 'TaskState'.
+// Line 66: Unresolved reference 'it'.
+// Line 68: None of the following candidates is applicable:
+// Line 68: Overload resolution ambiguity between candidates:
+// Line 70: Cannot infer type for this parameter. Please specify it explicitly.
+// Line 71: Unresolved reference 'state'.
+// Line 72: Unresolved reference 'TaskState'.
+// Line 73: Unresolved reference 'TaskState'.
+// Line 76: Unresolved reference 'subject'.
+// Line 76: Unresolved reference 'topic'.
+// Line 79: Unresolved reference 'DailyChecklist'.
+// Line 80: Unresolved reference 'AppUsageTracker'.
+// Line 85: 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/compareTo' in 'compareTo'.
+// Line 87: Overload resolution ambiguity between candidates:
+// Line 90: Overload resolution ambiguity between candidates:
+// Line 93: Overload resolution ambiguity between candidates:
+// Line 103: Unresolved reference 'TelegramAlertBot'.
+// Line 105: Unresolved reference 'TelegramAlertBot'.
+// Line 117: Unresolved reference 'TelegramAlertBot'.
+// Line 121: Unresolved reference 'AppUsageTracker'.
+// Line 123: Unresolved reference 'TelegramAlertBot'.
+// Line 146: Unresolved reference 'TelegramAlertBot'.
+// Line 155: Unresolved reference 'AutomationEngine'.
+// Line 175: Unresolved reference 'CheckmatePrefs'.
+// Line 177: Return type mismatch: expected 'kotlin.String?', actual 'kotlin.Any'.
+
+   1    package com.checkmate.service
+   2    
+   3    import android.app.AlarmManager
+   4    import android.app.PendingIntent
+   5    import android.content.BroadcastReceiver
+   6    import android.content.Context
+   7    import android.content.Intent
+   8    import android.net.Uri
+   9    import android.util.Log
+  10 ❌ import com.checkmate.automation.AutomationEngine
+  11 ❌ import com.checkmate.core.AppUsageTracker
+  12 ❌ import com.checkmate.core.CheckmatePrefs
+  13 ❌ import com.checkmate.core.DailyChecklist
+  14 ❌ import com.checkmate.planner.PlanStore
+  15 ❌ import com.checkmate.planner.model.TaskState
+  16    import java.util.Calendar
+  17    
+  18    object GuardianNotifier {
+  19    
+  20        private const val TAG = "GuardianNotifier"
+  21        const val ACTION_EOD_SUMMARY = "com.checkmate.EOD_SUMMARY"
+  22    
+  23        fun notifyTaskStarted(context: Context, subject: String, topic: String, durationMinutes: Int) {
+  24            val number = getGuardianNumber() ?: return
+  25            val msg = "Checkmate: Started $subject — $topic (${durationMinutes}min) at ${timeNow()}"
+  26            openWhatsAppAndSend(context, number, msg)
+  27            Log.d(TAG, "Guardian notified: task started")
+  28        }
+  29    
+  30        fun notifySkipStreak(context: Context, skipCount: Int, lastTopic: String) {
+  31            val number = getGuardianNumber() ?: return
+  32            val msg = "Checkmate Alert: $skipCount tasks skipped in a row. Last: $lastTopic. Time: ${timeNow()}"
+  33            openWhatsAppAndSend(context, number, msg)
+  34            Log.d(TAG, "Guardian notified: skip streak=$skipCount")
+  35        }
+  36    
+  37        fun scheduleEndOfDaySummary(context: Context) {
+  38            val am = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+  39            val pi = PendingIntent.getBroadcast(
+  40                context, 9001,
+  41                Intent(context, EodSummaryReceiver::class.java).apply { action = ACTION_EOD_SUMMARY },
+  42                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+  43            )
+  44            val cal = Calendar.getInstance().apply {
+  45                set(Calendar.HOUR_OF_DAY, 21)
+  46                set(Calendar.MINUTE, 0)
+  47                set(Calendar.SECOND, 0)
+  48                set(Calendar.MILLISECOND, 0)
+  49                if (timeInMillis < System.currentTimeMillis()) add(Calendar.DAY_OF_YEAR, 1)
+  50            }
+  51            am.setRepeating(AlarmManager.RTC_WAKEUP, cal.timeInMillis, AlarmManager.INTERVAL_DAY, pi)
+  52            Log.d(TAG, "EOD summary alarm set for 21:00 daily")
+  53        }
+  54    
+  55        /**
+  56         * Builds and sends the daily report to the guardian — tasks, checklist,
+  57         * and (new) an on-device app usage breakdown for the day, Digital
+  58         * Wellbeing-style. Sent via WhatsApp (existing path) and, if a Telegram
+  59         * chat id is configured, also pushed straight to the guardian bot so the
+  60         * Telegram channel carries the same usage history, not just screenshots.
+  61         */
+  62        fun sendEndOfDaySummary(context: Context) {
+  63            val number = getGuardianNumber()
+  64 ❌         val tasks   = PlanStore.getTodayTasksSnapshot_Sync()
+  65 ❌         val done    = tasks.count { it.state == TaskState.DONE }
+  66 ❌         val skipped = tasks.count { it.state == TaskState.SKIPPED }
+  67            val total   = tasks.size
+  68 ❌         val pct     = if (total > 0) done * 100 / total else 0
+  69    
+  70 ❌         val taskLines = tasks.joinToString("\n") { t ->
+  71 ❌             val icon = when (t.state) {
+  72 ❌                 TaskState.DONE    -> "done"
+  73 ❌                 TaskState.SKIPPED -> "skip"
+  74                    else              -> "miss"
+  75                }
+  76 ❌             "[$icon] ${t.subject}: ${t.topic}"
+  77            }
+  78    
+  79 ❌         val checklistSummary = DailyChecklist.getTodaySummaryText()
+  80 ❌         val usageSummary = AppUsageTracker.buildUsageReportText(context)
+  81    
+  82            val msg = buildString {
+  83                appendLine("Checkmate Daily Report — ${dateToday()}")
+  84                appendLine("Tasks: $done/$total ($pct%)")
+  85 ❌             if (skipped > 0) appendLine("Skipped: $skipped")
+  86                appendLine()
+  87 ❌             appendLine(taskLines)
+  88                if (checklistSummary.isNotBlank()) {
+  89                    appendLine()
+  90 ❌                 appendLine(checklistSummary)
+  91                }
+  92                appendLine()
+  93 ❌             appendLine(usageSummary)
+  94            }.trim()
+  95    
+  96            if (number != null) {
+  97                openWhatsAppAndSend(context, number, msg)
+  98                Log.d(TAG, "EOD summary sent to guardian via WhatsApp")
+  99            }
+ 100    
+ 101            // Push the same report straight to the Telegram bot, independent of
+ 102            // the WhatsApp path, so guardians who only use Telegram still get it.
+ 103 ❌         if (TelegramAlertBot.getChatId() != null) {
+ 104                Thread {
+ 105 ❌                 TelegramAlertBot.sendAlert(context, msg)
+ 106                    Log.d(TAG, "EOD summary sent to guardian via Telegram")
+ 107                }.start()
+ 108            }
+ 109        }
+ 110    
+ 111        /**
+ 112         * Sends just the app usage breakdown to the guardian via Telegram —
+ 113         * useful as an on-demand "usage" report independent of the once-a-day
+ 114         * EOD summary. Call from a background thread or let it spin its own.
+ 115         */
+ 116        fun sendAppUsageReport(context: Context) {
+ 117 ❌         if (TelegramAlertBot.getChatId() == null) {
+ 118                Log.w(TAG, "telegram_chat_id not set — skipping usage report")
+ 119                return
+ 120            }
+ 121 ❌         val text = "Checkmate — ${dateToday()}\n${AppUsageTracker.buildUsageReportText(context)}"
+ 122            Thread {
+ 123 ❌             TelegramAlertBot.sendAlert(context, text)
+ 124                Log.d(TAG, "Usage report sent to guardian via Telegram")
+ 125            }.start()
+ 126        }
+ 127    
+ 128        fun notifyDistractionAlert(
+ 129            context: Context,
+ 130            kind: String,
+ 131            target: String,
+ 132            screenshotUri: Uri? = null
+ 133        ) {
+ 134            val label = if (kind == "app") "app: $target" else "website: $target"
+ 135            val msg   = "⚠️ Checkmate Alert: Student attempted to open blocked $label " +
+ 136                        "3 times during study session at ${timeNow()}."
+ 137            Log.w(TAG, "Distraction alert: $label")
+ 138    
+ 139            val number = getGuardianNumber()
+ 140            if (number != null) {
+ 141                openWhatsAppAndSend(context, number, msg)
+ 142                Log.d(TAG, "Distraction alert sent via WhatsApp (text)")
+ 143            }
+ 144    
+ 145            Thread {
+ 146 ❌             TelegramAlertBot.sendAlert(context, msg, screenshotUri)
+ 147                Log.d(TAG, "Distraction alert sent via Telegram (screenshot)")
+ 148            }.start()
+ 149        }
+ 150    
+ 151        private fun openWhatsAppAndSend(context: Context, number: String, message: String) {
+ 152            val clean = number.replace(Regex("[^0-9]"), "")
+ 153            if (clean.isBlank()) { Log.e(TAG, "Empty guardian number"); return }
+ 154    
+ 155 ❌         AutomationEngine.queueWhatsAppMessage(message)
+ 156    
+ 157            val intentA = Intent(Intent.ACTION_VIEW,
+ 158                Uri.parse("whatsapp://send?phone=$clean")).apply {
+ 159                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+ 160            }
+ 161            if (runCatching { context.startActivity(intentA) }.isSuccess) {
+ 162                Log.d(TAG, "WhatsApp opened via method A"); return
+ 163            }
+ 164    
+ 165            val intentB = Intent(Intent.ACTION_VIEW,
+ 166                Uri.parse("https://wa.me/$clean")).apply {
+ 167                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+ 168            }
+ 169            runCatching { context.startActivity(intentB) }
+ 170                .onSuccess { Log.d(TAG, "WhatsApp opened via method B") }
+ 171                .onFailure { Log.e(TAG, "Both WA methods failed: ${it.message}") }
+ 172        }
+ 173    
+ 174        private fun getGuardianNumber(): String? {
+ 175 ❌         val n = CheckmatePrefs.getString("guardian_number", null)
+ 176            if (n.isNullOrBlank()) { Log.w(TAG, "Guardian number not set"); return null }
+ 177 ❌         return n
+ 178        }
+ 179    
+ 180        private fun timeNow(): String {
+ 181            val c = Calendar.getInstance()
+ 182            return String.format("%02d:%02d", c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE))
+ 183        }
+ 184    
+ 185        private fun dateToday(): String {
+ 186            val c = Calendar.getInstance()
+ 187            return String.format("%02d/%02d/%04d",
+ 188                c.get(Calendar.DAY_OF_MONTH), c.get(Calendar.MONTH) + 1, c.get(Calendar.YEAR))
+ 189        }
+ 190    }
+ 191    
+ 192    class EodSummaryReceiver : BroadcastReceiver() {
+ 193        override fun onReceive(context: Context, intent: Intent?) {
+ 194            if (intent?.action == GuardianNotifier.ACTION_EOD_SUMMARY)
+ 195                GuardianNotifier.sendEndOfDaySummary(context)
+ 196        }
+ 197    }
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt =====
+
+// ❌ ERRORS IN THIS FILE (106 error(s)):
+// Line 23: Unresolved reference 'core'.
+// Line 24: Unresolved reference 'core'.
+// Line 26: Unresolved reference 'theme'.
+// Line 35: Unresolved reference 'AppSelectorScreen'.
+// Line 39: Unresolved reference 'WebsiteBlockerScreen'.
+// Line 44: Overload resolution ambiguity between candidates:
+// Line 44: Unresolved reference 'BgDark'.
+// Line 50: Unresolved reference 'White90'.
+// Line 67: Unresolved reference 'White10'.
+// Line 73: Unresolved reference 'White10'.
+// Line 79: Unresolved reference 'White10'.
+// Line 104: Unresolved reference 'White10'.
+// Line 116: Unresolved reference 'White10'.
+// Line 137: Not enough information to infer type argument for 'T'.
+// Line 138: Not enough information to infer type argument for 'T'.
+// Line 138: Unresolved reference 'CheckmatePrefs'.
+// Line 140: Not enough information to infer type argument for 'T'.
+// Line 141: Not enough information to infer type argument for 'T'.
+// Line 141: Unresolved reference 'AttentionCycleManager'.
+// Line 141: Unresolved reference 'CheckmatePrefs'.
+// Line 154: Unresolved reference 'AccentGreen'.
+// Line 158: Unresolved reference 'White90'.
+// Line 164: Unresolved reference 'White60'.
+// Line 171: Unresolved reference 'CheckmatePrefs'.
+// Line 174: Unresolved reference 'BgDark'.
+// Line 175: Unresolved reference 'AccentGreen'.
+// Line 176: Unresolved reference 'White60'.
+// Line 177: Unresolved reference 'White10'.
+// Line 182: Unresolved reference 'White10'.
+// Line 191: Unresolved reference 'AccentAmber'.
+// Line 194: Unresolved reference 'White90'.
+// Line 200: Unresolved reference 'White60'.
+// Line 207: Unresolved reference 'AttentionCycleManager'.
+// Line 207: Unresolved reference 'CheckmatePrefs'.
+// Line 210: Unresolved reference 'BgDark'.
+// Line 211: Unresolved reference 'AccentGreen'.
+// Line 212: Unresolved reference 'White60'.
+// Line 213: Unresolved reference 'White10'.
+// Line 219: Unresolved reference 'White30'.
+// Line 234: Unresolved reference 'CheckmatePrefs'.
+// Line 241: Unresolved reference 'CheckmatePrefs'.
+// Line 248: Unresolved reference 'White60'.
+// Line 257: Unresolved reference 'CheckmatePrefs'.
+// Line 261: Unresolved reference 'AccentGreen'.
+// Line 262: Unresolved reference 'BgDark'.
+// Line 269: Unresolved reference 'White10'.
+// Line 278: Unresolved reference 'White60'.
+// Line 285: Unresolved reference 'White30'.
+// Line 293: Unresolved reference 'White60'.
+// Line 297: Unresolved reference 'CheckmatePrefs'.
+// Line 306: Unresolved reference 'AccentGreen'.
+// Line 306: Unresolved reference 'White60'.
+// Line 312: Unresolved reference 'AccentGreen'.
+// Line 313: Unresolved reference 'White30'.
+// Line 314: Unresolved reference 'AccentGreen'.
+// Line 315: Unresolved reference 'White90'.
+// Line 316: Unresolved reference 'White90'.
+// Line 320: Unresolved reference 'AccentGreen'.
+// Line 326: Unresolved reference 'White10'.
+// Line 330: Unresolved reference 'CheckmatePrefs'.
+// Line 335: Unresolved reference 'White60'.
+// Line 342: Unresolved reference 'White30'.
+// Line 343: Unresolved reference 'White60'.
+// Line 346: Unresolved reference 'CheckmatePrefs'.
+// Line 352: Unresolved reference 'AccentGreen'.
+// Line 352: Unresolved reference 'White60'.
+// Line 357: Unresolved reference 'AccentGreen'.
+// Line 358: Unresolved reference 'White30'.
+// Line 359: Unresolved reference 'AccentGreen'.
+// Line 360: Unresolved reference 'White90'.
+// Line 361: Unresolved reference 'White90'.
+// Line 365: Unresolved reference 'AccentGreen'.
+// Line 370: Unresolved reference 'White10'.
+// Line 374: Unresolved reference 'CheckmatePrefs'.
+// Line 379: Unresolved reference 'White60'.
+// Line 384: Unresolved reference 'White30'.
+// Line 392: Unresolved reference 'White30'.
+// Line 393: Unresolved reference 'White60'.
+// Line 396: Unresolved reference 'CheckmatePrefs'.
+// Line 402: Unresolved reference 'AccentGreen'.
+// Line 402: Unresolved reference 'White60'.
+// Line 407: Unresolved reference 'AccentGreen'.
+// Line 408: Unresolved reference 'White30'.
+// Line 409: Unresolved reference 'AccentGreen'.
+// Line 410: Unresolved reference 'White90'.
+// Line 411: Unresolved reference 'White90'.
+// Line 415: Unresolved reference 'AccentGreen'.
+// Line 425: Not enough information to infer type argument for 'T'.
+// Line 426: Not enough information to infer type argument for 'T'.
+// Line 426: Unresolved reference 'CheckmatePrefs'.
+// Line 435: Unresolved reference 'AccentGreen'.
+// Line 439: Unresolved reference 'White90'.
+// Line 442: Unresolved reference 'White60'.
+// Line 449: Unresolved reference 'CheckmatePrefs'.
+// Line 452: Unresolved reference 'BgDark'.
+// Line 453: Unresolved reference 'AccentGreen'.
+// Line 454: Unresolved reference 'White60'.
+// Line 455: Unresolved reference 'White10'.
+// Line 471: Unresolved reference 'White60'.
+// Line 476: Unresolved reference 'BgCard'.
+// Line 477: Overload resolution ambiguity between candidates:
+// Line 477: Unresolved reference 'White10'.
+// Line 491: Unresolved reference 'AccentGreen'.
+// Line 494: Unresolved reference 'White90'.
+// Line 495: Unresolved reference 'White60'.
+// Line 497: Unresolved reference 'White30'.
+
+   1    package com.checkmate.ui.settings
+   2    
+   3    import android.content.Context
+   4    import android.content.Intent
+   5    import android.net.Uri
+   6    import android.provider.Settings
+   7    import androidx.compose.foundation.*
+   8    import androidx.compose.foundation.layout.*
+   9    import androidx.compose.foundation.shape.RoundedCornerShape
+  10    import androidx.compose.material.icons.Icons
+  11    import androidx.compose.material.icons.filled.*
+  12    import androidx.compose.material3.*
+  13    import androidx.compose.runtime.*
+  14    import androidx.compose.ui.Alignment
+  15    import androidx.compose.ui.Modifier
+  16    import androidx.compose.ui.graphics.vector.ImageVector
+  17    import androidx.compose.ui.platform.LocalContext
+  18    import androidx.compose.ui.text.font.FontWeight
+  19    import androidx.compose.ui.text.input.PasswordVisualTransformation
+  20    import androidx.compose.ui.text.input.VisualTransformation
+  21    import androidx.compose.ui.unit.dp
+  22    import androidx.compose.ui.unit.sp
+  23 ❌ import com.checkmate.core.AttentionCycleManager
+  24 ❌ import com.checkmate.core.CheckmatePrefs
+  25    import com.checkmate.service.FloatingAttentionService
+  26 ❌ import com.checkmate.ui.theme.*
+  27    
+  28    @Composable
+  29    fun SettingsScreen() {
+  30        val context = LocalContext.current
+  31        var showAppSelector     by remember { mutableStateOf(false) }
+  32        var showWebsiteBlocker  by remember { mutableStateOf(false) }
+  33    
+  34        if (showAppSelector) {
+  35 ❌         AppSelectorScreen(onBack = { showAppSelector = false })
+  36            return
+  37        }
+  38        if (showWebsiteBlocker) {
+  39 ❌         WebsiteBlockerScreen(onBack = { showWebsiteBlocker = false })
+  40            return
+  41        }
+  42    
+  43        Column(
+  44 ❌         modifier        = Modifier.fillMaxSize().background(BgDark)
+  45                .verticalScroll(rememberScrollState()),
+  46            verticalArrangement = Arrangement.spacedBy(4.dp)
+  47        ) {
+  48            Spacer(Modifier.height(20.dp))
+  49            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+  50 ❌             Text("Settings", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = White90)
+  51            }
+  52            Spacer(Modifier.height(8.dp))
+  53    
+  54            // ── LLM API Keys ──
+  55            SettingSection("AI PROVIDERS") {
+  56                LlmProviderSettings(context)
+  57            }
+  58    
+  59            // ── Voice / TTS ──
+  60            SettingSection("VOICE") {
+  61                VoiceSettings(context)
+  62            }
+  63    
+  64            // ── Work Mode ──
+  65            SettingSection("WORK MODE") {
+  66                FocusCycleSettings(context)
+  67 ❌             HorizontalDivider(color = White10)
+  68                SettingTile(
+  69                    title    = "Blocked Apps",
+  70                    subtitle = "Block distraction apps incl. Google & system apps",
+  71                    icon     = Icons.Default.Block
+  72                ) { showAppSelector = true }
+  73 ❌             HorizontalDivider(color = White10)
+  74                SettingTile(
+  75                    title    = "Blocked Websites",
+  76                    subtitle = "Block distracting domains in any browser",
+  77                    icon     = Icons.Default.Language
+  78                ) { showWebsiteBlocker = true }
+  79 ❌             HorizontalDivider(color = White10)
+  80                SettingTile(
+  81                    title    = "Accessibility Service",
+  82                    subtitle = "Required for app/site blocking and WhatsApp automation",
+  83                    icon     = Icons.Default.Accessibility
+  84                ) {
+  85                    context.startActivity(
+  86                        Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
+  87                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+  88                    )
+  89                }
+  90            }
+  91    
+  92            // ── Permissions ──
+  93            SettingSection("PERMISSIONS") {
+  94                SettingTile(
+  95                    title    = "Notification Listener",
+  96                    subtitle = "Required for WhatsApp message detection",
+  97                    icon     = Icons.Default.Notifications
+  98                ) {
+  99                    context.startActivity(
+ 100                        Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)
+ 101                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+ 102                    )
+ 103                }
+ 104 ❌             HorizontalDivider(color = White10)
+ 105                SettingTile(
+ 106                    title    = "Overlay Permission",
+ 107                    subtitle = "Required for floating attention timer",
+ 108                    icon     = Icons.Default.Layers
+ 109                ) {
+ 110                    context.startActivity(
+ 111                        Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+ 112                            Uri.parse("package:${context.packageName}"))
+ 113                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+ 114                    )
+ 115                }
+ 116 ❌             HorizontalDivider(color = White10)
+ 117                SettingTile(
+ 118                    title    = "Usage Access",
+ 119                    subtitle = "Required for app usage history (Digital Wellbeing-style stats)",
+ 120                    icon     = Icons.Default.History
+ 121                ) {
+ 122                    context.startActivity(
+ 123                        Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
+ 124                            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+ 125                    )
+ 126                }
+ 127            }
+ 128    
+ 129            Spacer(Modifier.height(32.dp))
+ 130        }
+ 131    }
+ 132    
+ 133    // ── Focus Cycle Settings (Floating bar + Pomodoro breaks toggles) ────────────
+ 134    
+ 135    @Composable
+ 136    private fun FocusCycleSettings(context: Context) {
+ 137 ❌     var barEnabled by remember {
+ 138 ❌         mutableStateOf(CheckmatePrefs.getBoolean(FloatingAttentionService.PREF_FOCUS_BAR_ENABLED, true))
+ 139        }
+ 140 ❌     var pomodoroEnabled by remember {
+ 141 ❌         mutableStateOf(CheckmatePrefs.getBoolean(AttentionCycleManager.PREF_POMODORO_ENABLED, true))
+ 142        }
+ 143    
+ 144        Column {
+ 145            // Floating Focus Bar toggle
+ 146            Row(
+ 147                modifier          = Modifier
+ 148                    .fillMaxWidth()
+ 149                    .padding(horizontal = 14.dp, vertical = 10.dp),
+ 150                verticalAlignment = Alignment.CenterVertically
+ 151            ) {
+ 152                Icon(
+ 153                    if (barEnabled) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+ 154 ❌                 null, tint = AccentGreen, modifier = Modifier.size(20.dp)
+ 155                )
+ 156                Spacer(Modifier.width(12.dp))
+ 157                Column(Modifier.weight(1f)) {
+ 158 ❌                 Text("Floating Focus Bar", fontSize = 14.sp, color = White90)
+ 159                    Text(
+ 160                        if (barEnabled)
+ 161                            "Shows the on-screen timer bar over other apps during focus sessions"
+ 162                        else
+ 163                            "Bar hidden — use the notification to mark done / take a break / confirm checks",
+ 164 ❌                     fontSize = 11.sp, color = White60
+ 165                    )
+ 166                }
+ 167                Switch(
+ 168                    checked         = barEnabled,
+ 169                    onCheckedChange = {
+ 170                        barEnabled = it
+ 171 ❌                     CheckmatePrefs.putBoolean(FloatingAttentionService.PREF_FOCUS_BAR_ENABLED, it)
+ 172                    },
+ 173                    colors = SwitchDefaults.colors(
+ 174 ❌                     checkedThumbColor   = BgDark,
+ 175 ❌                     checkedTrackColor   = AccentGreen,
+ 176 ❌                     uncheckedThumbColor = White60,
+ 177 ❌                     uncheckedTrackColor = White10
+ 178                    )
+ 179                )
+ 180            }
+ 181    
+ 182 ❌         HorizontalDivider(color = White10)
+ 183    
+ 184            // Pomodoro Breaks toggle
+ 185            Row(
+ 186                modifier          = Modifier
+ 187                    .fillMaxWidth()
+ 188                    .padding(horizontal = 14.dp, vertical = 10.dp),
+ 189                verticalAlignment = Alignment.CenterVertically
+ 190            ) {
+ 191 ❌             Icon(Icons.Default.Timer, null, tint = AccentAmber, modifier = Modifier.size(20.dp))
+ 192                Spacer(Modifier.width(12.dp))
+ 193                Column(Modifier.weight(1f)) {
+ 194 ❌                 Text("Pomodoro Breaks", fontSize = 14.sp, color = White90)
+ 195                    Text(
+ 196                        if (pomodoroEnabled)
+ 197                            "30 min focus / 5–10 min break cycles, with attention check-ins"
+ 198                        else
+ 199                            "Off — one continuous focus timer for the full task, no forced breaks or checks",
+ 200 ❌                     fontSize = 11.sp, color = White60
+ 201                    )
+ 202                }
+ 203                Switch(
+ 204                    checked         = pomodoroEnabled,
+ 205                    onCheckedChange = {
+ 206                        pomodoroEnabled = it
+ 207 ❌                     CheckmatePrefs.putBoolean(AttentionCycleManager.PREF_POMODORO_ENABLED, it)
+ 208                    },
+ 209                    colors = SwitchDefaults.colors(
+ 210 ❌                     checkedThumbColor   = BgDark,
+ 211 ❌                     checkedTrackColor   = AccentGreen,
+ 212 ❌                     uncheckedThumbColor = White60,
+ 213 ❌                     uncheckedTrackColor = White10
+ 214                    )
+ 215                )
+ 216            }
+ 217            Text(
+ 218                "Takes effect on your next focus session — won't change one already running.",
+ 219 ❌             fontSize = 10.sp, color = White30,
+ 220                modifier = Modifier.padding(start = 46.dp, end = 14.dp, bottom = 8.dp)
+ 221            )
+ 222        }
+ 223    }
+ 224    
+ 225    // ── LLM Provider Settings ─────────────────────────────────────────────────────
+ 226    
+ 227    private val LLM_PROVIDERS = listOf("Groq", "Claude", "Gemini", "OpenRouter")
+ 228    
+ 229    @Composable
+ 230    private fun LlmProviderSettings(context: Context) {
+ 231        val providers = LLM_PROVIDERS
+ 232    
+ 233        var selectedProvider by remember {
+ 234 ❌         mutableStateOf(CheckmatePrefs.getString("llm_provider", "Groq") ?: "Groq")
+ 235        }
+ 236    
+ 237        // One key state per provider
+ 238        val keys = providers.associateWith { provider ->
+ 239            remember(provider) {
+ 240                mutableStateOf(
+ 241 ❌                 CheckmatePrefs.getString("llm_key_${provider.lowercase()}", "") ?: ""
+ 242                )
+ 243            }
+ 244        }
+ 245    
+ 246        // Provider selector chips
+ 247        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+ 248 ❌         Text("Active Provider", fontSize = 12.sp, color = White60,
+ 249                modifier = Modifier.padding(bottom = 6.dp))
+ 250            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+ 251                providers.forEach { provider ->
+ 252                    val selected = provider == selectedProvider
+ 253                    FilterChip(
+ 254                        selected = selected,
+ 255                        onClick  = {
+ 256                            selectedProvider = provider
+ 257 ❌                         CheckmatePrefs.putString("llm_provider", provider)
+ 258                        },
+ 259                        label    = { Text(provider, fontSize = 12.sp) },
+ 260                        colors   = FilterChipDefaults.filterChipColors(
+ 261 ❌                         selectedContainerColor = AccentGreen,
+ 262 ❌                         selectedLabelColor     = BgDark
+ 263                        )
+ 264                    )
+ 265                }
+ 266            }
+ 267        }
+ 268    
+ 269 ❌     HorizontalDivider(color = White10)
+ 270    
+ 271        // API key field for the currently selected provider
+ 272        val currentKey = keys[selectedProvider]
+ 273        if (currentKey != null) {
+ 274            var showKey by remember { mutableStateOf(false) }
+ 275            var saved   by remember { mutableStateOf(false) }
+ 276    
+ 277            Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+ 278 ❌             Text("$selectedProvider API Key", fontSize = 12.sp, color = White60,
+ 279                    modifier = Modifier.padding(bottom = 6.dp))
+ 280                OutlinedTextField(
+ 281                    value         = currentKey.value,
+ 282                    onValueChange = { currentKey.value = it; saved = false },
+ 283                    modifier      = Modifier.fillMaxWidth(),
+ 284                    singleLine    = true,
+ 285 ❌                 placeholder   = { Text("Paste API key here", color = White30, fontSize = 13.sp) },
+ 286                    visualTransformation = if (showKey) VisualTransformation.None
+ 287                                           else PasswordVisualTransformation(),
+ 288                    trailingIcon  = {
+ 289                        Row(verticalAlignment = Alignment.CenterVertically) {
+ 290                            IconButton(onClick = { showKey = !showKey }) {
+ 291                                Icon(
+ 292                                    if (showKey) Icons.Default.VisibilityOff else Icons.Default.Visibility,
+ 293 ❌                                 null, tint = White60
+ 294                                )
+ 295                            }
+ 296                            IconButton(onClick = {
+ 297 ❌                             CheckmatePrefs.putString(
+ 298                                    "llm_key_${selectedProvider.lowercase()}",
+ 299                                    currentKey.value.trim()
+ 300                                )
+ 301                                saved = true
+ 302                            }) {
+ 303                                Icon(
+ 304                                    if (saved) Icons.Default.Check else Icons.Default.Save,
+ 305                                    null,
+ 306 ❌                                 tint = if (saved) AccentGreen else White60
+ 307                                )
+ 308                            }
+ 309                        }
+ 310                    },
+ 311                    colors = OutlinedTextFieldDefaults.colors(
+ 312 ❌                     focusedBorderColor   = AccentGreen,
+ 313 ❌                     unfocusedBorderColor = White30,
+ 314 ❌                     cursorColor          = AccentGreen,
+ 315 ❌                     focusedTextColor     = White90,
+ 316 ❌                     unfocusedTextColor   = White90
+ 317                    )
+ 318                )
+ 319                if (saved) {
+ 320 ❌                 Text("Saved ✓", fontSize = 11.sp, color = AccentGreen,
+ 321                        modifier = Modifier.padding(top = 4.dp))
+ 322                }
+ 323            }
+ 324        }
+ 325    
+ 326 ❌     HorizontalDivider(color = White10)
+ 327    
+ 328        // ── Guardian WhatsApp number ──────────────────────────────────────────────
+ 329        var guardianNumber by remember {
+ 330 ❌         mutableStateOf(CheckmatePrefs.getString("guardian_number", "") ?: "")
+ 331        }
+ 332        var guardianSaved by remember { mutableStateOf(false) }
+ 333    
+ 334        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+ 335 ❌         Text("Guardian WhatsApp Number", fontSize = 12.sp, color = White60,
+ 336                modifier = Modifier.padding(bottom = 6.dp))
+ 337            OutlinedTextField(
+ 338                value         = guardianNumber,
+ 339                onValueChange = { guardianNumber = it; guardianSaved = false },
+ 340                modifier      = Modifier.fillMaxWidth(),
+ 341                singleLine    = true,
+ 342 ❌             placeholder   = { Text("+91XXXXXXXXXX", color = White30, fontSize = 13.sp) },
+ 343 ❌             leadingIcon   = { Icon(Icons.Default.Phone, null, tint = White60) },
+ 344                trailingIcon  = {
+ 345                    IconButton(onClick = {
+ 346 ❌                     CheckmatePrefs.putString("guardian_number", guardianNumber.trim())
+ 347                        guardianSaved = true
+ 348                    }) {
+ 349                        Icon(
+ 350                            if (guardianSaved) Icons.Default.Check else Icons.Default.Save,
+ 351                            null,
+ 352 ❌                         tint = if (guardianSaved) AccentGreen else White60
+ 353                        )
+ 354                    }
+ 355                },
+ 356                colors = OutlinedTextFieldDefaults.colors(
+ 357 ❌                 focusedBorderColor   = AccentGreen,
+ 358 ❌                 unfocusedBorderColor = White30,
+ 359 ❌                 cursorColor          = AccentGreen,
+ 360 ❌                 focusedTextColor     = White90,
+ 361 ❌                 unfocusedTextColor   = White90
+ 362                )
+ 363            )
+ 364            if (guardianSaved) {
+ 365 ❌             Text("Saved ✓", fontSize = 11.sp, color = AccentGreen,
+ 366                    modifier = Modifier.padding(top = 4.dp))
+ 367            }
+ 368        }
+ 369    
+ 370 ❌     HorizontalDivider(color = White10)
+ 371    
+ 372        // ── Guardian Telegram Chat ID ─────────────────────────────────────────────
+ 373        var telegramChatId by remember {
+ 374 ❌         mutableStateOf(CheckmatePrefs.getString("telegram_chat_id", "") ?: "")
+ 375        }
+ 376        var telegramSaved by remember { mutableStateOf(false) }
+ 377    
+ 378        Column(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)) {
+ 379 ❌         Text("Guardian Telegram Chat ID", fontSize = 12.sp, color = White60,
+ 380                modifier = Modifier.padding(bottom = 6.dp))
+ 381            Text(
+ 382                "Guardian: open Telegram → message @userinfobot → copy the id: number here",
+ 383                fontSize = 11.sp,
+ 384 ❌             color    = White30,
+ 385                modifier = Modifier.padding(bottom = 6.dp)
+ 386            )
+ 387            OutlinedTextField(
+ 388                value         = telegramChatId,
+ 389                onValueChange = { telegramChatId = it; telegramSaved = false },
+ 390                modifier      = Modifier.fillMaxWidth(),
+ 391                singleLine    = true,
+ 392 ❌             placeholder   = { Text("e.g. 123456789", color = White30, fontSize = 13.sp) },
+ 393 ❌             leadingIcon   = { Icon(Icons.Default.Send, null, tint = White60) },
+ 394                trailingIcon  = {
+ 395                    IconButton(onClick = {
+ 396 ❌                     CheckmatePrefs.putString("telegram_chat_id", telegramChatId.trim())
+ 397                        telegramSaved = true
+ 398                    }) {
+ 399                        Icon(
+ 400                            if (telegramSaved) Icons.Default.Check else Icons.Default.Save,
+ 401                            null,
+ 402 ❌                         tint = if (telegramSaved) AccentGreen else White60
+ 403                        )
+ 404                    }
+ 405                },
+ 406                colors = OutlinedTextFieldDefaults.colors(
+ 407 ❌                 focusedBorderColor   = AccentGreen,
+ 408 ❌                 unfocusedBorderColor = White30,
+ 409 ❌                 cursorColor          = AccentGreen,
+ 410 ❌                 focusedTextColor     = White90,
+ 411 ❌                 unfocusedTextColor   = White90
+ 412                )
+ 413            )
+ 414            if (telegramSaved) {
+ 415 ❌             Text("Saved ✓", fontSize = 11.sp, color = AccentGreen,
+ 416                    modifier = Modifier.padding(top = 4.dp))
+ 417            }
+ 418        }
+ 419    }
+ 420    
+ 421    // ── Voice / TTS Settings ──────────────────────────────────────────────────────
+ 422    
+ 423    @Composable
+ 424    private fun VoiceSettings(context: Context) {
+ 425 ❌     var ttsEnabled by remember {
+ 426 ❌         mutableStateOf(CheckmatePrefs.getBoolean("tts_enabled", true))
+ 427        }
+ 428    
+ 429        Row(
+ 430            modifier          = Modifier
+ 431                .fillMaxWidth()
+ 432                .padding(horizontal = 14.dp, vertical = 4.dp),
+ 433            verticalAlignment = Alignment.CenterVertically
+ 434        ) {
+ 435 ❌         Icon(Icons.Default.RecordVoiceOver, null, tint = AccentGreen,
+ 436                modifier = Modifier.size(20.dp))
+ 437            Spacer(Modifier.width(12.dp))
+ 438            Column(Modifier.weight(1f)) {
+ 439 ❌             Text("Voice Feedback", fontSize = 14.sp, color = White90)
+ 440                Text(
+ 441                    if (ttsEnabled) "Mentor speaks task summaries aloud" else "Voice feedback is off",
+ 442 ❌                 fontSize = 11.sp, color = White60
+ 443                )
+ 444            }
+ 445            Switch(
+ 446                checked         = ttsEnabled,
+ 447                onCheckedChange = {
+ 448                    ttsEnabled = it
+ 449 ❌                 CheckmatePrefs.putBoolean("tts_enabled", it)
+ 450                },
+ 451                colors = SwitchDefaults.colors(
+ 452 ❌                 checkedThumbColor   = BgDark,
+ 453 ❌                 checkedTrackColor   = AccentGreen,
+ 454 ❌                 uncheckedThumbColor = White60,
+ 455 ❌                 uncheckedTrackColor = White10
+ 456                )
+ 457            )
+ 458        }
+ 459    }
+ 460    
+ 461    // ── Shared layout helpers ─────────────────────────────────────────────────────
+ 462    
+ 463    @Composable
+ 464    private fun SettingSection(title: String, content: @Composable ColumnScope.() -> Unit) {
+ 465        Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+ 466            Text(
+ 467                title,
+ 468                fontSize      = 11.sp,
+ 469                fontWeight    = FontWeight.Bold,
+ 470                letterSpacing = androidx.compose.ui.unit.TextUnit(2f, androidx.compose.ui.unit.TextUnitType.Sp),
+ 471 ❌             color         = White60,
+ 472                modifier      = Modifier.padding(top = 16.dp, bottom = 8.dp)
+ 473            )
+ 474            Surface(
+ 475                shape  = RoundedCornerShape(12.dp),
+ 476 ❌             color  = BgCard,
+ 477 ❌             border = BorderStroke(0.5.dp, White10)
+ 478            ) {
+ 479                Column(content = content)
+ 480            }
+ 481        }
+ 482    }
+ 483    
+ 484    @Composable
+ 485    private fun SettingTile(title: String, subtitle: String, icon: ImageVector, onClick: () -> Unit) {
+ 486        Surface(onClick = onClick, color = androidx.compose.ui.graphics.Color.Transparent) {
+ 487            Row(
+ 488                modifier          = Modifier.fillMaxWidth().padding(14.dp),
+ 489                verticalAlignment = Alignment.CenterVertically
+ 490            ) {
+ 491 ❌             Icon(icon, null, tint = AccentGreen, modifier = Modifier.size(20.dp))
+ 492                Spacer(Modifier.width(12.dp))
+ 493                Column(Modifier.weight(1f)) {
+ 494 ❌                 Text(title, fontSize = 14.sp, color = White90)
+ 495 ❌                 Text(subtitle, fontSize = 11.sp, color = White60)
+ 496                }
+ 497 ❌             Icon(Icons.Default.ChevronRight, null, tint = White30, modifier = Modifier.size(16.dp))
+ 498            }
+ 499        }
+ 500    }
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt =====
+
+// ❌ ERRORS IN THIS FILE (53 error(s)):
+// Line 20: Unresolved reference 'theme'.
+// Line 30: Overload resolution ambiguity between candidates:
+// Line 30: Unresolved reference 'BgDark'.
+// Line 35: Unresolved reference 'White90'.
+// Line 36: Unresolved reference 'White60'.
+// Line 43: Unresolved reference 'AccentAmber'.
+// Line 44: Unresolved reference 'AccentGreen'.
+// Line 45: Unresolved reference 'AccentBlue'.
+// Line 50: Unresolved reference 'BgCard'.
+// Line 51: Overload resolution ambiguity between candidates:
+// Line 51: Unresolved reference 'White10'.
+// Line 54: Unresolved reference 'White90'.
+// Line 62: Unresolved reference 'BgCard'.
+// Line 63: Overload resolution ambiguity between candidates:
+// Line 63: Unresolved reference 'White10'.
+// Line 66: Unresolved reference 'White90'.
+// Line 77: Unresolved reference 'BgCard'.
+// Line 78: Overload resolution ambiguity between candidates:
+// Line 78: Unresolved reference 'White10'.
+// Line 81: Unresolved reference 'White90'.
+// Line 95: Unresolved reference 'BgCard'.
+// Line 96: Overload resolution ambiguity between candidates:
+// Line 96: Unresolved reference 'White10'.
+// Line 104: Unresolved reference 'White90'.
+// Line 108: Unresolved reference 'AccentGreen'.
+// Line 117: Unresolved reference 'White60'.
+// Line 120: Unresolved reference 'White60'.
+// Line 136: Unresolved reference 'BgCard'.
+// Line 137: Overload resolution ambiguity between candidates:
+// Line 137: Unresolved reference 'White10'.
+// Line 140: Unresolved reference 'White90'.
+// Line 153: Overload resolution ambiguity between candidates:
+// Line 153: Unresolved reference 'BgCard'.
+// Line 153: Unresolved reference 'White10'.
+// Line 158: Unresolved reference 'White60'.
+// Line 187: Overload resolution ambiguity between candidates:
+// Line 187: Unresolved reference 'AccentAmber'.
+// Line 187: Unresolved reference 'AccentGreen'.
+// Line 187: Unresolved reference 'AccentRed'.
+// Line 191: Unresolved reference 'White60'.
+// Line 201: Unresolved reference 'White90'.
+// Line 202: Unresolved reference 'White60'.
+// Line 208: Unresolved reference 'AccentGreen'.
+// Line 209: Unresolved reference 'White10'.
+// Line 217: Unresolved reference 'White90'.
+// Line 218: Unresolved reference 'White60'.
+// Line 228: Unresolved reference 'White90'.
+// Line 229: Unresolved reference 'White60'.
+// Line 235: Unresolved reference 'AccentBlue'.
+// Line 236: Unresolved reference 'White10'.
+// Line 265: Overload resolution ambiguity between candidates:
+// Line 265: Unresolved reference 'AccentBlue'.
+// Line 269: Unresolved reference 'White60'.
+
+   1    package com.checkmate.ui.stats
+   2    
+   3    import androidx.compose.foundation.*
+   4    import androidx.compose.foundation.layout.*
+   5    import androidx.compose.foundation.shape.RoundedCornerShape
+   6    import androidx.compose.material.icons.Icons
+   7    import androidx.compose.material.icons.filled.*
+   8    import androidx.compose.material3.*
+   9    import androidx.compose.runtime.*
+  10    import androidx.compose.ui.Alignment
+  11    import androidx.compose.ui.Modifier
+  12    import androidx.compose.ui.draw.clip
+  13    import androidx.compose.ui.graphics.Color
+  14    import androidx.compose.ui.platform.LocalContext
+  15    import androidx.compose.ui.text.font.FontFamily
+  16    import androidx.compose.ui.text.font.FontWeight
+  17    import androidx.compose.ui.unit.dp
+  18    import androidx.compose.ui.unit.sp
+  19    import androidx.lifecycle.viewmodel.compose.viewModel
+  20 ❌ import com.checkmate.ui.theme.*
+  21    
+  22    @Composable
+  23    fun StatsScreen(vm: StatsViewModel = viewModel()) {
+  24        val state by vm.state.collectAsState()
+  25        val context = LocalContext.current
+  26    
+  27        LaunchedEffect(Unit) { vm.loadAppUsage(context) }
+  28    
+  29        Column(
+  30 ❌         modifier            = Modifier.fillMaxSize().background(BgDark).verticalScroll(rememberScrollState()),
+  31            verticalArrangement = Arrangement.spacedBy(14.dp)
+  32        ) {
+  33            Spacer(Modifier.height(20.dp))
+  34            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+  35 ❌             Text("Stats", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = White90)
+  36 ❌             Text("Your performance overview", fontSize = 13.sp, color = White60)
+  37            }
+  38            Row(
+  39                modifier              = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+  40                horizontalArrangement = Arrangement.spacedBy(10.dp)
+  41            ) {
+  42                // Fix: Icons.Default.LocalFire does not exist — correct name is LocalFireDepartment
+  43 ❌             StatTile("Streak", "${state.streakDays}d", Icons.Default.LocalFireDepartment, AccentAmber, Modifier.weight(1f))
+  44 ❌             StatTile("Today",  "${state.todayCompletion}%", Icons.Default.Today,     AccentGreen, Modifier.weight(1f))
+  45 ❌             StatTile("Week",   "${state.weekCompletion}%",  Icons.Default.DateRange,  AccentBlue,  Modifier.weight(1f))
+  46            }
+  47            Surface(
+  48                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+  49                shape    = RoundedCornerShape(14.dp),
+  50 ❌             color    = BgCard,
+  51 ❌             border   = BorderStroke(0.5.dp, White10)
+  52            ) {
+  53                Column(modifier = Modifier.padding(16.dp)) {
+  54 ❌                 Text("This Week", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+  55                    Spacer(Modifier.height(16.dp))
+  56                    WeeklyBarChart(state.weeklyData)
+  57                }
+  58            }
+  59            Surface(
+  60                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+  61                shape    = RoundedCornerShape(14.dp),
+  62 ❌             color    = BgCard,
+  63 ❌             border   = BorderStroke(0.5.dp, White10)
+  64            ) {
+  65                Column(modifier = Modifier.padding(16.dp)) {
+  66 ❌                 Text("By Subject", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+  67                    Spacer(Modifier.height(12.dp))
+  68                    state.subjectStats.forEach { (subject, pct) ->
+  69                        SubjectBar(subject, pct)
+  70                        Spacer(Modifier.height(8.dp))
+  71                    }
+  72                }
+  73            }
+  74            Surface(
+  75                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+  76                shape    = RoundedCornerShape(14.dp),
+  77 ❌             color    = BgCard,
+  78 ❌             border   = BorderStroke(0.5.dp, White10)
+  79            ) {
+  80                Column(modifier = Modifier.padding(16.dp)) {
+  81 ❌                 Text("Attention Quality", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+  82                    Spacer(Modifier.height(8.dp))
+  83                    Row(horizontalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxWidth()) {
+  84                        AttentionStat("Checks Passed", "${state.attentionChecksPassed}")
+  85                        AttentionStat("Checks Missed", "${state.attentionChecksMissed}")
+  86                        AttentionStat("Avg Focus",     "${state.avgFocusMinutes}m")
+  87                    }
+  88                }
+  89            }
+  90    
+  91            // ── App Usage Today (Digital Wellbeing-style) ─────────────────────────
+  92            Surface(
+  93                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+  94                shape    = RoundedCornerShape(14.dp),
+  95 ❌             color    = BgCard,
+  96 ❌             border   = BorderStroke(0.5.dp, White10)
+  97            ) {
+  98                Column(modifier = Modifier.padding(16.dp)) {
+  99                    Row(
+ 100                        modifier              = Modifier.fillMaxWidth(),
+ 101                        horizontalArrangement = Arrangement.SpaceBetween,
+ 102                        verticalAlignment     = Alignment.CenterVertically
+ 103                    ) {
+ 104 ❌                     Text("App Usage Today", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+ 105                        if (state.hasUsageAccess) {
+ 106                            Text(
+ 107                                formatMinutes(state.totalScreenMinutesToday),
+ 108 ❌                             fontSize = 13.sp, color = AccentGreen, fontFamily = FontFamily.Monospace
+ 109                            )
+ 110                        }
+ 111                    }
+ 112                    Spacer(Modifier.height(12.dp))
+ 113    
+ 114                    if (!state.hasUsageAccess) {
+ 115                        Text(
+ 116                            "Grant Usage Access in Settings → Permissions to see app usage history.",
+ 117 ❌                         fontSize = 12.sp, color = White60
+ 118                        )
+ 119                    } else if (state.appUsageToday.isEmpty()) {
+ 120 ❌                     Text("No significant usage recorded yet today.", fontSize = 12.sp, color = White60)
+ 121                    } else {
+ 122                        val maxMinutes = state.appUsageToday.maxOf { it.second }.coerceAtLeast(1)
+ 123                        state.appUsageToday.forEach { (label, minutes) ->
+ 124                            UsageBar(label, minutes, maxMinutes)
+ 125                            Spacer(Modifier.height(8.dp))
+ 126                        }
+ 127                    }
+ 128                }
+ 129            }
+ 130    
+ 131            // ── Screen Time History (7 days) ──────────────────────────────────────
+ 132            if (state.hasUsageAccess && state.screenTimeHistory.isNotEmpty()) {
+ 133                Surface(
+ 134                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+ 135                    shape    = RoundedCornerShape(14.dp),
+ 136 ❌                 color    = BgCard,
+ 137 ❌                 border   = BorderStroke(0.5.dp, White10)
+ 138                ) {
+ 139                    Column(modifier = Modifier.padding(16.dp)) {
+ 140 ❌                     Text("Screen Time — Last 7 Days", fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = White90)
+ 141                        Spacer(Modifier.height(16.dp))
+ 142                        ScreenTimeBarChart(state.screenTimeHistory)
+ 143                    }
+ 144                }
+ 145            }
+ 146    
+ 147            Spacer(Modifier.height(24.dp))
+ 148        }
+ 149    }
+ 150    
+ 151    @Composable
+ 152    private fun StatTile(label: String, value: String, icon: androidx.compose.ui.graphics.vector.ImageVector, color: Color, modifier: Modifier) {
+ 153 ❌     Surface(modifier = modifier, shape = RoundedCornerShape(12.dp), color = BgCard, border = BorderStroke(0.5.dp, White10)) {
+ 154            Column(modifier = Modifier.padding(14.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+ 155                Icon(icon, null, tint = color, modifier = Modifier.size(22.dp))
+ 156                Spacer(Modifier.height(6.dp))
+ 157                Text(value, fontSize = 20.sp, fontWeight = FontWeight.Bold, color = color)
+ 158 ❌             Text(label, fontSize = 11.sp, color = White60)
+ 159            }
+ 160        }
+ 161    }
+ 162    
+ 163    @Composable
+ 164    private fun WeeklyBarChart(data: List<Pair<String, Int>>) {
+ 165        val maxVal = data.maxOfOrNull { it.second }?.coerceAtLeast(1) ?: 1
+ 166        Row(
+ 167            modifier              = Modifier.fillMaxWidth().height(100.dp),
+ 168            horizontalArrangement = Arrangement.spacedBy(6.dp),
+ 169            verticalAlignment     = Alignment.Bottom
+ 170        ) {
+ 171            data.forEach { (day, pct) ->
+ 172                Column(
+ 173                    modifier            = Modifier.weight(1f),
+ 174                    horizontalAlignment = Alignment.CenterHorizontally,
+ 175                    verticalArrangement = Arrangement.Bottom
+ 176                ) {
+ 177                    Box(
+ 178                        modifier         = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 4.dp),
+ 179                        contentAlignment = Alignment.BottomCenter
+ 180                    ) {
+ 181                        val barHeight = (pct.toFloat() / maxVal) * 80f
+ 182                        Box(
+ 183                            modifier = Modifier
+ 184                                .width(28.dp)
+ 185                                .height(barHeight.coerceAtLeast(4f).dp)
+ 186                                .clip(RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp))
+ 187 ❌                             .background(if (pct >= 70) AccentGreen else if (pct >= 40) AccentAmber else AccentRed)
+ 188                        )
+ 189                    }
+ 190                    Spacer(Modifier.height(4.dp))
+ 191 ❌                 Text(day, fontSize = 10.sp, color = White60, fontFamily = FontFamily.Monospace)
+ 192                }
+ 193            }
+ 194        }
+ 195    }
+ 196    
+ 197    @Composable
+ 198    private fun SubjectBar(subject: String, pct: Int) {
+ 199        Column {
+ 200            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+ 201 ❌             Text(subject, fontSize = 13.sp, color = White90)
+ 202 ❌             Text("$pct%", fontSize = 13.sp, color = White60, fontFamily = FontFamily.Monospace)
+ 203            }
+ 204            Spacer(Modifier.height(4.dp))
+ 205            LinearProgressIndicator(
+ 206                progress   = { pct / 100f },
+ 207                modifier   = Modifier.fillMaxWidth().height(5.dp).clip(RoundedCornerShape(3.dp)),
+ 208 ❌             color      = AccentGreen,
+ 209 ❌             trackColor = White10
+ 210            )
+ 211        }
+ 212    }
+ 213    
+ 214    @Composable
+ 215    private fun AttentionStat(label: String, value: String) {
+ 216        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+ 217 ❌         Text(value, fontSize = 18.sp, fontWeight = FontWeight.Bold, color = White90)
+ 218 ❌         Text(label, fontSize = 11.sp, color = White60)
+ 219        }
+ 220    }
+ 221    
+ 222    // ── App usage helpers ─────────────────────────────────────────────────────────
+ 223    
+ 224    @Composable
+ 225    private fun UsageBar(label: String, minutes: Int, maxMinutes: Int) {
+ 226        Column {
+ 227            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+ 228 ❌             Text(label, fontSize = 13.sp, color = White90, maxLines = 1)
+ 229 ❌             Text(formatMinutes(minutes), fontSize = 12.sp, color = White60, fontFamily = FontFamily.Monospace)
+ 230            }
+ 231            Spacer(Modifier.height(4.dp))
+ 232            LinearProgressIndicator(
+ 233                progress   = { (minutes.toFloat() / maxMinutes.toFloat()).coerceIn(0f, 1f) },
+ 234                modifier   = Modifier.fillMaxWidth().height(5.dp).clip(RoundedCornerShape(3.dp)),
+ 235 ❌             color      = AccentBlue,
+ 236 ❌             trackColor = White10
+ 237            )
+ 238        }
+ 239    }
+ 240    
+ 241    @Composable
+ 242    private fun ScreenTimeBarChart(data: List<Pair<String, Int>>) {
+ 243        val maxVal = data.maxOfOrNull { it.second }?.coerceAtLeast(1) ?: 1
+ 244        Row(
+ 245            modifier              = Modifier.fillMaxWidth().height(100.dp),
+ 246            horizontalArrangement = Arrangement.spacedBy(6.dp),
+ 247            verticalAlignment     = Alignment.Bottom
+ 248        ) {
+ 249            data.forEach { (day, minutes) ->
+ 250                Column(
+ 251                    modifier            = Modifier.weight(1f),
+ 252                    horizontalAlignment = Alignment.CenterHorizontally,
+ 253                    verticalArrangement = Arrangement.Bottom
+ 254                ) {
+ 255                    Box(
+ 256                        modifier         = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 4.dp),
+ 257                        contentAlignment = Alignment.BottomCenter
+ 258                    ) {
+ 259                        val barHeight = (minutes.toFloat() / maxVal) * 80f
+ 260                        Box(
+ 261                            modifier = Modifier
+ 262                                .width(28.dp)
+ 263                                .height(barHeight.coerceAtLeast(4f).dp)
+ 264                                .clip(RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp))
+ 265 ❌                             .background(AccentBlue)
+ 266                        )
+ 267                    }
+ 268                    Spacer(Modifier.height(4.dp))
+ 269 ❌                 Text(day, fontSize = 10.sp, color = White60, fontFamily = FontFamily.Monospace)
+ 270                }
+ 271            }
+ 272        }
+ 273    }
+ 274    
+ 275    private fun formatMinutes(totalMinutes: Int): String {
+ 276        val h = totalMinutes / 60
+ 277        val m = totalMinutes % 60
+ 278        return if (h > 0) "${h}h ${m}m" else "${m}m"
+ 279    }
+
+
+//===== FILE: app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt =====
+
+// ❌ ERRORS IN THIS FILE (26 error(s)):
+// Line 6: Unresolved reference 'core'.
+// Line 7: Unresolved reference 'planner'.
+// Line 8: Unresolved reference 'psyche'.
+// Line 38: Unresolved reference 'PlanStore'.
+// Line 39: Unresolved reference 'PlanStore'.
+// Line 40: Unresolved reference 'PlanStore'.
+// Line 41: Unresolved reference 'PlanStore'.
+// Line 42: Unresolved reference 'PlanStore'.
+// Line 43: Unresolved reference 'BehaviorLedger'.
+// Line 64: Unresolved reference 'AppUsageTracker'.
+// Line 69: Function 'component1()' is ambiguous for this expression:
+// Line 69: Function 'component2()' is ambiguous for this expression:
+// Line 69: Not enough information to infer type argument for 'T'.
+// Line 70: Unresolved reference 'AppUsageTracker'.
+// Line 71: Cannot infer type for this parameter. Please specify it explicitly.
+// Line 71: Unresolved reference 'foregroundMillis'.
+// Line 71: Unresolved reference 'label'.
+// Line 72: Unresolved reference 'AppUsageTracker'.
+// Line 73: Cannot infer type for this parameter. Please specify it explicitly.
+// Line 73: Unresolved reference 'dayLabel'.
+// Line 73: Unresolved reference 'totalMillis'.
+// Line 74: Not enough information to infer type argument for 'A'.
+// Line 74: Not enough information to infer type argument for 'B'.
+// Line 76: Cannot infer type for this parameter. Please specify it explicitly.
+// Line 76: None of the following candidates is applicable:
+// Line 76: Unresolved reference 'AppUsageTracker'.
+
+   1    package com.checkmate.ui.stats
+   2    
+   3    import android.content.Context
+   4    import androidx.lifecycle.ViewModel
+   5    import androidx.lifecycle.viewModelScope
+   6 ❌ import com.checkmate.core.AppUsageTracker
+   7 ❌ import com.checkmate.planner.PlanStore
+   8 ❌ import com.checkmate.psyche.BehaviorLedger
+   9    import kotlinx.coroutines.Dispatchers
+  10    import kotlinx.coroutines.flow.*
+  11    import kotlinx.coroutines.launch
+  12    import kotlinx.coroutines.withContext
+  13    
+  14    data class StatsState(
+  15        val streakDays:           Int                      = 0,
+  16        val todayCompletion:      Int                      = 0,
+  17        val weekCompletion:       Int                      = 0,
+  18        val weeklyData:           List<Pair<String, Int>>  = emptyList(),
+  19        val subjectStats:         List<Pair<String, Int>>  = emptyList(),
+  20        val attentionChecksPassed: Int                     = 0,
+  21        val attentionChecksMissed: Int                     = 0,
+  22        val avgFocusMinutes:      Int                      = 0,
+  23        // App usage (Digital Wellbeing-style)
+  24        val hasUsageAccess:       Boolean                  = true,
+  25        val appUsageToday:        List<Pair<String, Int>>  = emptyList(), // label -> minutes
+  26        val totalScreenMinutesToday: Int                   = 0,
+  27        val screenTimeHistory:    List<Pair<String, Int>>  = emptyList()  // day -> minutes
+  28    )
+  29    
+  30    class StatsViewModel : ViewModel() {
+  31        private val _state = MutableStateFlow(StatsState())
+  32        val state: StateFlow<StatsState> = _state.asStateFlow()
+  33    
+  34        init { loadStats() }
+  35    
+  36        private fun loadStats() {
+  37            viewModelScope.launch {
+  38 ❌             val streak       = PlanStore.getStreakDays()
+  39 ❌             val todayPct     = PlanStore.getTodayCompletionPercent()
+  40 ❌             val weekPct      = PlanStore.getWeekCompletionPercent()
+  41 ❌             val weekly       = PlanStore.getWeeklyData()
+  42 ❌             val subjectData  = PlanStore.getSubjectStats()
+  43 ❌             val ledger       = BehaviorLedger.getAttentionStats()
+  44                _state.update { it.copy(
+  45                    streakDays            = streak,
+  46                    todayCompletion       = todayPct,
+  47                    weekCompletion        = weekPct,
+  48                    weeklyData            = weekly,
+  49                    subjectStats          = subjectData,
+  50                    attentionChecksPassed = ledger.checksPassed,
+  51                    attentionChecksMissed = ledger.checksMissed,
+  52                    avgFocusMinutes       = ledger.avgFocusMinutes
+  53                )}
+  54            }
+  55        }
+  56    
+  57        /**
+  58         * Loads on-device app usage history (today's breakdown + 7-day screen
+  59         * time). Called from StatsScreen with the composable's Context since
+  60         * UsageStatsManager needs it. Safe to call repeatedly (e.g. on resume).
+  61         */
+  62        fun loadAppUsage(context: Context) {
+  63            viewModelScope.launch {
+  64 ❌             val granted = AppUsageTracker.hasUsageAccess(context)
+  65                if (!granted) {
+  66                    _state.update { it.copy(hasUsageAccess = false) }
+  67                    return@launch
+  68                }
+  69 ❌             val (today, history) = withContext(Dispatchers.IO) {
+  70 ❌                 val today = AppUsageTracker.getTodayUsage(context, limit = 6)
+  71 ❌                     .map { it.label to (it.foregroundMillis / 60_000L).toInt() }
+  72 ❌                 val history = AppUsageTracker.getScreenTimeHistory(context, days = 7)
+  73 ❌                     .map { it.dayLabel to (it.totalMillis / 60_000L).toInt() }
+  74 ❌                 today to history
+  75                }
+  76 ❌             val totalMinutes = AppUsageTracker.getTodayTotalMillis(context).let { (it / 60_000L).toInt() }
+  77                _state.update { it.copy(
+  78                    hasUsageAccess          = true,
+  79                    appUsageToday           = today,
+  80                    totalScreenMinutesToday = totalMinutes,
+  81                    screenTimeHistory       = history
+  82                )}
+  83            }
+  84        }
+  85    }
 
 

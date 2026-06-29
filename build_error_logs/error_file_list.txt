@@ -1,5 +1,6 @@
-app/src/main/java/com/nexus/android/data/api/models/MemberResponse.kt
-app/src/main/java/com/nexus/android/data/api/models/Models.kt
-app/src/main/java/com/nexus/android/ui/navigation/NexusNavGraph.kt
-app/src/main/java/com/nexus/android/ui/screens/home/HomeScreen.kt
-app/src/main/java/com/nexus/android/ui/screens/server/ServerSettingsScreen.kt
+app/src/main/kotlin/com/checkmate/service/AttentionCycleService.kt
+app/src/main/kotlin/com/checkmate/service/FloatingAttentionService.kt
+app/src/main/kotlin/com/checkmate/service/GuardianNotifier.kt
+app/src/main/kotlin/com/checkmate/ui/settings/SettingsScreen.kt
+app/src/main/kotlin/com/checkmate/ui/stats/StatsScreen.kt
+app/src/main/kotlin/com/checkmate/ui/stats/StatsViewModel.kt
